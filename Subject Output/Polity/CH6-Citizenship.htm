@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH6 - Citizenship | Indian Polity</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============================== PAGE 44 =============================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">POLITY</span>
+        <h1>CH6- Citizenship</h1>
+        <p class="subtitle">Part II - Article 5 to 11</p>
+    </header>
+
+    <ul>
+        <li>
+            <strong>1. Domicile-Based Citizenship:</strong>
+            <span class="u-blue-zig">Every person </span><span class="u-green">who has </span><span class="u-blue-zig">domicile </span><span class="u-blue-zig">in the territory of India </span><span class="u-green">and </span><b style="color: #c00000">(ARTICLE 5)</b>
+            <span class="u-green">Who was born </span><span class="u-blue-zig">in the territory of India</span>;
+            <span class="u-green">or </span><span class="u-blue-zig">either of whose parents </span><span class="u-green">was born </span><span class="u-blue-zig">in the territory of India</span>;
+            <span class="u-green">or who has been </span><span class="u-blue-zig">ordinarily resident </span><span class="u-blue-zig">in the territory of India </span><span class="u-green">for </span><span class="u-blue-zig">not less than five years </span><span class="u-green">immediately preceding </span><span class="u-blue-zig">such commencement</span>;
+            <span class="u-green">shall be </span><span class="u-blue-zig">a citizen of India</span>.
+        </li>
+        <li>
+            <strong>2. Migration from Pakistan (Pre-July 1948):</strong>
+            <span class="u-blue-zig">Persons </span><span class="u-green">who migrated </span><span class="u-blue-zig">to India </span><span class="u-blue-zig">from Pakistan </span><span class="u-green">before </span><span class="u-blue-zig">19 July, 1948 </span><span class="u-green">and since then have been </span><span class="u-blue-zig">ordinarily residing </span><span class="u-blue-zig">in India</span>. <b style="color: #c00000">(ARTICLE 6)</b>
+        </li>
+        <li>
+            <strong>3. Migration from Pakistan (Post-July 1948):</strong>
+            <span class="u-blue-zig">Persons </span><span class="u-green">who migrate </span><span class="u-blue-zig">to India </span><span class="u-blue-zig">from Pakistan </span><span class="u-green">on or after </span><span class="u-blue-zig">19 July, 1948 </span><span class="u-green">but got themselves</span>, <span class="u-blue-zig">duly registered </span><span class="u-green">as </span><span class="u-blue-zig">citizen </span><span class="u-green">with </span><span class="u-blue-zig">a competent officer</span>.
+        </li>
+        <li>
+            <strong>4. Return from Pakistan:</strong>
+            <span class="u-blue-zig">Persons </span><span class="u-green">who migrated </span><span class="u-blue-zig">to Pakistan </span><span class="u-green">after </span><span class="u-blue-zig">1st March, 1947 </span><span class="u-green">but returned </span><span class="u-blue-zig">to India </span><span class="u-green">under </span><span class="u-blue-zig">a permit </span><span class="u-green">for </span><span class="u-blue-zig">resettlement</span>. <b style="color: #c00000">(ARTICLE 7)</b>
+        </li>
+        <li>
+            <strong>5. Indian Birth Lineage:</strong>
+            <span class="u-blue-zig">Any person </span><span class="u-green">who or </span><span class="u-blue-zig">either of whose parents </span><span class="u-green">or </span><span class="u-blue-zig">any of whose grandparents </span><span class="u-green">was born </span><span class="u-blue-zig">in India</span>.
+        </li>
+        <li>
+            <strong>6. Indian Origin Abroad:</strong>
+            <span class="u-blue-zig">Rights of citizenship </span><span class="u-green">of </span><span class="u-blue-zig">certain persons </span><span class="u-blue-zig">of Indian origin </span><span class="u-green">residing </span><span class="u-blue-zig">outside India</span>. <b style="color: #c00000">(ARTICLE 8)</b>
+        </li>
+        <li>
+            <strong>7. Parliamentary Regulation:</strong>
+            <span class="u-blue-zig">Parliament </span><span class="u-green">to regulate </span><span class="u-blue-zig">the right of citizenship </span><span class="u-green">by </span><span class="u-blue-zig">law</span>. <b style="color: #c00000">(ARTICLE 11)</b>
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ACQUISITION OF INDIAN CITIZENSHIP — THE CITIZENSHIP ACT 1955</div>
+
+    <div class="section-header">BY BIRTH</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Birth-Based Citizenship:</strong>
+            <span class="u-blue-zig">Any person </span><span class="u-green">born </span><span class="u-blue-zig">in India</span>, <span class="u-green">on or after </span><span class="u-blue-zig">26th January 1950 </span><span class="u-green">but prior to </span><span class="u-blue-zig">the commencement </span><span class="u-green">of </span><span class="u-blue-zig">the 1986 Act </span><span class="u-green">on </span><span class="u-blue-zig">1st July 1987</span>, <span class="u-green">is </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">if </span><span class="u-blue-zig">either of his parent </span><span class="u-green">was </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">at the time of </span><span class="u-blue-zig">the birth</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. Post-2004 Birth Condition:</strong>
+                <span class="u-green">Further</span>, <span class="u-green">those born </span><span class="u-blue-zig">in India </span><span class="u-green">on or after </span><span class="u-blue-zig">3rd December 2004 </span><span class="u-green">are considered </span><span class="u-blue-zig">citizens of India </span><span class="u-green">only if </span><span class="u-blue-zig">both their parents </span><span class="u-green">are </span><span class="u-blue-zig">citizens of India </span><span class="u-green">or if </span><span class="u-blue-zig">one parent </span><span class="u-green">is </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">and </span><span class="u-blue-zig">the other </span><span class="u-blue-zig">not an illegal migrant </span><span class="u-green">at the time of </span><span class="u-blue-zig">their birth</span>.
+            </li>
+        </ul>
+    </ul>
+
+    <div class="section-header">BY DESCENT</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Pre-1992 Descent Rule:</strong>
+            <span class="u-blue-zig">Person </span><span class="u-green">born </span><span class="u-blue-zig">outside India </span><span class="u-green">on or after </span><span class="u-blue-zig">26th January 1950 </span><span class="u-green">but before </span><span class="u-blue-zig">10th December 1992 </span><span class="u-green">are </span><span class="u-blue-zig">citizen of India </span><span class="u-green">by </span><span class="u-blue-zig">descent </span><span class="u-green">if </span><span class="u-blue-zig">their father </span><span class="u-green">was </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">at the time of </span><span class="u-blue-zig">their birth</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Post-1992 Descent Rule:</strong>
+            <span class="u-blue-zig">Persons </span><span class="u-green">born </span><span class="u-blue-zig">outside India </span><span class="u-green">on or after </span><span class="u-blue-zig">10th December 1992 </span><span class="u-green">are considered as </span><span class="u-blue-zig">citizen of India </span><span class="u-green">if </span><span class="u-blue-zig">either of their parents </span><span class="u-green">is </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">at the time of </span><span class="u-blue-zig">their birth</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. Consulate Registration:</strong>
+                <span class="u-green">From </span><span class="u-blue-zig">3rd December 2004 </span><span class="u-blue-zig">onwards</span>, <span class="u-blue-zig">person </span><span class="u-green">born </span><span class="u-blue-zig">outside India </span><span class="u-green">shall not be considered </span><span class="u-blue-zig">citizens of India </span><span class="u-green">unless </span><span class="u-blue-zig">their birth </span><span class="u-green">is registered at </span><span class="u-blue-zig">an Indian consulate </span><span class="u-green">within </span><span class="u-blue-zig">one year </span><span class="u-green">with </span><span class="u-blue-zig">the permission </span><span class="u-green">of </span><span class="u-blue-zig">the central government</span>.
+            </li>
+        </ul>
+    </ul>
+
+    <div class="section-header">BY REGISTRATION</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">4. Registration Eligibility:</strong>
+            <span class="u-blue-zig">Any person</span>, <span class="u-green">who is not </span><span class="u-blue-zig">a citizen </span><span class="u-green">by virtue of </span><span class="u-blue-zig">the Constitution </span><span class="u-green">or </span><span class="u-blue-zig">the provisions </span><span class="u-green">of </span><span class="u-blue-zig">the Citizenship Act </span><span class="u-green">and belongs to </span><span class="u-blue-zig">any of the following categories</span>, <span class="u-green">can apply for </span><span class="u-blue-zig">registration </span><span class="u-green">as </span><span class="u-blue-zig">a citizen</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 44</div>
+</div>
+
+<!-- =============================== PAGE 45 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Residence Requirement:</strong>
+            <span class="u-green">However</span>, <span class="u-green">he must have </span><span class="u-blue-zig">resided in India </span><span class="u-green">for at least </span><span class="u-blue-zig">seven years </span><span class="u-green">immediately before making </span><span class="u-blue-zig">an application </span><span class="u-green">for </span><span class="u-blue-zig">registration as a citizen</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. Indian Origin Resident:</strong>
+                <span class="u-blue-zig">A person of India origin </span><span class="u-green">who is ordinarily </span><span class="u-blue-zig">in India </span><span class="u-green">for </span><span class="u-blue-zig">seven years </span><span class="u-green">before making </span><span class="u-blue-zig">application for registration</span>. (<span class="u-green">throughout </span><span class="u-blue-zig">the period </span><span class="u-green">of </span><span class="u-blue-zig">twelve months </span><span class="u-green">immediately before making </span><span class="u-blue-zig">application </span><span class="u-green">and for </span><span class="u-blue-zig">six years in the aggregate </span><span class="u-green">in </span><span class="u-blue-zig">the eight years </span><span class="u-green">preceding </span><span class="u-blue-zig">the twelve months</span>).
+            </li>
+        </ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Indian Origin Overseas:</strong>
+            <span class="u-blue-zig">A person of Indian origin </span><span class="u-green">who is ordinarily </span><span class="u-blue-zig">resident </span><span class="u-green">in </span><span class="u-blue-zig">any country or place </span><span class="u-blue-zig">outside undivided Indian</span>;
+        </li>
+        <ul>
+            <li>
+                <strong>a. Spousal Registration:</strong>
+                <span class="u-blue-zig">A person </span><span class="u-green">who is married to </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">and is ordinarily </span><span class="u-blue-zig">resident in India </span><span class="u-green">for </span><span class="u-blue-zig">seven years </span><span class="u-green">before making </span><span class="u-blue-zig">an application for registration</span>;
+            </li>
+            <li>
+                <strong>b. Minor Children:</strong>
+                <span class="u-blue-zig">Minor children </span><span class="u-green">of </span><span class="u-blue-zig">persons </span><span class="u-green">who are </span><span class="u-blue-zig">citizens of India</span>;
+            </li>
+            <li>
+                <strong>c. Parents as Citizens:</strong>
+                <span class="u-blue-zig">A person of full age </span><span class="u-green">and </span><span class="u-blue-zig">capacity </span><span class="u-green">whose parents are </span><span class="u-blue-zig">registered as citizen </span><span class="u-blue-zig">of India</span>.
+            </li>
+            <li>
+                <strong>d. Earlier Citizen Resident:</strong>
+                <span class="u-blue-zig">A person of full age </span><span class="u-green">and </span><span class="u-blue-zig">capacity </span><span class="u-green">who</span>, <span class="u-green">or either of </span><span class="u-blue-zig">his parents</span>, <span class="u-green">was </span><span class="u-blue-zig">earlier citizen </span><span class="u-green">of </span><span class="u-blue-zig">independent India</span>, <span class="u-green">and has been residing </span><span class="u-blue-zig">in India </span><span class="u-green">for </span><span class="u-blue-zig">one years </span><span class="u-green">immediately before making </span><span class="u-blue-zig">an application for registration</span>;
+            </li>
+        </ul>
+    </ul>
+
+    <div class="section-header">BY NATURALIZATION</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Naturalization Conditions:</strong>
+            <span class="u-blue-zig">A foreigner</span>, <span class="u-green">on application for </span><span class="u-blue-zig">naturalization </span><span class="u-green">to </span><span class="u-blue-zig">a competent authority </span><span class="u-green">appointed by </span><span class="u-blue-zig">the State</span>, <span class="u-green">can acquire </span><span class="u-blue-zig">Indian citizenship </span><span class="u-green">provided he satisfies </span><span class="u-blue-zig">certain conditions </span><span class="u-green">like having </span><span class="u-blue-zig">normal resided </span><span class="u-green">for at least </span><span class="u-blue-zig">twelve years in India </span><span class="u-green">in </span><span class="u-blue-zig">a period of 14 years </span><span class="u-green">before making </span><span class="u-blue-zig">an application</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">BY INCORPORATION OF TERRITORY</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Territory Incorporation:</strong>
+            <span class="u-green">If </span><span class="u-blue-zig">any new territory </span><span class="u-green">becomes </span><span class="u-blue-zig">a part of India</span>, <span class="u-blue-zig">the Government of India</span>, <span class="u-blue-zig">the Government of India </span><span class="u-green">shall notify </span><span class="u-blue-zig">the persons </span><span class="u-green">of </span><span class="u-blue-zig">that territory </span><span class="u-green">to be </span><span class="u-blue-zig">citizens of India</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">TERMINATION OF INDIAN CITIZENSHIP</div>
+
+    <div class="section-header">RENUNCIATION</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Voluntary Renunciation:</strong>
+            <span class="u-green">If </span><span class="u-blue-zig">any citizen of India </span><span class="u-green">who is also </span><span class="u-blue-zig">a national </span><span class="u-green">of </span><span class="u-blue-zig">another country </span><span class="u-green">renounces </span><span class="u-blue-zig">his Indian citizenship </span><span class="u-green">through </span><span class="u-blue-zig">a declaration </span><span class="u-green">in </span><span class="u-blue-zig">the prescribed manner</span>, <span class="u-green">he ceases to be </span><span class="u-blue-zig">an Indian citizen</span>. <b style="color: #c00000">(ARTICLE 9)</b>
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Minor Child Impact:</strong>
+            <span class="u-green">When </span><span class="u-blue-zig">a male person </span><span class="u-green">ceases to be </span><span class="u-blue-zig">a citizen of India</span>, <span class="u-blue-zig">every minor child </span><span class="u-green">of his also </span><span class="u-green">ceases to be </span><span class="u-blue-zig">a citizen of India</span>. <span class="u-green">However</span>, <span class="u-blue-zig">such a child </span><span class="u-green">may within </span><span class="u-blue-zig">one year </span><span class="u-green">after attaining </span><span class="u-blue-zig">full age </span><span class="u-green">become </span><span class="u-blue-zig">an Indian citizen </span><span class="u-green">by making </span><span class="u-blue-zig">a declaration </span><span class="u-green">of </span><span class="u-blue-zig">his intention </span><span class="u-green">to resume </span><span class="u-blue-zig">Indian citizen-ship</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">TERMINATION</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Voluntary Adoption:</strong>
+            <span class="u-blue-zig">Indian citizenship </span><span class="u-green">can be terminated if </span><span class="u-blue-zig">a citizen </span><span class="u-blue-zig">knowingly or voluntarily </span><span class="u-green">adopts </span><span class="u-blue-zig">the citizenship </span><span class="u-green">of </span><span class="u-blue-zig">any foreign country</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">DEPRIVATION</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Government Deprivation Power:</strong>
+            <span class="u-blue-zig">The government of India </span><span class="u-green">can deprive </span><span class="u-blue-zig">a person </span><span class="u-green">of </span><span class="u-blue-zig">his citizenship </span><span class="u-green">in </span><span class="u-blue-zig">some cases</span>. <span class="u-green">But this is not </span><span class="u-blue-zig">applicable </span><span class="u-green">for </span><span class="u-blue-zig">all citizens</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Limited Applicability:</strong>
+            <span class="u-green">It is applicable only in the case of </span><span class="u-blue-zig">citizens </span><span class="u-green">who have acquired </span><span class="u-blue-zig">the citizenship </span><span class="u-green">by </span><span class="u-blue-zig">registration</span>, <span class="u-blue-zig">naturalisation </span><span class="u-green">or only by </span><span class="u-blue-zig">Article 5 Clause (c)</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 45</div>
+</div>
+
+<!-- =============================== PAGE 46 =============================== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">PERSON OF INDIAN ORIGIN (PIO) CARDS &amp; OVERSEAS CITIZENSHIP OF INDIA (OCI) CARDS</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. NRI Definition:</strong>
+            <span class="u-blue-zig">A NON-RESIDENT INDIAN (NRI) </span><span class="u-green">is </span><span class="u-blue-zig">a citizen of India </span><span class="u-green">who has </span><span class="u-blue-zig">temporarily </span><span class="u-green">emigrated to </span><span class="u-blue-zig">another country </span><span class="u-green">for </span><span class="u-blue-zig">six months</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. PIO &amp; OCI Status:</strong>
+            <span class="u-blue-zig">PIOs </span><span class="u-green">and </span><span class="u-blue-zig">OCI card holders </span><span class="u-green">are not </span><span class="u-blue-zig">citizens </span><span class="u-green">but </span><span class="u-blue-zig">people </span><span class="u-green">who want to stay </span><span class="u-blue-zig">connected and involved </span><span class="u-green">with </span><span class="u-blue-zig">India more closely</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. PIO Card Origin:</strong>
+                <span class="u-blue-zig">The PIO card </span><span class="u-green">was first implemented </span><span class="u-blue-zig">in 2002 </span><span class="u-green">as </span><span class="u-blue-zig">a benefit </span><span class="u-green">to </span><span class="u-blue-zig">foreign nationals </span><span class="u-green">who could establish </span><span class="u-blue-zig">at least a third generation </span><span class="u-blue-zig">tie to Indian origin</span>.
+            </li>
+            <li>
+                <strong>b. OCI Card Origin:</strong>
+                <span class="u-blue-zig">The OCI card </span><span class="u-green">was implemented </span><span class="u-blue-zig">in 2005</span>, <span class="u-green">carried </span><span class="u-blue-zig">more benefits </span><span class="u-green">than </span><span class="u-blue-zig">the PIO card</span>, <span class="u-green">and is valid for </span><span class="u-blue-zig">the holder's lifetime</span>.
+            </li>
+        </ul>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">PIO-OCI Merger:</strong>
+        <span class="u-green">In </span><span class="u-blue-zig">2015</span>, <span class="u-blue-zig">the PIO scheme </span><span class="u-green">was </span><span class="u-blue-zig">withdrawn </span><span class="u-green">and was merged with </span><span class="u-blue-zig">the OCI</span>.
+    </p>
+
+    <div class="section-header">BENEFITS OF PIO</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Visa Exemption:</strong>
+            <span class="u-blue-zig">A PIO card holder </span><span class="u-green">doesn't need </span><span class="u-blue-zig">a visa </span><span class="u-green">to visit </span><span class="u-blue-zig">India</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Employment &amp; Academic Access:</strong>
+            <span class="u-blue-zig">The holder </span><span class="u-green">also doesn't require </span><span class="u-blue-zig">a student or employment visa </span><span class="u-green">to acquire </span><span class="u-blue-zig">employment or academic opportunities </span><span class="u-blue-zig">in India</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. FRRO Exemption:</strong>
+            <span class="u-blue-zig">The holder </span><span class="u-green">was exempted from </span><span class="u-blue-zig">registering </span><span class="u-green">at </span><span class="u-blue-zig">the foreigner regional registration </span><span class="u-blue-zig">office (FRRO) </span><span class="u-green">during </span><span class="u-blue-zig">the duration of stay </span><span class="u-blue-zig">in India</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. NRI Parity:</strong>
+            <span class="u-blue-zig">The holder </span><span class="u-green">also enjoys </span><span class="u-blue-zig">parity </span><span class="u-green">with </span><span class="u-blue-zig">NRIs </span><span class="u-green">in concern to </span><span class="u-blue-zig">economic, financial </span><span class="u-green">and </span><span class="u-blue-zig">educational matters </span><span class="u-green">like </span><span class="u-blue-zig">property transfer or acquisition</span>, <span class="u-blue-zig">holding</span>, <span class="u-blue-zig">disposal</span>, <span class="u-blue-zig">investment</span>, <span class="u-blue-zig">admission of children </span><span class="u-green">in </span><span class="u-blue-zig">educational institutions </span><span class="u-green">under </span><span class="u-blue-zig">general category quota </span><span class="u-green">for </span><span class="u-blue-zig">NRIs</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">5. Immigration Facilitation:</strong>
+            <span class="u-blue-zig">Separate immigration counters </span><span class="u-green">are provided at </span><span class="u-blue-zig">all International airports</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ADDITIONAL BENEFITS OF OCI</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Citizenship Pathway:</strong>
+            <span class="u-green">Apart from </span><span class="u-blue-zig">the benefits of PIO</span>, <span class="u-blue-zig">the OCI </span><span class="u-green">can attain </span><span class="u-blue-zig">Indian citizenship </span><span class="u-green">and then live in </span><span class="u-blue-zig">India </span><span class="u-green">for </span><span class="u-blue-zig">a period of one year </span><span class="u-green">including </span><span class="u-blue-zig">short breaks</span>, <span class="u-green">if they remain </span><span class="u-blue-zig">an OCI </span><span class="u-green">for </span><span class="u-blue-zig">5 years</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Banking &amp; Investment:</strong>
+            <span class="u-blue-zig">An OCI cards holder </span><span class="u-green">can open </span><span class="u-blue-zig">special bank accounts </span><span class="u-blue-zig">in India </span><span class="u-green">just like </span><span class="u-blue-zig">NRIs </span><span class="u-green">and make </span><span class="u-blue-zig">investments</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Property Rights:</strong>
+            <span class="u-green">They can also buy </span><span class="u-blue-zig">non-farm property </span><span class="u-green">and exercise </span><span class="u-blue-zig">ownership rights</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. Document Access:</strong>
+            <span class="u-green">They apply for </span><span class="u-blue-zig">a driver's license </span><span class="u-green">and </span><span class="u-blue-zig">PAN card</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">5. NRI-Equivalent Benefits:</strong>
+            <span class="u-green">They get </span><span class="u-blue-zig">same economic, financial </span><span class="u-green">and </span><span class="u-blue-zig">educational benefits </span><span class="u-green">like </span><span class="u-blue-zig">NRIs </span><span class="u-green">and they can also adopt </span><span class="u-blue-zig">children</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">Restrictions on PIO &amp; OCI:</strong>
+        <span class="u-green">Both </span><span class="u-blue-zig">OCI </span><span class="u-green">and </span><span class="u-blue-zig">PIO </span><span class="u-green">cannot </span><span class="u-blue-zig">vote</span>, <span class="u-green">hold </span><span class="u-blue-zig">a government job </span><span class="u-green">or </span><span class="u-blue-zig">purchase </span><span class="u-blue-zig">agricultural or farm land</span>. <span class="u-green">They also cannot run for </span><span class="u-blue-zig">public office </span><span class="u-green">or travel to </span><span class="u-blue-zig">restricted areas </span><span class="u-green">without </span><span class="u-blue-zig">permission</span>.
+    </p>
+
+    <div class="main-topic-header">STATUS OF CAA, NRC &amp; NPR</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. CAA Objective:</strong>
+        <span class="u-blue-zig">The Citizenship (Amendment) Act</span>, <span class="u-blue-zig">2019 </span><span class="u-green">aims </span>
+    </p>
+
+    <div class="page-number">Page 46</div>
+</div>
+
+<!-- =============================== PAGE 47 =============================== -->
+<div class="pdf-page">
+
+    <p>
+        <span class="u-green">to facilitate </span><span class="u-blue-zig">grant of citizenship </span><span class="u-green">to </span><span class="u-blue-zig">migrants </span><span class="u-green">belonging to </span><span class="u-red-zig">Hindu</span>, <span class="u-red-zig">Sikh</span>, <span class="u-red-zig">Buddhist</span>, <span class="u-red-zig">Jain</span>, <span class="u-red-zig">Parsi </span><span class="u-green">or </span><span class="u-red-zig">Christian </span><span class="u-blue-zig">community </span><span class="u-green">from </span><span class="u-red-zig">Pakistan</span>, <span class="u-red-zig">Bangladesh </span><span class="u-green">and </span><span class="u-red-zig">Afghanistan </span><span class="u-green">who entered into </span><span class="u-blue-zig">India </span><span class="u-green">on or before </span><span class="u-blue-zig">the 31.12.2014</span>,
+    </p>
+    <p>
+        <span class="u-green">and who have been exempted by </span><span class="u-blue-zig">the Central Government </span><span class="u-green">by or under </span><span class="u-blue-zig">clause (c) </span><span class="u-green">of </span><span class="u-blue-zig">sub-section (2) </span><span class="u-green">of </span><span class="u-blue-zig">section 3 </span><span class="u-green">of </span><span class="u-blue-zig">the Passport (Entry into India) Act</span>, <span class="u-blue-zig">1920 </span><span class="u-green">or </span>
+    </p>
+    <p>
+        <span class="u-green">from </span><span class="u-blue-zig">the application </span><span class="u-green">of </span><span class="u-blue-zig">the provisions </span><span class="u-green">of </span><span class="u-blue-zig">the Foreigners Act</span>, <span class="u-blue-zig">1946 </span><span class="u-green">or </span><span class="u-blue-zig">any rule or order </span><span class="u-green">made </span><span class="u-blue-zig">thereunder</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>a. CAA Notification:</strong>
+            <span class="u-blue-zig">The Citizenship (Amendment) Act</span>, <span class="u-blue-zig">2019 </span><span class="u-green">has been notified on </span><span class="u-blue-zig">12.12.2019 </span><span class="u-green">and has come into </span><span class="u-blue-zig">force w.e.f. 10.01.2020</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. NPR Update Decision:</strong>
+        <span class="u-green">Further</span>, <span class="u-blue-zig">Government </span><span class="u-green">decided to update </span><span class="u-blue-zig">the National Population Register </span><span class="u-blue-zig">(NPR) </span><span class="u-green">under </span><span class="u-blue-zig">the Citizenship Act</span>, <span class="u-blue-zig">1955 </span><span class="u-green">along with </span><span class="u-blue-zig">the first phase </span><span class="u-green">of </span><span class="u-blue-zig">Census, 2021</span>.
+    </p>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">5. NPR Data Collection:</strong>
+            <span class="u-blue-zig">The demographic </span><span class="u-green">and </span><span class="u-blue-zig">other particulars </span><span class="u-green">of </span><span class="u-blue-zig">each family and individual </span><span class="u-green">were to be </span><span class="u-blue-zig">updated/collected </span><span class="u-green">during </span><span class="u-blue-zig">the exercise </span><span class="u-green">of </span><span class="u-blue-zig">updation of NPR</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">6. Covid-19 Postponement:</strong>
+            <span class="u-blue-zig">No document </span><span class="u-green">is to be collected during </span><span class="u-blue-zig">this exercise</span>. <span class="u-green">However</span>, <span class="u-green">due to </span><span class="u-blue-zig">outbreak of Covid-19</span>, <span class="u-blue-zig">the updation of NPR </span><span class="u-green">and </span><span class="u-blue-zig">other related field activities </span><span class="u-green">have been </span><span class="u-blue-zig">postponed</span>.
+        </li>
+    </ul>
+
+    <div class="info-box">
+        <div class="info-box-header">Usual Resident Definition</div>
+        <p>
+            <span class="u-green">According to </span><span class="u-blue-zig">the Home Ministry</span>, <span class="u-blue-zig">a "usual resident of the country" </span><span class="u-green">is one who has been </span><span class="u-blue-zig">residing </span><span class="u-green">in </span><span class="u-blue-zig">a local area </span><span class="u-green">for at least </span><span class="u-blue-zig">the last six months </span><span class="u-green">or intends to stay in </span><span class="u-blue-zig">a particular location </span><span class="u-green">for </span><span class="u-blue-zig">the next six months</span>.
+        </p>
+    </div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">7. NPR Scope:</strong>
+            <span class="u-blue-zig">NPR </span><span class="u-green">is not </span><span class="u-blue-zig">a citizenship enumeration drive</span>, <span class="u-green">as it would record </span><span class="u-blue-zig">even a foreign national </span><span class="u-green">staying in </span><span class="u-blue-zig">a locality </span><span class="u-green">for </span><span class="u-blue-zig">more than six months</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. NPR vs NRC Distinction:</strong>
+                <span class="u-green">This makes </span><span class="u-blue-zig">NPR </span><span class="u-green">different from </span><span class="u-blue-zig">the NRC</span>, <span class="u-green">which includes only </span><span class="u-blue-zig">Indian citizens </span><span class="u-green">while seeking to </span><span class="u-blue-zig">identify and exclude </span><span class="u-blue-zig">non-citizens</span>.
+            </li>
+        </ul>
+        <li>
+            <strong style="color: var(--primary-red);">8. Legal Framework:</strong>
+            <span class="u-blue-zig">The NPR </span><span class="u-green">is being prepared under </span><span class="u-blue-zig">provisions </span><span class="u-green">of </span><span class="u-blue-zig">the Citizenship Act, 1955 </span><span class="u-green">and </span><span class="u-blue-zig">the Citizenship (Registration </span><span class="u-blue-zig">of Citizens and issue </span><span class="u-green">of </span><span class="u-blue-zig">National Identity Cards) Rules</span>, <span class="u-blue-zig">2003</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">9. Mandatory Registration:</strong>
+            <span class="u-green">It is mandatory for </span><span class="u-blue-zig">every "usual resident of India" </span><span class="u-green">to register in </span><span class="u-blue-zig">the NPR</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. Assam Exclusion:</strong>
+                <span class="u-green">Only </span><span class="u-red-zig">Assam </span><span class="u-green">will not be included </span>(<span class="u-green">as per </span><span class="u-blue-zig">a notification </span><span class="u-green">by </span><span class="u-blue-zig">the Registrar General of India </span><span class="u-green">in </span><span class="u-blue-zig">August</span>), <span class="u-green">given </span><span class="u-blue-zig">the recently completed NRC </span><span class="u-green">in </span><span class="u-blue-zig">that state</span>.
+            </li>
+        </ul>
+        <li>
+            <strong style="color: var(--primary-red);">10. Census Conjunction:</strong>
+            <span class="u-blue-zig">NPR </span><span class="u-green">will be conducted in conjunction with </span><span class="u-blue-zig">the house-listing phase</span>, <span class="u-blue-zig">the first phase </span><span class="u-green">of </span><span class="u-blue-zig">the Census</span>, <span class="u-green">by </span><span class="u-blue-zig">the Office </span><span class="u-green">of </span><span class="u-blue-zig">Registrar General of India </span><span class="u-blue-zig">(RGI) </span><span class="u-green">for </span><span class="u-blue-zig">Census 2021</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">11. Multi-Level Conduct:</strong>
+            <span class="u-green">It is conducted at </span><span class="u-blue-zig">the local</span>, <span class="u-blue-zig">sub-district</span>, <span class="u-blue-zig">district</span>, <span class="u-blue-zig">state </span><span class="u-green">and </span><span class="u-blue-zig">national levels</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">12. RGI Pilot Project:</strong>
+            <span class="u-blue-zig">The RGI </span><span class="u-green">has already begun </span><span class="u-blue-zig">a pilot project </span><span class="u-green">in </span><span class="u-blue-zig">1,200 villages </span><span class="u-green">and </span><span class="u-blue-zig">40 towns and cities </span><span class="u-green">through </span><span class="u-blue-zig">5,218 enumeration blocks </span><span class="u-green">where it is collecting </span><span class="u-blue-zig">various data </span><span class="u-green">from </span><span class="u-blue-zig">people</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">13. NPR Historical Data:</strong>
+        <span class="u-blue-zig">The data for NPR </span><span class="u-green">was first collected </span><span class="u-blue-zig">in 2010 </span><span class="u-green">along with </span><span class="u-blue-zig">the house-listing phase </span><span class="u-green">of </span><span class="u-blue-zig">Census 2011</span>. <span class="u-green">In </span><span class="u-blue-zig">2015</span>, <span class="u-blue-zig">this data </span><span class="u-green">was updated by conducting </span><span class="u-blue-zig">door-to-door surveys</span>.
+    </p>
+
+    <div class="page-number">Page 47</div>
+</div>
+
+</body>
+</html>

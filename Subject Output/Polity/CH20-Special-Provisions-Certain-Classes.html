@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH20 - Special Provisions Relating to Certain Classes | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 76 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH20- Special Provisions Relating to Certain Classes</h1>
+        <p class="subtitle">Part XVI | Articles 330-342</p>
+    </header>
+
+    <div class="main-topic-header">SPECIAL PROVISIONS RELATING TO CERTAIN CLASSES</div>
+
+    <div class="section-header">ARTICLE 330</div>
+
+    <p>
+        <span class="u-blue-zig">Reservation of seats</span> <span class="u-green">for </span><span class="u-blue-zig">Scheduled Castes</span> <span class="u-green">and </span><span class="u-blue-zig">Scheduled Tribes</span> <span class="u-green">in </span><span class="u-blue-zig">the House of the People</span>.
+    </p>
+
+    <p>
+        <span class="u-blue-zig">Scheduled Castes</span> - <span class="u-blue-zig">84</span>    <span class="u-blue-zig">Scheduled Tribes</span> - <span class="u-blue-zig">47</span>
+    </p>
+
+    <div class="section-header">ARTICLE 331</div>
+
+    <p>
+        <span class="u-blue-zig">Representation</span> <span class="u-green">of </span><span class="u-blue-zig">the Anglo-Indian community</span> <span class="u-green">in </span><span class="u-blue-zig">the House of the People</span>. <span class="u-green">By </span><span class="u-blue-zig">President</span> <span class="u-green">under </span><span class="u-blue-zig">article 81</span>.
+    </p>
+
+    <p>
+        <span class="u-blue-zig">No further increase</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 332</div>
+
+    <p>
+        <span class="u-blue-zig">Reservation of seats</span> <span class="u-green">for </span><span class="u-blue-zig">Scheduled Castes</span> <span class="u-green">and </span><span class="u-blue-zig">Scheduled Tribes</span> <span class="u-green">in </span><span class="u-blue-zig">the Legislative Assemblies</span> <span class="u-green">of </span><span class="u-blue-zig">the States</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 333</div>
+
+    <p>
+        <span class="u-blue-zig">Representation</span> <span class="u-green">of </span><span class="u-blue-zig">the Anglo-Indian community</span> <span class="u-green">in </span><span class="u-blue-zig">the Legislative Assemblies</span> <span class="u-green">of </span><span class="u-blue-zig">the States</span>. <span class="u-green">By </span><span class="u-blue-zig">Governor</span> <span class="u-green">under </span><span class="u-blue-zig">article 170</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 334</div>
+
+    <p>
+        <span class="u-blue-zig">Reservation of seats</span> <span class="u-green">for </span><span class="u-blue-zig">SC &amp;ST</span> <span class="u-green">for </span><span class="u-blue-zig">10 years</span>. (<span class="u-blue-zig">Eighty years</span> <span class="u-blue-zig">126th amendment bill</span>)
+    </p>
+
+    <div class="section-header">ARTICLE 335</div>
+
+    <p>
+        <span class="u-blue-zig">The claims</span> <span class="u-green">of </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Castes</span> <span class="u-green">and </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">shall be taken into</span> <span class="u-blue-zig">consideration</span>, <span class="u-green">consistently with </span><span class="u-blue-zig">the maintenance</span> <span class="u-green">of </span><span class="u-blue-zig">efficiency of administration</span>, <span class="u-green">in the making of </span><span class="u-blue-zig">appointments</span> <span class="u-green">to </span><span class="u-blue-zig">services and posts</span> <span class="u-green">in connection with </span><span class="u-blue-zig">the affairs</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">or of </span><span class="u-blue-zig">a State</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 336</div>
+
+    <div class="page-number">76</div>
+</div>
+
+<!-- ==================== PAGE 77 ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">Anglo-Indian Services:</strong> <span class="u-blue-zig">Special provision</span> <span class="u-green">for </span><span class="u-blue-zig">Anglo-Indian community</span> <span class="u-green">in </span><span class="u-blue-zig">certain services</span>.(<span class="u-blue-zig">railway</span>, <span class="u-blue-zig">customs</span>, <span class="u-blue-zig">postal and telegraph</span>)
+    </p>
+
+    <div class="section-header">ARTICLE 337</div>
+
+    <p>
+        <span class="u-blue-zig">Special provision</span> <span class="u-green">with respect to </span><span class="u-blue-zig">educational grants</span> <span class="u-green">for the benefit of </span><span class="u-blue-zig">Anglo-Indian community</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 338</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. SC Commission:</strong> (<span class="u-blue-zig">1</span>) <span class="u-green">There shall be </span><span class="u-blue-zig">a Commission</span> <span class="u-green">for </span><span class="u-blue-zig">the Scheduled Castes</span> <span class="u-green">to be known as </span><span class="u-blue-zig">the National Commission</span> <span class="u-green">for </span><span class="u-blue-zig">the Scheduled Castes</span>.
+    </p>
+
+    <div class="section-header" style="text-align: center;">NATIONAL COMMISSION FOR SCHEDULED CASTES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Composition:</strong> (<span class="u-blue-zig">2</span>) <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of any law made in </span><span class="u-blue-zig">this behalf</span> <span class="u-green">by </span><span class="u-blue-zig">Parliament</span>, <span class="u-blue-zig">the Commission</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">a Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">three other Members</span> <span class="u-green">and </span><span class="u-blue-zig">the conditions of service</span> <span class="u-green">and </span><span class="u-blue-zig">tenure of office</span> <span class="u-green">of </span><span class="u-blue-zig">the Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">other Members</span> <span class="u-green">so appointed shall be </span><span class="u-blue-zig">such</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may by rule determine</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Appointment:</strong> (<span class="u-blue-zig">3</span>) <span class="u-blue-zig">The Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">other Members</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span> <span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">by </span><span class="u-blue-zig">warrant</span> <span class="u-green">under </span><span class="u-blue-zig">his hand and seal</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Own Procedure:</strong> (<span class="u-blue-zig">4</span>) <span class="u-blue-zig">The Commission</span> <span class="u-green">shall have the power to </span><span class="u-blue-zig">regulate</span> <span class="u-green">its own </span><span class="u-blue-zig">procedure</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Commission Duties:</strong> (<span class="u-blue-zig">5</span>) <span class="u-green">It shall be </span><span class="u-blue-zig">the DUTY</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span> —
+    </p>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">a. Investigate Safeguards:</strong> <span class="u-green">to investigate and monitor </span><span class="u-blue-zig">all matters</span> <span class="u-green">relating to </span><span class="u-blue-zig">the safeguards</span> <span class="u-green">provided for </span><span class="u-blue-zig">the Scheduled Castes</span> <span class="u-green">under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">or under </span><span class="u-blue-zig">any other law</span> <span class="u-green">for the time being in </span><span class="u-blue-zig">force</span> <span class="u-green">or under </span><span class="u-blue-zig">any order</span> <span class="u-green">of </span><span class="u-blue-zig">the Government</span> <span class="u-green">and to evaluate </span><span class="u-blue-zig">the working</span> <span class="u-green">of </span><span class="u-blue-zig">such safeguards</span>;
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">b. Specific Complaints:</strong> <span class="u-green">to inquire into </span><span class="u-blue-zig">specific complaints</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the deprivation</span> <span class="u-green">of </span><span class="u-blue-zig">rights and safeguards</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Castes</span>
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">c. Planning Process:</strong> <span class="u-green">to participate and advise on </span><span class="u-blue-zig">the planning process</span> <span class="u-green">of </span><span class="u-blue-zig">socio-economic development</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Castes</span> <span class="u-green">and to evaluate </span><span class="u-blue-zig">the progress</span> <span class="u-green">of </span><span class="u-blue-zig">their development</span> <span class="u-green">under </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">any State</span>;
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">d. Annual Reports:</strong> <span class="u-green">to present to </span><span class="u-blue-zig">the President</span>, <span class="u-blue-zig">annually</span> <span class="u-green">and at </span><span class="u-blue-zig">such other times</span> <span class="u-green">as </span><span class="u-blue-zig">the Commission</span> <span class="u-green">may deem fit</span>, <span class="u-blue-zig">reports</span> <span class="u-green">upon </span><span class="u-blue-zig">the working</span> <span class="u-green">of </span><span class="u-blue-zig">those safeguards</span>;
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">e. Recommendations:</strong> <span class="u-green">to make in </span><span class="u-blue-zig">such reports</span> <span class="u-blue-zig">recommendations</span> <span class="u-green">as to </span><span class="u-blue-zig">the measures</span> <span class="u-green">that should be taken by </span><span class="u-blue-zig">the Union</span> <span class="u-green">or </span><span class="u-blue-zig">any State</span> <span class="u-green">for the effective implementation of </span><span class="u-blue-zig">those safeguards</span> <span class="u-green">and </span><span class="u-blue-zig">other measures</span> <span class="u-green">for </span><span class="u-blue-zig">the protection</span>, <span class="u-blue-zig">welfare</span> <span class="u-green">and </span><span class="u-blue-zig">socio-economic development</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Castes</span>; <span class="u-green">and</span>
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">f. Other Functions:</strong> <span class="u-green">to discharge </span><span class="u-blue-zig">such other functions</span> <span class="u-green">in relation to </span><span class="u-blue-zig">the protection</span>, <span class="u-blue-zig">welfare</span> <span class="u-green">and </span><span class="u-blue-zig">development and advancement</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Castes</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may</span>, <span class="u-green">subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of any law made by </span><span class="u-blue-zig">Parliament</span>, <span class="u-green">by </span><span class="u-blue-zig">rule</span> <span class="u-green">specify</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Reports to Parliament:</strong> (<span class="u-blue-zig">6</span>) <span class="u-blue-zig">The President</span> <span class="u-green">shall cause </span><span class="u-blue-zig">all such reports</span> <span class="u-green">to be laid before </span><span class="u-blue-zig">each House of Parliament</span> <span class="u-green">along with </span><span class="u-blue-zig">a memorandum</span> <span class="u-green">explaining </span><span class="u-blue-zig">the action taken</span> <span class="u-green">or </span><span class="u-blue-zig">proposed to be taken</span> <span class="u-green">on </span><span class="u-blue-zig">the recommendations</span>.
+    </p>
+
+    <div class="page-number">77</div>
+</div>
+
+
+<!-- ==================== PAGE 78 (PDF 207) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">7. State Report:</strong> <span class="u-green">relating to </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the reasons</span> <span class="u-green">for the non-acceptance, if any, of </span><span class="u-blue-zig">any of such recommendations</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. Governor Forwarding:</strong> (7) <span class="u-green">Where any such </span><span class="u-blue-zig">report</span>, <span class="u-green">or any part thereof, </span><span class="u-green">relates to any matter </span><span class="u-green">with which </span><span class="u-blue-zig">any State Government</span> <span class="u-green">is concerned</span>, <span class="u-blue-zig">a copy of such reports</span> <span class="u-green">shall be forwarded to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">who shall cause it to be </span><span class="u-green">laid before </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">along with </span><span class="u-blue-zig">a memorandum</span> <span class="u-green">explaining </span><span class="u-blue-zig">the action taken</span> <span class="u-green">or proposed to be taken on </span><span class="u-blue-zig">the recommendations</span> <span class="u-green">relating to </span><span class="u-blue-zig">the State</span> <span class="u-green">and </span><span class="u-blue-zig">the reasons</span> <span class="u-green">for the non-acceptance, if any, of </span><span class="u-blue-zig">any of such recommendations</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">9. Civil Court Powers:</strong> (8) <span class="u-blue-zig">The Commission</span> <span class="u-green">shall, while investigating </span><span class="u-blue-zig">any matter</span> <span class="u-green">referred to in </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">or inquiring into </span><span class="u-blue-zig">any complaint</span> <span class="u-green">referred to in </span><span class="u-blue-zig">sub-clause (b)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (5)</span>, <span class="u-green">have </span><span class="u-blue-zig">all the powers</span> <span class="u-green">of </span><span class="u-blue-zig">a civil court</span> <span class="u-green">trying a suit and </span><span class="u-green">in particular in respect of </span><span class="u-blue-zig">the following matters</span>, namely: —
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Summoning Persons:</strong> (a) <span class="u-blue-zig">summoning and enforcing</span> <span class="u-blue-zig">the attendance</span> <span class="u-green">of </span><span class="u-blue-zig">any person</span>
+        </li>
+        <li>
+            <strong>2. Document Production:</strong> (b) <span class="u-green">requiring </span><span class="u-blue-zig">the discovery and production</span> <span class="u-green">of </span><span class="u-blue-zig">any document</span>;
+        </li>
+        <li>
+            <strong>3. Evidence Affidavits:</strong> (c) <span class="u-green">receiving </span><span class="u-blue-zig">evidence on affidavits</span>;
+        </li>
+        <li>
+            <strong>4. Public Record:</strong> (d) <span class="u-green">requisitioning </span><span class="u-blue-zig">any public record</span> <span class="u-green">or </span><span class="u-blue-zig">copy thereof</span> <span class="u-green">from </span><span class="u-blue-zig">any court or office</span>;
+        </li>
+        <li>
+            <strong>5. Witness Examination:</strong> (e) <span class="u-green">issuing </span><span class="u-blue-zig">commissions</span> <span class="u-green">for the examination of </span><span class="u-blue-zig">witnesses and documents</span>;
+        </li>
+        <li>
+            <strong>6. Presidential Rule:</strong> (f) <span class="u-blue-zig">any other matter</span> <span class="u-green">which </span><span class="u-blue-zig">the President</span> <span class="u-green">may, by rule, </span><span class="u-blue-zig">determine</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">10. Policy Consultation:</strong> (9) <span class="u-blue-zig">The Union</span> <span class="u-green">and </span><span class="u-blue-zig">every State Government</span> <span class="u-green">shall consult </span><span class="u-blue-zig">the Commission</span> <span class="u-green">on </span><span class="u-blue-zig">all major policy matters</span> <span class="u-green">affecting </span><span class="u-blue-zig">Scheduled Castes</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">11. Backward Classes:</strong> (10) <span class="u-green">In this article, </span><span class="u-blue-zig">references</span> <span class="u-green">to </span><span class="u-blue-zig">the Scheduled Castes</span> <span class="u-green">shall be construed as </span><span class="u-green">including references to </span><span class="u-blue-zig">such other backward classes</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may, on receipt of </span><span class="u-blue-zig">the report</span> <span class="u-green">of </span><span class="u-blue-zig">a Commission</span> <span class="u-green">appointed under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">of </span><span class="u-blue-zig">article 340</span>, <span class="u-green">by order specify </span><span class="u-green">and also to </span><span class="u-blue-zig">the Anglo-Indian community</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 338A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Commission Established:</strong> (1) <span class="u-green">There shall be </span><span class="u-blue-zig">a Commission</span> <span class="u-green">for </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">to be known as </span><span class="u-blue-zig">the National Commission</span> <span class="u-green">for </span><span class="u-blue-zig">the Scheduled Tribes</span>.
+    </p>
+
+    <div class="section-header">NATIONAL COMMISSION FOR SCHEDULED TRIBES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Composition:</strong> (2) <span class="u-green">Subject to the provisions of </span><span class="u-blue-zig">any law</span> <span class="u-green">made in this behalf by </span><span class="u-blue-zig">Parliament</span>, <span class="u-blue-zig">the Commission</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">a Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">three other Members</span> <span class="u-green">and </span><span class="u-blue-zig">the conditions of service</span> <span class="u-green">and </span><span class="u-blue-zig">tenure of office</span> <span class="u-green">of </span><span class="u-blue-zig">the Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">other Members</span> <span class="u-green">so appointed shall be such as </span><span class="u-blue-zig">the President</span> <span class="u-green">may by rule </span><span class="u-blue-zig">determine</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Appointment:</strong> (3) <span class="u-blue-zig">The Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">other Members</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span> <span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">by </span><span class="u-blue-zig">warrant</span> <span class="u-green">under </span><span class="u-blue-zig">his hand and seal</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Own Procedure:</strong> (4) <span class="u-blue-zig">The Commission</span> <span class="u-green">shall have </span><span class="u-blue-zig">the power</span> <span class="u-green">to regulate </span><span class="u-blue-zig">its own procedure</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Duty of Commission:</strong> (5) <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Commission</span> —
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Monitor Safeguards:</strong> (a) <span class="u-green">to investigate and monitor </span><span class="u-blue-zig">all matters</span> <span class="u-green">relating to </span><span class="u-blue-zig">the safeguards</span> <span class="u-green">provided for </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">or under </span><span class="u-blue-zig">any other law</span> <span class="u-green">for the time being in force </span><span class="u-green">or under </span><span class="u-blue-zig">any order</span> <span class="u-green">of </span><span class="u-blue-zig">the Government</span> <span class="u-green">and to evaluate </span><span class="u-blue-zig">the working</span> <span class="u-green">of </span><span class="u-blue-zig">such safeguards</span>;
+        </li>
+    </ul>
+
+    <div class="page-number">Page 78</div>
+</div>
+
+<!-- ==================== PAGE 79 (PDF 208) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>2. Specific Complaints:</strong> (b) <span class="u-green">to inquire into </span><span class="u-blue-zig">specific complaints</span> <span class="u-green">with repsect to </span><span class="u-blue-zig">the deprivation</span> <span class="u-green">of </span><span class="u-blue-zig">rights and safeguards</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span>;
+        </li>
+        <li>
+            <strong>3. Planning Process:</strong> (c) <span class="u-green">to participate and advise on </span><span class="u-blue-zig">the planning process</span> <span class="u-green">of </span><span class="u-blue-zig">socio-economic development</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">and to evaluate </span><span class="u-blue-zig">the progress</span> <span class="u-green">of </span><span class="u-blue-zig">their development</span> <span class="u-green">under </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">any State</span>;
+        </li>
+        <li>
+            <strong>4. Annual Reports:</strong> (d) <span class="u-green">to present to </span><span class="u-blue-zig">the President</span>, <span class="u-blue-zig">annually</span> <span class="u-green">and at such other times as </span><span class="u-blue-zig">the Commission</span> <span class="u-green">may deem fit</span>, <span class="u-blue-zig">reports</span> <span class="u-green">upon </span><span class="u-blue-zig">the working</span> <span class="u-green">of </span><span class="u-blue-zig">those safeguards</span>;
+        </li>
+        <li>
+            <strong>5. Recommendations:</strong> (e) <span class="u-green">to make in such reports </span><span class="u-blue-zig">recommendations</span> <span class="u-green">as to </span><span class="u-blue-zig">the measures</span> <span class="u-green">that should be taken by </span><span class="u-blue-zig">the Union</span> <span class="u-green">or </span><span class="u-blue-zig">any State</span> <span class="u-green">for the effective implementation of </span><span class="u-blue-zig">those safeguards</span> <span class="u-green">and </span><span class="u-blue-zig">other measures</span> <span class="u-green">for the protection, welfare and </span><span class="u-blue-zig">socio-economic development</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span>; <span class="u-green">and</span>
+        </li>
+        <li>
+            <strong>6. Other Functions:</strong> (f) <span class="u-green">to discharge </span><span class="u-blue-zig">such other functions</span> <span class="u-green">in relation to </span><span class="u-blue-zig">the protection, welfare</span> <span class="u-green">and </span><span class="u-blue-zig">development and advancement</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may, subject to the provisions of </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span>, <span class="u-green">by rule </span><span class="u-blue-zig">specify</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Parliament Report:</strong> (6) <span class="u-blue-zig">The President</span> <span class="u-green">shall cause </span><span class="u-blue-zig">all such reports</span> <span class="u-green">to be laid before </span><span class="u-blue-zig">each House of Parliament</span> <span class="u-green">along with </span><span class="u-blue-zig">a memorandum</span> <span class="u-green">explaining </span><span class="u-blue-zig">the action taken</span> <span class="u-green">or proposed to be taken on </span><span class="u-blue-zig">the recommendations</span> <span class="u-green">relating to </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the reasons</span> <span class="u-green">for the non-acceptance, if any, of </span><span class="u-blue-zig">any of such recommendations</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. State Report:</strong> (7) <span class="u-green">Where any such </span><span class="u-blue-zig">report</span>, <span class="u-green">or any part thereof, </span><span class="u-green">relates to any matter </span><span class="u-green">with which </span><span class="u-blue-zig">any State Government</span> <span class="u-green">is concerned</span>, <span class="u-blue-zig">a copy of such report</span> <span class="u-green">shall be forwarded to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">who shall cause it to be </span><span class="u-green">laid before </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">along with </span><span class="u-blue-zig">a memorandum</span> <span class="u-green">explaining </span><span class="u-blue-zig">the action taken</span> <span class="u-green">or proposed to be taken on </span><span class="u-blue-zig">the recommendations</span> <span class="u-green">relating to </span><span class="u-blue-zig">the State</span> <span class="u-green">and </span><span class="u-blue-zig">the reasons</span> <span class="u-green">for the non-acceptance, if any, of </span><span class="u-blue-zig">any of such recommendations</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. Civil Court Powers:</strong> (8) <span class="u-blue-zig">The Commission</span> <span class="u-green">shall, while investigating </span><span class="u-blue-zig">any matter</span> <span class="u-green">referred to in </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">or inquiring into </span><span class="u-blue-zig">any complaint</span> <span class="u-green">referred to in </span><span class="u-blue-zig">sub-clause (b)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (5)</span>, <span class="u-green">have </span><span class="u-blue-zig">all the powers</span> <span class="u-green">of </span><span class="u-blue-zig">a civil court</span> <span class="u-green">trying a suit and </span><span class="u-green">in particular in respect of </span><span class="u-blue-zig">the following matters</span>, namely: —
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Summoning Persons:</strong> (a) <span class="u-blue-zig">summoning and enforcing</span> <span class="u-blue-zig">the attendance</span> <span class="u-green">of </span><span class="u-blue-zig">any person</span> <span class="u-green">from </span><span class="u-blue-zig">any part of India</span> <span class="u-green">and </span><span class="u-blue-zig">examining him</span> <span class="u-green">on </span><span class="u-blue-zig">oath</span>;
+        </li>
+        <li>
+            <strong>2. Document Production:</strong> (b) <span class="u-green">requiring </span><span class="u-blue-zig">the discovery and production</span> <span class="u-green">of </span><span class="u-blue-zig">any document</span>;
+        </li>
+        <li>
+            <strong>3. Evidence Affidavits:</strong> (c) <span class="u-green">receiving </span><span class="u-blue-zig">evidence on affidavits</span>;
+        </li>
+        <li>
+            <strong>4. Public Record:</strong> (d) <span class="u-green">requisitioning </span><span class="u-blue-zig">any public record</span> <span class="u-green">or </span><span class="u-blue-zig">copy thereof</span> <span class="u-green">from </span><span class="u-blue-zig">any court or office</span>;
+        </li>
+        <li>
+            <strong>5. Witness Examination:</strong> (e) <span class="u-green">issuing </span><span class="u-blue-zig">commissions</span> <span class="u-green">for the examination of </span><span class="u-blue-zig">witnesses and documents</span>;
+        </li>
+        <li>
+            <strong>6. Presidential Rule:</strong> (f) <span class="u-blue-zig">any other matter</span> <span class="u-green">which </span><span class="u-blue-zig">the President</span> <span class="u-green">may, by rule, </span><span class="u-blue-zig">determine</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">9. Policy Consultation:</strong> (9) <span class="u-blue-zig">The Union</span> <span class="u-green">and </span><span class="u-blue-zig">every State Government</span> <span class="u-green">shall consult </span><span class="u-blue-zig">the Commission</span> <span class="u-green">on </span><span class="u-blue-zig">all major policy matters</span> <span class="u-green">affecting </span><span class="u-blue-zig">Scheduled Tribes</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 339</div>
+
+    <div class="page-number">Page 79</div>
+</div>
+
+<!-- ==================== PAGE 80 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 339</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Commission Appointment:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">may at any time and shall</span>, <span class="u-green">at the expiration of </span><span class="u-blue-zig">ten years</span> <span class="u-green">from the commencement of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">by order appoint </span><span class="u-blue-zig">a Commission</span> <span class="u-green">to report on </span><span class="u-blue-zig">the administration</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Areas</span> <span class="u-green">and </span><span class="u-blue-zig">the welfare</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">in </span><span class="u-blue-zig">the States</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Order Definition:</strong> <span class="u-blue-zig">The order</span> <span class="u-green">may define </span><span class="u-blue-zig">the composition, powers and procedure</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span> <span class="u-green">and may contain such </span><span class="u-blue-zig">incidental or ancillary provisions</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may consider </span><span class="u-blue-zig">necessary or desirable</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Executive Power:</strong> (2) <span class="u-blue-zig">The executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall extend to </span><span class="u-blue-zig">the giving of directions</span> <span class="u-green">to </span><span class="u-blue-zig">a State</span> <span class="u-green">as to the drawing up and </span><span class="u-green">execution of </span><span class="u-blue-zig">schemes</span> <span class="u-green">specified in the direction </span><span class="u-green">to be essential for </span><span class="u-blue-zig">the welfare</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 340</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Backward Classes:</strong> <span class="u-blue-zig">Appointment</span> <span class="u-green">of </span><span class="u-blue-zig">a Commission</span> <span class="u-green">to investigate </span><span class="u-blue-zig">the conditions</span> <span class="u-green">of </span><span class="u-blue-zig">backward classes</span>.
+    </p>
+
+    <div class="section-header">NATIONAL COMMISSION FOR BACKWARD CLASSES</div>
+
+    <div class="section-header">ARTICLE 338B</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Amendment Source:</strong> <span class="u-green">Inserted by </span><span class="u-blue-zig">102nd Constitutional Amendment Act</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. NCBC Function:</strong> <span class="u-green">Empowers </span><span class="u-blue-zig">NCBC</span> <span class="u-green">to examine </span><span class="u-blue-zig">complaints</span> <span class="u-green">and </span><span class="u-blue-zig">welfare measures</span> <span class="u-green">regarding </span><span class="u-blue-zig">socially and educationally backward classes</span>.
+    </p>
+
+    <p><strong>Composition of NCBC</strong></p>
+
+    <ul>
+        <li>
+            <strong>1. Chairperson & Members:</strong> <span class="u-blue-zig">1 chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">5 members</span> <span class="u-green">with the term of </span><span class="u-blue-zig">3 years</span>.
+        </li>
+        <li>
+            <strong>2. Presidential Appointment:</strong> <span class="u-blue-zig">Members</span> <span class="u-green">are appointed and removed by </span><span class="u-blue-zig">President</span>.
+        </li>
+        <li>
+            <strong>3. Service Conditions:</strong> <span class="u-blue-zig">President</span> <span class="u-green">also determines </span><span class="u-blue-zig">their conditions of service</span> <span class="u-green">and </span><span class="u-blue-zig">office tenure</span>.
+        </li>
+        <li>
+            <strong>4. Chairperson Eligibility:</strong> <span class="u-blue-zig">Chairperson eligibility</span> – <span class="u-blue-zig">Judge of SC/HC</span>.
+        </li>
+        <li>
+            <strong>5. Member Composition:</strong> <span class="u-green">Among the members</span>,
+        </li>
+        <li>
+            <strong>6. Special Knowledge:</strong> <span class="u-green">There should be: </span><span class="u-blue-zig">at least 2 persons</span> <span class="u-green">who have </span><span class="u-blue-zig">special knowledge</span> <span class="u-green">in matters of </span><span class="u-blue-zig">backward classes</span>,
+        </li>
+        <li>
+            <strong>7. Diversity Requirement:</strong> <span class="u-blue-zig">At least 1 woman</span>, <span class="u-blue-zig">a social scientist</span>, <span class="u-blue-zig">a member secretary</span> (<span class="u-blue-zig">rank of secretary to GOI</span>).
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Report Submission:</strong> <span class="u-blue-zig">NCBC</span> <span class="u-green">submits reports upon </span><span class="u-blue-zig">the working of safeguards</span> <span class="u-green">for </span><span class="u-blue-zig">socially and educationally backward classes</span> <span class="u-green">to </span><span class="u-blue-zig">the President</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Parliamentary Tabling:</strong> <span class="u-blue-zig">President</span> <span class="u-green">lay those reports before </span><span class="u-blue-zig">the Parliament</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. State Reports:</strong> <span class="u-green">If such reports </span><span class="u-green">are related to </span><span class="u-blue-zig">the state</span>, <span class="u-green">then </span><span class="u-blue-zig">a copy of the report</span> <span class="u-green">shall be forwarded to </span><span class="u-blue-zig">the concerned state government</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Investigation Power:</strong> <span class="u-blue-zig">NCBC</span> <span class="u-green">has the power to </span><span class="u-green">investigate, monitor and evaluate </span><span class="u-blue-zig">the working of safeguards</span> <span class="u-green">provided under </span><span class="u-blue-zig">the constitution</span> <span class="u-green">for </span><span class="u-blue-zig">the socially and educationally backward classes</span>.
+        </li>
+        <li>
+            <strong>3. Advisory Role:</strong> <span class="u-blue-zig">NCBC</span> <span class="u-green">participates and advises on </span><span class="u-blue-zig">the socio-economic development</span> <span class="u-green">of </span><span class="u-blue-zig">the SEdBCs</span> <span class="u-green">and also evaluates </span><span class="u-blue-zig">the progress</span> <span class="u-green">of </span><span class="u-blue-zig">their development</span>.
+        </li>
+        <li>
+            <strong>4. Other Functions:</strong> <span class="u-green">It has to perform </span><span class="u-blue-zig">such other functions</span> <span class="u-green">as the President </span><span class="u-green">may by rule specify</span> <span class="u-green">which is subject to </span><span class="u-blue-zig">the provision</span> <span class="u-green">of any </span><span class="u-blue-zig">parliamentary law</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 341</div>
+
+    <div class="page-number">Page 80</div>
+</div>
+
+<!-- ==================== PAGE 81 ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Scheduled Castes:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">may with respect to </span><span class="u-blue-zig">any State</span> <span class="u-green">or </span><span class="u-blue-zig">Union territory</span>], <span class="u-green">and where it is </span><span class="u-blue-zig">a State</span>, <span class="u-green">after consultation with </span><span class="u-blue-zig">the Governor</span> <span class="u-green">thereof, by </span><span class="u-blue-zig">public notification</span>, <span class="u-green">specify </span><span class="u-blue-zig">the castes, races or tribes</span> <span class="u-green">or parts of or </span><span class="u-green">groups within </span><span class="u-blue-zig">castes, races or tribes</span> <span class="u-green">which shall for </span><span class="u-green">the purposes of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">be deemed to be </span><span class="u-blue-zig">Scheduled Castes</span> <span class="u-green">in relation to </span><span class="u-blue-zig">that State</span> <span class="u-green">or </span><span class="u-blue-zig">Union territory</span>, <span class="u-green">as the case may be</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Parliamentary Power:</strong> (2) <span class="u-blue-zig">Parliament</span> <span class="u-green">may by law include in or </span><span class="u-green">exclude from </span><span class="u-blue-zig">the list</span> <span class="u-green">of </span><span class="u-blue-zig">Schdeuled Castes</span> <span class="u-green">specified in </span><span class="u-blue-zig">a notification</span> <span class="u-green">issued under </span><span class="u-blue-zig">clause (1)</span> <span class="u-blue-zig">any caste, race or tribe</span> <span class="u-green">or part of or </span><span class="u-green">group within </span><span class="u-blue-zig">any caste, race or tribe</span>, <span class="u-green">but save as aforesaid </span><span class="u-blue-zig">a notification</span> <span class="u-green">issued under </span><span class="u-blue-zig">the said clause</span> <span class="u-green">shall not be varied by </span><span class="u-blue-zig">any subsequent notification</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 342</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Scheduled Tribes:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">may with respect to </span><span class="u-blue-zig">any State</span> <span class="u-green">or </span><span class="u-blue-zig">Union territory</span>, <span class="u-green">and where it is </span><span class="u-blue-zig">a State</span> <span class="u-green">after consultation with </span><span class="u-blue-zig">the Governor</span> <span class="u-green">thereof, by </span><span class="u-blue-zig">public notification6</span>, <span class="u-green">specify </span><span class="u-blue-zig">the tribes</span> <span class="u-green">or </span><span class="u-blue-zig">tribal communities</span> <span class="u-green">or parts of or </span><span class="u-green">groups within </span><span class="u-blue-zig">tribes</span> <span class="u-green">or </span><span class="u-blue-zig">tribal communities</span> <span class="u-green">which shall for </span><span class="u-green">the purposes of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">be deemed to be </span><span class="u-blue-zig">Scheduled Tribes</span> <span class="u-green">in relation to </span><span class="u-blue-zig">that State</span> <span class="u-green">or </span><span class="u-blue-zig">Union territory</span>, <span class="u-green">as the case may be</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Parliamentary Power:</strong> (2) <span class="u-blue-zig">Parliament</span> <span class="u-green">may by law include in or </span><span class="u-green">exclude from </span><span class="u-blue-zig">the list</span> <span class="u-green">of </span><span class="u-blue-zig">Scheduled Tribes</span> <span class="u-green">specified in </span><span class="u-blue-zig">a notification</span> <span class="u-green">issued under </span><span class="u-blue-zig">clause (1)</span> <span class="u-blue-zig">any tribe</span> <span class="u-green">or </span><span class="u-blue-zig">tribal community</span> <span class="u-green">or part of or </span><span class="u-green">group within </span><span class="u-blue-zig">any tribe</span> <span class="u-green">or </span><span class="u-blue-zig">tribal community</span>, <span class="u-green">but save as aforesaid </span><span class="u-blue-zig">a notification</span> <span class="u-green">issued under </span><span class="u-blue-zig">the said clause</span> <span class="u-green">shall not be varied by </span><span class="u-blue-zig">any subsequent notification</span>.
+    </p>
+
+    <div class="page-number">Page 81</div>
+</div>
+
+</body>
+</html>

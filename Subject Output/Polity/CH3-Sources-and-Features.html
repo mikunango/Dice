@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH3 - Sources & Features | Indian Polity</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============================== PAGE 26 =============================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH3- Sources & Features</h1>
+    </header>
+
+    <p>
+        <span class="u-red-zig">Dr. B.R. Ambedkar</span>
+        <span class="u-green"> call </span>
+        <span class="u-blue-zig">the Indian Constitution</span>
+        <span class="u-blue-zig"> a Bag of Borrowing</span>.
+    </p>
+
+    <table style="table-layout: fixed; width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.92rem;">
+        <thead>
+            <tr>
+                <th style="background: var(--primary-blue); color: white; padding: 10px 14px; text-align: center; font-weight: bold; width: 30%;">Source</th>
+                <th style="background: var(--primary-blue); color: white; padding: 10px 14px; text-align: center; font-weight: bold;">Features Borrowed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>1. Government of India Act, 1935:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Federal Scheme</span>,
+                    <span class="u-blue-zig">Judiciary</span>,
+                    <span class="u-blue-zig">Emergency Provisions</span>,
+                    <span class="u-blue-zig">Office of Governor</span>,
+                    <span class="u-blue-zig">Public Service Commissions</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>2. Britain:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Parliamentary Government</span>,
+                    <span class="u-blue-zig">Parliamentary Privileges</span>,
+                    <span class="u-blue-zig">Bicameralism</span>,
+                    <span class="u-blue-zig">Cabinet System</span>,
+                    <span class="u-blue-zig">Single Citizenship</span>,
+                    <span class="u-blue-zig">Legislative Procedure</span>,
+                    <span class="u-blue-zig">Rule of Law</span>,
+                    <span class="u-blue-zig">Prerogative Writs</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>3. Ireland:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Directive Principles</span>
+                    <span class="u-blue-zig">of State Policy</span>,
+                    <span class="u-blue-zig">Method of Election</span>
+                    <span class="u-blue-zig">of the President</span>,
+                    <span class="u-blue-zig">Nomination of Members</span>
+                    <span class="u-blue-zig">to Rajya Sabha</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>4. United States of America:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Preamble</span>,
+                    <span class="u-blue-zig">Judicial Review</span>,
+                    <span class="u-blue-zig">Removal of Judges</span>,
+                    <span class="u-blue-zig">Impeachment of the President</span>,
+                    <span class="u-blue-zig">Functions of President</span>
+                    <span class="u-green"> &amp; </span>
+                    <span class="u-blue-zig">Vice-President</span>,
+                    <span class="u-blue-zig">Independent Judiciary</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>5. Canada:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Appointment of State Governors</span>
+                    <span class="u-blue-zig">by the Centre</span>,
+                    <span class="u-blue-zig">Federation with a Strong Centre</span>,
+                    <span class="u-blue-zig">Advisory Jurisdiction</span>
+                    <span class="u-blue-zig">of the Supreme Court</span>,
+                    <span class="u-blue-zig">Residuary Powers</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-number">Page 26</div>
+</div>
+
+<!-- =============================== PAGE 27 =============================== -->
+<div class="pdf-page">
+
+    <table style="table-layout: fixed; width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.92rem;">
+        <thead>
+            <tr>
+                <th style="background: var(--primary-blue); color: white; padding: 10px 14px; text-align: center; font-weight: bold; width: 30%;">Source</th>
+                <th style="background: var(--primary-blue); color: white; padding: 10px 14px; text-align: center; font-weight: bold;">Features Borrowed</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>6. Australia:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Joint Sitting</span>
+                    <span class="u-blue-zig">of the Two Houses</span>,
+                    <span class="u-blue-zig">Commerce and Intercourse</span>,
+                    <span class="u-blue-zig">Concurrent List</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>7. Russia:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">The Ideal of Justice</span>,
+                    <span class="u-blue-zig">Fundamental Duties</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>8. France:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Republic</span>,
+                    <span class="u-blue-zig">Equality</span>,
+                    <span class="u-blue-zig">Liberty</span>,
+                    <span class="u-blue-zig">Fraternity</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>9. Weimar Constitution of Germany:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Suspension of Fundamental Rights</span>
+                    <span class="u-blue-zig">during Emergency</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>10. South Africa:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Procedure for Amendment</span>,
+                    <span class="u-blue-zig">Election of Members</span>
+                    <span class="u-blue-zig">of Rajya Sabha</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <strong>11. Japan:</strong>
+                </td>
+                <td style="border: 1px solid var(--border-gray); padding: 10px 14px; vertical-align: top; word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-blue-zig">Procedure Established by Law</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-number">Page 27</div>
+</div>
+
+<!-- =============================== PAGE 28 =============================== -->
+<div class="pdf-page">
+
+    <div class="quote-box">
+        <span class="u-blue-zig">The Indian federation</span>
+        <span class="u-green"> is an example of </span>
+        <span class="u-blue-zig">co-operative federalism</span>.
+        <span class="u-red-zig">India</span>
+        <span class="u-green"> has created </span>
+        <span class="u-blue-zig">a strong central government</span>;
+        <span class="u-green">it has not made </span>
+        <span class="u-blue-zig">the state government weak</span>.
+        <span class="quote-author">— Granville Austin</span>
+    </div>
+
+    <div class="main-topic-header">FEDERAL</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Federal Government Definition:</strong>
+            <span class="u-red-zig">K.C. Wheare</span>
+            <span class="u-green"> defines </span>
+            <span class="u-blue-zig">federal government</span>
+            <span class="u-green"> as</span>,
+            <span class="u-blue-zig">an association of states</span>,
+            <span class="u-green">which has been formed for </span>
+            <span class="u-blue-zig">certain common purposes</span>,
+            <span class="u-green">but in which </span>
+            <span class="u-blue-zig">the member states</span>
+            <span class="u-green"> retain </span>
+            <span class="u-blue-zig">a large measure</span>
+            <span class="u-blue-zig"> of their original independence</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Federal Constitution Principle:</strong>
+            <span class="u-blue-zig">A federal Constitution</span>
+            <span class="u-green"> envisages </span>
+            <span class="u-blue-zig">a demarcation</span>
+            <span class="u-blue-zig"> of governmental functions and powers</span>
+            <span class="u-green"> between </span>
+            <span class="u-blue-zig">the Centre</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the regions</span>
+            <span class="u-green"> by the sanction of </span>
+            <span class="u-blue-zig">the Constitution</span>,
+            <span class="u-green">which is </span>
+            <span class="u-blue-zig">a written document</span>.
+        </li>
+    </ul>
+
+    <div class="info-box" style="text-align: center;">
+        <div class="info-box-header">CLASSIFICATION</div>
+        <b>FEDERAL</b> &nbsp;|&nbsp; <b>UNITARY</b> &nbsp;|&nbsp; <b>QUASI-FEDERAL</b>
+    </div>
+
+    <div class="section-header">FEATURES</div>
+    <ul>
+        <li><strong>1. Drawn from different sources</strong></li>
+        <li><strong>2. World's Longest Constitution</strong></li>
+        <li><strong>3. Written Constitution</strong></li>
+        <li><strong>4. More Flexible than Rigid</strong></li>
+        <li><strong>5. Union of States</strong></li>
+        <li><strong>6. Federal System with Unitary Bias</strong></li>
+        <li><strong>7. Parliamentary Form of Government</strong></li>
+        <li><strong>8. Fundamental Rights and Constitutional Remedies</strong></li>
+        <li><strong>9. Fundamental Duties</strong></li>
+        <li><strong>10. Directive Principles of State Policy</strong></li>
+        <li><strong>11. Independent Judiciary</strong></li>
+        <li><strong>12. Universal Adult Suffrage</strong></li>
+        <li><strong>13. Rule of Law</strong></li>
+        <li><strong>14. Single Citizenship</strong></li>
+        <li><strong>15. Emergency Provisions</strong></li>
+        <li><strong>16. Social Equality</strong></li>
+        <li>
+            <strong>17. Special Provisions relating to Scheduled Castes and Scheduled Tribes</strong>
+        </li>
+        <li><strong>18. Secular State</strong></li>
+        <li><strong>19. Special Provisions for Minorities</strong></li>
+        <li><strong>20. Official Languages</strong></li>
+    </ul>
+
+    <div class="page-number">Page 28</div>
+</div>
+
+<!-- =============================== PAGE 29 =============================== -->
+<div class="pdf-page">
+
+    <div class="section-header">WRITTEN CONSTITUTION</div>
+    <ul>
+        <li>
+            <strong>1. Constitutional Mandate:</strong>
+            <span class="u-blue-zig">A written constitution</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">mandatory</span>.
+        </li>
+        <li>
+            <strong>2. Federal Prerequisite:</strong>
+            <span class="u-blue-zig">Federal system</span>
+            <span class="u-green"> cannot exist without </span>
+            <span class="u-blue-zig">a written constitution</span>.
+        </li>
+        <li>
+            <strong>3. UK Example:</strong>
+            <span class="u-red-zig">UK</span>
+            <span class="u-green"> does not have </span>
+            <span class="u-blue-zig">a written constitution</span>
+            <span class="u-green"> and so it is not </span>
+            <span class="u-blue-zig">a federal country</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">RIGID CONSTITUTION</div>
+    <ul>
+        <li>
+            <strong>1. Amendment Rigidity:</strong>
+            <span class="u-blue-zig">Rigidity in amendment</span>
+            <span class="u-green"> is a distinctive feature of </span>
+            <span class="u-blue-zig">a federal constitution</span>.
+        </li>
+        <li>
+            <strong>2. State Participation:</strong>
+            <span class="u-green">It cannot be amended by </span>
+            <span class="u-blue-zig">the national legislature</span>
+            <span class="u-blue-zig"> unilaterally</span>
+            <span class="u-green"> without the participation of </span>
+            <span class="u-blue-zig">the states</span>.
+        </li>
+        <li>
+            <strong>3. US Ratification Standard:</strong>
+            <span class="u-blue-zig">In United States</span>,
+            <span class="u-green">which is a perfect example of </span>
+            <span class="u-blue-zig">classical federalism</span>,
+            <span class="u-blue-zig">no part of the constitution</span>
+            <span class="u-green"> can be amended without </span>
+            <span class="u-blue-zig">the ratification</span>
+            <span class="u-blue-zig"> of at least 3/4th</span>
+            <span class="u-blue-zig"> of the individual States</span>.
+        </li>
+        <li>
+            <strong>4. Doctrine of Severability:</strong>
+            <span class="u-blue-zig">Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Kihoto Hollohan vs Zachilhu &amp; Ors</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">Doctrine of Severability</span>
+            <span class="u-green"> must be applied</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SUPREMACY OF THE CONSTITUTION</div>
+    <ul>
+        <li>
+            <strong>1. Suprema Lex:</strong>
+            <span class="u-blue-zig">Constitution</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">suprema lex</span>
+            (<span class="u-blue-zig">supreme law of land</span>)
+            <span class="u-blue-zig">in India</span>.
+        </li>
+        <li>
+            <strong>2. Constitutional Control:</strong>
+            <span class="u-blue-zig">Every type of power</span>
+            (<span class="u-blue-zig">legislative, administrative or judicial</span>),
+            <span class="u-green">irrespective of it being at </span>
+            <span class="u-blue-zig">the centre</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">the state level</span>
+            <span class="u-green"> is controlled by </span>
+            <span class="u-blue-zig">the Constitution</span>.
+        </li>
+        <li>
+            <strong>3. Article 13(2):</strong>
+            <span class="u-blue-zig">Article 13(2)</span>
+            <span class="u-green"> states that </span>
+            <span class="u-blue-zig">the State</span>
+            <span class="u-green"> shall not make </span>
+            <span class="u-blue-zig">any law</span>
+            <span class="u-green"> which takes away or abridges </span>
+            <span class="u-blue-zig">any of the rights</span>
+            <span class="u-green"> guaranteed under </span>
+            <span class="u-blue-zig">Part III of the Constitution</span>.
+        </li>
+        <li>
+            <strong>4. Constitutional Conformity:</strong>
+            <span class="u-blue-zig">All laws enacted</span>
+            <span class="u-green"> both at </span>
+            <span class="u-blue-zig">the Centre</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the State level</span>
+            <span class="u-green"> ought to be in line with </span>
+            <span class="u-blue-zig">the Constitutiona scheme</span>.
+        </li>
+        <li>
+            <strong>5. Doctrine of Severability</strong>
+        </li>
+    </ul>
+
+    <div class="section-header">DISTRIBUTION OF POWERS</div>
+    <ul>
+        <li>
+            <strong>1. Division of Powers:</strong>
+            <span class="u-blue-zig">The pivotal point</span>
+            <span class="u-blue-zig"> of a federal constitution</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">division of powers</span>
+            <span class="u-green"> between </span>
+            <span class="u-blue-zig">the centre</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the states</span>.
+        </li>
+        <li>
+            <strong>2. Seventh Schedule Lists:</strong>
+            <span class="u-green">Under the constitution, there is </span>
+            <span class="u-blue-zig">a three-fold distribution</span>
+            <span class="u-blue-zig"> of legislative powers</span>
+            <span class="u-green"> between </span>
+            <span class="u-blue-zig">the Union</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the states</span>,
+            <span class="u-green">made by </span>
+            <span class="u-blue-zig">the three Lists</span>
+            <span class="u-blue-zig"> in the seventh schedule</span>
+            <span class="u-blue-zig"> of the constitution</span>.
+        </li>
+        <li>
+            <strong>3. Derived Powers:</strong>
+            <span class="u-green">Both </span>
+            <span class="u-blue-zig">the centre</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the state governments</span>
+            <span class="u-green"> derive their powers from </span>
+            <span class="u-blue-zig">the constitution</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SOVEREIGNTY</div>
+    <ul>
+        <li>
+            <strong>1. Sovereign Power:</strong>
+            <span class="u-blue-zig">The sovereign power</span>
+            <span class="u-green"> rests with </span>
+            <span class="u-blue-zig">the body</span>
+            <span class="u-green"> that can amend </span>
+            <span class="u-blue-zig">the constitution</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">RAJYA SABHA</div>
+    <ul>
+        <li>
+            <strong>1. Rajya Sabha Election:</strong>
+            <span class="u-blue-zig">The members of Rajya Sabha</span>
+            <span class="u-green"> are elected by </span>
+            <span class="u-blue-zig">the members</span>
+            <span class="u-blue-zig"> of state assembly</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 29</div>
+</div>
+
+<!-- =============================== PAGE 30 =============================== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">UNITARY</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Unitary State Definition:</strong>
+            <span class="u-blue-zig">A unitary state</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a sovereign state</span>
+            <span class="u-green"> governed as </span>
+            <span class="u-blue-zig">one single unit</span>
+            <span class="u-green"> in which </span>
+            <span class="u-blue-zig">the central government</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">supreme</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">any administrative divisions</span>
+            (<span class="u-blue-zig">sub national units</span>)
+            <span class="u-green"> exercise only </span>
+            <span class="u-blue-zig">powers</span>
+            <span class="u-green"> that the central government chooses to </span>
+            <span class="u-blue-zig">delegate</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Central Supremacy:</strong>
+            <span class="u-blue-zig">The Constitution</span>
+            <span class="u-green"> provides </span>
+            <span class="u-blue-zig">Central Government</span>
+            <span class="u-green"> with </span>
+            <span class="u-blue-zig">supreme powers</span>
+            <span class="u-green"> and concentrates </span>
+            <span class="u-blue-zig">administrative and financial powers</span>
+            <span class="u-green"> completely in </span>
+            <span class="u-blue-zig">its hands</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>1. Union of States:</strong>
+            <span class="u-blue-zig">Article 1</span>
+            <span class="u-green"> which provides that </span>
+            <span class="u-red-zig">India</span>
+            <span class="u-blue-zig"> i.e. Bharat</span>,
+            <span class="u-green"> shall be </span>
+            <span class="u-blue-zig">a Union of States</span>.
+        </li>
+        <li>
+            <strong>2. No Federation Term:</strong>
+            <span class="u-blue-zig">The word 'Federation'</span>
+            <span class="u-green"> is nowhere to been mentioned in </span>
+            <span class="u-blue-zig">the Constitution</span>.
+        </li>
+        <li>
+            <strong>3. Article 2 &amp; 3 Powers:</strong>
+            <span class="u-blue-zig">Article 2 and 3</span>
+            <span class="u-blue-zig"> of the Constitution</span>,
+            <span class="u-green"> give </span>
+            <span class="u-blue-zig">the power</span>
+            <span class="u-green"> to </span>
+            <span class="u-blue-zig">the Parliament</span>
+            <span class="u-green"> to redraw </span>
+            <span class="u-blue-zig">the political map of India</span>;
+            <span class="u-green"> to create and abolish </span>
+            <span class="u-blue-zig">the states</span>,
+            <span class="u-green"> change </span>
+            <span class="u-blue-zig">the boundaries of the States</span>
+            <span class="u-green"> or even change </span>
+            <span class="u-blue-zig">their names</span>
+            <span class="u-green"> and this can be achieved by </span>
+            <span class="u-blue-zig">simple legislation</span>
+            <span class="u-green"> by way of </span>
+            <span class="u-blue-zig">simple majority</span>
+            <span class="u-blue-zig"> in the Parliament</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the Constitution</span>
+            <span class="u-green"> only provides for </span>
+            <span class="u-blue-zig">consultation</span>
+            <span class="u-blue-zig"> by the Centre</span>
+            <span class="u-blue-zig"> of the concerned State</span>.
+        </li>
+        <li>
+            <strong>4. Article 355 Duty:</strong>
+            <span class="u-blue-zig">Central government</span>
+            <span class="u-green"> is duty bound under </span>
+            <span class="u-blue-zig">Article 355</span>
+            <span class="u-green"> to ensure that there is </span>
+            <span class="u-blue-zig">no failure</span>
+            <span class="u-blue-zig"> of constitutional machinery</span>
+            <span class="u-blue-zig"> in the State</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the states</span>
+            <span class="u-green"> are protected from </span>
+            <span class="u-blue-zig">internal disturbance</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">external aggression and war</span>.
+        </li>
+        <li>
+            <strong>5. Article 356 Power:</strong>
+            <span class="u-blue-zig">The Central government</span>
+            <span class="u-green"> has power under </span>
+            <span class="u-blue-zig">Article 356</span>
+            <span class="u-green"> to impose </span>
+            <span class="u-blue-zig">Presidential rule</span>
+            <span class="u-green"> and it is the duty of </span>
+            <span class="u-blue-zig">the governor</span>
+            <span class="u-green"> who has to make </span>
+            <span class="u-blue-zig">a report</span>
+            <span class="u-green"> to </span>
+            <span class="u-blue-zig">the Centre</span>
+            <span class="u-green"> about </span>
+            <span class="u-blue-zig">the failure</span>
+            <span class="u-blue-zig"> of constitutional machinery</span>
+            <span class="u-blue-zig"> of the State</span>
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">political or any other reasons</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">APPOINTMENT OF THE GOVERNOR</div>
+    <ul>
+        <li>
+            <strong>6. Governor Appointment:</strong>
+            <span class="u-blue-zig">Appointment of the Governors</span>
+            <span class="u-blue-zig"> of various States</span>
+            <span class="u-green"> is done by </span>
+            <span class="u-blue-zig">the Centre</span>.
+            <span class="u-blue-zig">Governor</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">the constitutional head</span>
+            <span class="u-blue-zig"> of the State</span>
+            <span class="u-green"> and at the same time he is also </span>
+            <span class="u-blue-zig">the representative</span>
+            <span class="u-blue-zig"> of the Centre</span>.
+        </li>
+        <li>
+            <strong>7. Discretionary Powers:</strong>
+            <span class="u-blue-zig">Governor</span>
+            <span class="u-green"> unlike </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> enjoys </span>
+            <span class="u-blue-zig">some discretionary powers</span>.
+        </li>
+        <li>
+            <strong>8. Bill Withholding:</strong>
+            <span class="u-blue-zig">Governor</span>
+            <span class="u-green"> can withhold </span>
+            <span class="u-blue-zig">a bill</span>
+            <span class="u-green"> for the consideration of </span>
+            <span class="u-blue-zig">the President</span>.
+        </li>
+        <li>
+            <strong>9. Sarkaria Commission:</strong>
+            <span class="u-red-zig">The Sarkaria Commission</span>
+            <span class="u-green"> made </span>
+            <span class="u-blue-zig">certain recommendations</span>
+            <span class="u-green"> regarding </span>
+            <span class="u-blue-zig">the Governors</span>.
+        </li>
+        <li>
+            <strong>10. Bihar Dissolution Case:</strong>
+            <span class="u-green">In </span>
+            <span class="u-red-zig">Rameshwar Prasad v Union of India</span>,
+            <span class="u-green">popularly known as </span>
+            <span class="u-blue-zig">Bihar Assembly Dissolution Case</span>
+            <span class="u-green"> where </span>
+            <span class="u-blue-zig">SC</span>
+            <span class="u-green"> raised questions as to </span>
+            <span class="u-blue-zig">the impartiality</span>
+            <span class="u-blue-zig"> of the Governor</span>.
+        </li>
+        <li>
+            <strong>11. Governor Removal:</strong>
+            <span class="u-green">In </span>
+            <span class="u-red-zig">B.P. Singhal v Union of India</span>,
+            <span class="u-blue-zig">SC</span>
+            <span class="u-green"> held that </span>
+            <span class="u-blue-zig">a Governor</span>
+            <span class="u-green"> cannot be removed by </span>
+            <span class="u-blue-zig">the Central government</span>
+            <span class="u-green"> on the grounds that he is not in sync with </span>
+            <span class="u-blue-zig">the policies</span>
+            <span class="u-blue-zig"> of the Central government</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">the ideology</span>
+            <span class="u-blue-zig"> of ruling party</span>.
+        </li>
+        <li>
+            <strong>12. Key Position Appointments:</strong>
+            <span class="u-blue-zig">Appointment on Key Positions</span>
+            <span class="u-green"> such as </span>
+            <span class="u-blue-zig">the Chief Election Commissioner</span>,
+            <span class="u-blue-zig">the Comptroller and Auditor General</span>
+            <span class="u-green"> are made by </span>
+            <span class="u-blue-zig">the Union Government</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">All India Services</span>
+            <span class="u-green"> such as </span>
+            <span class="u-blue-zig">IAS</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">IPS</span>
+            <span class="u-green"> have been created which are kept under </span>
+            <span class="u-blue-zig">the control of the Union</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 30</div>
+</div>
+
+<!-- =============================== PAGE 31 =============================== -->
+<div class="pdf-page">
+
+    <div class="section-header">EMERGENCY</div>
+    <ul>
+        <li>
+            <strong>1. Emergency Power:</strong>
+            <span class="u-green">Only </span>
+            <span class="u-blue-zig">the Centre</span>
+            <span class="u-green"> has the power to impose </span>
+            <span class="u-blue-zig">emergency</span>
+            <span class="u-green"> under </span>
+            <span class="u-blue-zig">Articles 352, 356 and 360</span>.
+            <span class="u-blue-zig">Emergency under Article 352</span>
+            <span class="u-green"> can be imposed only when </span>
+            <span class="u-blue-zig">the nation</span>
+            <span class="u-green"> is threatened by </span>
+            <span class="u-blue-zig">external aggression</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">armed rebellion</span>.
+        </li>
+        <li>
+            <strong>2. S.R. Bommai Guidelines:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">S.R. Bommai</span>
+            <span class="u-blue-zig"> case</span>
+            <span class="u-green"> laid down </span>
+            <span class="u-blue-zig">guidelines</span>
+            <span class="u-green"> for the implementation of </span>
+            <span class="u-blue-zig">Article 356</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">POWER TO MAKE LAWS</div>
+    <ul>
+        <li>
+            <strong>1. Article 249:</strong>
+            <span class="u-blue-zig">Article 249</span>
+            <span class="u-green"> gives </span>
+            <span class="u-blue-zig">the Parliament</span>
+            <span class="u-blue-zig"> the power</span>
+            <span class="u-green"> to make laws under </span>
+            <span class="u-blue-zig">the State list</span>.
+            <span class="u-blue-zig">Such law</span>
+            <span class="u-green"> can also be legislated at </span>
+            <span class="u-blue-zig">a special request</span>
+            <span class="u-blue-zig"> of a group of states</span>.
+            <span class="u-green">Also during </span>
+            <span class="u-blue-zig">President's Rule</span>
+            <span class="u-blue-zig"> in a state</span>
+            <span class="u-blue-zig"> all the bills pending</span>
+            <span class="u-blue-zig"> in the dissolved and the State</span>
+        </li>
+    </ul>
+
+    <div class="section-header">SINGLE CITIZENSHIP</div>
+    <ul>
+        <li>
+            <strong>1. Single Citizenship:</strong>
+            <span class="u-blue-zig">Indians</span>
+            <span class="u-green"> have only </span>
+            <span class="u-blue-zig">one citizenship</span>
+            <span class="u-green"> unlike </span>
+            <span class="u-blue-zig">the citizens</span>
+            <span class="u-blue-zig"> of the United States of America</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARMED FORCES</div>
+    <ul>
+        <li>
+            <strong>1. Armed Forces Deployment:</strong>
+            <span class="u-blue-zig">The Armed Forces</span>
+            <span class="u-green"> can be deployed in </span>
+            <span class="u-blue-zig">the States</span>
+            <span class="u-green"> at </span>
+            <span class="u-blue-zig">the Centre's will</span>
+            <span class="u-green"> without the consultation of </span>
+            <span class="u-blue-zig">the State Government</span>.
+        </li>
+        <li>
+            <strong>2. AFSPA:</strong>
+            <span class="u-blue-zig">AFSPA</span>—<span class="u-blue-zig">Armed Forces Special Powers Act</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">RESIDUARY POWERS</div>
+    <ul>
+        <li>
+            <strong>1. Article 248:</strong>
+            <span class="u-blue-zig">Residuary Powers</span>
+            (<span class="u-blue-zig">Article 248</span>)
+            <span class="u-green"> allows </span>
+            <span class="u-blue-zig">the Centre</span>
+            <span class="u-green"> to make laws on </span>
+            <span class="u-blue-zig">subjects not mentioned</span>
+            <span class="u-blue-zig"> in List II</span>
+            <span class="u-green"> This is enjoyed by </span>
+            <span class="u-blue-zig">the Centre only</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SINGLE INTEGRATED COURTS</div>
+    <ul>
+        <li>
+            <strong>1. Unified Judiciary:</strong>
+            <span class="u-blue-zig">In India</span>
+            <span class="u-green"> we have </span>
+            <span class="u-blue-zig">Unified Judiciary</span>
+            <span class="u-green"> with </span>
+            <span class="u-blue-zig">the Supreme Court</span>
+            <span class="u-blue-zig"> at the apex</span>
+            <span class="u-green"> as opposed to </span>
+            <span class="u-blue-zig">the federal system</span>
+            <span class="u-green"> having </span>
+            <span class="u-blue-zig">a dual system of courts</span>.
+        </li>
+        <li>
+            <strong>2. Supreme Court Apex:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> occupies </span>
+            <span class="u-blue-zig">the highest place</span>
+            <span class="u-green"> in our </span>
+            <span class="u-blue-zig">unitary judicial system</span>.
+        </li>
+        <li>
+            <strong>3. Unequal Representation:</strong>
+            <span class="u-blue-zig">Representation in the Legislature</span>,
+            <span class="u-green">which is equal in case of </span>
+            <span class="u-blue-zig">a true federation</span>
+            <span class="u-green"> such as </span>
+            <span class="u-red-zig">United States</span>,
+            <span class="u-green">is not applicable in case of </span>
+            <span class="u-blue-zig">Indian States</span>.
+        </li>
+        <li>
+            <strong>4. Rajya Sabha Representation:</strong>
+            <span class="u-blue-zig">Representation of States</span>
+            <span class="u-blue-zig"> in Rajya Sabha</span>
+            <span class="u-green"> is not </span>
+            <span class="u-blue-zig">equal</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">CONCLUSION</div>
+    <ul>
+        <li>
+            <strong>1. Kuldip Nair Case:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Kuldip Nair v Union of India</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">a particular kind of federalism</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">a US type of model</span>
+            <span class="u-green"> may not be part of </span>
+            <span class="u-blue-zig">the basic structure</span>
+            <span class="u-blue-zig"> of Indian Constitution</span>.
+        </li>
+        <li>
+            <strong>2. Unique Federalism:</strong>
+            <span class="u-blue-zig">The Indian Federalism</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">unique in nature</span>
+            <span class="u-green"> and is tailored according to </span>
+            <span class="u-blue-zig">the specific needs</span>
+            <span class="u-blue-zig"> of the country</span>.
+        </li>
+        <li>
+            <strong>3. Basic Feature:</strong>
+            <span class="u-blue-zig">Federalism</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a basic feature</span>
+            <span class="u-blue-zig"> of the Constitution of India</span>
+            <span class="u-green"> in which </span>
+            <span class="u-blue-zig">the Union of India</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">permanent and indestructible</span>.
+        </li>
+        <li>
+            <strong>4. Quasi-Federal Nature:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">KC Wheare</span>,
+            <span class="u-green">in practice, </span>
+            <span class="u-blue-zig">the Constitution of India</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">quasi-federal in nature</span>
+            <span class="u-green"> and not </span>
+            <span class="u-blue-zig">strictly federal</span>.
+        </li>
+        <li>
+            <strong>5. S.R. Bommai Observation:</strong>
+            <span class="u-green">In </span>
+            <span class="u-red-zig">S.R. Bommai v Union of India</span>,
+            <span class="u-red-zig">Justice Ahmadi</span>
+            <span class="u-green"> opined that </span>
+            <span class="u-blue-zig">the essence of federation</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">the existence</span>
+            <span class="u-blue-zig"> of distribution of power</span>
+            <span class="u-green"> between </span>
+            <span class="u-blue-zig">the Union</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the States</span>.
+        </li>
+        <li>
+            <strong>6. Quasi-Federal Conclusion:</strong>
+            <span class="u-green">It can help us conclude that </span>
+            <span class="u-blue-zig">the Constitution of India</span>
+            <span class="u-green"> is more </span>
+            <span class="u-blue-zig">'quasi federal'</span>
+            <span class="u-green"> than </span>
+            <span class="u-blue-zig">'federal'</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">'unitary'</span>.
+        </li>
+        <li>
+            <strong>7. Amphibian Constitution:</strong>
+            <span class="u-blue-zig">Former Chief Justice Beg</span>,
+            <span class="u-green"> called </span>
+            <span class="u-blue-zig">the Constitution of India</span>
+            <span class="u-green"> as </span>
+            <span class="u-blue-zig">'amphibian'</span>.
+        </li>
+        <li>
+            <strong>8. Shamsher Singh Case:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Shamsher Singh v. State of Punjab</span>,
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">the constitution</span>
+            <span class="u-green"> was </span>
+            <span class="u-blue-zig">'more unitary than federal</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 31</div>
+</div>
+
+</body>
+</html>

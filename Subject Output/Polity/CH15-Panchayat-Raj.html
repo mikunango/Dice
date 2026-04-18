@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH15 - Panchayat Raj | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 43 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH15- Panchayat Raj</h1>
+        <p class="subtitle">Part IX | Articles 243-243O | 73rd Amendment Act, 1992</p>
+    </header>
+
+    <div class="quote-box">
+        <span class="u-green">When </span><span class="u-blue-zig">the panchayat raj</span> <span class="u-green">is established</span>, <span class="u-blue-zig">public opinion</span> <span class="u-green">will do </span><span class="u-blue-zig">what violence</span> <span class="u-green">can never do</span>.
+        <span class="quote-author">— Mahatma Gandhi</span>
+    </div>
+
+    <div class="section-header">HISTORY</div>
+
+    <ul>
+        <li>
+            <strong>1. Vedic Origins:</strong> <span class="u-blue-zig">The of Panchayati Raj institution</span> <span class="u-green">existed since </span><span class="u-blue-zig">the Vedic period</span>. <span class="u-blue-zig">earliest times</span>.
+        </li>
+        <li>
+            <strong>2. Ancient Texts:</strong> <span class="u-red-zig">Manusmriti</span>, <span class="u-red-zig">Arthasastra</span> <span class="u-green">and </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Mahabharata</span> <span class="u-green">mention about </span><span class="u-blue-zig">it</span>.
+        </li>
+        <li>
+            <strong>3. Kautilya's Account:</strong> <span class="u-red-zig">Arthashastra</span> <span class="u-green">of </span><span class="u-red-zig">Kautilya</span> <span class="u-green">gives </span><span class="u-blue-zig">a comprehensive account</span> <span class="u-green">of </span><span class="u-blue-zig">the system</span> <span class="u-green">of </span><span class="u-blue-zig">village administration</span>.
+        </li>
+        <li>
+            <strong>4. Uttarmerur Inscription:</strong> <span class="u-blue-zig">Uttarmerur inscription</span> <span class="u-green">of </span><span class="u-red-zig">Parantaka I</span> <span class="u-green">gives </span><span class="u-blue-zig">a comprehensive account</span> <span class="u-green">of </span><span class="u-blue-zig">the system</span> <span class="u-green">of </span><span class="u-blue-zig">village administration</span>.
+        </li>
+        <li>
+            <strong>5. Mayo's Resolution:</strong> <span class="u-blue-zig">Viceroy</span> <span class="u-red-zig">Lord Mayo's</span> <span class="u-blue-zig">resolution</span> (<span class="u-red-zig">1870</span>) <span class="u-green">gave </span><span class="u-blue-zig">the needed impetus</span> <span class="u-green">to </span><span class="u-blue-zig">the development</span> <span class="u-green">of </span><span class="u-blue-zig">local institutions</span>.
+        </li>
+        <li>
+            <strong>6. Rippon Resolution:</strong> <span class="u-blue-zig">The Rippon Resolution</span> (<span class="u-red-zig">May 18, 1882</span>) <span class="u-green">issued by </span><span class="u-red-zig">Lord Rippon</span> <span class="u-green">which focused on </span><span class="u-blue-zig">towns</span>, <span class="u-green">provided for </span><span class="u-blue-zig">local bodies</span> <span class="u-green">consisting of </span><span class="u-blue-zig">a large majority</span> <span class="u-green">of </span><span class="u-blue-zig">elected non-official members</span> <span class="u-green">and it was headed by </span><span class="u-blue-zig">a chairperson</span>, <span class="u-green">who was also </span><span class="u-blue-zig">a non-official member</span>.
+        </li>
+        <li>
+            <strong>7. Decentralisation Commission:</strong> <span class="u-blue-zig">The Royal Commission</span> <span class="u-green">on </span><span class="u-blue-zig">Decentralisation</span> (<span class="u-red-zig">1907</span>) <span class="u-green">under the chairmanship of </span><span class="u-red-zig">C.E.H. Hobhouse</span> <span class="u-green">recognised </span><span class="u-blue-zig">the importance</span> <span class="u-green">of </span><span class="u-blue-zig">panchayats</span> <span class="u-green">at </span><span class="u-blue-zig">the village level</span>.
+        </li>
+        <li>
+            <strong>8. Montague Chelmsford:</strong> <span class="u-blue-zig">The</span> <span class="u-red-zig">Montague Chelmsford</span> <span class="u-blue-zig">reforms</span> <span class="u-green">brought </span><span class="u-blue-zig">a significant development</span> <span class="u-green">of </span><span class="u-blue-zig">village Panchayats</span>.
+        </li>
+        <li>
+            <strong>9. Constitutional Provision:</strong> <span class="u-green">After </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">came into force</span>, <span class="u-blue-zig">Article 40</span> <span class="u-green">made </span><span class="u-blue-zig">a mention</span> <span class="u-green">of </span><span class="u-blue-zig">panchayats</span> <span class="u-green">and </span><span class="u-blue-zig">Article 246</span> <span class="u-green">empowers </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">to legislate with respect to </span><span class="u-blue-zig">any subject</span> <span class="u-green">relating to </span><span class="u-blue-zig">local self-government</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 40</div>
+
+    <p>
+        <span class="u-blue-zig">The State</span> <span class="u-green">shall take steps to </span><span class="u-blue-zig">organise village panchayats</span> <span class="u-green">and endow them with </span><span class="u-blue-zig">such powers and authority</span> <span class="u-green">as may be necessary to </span><span class="u-green">enable them to function as </span><span class="u-blue-zig">units of self-Government</span>
+    </p>
+
+    <ul>
+        <li>
+            <strong>10. CDP Launch:</strong> <span class="u-blue-zig">The Community Development Programmes</span> (<span class="u-blue-zig">CDP</span>) <span class="u-green">had started on </span><span class="u-blue-zig">the eve</span> <span class="u-green">of </span><span class="u-blue-zig">Gandhi Jayanti</span>, <span class="u-blue-zig">the 2nd October</span>, <span class="u-red-zig">1952</span>
+        </li>
+        <li>
+            <strong>11. Extension Service:</strong> <span class="u-green">In </span><span class="u-red-zig">1953</span>, <span class="u-blue-zig">the National Extension Service</span> <span class="u-green">was also introduced as </span><span class="u-blue-zig">a prologue</span> <span class="u-green">to </span><span class="u-blue-zig">CDP</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">BALWANT RAI MEHTA COMMITTEE</div>
+
+    <p>
+        <span class="u-blue-zig">The National Development Council</span> <span class="u-green">constituted </span><span class="u-blue-zig">it</span> <span class="u-green">in </span><span class="u-red-zig">January 1957</span> <span class="u-green">to examine </span><span class="u-blue-zig">the working</span> <span class="u-green">of </span><span class="u-blue-zig">the Community Development Programme</span> <span class="u-green">and </span><span class="u-blue-zig">the National Extension Service</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>12. Key Recommendation:</strong> <span class="u-blue-zig">An early establishment</span> <span class="u-green">of </span><span class="u-blue-zig">elected local bodies</span> <span class="u-green">and </span><span class="u-blue-zig">devolution</span> <span class="u-green">to </span><span class="u-blue-zig">them</span> <span class="u-green">of </span><span class="u-blue-zig">necessary resources</span>, <span class="u-blue-zig">power and authority</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 43</div>
+</div>
+
+<!-- ==================== PAGE 44 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>6. Taxation Power:</strong> <span class="u-blue-zig">Panchayats</span> <span class="u-green">should have </span><span class="u-blue-zig">special powers</span> <span class="u-green">to levy </span><span class="u-blue-zig">a special tax</span> <span class="u-green">on </span><span class="u-blue-zig">land revenues</span> <span class="u-green">and </span><span class="u-blue-zig">home taxes</span>, <span class="u-blue-zig">etc</span>.
+        </li>
+        <li>
+            <strong>7. Functional Scope:</strong> <span class="u-blue-zig">Its function</span> <span class="u-green">should cover </span><span class="u-blue-zig">the development of agriculture</span> <span class="u-green">in </span><span class="u-blue-zig">all the aspects</span>, <span class="u-blue-zig">promotion of cottage</span> <span class="u-green">and </span><span class="u-blue-zig">local industries</span>, <span class="u-blue-zig">etc</span>.,
+        </li>
+        <li>
+            <strong>8. Five-Year Term:</strong> <span class="u-blue-zig">The body</span> <span class="u-green">must be constituted for </span><span class="u-blue-zig">five years</span> <span class="u-green">by means of </span><span class="u-blue-zig">indirect elections</span> <span class="u-green">from </span><span class="u-blue-zig">the village panchayats</span>.
+        </li>
+        <li>
+            <strong>9. Rajasthan Launch:</strong> <span class="u-green">As a result of this </span><span class="u-blue-zig">scheme of democratic decentralization</span> <span class="u-green">was launched at </span><span class="u-red-zig">Nagore</span> <span class="u-green">in </span><span class="u-red-zig">Rajasthan</span> <span class="u-green">on </span><span class="u-blue-zig">October 2, 1959</span>.
+        </li>
+        <li>
+            <strong>10. Andhra Pradesh:</strong> <span class="u-green">In </span><span class="u-red-zig">Andhra Pradesh</span>, <span class="u-blue-zig">the scheme</span> <span class="u-green">was introduced on </span><span class="u-blue-zig">1st November, 1959</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ASHOK MEHTA COMMITTEE</div>
+
+    <ul>
+        <li>
+            <strong>1. Strengthen PRIs:</strong> <span class="u-green">To examine and suggest </span><span class="u-blue-zig">measures</span> <span class="u-green">to strengthen </span><span class="u-blue-zig">PRIs</span>.
+        </li>
+        <li>
+            <strong>2. Weaker Sections:</strong> <span class="u-blue-zig">Reservation of seats</span> <span class="u-green">for </span><span class="u-blue-zig">the weaker sections</span>.
+        </li>
+        <li>
+            <strong>3. Women Seats:</strong> <span class="u-blue-zig">Two seats</span> <span class="u-green">for </span><span class="u-blue-zig">women</span>.
+        </li>
+        <li>
+            <strong>4. Financial Resources:</strong> <span class="u-blue-zig">Adequate financial resources</span> <span class="u-green">for </span><span class="u-blue-zig">the panchayats</span>.
+        </li>
+        <li>
+            <strong>5. Constitutional Sanction:</strong> <span class="u-blue-zig">The requirement</span> <span class="u-green">of </span><span class="u-blue-zig">Constitutional sanctions</span>.
+        </li>
+        <li>
+            <strong>6. People's Participation:</strong> <span class="u-green">To extend </span><span class="u-blue-zig">people's participation</span> <span class="u-green">in </span><span class="u-blue-zig">developmental activities</span>.
+        </li>
+        <li>
+            <strong>7. Two-Tier Structure:</strong> <span class="u-green">Recommended </span><span class="u-blue-zig">a two-tier Panchayat Raj</span> <span class="u-blue-zig">institutional structure</span> <span class="u-green">consisting of </span><span class="u-blue-zig">Zilla Parishad</span> <span class="u-green">and </span><span class="u-blue-zig">Mandal Panchayat</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Other Key Committees:</strong> <span class="u-red-zig">Hanumantha Rao Committee</span> (<span class="u-blue-zig">1983</span>) - <span class="u-red-zig">G.V.K. Rao Committee</span> (<span class="u-blue-zig">1985</span>) - <span class="u-red-zig">L.M. Singhvi Committee</span> (<span class="u-blue-zig">1986</span>) - <span class="u-red-zig">P.K. Thungan Committee</span> (<span class="u-blue-zig">1989</span>) - <span class="u-red-zig">Harlal Singh Kharra Committee</span> (<span class="u-blue-zig">1990</span>).
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. G.V.K. Rao Committee:</strong> <span class="u-red-zig">The G.V.K. Rao committee</span> <span class="u-green">suggested that </span><span class="u-blue-zig">the PRIs</span> <span class="u-green">should be assigned </span><span class="u-blue-zig">the work of monitoring</span>, <span class="u-blue-zig">planning</span> <span class="u-green">and </span><span class="u-blue-zig">implementation</span> <span class="u-green">of </span><span class="u-blue-zig">varied rural development programmes</span> <span class="u-green">with </span><span class="u-blue-zig">a Block Development office</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. L.M. Singhvi Committee:</strong> <span class="u-red-zig">L.M. Singhvi Committee</span> <span class="u-green">recommended</span>
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Constitutional Recognition:</strong> <span class="u-blue-zig">The Panchayati Raj Institutions</span> <span class="u-green">should be </span><span class="u-blue-zig">constitutionally recognized</span> <span class="u-green">and </span><span class="u-blue-zig">protected</span>.
+        </li>
+        <li>
+            <strong>2. New Chapter:</strong> <span class="u-blue-zig">A new chapter</span> <span class="u-green">in </span><span class="u-blue-zig">the constitution</span> <span class="u-green">should be provided to define </span><span class="u-blue-zig">their powers</span> <span class="u-green">and </span><span class="u-blue-zig">functions</span> <span class="u-green">and </span><span class="u-blue-zig">free and fair election</span> <span class="u-green">to be conducted through </span><span class="u-blue-zig">the election commission</span>.
+        </li>
+        <li>
+            <strong>3. Finance Commission:</strong> <span class="u-green">It also recommended for </span><span class="u-blue-zig">the appointment</span> <span class="u-green">of </span><span class="u-blue-zig">finance commission</span> <span class="u-green">and </span><span class="u-blue-zig">all the rural development programmes</span> <span class="u-green">are entrusted to </span><span class="u-blue-zig">the Panchayati Raj Institutions</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. 73rd &amp; 74th Amendments:</strong> <span class="u-blue-zig">73rd and 74th Constitutional Amendments</span> <span class="u-green">were passed by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">in </span><span class="u-blue-zig">December, 1992</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Commencement Dates:</strong> <span class="u-blue-zig">The Acts</span> <span class="u-green">came into force as </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">73rd Amendment</span>) <span class="u-blue-zig">Act, 1992</span> <span class="u-green">on </span><span class="u-blue-zig">April 24, 1993</span> <span class="u-green">and </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">74th Amendment</span>) <span class="u-blue-zig">Act, 1992</span> <span class="u-green">on </span><span class="u-blue-zig">June 1, 1993</span>.
+        </li>
+        <li>
+            <strong>2. Part IX Provisions:</strong> <span class="u-blue-zig">The provisions</span> <span class="u-green">of </span><span class="u-blue-zig">the amendment</span> <span class="u-green">include </span><span class="u-blue-zig">Articles 243</span>, <span class="u-blue-zig">243A to 243-O</span> <span class="u-green">which were added as </span><span class="u-blue-zig">parts of newly inserted Part IX</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SALIENT FEATURES</div>
+
+    <div class="page-number">Page 44</div>
+</div>
+
+<!-- ==================== PAGE 45 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">SALIENT FEATURES</div>
+
+    <ul>
+        <li>
+            <strong>1. Constitutional Parts:</strong> <span class="u-green">Added </span><span class="u-blue-zig">Part IX</span> <span class="u-green">titled </span><span class="u-blue-zig">"The Panchayats"</span> (<span class="u-blue-zig">73rd Amendment</span>) <span class="u-green">and </span><span class="u-blue-zig">Part IXA</span> <span class="u-green">titled </span><span class="u-blue-zig">"The Municipalities"</span> (<span class="u-blue-zig">74th Amendment</span>).
+        </li>
+        <li>
+            <strong>2. Basic Units:</strong>
+        </li>
+    </ul>
+
+    <div class="image-placeholder" style="width:280px; height:220px;">Panchayat Raj Hierarchy Pyramid: Zilla Parishad (District Level) &rarr; Anchalik Panchayat (Block Level) &rarr; Gaon Panchayats (Village Level) &rarr; Gram Sabha / Ward Sabha (Panchayat / Municipal Level)</div>
+
+    <ul>
+        <li>
+            <strong>3. Direct Elections:</strong> <span class="u-blue-zig">Seats at all levels</span> <span class="u-green">to be filled by </span><span class="u-blue-zig">direct elections</span> <span class="u-blue-zig">Article 243C (2)</span>.
+        </li>
+        <li>
+            <strong>4. SC/ST Reservation:</strong> <span class="u-blue-zig">Seats</span> <span class="u-green">reserved for </span><span class="u-blue-zig">Scheduled Castes</span> (<span class="u-blue-zig">SCs</span>) <span class="u-green">and </span><span class="u-blue-zig">Scheduled Tribes</span> (<span class="u-blue-zig">STs</span>) <span class="u-green">and </span><span class="u-blue-zig">the chairpersons</span> <span class="u-green">of </span><span class="u-blue-zig">the Panchayats</span> <span class="u-green">at </span><span class="u-blue-zig">all levels</span> <span class="u-green">also shall be reserved for </span><span class="u-blue-zig">SCs</span> <span class="u-green">and </span><span class="u-blue-zig">STs</span> <span class="u-green">in proportion to </span><span class="u-blue-zig">their population</span>. (<span class="u-blue-zig">Article 243D</span>)
+        </li>
+        <li>
+            <strong>5. Women Reservation:</strong> <span class="u-blue-zig">One-third</span> <span class="u-green">of </span><span class="u-blue-zig">the total number of seats</span> <span class="u-green">to be reserved for </span><span class="u-blue-zig">women</span>. (<span class="u-blue-zig">Article 243D</span>)
+        </li>
+        <li>
+            <strong>6. SC/ST Women Seats:</strong> <span class="u-blue-zig">One third</span> <span class="u-green">of </span><span class="u-blue-zig">the seats</span> <span class="u-green">reserved for </span><span class="u-blue-zig">SCs</span> <span class="u-green">and </span><span class="u-blue-zig">STs</span> <span class="u-green">also reserved for </span><span class="u-blue-zig">women</span>.
+        </li>
+        <li>
+            <strong>7. Women Chairpersons:</strong> <span class="u-blue-zig">One-third offices</span> <span class="u-green">of </span><span class="u-blue-zig">chairpersons</span> <span class="u-green">at </span><span class="u-blue-zig">all levels</span> <span class="u-green">reserved for </span><span class="u-blue-zig">women</span> (<span class="u-blue-zig">Article 243D</span>).
+        </li>
+        <li>
+            <strong>8. Five Year Term:</strong> <span class="u-blue-zig">Uniform five year term</span> <span class="u-green">and </span><span class="u-blue-zig">elections</span> <span class="u-green">to constitute </span><span class="u-blue-zig">new bodies</span> <span class="u-green">to be completed before </span><span class="u-blue-zig">the expiry of the term</span>.
+        </li>
+        <li>
+            <strong>9. Dissolution Elections:</strong> <span class="u-green">In the event of </span><span class="u-blue-zig">dissolution</span>, <span class="u-blue-zig">elections</span> <span class="u-green">compulsorily within </span><span class="u-blue-zig">six months</span> (<span class="u-blue-zig">Article 243E</span>).
+        </li>
+        <li>
+            <strong>10. Election Commission:</strong> <span class="u-blue-zig">Independent Election Commission</span> <span class="u-green">in </span><span class="u-blue-zig">each State</span> <span class="u-green">for </span><span class="u-blue-zig">superintendence, direction and control</span> <span class="u-green">of </span><span class="u-blue-zig">the electoral rolls</span> (<span class="u-blue-zig">Article 243K</span>).
+        </li>
+        <li>
+            <strong>11. Economic Development Plans:</strong> <span class="u-blue-zig">Panchayats</span> <span class="u-green">to prepare </span><span class="u-blue-zig">plans</span> <span class="u-green">for </span><span class="u-blue-zig">economic development</span> <span class="u-green">and </span><span class="u-blue-zig">social justice</span> <span class="u-green">in respect of </span><span class="u-blue-zig">subjects</span> <span class="u-green">as devolved by </span><span class="u-blue-zig">law</span> <span class="u-green">to </span><span class="u-blue-zig">the various levels</span> <span class="u-green">of </span><span class="u-blue-zig">Panchayats</span> <span class="u-green">including </span><span class="u-blue-zig">the subjects</span> <span class="u-green">as illustrated in </span><span class="u-blue-zig">Eleventh Schedule</span> (<span class="u-blue-zig">Article 243G</span>).
+        </li>
+        <li>
+            <strong>12. District Planning:</strong> <span class="u-blue-zig">74th Amendment</span> <span class="u-green">provides for </span><span class="u-blue-zig">a District Planning Committee</span> <span class="u-green">to consolidate </span><span class="u-blue-zig">the plans</span> <span class="u-green">prepared by </span><span class="u-blue-zig">Panchayats</span> <span class="u-green">and </span><span class="u-blue-zig">Municipalities</span> (<span class="u-blue-zig">Article 243ZD</span>).
+        </li>
+        <li>
+            <strong>13. Revenue Sources:</strong> <span class="u-blue-zig">Budgetary allocation</span> <span class="u-green">from </span><span class="u-blue-zig">State Governments</span>, <span class="u-blue-zig">share of revenue</span> <span class="u-green">of </span><span class="u-blue-zig">certain taxes</span>, <span class="u-blue-zig">collection and retention</span> <span class="u-green">of </span><span class="u-blue-zig">the revenue it raises</span>, <span class="u-blue-zig">Central Government programmes</span> <span class="u-green">and </span><span class="u-blue-zig">grants</span>, <span class="u-blue-zig">Union Finance Commission grants</span> (<span class="u-blue-zig">Article 243H</span>).
+        </li>
+        <li>
+            <strong>14. State Finance Commission:</strong> <span class="u-green">Establish </span><span class="u-blue-zig">a Finance Commission</span> <span class="u-green">in </span><span class="u-blue-zig">each State</span> <span class="u-green">to determine </span><span class="u-blue-zig">the principles</span> <span class="u-green">on the basis of which </span><span class="u-blue-zig">adequate financial resources</span> <span class="u-green">would be ensured for </span><span class="u-blue-zig">panchayats</span> <span class="u-green">and </span><span class="u-blue-zig">municipalities</span> (<span class="u-blue-zig">Article 243I</span>).
+        </li>
+        <li>
+            <strong>15. Eleventh Schedule:</strong> <span class="u-blue-zig">The Eleventh Schedule</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">places as many as </span><span class="u-blue-zig">29 functions</span> <span class="u-green">within </span><span class="u-blue-zig">the purview</span> <span class="u-green">of </span><span class="u-blue-zig">the Panchayati Raj bodies</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 45</div>
+</div>
+
+<!-- ==================== PAGE 46 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. PESA Enactment:</strong> <span class="u-blue-zig">The Panchayat</span> (<span class="u-blue-zig">Extension to Scheduled Areas</span>) <span class="u-blue-zig">Act</span> (<span class="u-blue-zig">PESA</span>) <span class="u-green">was enacted on </span><span class="u-blue-zig">24 December 1996</span> <span class="u-green">to enable </span><span class="u-blue-zig">Tribal Self Rule</span> <span class="u-green">in </span><span class="u-blue-zig">these areas</span>.
+        </li>
+        <li>
+            <strong>2. Extension to Tribal Areas:</strong> <span class="u-blue-zig">The Act</span> <span class="u-green">has also been extended </span><span class="u-blue-zig">the provisions of Panchayats</span> <span class="u-green">to </span><span class="u-blue-zig">the tribal areas</span> <span class="u-green">of </span><span class="u-blue-zig">nine states</span> <span class="u-green">that have </span><span class="u-blue-zig">Fifth Schedule Areas</span>.
+        </li>
+        <li>
+            <strong>3. Nine States Listed:</strong> <span class="u-blue-zig">The nine states</span> <span class="u-green">with </span><span class="u-blue-zig">Fifth Schedule areas</span> <span class="u-green">are </span><span class="u-red-zig">Orissa</span>, <span class="u-red-zig">Gujarat</span>, <span class="u-red-zig">Jharkhand</span>, <span class="u-red-zig">Maharashtra</span>, <span class="u-red-zig">Rajasthan</span>, <span class="u-red-zig">Andhra Pradesh</span>, <span class="u-red-zig">Madhya Pradesh</span>, <span class="u-red-zig">Himachal Pradesh</span>, <span class="u-red-zig">Chattisgarh</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">Article 243F:</strong> <span class="u-red-zig">Article 243F</span> <span class="u-green">makes provisions for </span><span class="u-blue-zig">disqualifications</span> <span class="u-green">from </span><span class="u-blue-zig">the membership</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. MLA Qualification Parity:</strong> <span class="u-green">As per </span><span class="u-blue-zig">this article</span>, <span class="u-blue-zig">any person</span> <span class="u-green">who is qualified to become </span><span class="u-blue-zig">an MLA</span> <span class="u-green">is qualified to become </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">the Panchayat</span>.
+        </li>
+        <li>
+            <strong>2. Minimum Age:</strong> <span class="u-green">For </span><span class="u-blue-zig">Panchayat</span> <span class="u-blue-zig">the minimum age prescribed</span> <span class="u-green">is </span><span class="u-blue-zig">21 years</span>.
+        </li>
+        <li>
+            <strong>3. State Legislature Role:</strong> <span class="u-blue-zig">The disqualification criteria</span> <span class="u-green">are to be decided by </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">by </span><span class="u-blue-zig">law</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">Panchayat Samiti Income:</strong> <span class="u-blue-zig">The main source of income</span> <span class="u-green">of </span><span class="u-blue-zig">the panchayat samiti</span> <span class="u-green">is </span><span class="u-blue-zig">grants-in-aid</span> <span class="u-green">and </span><span class="u-blue-zig">loans</span> <span class="u-green">from </span><span class="u-blue-zig">the respective State Governments</span>.
+    </p>
+
+    <div class="section-header">ISSUES</div>
+
+    <ul>
+        <li>
+            <strong>1. Inadequate Funds:</strong> <span class="u-blue-zig">Lack of adequate funds</span>.
+        </li>
+        <li>
+            <strong>2. Structural Deficiencies:</strong> <span class="u-green">Suffer from </span><span class="u-blue-zig">structural deficiencies</span>.
+        </li>
+        <li>
+            <strong>3. Manpower Shortage:</strong> <span class="u-blue-zig">Lack of manpower</span> <span class="u-green">in </span><span class="u-blue-zig">the PRIs</span>.
+        </li>
+        <li>
+            <strong>4. SFC Recommendations:</strong> <span class="u-blue-zig">Recommendations</span> <span class="u-green">of </span><span class="u-blue-zig">State Finance Commissions</span> (<span class="u-blue-zig">SFCs</span>) <span class="u-green">are generally </span><span class="u-blue-zig">not taken seriously</span>.
+        </li>
+        <li>
+            <strong>5. Women Representation Issue:</strong> <span class="u-green">While </span><span class="u-blue-zig">women</span> <span class="u-green">got </span><span class="u-blue-zig">political representation</span>, <span class="u-blue-zig">the real power</span> <span class="u-green">was usurped by </span><span class="u-blue-zig">their husbands</span>.
+        </li>
+        <li>
+            <strong>6. Non-Mandated Transfer:</strong> <span class="u-blue-zig">The transfer</span> <span class="u-green">of </span><span class="u-blue-zig">various governance functions</span>—<span class="u-green">like </span><span class="u-blue-zig">the provision</span> <span class="u-green">of </span><span class="u-blue-zig">education</span>, <span class="u-blue-zig">health</span>, <span class="u-blue-zig">sanitation</span>, <span class="u-green">and </span><span class="u-blue-zig">water</span> <span class="u-green">was not mandated</span>.
+        </li>
+        <li>
+            <strong>7. Taxation Power:</strong> <span class="u-blue-zig">The power to tax</span>, <span class="u-green">even for </span><span class="u-blue-zig">subjects</span> <span class="u-green">falling within </span><span class="u-blue-zig">the purview of PRIs</span>, <span class="u-green">has to be </span><span class="u-blue-zig">specifically authorized</span> <span class="u-green">by </span><span class="u-blue-zig">the state legislature</span>.
+        </li>
+        <li>
+            <strong>8. MP/MLA Interference:</strong> <span class="u-blue-zig">Interference</span> <span class="u-green">of </span><span class="u-blue-zig">area MPs</span> <span class="u-green">and </span><span class="u-blue-zig">MLAs</span> <span class="u-green">in </span><span class="u-blue-zig">the functioning of panchayats</span>.
+        </li>
+        <li>
+            <strong>9. Illiteracy &amp; Ignorance:</strong> <span class="u-blue-zig">Widespread illiteracy</span> <span class="u-green">and </span><span class="u-blue-zig">ignorance</span>.
+        </li>
+        <li>
+            <strong>10. Gram Sabha Agenda:</strong> <span class="u-blue-zig">Lack of clear setting</span> <span class="u-green">of </span><span class="u-blue-zig">agenda</span> <span class="u-green">in </span><span class="u-blue-zig">gram sabha</span>, <span class="u-blue-zig">gram samiti meetings</span> <span class="u-green">and </span><span class="u-blue-zig">no proper structure</span>.
+        </li>
+        <li>
+            <strong>11. Planning Limitations:</strong> <span class="u-blue-zig">No secretarial support</span> <span class="u-green">and </span><span class="u-blue-zig">lower levels</span> <span class="u-green">of </span><span class="u-blue-zig">technical knowledge</span> <span class="u-green">which restricted </span><span class="u-blue-zig">the aggregation</span> <span class="u-green">of </span><span class="u-blue-zig">bottom up planning</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">CONSTITUTIONALISATION OF PANCHAYATI RAJ PAVED THE WAY FOR GRASS ROOT EMPOWERMENT IN INDIA. IN THIS REGARD DISCUSS THE SALIENT FEATURES OF THE 73RD AMENDMENT ACT, 1992.</div>
+
+    <div class="quote-box">
+        "Decentralisation both in the political and economic sphere is absolutely essential if India is to function as the democracy".
+        <span class="quote-author">Gandhi Ji</span>
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">73rd Amendment Overview:</strong> <span class="u-blue-zig">The 73rd amendment Act</span>, <span class="u-blue-zig">1992</span> <span class="u-green">has given </span><span class="u-blue-zig">practical shape</span> <span class="u-green">to </span><span class="u-blue-zig">the Directive Principles</span> <span class="u-green">of </span><span class="u-blue-zig">State Policy</span> <span class="u-green">by constitutionalizing </span><span class="u-blue-zig">the local governance</span> <span class="u-green">through </span><span class="u-blue-zig">establishment of Panchayati Raj</span> <span class="u-green">in </span><span class="u-red-zig">India</span>, <span class="u-green">which transformed </span><span class="u-blue-zig">the representative democracy</span> <span class="u-green">into </span><span class="u-blue-zig">a participatory one</span>. <span class="u-blue-zig">Its salient features</span> <span class="u-green">are</span>:
+    </p>
+
+    <div class="page-number">Page 46</div>
+</div>
+
+<!-- ==================== PAGE 47 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Three-Tier Structure:</strong> <span class="u-green">In </span><span class="u-blue-zig">every state</span>, <span class="u-blue-zig">the panchayat</span> <span class="u-green">will be at </span><span class="u-blue-zig">three levels</span> <span class="u-blue-zig">i.e</span>, <span class="u-blue-zig">village</span>, <span class="u-blue-zig">intermediate</span> <span class="u-green">and </span><span class="u-blue-zig">district level</span>.
+        </li>
+        <li>
+            <strong>2. Village Assembly:</strong> <span class="u-blue-zig">Village assembly</span> <span class="u-green">comprises of </span><span class="u-blue-zig">all registered voters</span> <span class="u-green">in </span><span class="u-blue-zig">the area of a panchayat</span> <span class="u-green">and serves as </span><span class="u-blue-zig">the foundation</span> <span class="u-green">of </span><span class="u-blue-zig">Panchayati Raj</span>. <span class="u-blue-zig">The powers and functions</span> <span class="u-green">of </span><span class="u-red-zig">a Gram Sabha</span> <span class="u-green">are determined by </span><span class="u-blue-zig">the respective state legislatures</span>.
+        </li>
+        <li>
+            <strong>3. Direct Election:</strong> <span class="u-blue-zig">All members</span> <span class="u-green">at </span><span class="u-blue-zig">all levels</span> <span class="u-green">are directly elected by </span><span class="u-blue-zig">people</span>. <span class="u-blue-zig">The chairperson of panchayat</span> <span class="u-green">at </span><span class="u-blue-zig">village level</span> <span class="u-green">is elected as per </span><span class="u-blue-zig">provisions</span> <span class="u-green">of </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">and </span><span class="u-blue-zig">chairperson of panchayat</span> <span class="u-green">at </span><span class="u-blue-zig">remaining two tiers</span> <span class="u-green">are elected indirectly by </span><span class="u-green">and from amongst </span><span class="u-blue-zig">elected members</span>.
+        </li>
+        <li>
+            <strong>4. SC/ST Reservation:</strong> <span class="u-green">There is </span><span class="u-blue-zig">proportionate reservation</span> <span class="u-green">for </span><span class="u-blue-zig">SCs</span> <span class="u-green">and </span><span class="u-blue-zig">STs</span> <span class="u-green">at </span><span class="u-blue-zig">every level</span> <span class="u-green">of </span><span class="u-blue-zig">the Panchayati Raj</span>. <span class="u-green">Also</span>, <span class="u-blue-zig">women</span> <span class="u-green">are provided with </span><span class="u-blue-zig">minimum one-third reservations</span> <span class="u-green">at </span><span class="u-blue-zig">all the levels of panchayats</span>. <span class="u-blue-zig">The state legislature</span> <span class="u-green">may also make provisions for </span><span class="u-blue-zig">reservations of OBCs</span>.
+        </li>
+        <li>
+            <strong>5. Five-Year Term:</strong> <span class="u-blue-zig">A panchayat</span> <span class="u-green">is given </span><span class="u-blue-zig">a five-year term</span>, <span class="u-green">but it can be </span><span class="u-blue-zig">dissolved</span> <span class="u-green">before </span><span class="u-blue-zig">its completion of the term</span>. <span class="u-blue-zig">A definite timeline</span> <span class="u-green">is given for </span><span class="u-blue-zig">holding fresh elections</span> <span class="u-green">and if </span><span class="u-blue-zig">a panchayat</span> <span class="u-green">is dissolved </span><span class="u-blue-zig">prematurely</span>, <span class="u-green">then </span><span class="u-blue-zig">the reconstituted panchayat</span> <span class="u-green">will hold office only for </span><span class="u-blue-zig">the remaining period</span>.
+        </li>
+        <li>
+            <strong>6. State Election Commission:</strong> <span class="u-blue-zig">The conduct</span> <span class="u-green">of </span><span class="u-blue-zig">Panchayati Raj elections</span> <span class="u-green">is vested in </span><span class="u-blue-zig">the state election commission</span> <span class="u-green">consisting of </span><span class="u-blue-zig">a state election commissioner</span> <span class="u-green">appointed by </span><span class="u-blue-zig">the Governor of the state</span>.
+        </li>
+        <li>
+            <strong>7. Finance Commission:</strong> <span class="u-blue-zig">The Governor of a state</span> <span class="u-green">will</span>, <span class="u-green">after </span><span class="u-blue-zig">every five years</span>, <span class="u-green">constitute </span><span class="u-blue-zig">a finance commission</span> <span class="u-green">to review </span><span class="u-blue-zig">the financial position</span> <span class="u-green">of </span><span class="u-blue-zig">panchayats</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">Performance Challenges:</strong> <span class="u-green">However</span>, <span class="u-blue-zig">the performance</span> <span class="u-green">of </span><span class="u-blue-zig">Panchayats</span> <span class="u-green">has </span><span class="u-blue-zig">lot left to be desired</span>, <span class="u-green">especially in light of </span><span class="u-blue-zig">limited powers</span> <span class="u-green">and </span><span class="u-blue-zig">financial autonomy</span> <span class="u-green">provided to them by </span><span class="u-blue-zig">the States</span>. <span class="u-blue-zig">A lot</span> <span class="u-green">can be done to improve </span><span class="u-blue-zig">the performance of panchayats</span>, <span class="u-green">including </span><span class="u-blue-zig">greater financial autonomy</span>, <span class="u-blue-zig">capacity building</span>, <span class="u-blue-zig">infrastructure improvement</span> <span class="u-green">and </span><span class="u-blue-zig">less bureaucratic control</span>. <span class="u-green">To make it truly </span><span class="u-blue-zig">participatory</span>, <span class="u-blue-zig">the 3Fs</span> (<span class="u-blue-zig">Functions, Funds, And Functionaries</span>) <span class="u-green">of </span><span class="u-blue-zig">Panchayati Raj</span> <span class="u-green">needs to be </span><span class="u-blue-zig">strengthened</span>.
+    </p>
+
+    <div class="quote-box">
+        "In the hierarchical society with highly skewed nature of assets and power distribution, vesting more powers at the village level would only perpetuate the exploitation of the disposed of."
+        <span class="quote-author">— Dr Ambedkar</span>
+    </div>
+
+    <div class="page-number">Page 47</div>
+</div>
+
+</body>
+</html>

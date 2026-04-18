@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH13 - State Legislature | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH13- State Legislature</h1>
+        <p class="subtitle">Article 168 - 212</p>
+    </header>
+
+    <div class="section-header">ARTICLE 168</div>
+
+    <ul>
+        <li>
+            <strong>1. State Legislature:</strong> (1) <span class="u-green">For </span><span class="u-blue-zig">every State</span> <span class="u-green">there shall be </span><span class="u-blue-zig">a Legislature</span> <span class="u-green">which shall consist of </span><span class="u-blue-zig">the Governor</span>, <span class="u-green">and</span>—
+            <ul>
+                <li>
+                    <strong>a. Bicameral States:</strong> (a) <span class="u-green">in </span><span class="u-blue-zig">the States</span> <span class="u-green">of </span><span class="u-red-zig">Andhra Pradesh</span>, <span class="u-red-zig">Bihar</span>, <span class="u-red-zig">Madhya Pradesh</span>, <span class="u-red-zig">Maharashtra</span>, <span class="u-red-zig">Karnataka</span>, <span class="u-red-zig">Tamil Nadu</span>, <span class="u-red-zig">Telangana</span> <span class="u-green">and </span><span class="u-red-zig">Uttar Pradesh</span> <span class="u-blue-zig">two Houses</span>;
+                </li>
+                <li>
+                    <strong>b. Unicameral States:</strong> (b) <span class="u-green">in </span><span class="u-blue-zig">other States</span>, <span class="u-blue-zig">one House</span>. <span class="u-green">Where there are </span><span class="u-blue-zig">two Houses</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of a State</span>, <span class="u-blue-zig">one</span> <span class="u-green">shall be known as </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">and </span><span class="u-blue-zig">the other</span> <span class="u-green">as </span><span class="u-blue-zig">the Legislative Assembly</span>, <span class="u-green">and where there is </span><span class="u-blue-zig">only one House</span>, <span class="u-green">it shall be known as </span><span class="u-blue-zig">the Legislative Assembly</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 169</div>
+
+    <ul>
+        <li>
+            <strong>1. Abolition or Creation:</strong> (1) <span class="u-green">Notwithstanding </span><span class="u-blue-zig">anything</span> <span class="u-green">in </span><span class="u-blue-zig">article 168</span>, <span class="u-blue-zig">Parliament</span> <span class="u-green">may by </span><span class="u-blue-zig">law</span> <span class="u-green">provide for </span><span class="u-blue-zig">the abolition</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">having </span><span class="u-blue-zig">such a Council</span> <span class="u-green">or for </span><span class="u-blue-zig">the creation</span> <span class="u-green">of </span><span class="u-blue-zig">such a Council</span> <span class="u-green">in </span><span class="u-blue-zig">a State</span> <span class="u-green">having </span><span class="u-blue-zig">no such Council</span>, <span class="u-green">if </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">passes </span><span class="u-blue-zig">a resolution</span> <span class="u-green">to that effect by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">the total membership</span> <span class="u-green">of </span><span class="u-blue-zig">the Assembly</span> <span class="u-green">and by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">not less than two-thirds</span> <span class="u-green">of </span><span class="u-blue-zig">the members of the Assembly</span> <span class="u-blue-zig">present and voting</span>.
+        </li>
+        <li>
+            <strong>2. Non-Amendment Proviso:</strong> <span class="u-blue-zig">No such law</span> <span class="u-green">as aforesaid </span><span class="u-green">shall be deemed to be </span><span class="u-blue-zig">an amendment</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">for </span><span class="u-blue-zig">the purposes</span> <span class="u-green">of </span><span class="u-blue-zig">article 368</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 170</div>
+
+    <ul>
+        <li>
+            <strong>1. Assembly Composition:</strong> (1) <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">article 333</span>, <span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">each State</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">not more than five hundred</span>, <span class="u-green">and </span><span class="u-blue-zig">not less than sixty</span>, <span class="u-blue-zig">members</span> <span class="u-green">chosen by </span><span class="u-blue-zig">direct election</span> <span class="u-green">from </span><span class="u-blue-zig">territorial constituencies</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span>.
+        </li>
+        <li>
+            <strong>2. Constituency Division:</strong> (2) <span class="u-green">For </span><span class="u-blue-zig">the purposes</span> <span class="u-green">of </span><span class="u-blue-zig">clause (1)</span>, <span class="u-blue-zig">each State</span> <span class="u-green">shall be divided into </span><span class="u-blue-zig">territorial constituencies</span> <span class="u-green">in </span><span class="u-blue-zig">such manner</span> <span class="u-green">that </span><span class="u-blue-zig">the ratio</span> <span class="u-green">between </span><span class="u-blue-zig">the population</span> <span class="u-green">of </span><span class="u-blue-zig">each constituency</span> <span class="u-green">and </span><span class="u-blue-zig">the number of seats</span> <span class="u-green">allotted to </span><span class="u-blue-zig">it</span> <span class="u-green">shall</span>, <span class="u-green">so far as </span><span class="u-blue-zig">practicable</span>, <span class="u-green">be </span><span class="u-blue-zig">the same</span> <span class="u-green">throughout </span><span class="u-blue-zig">the State</span>.
+        </li>
+        <li>
+            <strong>3. Census Readjustment:</strong> <span class="u-green">After </span><span class="u-red-zig">2026</span> <span class="u-blue-zig">census</span> <span class="u-blue-zig">LIKE Parliament</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 171</div>
+
+    <ul>
+        <li>
+            <strong>1. Council Strength:</strong> (1) <span class="u-blue-zig">The total number of members</span> <span class="u-green">in </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">having </span><span class="u-blue-zig">such a Council</span> <span class="u-green">shall not exceed </span><span class="u-blue-zig">one-third</span> <span class="u-green">of </span><span class="u-blue-zig">the total number of members</span> <span class="u-green">in </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">that State</span>:
+        </li>
+        <li>
+            <strong>2. Minimum Members:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">the total number of members</span> <span class="u-green">in </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall in no case be </span><span class="u-blue-zig">less than forty</span>.
+        </li>
+        <li>
+            <strong>3. Composition Provision:</strong> (2) <span class="u-green">Until </span><span class="u-blue-zig">Parliament</span> <span class="u-green">by </span><span class="u-blue-zig">law</span> <span class="u-green">otherwise provides</span>, <span class="u-blue-zig">the composition</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall be as provided in </span><span class="u-blue-zig">clause (3)</span>.
+        </li>
+        <li>
+            <strong>4. Council Categories:</strong> (3) <span class="u-green">Of </span><span class="u-blue-zig">the total number of members</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span>—
+        </li>
+    </ul>
+
+    <div class="page-number">Page 30</div>
+</div>
+
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>(a) Local Authorities:</strong> <span class="u-green">as nearly as may be</span>, <span class="u-blue-zig">one-third</span> <span class="u-green">shall be elected by </span><span class="u-blue-zig">electorates</span> <span class="u-green">consisting of </span><span class="u-blue-zig">members of municipalities</span>, <span class="u-blue-zig">district boards</span> <span class="u-green">and </span><span class="u-blue-zig">such other local authorities</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span> <span class="u-green">as </span><span class="u-blue-zig">Parliament</span> <span class="u-green">may by </span><span class="u-blue-zig">law specify</span>;
+        </li>
+        <li>
+            <strong>(b) Graduate Electorate:</strong> <span class="u-green">as nearly as may be</span>, <span class="u-blue-zig">one-twelfth</span> <span class="u-green">shall be elected by </span><span class="u-blue-zig">electorates</span> <span class="u-green">consisting of </span><span class="u-blue-zig">persons residing in the State</span> <span class="u-green">who have been for </span><span class="u-blue-zig">at least three years</span> <span class="u-blue-zig">graduates</span> <span class="u-green">of </span><span class="u-blue-zig">any university</span> <span class="u-green">in </span><span class="u-blue-zig">the territory of India</span> <span class="u-green">or have been for </span><span class="u-blue-zig">at least three years</span> <span class="u-green">in </span><span class="u-blue-zig">possession of qualifications</span> <span class="u-green">prescribed by or under </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">as equivalent to </span><span class="u-blue-zig">that of a graduate</span> <span class="u-green">of </span><span class="u-blue-zig">any such university</span>;
+        </li>
+        <li>
+            <strong>(c) Teachers' Electorate:</strong> <span class="u-green">as nearly as may be</span>, <span class="u-blue-zig">one-twelfth</span> <span class="u-green">shall be elected by </span><span class="u-blue-zig">electorates</span> <span class="u-green">consisting of </span><span class="u-blue-zig">persons</span> <span class="u-green">who have been for </span><span class="u-blue-zig">at least three years</span> <span class="u-green">engaged in </span><span class="u-blue-zig">teaching</span> <span class="u-green">in </span><span class="u-blue-zig">such educational institutions</span> <span class="u-green">within </span><span class="u-blue-zig">the State</span>, <span class="u-green">not lower in standard than </span><span class="u-blue-zig">that of a secondary school</span>, <span class="u-green">as may be prescribed </span><span class="u-green">by or under </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span>;
+        </li>
+        <li>
+            <strong>(d) Assembly Members:</strong> <span class="u-green">as nearly as may be</span>, <span class="u-blue-zig">one-third</span> <span class="u-green">shall be elected by </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">from amongst </span><span class="u-blue-zig">persons</span> <span class="u-green">who are not </span><span class="u-blue-zig">members of the Assembly</span>;
+        </li>
+        <li>
+            <strong>(e) Governor's Nominees:</strong> <span class="u-blue-zig">the remainder</span> <span class="u-green">shall be nominated by </span><span class="u-blue-zig">the Governor</span> <span class="u-blue-zig">clause (5)</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>4. Territorial Constituencies:</strong> <span class="u-blue-zig">The members</span> <span class="u-green">to be elected under </span><span class="u-blue-zig">sub-clauses (a), (b) and (c)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (3)</span> <span class="u-green">shall be chosen in </span><span class="u-blue-zig">such territorial constituencies</span> <span class="u-green">as may be prescribed </span><span class="u-green">by or under </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span>, <span class="u-green">and </span><span class="u-blue-zig">the elections</span> <span class="u-green">under </span><span class="u-blue-zig">the said sub-clauses</span> <span class="u-green">and under </span><span class="u-blue-zig">sub-clause (d)</span> <span class="u-green">of </span><span class="u-blue-zig">the said clause</span> <span class="u-green">shall be held in accordance with </span><span class="u-blue-zig">the system</span> <span class="u-green">of </span><span class="u-blue-zig">proportional representation</span> <span class="u-green">by means of </span><span class="u-blue-zig">the single transferable vote</span>.
+        </li>
+        <li>
+            <strong>5. Nominated Members:</strong> <span class="u-blue-zig">The members</span> <span class="u-green">to be nominated by </span><span class="u-blue-zig">the Governor</span> <span class="u-green">under </span><span class="u-blue-zig">sub-clause (e)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (3)</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">persons</span> <span class="u-green">having </span><span class="u-blue-zig">special knowledge</span> <span class="u-green">or </span><span class="u-blue-zig">practical experience</span> <span class="u-green">in respect of </span><span class="u-blue-zig">such matters</span> <span class="u-green">as </span><span class="u-blue-zig">the following</span>, <span class="u-green">namely</span>:—
+            <ul>
+                <li>
+                    <strong>Specified Fields:</strong> <span class="u-blue-zig">Literature</span>, <span class="u-blue-zig">science</span>, <span class="u-blue-zig">art</span>, <span class="u-blue-zig">co-operative movement</span> <span class="u-green">and </span><span class="u-blue-zig">social service</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 172</div>
+
+    <ul>
+        <li>
+            <strong>1. Assembly Duration:</strong> (1) <span class="u-blue-zig">The Legislative Assembly</span>: <span class="u-blue-zig">Five Years</span> + <span class="u-blue-zig">One Year</span> (<span class="u-blue-zig">N E</span>)
+        </li>
+        <li>
+            <strong>2. Council Continuity:</strong> (2) <span class="u-blue-zig">The Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall not be subject to </span><span class="u-blue-zig">dissolution</span>, <span class="u-green">but </span><span class="u-blue-zig">as nearly as possible</span> <span class="u-blue-zig">one-third</span> <span class="u-green">of </span><span class="u-blue-zig">the members thereof</span> <span class="u-green">shall retire </span><span class="u-blue-zig">as soon as may be</span> <span class="u-green">on </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">every second year</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">THE NEED AND IMPORTANCE OF LEGISLATIVE COUNCILS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Upper House Role:</strong> <span class="u-blue-zig">The Legislative Council</span> <span class="u-green">is </span><span class="u-blue-zig">the upper house</span> <span class="u-green">of </span><span class="u-blue-zig">the state</span>. <span class="u-blue-zig">Article 169</span> <span class="u-green">provide for </span><span class="u-blue-zig">creation and abolition</span> <span class="u-green">of </span><span class="u-blue-zig">legislative councils</span> <span class="u-green">in </span><span class="u-blue-zig">states</span>.
+    </p>
+
+    <div class="section-header">NEED and IMPORTANCE</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Debate and Workload:</strong> <span class="u-green">Having </span><span class="u-blue-zig">a second chamber</span> <span class="u-green">would allow for </span><span class="u-blue-zig">more debate</span> <span class="u-green">and </span><span class="u-blue-zig">sharing of work</span> <span class="u-green">between </span><span class="u-blue-zig">the Houses</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Check on Haste:</strong> <span class="u-blue-zig">A second House</span> <span class="u-green">of </span><span class="u-blue-zig">legislature</span> <span class="u-green">is considered important to </span><span class="u-blue-zig">act as a check</span> <span class="u-green">on </span><span class="u-blue-zig">hasty actions</span> <span class="u-green">by </span><span class="u-blue-zig">the popularly elected House</span>.
+    </p>
+
+    <div class="page-number">Page 31</div>
+</div>
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Check on Autocracy:</strong> <span class="u-green">It is argued that </span><span class="u-blue-zig">second house</span> <span class="u-green">put </span><span class="u-blue-zig">a check</span> <span class="u-green">on </span><span class="u-blue-zig">autocratic tendencies</span> <span class="u-green">of </span><span class="u-blue-zig">the lower chambers</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Experienced Members:</strong> <span class="u-blue-zig">Elderly, experienced</span> <span class="u-green">and </span><span class="u-blue-zig">sober individuals</span>, <span class="u-green">cannot-bear </span><span class="u-blue-zig">the ordeal of electioneering</span> <span class="u-green">neither </span><span class="u-blue-zig">campaign</span> <span class="u-green">nor are they keen </span><span class="u-green">to indulge in </span><span class="u-blue-zig">vicious party politics</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Check on Radicalism:</strong> <span class="u-blue-zig">Upper House</span> <span class="u-green">consisting of </span><span class="u-blue-zig">graduates, teachers</span>, <span class="u-blue-zig">outstanding persons</span> <span class="u-green">in </span><span class="u-blue-zig">the fields of art</span>, <span class="u-blue-zig">literature</span>, <span class="u-blue-zig">science</span> <span class="u-green">and </span><span class="u-blue-zig">social service</span>, <span class="u-green">check-mate </span><span class="u-blue-zig">the radicalism</span> <span class="u-green">of </span><span class="u-blue-zig">the lower House</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. Workload Management:</strong> <span class="u-blue-zig">A unicameral legislature</span> <span class="u-green">cannot cope with </span><span class="u-blue-zig">the work</span> <span class="u-green">and devote fully to </span><span class="u-blue-zig">the bills</span> <span class="u-green">brought before it for </span><span class="u-blue-zig">enactment</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">5. Better Legislation:</strong> <span class="u-green">To formulate </span><span class="u-blue-zig">better</span> <span class="u-green">and </span><span class="u-blue-zig">detailed discussed legislation</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">CRITICISM</div>
+
+    <ul>
+        <li>
+            <strong>1. Superfluous Body:</strong> <span class="u-blue-zig">Superfluous</span> <span class="u-green">and </span><span class="u-blue-zig">Mischievous</span>
+        </li>
+        <li>
+            <strong>2. Ineffective Check:</strong> <span class="u-green">Not </span><span class="u-blue-zig">an Effective Check</span>
+        </li>
+        <li>
+            <strong>3. Vested Interests:</strong> <span class="u-blue-zig">Vested Interests</span>
+        </li>
+        <li>
+            <strong>4. Backdoor Entry:</strong> <span class="u-blue-zig">Backdoor Entrance</span> <span class="u-green">of </span><span class="u-blue-zig">the Defeated Members</span>
+        </li>
+        <li>
+            <strong>5. Cost Burden:</strong> <span class="u-blue-zig">Expensive Institution</span>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 173</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Membership Qualification:</strong> <span class="u-blue-zig">Qualification</span> <span class="u-green">for </span><span class="u-blue-zig">membership</span> <span class="u-green">of </span><span class="u-blue-zig">the State Legislature</span> <span class="u-blue-zig">Sessions of the State Legislature</span>, <span class="u-blue-zig">prorogation</span> <span class="u-green">and </span><span class="u-blue-zig">dissolution</span>
+    </p>
+
+    <div class="section-header">ARTICLE 177</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Ministers' Rights:</strong> <span class="u-blue-zig">Rights of Ministers</span> <span class="u-green">and </span><span class="u-blue-zig">Advocate-General</span> <span class="u-green">as respects </span><span class="u-blue-zig">the Houses</span>
+    </p>
+
+    <div class="section-header">ARTICLE 178</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Presiding Officers:</strong> <span class="u-blue-zig">The Speaker</span> <span class="u-green">and </span><span class="u-blue-zig">Deputy Speaker</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span>
+    </p>
+
+    <div class="section-header">ARTICLE 179</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Vacation of Office:</strong> <span class="u-blue-zig">A member</span> <span class="u-green">holding office as </span><span class="u-blue-zig">Speaker</span> <span class="u-green">or </span><span class="u-blue-zig">Deputy Speaker</span> <span class="u-green">of </span><span class="u-blue-zig">an Assembly</span>—
+    </p>
+
+    <div class="section-header">ARTICLE 180</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Office Vacancy:</strong> (1) <span class="u-blue-zig">The office of Speaker</span> <span class="u-green">is </span><span class="u-blue-zig">vacant</span>
+    </p>
+
+    <div class="section-header">ARTICLE 182</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Council Chairman:</strong> <span class="u-blue-zig">The Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">every State</span> <span class="u-green">having </span><span class="u-blue-zig">such Council</span> <span class="u-green">shall</span>, <span class="u-green">as soon as may be</span>, <span class="u-green">choose </span><span class="u-blue-zig">two members</span> <span class="u-green">of </span><span class="u-blue-zig">the Council</span> <span class="u-green">to be respectively </span><span class="u-blue-zig">Chairman</span> <span class="u-green">and </span><span class="u-blue-zig">Deputy Chairman</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 183</div>
+
+    <ul>
+        <li>
+            <strong>1. Resignation Clause:</strong> (b) <span class="u-green">may at any time by </span><span class="u-blue-zig">writing under his hand</span> <span class="u-green">addressed</span>, <span class="u-green">if </span><span class="u-blue-zig">such member</span> <span class="u-green">is </span><span class="u-blue-zig">the Chairman</span>, <span class="u-green">to </span><span class="u-blue-zig">the Deputy Chairman</span>, <span class="u-green">and if </span><span class="u-blue-zig">such member</span> <span class="u-green">is </span><span class="u-blue-zig">the Deputy Chairman</span>, <span class="u-green">to </span><span class="u-blue-zig">the Chairman</span>, <span class="u-green">resign </span><span class="u-blue-zig">his office</span>.
+        </li>
+        <li>
+            <strong>2. Removal Procedure:</strong> (c) <span class="u-green">may be removed from </span><span class="u-blue-zig">his office</span> <span class="u-green">by </span><span class="u-blue-zig">a resolution</span> <span class="u-green">of </span><span class="u-blue-zig">the Council</span> <span class="u-green">passed by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">all the then members</span> <span class="u-green">of </span><span class="u-blue-zig">the Council</span>:
+        </li>
+        <li>
+            <strong>3. Notice Requirement:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">no resolution</span> <span class="u-green">for </span><span class="u-blue-zig">the purpose</span> <span class="u-green">of </span><span class="u-blue-zig">clause (c)</span> <span class="u-green">shall be moved unless </span><span class="u-blue-zig">at least fourteen days' notice</span> <span class="u-green">has been given of </span><span class="u-blue-zig">the intention</span> <span class="u-green">to move </span><span class="u-blue-zig">the resolution</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 32</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 186</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Salaries &amp; Allowances:</strong> <span class="u-green">There shall be paid to </span><span class="u-blue-zig">the Speaker</span> <span class="u-green">and </span><span class="u-blue-zig">the Deputy Speaker</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span>, <span class="u-green">and to </span><span class="u-blue-zig">the Chairman</span> <span class="u-green">and </span><span class="u-blue-zig">the Deputy Chairman</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Council</span>, <span class="u-blue-zig">such salaries and allowances</span> <span class="u-green">as may be respectively fixed by </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">by </span><span class="u-blue-zig">law</span> <span class="u-green">and</span>, <span class="u-green">until provision </span><span class="u-green">in that behalf is so made</span>, <span class="u-blue-zig">such salaries and allowances</span> <span class="u-green">as are specified in </span><span class="u-blue-zig">the Second Schedule</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 187</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. State Secretariat:</strong> <span class="u-blue-zig">Secretariat</span> <span class="u-green">of </span><span class="u-blue-zig">State Legislature</span>
+    </p>
+
+    <div class="section-header">ARTICLE 188</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Oath of Members:</strong> <span class="u-blue-zig">188</span>. <span class="u-blue-zig">Every member</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">or </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall</span>, <span class="u-green">before taking </span><span class="u-blue-zig">his seat</span>, <span class="u-green">make and subscribe before </span><span class="u-blue-zig">the Governor</span>, <span class="u-green">or </span><span class="u-blue-zig">some person appointed</span> <span class="u-green">in that behalf by </span><span class="u-blue-zig">him</span>, <span class="u-blue-zig">an oath or affirmation</span> <span class="u-green">according to </span><span class="u-blue-zig">the form set out</span> <span class="u-green">for the purpose in </span><span class="u-blue-zig">the Third Schedule</span>.
+    </p>
+
+    <div class="main-topic-header">Voting in Houses, power of Houses to act notwithstanding vacancies and quorum</div>
+
+    <div class="section-header">ARTICLE 189</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Member Disqualifications:</strong> <span class="u-blue-zig">Disqualifications of Members</span>
+    </p>
+
+    <div class="main-topic-header">Powers, Privileges and Immunities of State Legislatures and their Members</div>
+
+    <p style="font-weight: bold; color: var(--primary-blue); font-style: italic; margin: 5px 0 15px 0;">LIKE PARLIAMENT</p>
+
+    <div class="section-header">ARTICLE 195</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Member Salaries:</strong> <span class="u-blue-zig">Members</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">and </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall be entitled to receive </span><span class="u-blue-zig">such salaries and allowances</span> <span class="u-green">as may </span><span class="u-green">from time to time </span><span class="u-green">be determined</span>, <span class="u-green">by </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">by </span><span class="u-blue-zig">law</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 196</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Bill Origination:</strong> (1) <span class="u-green">Subject to the provisions of </span><span class="u-blue-zig">articles 198 and 207</span> <span class="u-green">with respect to </span><span class="u-blue-zig">Money Bills</span> <span class="u-green">and </span><span class="u-blue-zig">other financial Bills</span>, <span class="u-blue-zig">a Bill</span> <span class="u-green">may originate in </span><span class="u-blue-zig">either House</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of a State</span> <span class="u-green">which has </span><span class="u-blue-zig">a Legislative Council</span>.
+    </p>
+
+    <p style="font-weight: bold; color: var(--primary-blue); font-style: italic; margin: 5px 0 15px 0;">LIKE PARLIAMENT</p>
+
+    <div class="section-header">ARTICLE 198</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Money Bill Restriction:</strong> (1) <span class="u-blue-zig">A Money Bill</span> <span class="u-green">shall not be introduced in </span><span class="u-blue-zig">a Legislative Council</span>.
+    </p>
+
+    <p style="font-weight: bold; color: var(--primary-blue); font-style: italic; margin: 5px 0 15px 0;">LIKE PARLIAMENT</p>
+
+    <div class="section-header">ARTICLE 200</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Governor's Assent:</strong> <span class="u-green">When </span><span class="u-blue-zig">a Bill</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">or</span>, <span class="u-green">in the case of </span><span class="u-blue-zig">a State</span> <span class="u-green">having </span><span class="u-blue-zig">a Legislative Council</span>, <span class="u-green">has been passed by </span><span class="u-blue-zig">both Houses</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of the State</span>, <span class="u-green">it shall be presented to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">and </span><span class="u-blue-zig">the Governor</span> <span class="u-green">shall declare either that </span><span class="u-blue-zig">he assents</span> <span class="u-green">to </span><span class="u-blue-zig">the Bill</span> <span class="u-green">or that </span><span class="u-blue-zig">he withholds assent</span> <span class="u-green">therefrom or that </span><span class="u-blue-zig">he reserves the Bill</span> <span class="u-green">for the consideration of </span><span class="u-blue-zig">the President</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 201</div>
+
+    <div class="page-number">Page 33</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Reserved Bill:</strong> <span class="u-green">When </span><span class="u-blue-zig">a Bill</span> <span class="u-green">is reserved by </span><span class="u-blue-zig">a Governor</span> <span class="u-green">for </span><span class="u-blue-zig">the consideration</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>, <span class="u-blue-zig">the President</span> <span class="u-green">shall declare either that </span><span class="u-blue-zig">he assents to the Bill</span> <span class="u-green">or that </span><span class="u-blue-zig">he withholds Assent</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 202</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Annual Financial Statement:</strong> <span class="u-blue-zig">The Governor</span> <span class="u-green">shall in respect of </span><span class="u-blue-zig">every financial year</span> <span class="u-green">cause to be laid before </span><span class="u-blue-zig">the House or Houses</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-blue-zig">a statement</span> <span class="u-green">of </span><span class="u-blue-zig">the estimated receipts</span> <span class="u-green">and </span><span class="u-blue-zig">expenditure of the State</span> <span class="u-green">for </span><span class="u-blue-zig">that year</span>, <span class="u-green">in this Part referred to as </span><span class="u-blue-zig">the "annual financial statement"</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 203</div>
+
+    <ul>
+        <li>
+            <strong>1. Expenditure Estimates:</strong> <span class="u-green">So much of </span><span class="u-blue-zig">the estimates</span> <span class="u-green">relates to </span><span class="u-blue-zig">Expenditure</span>.
+        </li>
+        <li>
+            <strong>2. Grant Recommendation:</strong> <span class="u-blue-zig">No demand for a grant</span> <span class="u-green">shall be made except on </span><span class="u-blue-zig">the recommendation</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 204</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Appropriation Bill:</strong> <span class="u-blue-zig">The Appropriation Bill</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 211</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Judicial Conduct Bar:</strong> <span class="u-blue-zig">No discussion</span> <span class="u-green">shall take place in </span><span class="u-blue-zig">the Legislature of a State</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the conduct</span> <span class="u-green">of </span><span class="u-blue-zig">any Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">or of </span><span class="u-blue-zig">a High Court</span> <span class="u-green">in </span><span class="u-blue-zig">the discharge of his duties</span>.
+    </p>
+
+    <div class="page-number">Page 34</div>
+</div>
+
+</body>
+</html>

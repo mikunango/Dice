@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH21 - Official Language | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 211 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH21- Official Language</h1>
+        <p class="subtitle">Part XVII — Article 343 to 351</p>
+    </header>
+
+    <div class="main-topic-header">ARTICLE 343</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Official Language:</strong> (1) <span class="u-blue-zig">The official language</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall be </span><span class="u-blue-zig">Hindi in Devanagari script</span>. <span class="u-blue-zig">The form of numerals</span> <span class="u-green">to be used for </span><span class="u-blue-zig">the official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall be </span><span class="u-blue-zig">the international form</span> <span class="u-green">of </span><span class="u-blue-zig">Indian numerals</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Transitional Provision:</strong> (2) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">clause (1)</span>, <span class="u-green">for a period of </span><span class="u-blue-zig">fifteen years</span> <span class="u-green">from the commencement of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">the English language</span> <span class="u-green">shall continue to be used for </span><span class="u-blue-zig">all the official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">for which it was being used </span><span class="u-blue-zig">immediately before</span> <span class="u-blue-zig">such commencement</span>:
+            <ul>
+                <li>
+                    <strong>a. Proviso:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">the President</span> <span class="u-green">may, during </span><span class="u-blue-zig">the said period</span>, <span class="u-green">by </span><span class="u-blue-zig">order</span> <span class="u-green">authorise the use of </span><span class="u-blue-zig">the Hindi language</span> <span class="u-green">in addition to </span><span class="u-blue-zig">the English language</span> <span class="u-green">and of </span><span class="u-blue-zig">the Devanagari form</span> <span class="u-green">of </span><span class="u-blue-zig">numerals</span> <span class="u-green">in addition to </span><span class="u-blue-zig">the international form</span> <span class="u-green">of </span><span class="u-blue-zig">Indian numerals</span> <span class="u-green">for any of </span><span class="u-blue-zig">the official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Parliamentary Power:</strong> (3) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">this article</span>, <span class="u-red-zig">Parliament</span> <span class="u-green">may by law provide for </span><span class="u-blue-zig">the use</span>, <span class="u-green">after </span><span class="u-blue-zig">the said period</span> <span class="u-green">of </span><span class="u-blue-zig">fifteen years</span>, <span class="u-green">of</span>—
+            <ul>
+                <li>
+                    <strong>a. English Language:</strong> <span class="u-blue-zig">the English language</span>, <span class="u-green">or</span>
+                </li>
+                <li>
+                    <strong>b. Devanagari Numerals:</strong> <span class="u-blue-zig">the Devanagari form</span> <span class="u-green">of </span><span class="u-blue-zig">numerals</span>,
+                </li>
+            </ul>
+            <span class="u-green">for such purposes as may be specified in </span><span class="u-blue-zig">the law</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 344</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Commission Constitution:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">shall, at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">five years</span> <span class="u-green">from the commencement of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">and thereafter at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">ten years</span> <span class="u-green">from </span><span class="u-blue-zig">such commencement</span>, <span class="u-green">by </span><span class="u-blue-zig">order</span> <span class="u-green">constitute </span><span class="u-blue-zig">a Commission</span> <span class="u-green">which shall consist of </span><span class="u-blue-zig">a Chairman</span> <span class="u-green">and </span><span class="u-blue-zig">such other members</span> <span class="u-green">representing </span><span class="u-blue-zig">the different languages</span> <span class="u-green">specified in </span><span class="u-blue-zig">the Eighth Schedule</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may appoint, and </span><span class="u-blue-zig">the order</span> <span class="u-green">shall define </span><span class="u-blue-zig">the procedure</span> <span class="u-green">to be followed by </span><span class="u-blue-zig">the Commission</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Commission Duty:</strong> (2) <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Commission</span> <span class="u-green">to make </span><span class="u-blue-zig">recommendations</span> <span class="u-green">to </span><span class="u-blue-zig">the President</span> <span class="u-green">as to</span>—
+            <ul>
+                <li>
+                    <strong>a. Progressive Use:</strong> (a) <span class="u-blue-zig">the progressive use</span> <span class="u-green">of </span><span class="u-blue-zig">the Hindi language</span> <span class="u-green">for </span><span class="u-blue-zig">the official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span>;
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 211</div>
+</div>
+
+<!-- ==================== PAGE 212 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>b. English Restrictions:</strong> (b) <span class="u-blue-zig">restrictions</span> <span class="u-green">on the use of </span><span class="u-blue-zig">the English language</span> <span class="u-green">for </span><span class="u-blue-zig">all or any</span> <span class="u-green">of </span><span class="u-blue-zig">the official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span>;
+        </li>
+        <li>
+            <strong>c. Article 348 Language:</strong> (c) <span class="u-blue-zig">the language</span> <span class="u-green">to be used for </span><span class="u-blue-zig">all or any</span> <span class="u-green">of </span><span class="u-blue-zig">the purposes</span> <span class="u-green">mentioned in </span><span class="u-blue-zig">article 348</span>;
+        </li>
+        <li>
+            <strong>d. Numeral Form:</strong> (d) <span class="u-blue-zig">the form of numerals</span> <span class="u-green">to be used for </span><span class="u-blue-zig">any one or more</span> <span class="u-blue-zig">specified purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span>;
+        </li>
+        <li>
+            <strong>e. Other Matters:</strong> (e) <span class="u-blue-zig">any other matter</span> <span class="u-green">referred to </span><span class="u-blue-zig">the Commission</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span> <span class="u-green">as regards </span><span class="u-blue-zig">the official language</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the language</span> <span class="u-green">for </span><span class="u-blue-zig">communication</span> <span class="u-green">between </span><span class="u-blue-zig">the Union and a State</span> <span class="u-green">or between </span><span class="u-blue-zig">one State and another</span> <span class="u-green">and </span><span class="u-blue-zig">their use</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">3. Due Regard:</strong> (3) <span class="u-green">In making their recommendations under </span><span class="u-blue-zig">clause (2)</span>, <span class="u-blue-zig">the Commission</span> <span class="u-green">shall have due regard to </span><span class="u-blue-zig">the industrial, cultural</span> <span class="u-green">and </span><span class="u-blue-zig">scientific advancement</span> <span class="u-green">of </span><span class="u-red-zig">India</span>, <span class="u-green">and </span><span class="u-blue-zig">the just claims</span> <span class="u-green">and </span><span class="u-blue-zig">the interests of persons</span> <span class="u-green">belonging to </span><span class="u-blue-zig">the non-Hindi speaking areas</span> <span class="u-green">in regard to </span><span class="u-blue-zig">the public services</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. Parliamentary Committee:</strong> (4) <span class="u-green">There shall be constituted </span><span class="u-blue-zig">a Committee</span> <span class="u-green">consisting of </span><span class="u-blue-zig">thirty members</span>, <span class="u-green">of whom </span><span class="u-blue-zig">twenty</span> <span class="u-green">shall be </span><span class="u-blue-zig">members</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">and </span><span class="u-blue-zig">ten</span> <span class="u-green">shall be </span><span class="u-blue-zig">members</span> <span class="u-green">of </span><span class="u-blue-zig">the Council of States</span> <span class="u-green">to be elected respectively by </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">and </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the Council of States</span> <span class="u-green">in accordance with </span><span class="u-blue-zig">the system</span> <span class="u-green">of </span><span class="u-blue-zig">proportional representation</span> <span class="u-green">by means of </span><span class="u-blue-zig">the single transferable vote</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">5. Committee Duty:</strong> (5) <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Committee</span> <span class="u-green">to examine </span><span class="u-blue-zig">the recommendations</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span> <span class="u-green">constituted under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">and to report to </span><span class="u-blue-zig">the President</span> <span class="u-blue-zig">their opinion thereon</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">6. Presidential Directions:</strong> (6) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">article 343</span>, <span class="u-blue-zig">the President</span> <span class="u-green">may, after consideration of </span><span class="u-blue-zig">the report</span> <span class="u-green">referred to in </span><span class="u-blue-zig">clause (5)</span>, <span class="u-green">issue directions in accordance with </span><span class="u-blue-zig">the whole or any part</span> <span class="u-green">of </span><span class="u-blue-zig">that report</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 345</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. State Language Adoption:</strong> <span class="u-green">Subject to the provisions of </span><span class="u-blue-zig">articles 346 and 347</span>, <span class="u-blue-zig">the Legislature of a State</span> <span class="u-green">may by law adopt </span><span class="u-blue-zig">any one or more</span> <span class="u-green">of </span><span class="u-blue-zig">the languages in use</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span> <span class="u-green">or </span><span class="u-blue-zig">Hindi</span> <span class="u-green">as </span><span class="u-blue-zig">the language or languages</span> <span class="u-green">to be used for </span><span class="u-blue-zig">all or any</span> <span class="u-green">of </span><span class="u-blue-zig">the official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">that State</span>:
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. English Proviso:</strong> <span class="u-green">Provided that, until </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">otherwise provides by law, </span><span class="u-blue-zig">the English language</span> <span class="u-green">shall continue to be used for </span><span class="u-blue-zig">those official purposes</span> <span class="u-green">within </span><span class="u-blue-zig">the State</span> <span class="u-green">for which it was being used </span><span class="u-blue-zig">immediately before</span> <span class="u-blue-zig">the commencement</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 346</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Inter-State Communication:</strong> <span class="u-blue-zig">The language</span> <span class="u-green">for the time being authorised for use in </span><span class="u-blue-zig">the Union</span> <span class="u-green">for </span><span class="u-blue-zig">official purposes</span> <span class="u-green">shall be </span><span class="u-blue-zig">the official language</span> <span class="u-green">for </span><span class="u-blue-zig">communication</span> <span class="u-green">between </span><span class="u-blue-zig">one State and another State</span> <span class="u-green">and between </span><span class="u-blue-zig">a State and the Union</span>:
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Hindi Proviso:</strong> <span class="u-green">Provided that if </span><span class="u-blue-zig">two or more States</span> <span class="u-green">agree that </span><span class="u-blue-zig">the Hindi language</span> <span class="u-green">should be </span><span class="u-blue-zig">the official language</span> <span class="u-green">for </span><span class="u-blue-zig">communication</span> <span class="u-green">between </span><span class="u-blue-zig">such States</span>, <span class="u-blue-zig">that language</span> <span class="u-green">may be used for </span><span class="u-blue-zig">such communication</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 347</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Presidential Recognition:</strong> <span class="u-green">On a demand being made in that behalf </span><span class="u-blue-zig">the President</span> <span class="u-green">may, if he is satisfied that </span><span class="u-blue-zig">a substantial proportion</span> <span class="u-green">of </span><span class="u-blue-zig">the population of a State</span> <span class="u-green">desire the use of </span><span class="u-blue-zig">any language spoken</span> <span class="u-green">by them to be</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 212</div>
+</div>
+
+<!-- ==================== PAGE 213 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. State Recognition:</strong> <span class="u-green">recognised by </span><span class="u-blue-zig">that State</span>, <span class="u-green">direct that </span><span class="u-blue-zig">such language</span> <span class="u-green">shall also be </span><span class="u-blue-zig">officially recognised</span> <span class="u-green">throughout </span><span class="u-blue-zig">that State</span> <span class="u-green">or </span><span class="u-blue-zig">any part thereof</span> <span class="u-green">for </span><span class="u-blue-zig">such purpose</span> <span class="u-green">as he may specify</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 348</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. English Language:</strong> (1) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">the foregoing provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Part</span>, <span class="u-green">until </span><span class="u-red-zig">Parliament</span> <span class="u-green">by law otherwise provides</span>—
+            <ul>
+                <li>
+                    <strong>a. Court Proceedings:</strong> (a) <span class="u-blue-zig">all proceedings</span> <span class="u-green">in </span><span class="u-red-zig">the Supreme Court</span> <span class="u-green">and in </span><span class="u-blue-zig">every</span> <span class="u-red-zig">High Court</span>,
+                </li>
+                <li>
+                    <strong>b. Authoritative Texts:</strong> (b) <span class="u-blue-zig">the authoritative texts</span>—
+                    <ul>
+                        <li>
+                            <strong>i. Bills &amp; Amendments:</strong> (i) <span class="u-green">of </span><span class="u-blue-zig">all Bills</span> <span class="u-green">to be introduced or </span><span class="u-blue-zig">amendments thereto</span> <span class="u-green">to be moved in </span><span class="u-blue-zig">either House</span> <span class="u-green">of </span><span class="u-red-zig">Parliament</span> <span class="u-green">or in </span><span class="u-blue-zig">the House</span> <span class="u-green">or </span><span class="u-blue-zig">either House</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of a State</span>,
+                        </li>
+                        <li>
+                            <strong>ii. Acts &amp; Ordinances:</strong> (ii) <span class="u-green">of </span><span class="u-blue-zig">all Acts</span> <span class="u-green">passed by </span><span class="u-red-zig">Parliament</span> <span class="u-green">or </span><span class="u-blue-zig">the Legislature of a State</span> <span class="u-green">and of </span><span class="u-blue-zig">all Ordinances</span> <span class="u-green">promulgated by </span><span class="u-blue-zig">the President</span> <span class="u-green">or </span><span class="u-blue-zig">the Governor of a State</span>, <span class="u-green">and</span>
+                        </li>
+                        <li>
+                            <strong>iii. Orders &amp; Regulations:</strong> (iii) <span class="u-green">of </span><span class="u-blue-zig">all orders, rules, regulations</span> <span class="u-green">and </span><span class="u-blue-zig">byelaws</span> <span class="u-green">issued under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">or under </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-red-zig">Parliament</span> <span class="u-green">or </span><span class="u-blue-zig">the Legislature of a State</span>,
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Mandatory English:</strong> <span class="u-green">shall be in </span><span class="u-blue-zig">the English language</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Hindi in High Court:</strong> (2) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (1)</span>, <span class="u-blue-zig">the Governor of a State</span> <span class="u-green">may, with </span><span class="u-blue-zig">the previous consent</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>, <span class="u-green">authorise the use of </span><span class="u-blue-zig">the Hindi language</span>, <span class="u-green">or </span><span class="u-blue-zig">any other language</span> <span class="u-green">used for </span><span class="u-blue-zig">any official purposes</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>, <span class="u-green">in </span><span class="u-blue-zig">proceedings</span> <span class="u-green">in </span><span class="u-red-zig">the High Court</span> <span class="u-green">having </span><span class="u-blue-zig">its principal seat</span> <span class="u-green">in </span><span class="u-blue-zig">that State</span>:
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. Proviso:</strong> <span class="u-green">Provided that nothing in this clause shall apply to </span><span class="u-blue-zig">any judgment, decree</span> <span class="u-green">or </span><span class="u-blue-zig">order</span> <span class="u-green">passed or made by </span><span class="u-blue-zig">such</span> <span class="u-red-zig">High Court</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">5. Authoritative Translation:</strong> (3) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">sub-clause (b)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (1)</span>, <span class="u-green">where </span><span class="u-blue-zig">the Legislature of a State</span> <span class="u-green">has prescribed </span><span class="u-blue-zig">any language</span> <span class="u-green">other than </span><span class="u-blue-zig">the English language</span> <span class="u-green">for use in </span><span class="u-blue-zig">Bills introduced in</span>, <span class="u-green">or </span><span class="u-blue-zig">Acts passed by</span>, <span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">or in </span><span class="u-blue-zig">Ordinances promulgated</span> <span class="u-green">by </span><span class="u-blue-zig">the Governor of the State</span> <span class="u-green">or in </span><span class="u-blue-zig">any order, rule, regulation</span> <span class="u-green">or </span><span class="u-blue-zig">bylaw</span> <span class="u-green">referred to in </span><span class="u-blue-zig">paragraph (iii)</span> <span class="u-green">of </span><span class="u-blue-zig">that sub-clause</span>, <span class="u-blue-zig">a translation</span> <span class="u-green">of </span><span class="u-blue-zig">the same</span> <span class="u-green">in </span><span class="u-blue-zig">the English language</span> <span class="u-green">published under </span><span class="u-blue-zig">the authority</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor of the State</span> <span class="u-green">in </span><span class="u-blue-zig">the Official Gazette</span> <span class="u-green">of </span><span class="u-blue-zig">that State</span> <span class="u-green">shall be deemed to be </span><span class="u-blue-zig">the authoritative text thereof</span> <span class="u-green">in </span><span class="u-blue-zig">the English language</span> <span class="u-green">under </span><span class="u-blue-zig">this article</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 349</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Presidential Sanction:</strong> <span class="u-green">During </span><span class="u-blue-zig">the period of fifteen years</span> <span class="u-green">from </span><span class="u-blue-zig">the commencement</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">no Bill or amendment</span> <span class="u-green">making provision for </span><span class="u-blue-zig">the language</span> <span class="u-green">to be used for </span><span class="u-blue-zig">any of the purposes</span> <span class="u-green">mentioned in </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">of </span><span class="u-blue-zig">article 348</span> <span class="u-green">shall be introduced or moved in </span><span class="u-blue-zig">either House</span> <span class="u-green">of </span><span class="u-red-zig">Parliament</span> <span class="u-green">without </span><span class="u-blue-zig">the previous sanction</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>, <span class="u-green">and </span><span class="u-blue-zig">the President</span> <span class="u-green">shall not give </span><span class="u-blue-zig">his sanction</span> <span class="u-green">to </span><span class="u-blue-zig">the introduction</span> <span class="u-green">of </span><span class="u-blue-zig">any</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 213</div>
+</div>
+
+<!-- ==================== PAGE 214 ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Commission Consideration:</strong> <span class="u-blue-zig">such Bill</span> <span class="u-green">or the moving of </span><span class="u-blue-zig">any such amendment</span> <span class="u-green">except after he has taken into </span><span class="u-blue-zig">consideration</span> <span class="u-blue-zig">the recommendations</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span> <span class="u-green">constituted under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">of </span><span class="u-blue-zig">article 344</span> <span class="u-green">and </span><span class="u-blue-zig">the report</span> <span class="u-green">of </span><span class="u-blue-zig">the Committee</span> <span class="u-green">constituted under </span><span class="u-blue-zig">clause (4)</span> <span class="u-green">of </span><span class="u-blue-zig">that article</span>.
+    </p>
+
+    <div class="main-topic-header">ARTICLE 350</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Representation Right:</strong> <span class="u-blue-zig">Every person</span> <span class="u-green">shall be entitled to submit </span><span class="u-blue-zig">a representation</span> <span class="u-green">for the redress of </span><span class="u-blue-zig">any grievance</span> <span class="u-green">to any officer or authority of </span><span class="u-blue-zig">the Union</span> <span class="u-green">or </span><span class="u-blue-zig">a State</span> <span class="u-green">in any of </span><span class="u-blue-zig">the languages</span> <span class="u-green">used in </span><span class="u-blue-zig">the Union</span> <span class="u-green">or in </span><span class="u-blue-zig">the State</span>, <span class="u-green">as the case may be</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 350 A</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Mother-Tongue Instruction:</strong> <span class="u-green">It shall be the endeavour of </span><span class="u-blue-zig">every State</span> <span class="u-green">and of </span><span class="u-blue-zig">every local authority</span> <span class="u-green">within </span><span class="u-blue-zig">the State</span> <span class="u-green">to provide </span><span class="u-blue-zig">adequate facilities</span> <span class="u-green">for instruction in </span><span class="u-blue-zig">the mother-tongue</span> <span class="u-green">at </span><span class="u-blue-zig">the primary stage</span> <span class="u-green">of </span><span class="u-blue-zig">education</span> <span class="u-green">to </span><span class="u-blue-zig">children</span> <span class="u-green">belonging to </span><span class="u-blue-zig">linguistic minority groups</span>; <span class="u-green">and </span><span class="u-blue-zig">the President</span> <span class="u-green">may issue </span><span class="u-blue-zig">such directions</span> <span class="u-green">to </span><span class="u-blue-zig">any State</span> <span class="u-green">as he considers </span><span class="u-blue-zig">necessary or proper</span> <span class="u-green">for securing the provision of </span><span class="u-blue-zig">such facilities</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 350 B</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Special Officer:</strong> (1) <span class="u-green">There shall be </span><span class="u-blue-zig">a Special Officer</span> <span class="u-green">for </span><span class="u-blue-zig">linguistic minorities</span> <span class="u-green">to be appointed by </span><span class="u-blue-zig">the President</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Officer Duties:</strong> (2) <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Special Officer</span> <span class="u-green">to investigate </span><span class="u-blue-zig">all matters</span> <span class="u-green">relating to </span><span class="u-blue-zig">the safeguards</span> <span class="u-green">provided for </span><span class="u-blue-zig">linguistic minorities</span> <span class="u-green">under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">and report to </span><span class="u-blue-zig">the President</span> <span class="u-green">upon </span><span class="u-blue-zig">those matters</span> <span class="u-green">at such intervals as </span><span class="u-blue-zig">the President</span> <span class="u-green">may direct</span>, <span class="u-green">and </span><span class="u-blue-zig">the President</span> <span class="u-green">shall cause </span><span class="u-blue-zig">all such reports</span> <span class="u-green">to be laid before </span><span class="u-blue-zig">each House</span> <span class="u-green">of </span><span class="u-red-zig">Parliament</span>, <span class="u-green">and sent to </span><span class="u-blue-zig">the Governments</span> <span class="u-green">of </span><span class="u-blue-zig">the States concerned</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ARTICLE 351</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Hindi Promotion:</strong> <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Union</span> <span class="u-green">to promote the spread of </span><span class="u-blue-zig">the Hindi language</span>, <span class="u-green">to develop it so that it may serve as </span><span class="u-blue-zig">a medium of expression</span> <span class="u-green">for </span><span class="u-blue-zig">all the elements</span> <span class="u-green">of </span><span class="u-blue-zig">the composite culture</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">and to secure </span><span class="u-blue-zig">its enrichment</span> <span class="u-green">by assimilating without interfering with </span><span class="u-blue-zig">its genius</span>, <span class="u-blue-zig">the forms, style</span> <span class="u-green">and </span><span class="u-blue-zig">expressions</span> <span class="u-green">used in </span><span class="u-red-zig">Hindustani</span> <span class="u-green">and in </span><span class="u-blue-zig">the other languages</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">specified in </span><span class="u-blue-zig">the Eighth Schedule</span>, <span class="u-green">and by drawing</span>, <span class="u-green">wherever </span><span class="u-blue-zig">necessary or desirable</span>, <span class="u-green">for </span><span class="u-blue-zig">its vocabulary</span>, <span class="u-green">primarily on </span><span class="u-red-zig">Sanskrit</span> <span class="u-green">and secondarily on </span><span class="u-blue-zig">other languages</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 214</div>
+</div>
+
+</body>
+</html>

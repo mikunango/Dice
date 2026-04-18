@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH4 - The Preamble | Indian Polity</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============================== PAGE 32 =============================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH4- The Preamble</h1>
+    </header>
+
+    <div class="main-topic-header">The Preamble</div>
+
+    <div class="quote-box">
+        <span class="u-blue-zig">WE, THE PEOPLE OF INDIA</span>,
+        <span class="u-green">having solemnly resolved to constitute </span>
+        <span class="u-red-zig">India</span>
+        <span class="u-green"> into </span>
+        <span class="u-blue-zig">a SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</span>
+        <span class="u-green"> and to secure to </span>
+        <span class="u-blue-zig">all its citizens</span>:
+        <br>
+        <span class="u-blue-zig">JUSTICE</span>,
+        <span class="u-blue-zig">social</span>,
+        <span class="u-blue-zig">economic</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">political</span>;
+        <br>
+        <span class="u-blue-zig">LIBERTY</span>
+        <span class="u-green"> of </span>
+        <span class="u-blue-zig">thought</span>,
+        <span class="u-blue-zig">expression</span>,
+        <span class="u-blue-zig">belief</span>,
+        <span class="u-blue-zig">faith</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">worship</span>;
+        <br>
+        <span class="u-blue-zig">EQUALITY</span>
+        <span class="u-green"> of </span>
+        <span class="u-blue-zig">status</span>
+        <span class="u-green"> and of </span>
+        <span class="u-blue-zig">opportunity</span>;
+        <br>
+        <span class="u-green">and to promote among them all </span>
+        <br>
+        <span class="u-blue-zig">FRATERNITY</span>
+        <span class="u-green"> assuring </span>
+        <span class="u-blue-zig">the dignity of the individual</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">the unity and integrity</span>
+        <span class="u-blue-zig"> of the Nation</span>;
+        <br>
+        <span class="u-green">IN </span>
+        <span class="u-blue-zig">OUR CONSTITUENT ASSEMBLY</span>
+        <span class="u-blue-zig"> this twenty-sixth day</span>
+        <span class="u-green"> of </span>
+        <span class="u-red-zig">November, 1949</span>,
+        <span class="u-green"> do </span>
+        <span class="u-blue-zig">HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION</span>
+    </div>
+
+    <div class="page-number">Page 32</div>
+</div>
+
+<!-- =============================== PAGE 33 =============================== -->
+<div class="pdf-page">
+
+    <div class="section-header">History</div>
+    <ul>
+        <li>
+            <strong>1. Objective Resolution:</strong>
+            <span class="u-blue-zig">The Preamble</span>
+            <span class="u-blue-zig"> to the Indian constitution</span>
+            <span class="u-green"> is based on </span>
+            <span class="u-blue-zig">"Objective Resolution"</span>
+            <span class="u-green"> of </span>
+            <span class="u-red-zig">Nehru</span>.
+            <span class="u-red-zig">Jawaharlal Nehru</span>
+            <span class="u-green"> introduced </span>
+            <span class="u-blue-zig">an objective resolution</span>
+            <span class="u-green"> on </span>
+            <span class="u-red-zig">December 13, 1946</span>,
+            <span class="u-green"> and it was adopted by </span>
+            <span class="u-blue-zig">Constituent assembly</span>
+            <span class="u-green"> on </span>
+            <span class="u-red-zig">22 January 1947</span>.
+        </li>
+        <li>
+            <strong>2. Essential Features:</strong>
+            <span class="u-blue-zig">The drafting committee</span>
+            <span class="u-green"> felt that </span>
+            <span class="u-blue-zig">the Preamble</span>
+            <span class="u-green"> should be restricted to defining </span>
+            <span class="u-blue-zig">the essential features</span>
+            <span class="u-blue-zig"> of the new state</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">its basic socio-political objectives</span>.
+        </li>
+        <li>
+            <strong>3. Sovereign Democratic Republic:</strong>
+            <span class="u-blue-zig">The committee</span>
+            <span class="u-green"> adopted </span>
+            <span class="u-blue-zig">the expression</span>
+            <span class="u-blue-zig"> Sovereign Democratic Republic</span>
+            <span class="u-green"> in place of </span>
+            <span class="u-blue-zig">Sovereign Independent Republic</span>
+            <span class="u-green"> as used in </span>
+            <span class="u-blue-zig">the Objective Resolution</span>,.
+        </li>
+        <li>
+            <strong>4. Fraternity Added:</strong>
+            <span class="u-blue-zig">The committee</span>
+            <span class="u-green"> added </span>
+            <span class="u-blue-zig">the word Fraternity</span>
+            <span class="u-green"> which was not present in </span>
+            <span class="u-blue-zig">the Objective Resolution</span>.
+        </li>
+        <li>
+            <strong>5. Spirit Embodied:</strong>
+            <span class="u-blue-zig">The committee</span>
+            <span class="u-green"> tried to embody in </span>
+            <span class="u-blue-zig">the Preamble</span>
+            <span class="u-blue-zig"> the spirit</span>
+            <span class="u-green"> and as far as possible, </span>
+            <span class="u-blue-zig">the language</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">Objective Resolution</span>.
+        </li>
+        <li>
+            <strong>6. Preamble Drafted:</strong>
+            <span class="u-blue-zig">The Preamble</span>
+            <span class="u-green"> was drafted by </span>
+            <span class="u-red-zig">B. N. Rau</span>
+            <span class="u-green"> in </span>
+            <span class="u-blue-zig">his memorandum</span>
+            <span class="u-green"> of </span>
+            <span class="u-red-zig">May 30, 1947</span>.
+        </li>
+        <li>
+            <strong>7. Preamble Design:</strong>
+            <span class="u-blue-zig">The preamble page</span>,
+            <span class="u-green"> along with </span>
+            <span class="u-blue-zig">other pages</span>
+            <span class="u-blue-zig"> of the original Constitution</span>
+            <span class="u-blue-zig"> of India</span>,
+            <span class="u-green"> was designed and decorated solely by </span>
+            <span class="u-blue-zig">renowned painter</span>
+            <span class="u-red-zig"> Beohar Rammanohar Sinha</span>
+            <span class="u-green"> of </span>
+            <span class="u-red-zig">Jabalpur</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Part of the Constitution</div>
+
+    <div class="info-box">
+        <div class="info-box-header">BERUBERI CASE</div>
+        <p>
+            <span class="u-blue-zig">The Preamble</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a key</span>
+            <span class="u-green"> to open </span>
+            <span class="u-blue-zig">the mind of the makers</span>
+            <span class="u-green"> but nevertheless </span>
+            <span class="u-blue-zig">the Preamble</span>
+            <span class="u-green"> is not </span>
+            <span class="u-blue-zig">a part of the Constitution</span>.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">KESAVANANDA BHARATI CASE</div>
+        <p>
+            <span class="u-blue-zig">The Preamble</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a part of the Constitution</span>
+            <span class="u-green"> and, therefore, is amendable under </span>
+            <span class="u-blue-zig">Article 368</span>.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">UNION GOVERNMENT V. LIC OF INDIA</div>
+        <p>
+            <span class="u-blue-zig">The Preamble</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">an integral part</span>
+            <span class="u-blue-zig"> of the Constitution</span>.
+        </p>
+    </div>
+
+    <div class="section-header">Amendment</div>
+    <ul>
+        <li>
+            <strong>1. 42nd Amendment:</strong>
+            <span class="u-green">After </span>
+            <span class="u-red-zig">Kesavananda Bharati v. State of Kerala</span>,
+            <span class="u-red-zig">1973</span>
+            <span class="u-blue-zig"> verdict</span>.
+            <span class="u-blue-zig">Socialist</span>,
+            <span class="u-blue-zig">Secular</span>,
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">Integrity</span>
+            <span class="u-green"> were added to </span>
+            <span class="u-blue-zig">the preamble</span>
+            <span class="u-green"> by </span>
+            <span class="u-blue-zig">the 42nd Amendment Act</span>,
+            <span class="u-red-zig">1976</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Aims &amp; Aspirations</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Preamble Declaration:</strong>
+        <span class="u-blue-zig">A Preamble</span>
+        <span class="u-green"> is </span>
+        <span class="u-blue-zig">a declaration</span>
+        <span class="u-green"> made by </span>
+        <span class="u-blue-zig">the legislature</span>
+        <span class="u-blue-zig"> of the reasons</span>
+        <span class="u-green"> for </span>
+        <span class="u-blue-zig">the passage of the statute</span>
+        <span class="u-green"> and is helpful in </span>
+        <span class="u-blue-zig">the interpretation</span>
+        <span class="u-blue-zig"> of any ambiguities</span>
+        <span class="u-green"> within </span>
+        <span class="u-blue-zig">the statute</span>
+        <span class="u-green"> to which it is prefixed</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Legislative Objectives:</strong>
+            <span class="u-blue-zig">Chief Justice</span>
+            <span class="u-red-zig"> Subba Rao</span>
+            <span class="u-green"> in </span>
+            <span class="u-red-zig">Golak Nath v. State of Punjab</span>
+            <span class="u-green"> had held that </span>
+            "<span class="u-blue-zig">The preamble to an Act</span>
+            <span class="u-green"> sets out </span>
+            <span class="u-blue-zig">the main objectives</span>
+            <span class="u-green"> which </span>
+            <span class="u-blue-zig">the legislation</span>
+            <span class="u-green"> is intended to achieve</span>".
+        </li>
+        <li>
+            <strong>2. Key of Constitution:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">K.M.Munshi</span>,
+            <span class="u-blue-zig">Preamble</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">the key of the Constitution</span>.
+        </li>
+        <li>
+            <strong>3. Key Words:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">A.Barker</span>,
+            <span class="u-blue-zig">Preamble</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">the key words</span>
+            <span class="u-blue-zig"> of his book</span>.
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-blue-zig">Preamble</span>
+        <span class="u-green"> is </span>
+        <span class="u-blue-zig">the soul of the Constitution</span>,
+        <span class="quote-author">Justice Hidayatulla</span>
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Soul of Constitution:</strong>
+        <span class="u-blue-zig">The silent features</span>
+        <span class="u-blue-zig"> of the Constitution</span>
+        <span class="u-green"> have advanced directly and by implication from </span>
+        <span class="u-blue-zig">these objectives</span>
+        <span class="u-green"> which flow from </span>
+        <span class="u-blue-zig">the Preamble</span>.
+        <span class="u-blue-zig">Preamble</span>
+        <span class="u-green"> as such is broadly acknowledged as </span>
+        <span class="u-blue-zig">the core or soul and spirit</span>
+        <span class="u-green"> of</span>
+    </p>
+
+    <div class="page-number">Page 33</div>
+</div>
+
+<!-- =============================== PAGE 34 =============================== -->
+<div class="pdf-page">
+
+    <p>
+        <span class="u-blue-zig">the constitution.</span>
+        <span class="u-blue-zig"> Supreme Court</span>
+        <span class="u-green"> held in </span>
+        <span class="u-red-zig">Minerva Mills</span>
+        <span class="u-blue-zig"> case</span>
+        <span class="u-green"> that </span>
+        <span class="u-blue-zig">it is special</span>
+        <span class="u-green"> because </span>
+        <span class="u-blue-zig">the edifice</span>
+        <span class="u-blue-zig"> of our Constitution</span>
+        <span class="u-green"> is built upon </span>
+        <span class="u-blue-zig">the concepts</span>
+        <span class="u-green"> crystallised in </span>
+        <span class="u-blue-zig">the Preamble.</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Morality:</strong>
+        <span class="u-green">It is not </span>
+        <span class="u-blue-zig">a mere solemn resolution</span>,
+        <span class="u-green">it is </span>
+        <span class="u-blue-zig">something more</span>
+        <span class="u-green"> than </span>
+        <span class="u-blue-zig">a resolution.</span>
+        <span class="u-green">It is </span>
+        <span class="u-blue-zig">declaration</span>,
+        <span class="u-green">it is </span>
+        <span class="u-blue-zig">a firm resolve</span>,
+        <span class="u-green">it is </span>
+        <span class="u-blue-zig">a pledge</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">an understanding.</span>
+        <span class="u-green">It is not </span>
+        <span class="u-blue-zig">a spirit</span>
+        <span class="u-blue-zig"> of narrow legal wording</span>
+        <span class="u-green"> but </span>
+        <span class="u-blue-zig">a majestic expression</span>
+        <span class="u-blue-zig"> of constitutional morality</span>,
+        <span class="u-blue-zig"> constitutional polity</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">constitutional culture.</span>
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Constitutional Provisions:</strong>
+            <span class="u-green">It records </span>
+            <span class="u-blue-zig">the points</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">desires</span>
+            <span class="u-blue-zig"> of the individuals</span>
+            <span class="u-green"> of </span><span class="u-red-zig">India</span>
+            <span class="u-green"> which have been converted into </span>
+            <span class="u-blue-zig">the different provisions</span>
+            <span class="u-blue-zig"> of the constitution.</span>
+            <span class="u-green">It declares </span>
+            <span class="u-red-zig">India</span>
+            <span class="u-green"> to be </span>
+            <span class="u-blue-zig">a Sovereign Socialist Secular Democratic Republic</span>
+            <span class="u-green"> committed to </span>
+            <span class="u-blue-zig">Justice</span>,
+            <span class="u-blue-zig"> Equality</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">Liberty</span>
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">the people.</span>
+        </li>
+        <li>
+            <strong>2. Guiding Light:</strong>
+            <span class="u-blue-zig">The Preamble</span>
+            <span class="u-green"> does not grant </span>
+            <span class="u-blue-zig">substantive rights</span>
+            <span class="u-green"> and is not enforceable in </span>
+            <span class="u-blue-zig">the courts</span>,
+            <span class="u-green"> but </span>
+            <span class="u-blue-zig">various Indian courts</span>
+            <span class="u-green"> have engaged with </span>
+            <span class="u-blue-zig">the Preamble</span>
+            <span class="u-green"> and have treated it as </span>
+            <span class="u-blue-zig">guiding light</span>
+            <span class="u-green"> in the interpretation of </span>
+            <span class="u-blue-zig">the Constitution.</span>
+        </li>
+        <li>
+            <strong>3. Popular Sovereignty:</strong>
+            <span class="u-blue-zig">The opening</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">last sentences</span>
+            <span class="u-blue-zig"> of the Preamble</span>:
+            <span class="u-blue-zig">"We, the people</span>…<span class="u-blue-zig">adopt enact</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">give to ourselves</span>
+            <span class="u-blue-zig"> this Constitution"</span>
+            <span class="u-green"> signifies </span>
+            <span class="u-blue-zig">the power</span>
+            <span class="u-green"> that is vested in </span>
+            <span class="u-blue-zig">the hands</span>
+            <span class="u-blue-zig"> of the people.</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Basic Feature Doctrine:</strong>
+        <span class="u-blue-zig">Chief justice</span>
+        <span class="u-red-zig"> Subbarao</span>
+        <span class="u-green"> stated that </span>
+        <span class="u-blue-zig">the Preamble</span>
+        <span class="u-green"> to </span>
+        <span class="u-blue-zig">an act</span>
+        <span class="u-green"> sets out </span>
+        <span class="u-blue-zig">the primary objective</span>
+        <span class="u-green"> with </span>
+        <span class="u-blue-zig">the enactment</span>
+        <span class="u-green"> is proposed to accomplish.</span>
+        <span class="u-blue-zig"> Supreme Court</span>
+        <span class="u-green"> held in </span>
+        <span class="u-red-zig">Smt. Indira Gandhi</span>
+        <span class="u-blue-zig"> case</span>
+        <span class="u-green"> that </span>
+        <span class="u-blue-zig">Preamble</span>
+        <span class="u-green"> is the source of </span>
+        <span class="u-blue-zig">any basic feature</span>
+        <span class="u-blue-zig"> of the Constitution</span>
+        <span class="u-green"> of </span><span class="u-red-zig">India</span>
+        <span class="u-green"> thus ensuring that it is </span>
+        <span class="u-blue-zig">revered</span>,
+        <span class="u-blue-zig"> honoured</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">admired widely</span>
+        <span class="u-green"> by </span>
+        <span class="u-blue-zig">people</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">Governments at large.</span>
+    </p>
+
+    <div class="main-topic-header">Key Words</div>
+
+    <div class="section-header">We, The People of India</div>
+    <ul>
+        <li>
+            <strong>1. People's Constitution:</strong>
+            <span class="u-green">Declares in </span>
+            <span class="u-blue-zig">unambiguous terms</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">the Constitution</span>
+            <span class="u-green"> has been </span>
+            <span class="u-blue-zig">adopted</span>,
+            <span class="u-blue-zig"> enacted</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">given to themselves</span>
+            <span class="u-green"> by </span>
+            <span class="u-blue-zig">the people</span>
+            <span class="u-green"> of </span><span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>2. Sovereignty Emphasis:</strong>
+            <span class="u-green">It emphasizes </span>
+            <span class="u-blue-zig">the sovereignty</span>
+            <span class="u-blue-zig"> of the people.</span>
+        </li>
+        <li>
+            <strong>3. Authors of Constitution:</strong>
+            <span class="u-green">It is </span>
+            <span class="u-blue-zig">the people</span>
+            <span class="u-green"> of </span><span class="u-red-zig">India</span>
+            <span class="u-green"> who are </span>
+            <span class="u-blue-zig">the authors</span>
+            <span class="u-blue-zig"> of the constitution.</span>
+        </li>
+        <li>
+            <strong>4. Nehru's Statement:</strong>
+            <span class="u-red-zig">Jawahar Lal Nehru</span>
+            <span class="u-green"> in </span>
+            <span class="u-blue-zig">the constituent assembly</span>
+            <span class="u-green"> stated that </span>
+            <span class="u-blue-zig">the word 'People'</span>
+            <span class="u-green"> indicated that </span>
+            <span class="u-blue-zig">the constitution</span>
+            <span class="u-green"> was not created by </span>
+            <span class="u-blue-zig">the States</span>,
+            <span class="u-green"> nor by </span>
+            <span class="u-blue-zig">the people</span>
+            <span class="u-blue-zig"> of the several States</span>
+            <span class="u-green"> but by </span>
+            <span class="u-blue-zig">the people</span>
+            <span class="u-green"> of </span><span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>5. Citizens of India:</strong>
+            <span class="u-blue-zig">We, the people</span>
+            <span class="u-green"> if </span><span class="u-red-zig">India</span>
+            <span class="u-green"> means in other words, </span>
+            <span class="u-blue-zig">we, the citizens</span>
+            <span class="u-green"> of </span><span class="u-red-zig">India</span>,
+            <span class="u-green"> whether </span>
+            <span class="u-blue-zig">voters</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">non-voters.</span>
+        </li>
+        <li>
+            <strong>6. Popular Sovereignty:</strong>
+            <span class="u-green">It also emphasizes </span>
+            <span class="u-blue-zig">the concept</span>
+            <span class="u-blue-zig"> of popular sovereignty</span>
+            <span class="u-green"> as laid down by </span>
+            <span class="u-red-zig">Rousseau.</span>
+        </li>
+    </ul>
+
+    <div class="image-placeholder">Flowchart: Key Concepts of the Preamble</div>
+
+    <div class="page-number">Page 34</div>
+</div>
+
+<!-- =============================== PAGE 35 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <ul>
+            <li>
+                <strong>a. People's Accountability:</strong>
+                <span class="u-blue-zig">All the power</span>
+                <span class="u-green"> emanates from </span>
+                <span class="u-blue-zig">the people</span>
+                <span class="u-green"> and </span>
+                <span class="u-blue-zig">the political system</span>
+                <span class="u-green"> will be </span>
+                <span class="u-blue-zig">accountable</span>
+                <span class="u-green"> and </span>
+                <span class="u-blue-zig">responsible</span>
+                <span class="u-green"> to </span>
+                <span class="u-blue-zig">the people.</span>
+            </li>
+        </ul>
+    </ul>
+
+    <div class="section-header">Sovereign</div>
+    <ul>
+        <li>
+            <strong>1. Supreme Power:</strong>
+            <span class="u-blue-zig">Sovereignty</span>
+            <span class="u-green"> denotes </span>
+            <span class="u-blue-zig">supreme</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">ultimate power.</span>
+        </li>
+        <li>
+            <strong>2. Independent Authority:</strong>
+            <span class="u-blue-zig">Sovereignty</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">the independent authority</span>
+            <span class="u-blue-zig"> of a state.</span>
+        </li>
+        <li>
+            <strong>3. Spirit of Independence:</strong>
+            <span class="u-blue-zig">Sovereign</span>
+            <span class="u-green"> is a reflection of </span>
+            <span class="u-blue-zig">the spirit</span>
+            <span class="u-blue-zig"> of independence</span>
+            <span class="u-green"> attained after </span>
+            <span class="u-blue-zig">centuries</span>
+            <span class="u-blue-zig"> of subordination</span>
+            <span class="u-green"> to </span>
+            <span class="u-blue-zig">foreign rule.</span>
+        </li>
+        <li>
+            <strong>4. Republican Sovereignty:</strong>
+            <span class="u-green">In </span>
+            <span class="u-blue-zig">the republican form</span>
+            <span class="u-blue-zig"> of governments</span>
+            <span class="u-blue-zig"> sovereignty</span>
+            <span class="u-green"> is vested to </span>
+            <span class="u-blue-zig">the elected representatives</span>
+            <span class="u-blue-zig"> of the people.</span>
+        </li>
+        <li>
+            <strong>5. Irish Origin:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">D.D Basu</span>,
+            <span class="u-blue-zig"> the word 'sovereign'</span>
+            <span class="u-green"> is taken from </span>
+            <span class="u-blue-zig">Article 5</span>
+            <span class="u-blue-zig"> of the constitution</span>
+            <span class="u-green"> of </span><span class="u-red-zig">Ireland.</span>
+        </li>
+        <li>
+            <strong>6. External Sovereignty:</strong>
+            <span class="u-blue-zig">The external sovereignty</span>
+            <span class="u-green"> of </span><span class="u-red-zig">India</span>
+            <span class="u-green"> means that it can </span>
+            <span class="u-blue-zig">acquire foreign territory</span>
+            <span class="u-green"> and also </span>
+            <span class="u-blue-zig">cede any part</span>
+            <span class="u-blue-zig"> of the Indian territory</span>,
+            <span class="u-green"> subject to </span>
+            <span class="u-blue-zig">limitations</span>(<span class="u-green">if any</span>)
+            <span class="u-green"> imposed by </span>
+            <span class="u-blue-zig">the constitution.</span>
+        </li>
+        <li>
+            <strong>7. Internal Sovereignty:</strong>
+            <span class="u-blue-zig">Internal sovereignty</span>
+            <span class="u-green"> relates to </span>
+            <span class="u-blue-zig">internal</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">domestic affairs</span>
+            <span class="u-green"> and is divided into </span>
+            <span class="u-blue-zig">four organs</span>,
+            <span class="u-green"> namely, </span>
+            <span class="u-blue-zig">the executive</span>,
+            <span class="u-blue-zig"> the legislature</span>,
+            <span class="u-blue-zig"> the judiciary</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the administrative.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">Commonwealth of Nations Issue</div>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Pandit Nehru</span>
+        <span class="u-green"> declared that </span>
+        <span class="u-red-zig">India</span>
+        <span class="u-green"> will continue </span>—
+        <span class="u-blue-zig">"her full membership</span>
+        <span class="u-blue-zig"> of the Commonwealth of Nations</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">her acceptance</span>
+        <span class="u-blue-zig"> of the King</span>
+        <span class="u-green"> as </span>
+        <span class="u-blue-zig">the symbol</span>
+        <span class="u-blue-zig"> of the free association</span>
+        <span class="u-blue-zig"> of the independent nations</span>
+        <span class="u-green"> and as such </span>
+        <span class="u-blue-zig">the Head</span>
+        <span class="u-blue-zig"> of the Commonwealth".</span>
+        <span class="quote-author">— Pandit Nehru</span>
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Voluntary Association:</strong>
+        <span class="u-blue-zig">Her membership</span>
+        <span class="u-blue-zig"> of the Commonwealth of Nations</span>
+        <span class="u-green"> and </span>
+        <span class="u-blue-zig">that of the United Nations Organization</span>
+        <span class="u-green"> do not affect </span>
+        <span class="u-blue-zig">her sovereignty</span>
+        <span class="u-green"> to </span>
+        <span class="u-blue-zig">any extent.</span>
+        <span class="u-green">It is </span>
+        <span class="u-blue-zig">merely a voluntary association</span>
+        <span class="u-green"> of </span><span class="u-red-zig">India</span>
+        <span class="u-green"> and it is open to </span>
+        <span class="u-red-zig">India</span>
+        <span class="u-green"> to </span>
+        <span class="u-blue-zig">cut off this association</span>
+        <span class="u-green"> at </span>
+        <span class="u-blue-zig">her will</span>,
+        <span class="u-green"> and that it has </span>
+        <span class="u-blue-zig">no constitutional significance</span>
+    </p>
+
+    <div class="section-header">Socialist</div>
+    <ul>
+        <li>
+            <strong>1. 42nd Amendment:</strong>
+            <span class="u-green">Added by </span>
+            <span class="u-blue-zig">the Constitution</span>
+            (<span class="u-blue-zig">42nd Amendment</span>)
+            <span class="u-blue-zig"> Act</span>,
+            <span class="u-red-zig"> 1976.</span>
+        </li>
+        <li>
+            <strong>2. Mixed Economy:</strong>
+            <span class="u-red-zig">Swarn Singh</span>
+            <span class="u-green"> explained that by </span>
+            <span class="u-blue-zig">the word 'socialism'</span>
+            <span class="u-blue-zig"> nothing more</span>
+            <span class="u-green"> was meant than what was explained at </span>
+            <span class="u-blue-zig">the </span><span class="u-red-zig">Awadi</span>
+            <span class="u-blue-zig"> session of Congress</span>,
+            <span class="u-green"> which is short aimed at </span>
+            <span class="u-blue-zig">a 'mixed economy'.</span>
+        </li>
+        <li>
+            <strong>3. State Ownership:</strong>
+            <span class="u-green">Means </span>
+            <span class="u-blue-zig">a political-economic system</span>
+            <span class="u-green"> which advocates </span>
+            <span class="u-blue-zig">the state's ownership</span>
+            <span class="u-blue-zig"> of the means of production</span>,
+            <span class="u-blue-zig"> distribution</span>,
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">exchange.</span>
+        </li>
+        <li>
+            <strong>4. Socio-Economic Revolution:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-blue-zig">Professor</span>
+            <span class="u-red-zig"> M.C Jain</span>,
+            <span class="u-blue-zig"> socialism</span>
+            <span class="u-green"> has interspersed in </span>
+            <span class="u-blue-zig">the provision</span>
+            <span class="u-blue-zig"> of the constitution</span>
+            <span class="u-green"> remarks that </span>
+            <span class="u-blue-zig">preambular reference</span>
+            <span class="u-green"> was intended </span>
+            <span class="u-blue-zig">ushering in</span>
+            <span class="u-blue-zig"> a socio-economic revolution.</span>
+        </li>
+        <li>
+            <strong>5. Common Good:</strong>
+            <span class="u-green">Signifies that </span>
+            <span class="u-blue-zig">the ownership</span>
+            <span class="u-green"> &amp; </span>
+            <span class="u-blue-zig">control</span>
+            <span class="u-blue-zig"> of the material resources</span>
+            <span class="u-blue-zig"> of the community</span>
+            <span class="u-green"> are distributed as best to </span>
+            <span class="u-blue-zig">subserve the common good</span>
+            <span class="u-green"> &amp; </span>
+            <span class="u-blue-zig">decentralization</span>
+            <span class="u-blue-zig"> of material resources</span>
+            <span class="u-blue-zig"> of wealth.</span>
+        </li>
+        <li>
+            <strong>6. Social Justice:</strong>
+            <span class="u-red-zig">P.M Bakshi</span>
+            <span class="u-green"> understands </span>
+            <span class="u-blue-zig">socialism</span>
+            <span class="u-green"> in the context of </span>
+            <span class="u-blue-zig">social justice.</span>
+        </li>
+        <li>
+            <strong>7. D.S Nakara Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">D.S Nakara v. Union of India</span>
+            <span class="u-green"> that </span>
+            <ul>
+                <li>
+                    <strong>a. Cradle to Grave:</strong>
+                    <span class="u-blue-zig">"The basic framework</span>
+                    <span class="u-blue-zig"> of socialism</span>
+                    <span class="u-green"> is to provide </span>
+                    <span class="u-blue-zig">a decent standard of life</span>
+                    <span class="u-green"> to </span>
+                    <span class="u-blue-zig">the working people</span>
+                    <span class="u-green"> and especially provide </span>
+                    <span class="u-blue-zig">security</span>
+                    <span class="u-green"> from </span>
+                    <span class="u-blue-zig">cradle to grave."</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 35</div>
+</div>
+
+<!-- =============================== PAGE 36 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Samatha Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Samatha v. State of Andhra Pradesh</span>
+            <span class="u-green"> that</span>
+            <ul>
+                <li>
+                    <strong>a. Socialist Goals:</strong>
+                    <span class="u-blue-zig">The word Socialist</span>
+                    <span class="u-green"> used in </span>
+                    <span class="u-blue-zig">the Preamble</span>
+                    <span class="u-green"> must be read from </span>
+                    <span class="u-blue-zig">the goals</span>,
+                    <span class="u-blue-zig"> Article 14, 15, 16, 17, 21, 23, 38, 39, 46</span>
+                    <span class="u-green"> and </span>
+                    <span class="u-blue-zig">all other cognate Articles</span>
+                    <span class="u-green"> sought to establish</span>,
+                    <span class="u-blue-zig"> i.e. to reduce inequalities</span>
+                    <span class="u-blue-zig"> in income and status</span>
+                    <span class="u-green"> and to provide </span>
+                    <span class="u-blue-zig">equality of opportunities</span>
+                    <span class="u-green"> and </span>
+                    <span class="u-blue-zig">facilities</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. D.D. Basu View:</strong>
+            <span class="u-red-zig">D.D. Basu</span>
+            <span class="u-green"> regards that </span>
+            <span class="u-blue-zig">the Supreme Court</span>
+            <span class="u-green"> has gone a step further toward </span>
+            <span class="u-blue-zig">social justice</span>.
+        </li>
+        <li>
+            <strong>3. Private Enterprise:</strong>
+            <span class="u-green">It does not mean </span>
+            <span class="u-blue-zig">total exclusion</span>
+            <span class="u-blue-zig"> of private enterprise</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">complete state ownership</span>
+            <span class="u-blue-zig"> of material resources</span>
+            <span class="u-blue-zig"> of the nation</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Secular</div>
+    <ul>
+        <li>
+            <strong>1. Secular Preamble:</strong>
+            <span class="u-blue-zig">The word secular</span>
+            <span class="u-green"> was dropped from </span>
+            <span class="u-blue-zig">the preamble</span>
+            <span class="u-green"> but </span>
+            <span class="u-blue-zig">the Indian constitution</span>
+            <span class="u-green"> has always been </span>
+            <span class="u-blue-zig">secular</span>.
+        </li>
+        <li>
+            <strong>2. 42nd Amendment:</strong>
+            <span class="u-green">Added by </span>
+            <span class="u-blue-zig">the Constitution</span>
+            (<span class="u-blue-zig">42nd Amendment</span>)
+            <span class="u-blue-zig"> Act, 1976</span>.
+        </li>
+        <li>
+            <strong>3. Western Origin:</strong>
+            <span class="u-blue-zig">The word secular</span>
+            <span class="u-green"> traces its origin from </span>
+            <span class="u-blue-zig">West</span>
+            <span class="u-green"> in the context of </span>
+            <span class="u-blue-zig">the Christian religion</span>.
+        </li>
+        <li>
+            <strong>4. Indian Context:</strong>
+            <span class="u-green">In </span>
+            <span class="u-blue-zig">Indian context</span>,
+            <span class="u-blue-zig"> the state</span>
+            <span class="u-green"> does not recognize </span>
+            <span class="u-blue-zig">any religion</span>
+            <span class="u-green"> as </span>
+            <span class="u-blue-zig">a state religion</span>
+            <span class="u-green"> and that it treats </span>
+            <span class="u-blue-zig">all religions equally</span>.
+        </li>
+        <li>
+            <strong>5. S.R.Bommai Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">S.R.Bommai</span>
+            <span class="u-blue-zig"> case</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">secularism</span>
+            <span class="u-green"> forms </span>
+            <span class="u-blue-zig">the basic structure</span>
+            <span class="u-blue-zig"> of the Indian Constitution</span>.
+        </li>
+        <li>
+            <strong>6. Aruna Roy Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Aruna Roy v. Union of India</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">secularism</span>
+            <span class="u-green"> has </span>
+            <span class="u-blue-zig">a positive meaning</span>
+            <span class="u-green"> that is </span>
+            <span class="u-blue-zig">developing, understanding</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">respect towards different religions</span>.
+        </li>
+        <li>
+            <strong>7. I.R Coelho Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">I.R Coelho v. State of Tamil Nadu</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">secularism</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a matter of conclusion</span>
+            <span class="u-green"> to be drawn from </span>
+            <span class="u-blue-zig">various Articles</span>
+            <span class="u-green"> conferring </span>
+            <span class="u-blue-zig">Fundamental Rights</span>.
+        </li>
+        <li>
+            <strong>8. Not Irreligion:</strong>
+            <span class="u-green">When </span>
+            <span class="u-red-zig">India</span>
+            <span class="u-green"> is said to be </span>
+            <span class="u-blue-zig">a secular State</span>,
+            <span class="u-green"> it does not mean that </span>
+            <span class="u-green">that </span>
+            <span class="u-green">we exalt </span>
+            <span class="u-blue-zig">irreligion</span>.
+        </li>
+        <li>
+            <strong>9. Article 27 Nature:</strong>
+            <span class="u-blue-zig">Article 27</span>
+            <span class="u-green"> describes </span>
+            <span class="u-blue-zig">the nature</span>
+            <span class="u-blue-zig"> of Indian secularism</span>.
+            <ul>
+                <li>
+                    <strong>a. Article 27 Provision:</strong>
+                    <span class="u-blue-zig">Article 27</span>
+                    <span class="u-green"> provides that </span>
+                    <span class="u-blue-zig">no person</span>
+                    <span class="u-green"> shall be compelled to pay </span>
+                    <span class="u-blue-zig">any taxes</span>,
+                    <span class="u-blue-zig"> the proceeds whereof</span>
+                    <span class="u-green"> are specifically appropriated in </span>
+                    <span class="u-blue-zig">payment of expenses</span>
+                    <span class="u-green"> for the promotion or maintenance of </span>
+                    <span class="u-blue-zig">any particular religion</span>
+                    <span class="u-green"> or </span>
+                    <span class="u-blue-zig">religious denomination</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>10. Religious Freedom:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> held the view that </span>
+            <span class="u-blue-zig">a religious institution</span>
+            <span class="u-green"> has </span>
+            <span class="u-blue-zig">freedom to manage</span>
+            <span class="u-blue-zig"> its own affairs</span>
+            <span class="u-green"> in matters of </span>
+            <span class="u-blue-zig">religion</span>.
+        </li>
+        <li>
+            <strong>11. DPSP Secularism:</strong>
+            <span class="u-green">In </span>
+            <span class="u-blue-zig">the DPSP</span>,
+            <span class="u-blue-zig"> the Articles of 38, 39, 39A, 41 &amp; 46</span>
+            <span class="u-green"> based on </span>
+            <span class="u-blue-zig">the doctrine of Parens Patriae</span>,
+            <span class="u-green"> promote </span>
+            <span class="u-blue-zig">secularism</span>
+            <span class="u-blue-zig"> in all of its form</span>.
+        </li>
+        <li>
+            <strong>12. Egalitarian Cornerstone:</strong>
+            <span class="u-green">It was </span>
+            <span class="u-blue-zig">the cornerstone</span>
+            <span class="u-blue-zig"> of an egalitarian</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">forward-looking society</span>
+            <span class="u-green"> which </span>
+            <span class="u-blue-zig">our constitution</span>
+            <span class="u-green"> endeavored to establish</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Democratic</div>
+    <ul>
+        <li>
+            <strong>1. Democracy Etymology:</strong>
+            <span class="u-blue-zig">The term Democracy</span>
+            <span class="u-green"> is derived from </span>
+            <span class="u-blue-zig">the Greek words</span>
+            <span class="u-blue-zig"> DEMOS</span>
+            <span class="u-green"> which means </span>
+            <span class="u-blue-zig">people</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">KRATOS</span>
+            <span class="u-green"> which means </span>
+            <span class="u-blue-zig">authority</span>.
+        </li>
+        <li>
+            <strong>2. Lincoln's Definition:</strong>
+            <span class="u-red-zig">Lincoln</span>
+            <span class="u-green"> defined </span>
+            <span class="u-blue-zig">democracy</span>
+            <span class="u-green"> as: </span>
+            <span class="u-blue-zig">Government of the people</span>,
+            <span class="u-green"> by </span>
+            <span class="u-blue-zig">the people</span>,
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">the people</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 36</div>
+</div>
+
+<!-- =============================== PAGE 37 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>3. Mohan Lal Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Mohan Lal v. District Magistrate, Rai Bareilly</span>
+            <span class="u-blue-zig"> case</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">Democracy</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a concept</span>,
+            <span class="u-blue-zig"> a political philosophy</span>,
+            <span class="u-blue-zig"> an ideal</span>
+            <span class="u-green"> practiced by </span>
+            <span class="u-blue-zig">many nations</span>
+            <span class="u-blue-zig"> culturally advanced</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">politically mature</span>
+            <span class="u-green"> by resorting to </span>
+            <span class="u-blue-zig">governance by representatives</span>
+            <span class="u-blue-zig"> of the people</span>
+            <span class="u-green"> elected </span>
+            <span class="u-blue-zig">directly</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">indirectly</span>.
+        </li>
+        <li>
+            <strong>4. Types of Democracy:</strong>
+            <span class="u-blue-zig">Democracy</span>
+            <span class="u-green"> may be </span>
+            <span class="u-blue-zig">a direct</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">indirect democracy</span>.
+            <ul>
+                <li>
+                    <strong>a. Direct Democracy:</strong>
+                    <span class="u-green">In </span>
+                    <span class="u-blue-zig">a direct democracy</span>,
+                    <span class="u-blue-zig"> every people</span>
+                    <span class="u-green"> exercise </span>
+                    <span class="u-blue-zig">the power of the government</span>,
+                    <span class="u-green"> like </span>
+                    <span class="u-red-zig">Switzerland</span>.
+                </li>
+                <li>
+                    <strong>b. Indirect Democracy:</strong>
+                    <span class="u-green">In </span>
+                    <span class="u-blue-zig">an indirect democracy</span>,
+                    <span class="u-blue-zig"> the people</span>
+                    <span class="u-green"> elect </span>
+                    <span class="u-blue-zig">their representatives</span>
+                    <span class="u-green"> who carry on </span>
+                    <span class="u-blue-zig">the administration</span>
+                    <span class="u-blue-zig"> of the government</span>
+                    <span class="u-blue-zig"> directly</span>
+                    <span class="u-green"> like </span>
+                    <span class="u-red-zig">India</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">Republic</div>
+    <ul>
+        <li>
+            <strong>1. Montesquieu Definition:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">Montesquieu</span>,
+            <span class="u-blue-zig"> a republican government</span>
+            <span class="u-green"> is that in which </span>
+            <span class="u-blue-zig">a body</span>,
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">only a part of people</span>,
+            <span class="u-green"> is possessed of </span>
+            <span class="u-blue-zig">the supreme power</span>.
+        </li>
+        <li>
+            <strong>2. Republic Meaning:</strong>
+            <span class="u-blue-zig">A republic</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">a form of government</span>
+            <span class="u-green"> in which </span>
+            <span class="u-blue-zig">the head of the state</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">an elected</span>(<span class="u-blue-zig">direct or indirect</span>)
+            <span class="u-blue-zig"> person</span>
+            <span class="u-green"> and not </span>
+            <span class="u-blue-zig">a heredity monarch</span>.
+        </li>
+        <li>
+            <strong>3. People's Constitution:</strong>
+            <span class="u-blue-zig">The Constitution of India</span>
+            <span class="u-green"> is adopted and given to </span>
+            <span class="u-blue-zig">themselves</span>
+            <span class="u-green"> by </span>
+            <span class="u-blue-zig">the People</span>.
+        </li>
+        <li>
+            <strong>4. Ultimate Power:</strong>
+            <span class="u-green">In </span>
+            <span class="u-red-zig">India</span>,
+            <span class="u-blue-zig"> the ultimate power</span>
+            <span class="u-green"> resides in </span>
+            <span class="u-blue-zig">the body of the people</span>
+            <span class="u-green"> exercised via </span>
+            <span class="u-blue-zig">universal adult suffrage</span>.
+        </li>
+        <li>
+            <strong>5. President Election:</strong>
+            <span class="u-blue-zig">The president of India</span>
+            <span class="u-green"> who is </span>
+            <span class="u-blue-zig">the executive head</span>
+            <span class="u-blue-zig"> of the state</span>
+            <span class="u-green"> is elected by </span>
+            <span class="u-blue-zig">the people</span>
+            (<span class="u-blue-zig">indirectly</span>).
+        </li>
+    </ul>
+
+    <div class="section-header">Justice</div>
+    <p style="font-style: italic; color: #666; margin-top: -10px;">Social, Economic and Political</p>
+    <ul>
+        <li>
+            <strong>1. Welfare State Goal:</strong>
+            <span class="u-blue-zig">Justice</span>
+            <span class="u-green"> is considered to be </span>
+            <span class="u-blue-zig">the primary goal</span>
+            <span class="u-blue-zig"> of a welfare state</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">its very existence</span>
+            <span class="u-green"> rests on </span>
+            <span class="u-blue-zig">the parameters of justice</span>.
+        </li>
+        <li>
+            <strong>2. Social Justice:</strong>
+            <span class="u-blue-zig">Social justice</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">the abolition</span>
+            <span class="u-blue-zig"> of all sorts of inequities</span>.
+        </li>
+        <li>
+            <strong>3. DPSP Social Justice:</strong>
+            <span class="u-green">To achieve </span>
+            <span class="u-blue-zig">the ideal of social justice</span>,
+            <span class="u-blue-zig"> the directives principle</span>
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">the state policy</span>
+            <span class="u-green"> lays down in </span>
+            <span class="u-blue-zig">Part IV</span>
+            <span class="u-blue-zig"> of the constitution</span>.
+        </li>
+        <li>
+            <strong>4. Air India Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Air India Statutory Corporation v. United labour Union</span>
+            <span class="u-blue-zig"> case</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">the aim of social justice</span>
+            <span class="u-green"> was to attain </span>
+            <span class="u-blue-zig">a substantial degree</span>
+            <span class="u-blue-zig"> of social, economic</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">political equality</span>
+            <span class="u-green"> which was </span>
+            <span class="u-blue-zig">the legitimate expectation</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">constitutional goal</span>.
+        </li>
+        <li>
+            <strong>5. Economic Justice:</strong>
+            <span class="u-blue-zig">The economic justice</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">equal pay for equal work</span>,
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">every person</span>
+            <span class="u-green"> should get </span>
+            <span class="u-blue-zig">his just dues</span>
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">his labor</span>
+            <span class="u-green"> irrespective of </span>
+            <span class="u-blue-zig">his caste, sex</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">social status</span>.
+        </li>
+        <li>
+            <strong>6. Political Justice:</strong>
+            <span class="u-blue-zig">Political justice</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">the absence</span>
+            <span class="u-blue-zig"> of any unreasonable</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">arbitrary distinction</span>
+            <span class="u-green"> among </span>
+            <span class="u-blue-zig">men</span>
+            <span class="u-green"> in </span>
+            <span class="u-blue-zig">political matters</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Liberty</div>
+    <p style="font-style: italic; color: #666; margin-top: -10px;">Liberty Of Thought, Expression, Belief, Faith and Worship</p>
+    <ul>
+        <li>
+            <strong>1. Liberty Importance:</strong>
+            <span class="u-blue-zig">Liberty</span>
+            <span class="u-green"> is Essential to </span>
+            <span class="u-blue-zig">the development</span>
+            <span class="u-blue-zig"> of the individuals</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">the nation</span>.
+        </li>
+        <li>
+            <strong>2. Liberty Definition:</strong>
+            <span class="u-blue-zig">Liberty</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">the power of doing</span>
+            <span class="u-green"> what is allowed by </span>
+            <span class="u-blue-zig">law</span>.
+        </li>
+        <li>
+            <strong>3. Not Mere Absence:</strong>
+            <span class="u-blue-zig">Liberty</span>
+            <span class="u-green"> does not mean </span>
+            <span class="u-blue-zig">mere absence of restraint</span>
+            <span class="u-blue-zig"> of domination</span>.
+        </li>
+        <li>
+            <strong>4. Not Absolute:</strong>
+            <span class="u-green">It is not </span>
+            <span class="u-blue-zig">abstract</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">absolute freedom</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 37</div>
+</div>
+
+<!-- =============================== PAGE 38 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>5. Regulated Freedom:</strong>
+            <span class="u-green">It is </span>
+            <span class="u-blue-zig">regulated freedom</span>.
+        </li>
+        <li>
+            <strong>6. Controlled by Law:</strong>
+            <span class="u-blue-zig">Liberty</span>
+            <span class="u-green"> is confined and controlled by </span>
+            <span class="u-blue-zig">law</span>,
+            <span class="u-green"> whether </span>
+            <span class="u-blue-zig">common law</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">statute</span>.
+        </li>
+        <li>
+            <strong>7. Part III Liberty:</strong>
+            <span class="u-blue-zig">Part III</span>
+            <span class="u-blue-zig"> of the constitution</span>(<span class="u-blue-zig">Article - 19,21,25 to28</span>)
+            <span class="u-green"> is related to </span>
+            <span class="u-blue-zig">Liberty</span>.
+        </li>
+        <li>
+            <strong>8. Kartar Singh Case:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green"> held in </span>
+            <span class="u-red-zig">Kartar Singh</span>
+            <span class="u-blue-zig"> case</span>
+            <span class="u-green"> that </span>
+            <span class="u-green">in order, to sustain </span>
+            <span class="u-blue-zig">democracy</span>,
+            <span class="u-blue-zig"> liberty</span>
+            <span class="u-green"> is not to degenerate into </span>
+            <span class="u-blue-zig">license</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Equality</div>
+    <ul>
+        <li>
+            <strong>1. Equal Enjoyment:</strong>
+            <span class="u-blue-zig">Rights</span>
+            <span class="u-green"> carry no meaning if </span>
+            <span class="u-green">they cannot be enjoyed equally by </span>
+            <span class="u-blue-zig">all members</span>
+            <span class="u-blue-zig"> of the community</span>.
+        </li>
+        <li>
+            <strong>2. Abolishing Distinctions:</strong>
+            <span class="u-blue-zig">Equality of status</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">opportunity</span>
+            <span class="u-green"> is secured to </span>
+            <span class="u-blue-zig">the people of India</span>
+            <span class="u-green"> by abolishing </span>
+            <span class="u-blue-zig">all distinctions</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">discriminations</span>
+            <span class="u-green"> by </span>
+            <span class="u-blue-zig">the state</span>
+            <span class="u-green"> between </span>
+            <span class="u-blue-zig">citizen</span>.
+        </li>
+        <li>
+            <strong>3. Related Articles:</strong>
+            <span class="u-blue-zig">Article 15,16, 17,18</span>
+            <span class="u-green"> are related to </span>
+            <span class="u-blue-zig">equality</span>.
+        </li>
+        <li>
+            <strong>4. Equality of Law:</strong>
+            <span class="u-blue-zig">The principle</span>
+            <span class="u-blue-zig"> of equality of law</span>
+            <span class="u-green"> means not </span>
+            <span class="u-blue-zig">the same law</span>
+            <span class="u-green"> should apply to </span>
+            <span class="u-blue-zig">everyone</span>,
+            <span class="u-green"> but that </span>
+            <span class="u-blue-zig">a law</span>
+            <span class="u-green"> should deal alike with </span>
+            <span class="u-blue-zig">all in one class</span>.
+        </li>
+        <li>
+            <strong>5. Equal Treatment:</strong>
+            <span class="u-blue-zig">Equality of treatment</span>
+            <span class="u-green"> under </span>
+            <span class="u-blue-zig">equal circumstances</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Fraternity</div>
+    <ul>
+        <li>
+            <strong>1. Spirit of Brotherhood:</strong>
+            <span class="u-blue-zig">Fraternity</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">the spirit of brotherhood</span>,
+            <span class="u-blue-zig"> a feeling</span>
+            <span class="u-green"> that </span>
+            <span class="u-blue-zig">all people</span>
+            <span class="u-green"> are </span>
+            <span class="u-blue-zig">children of the same soil</span>,
+            <span class="u-blue-zig"> the same motherland</span>.
+        </li>
+        <li>
+            <strong>2. Democratic Functioning:</strong>
+            <span class="u-blue-zig">A democratic system</span>
+            <span class="u-green"> will function in </span>
+            <span class="u-blue-zig">a healthy manner</span>
+            <span class="u-green"> only if there is </span>
+            <span class="u-blue-zig">a spirit of brotherhood</span>,
+            <span class="u-blue-zig"> oneness</span>
+            <span class="u-green"> among </span>
+            <span class="u-blue-zig">the people of the land</span>.
+        </li>
+        <li>
+            <strong>3. Individual Dignity:</strong>
+            <span class="u-blue-zig">The fraternity</span>
+            <span class="u-green"> is not possible unless </span>
+            <span class="u-blue-zig">the dignity</span>
+            <span class="u-blue-zig"> of each individual</span>
+            <span class="u-green"> is preserved and </span>
+            <span class="u-blue-zig">mutually respected</span>.
+        </li>
+        <li>
+            <strong>4. SC on Fraternity:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> held that </span>
+            <span class="u-blue-zig">fraternity</span>
+            <span class="u-green"> means </span>
+            <span class="u-blue-zig">a sense of common brotherhood</span>
+            <span class="u-blue-zig"> of all Indians</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Dignity</div>
+    <ul>
+        <li>
+            <strong>1. Dignity for Fraternity:</strong>
+            <span class="u-blue-zig">Dignity of the individuals</span>
+            <span class="u-green"> is to be maintained for </span>
+            <span class="u-blue-zig">the promotion</span>
+            <span class="u-blue-zig"> of fraternity</span>.
+        </li>
+        <li>
+            <strong>2. Preamble Assurance:</strong>
+            <span class="u-blue-zig">The preamble</span>
+            <span class="u-green"> assures </span>
+            <span class="u-blue-zig">the dignity</span>
+            <span class="u-blue-zig"> of each and every individual</span>
+            <span class="u-green"> by securing to </span>
+            <span class="u-blue-zig">each individual</span>
+            <span class="u-blue-zig"> equal fundamental rights</span>
+            <span class="u-green"> and by laying down </span>
+            <span class="u-blue-zig">a number of directives</span>
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">the state</span>.
+        </li>
+        <li>
+            <strong>3. Fundamental Right:</strong>
+            <span class="u-blue-zig">The Supreme Court</span>
+            <span class="u-green"> has read </span>
+            <span class="u-blue-zig">the preamble</span>
+            <span class="u-green"> with </span>
+            <span class="u-blue-zig">article 21</span>
+            <span class="u-green"> to come to the conclusion that </span>
+            <span class="u-blue-zig">the right to dignity</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a fundamental right</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 38</div>
+</div>
+
+</body>
+</html>

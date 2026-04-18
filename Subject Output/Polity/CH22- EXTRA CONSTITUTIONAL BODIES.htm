@@ -1,0 +1,2854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH22 - Extra Constitutional Bodies</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 215 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH22- EXTRA CONSTITUTIONAL BODIES</h1>
+        <p class="subtitle">Extra Constitutional Bodies</p>
+    </header>
+
+    <div class="section-header">LOKPAL</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Anti-Corruption Ombudsman:</strong> <span class="u-blue-zig">The idea of creating</span> <span class="u-blue-zig">an anti corruption ombudsman</span>, <span class="u-green">in the form of </span><span class="u-blue-zig">a Lokpal</span>, <span class="u-green">was first conceptualized in </span><span class="u-red-zig">1968</span> <span class="u-green">in </span><span class="u-blue-zig">the fourth Lok Sabha</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Legislative Efforts:</strong> <span class="u-green">Thereafter in </span><span class="u-red-zig">1971</span>, <span class="u-red-zig">1977</span>, <span class="u-red-zig">1985</span>, <span class="u-red-zig">1989</span>, <span class="u-red-zig">1996</span>, <span class="u-red-zig">1998</span> <span class="u-green">and </span><span class="u-red-zig">2001</span> <span class="u-blue-zig">efforts were made</span> <span class="u-green">to enact </span><span class="u-blue-zig">legislation</span> <span class="u-green">to create </span><span class="u-blue-zig">the institution of Lokpal</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>1. First Lokpal Appointed:</strong> <span class="u-blue-zig">Retired Supreme Court judge</span> <span class="u-red-zig">Pinaki Chandra Ghose</span> <span class="u-green">is appointed as </span><span class="u-blue-zig">the first Lokpal of India</span>
+        </li>
+    </ul>
+
+    <div class="section-header">PURPOSE</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. Corruption Inquiry Mandate:</strong> <span class="u-green">It is </span><span class="u-blue-zig">an institution</span> <span class="u-green">that will inquire into </span><span class="u-blue-zig">allegations of corruption</span> <span class="u-green">against </span><span class="u-blue-zig">certain public functionaries</span>.
+    </p>
+
+    <div class="section-header">SELECTION</div>
+    <ul>
+        <li>
+            <strong>1. Search Committee Process:</strong> <span class="u-green">Under </span><span class="u-blue-zig">Rule 11 (2)</span> <span class="u-green">of </span><span class="u-blue-zig">the Search Committee Rules</span>, <span class="u-red-zig">2014</span>, <span class="u-blue-zig">the search panel</span> <span class="u-green">for </span><span class="u-blue-zig">lokpal</span> <span class="u-green">recommends </span><span class="u-blue-zig">at least five names</span> <span class="u-green">for </span><span class="u-blue-zig">chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">at least three times</span> <span class="u-blue-zig">the number of vacancies</span> <span class="u-green">in the case of </span><span class="u-blue-zig">members</span>.
+        </li>
+        <li>
+            <strong>2. Selection Committee:</strong> <span class="u-blue-zig">This recommendation</span> <span class="u-green">has to be placed before </span><span class="u-blue-zig">the high-power selection committee</span> <span class="u-green">led by </span><span class="u-blue-zig">the Prime Minister</span>.
+        </li>
+        <li>
+            <strong>3. Committee Composition:</strong> <span class="u-blue-zig">The selection committee</span> <span class="u-green">comprises </span><span class="u-blue-zig">the Lok Sabha Speaker</span>, <span class="u-blue-zig">the Leader of the Opposition</span>, <span class="u-blue-zig">the Chief Justice of India</span> <span class="u-green">and </span><span class="u-blue-zig">an eminent jurist</span> <span class="u-green">as </span><span class="u-blue-zig">members</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">3. SC Urgency:</strong> <span class="u-blue-zig">The court</span> <span class="u-green">has for the past several months been </span><span class="u-blue-zig">constantly urging</span> <span class="u-blue-zig">the government</span> <span class="u-green">to complete </span><span class="u-blue-zig">the Lokpal appointment</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>4. Implementation Delay:</strong> <span class="u-green">Although passed in </span><span class="u-red-zig">2014</span>, <span class="u-blue-zig">the Lokpal and Lokayukta Act</span> <span class="u-green">of </span><span class="u-red-zig">2013</span> <span class="u-green">was not implemented </span><span class="u-blue-zig">all these years</span> <span class="u-green">because there was no </span><span class="u-blue-zig">Leader of Opposition (LoP)</span> <span class="u-green">in </span><span class="u-blue-zig">the 16th Lok Sabha</span>.
+        </li>
+        <li>
+            <strong>5. SC Clarification:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">clarified that </span><span class="u-blue-zig">the Lokpal appointment process</span> <span class="u-green">need not be stalled </span><span class="u-blue-zig">merely</span> <span class="u-green">due to </span><span class="u-blue-zig">the absence of the LoP</span>.
+        </li>
+        <li>
+            <strong>6. Statutory Provision:</strong> <span class="u-green">For this, </span><span class="u-blue-zig">the court</span> <span class="u-green">points to </span><span class="u-blue-zig">sub-section (2)</span> <span class="u-green">of </span><span class="u-blue-zig">Section 4</span> <span class="u-green">of </span><span class="u-blue-zig">the original 2013 Lokpal Act</span>.
+        </li>
+        <li>
+            <strong>7. Validity Safeguard:</strong> <span class="u-blue-zig">The section</span> <span class="u-green">makes it clear that </span><span class="u-blue-zig">the appointment</span> <span class="u-green">of </span><span class="u-blue-zig">the chairperson</span> <span class="u-green">or </span><span class="u-blue-zig">members of Lokpal</span> <span class="u-green">will not be invalidated </span><span class="u-blue-zig">merely</span> <span class="u-green">because </span><span class="u-blue-zig">one of the members</span> <span class="u-green">of </span><span class="u-blue-zig">the selection committee</span> (<span class="u-blue-zig">the LoP</span>) <span class="u-green">is </span><span class="u-blue-zig">missing</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 215</div>
+</div>
+
+<!-- ==================== PAGE 216 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>8. Available Members Suffice:</strong> <span class="u-green">In short, </span><span class="u-blue-zig">the available members</span> <span class="u-green">of </span><span class="u-blue-zig">the Lokpal selection committee</span> <span class="u-green">could very well recommend </span><span class="u-blue-zig">suitable persons</span> <span class="u-green">to </span><span class="u-blue-zig">the President</span> <span class="u-green">for </span><span class="u-blue-zig">appointment to Lokpal</span>.
+        </li>
+        <li>
+            <strong>9. Workable Legislation:</strong> <span class="u-green">Thus, </span><span class="u-blue-zig">the Lokpal Act 2013</span> <span class="u-green">is deemed to be </span><span class="u-blue-zig">an eminently workable piece</span> <span class="u-green">of </span><span class="u-blue-zig">legislation</span> <span class="u-green">by </span><span class="u-blue-zig">the Supreme court</span>.
+        </li>
+        <li>
+            <strong>10. Standing Committee Report:</strong> <span class="u-green">Also, </span><span class="u-blue-zig">a Parliamentary Standing Committee</span> <span class="u-green">submitted </span><span class="u-blue-zig">its report</span> <span class="u-green">on </span><span class="u-red-zig">December 3, 2015</span>, <span class="u-green">fully supporting </span><span class="u-blue-zig">the amendment</span> <span class="u-green">to replace </span><span class="u-blue-zig">the LoP</span> <span class="u-green">with </span><span class="u-blue-zig">the single largest Opposition party leader</span> <span class="u-green">in </span><span class="u-blue-zig">the Lok Sabha</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">STRUCTURE</div>
+    <ul>
+        <li>
+            <strong>1. Statutory Body:</strong> <span class="u-blue-zig">The institution of Lokpal</span> <span class="u-green">is </span><span class="u-blue-zig">a statutory body</span> <span class="u-green">without </span><span class="u-blue-zig">any constitutional backing</span>.
+        </li>
+        <li>
+            <strong>2. Multi-Member Body:</strong> <span class="u-blue-zig">Lokpal</span> <span class="u-green">is </span><span class="u-blue-zig">a multi-member body</span>, <span class="u-green">made up of </span><span class="u-blue-zig">one chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">maximum of 8 members</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">1. Chairperson Qualification:</strong> <span class="u-blue-zig">The person</span> <span class="u-green">who is to be appointed as </span><span class="u-blue-zig">the chairperson of the Lokpal</span> <span class="u-green">should be either </span><span class="u-blue-zig">the former Chief Justice of India</span> <span class="u-green">or </span><span class="u-blue-zig">a former Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>, <span class="u-green">or </span><span class="u-blue-zig">an eminent person</span> <span class="u-green">with </span><span class="u-blue-zig">impeccable integrity</span> <span class="u-green">and </span><span class="u-blue-zig">outstanding ability</span>, <span class="u-green">having </span><span class="u-blue-zig">special knowledge and expertise</span> <span class="u-green">of </span><span class="u-blue-zig">minimum 25 years</span> <span class="u-green">in the matters relating to </span><span class="u-blue-zig">anti-corruption policy</span>, <span class="u-blue-zig">public administration</span>, <span class="u-blue-zig">vigilance</span>, <span class="u-blue-zig">finance</span> <span class="u-green">including </span><span class="u-blue-zig">insurance and banking</span>, <span class="u-blue-zig">law and management</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Judicial Composition:</strong> <span class="u-green">Out of </span><span class="u-blue-zig">the maximum eight members</span>, <span class="u-blue-zig">half</span> <span class="u-green">will be </span><span class="u-blue-zig">judicial members</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>3. Reservation Mandate:</strong> <span class="u-blue-zig">Minimum fifty per cent</span> <span class="u-green">of </span><span class="u-blue-zig">the Members</span> <span class="u-green">will be from </span><span class="u-blue-zig">SC / ST / OBC / Minorities</span> <span class="u-green">and </span><span class="u-blue-zig">women</span>.
+        </li>
+        <li>
+            <strong>4. Judicial Member:</strong> <span class="u-blue-zig">The JUDICIAL MEMBER</span> <span class="u-green">of </span><span class="u-blue-zig">the Lokpal</span> <span class="u-green">should be either </span><span class="u-blue-zig">a former Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">or </span><span class="u-blue-zig">a former Chief Justice</span> <span class="u-green">of </span><span class="u-blue-zig">a High Court</span>.
+        </li>
+        <li>
+            <strong>5. Non-Judicial Member:</strong> <span class="u-blue-zig">The NON-JUDICIAL member</span> <span class="u-green">should be </span><span class="u-blue-zig">an eminent person</span> <span class="u-green">with </span><span class="u-blue-zig">impeccable integrity</span> <span class="u-green">and </span><span class="u-blue-zig">outstanding ability</span>, <span class="u-green">having </span><span class="u-blue-zig">special knowledge and expertise</span> <span class="u-green">of </span><span class="u-blue-zig">a minimum of 25 years</span> <span class="u-green">in the matters relating to </span><span class="u-blue-zig">anti-corruption policy</span>, <span class="u-blue-zig">public administration</span>, <span class="u-blue-zig">vigilance</span>, <span class="u-blue-zig">finance</span> <span class="u-green">including </span><span class="u-blue-zig">insurance and banking</span>, <span class="u-blue-zig">law and management</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">3. Appointment Mechanism:</strong> <span class="u-blue-zig">The members</span> <span class="u-green">are appointed by </span><span class="u-blue-zig">the president</span> <span class="u-green">on the recommendation of </span><span class="u-blue-zig">a selection committee</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">4. Selection Committee:</strong> <span class="u-blue-zig">The selection committee</span> <span class="u-green">is composed of </span><span class="u-blue-zig">the Prime Minister</span> <span class="u-green">who is </span><span class="u-blue-zig">the Chairperson</span>; <span class="u-blue-zig">Speaker of Lok Sabha</span>, <span class="u-blue-zig">Leader of Opposition</span> <span class="u-green">in </span><span class="u-blue-zig">Lok Sabha</span>, <span class="u-blue-zig">Chief Justice of India</span> <span class="u-green">or </span><span class="u-blue-zig">a Judge</span> <span class="u-green">nominated by </span><span class="u-blue-zig">him/her</span>, <span class="u-green">and </span><span class="u-blue-zig">one eminent jurist</span>.
+    </p>
+
+    <div class="section-header">ROLE</div>
+    <ul>
+        <li>
+            <strong>1. Anti-Corruption Ombudsman:</strong> <span class="u-blue-zig">The Lokpal</span> <span class="u-green">is </span><span class="u-blue-zig">an anti-corruption Ombudsman</span>.
+        </li>
+        <li>
+            <strong>2. Jurisdiction Over Executives:</strong> <span class="u-blue-zig">The Lokpal</span> <span class="u-green">will have </span><span class="u-blue-zig">its jurisdiction</span> <span class="u-green">over </span><span class="u-blue-zig">top political executives</span>, <span class="u-green">including </span><span class="u-blue-zig">the Prime Minister</span>.
+        </li>
+        <li>
+            <strong>3. Direction Power:</strong> <span class="u-green">They have the powers to give </span><span class="u-blue-zig">directions</span> <span class="u-green">to </span><span class="u-blue-zig">all the agencies in India</span>, <span class="u-green">like </span><span class="u-blue-zig">the CBI</span>, <span class="u-blue-zig">the CVC</span>, <span class="u-blue-zig">etc</span>.
+        </li>
+        <li>
+            <strong>4. Suspend or Transfer:</strong> <span class="u-green">They can </span><span class="u-blue-zig">suspend</span> <span class="u-green">or </span><span class="u-blue-zig">transfer</span> <span class="u-blue-zig">any officer</span> <span class="u-green">who is coming in the way of </span><span class="u-blue-zig">an enquiry</span>.
+        </li>
+        <li>
+            <strong>5. Investigative and Prosecuting:</strong> <span class="u-blue-zig">The Lokpal</span> <span class="u-green">will work as </span><span class="u-blue-zig">an investigative agency</span>, <span class="u-green">as well as </span><span class="u-blue-zig">a prosecuting agency</span>.
+        </li>
+        <li>
+            <strong>6. Special Courts:</strong> <span class="u-green">They shall have </span><span class="u-blue-zig">special courts</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">1. ARC Recommendation:</strong> <span class="u-green">Even </span><span class="u-blue-zig">the 1966 Administrative Reforms Commission</span>, <span class="u-green">headed by </span><span class="u-red-zig">Morarji Desai</span> <span class="u-green">had suggested </span><span class="u-blue-zig">various steps</span> <span class="u-green">to check </span><span class="u-blue-zig">graft</span> <span class="u-green">in </span><span class="u-blue-zig">political circles</span> <span class="u-green">and </span><span class="u-blue-zig">official circles</span>.
+    </p>
+
+    <div class="page-number">Page 216</div>
+</div>
+
+<!-- ==================== PAGE 217 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">NEED</div>
+    <ul>
+        <li>
+            <strong>1. Credibility Erosion:</strong> <span class="u-blue-zig">All executive institutions</span> <span class="u-green">are losing </span><span class="u-blue-zig">credibility</span>.
+        </li>
+        <li>
+            <strong>2. Judicial Encroachment:</strong> <span class="u-blue-zig">The judiciary</span> <span class="u-green">has </span><span class="u-blue-zig">encroached</span>.
+        </li>
+        <li>
+            <strong>3. Executive Authority Eroded:</strong> <span class="u-blue-zig">The power and authority</span> <span class="u-green">of </span><span class="u-blue-zig">the executive</span> <span class="u-green">has been significantly </span><span class="u-blue-zig">eroded</span>.
+        </li>
+        <li>
+            <strong>4. No Investigating Agency:</strong> <span class="u-blue-zig">The irony</span> <span class="u-green">is that </span><span class="u-blue-zig">the Lokpal</span> <span class="u-green">doesn't have </span><span class="u-blue-zig">an investigating agency</span> <span class="u-green">of its own; </span><span class="u-green">it would have to depend upon </span><span class="u-blue-zig">the CBI</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">THE ISSUES INVOLVED IN THE FUNCTIONING OF LOKPAL AND METHODS TO MAKE LOKPAL EFFECTIVE</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. Lokpal Functioning:</strong> <span class="u-blue-zig">The Lokpal</span>, <span class="u-blue-zig">a multi-member body</span>, <span class="u-green">made up of </span><span class="u-blue-zig">one chairperson</span> <span class="u-green">and </span><span class="u-blue-zig">maximum of 8 members</span> <span class="u-green">was enacted in </span><span class="u-red-zig">2013</span> <span class="u-green">and came into force in </span><span class="u-red-zig">2014</span>. <span class="u-blue-zig">The Lokpal</span> <span class="u-green">has attempted to make </span><span class="u-blue-zig">a positive change</span> <span class="u-green">but still, there are </span><span class="u-blue-zig">loopholes and inconsistencies</span> <span class="u-green">that need to be </span><span class="u-blue-zig">addressed</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>1. Skewed Selection Process:</strong> <span class="u-blue-zig">The Lokpal selection process</span> <span class="u-green">is </span><span class="u-blue-zig">skewed</span> <span class="u-green">because there are no </span><span class="u-blue-zig">guidelines</span> <span class="u-green">for deciding who is a </span><span class="u-blue-zig">"eminent jurist"</span> <span class="u-green">or </span><span class="u-blue-zig">"a person of integrity</span>."
+        </li>
+        <li>
+            <strong>2. Political Influence:</strong> <span class="u-green">In addition to </span><span class="u-blue-zig">appointing members</span> <span class="u-green">from </span><span class="u-blue-zig">political parties</span>, <span class="u-blue-zig">the Lokpal committee itself</span> <span class="u-green">is subject to </span><span class="u-blue-zig">political influence</span>.
+        </li>
+        <li>
+            <strong>3. Limited PM Inquiry:</strong> <span class="u-blue-zig">The Act</span> <span class="u-green">prohibits </span><span class="u-blue-zig">Lokpal inquiry</span> <span class="u-green">if </span><span class="u-blue-zig">the allegations</span> <span class="u-green">against </span><span class="u-blue-zig">the PM</span> <span class="u-green">in </span><span class="u-blue-zig">certain circumstances</span>. <span class="u-green">Thus, </span><span class="u-blue-zig">Lokpal</span> <span class="u-green">do not have </span><span class="u-blue-zig">full authority</span> <span class="u-green">to investigate </span><span class="u-blue-zig">PM</span>.
+        </li>
+        <ul>
+            <li>
+                <strong>a. Two-Thirds Approval:</strong> <span class="u-green">Also, </span><span class="u-blue-zig">complaints</span> <span class="u-green">against </span><span class="u-blue-zig">the PM</span> <span class="u-green">are not to be probed unless </span><span class="u-blue-zig">the full Lokpal bench</span> <span class="u-green">considers </span><span class="u-blue-zig">the initiation of an inquiry</span> <span class="u-green">and </span><span class="u-blue-zig">at least two-thirds</span> <span class="u-green">of </span><span class="u-blue-zig">the members</span> <span class="u-green">approve </span><span class="u-blue-zig">it</span>.
+            </li>
+        </ul>
+        <li>
+            <strong>4. CBI Dependence:</strong> <span class="u-blue-zig">All the cases of corruption</span> <span class="u-green">in which </span><span class="u-blue-zig">high officials</span> <span class="u-green">are involved </span><span class="u-green">go to </span><span class="u-blue-zig">the CBI</span>. <span class="u-blue-zig">Lokpal</span> <span class="u-green">do not have </span><span class="u-blue-zig">complete control</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SUGGESTION</div>
+    <ul>
+        <li>
+            <strong>1. Independent Mechanism:</strong> <span class="u-blue-zig">Need</span> <span class="u-green">for </span><span class="u-blue-zig">a mechanism</span> <span class="u-green">that provides for </span><span class="u-blue-zig">simple, independent, speedy means</span> <span class="u-green">of delivering </span><span class="u-blue-zig">justice</span> <span class="u-green">without succumbing to </span><span class="u-blue-zig">the clutches of the executive</span>.
+        </li>
+        <li>
+            <strong>2. Functional Autonomy:</strong> <span class="u-green">It must be strengthened in respect of </span><span class="u-blue-zig">functional autonomy</span> <span class="u-green">and </span><span class="u-blue-zig">workforce availability</span>.
+        </li>
+        <li>
+            <strong>3. Eliminate Root Causes:</strong> <span class="u-blue-zig">The government</span> <span class="u-green">should focus on </span><span class="u-blue-zig">eliminating the root causes</span> <span class="u-green">because of which </span><span class="u-blue-zig">the general public</span> <span class="u-green">is demanding </span><span class="u-blue-zig">a Lokpal</span>.
+        </li>
+        <li>
+            <strong>4. Transparent Nomination:</strong> <span class="u-green">There should be </span><span class="u-blue-zig">complete transparency</span> <span class="u-green">when nominating </span><span class="u-blue-zig">a Lokpal</span> <span class="u-green">as it will increase </span><span class="u-blue-zig">the chances</span> <span class="u-green">for </span><span class="u-blue-zig">the right person</span> <span class="u-green">to be </span><span class="u-blue-zig">appointed</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">1. Independent Functioning:</strong> <span class="u-blue-zig">Lokpal</span> <span class="u-green">shall function </span><span class="u-blue-zig">independently</span> <span class="u-green">of </span><span class="u-blue-zig">any political influence</span> <span class="u-green">so that </span><span class="u-blue-zig">a proper system</span> <span class="u-green">of </span><span class="u-blue-zig">checks-and-balance</span> <span class="u-green">is maintained in </span><span class="u-blue-zig">the federal and democratic system</span> <span class="u-green">of </span><span class="u-red-zig">India</span>.
+    </p>
+
+    <div class="page-number">Page 217</div>
+</div>
+
+<!-- ==================== PAGE 218 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">CENTRAL BUREAU OF INVESTIGATION</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. CBI Establishment:</strong> <span class="u-blue-zig">The Central Bureau of Investigation</span> (<span class="u-blue-zig">CBI</span>) <span class="u-green">is </span><span class="u-blue-zig">a premier investigating police agency</span> <span class="u-green">in </span><span class="u-red-zig">India</span>, <span class="u-green">and is </span><span class="u-blue-zig">an elite force</span> <span class="u-green">which plays a major role in </span><span class="u-blue-zig">preservation of values</span> <span class="u-green">in </span><span class="u-blue-zig">public life</span> <span class="u-green">and in ensuring </span><span class="u-blue-zig">the health</span> <span class="u-green">of </span><span class="u-blue-zig">the national economy</span>. <span class="u-blue-zig">The agency</span> <span class="u-green">was established in </span><span class="u-red-zig">1941</span> <span class="u-green">as </span><span class="u-blue-zig">the Special Police Establishment</span>, <span class="u-green">and was tasked with </span><span class="u-blue-zig">simple domestic security outlining</span>. <span class="u-blue-zig">The Central Bureau of Investigation</span> <span class="u-green">was later established on </span><span class="u-red-zig">1 April 1963</span>(<span class="u-red-zig">Santhanam Committee</span>). <span class="u-blue-zig">Its motto</span> <span class="u-green">is </span><span class="u-blue-zig">"INDUSTRY, IMPARTIALITY, AND INTEGRITY"</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Non-Statutory Status:</strong> <span class="u-blue-zig">The CBI</span> <span class="u-green">is not </span><span class="u-blue-zig">a statutory body</span>. <span class="u-green">It derives its powers from </span><span class="u-blue-zig">the Delhi Special Police Establishment Act</span>, <span class="u-red-zig">1946</span>. <span class="u-green">It works under </span><span class="u-blue-zig">the overall superintendence</span> <span class="u-green">of </span><span class="u-blue-zig">Central Vigilance Commission</span> <span class="u-green">in matters related to </span><span class="u-blue-zig">the Prevention of Corruption Act</span>, <span class="u-red-zig">1988</span>.
+    </p>
+
+    <div class="section-header">COMPOSITION</div>
+    <ul>
+        <li>
+            <strong>1. Director and Officers:</strong> <span class="u-blue-zig">The CBI</span> <span class="u-green">is headed by </span><span class="u-blue-zig">a Director</span>. <span class="u-green">He is assisted by </span><span class="u-blue-zig">a Special Director</span> <span class="u-green">or </span><span class="u-blue-zig">an Additional Director</span>. <span class="u-green">It has </span><span class="u-blue-zig">a number of joint directors</span>, <span class="u-blue-zig">deputy inspector generals</span>, <span class="u-blue-zig">superintendents of police</span> <span class="u-green">and </span><span class="u-blue-zig">all other usual ranks</span> <span class="u-green">of </span><span class="u-blue-zig">police personnel</span>.
+        </li>
+        <li>
+            <strong>2. Tenure Security:</strong> <span class="u-blue-zig">The Director of CBI</span> <span class="u-green">as </span><span class="u-blue-zig">Inspector-General of Police</span>. <span class="u-blue-zig">The Director of CBI</span> <span class="u-green">has been provided </span><span class="u-blue-zig">security of two-year tenure</span> <span class="u-green">in office by </span><span class="u-blue-zig">the CVC Act</span>, <span class="u-red-zig">2003</span> (<span class="u-red-zig">Vineet Narain Case</span>). <span class="u-blue-zig">The CVC Act</span> <span class="u-green">also provides </span><span class="u-blue-zig">the mechanism</span> <span class="u-green">for </span><span class="u-blue-zig">the selection</span> <span class="u-green">of </span><span class="u-blue-zig">the Director of CBI</span> <span class="u-green">and </span><span class="u-blue-zig">other officers</span> <span class="u-green">of </span><span class="u-blue-zig">the rank of SP and above</span> <span class="u-green">in </span><span class="u-blue-zig">the CBI</span>.
+        </li>
+        <li>
+            <strong>3. Appointment Process:</strong> <span class="u-blue-zig">The Director of the CBI</span> <span class="u-green">is appointed by </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">on the recommendation of </span><span class="u-blue-zig">a committee</span> <span class="u-green">consisting of </span><span class="u-blue-zig">the Central Vigilance Commissioner</span> <span class="u-green">as </span><span class="u-blue-zig">Chairperson</span>, <span class="u-blue-zig">the Vigilance Commissioners</span>, <span class="u-blue-zig">the Secretary to the Government of India</span> <span class="u-green">in-charge of </span><span class="u-blue-zig">the Ministry of Home Affairs</span> <span class="u-green">and </span><span class="u-blue-zig">the Secretary</span> (<span class="u-blue-zig">Coordination and Public Grievances</span>) <span class="u-green">in </span><span class="u-blue-zig">the Cabinet Secretariat</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ORGANIZATION</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. CBI Divisions:</strong> <span class="u-blue-zig">The CBI</span> <span class="u-green">has the following </span><span class="u-blue-zig">divisions</span>:
+    </p>
+    <ul>
+        <li><strong>a. </strong><span class="u-blue-zig">Anti-Corruption Division</span></li>
+        <li><strong>b. </strong><span class="u-blue-zig">Economic Offences Division</span></li>
+        <li><strong>c. </strong><span class="u-blue-zig">Special Crimes Division</span></li>
+        <li><strong>d. </strong><span class="u-blue-zig">Policy and International Police Cooperation Division</span></li>
+        <li><strong>e. </strong><span class="u-blue-zig">Administration Division</span></li>
+        <li><strong>f. </strong><span class="u-blue-zig">Directorate of Prosecution</span></li>
+        <li><strong>g. </strong><span class="u-blue-zig">Central Forensic Science Laboratory</span></li>
+    </ul>
+
+    <div class="section-header">FUNCTIONS</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. Investigation Divisions:</strong> <span class="u-blue-zig">CBI</span> <span class="u-green">has grown into </span><span class="u-blue-zig">a multidisciplinary investigation agency</span> <span class="u-green">over </span><span class="u-blue-zig">a period of time</span>. <span class="u-green">Today it has </span><span class="u-blue-zig">the following three divisions</span> <span class="u-green">for </span><span class="u-blue-zig">investigation of crime</span>:-
+    </p>
+    <ul>
+        <li>
+            <strong>1. Anti-Corruption Cases:</strong> <span class="u-blue-zig">Investigation of cases</span> <span class="u-green">under </span><span class="u-blue-zig">the Prevention of Corruption Act</span>, <span class="u-red-zig">1988</span> <span class="u-green">against </span><span class="u-blue-zig">Public officials</span> <span class="u-green">and </span><span class="u-blue-zig">the employees</span> <span class="u-green">of </span><span class="u-blue-zig">Central Government</span>, <span class="u-blue-zig">Public Sector Undertakings</span>, <span class="u-blue-zig">Corporations</span> <span class="u-green">or </span><span class="u-blue-zig">Bodies owned or controlled</span> <span class="u-green">by </span><span class="u-blue-zig">the Government of India</span>.
+        </li>
+        <li>
+            <strong>2. Economic Fraud Investigation:</strong> <span class="u-blue-zig">Investigation</span> <span class="u-green">of </span><span class="u-blue-zig">major financial scams</span> <span class="u-green">and </span><span class="u-blue-zig">serious economic frauds</span>, <span class="u-green">including </span><span class="u-blue-zig">crimes</span> <span class="u-green">relating to </span><span class="u-blue-zig">Fake Indian Currency Notes</span>, <span class="u-blue-zig">Bank Frauds</span> <span class="u-green">and </span><span class="u-blue-zig">Cyber Crime</span>.
+        </li>
+        <li>
+            <strong>3. Serious Crime Investigation:</strong> <span class="u-blue-zig">Investigation</span> <span class="u-green">of </span><span class="u-blue-zig">serious, sensational and organized crime</span> <span class="u-green">under </span><span class="u-blue-zig">the Indian Penal Code</span> <span class="u-green">and </span><span class="u-blue-zig">other laws</span> <span class="u-green">on the requests of </span><span class="u-blue-zig">State Governments</span> <span class="u-green">or on the orders of </span><span class="u-blue-zig">the Supreme Court</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 218</div>
+</div>
+
+<!-- ==================== PAGE 219 ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Investigation Authority:</strong> <span class="u-green">and </span><span class="u-blue-zig">High Courts</span>. <span class="u-blue-zig">The laws</span> <span class="u-green">under which </span><span class="u-blue-zig">CBI</span> <span class="u-green">can investigate </span><span class="u-blue-zig">Crime</span> <span class="u-green">are notified by </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">under </span><span class="u-blue-zig">section 3</span> <span class="u-green">of </span><span class="u-blue-zig">the DSPE Act</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. CBI Takeover Conditions:</strong> <span class="u-blue-zig">CBI</span> <span class="u-green">take over </span><span class="u-blue-zig">the investigation</span> <span class="u-green">of </span><span class="u-blue-zig">a criminal case</span> <span class="u-green">registered by </span><span class="u-blue-zig">the State Police</span>
+    </p>
+    <ul>
+        <li>
+            <strong>1. State Government Request:</strong> <span class="u-blue-zig">The concerned State Government</span> <span class="u-green">makes a request to </span><span class="u-blue-zig">that effect</span> <span class="u-green">and </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">agrees to </span><span class="u-blue-zig">it</span>
+        </li>
+        <li>
+            <strong>2. Consent Notification:</strong> <span class="u-blue-zig">The State Government</span> <span class="u-green">issues </span><span class="u-blue-zig">notification of consent</span> <span class="u-green">under </span><span class="u-blue-zig">section 6</span> <span class="u-green">of </span><span class="u-blue-zig">the DSPE Act</span> <span class="u-green">and </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">issues </span><span class="u-blue-zig">notification</span> <span class="u-green">under </span><span class="u-blue-zig">section 5</span> <span class="u-green">of </span><span class="u-blue-zig">the DSPE Act</span>
+        </li>
+        <li>
+            <strong>3. Court Orders:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">or </span><span class="u-blue-zig">High Courts</span> <span class="u-green">orders </span><span class="u-blue-zig">CBI</span> <span class="u-green">to take up </span><span class="u-blue-zig">such investigations</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">3. Suo-Moto Jurisdiction:</strong> <span class="u-green">As per </span><span class="u-blue-zig">section 2</span> <span class="u-green">of </span><span class="u-blue-zig">the DSPE Act</span>, <span class="u-blue-zig">CBI</span> <span class="u-green">can suo-moto take up </span><span class="u-blue-zig">investigation of offences</span> <span class="u-green">notified in </span><span class="u-blue-zig">section 3</span> <span class="u-green">only in </span><span class="u-blue-zig">the Union Territories</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">4. State Consent Requirement:</strong> <span class="u-green">Taking up </span><span class="u-blue-zig">investigation</span> <span class="u-green">by </span><span class="u-blue-zig">CBI</span> <span class="u-green">in the boundaries of </span><span class="u-blue-zig">a State</span> <span class="u-green">requires </span><span class="u-blue-zig">prior consent</span> <span class="u-green">of </span><span class="u-blue-zig">that State</span> <span class="u-green">as per </span><span class="u-blue-zig">Section 6</span> <span class="u-green">of </span><span class="u-blue-zig">the DSPE Act</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">5. Central Authorization:</strong> <span class="u-blue-zig">The Central Government</span> <span class="u-green">can authorize </span><span class="u-blue-zig">CBI</span> <span class="u-green">to investigate </span><span class="u-blue-zig">such a crime</span> <span class="u-green">in </span><span class="u-blue-zig">a State</span> <span class="u-green">but only with </span><span class="u-blue-zig">the consent</span> <span class="u-green">of </span><span class="u-blue-zig">the concerned State Government</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">6. Organized Crime Investigation:</strong> <span class="u-green">Investigating </span><span class="u-blue-zig">serious crimes</span>, <span class="u-green">having </span><span class="u-blue-zig">national and international ramifications</span>, <span class="u-green">committed by </span><span class="u-blue-zig">organized gangs</span> <span class="u-green">of </span><span class="u-blue-zig">professional criminals</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">7. Crime Statistics:</strong> <span class="u-green">Maintaining </span><span class="u-blue-zig">crime statistics</span> <span class="u-green">and disseminating </span><span class="u-blue-zig">criminal information</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">8. Interpol Function:</strong> <span class="u-blue-zig">The CBI</span> <span class="u-green">acts as </span><span class="u-blue-zig">the "National Central Bureau"</span> <span class="u-green">of </span><span class="u-red-zig">Interpol</span> <span class="u-green">in </span><span class="u-red-zig">India</span>. <span class="u-blue-zig">The Interpol Wing</span> <span class="u-green">of </span><span class="u-blue-zig">the CBI</span> <span class="u-green">coordinates </span><span class="u-blue-zig">requests</span> <span class="u-green">for </span><span class="u-blue-zig">investigation-related activities</span> <span class="u-green">originating from </span><span class="u-blue-zig">Indian law enforcement agencies</span> <span class="u-green">and </span><span class="u-blue-zig">the member countries</span> <span class="u-green">of </span><span class="u-blue-zig">the Interpol</span>.
+    </p>
+
+    <div class="section-header">CBI-STILL CAGED PARROT</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. SC Criticism:</strong> <span class="u-blue-zig">Supreme Court of India</span> <span class="u-green">has made several </span><span class="u-blue-zig">observation and comment</span> <span class="u-green">against </span><span class="u-blue-zig">the inefficient functioning</span> <span class="u-green">of </span><span class="u-blue-zig">the CBI</span> <span class="u-green">and still this is continuing without </span><span class="u-blue-zig">much improving the situation</span>. <span class="u-blue-zig">The Supreme Court of India</span> <span class="u-green">has criticised </span><span class="u-blue-zig">the CBI</span> <span class="u-green">by calling it </span><span class="u-blue-zig">a "caged parrot</span> <span class="u-blue-zig">speaking in its master's voice"</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>1. Executive Superintendence:</strong> <span class="u-green">It functions under </span><span class="u-blue-zig">the superintendence</span> <span class="u-green">of </span><span class="u-blue-zig">the Deptt. of Personnel</span>, <span class="u-blue-zig">Ministry of Personnel</span>, <span class="u-blue-zig">Pension &amp; Public Grievances</span>, <span class="u-blue-zig">Government of India</span> — <span class="u-green">which falls under </span><span class="u-blue-zig">the prime minister's office</span>.
+        </li>
+        <li>
+            <strong>2. Non-Statutory Status:</strong> <span class="u-blue-zig">The CBI</span> <span class="u-green">is not </span><span class="u-blue-zig">a statutory body</span> <span class="u-green">but derives its power to investigate from </span><span class="u-blue-zig">the Delhi Special Police Establishment Act</span>, <span class="u-red-zig">1946</span>.
+        </li>
+        <li>
+            <strong>3. Political Misuse:</strong> <span class="u-green">It has often been used by </span><span class="u-blue-zig">the government of the day</span> <span class="u-green">to cover up </span><span class="u-blue-zig">wrongdoing</span>, <span class="u-green">keep </span><span class="u-blue-zig">coalition allies in line</span> <span class="u-green">and </span><span class="u-blue-zig">political opponents at bay</span>.
+        </li>
+        <li>
+            <strong>4. Autonomy Deficit:</strong> <span class="u-blue-zig">Lack of enough financial</span> <span class="u-green">and </span><span class="u-blue-zig">administrative autonomy</span> <span class="u-green">in </span><span class="u-blue-zig">non-corruption cases</span> <span class="u-green">has been often cited as </span><span class="u-blue-zig">major roadblocks</span> <span class="u-green">in </span><span class="u-blue-zig">independent investigation</span> <span class="u-green">by </span><span class="u-blue-zig">CBI</span>.
+        </li>
+        <li>
+            <strong>5. Staffing Dependence:</strong> <span class="u-blue-zig">Dependence</span> <span class="u-green">on </span><span class="u-blue-zig">MHA</span> <span class="u-green">for </span><span class="u-blue-zig">staffing</span>, <span class="u-green">especially on </span><span class="u-blue-zig">deputations of IPS officers</span>, <span class="u-green">which affects </span><span class="u-blue-zig">its functional autonomy</span>.
+        </li>
+        <li>
+            <strong>6. RTI Exemption:</strong> <span class="u-blue-zig">CBI</span> <span class="u-green">is exempted from </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">the Right to Information Act</span>, <span class="u-green">thus, lacking </span><span class="u-blue-zig">public accountability</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 219</div>
+</div>
+
+
+
+<!-- Pages 220-224: CH22 - EXTRA CONSTITUTIONAL BODIES (Continuation) -->
+<!-- No CSS here — CSS is on page 215 only -->
+
+<!-- PAGE 220 -->
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>1. Prior Approval Obstacle:</strong>
+<span class="u-blue-zig">Prior approval</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">Central Government</span>
+<span class="u-green"> to conduct </span>
+<span class="u-blue-zig">inquiry or investigation</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">the employees</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">Central Government</span>,
+<span class="u-green"> of the level of </span>
+<span class="u-blue-zig">Joint Secretary and above</span>
+<span class="u-green"> is </span>
+<span class="u-blue-zig">a big obstacle</span>
+<span class="u-green"> in combating </span>
+<span class="u-blue-zig">corruption at higher levels</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">bureaucracy</span>.
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">1. Statutory Status Need:</strong> <span class="u-green">As long as </span>
+<span class="u-blue-zig">the government of the day</span>
+<span class="u-green"> has the power to </span>
+<span class="u-blue-zig">transfer and post officials</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">its choice</span>
+<span class="u-green"> in the </span>
+<span class="u-blue-zig">CBI</span>,
+<span class="u-blue-zig">the investigating agency</span>
+<span class="u-green"> will not enjoy </span>
+<span class="u-blue-zig">autonomy</span>
+<span class="u-green"> and will be unable to </span>
+<span class="u-blue-zig">investigate cases freely</span>.
+<span class="u-green">Providing </span>
+<span class="u-blue-zig">statutory status</span>
+<span class="u-green"> through </span>
+<span class="u-blue-zig">legislation</span>
+<span class="u-green"> equivalent to that provided to the </span>
+<span class="u-blue-zig">Comptroller &amp; Auditor General</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">the Election Commission</span>
+<span class="u-green"> will help maintain </span>
+<span class="u-blue-zig">the independence</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the institution</span>.
+</p>
+
+<div class="section-header">CENTRAL INFORMATION COMMISSION</div>
+
+<p>
+<strong style="color: var(--primary-red);">1. Statutory Establishment:</strong>
+<span class="u-blue-zig">The Central Information Commission</span>
+<span class="u-green"> set up under the </span>
+<span class="u-blue-zig">Right to Information Act</span>
+<span class="u-green"> is the </span>
+<span class="u-blue-zig">authorized quasi judicial body</span>,
+<span class="u-green"> established in </span>
+<span class="u-red-zig">2005</span>.
+</p>
+
+<ul>
+<li>
+<strong>1. Commission Composition:</strong>
+<span class="u-green">It has </span>
+<span class="u-blue-zig">chief information commissioner</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">up to 10 information commissioners</span>.
+<ul>
+<li>
+<strong>a. Appointment Process:</strong>
+<span class="u-green">All are appointed by the </span>
+<span class="u-red-zig">President</span>
+<span class="u-green"> on recommendation of </span>
+<span class="u-blue-zig">Prime minister</span>,
+<span class="u-blue-zig">union minister nominated by him</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">leader of opposition</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">Lok Sabha</span>.
+</li>
+</ul>
+</li>
+<li>
+<strong>2. Membership Qualification:</strong>
+<span class="u-blue-zig">Qualification for membership</span>
+<span class="u-green"> to </span>
+<span class="u-blue-zig">commission</span>
+<span class="u-green"> are </span>
+<span class="u-blue-zig">People should person of eminence</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">public life</span>
+<span class="u-green"> with experience in field of </span>
+<span class="u-blue-zig">law</span>,
+<span class="u-blue-zig">science and technology</span>,
+<span class="u-blue-zig">governance</span>,
+<span class="u-blue-zig">social service</span>,
+<span class="u-blue-zig">management</span>,
+<span class="u-blue-zig">journalism</span>,
+<span class="u-blue-zig">mass media</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">administration</span>.
+<ul>
+<li>
+<strong>a. Disqualification Criteria:</strong>
+<span class="u-green">They should not be </span>
+<span class="u-blue-zig">MP / MLA's</span>
+<span class="u-green"> or connected to </span>
+<span class="u-blue-zig">any political party</span>,
+<span class="u-green"> doing </span>
+<span class="u-blue-zig">some business</span>
+<span class="u-green"> or holding </span>
+<span class="u-blue-zig">office of profit</span>.
+</li>
+</ul>
+</li>
+<li>
+<strong>3. Tenure of Office:</strong>
+<span class="u-green">They hold office till </span>
+<span class="u-blue-zig">age of 65</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">5 years</span>.
+<ul>
+<li>
+<strong>a. Re-appointment Clause:</strong>
+<span class="u-blue-zig">The information commissioner</span>
+<span class="u-green"> is eligible for </span>
+<span class="u-blue-zig">post of chief information commissioner</span>
+<span class="u-green"> but can be in office for </span>
+<span class="u-blue-zig">maximum 5 years</span>
+<span class="u-green"> including </span>
+<span class="u-blue-zig">his tenure</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">information commissioner</span>.
+</li>
+</ul>
+</li>
+<li>
+<strong>4. Removal Grounds:</strong>
+<span class="u-blue-zig">Removal</span>
+<span class="u-green"> is done by </span>
+<span class="u-red-zig">president</span>
+<span class="u-green"> on grounds of </span>
+<span class="u-blue-zig">bankruptcy</span>,
+<span class="u-blue-zig">unsound mind</span>,
+<span class="u-blue-zig">infirmity of body or mind</span>,
+<span class="u-blue-zig">sentenced to imprisonment</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">a crime</span>,
+<span class="u-green"> or engages in </span>
+<span class="u-blue-zig">paid employment</span>.
+<ul>
+<li>
+<strong>a. SC Inquiry Removal:</strong>
+<span class="u-green">He can also be removed for </span>
+<span class="u-blue-zig">proved misbehavior or incapacity</span>
+<span class="u-green"> if </span>
+<span class="u-blue-zig">SC inquiry</span>
+<span class="u-green"> finds him </span>
+<span class="u-blue-zig">guilty</span>.
+<span class="u-green">They can resign by writing to </span>
+<span class="u-red-zig">president</span>.
+</li>
+</ul>
+</li>
+</ul>
+
+<div class="section-header">POWERS &amp; FUNCTIONS</div>
+
+<ul>
+<li>
+<strong>(a) Complaint Inquiry:</strong>
+<span class="u-green">It is the duty of the </span>
+<span class="u-blue-zig">Commission</span>
+<span class="u-green"> to receive and inquire into </span>
+<span class="u-blue-zig">a complaint</span>
+<span class="u-green"> from </span>
+<span class="u-blue-zig">any person</span>:
+</li>
+<li>
+<strong>(b) Suo-Moto Power:</strong>
+<span class="u-blue-zig">The Commission</span>
+<span class="u-green"> can order </span>
+<span class="u-blue-zig">inquiry into any matter</span>
+<span class="u-green"> if there are </span>
+<span class="u-blue-zig">reasonable grounds</span>
+(<span class="u-blue-zig">suo-moto power</span>).
+</li>
+<li>
+<strong>(c) Civil Court Powers:</strong>
+<span class="u-green">While inquiring, </span>
+<span class="u-blue-zig">the Commission</span>
+<span class="u-green"> has the powers of </span>
+<span class="u-blue-zig">a civil court</span>
+<span class="u-green"> in respect of the </span>
+<span class="u-blue-zig">following matters</span> :
+</li>
+<li>
+<strong>(d) Record Examination:</strong>
+<span class="u-green">During the inquiry of </span>
+<span class="u-blue-zig">a complaint</span>,
+<span class="u-blue-zig">the Commission</span>
+<span class="u-green"> may examine </span>
+<span class="u-blue-zig">any record</span>
+<span class="u-green"> which is under the control of the </span>
+<span class="u-blue-zig">public authority</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">no such record</span>
+<span class="u-green"> may be withheld from it on </span>
+<span class="u-blue-zig">any grounds</span>.
+<span class="u-green">In other words, </span>
+<span class="u-blue-zig">all public records</span>
+<span class="u-green"> must be given to the </span>
+<span class="u-blue-zig">Commission</span>
+<span class="u-green"> during inquiry for </span>
+<span class="u-blue-zig">examination</span>.
+</li>
+<li>
+<strong>(e) Compliance Power:</strong>
+<span class="u-blue-zig">The Commission</span>
+<span class="u-green"> has the power to </span>
+<span class="u-blue-zig">secure compliance</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">its decisions</span>
+<span class="u-green"> from the </span>
+<span class="u-blue-zig">public authority</span>.
+</li>
+</ul>
+
+<div class="page-number">Page 220</div>
+</div>
+
+<!-- PAGE 221 -->
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>(f) Annual Report:</strong>
+<span class="u-blue-zig">The Commission</span>
+<span class="u-green"> submits </span>
+<span class="u-blue-zig">an annual report</span>
+<span class="u-green"> to the </span>
+<span class="u-blue-zig">Central Government</span>
+<span class="u-green"> on the implementation of the </span>
+<span class="u-blue-zig">provisions of this Act</span>.
+</li>
+</ul>
+
+<div class="section-header">QUASI JUDICIAL POWER</div>
+
+<ul>
+<li>
+<strong>1. Summoning Power:</strong>
+<span class="u-blue-zig">Summoning and enforcing attendance</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">persons</span>,
+<span class="u-green"> compelling them to give </span>
+<span class="u-blue-zig">oral or written evidence</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">oath</span>
+<span class="u-green"> and to produce </span>
+<span class="u-blue-zig">documents or things</span>;
+</li>
+<li>
+<strong>2. Document Inspection:</strong>
+<span class="u-green">Requiring the </span>
+<span class="u-blue-zig">discovery and inspection</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">documents</span>;
+</li>
+<li>
+<strong>3. Affidavit Evidence:</strong>
+<span class="u-green">Receiving </span>
+<span class="u-blue-zig">evidence on affidavit</span> ;
+</li>
+<li>
+<strong>4. Public Records Requisition:</strong>
+<span class="u-green">Requisitioning </span>
+<span class="u-blue-zig">public records or copies</span>
+<span class="u-green"> from </span>
+<span class="u-blue-zig">any court or office</span>
+</li>
+<li>
+<strong>5. Witness Examination:</strong>
+<span class="u-green">Issuing </span>
+<span class="u-blue-zig">summons</span>
+<span class="u-green"> for examination of </span>
+<span class="u-blue-zig">witnesses or documents</span>
+<span class="u-blue-zig">any other matter</span>
+<span class="u-green"> which may be </span>
+<span class="u-blue-zig">prescribed</span>.
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">1. Parliamentary Reporting:</strong>
+<span class="u-blue-zig">The Central Government</span>
+<span class="u-green"> places </span>
+<span class="u-blue-zig">this report</span>
+<span class="u-green"> before </span>
+<span class="u-blue-zig">each House of Parliament</span>.
+</p>
+
+<p>
+<strong style="color: var(--primary-red);">2. Quasi Judicial Duty:</strong>
+<span class="u-blue-zig">The Central Information Commission</span>/<span class="u-blue-zig">State Information Commission</span>
+<span class="u-green"> has a </span>
+<span class="u-blue-zig">Quasi Judicial duty</span>
+<span class="u-green"> to receive complaints from </span>
+<span class="u-blue-zig">any person</span> –
+</p>
+
+<ul>
+<li>
+<strong>1. PIO Non-Appointment:</strong>
+<span class="u-green">Who has not been able to submit </span>
+<span class="u-blue-zig">an information request</span>
+<span class="u-green"> because </span>
+<span class="u-blue-zig">a PIO</span>
+<span class="u-green"> has not been </span>
+<span class="u-blue-zig">appointed</span>
+</li>
+<li>
+<strong>2. Information Refusal:</strong>
+<span class="u-green">Who has been refused </span>
+<span class="u-blue-zig">information</span>
+<span class="u-green"> that was </span>
+<span class="u-blue-zig">requested</span>;
+</li>
+<li>
+<strong>3. No Response Received:</strong>
+<span class="u-green">Who has received </span>
+<span class="u-blue-zig">no response</span>
+<span class="u-green"> to </span>
+<span class="u-blue-zig">his/her information request</span>
+<span class="u-green"> within the </span>
+<span class="u-blue-zig">specified time limits</span> ;
+</li>
+<li>
+<strong>4. Unreasonable Fees:</strong>
+<span class="u-green">Who thinks the </span>
+<span class="u-blue-zig">fees charged</span>
+<span class="u-green"> are </span>
+<span class="u-blue-zig">unreasonable</span> ;
+</li>
+<li>
+<strong>5. Incomplete Information:</strong>
+<span class="u-green">Who thinks </span>
+<span class="u-blue-zig">information given</span>
+<span class="u-green"> is </span>
+<span class="u-blue-zig">incomplete or false or misleading</span> ;
+<span class="u-green">and </span>
+<span class="u-blue-zig">any other matter</span>
+<span class="u-green"> relating to </span>
+<span class="u-blue-zig">obtaining information</span>
+<span class="u-green"> under </span>
+<span class="u-blue-zig">this law</span>.
+</li>
+</ul>
+
+<div class="section-header">CHALLENGES</div>
+
+<ul>
+<li>
+<strong>1. Enforcement Deficit:</strong>
+<span class="u-blue-zig">The RTI act</span>
+<span class="u-green"> did not give </span>
+<span class="u-blue-zig">adequate authority</span>
+<span class="u-green"> to </span>
+<span class="u-blue-zig">IC</span>
+<span class="u-green"> to enforce </span>
+<span class="u-blue-zig">their decisions</span>.
+<span class="u-green">They can only direct </span>
+<span class="u-blue-zig">authority</span>
+<span class="u-green"> to award </span>
+<span class="u-blue-zig">compensation to an applicant</span>,
+<span class="u-green"> but </span>
+<span class="u-blue-zig">no authority</span>
+<span class="u-green"> if such directions are </span>
+<span class="u-blue-zig">neglected</span>.
+</li>
+<li>
+<strong>2. Penalty Limitation:</strong>
+<span class="u-blue-zig">Commission</span>
+<span class="u-green"> can impose </span>
+<span class="u-blue-zig">a maximum penalty</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">25000 Rupees</span>
+<span class="u-green"> as a </span>
+<span class="u-blue-zig">deterrent</span>,
+<span class="u-green"> but it works only when the </span>
+<span class="u-blue-zig">institution</span>
+<span class="u-green"> involve in </span>
+<span class="u-blue-zig">lower level</span>
+<span class="u-green"> and in </span>
+<span class="u-blue-zig">ministerial and upper level</span>,
+<span class="u-green"> even this </span>
+<span class="u-blue-zig">deterrent</span>
+<span class="u-green"> may not </span>
+<span class="u-blue-zig">apply</span>.
+</li>
+<li>
+<strong>3. Staffing Dependence:</strong>
+<span class="u-green">Although </span>
+<span class="u-blue-zig">CIC</span>
+<span class="u-green"> enjoys </span>
+<span class="u-blue-zig">complete financial and administrative powers</span>
+<span class="u-green"> of a </span>
+<span class="u-blue-zig">Department of Government</span>,
+<span class="u-green"> they have to dependent upon the </span>
+<span class="u-blue-zig">government</span>
+<span class="u-green"> for filling </span>
+<span class="u-blue-zig">posts</span>
+<span class="u-green"> and therefore, presently, </span>
+<span class="u-blue-zig">CIC</span>
+<span class="u-green"> has been functioning with </span>
+<span class="u-blue-zig">less than their prescribed strength</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">11 members</span>.
+</li>
+<li>
+<strong>4. Disposal Delay:</strong>
+<span class="u-green">It eventually leads to the </span>
+<span class="u-blue-zig">delay in disposal</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">cases</span>,
+<span class="u-green"> that is compounded by the </span>
+<span class="u-blue-zig">backlogs</span>
+<span class="u-green"> in the </span>
+<span class="u-blue-zig">High Courts</span>,
+<span class="u-green"> where the </span>
+<span class="u-blue-zig">number of decisions</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">commission</span>
+<span class="u-green"> are </span>
+<span class="u-blue-zig">challenged</span>.
+</li>
+</ul>
+
+<div class="page-number">Page 221</div>
+</div>
+
+<!-- PAGE 222 -->
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>5. Democratic Gem:</strong>
+<span class="u-blue-zig">The RTI Act</span>
+<span class="u-green"> is </span>
+<span class="u-blue-zig">a gem</span>
+<span class="u-green"> for a </span>
+<span class="u-blue-zig">Parliamentary democracy</span>
+<span class="u-green"> like </span>
+<span class="u-red-zig">India</span>.
+</li>
+<li>
+<strong>6. Basic Human Right:</strong>
+<span class="u-green">Moreover, it's a </span>
+<span class="u-blue-zig">basic human right</span>
+<span class="u-green"> to get </span>
+<span class="u-blue-zig">information</span>
+<span class="u-green"> that affect </span>
+<span class="u-blue-zig">our life</span>.
+<span class="u-blue-zig">CIC</span>
+<span class="u-green"> is an institution that acts like </span>
+<span class="u-blue-zig">a watchdog</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">this act</span>.
+</li>
+<li>
+<strong>7. Information Oversight:</strong>
+<span class="u-blue-zig">The very purpose</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">CIC</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">state information commissions</span>
+<span class="u-green"> is to have a look whether </span>
+<span class="u-blue-zig">relevant information</span>
+<span class="u-green"> are provided to the </span>
+<span class="u-blue-zig">people</span>.
+</li>
+<li>
+<strong>8. Institutional Empowerment:</strong>
+<span class="u-green">For that matter there is a need to </span>
+<span class="u-blue-zig">empower the institution</span>
+<span class="u-green"> as it has to deal with </span>
+<span class="u-blue-zig">all the level of officials</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">various departments</span>.
+</li>
+<li>
+<strong>9. Autonomous Commission:</strong>
+<span class="u-green">There is a need to enhance the </span>
+<span class="u-blue-zig">working efficiency</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">institution</span>
+<span class="u-green"> and make </span>
+<span class="u-blue-zig">CIC</span>
+<span class="u-blue-zig">an autonomous and independent commission</span>.
+</li>
+</ul>
+
+<div class="section-header">CENTRAL VIGILANCE COMMISSION</div>
+
+<p>
+<strong style="color: var(--primary-red);">1. Statutory Origin:</strong>
+<span class="u-green">It is the </span>
+<span class="u-blue-zig">apex vigilance institution</span>,
+<span class="u-green"> created on the recommendations of </span>
+<span class="u-red-zig">Santhanam committee</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">1964</span>
+<span class="u-green"> but was conferred with </span>
+<span class="u-blue-zig">statutory status</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">2003</span>.
+</p>
+
+<ul>
+<li>
+<strong>1. Not Investigating Agency:</strong>
+<span class="u-green">It must be informed that </span>
+<span class="u-blue-zig">Central Vigilance Commission</span>
+<span class="u-green"> is not </span>
+<span class="u-blue-zig">an investigating agency</span>.
+</li>
+<li>
+<strong>2. Coalition Functioning:</strong>
+<span class="u-green">It operates in coalition with the </span>
+<span class="u-blue-zig">CBI</span>
+<span class="u-green"> or the </span>
+<span class="u-blue-zig">Departmental Chief Vigilance Officers</span>.
+<span class="u-green">It submits its report to the </span>
+<span class="u-red-zig">President of India</span>.
+</li>
+<li>
+<strong>3. Commission Composition:</strong>
+<span class="u-blue-zig">The Commission</span>
+<span class="u-green"> shall consist of </span>-
+<span class="u-blue-zig">A Central Vigilance Commissioner</span> –
+<span class="u-blue-zig">Chairperson</span>
+<span class="u-green"> &amp; </span>
+<span class="u-blue-zig">Not more than two Vigilance Commissioners</span>
+</li>
+<li>
+<strong>4. Appointment Process:</strong>
+<span class="u-green">They are appointed by the </span>
+<span class="u-red-zig">president</span>
+<span class="u-green"> on recommendations of a committee of </span>
+<span class="u-blue-zig">PM</span> +
+<span class="u-blue-zig">Home minister</span> +
+<span class="u-blue-zig">leader of opposition</span>
+<span class="u-red-zig">Lok Sabha</span>.
+</li>
+<li>
+<strong>5. Tenure of Office:</strong>
+<span class="u-green">They occupy post till </span>
+<span class="u-blue-zig">age of 65 yrs</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">4 year term</span>.
+</li>
+<li>
+<strong>6. Post-Retirement Bar:</strong>
+<span class="u-green">They are not eligible for </span>
+<span class="u-blue-zig">any other govt appointment</span>
+<span class="u-green"> under </span>
+<span class="u-blue-zig">centre or state</span>
+<span class="u-green"> after ceasing to hold </span>
+<span class="u-blue-zig">office</span>.
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">2. Removal Grounds:</strong>
+<span class="u-green">They are removed by </span>
+<span class="u-red-zig">President</span>
+<span class="u-green"> on grounds of </span>
+<span class="u-blue-zig">bankruptcy</span>,
+<span class="u-blue-zig">unsound mind</span>,
+<span class="u-blue-zig">infirmity of body or mind</span>,
+<span class="u-blue-zig">sentenced to imprisonment</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">a crime</span>,
+<span class="u-green"> or engages in </span>
+<span class="u-blue-zig">paid employment</span>
+<span class="u-green"> or has acquired </span>
+<span class="u-blue-zig">financial or other interest</span>
+<span class="u-green"> that might affect </span>
+<span class="u-blue-zig">his judgment</span>.
+</p>
+
+<ul>
+<li>
+<strong>7. SC Inquiry Removal:</strong>
+<span class="u-green">He can also be removed for </span>
+<span class="u-blue-zig">proved misbehaviour or incapacity</span>
+<span class="u-green"> if </span>
+<span class="u-blue-zig">SC inquiry</span>
+<span class="u-green"> finds him </span>
+<span class="u-blue-zig">guilty</span>.
+</li>
+<li>
+<strong>8. Resignation Process:</strong>
+<span class="u-green">They can resign by writing to </span>
+<span class="u-red-zig">president</span>.
+</li>
+</ul>
+
+<div class="section-header">PURPOSE</div>
+
+<ul>
+<li>
+<strong>1. Anti-Corruption Mandate:</strong>
+<span class="u-blue-zig">The main purpose</span>
+<span class="u-green"> for which this </span>
+<span class="u-blue-zig">important body</span>
+<span class="u-green"> had been established was to ensure </span>
+<span class="u-blue-zig">all sorts of corruptions</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">government sector</span>
+<span class="u-green"> could be well </span>
+<span class="u-blue-zig">prevented and addressed minutely</span>.
+</li>
+<li>
+<strong>2. Autonomous Vigilance Body:</strong>
+<span class="u-green">It is an </span>
+<span class="u-blue-zig">autonomous body</span>,
+<span class="u-green"> responsible for monitoring </span>
+<span class="u-blue-zig">all vigilance activities</span>
+<span class="u-green"> under the </span>
+<span class="u-blue-zig">union government</span>.
+</li>
+<li>
+<strong>3. Advisory Role:</strong>
+<span class="u-blue-zig">Its major role</span>
+<span class="u-green"> is to recommend </span>
+<span class="u-blue-zig">government agencies</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">"planning, executing, reviewing and reforming"</span>
+<span class="u-blue-zig">their vigilance capability</span>.
+</li>
+<li>
+<strong>4. CVC Formation:</strong>
+<span class="u-blue-zig">Central Government of India</span>
+<span class="u-green"> formed </span>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> in the year </span>
+<span class="u-red-zig">1964</span>
+<span class="u-green"> as an </span>
+<span class="u-blue-zig">important body</span>
+<span class="u-green"> that could take into account the </span>
+<span class="u-blue-zig">measures and steps</span>
+<span class="u-green"> to prevent </span>
+<span class="u-blue-zig">all the corruptions</span>
+<span class="u-green"> especially the </span>
+<span class="u-blue-zig">governmental ones</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">a better system and governance</span>.
+</li>
+</ul>
+
+<div class="page-number">Page 222</div>
+</div>
+
+<!-- PAGE 223 -->
+<div class="pdf-page">
+
+<div class="section-header">FUNCTIONS</div>
+
+<ul>
+<li>
+<strong>1. Inquiry Power:</strong>
+<span class="u-green">To undertake </span>
+<span class="u-blue-zig">an inquiry</span>
+<span class="u-green"> or cause an inquiry or investigation to be made into </span>
+<span class="u-blue-zig">any transaction</span>
+<span class="u-green"> in which </span>
+<span class="u-blue-zig">a public servant</span>
+<span class="u-green"> working in </span>
+<span class="u-blue-zig">any organization</span>,
+<span class="u-green"> to which the </span>
+<span class="u-blue-zig">executive control</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">Government of India</span>
+<span class="u-green"> extends, is suspected or alleged to have acted for </span>
+<span class="u-blue-zig">an improper purpose</span>
+<span class="u-green"> or in </span>
+<span class="u-blue-zig">a corrupt manner</span>;
+</li>
+<li>
+<strong>2. Disciplinary Advisory:</strong>
+<span class="u-green">To tender </span>
+<span class="u-blue-zig">independent and impartial advice</span>
+<span class="u-green"> to the </span>
+<span class="u-blue-zig">disciplinary and other authorities</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">disciplinary cases</span>,
+<span class="u-green"> involving </span>
+<span class="u-blue-zig">vigilance angle</span>
+<span class="u-green"> at different stages i.e. </span>
+<span class="u-blue-zig">investigation</span>,
+<span class="u-blue-zig">inquiry</span>,
+<span class="u-blue-zig">appeal</span>,
+<span class="u-blue-zig">review</span>
+<span class="u-blue-zig">etc</span>.
+</li>
+<li>
+<strong>3. Supervisory Check:</strong>
+<span class="u-green">To exercise </span>
+<span class="u-blue-zig">a general check and supervision</span>
+<span class="u-green"> over </span>
+<span class="u-blue-zig">vigilance and anti-corruption work</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">Ministries or Departments</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">Government of India</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">other organizations</span>
+<span class="u-green"> to which the </span>
+<span class="u-blue-zig">executive power</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">Union</span>
+<span class="u-green"> extends; </span>
+<span class="u-green">and</span>
+</li>
+<li>
+<strong>4. Whistleblower Protection:</strong>
+<span class="u-green">To undertake or cause </span>
+<span class="u-blue-zig">an inquiry</span>
+<span class="u-green"> into </span>
+<span class="u-blue-zig">complaints received</span>
+<span class="u-green"> under the </span>
+<span class="u-blue-zig">Public Interest Disclosure</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Protection of Informer</span>
+<span class="u-green"> and recommend </span>
+<span class="u-blue-zig">appropriate action</span>.
+</li>
+<li>
+<strong>5. Consultation Mandate:</strong>
+<span class="u-blue-zig">The Central Government</span>
+<span class="u-green"> is required to consult the </span>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> in making </span>
+<span class="u-blue-zig">rules and regulations</span>
+<span class="u-green"> governing the </span>
+<span class="u-blue-zig">vigilance and disciplinary matters</span>
+<span class="u-green"> relating to the </span>
+<span class="u-blue-zig">members</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">Central Services</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">All India Services</span>.
+</li>
+<li>
+<strong>6. DSPE Superintendence:</strong>
+<span class="u-green">To exercise </span>
+<span class="u-blue-zig">superintendence</span>
+<span class="u-green"> over the functioning of the </span>
+<span class="u-blue-zig">Delhi Special Police Establishment</span>
+<span class="u-green"> with respect to </span>
+<span class="u-blue-zig">investigation</span>
+<span class="u-green"> under the </span>
+<span class="u-blue-zig">Prevention of Corruption Act</span>,
+<span class="u-red-zig">1988</span>;
+<span class="u-green"> or </span>
+<span class="u-blue-zig">offence under CrPC</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">certain categories</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">public servants</span>.
+</li>
+<li>
+<strong>7. DSPE Investigation Review:</strong>
+<span class="u-green">To give </span>
+<span class="u-blue-zig">directions</span>
+<span class="u-green"> and to review the </span>
+<span class="u-blue-zig">progress of investigations</span>
+<span class="u-green"> conducted by the </span>
+<span class="u-blue-zig">DSPE</span>.
+</li>
+<li>
+<strong>8. CBI Director Appointment:</strong>
+<span class="u-blue-zig">The Director of the CBI</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Director of Enforcement</span>
+<span class="u-green"> should be appointed on the </span>
+<span class="u-blue-zig">recommendations</span>
+<span class="u-green"> of a </span>
+<span class="u-blue-zig">Committee</span>
+<span class="u-green"> headed by the </span>
+<span class="u-blue-zig">Central Vigilance Commissioner</span>,
+<span class="u-blue-zig">the Home Secretary</span>
+<span class="u-green"> and the </span>
+<span class="u-blue-zig">Secretary</span>
+<span class="u-green"> in the </span>
+<span class="u-blue-zig">Department of Personnel</span>
+(<span class="u-red-zig">Vineet Narain case</span>).
+</li>
+</ul>
+
+<div class="section-header">LIMITATIONS</div>
+
+<ul>
+<li>
+<strong>1. Advisory Body Only:</strong>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> is only an </span>
+<span class="u-blue-zig">advisory body</span>.
+<span class="u-blue-zig">Central Government Departments</span>
+<span class="u-green"> are free to either </span>
+<span class="u-blue-zig">accept or reject</span>
+<span class="u-blue-zig">CVC's advice</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">corruption cases</span>.
+</li>
+<li>
+<strong>2. Inadequate Resources:</strong>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> does not have </span>
+<span class="u-blue-zig">adequate resources</span>
+<span class="u-green"> compared with </span>
+<span class="u-blue-zig">number of complaints</span>
+<span class="u-green"> that it receives. It is a </span>
+<span class="u-blue-zig">very small set up</span>
+<span class="u-green"> with </span>
+<span class="u-blue-zig">sanctioned staff strength</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">299</span>.
+<span class="u-green">Whereas, it is supposed to check </span>
+<span class="u-blue-zig">corruption</span>
+<span class="u-green"> in more than </span>
+<span class="u-blue-zig">1500 central government departments</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">ministries</span>.
+</li>
+<li>
+<strong>3. Joint Secretary Restriction:</strong>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> cannot direct </span>
+<span class="u-blue-zig">CBI</span>
+<span class="u-green"> to initiate </span>
+<span class="u-blue-zig">inquiries</span>
+<span class="u-green"> against </span>
+<span class="u-blue-zig">any officer</span>
+<span class="u-green"> of the level of </span>
+<span class="u-blue-zig">Joint Secretary and above</span>
+<span class="u-green"> on its own. </span>
+<span class="u-blue-zig">Such permission</span>
+<span class="u-green"> has to be obtained from the </span>
+<span class="u-blue-zig">concerned department</span>.
+</li>
+<li>
+<strong>4. No Criminal Power:</strong>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> does not have powers to </span>
+<span class="u-blue-zig">register criminal case</span>.
+<span class="u-green">It deals only with </span>
+<span class="u-blue-zig">vigilance or disciplinary cases</span>.
+</li>
+<li>
+<strong>5. Limited CBI Oversight:</strong>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> has </span>
+<span class="u-blue-zig">supervisory powers</span>
+<span class="u-green"> over </span>
+<span class="u-blue-zig">CBI</span>.
+<span class="u-green">However, </span>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> does not have the power to call for </span>
+<span class="u-blue-zig">any file</span>
+<span class="u-green"> from </span>
+<span class="u-blue-zig">CBI</span>
+<span class="u-green"> or to direct </span>
+<span class="u-blue-zig">CBI</span>
+<span class="u-green"> to investigate </span>
+<span class="u-blue-zig">any case</span>
+<span class="u-green"> in a </span>
+<span class="u-blue-zig">particular manner</span>.
+<span class="u-blue-zig">CBI</span>
+<span class="u-green"> is under </span>
+<span class="u-blue-zig">administrative control</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">Department of Personnel and Training</span>
+(<span class="u-blue-zig">DoPT</span>).
+<span class="u-green">Which means that, the </span>
+<span class="u-blue-zig">powers to appoint, transfer, suspend</span>
+<span class="u-blue-zig">CBI officers</span>
+<span class="u-green"> lie with </span>
+<span class="u-blue-zig">DoPT</span>.
+</li>
+</ul>
+
+<div class="page-number">Page 223</div>
+</div>
+
+<!-- PAGE 224 -->
+<div class="pdf-page">
+
+<p>
+<strong style="color: var(--primary-red);">1. Government Control:</strong>
+<span class="u-blue-zig">Appointments to CVC</span>
+<span class="u-green"> are indirectly under the </span>
+<span class="u-blue-zig">control</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">Govt of India</span>,
+<span class="u-green"> though the </span>
+<span class="u-blue-zig">leader of the Opposition</span>
+(<span class="u-green">in </span>
+<span class="u-red-zig">Lok Sabha</span>)
+<span class="u-green"> is a member of the </span>
+<span class="u-blue-zig">Committee</span>
+<span class="u-green"> to select </span>
+<span class="u-blue-zig">CVC and VCs</span>.
+<span class="u-green">But the </span>
+<span class="u-blue-zig">Committee</span>
+<span class="u-green"> considers </span>
+<span class="u-blue-zig">candidates</span>
+<span class="u-green"> put up before it. </span>
+<span class="u-blue-zig">These candidates</span>
+<span class="u-green"> are decided by the </span>
+<span class="u-blue-zig">Government</span>.
+</p>
+
+<p>
+<strong style="color: var(--primary-red);">2. Structural Weakness:</strong>
+<span class="u-green">As a result, although </span>
+<span class="u-blue-zig">CVC</span>
+<span class="u-green"> is relatively independent in its </span>
+<span class="u-blue-zig">functioning</span>,
+<span class="u-green"> it has neither </span>
+<span class="u-blue-zig">resources</span>
+<span class="u-green"> nor </span>
+<span class="u-blue-zig">powers</span>
+<span class="u-green"> to inquire and take action on </span>
+<span class="u-blue-zig">complaints of corruption</span>
+<span class="u-green"> that may act as an </span>
+<span class="u-blue-zig">effective deterrence</span>
+<span class="u-green"> against </span>
+<span class="u-blue-zig">corruption</span>.
+</p>
+
+<div class="section-header">NATIONAL HUMAN RIGHTS COMMISSION</div>
+
+<p>
+<strong style="color: var(--primary-red);">1. UDHR Origin:</strong>
+<span class="u-blue-zig">The UN Commission on Human Rights</span>
+<span class="u-green"> framed the </span>
+<span class="u-blue-zig">Universal Declaration of Human Rights</span>
+(<span class="u-blue-zig">UDHR</span>).
+<span class="u-blue-zig">UDHR</span>
+<span class="u-green"> was approved by the </span>
+<span class="u-blue-zig">United Nations General Assembly</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">1948</span>.
+</p>
+
+<ul>
+<li>
+<strong>1. Customary Law Force:</strong>
+<span class="u-green">Although the </span>
+<span class="u-blue-zig">UDHR</span>
+<span class="u-green"> was a </span>
+<span class="u-blue-zig">non-binding resolution</span>,
+<span class="u-green"> it is now reflected to have acquired the </span>
+<span class="u-blue-zig">force of international customary</span>
+<span class="u-green"> which may be raised in </span>
+<span class="u-blue-zig">appropriate circumstances</span>
+<span class="u-green"> by </span>
+<span class="u-blue-zig">national and other judges</span>.
+</li>
+<li>
+<strong>2. UDHR Objectives:</strong>
+<span class="u-blue-zig">The UDHR</span>
+<span class="u-green"> desires </span>
+<span class="u-blue-zig">member nations</span>
+<span class="u-green"> to promote </span>
+<span class="u-blue-zig">a number of human, civil, economic</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">social rights</span>.
+</li>
+<li>
+<strong>3. Human Rights Day:</strong>
+<span class="u-blue-zig">The implementation</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">Universal Declaration</span>
+<span class="u-green"> is a </span>
+<span class="u-blue-zig">significant international commemoration</span>
+<span class="u-green"> marked each year on </span>
+<span class="u-red-zig">10 December</span>,
+<span class="u-green"> and is called </span>
+<span class="u-blue-zig">Human Rights Day</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">International Human Rights Day</span>.
+</li>
+<li>
+<strong>4. Institutional Strengthening:</strong>
+<span class="u-blue-zig">The international community</span>
+<span class="u-green"> has acknowledged the </span>
+<span class="u-blue-zig">mounting importance</span>
+<span class="u-green"> of strengthening </span>
+<span class="u-blue-zig">national human rights institutions</span>.
+</li>
+<li>
+<strong>5. Paris Principles:</strong>
+<span class="u-green">In this background, in the year </span>
+<span class="u-red-zig">1991</span>,
+<span class="u-blue-zig">a UN-sponsored meeting</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">representatives of national institutions</span>
+<span class="u-green"> held in </span>
+<span class="u-red-zig">Paris</span>,
+<span class="u-blue-zig">a comprehensive set of principles</span>
+<span class="u-green"> on the status of </span>
+<span class="u-blue-zig">national institutions</span>
+<span class="u-green"> was developed, these are commonly known as the </span>
+<span class="u-red-zig">Paris Principles</span>.
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">2. Foundation Basis:</strong>
+<span class="u-blue-zig">These principles</span>,
+<span class="u-green"> became the basis for the </span>
+<span class="u-blue-zig">establishment and operation</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">national human rights institutions</span>.
+</p>
+
+<ul>
+<li>
+<strong>6. NHRC Establishment:</strong>
+<span class="u-blue-zig">The National Human Rights Commission</span>,
+<span class="u-green"> abbreviated as </span>
+<span class="u-blue-zig">NHRC of India</span>
+<span class="u-green"> is an </span>
+<span class="u-blue-zig">autonomous public body</span>
+<span class="u-green"> founded on </span>
+<span class="u-red-zig">12 October 1993</span>
+<span class="u-green"> under the </span>
+<span class="u-blue-zig">Protection of Human Rights Ordinance</span>
+<span class="u-green"> of </span>
+<span class="u-red-zig">28 September 1993</span>.
+</li>
+<li>
+<strong>7. Statutory Base:</strong>
+<span class="u-green">It was given a </span>
+<span class="u-blue-zig">statutory base</span>
+<span class="u-green"> by the </span>
+<span class="u-blue-zig">Protection of Human Rights Act</span>,
+<span class="u-red-zig">1993</span>
+(<span class="u-blue-zig">TPHRA</span>).
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">3. Civil Court Powers:</strong>
+<span class="u-blue-zig">NHRC</span>
+<span class="u-green"> has the powers of a </span>
+<span class="u-blue-zig">civil court</span>.
+<span class="u-green">It has authority to grant </span>
+<span class="u-blue-zig">interim relief</span>.
+<span class="u-green">It has authority to recommend </span>
+<span class="u-blue-zig">payment of compensation or damages</span>.
+</p>
+
+<ul>
+<li>
+<strong>8. Implementation Monitoring:</strong>
+<span class="u-green">It has </span>
+<span class="u-blue-zig">exclusive mechanism</span>
+<span class="u-green"> with which it also monitors </span>
+<span class="u-blue-zig">implementation</span>
+<span class="u-green"> of its </span>
+<span class="u-blue-zig">various recommendations</span>.
+</li>
+</ul>
+
+<div class="section-header">EXECUTIVES</div>
+
+<ul>
+<li>
+<strong>1. Chairperson:</strong>
+<span class="u-blue-zig">A Chairperson</span>,
+<span class="u-blue-zig">retired Chief Justice of India</span>.
+</li>
+<li>
+<strong>2. SC Judge Member:</strong>
+<span class="u-blue-zig">One Member</span>
+<span class="u-green"> who is, or has been, </span>
+<span class="u-blue-zig">a Judge</span>
+<span class="u-green"> of the </span>
+<span class="u-blue-zig">Supreme Court of India</span>.
+</li>
+<li>
+<strong>3. HC Chief Justice Member:</strong>
+<span class="u-blue-zig">One Member</span>
+<span class="u-green"> who is, or has been, the </span>
+<span class="u-blue-zig">Chief Justice</span>
+<span class="u-green"> of a </span>
+<span class="u-blue-zig">High Court</span>.
+</li>
+</ul>
+
+<div class="page-number">Page 224</div>
+</div>
+
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>1. HR Members:</strong>
+<span class="u-blue-zig">Two Members</span>
+<span class="u-green">to be appointed from </span>
+<span class="u-blue-zig">among persons</span>
+<span class="u-green">having knowledge of, or </span>
+<span class="u-blue-zig">practical experience</span>
+<span class="u-green">in, </span>
+<span class="u-blue-zig">matters relating to</span>
+<span class="u-blue-zig"> human rights.</span>
+<ul>
+<li>
+<strong>a. Ex Officio Members:</strong>
+<span class="u-green">Additionally, </span>
+<span class="u-blue-zig">the Chairpersons</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">four National members</span> (<span class="u-blue-zig">1.Minorities</span>
+<span class="u-blue-zig">2.SC and ST</span>
+<span class="u-blue-zig">3.Women</span>),
+<span class="u-green">to serve as </span>
+<span class="u-blue-zig">ex officio members.</span>
+</li>
+</ul>
+</li>
+<li>
+<strong>2. Appointment Process:</strong>
+<span class="u-blue-zig">The Chairperson</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">the Members</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Commission</span>
+<span class="u-green">are appointed by </span>
+<span class="u-blue-zig">the President</span>
+<span class="u-green"> on the </span>
+<span class="u-blue-zig">recommendations</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">a Committee</span>
+<span class="u-green">consisting of </span>
+<span class="u-blue-zig">the Prime Minister</span>
+<span class="u-green"> as </span>
+<span class="u-blue-zig">Chairperson.</span>
+</li>
+<li>
+<strong>3. Committee Members:</strong>
+<span class="u-blue-zig">The members</span>
+<span class="u-green"> are </span>
+<span class="u-blue-zig">Speaker</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the House of the People</span>,
+<span class="u-blue-zig">Union Minister of Home Affairs</span>,
+<span class="u-blue-zig">Leader of the Opposition</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">the House of the People</span>,
+<span class="u-blue-zig">Leader of the Opposition</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">the Council of States</span>,
+<span class="u-blue-zig">Deputy Chairman</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Council of States.</span>
+</li>
+<li>
+<strong>4. Tenure:</strong>
+<span class="u-blue-zig">Term</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Chairman</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">members</span>
+<span class="u-green"> is </span>
+<span class="u-blue-zig">5 years</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">70 years of age</span>
+<span class="u-blue-zig"> whichever is earlier.</span>
+</li>
+<li>
+<strong>5. Post-Retirement Bar:</strong>
+<span class="u-green">After retirement </span>
+<span class="u-blue-zig">they</span>
+<span class="u-green"> are not eligible for </span>
+<span class="u-blue-zig">further appointment</span>
+<span class="u-green"> under </span>
+<span class="u-blue-zig">the Government of India</span>
+<span class="u-green"> or under </span>
+<span class="u-blue-zig">the Government of any State.</span>
+</li>
+<li>
+<strong>6. Removal Grounds:</strong>
+<span class="u-blue-zig">The Chairperson</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">members</span>
+<span class="u-green"> of </span>
+<span class="u-red-zig">NHRC</span>
+<span class="u-green"> can be removed only on </span>
+<span class="u-blue-zig">grounds</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">proved misbehaviour</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">incapacity.</span>
+</li>
+<li>
+<strong>7. Removal Procedure:</strong>
+<span class="u-blue-zig">The President</span>
+<span class="u-green">has to refer the matter to </span>
+<span class="u-blue-zig">Supreme Court</span>
+<span class="u-green"> and if after inquiry </span>
+<span class="u-blue-zig">Supreme Court</span>
+<span class="u-green"> finds that </span>
+<span class="u-blue-zig">the charge is right</span>;
+<span class="u-green">they can be removed by </span>
+<span class="u-blue-zig">the President.</span>
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">1. NHRC Headquarters:</strong>
+<span class="u-blue-zig">The headquarters</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the commission</span>
+<span class="u-green"> is at </span>
+<span class="u-red-zig">New Delhi.</span>
+</p>
+
+<ul>
+<li>
+<strong>8. Branch Offices:</strong>
+<span class="u-green">Though, with </span>
+<span class="u-blue-zig">the permission</span>
+<span class="u-green"> from </span>
+<span class="u-blue-zig">the government</span>,
+<span class="u-green">it can establish </span>
+<span class="u-blue-zig">offices</span>
+<span class="u-green"> at </span>
+<span class="u-blue-zig">other places</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">India.</span>
+</li>
+</ul>
+
+<div class="section-header">FUNCTIONS</div>
+
+<ul>
+<li>
+<strong>1. Grievance Investigation:</strong>
+<span class="u-green">To investigate </span>
+<span class="u-blue-zig">grievances</span>
+<span class="u-green">regarding the </span>
+<span class="u-blue-zig">violation of human rights</span>
+<span class="u-green"> either </span>
+<span class="u-blue-zig">suo moto</span>
+<span class="u-green"> or after receiving </span>
+<span class="u-blue-zig">a petition.</span>
+</li>
+<li>
+<strong>2. Scrutiny of Officials:</strong>
+<span class="u-green">To scrutinize </span>
+<span class="u-blue-zig">the failure of duties</span>
+<span class="u-green"> on the part of </span>
+<span class="u-blue-zig">any public official</span>
+<span class="u-green"> in preventing </span>
+<span class="u-blue-zig">the violation</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">human rights.</span>
+</li>
+<li>
+<strong>3. Judicial Intervention:</strong>
+<span class="u-green">To interfere in </span>
+<span class="u-blue-zig">any judicial proceedings</span>
+<span class="u-green">involving </span>
+<span class="u-blue-zig">any allegation</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">violation of human rights.</span>
+</li>
+<li>
+<strong>4. Jail Inspection:</strong>
+<span class="u-green">To visit </span>
+<span class="u-blue-zig">any jail</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">any other institution</span>
+<span class="u-green"> under the control of </span>
+<span class="u-blue-zig">the State Government</span>
+<span class="u-green">to see </span>
+<span class="u-blue-zig">the living conditions</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the inmates</span>
+<span class="u-green"> and to make </span>
+<span class="u-blue-zig">recommendations thereon.</span>
+</li>
+<li>
+<strong>5. Safeguard Review:</strong>
+<span class="u-green">To review </span>
+<span class="u-blue-zig">the safeguards</span>
+<span class="u-green">provided under </span>
+<span class="u-blue-zig">the constitution</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">any law</span>
+<span class="u-green"> for the protection of </span>
+<span class="u-blue-zig">the human rights</span>
+<span class="u-green"> and to recommend </span>
+<span class="u-blue-zig">appropriate remedial measures.</span>
+</li>
+<li>
+<strong>6. Treaty Study:</strong>
+<span class="u-green">To study </span>
+<span class="u-blue-zig">treaties</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">other international instruments</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">human rights</span>
+<span class="u-green"> and to make </span>
+<span class="u-blue-zig">recommendations</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">their effective implementation.</span>
+</li>
+<li>
+<strong>7. Research Promotion:</strong>
+<span class="u-green">To undertake and promote </span>
+<span class="u-blue-zig">research</span>
+<span class="u-green"> in the field of </span>
+<span class="u-blue-zig">human rights.</span>
+</li>
+<li>
+<strong>8. NGO Encouragement:</strong>
+<span class="u-green">To encourage </span>
+<span class="u-blue-zig">the efforts</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the non-governmental organisations</span>
+<span class="u-green">working in the field of </span>
+<span class="u-blue-zig">human rights.</span>
+</li>
+<li>
+<strong>9. HR Literacy:</strong>
+<span class="u-green">To spread </span>
+<span class="u-blue-zig">human rights literacy</span>
+<span class="u-green"> among </span>
+<span class="u-blue-zig">various sections of society</span>
+<span class="u-green"> and to promote </span>
+<span class="u-blue-zig">awareness</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the safeguards available</span>
+<span class="u-green"> for the protection of </span>
+<span class="u-blue-zig">these rights</span>
+<span class="u-green"> through </span>
+<span class="u-blue-zig">publications</span>,
+<span class="u-blue-zig">the media</span>,
+<span class="u-blue-zig">seminars</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">other means.</span>
+</li>
+</ul>
+
+<div class="page-number">Page 225</div>
+</div>
+
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>10. Counter-Terrorism Review:</strong>
+<span class="u-green">To review </span>
+<span class="u-blue-zig">all facts</span>
+<span class="u-green">related to </span>
+<span class="u-blue-zig">the activities</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the terrorists</span>
+<span class="u-green"> which obstruct the way of </span>
+<span class="u-blue-zig">the protection</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">human rights</span>
+<span class="u-green"> and to make </span>
+<span class="u-blue-zig">recommendations</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">their effective implementation.</span>
+</li>
+<li>
+<strong>11. Civil Court Powers:</strong>
+<span class="u-green">To make </span>
+<span class="u-blue-zig">an inquiry</span>
+<span class="u-green"> into </span>
+<span class="u-blue-zig">the complaints</span>
+<span class="u-green">submitted to it, </span>
+<span class="u-blue-zig">the commission</span>
+<span class="u-green">has the powers of </span>
+<span class="u-blue-zig">a civil court.</span>
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">1. State HR Commission:</strong>
+<span class="u-blue-zig">The Protection of Human Rights Act</span>,
+<span class="u-red-zig">1993</span>,
+<span class="u-green">authorized </span>
+<span class="u-blue-zig">the State Governments</span>
+<span class="u-green">to establish </span>
+<span class="u-blue-zig">their own commission</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">this aim.</span>
+<span class="u-blue-zig">The chairman</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">the members</span>
+<span class="u-green"> of such </span>
+<span class="u-blue-zig">State Commission</span>
+<span class="u-green">are appointed by </span>
+<span class="u-blue-zig">the Governor</span>
+<span class="u-green"> in consultation with </span>
+<span class="u-blue-zig">the Chief Minister</span>,
+<span class="u-blue-zig">Home Minister</span>,
+<span class="u-blue-zig">Speaker</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Leader of the Opposition</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">the State Legislative Assembly.</span>
+</p>
+
+<div class="section-header">LIMITATIONS</div>
+
+<ul>
+<li>
+<strong>1. Recommendatory Nature:</strong>
+<span class="u-blue-zig">National Human Rights Commission</span>
+<span class="u-green">can only make </span>
+<span class="u-blue-zig">recommendations</span>,
+<span class="u-green">without the power to </span>
+<span class="u-blue-zig">impose decisions.</span>
+<span class="u-blue-zig">This lack of authority</span>
+<span class="u-green">to ensure </span>
+<span class="u-blue-zig">compliance</span>
+<span class="u-green">can lead to </span>
+<span class="u-blue-zig">outright denial</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">its decision too.</span>
+</li>
+<li>
+<strong>2. Bureaucratic Challenges:</strong>
+<span class="u-green">It is often visualized as </span>
+<span class="u-blue-zig">a post-retirement destinations</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">judges</span>,
+<span class="u-blue-zig">police officers</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">bureaucrats</span>
+<span class="u-green"> with </span>
+<span class="u-blue-zig">political clout.</span>
+<span class="u-blue-zig">Bureaucratic functioning</span>,
+<span class="u-blue-zig">insufficiency of funds</span>
+<span class="u-green"> also hamper </span>
+<span class="u-blue-zig">the working</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the commission.</span>
+</li>
+<li>
+<strong>3. One-Year Limitation:</strong>
+<span class="u-green">Under </span>
+<span class="u-blue-zig">the Protection of Human Rights Act</span>,
+<span class="u-red-zig">1993</span>,
+<span class="u-blue-zig">human rights commissions</span>
+<span class="u-green">cannot examine </span>
+<span class="u-blue-zig">an event</span>
+<span class="u-green"> if </span>
+<span class="u-blue-zig">the complaint</span>
+<span class="u-green">was made more than </span>
+<span class="u-blue-zig">one year</span>
+<span class="u-green"> after </span>
+<span class="u-blue-zig">the incident.</span>
+<span class="u-green">Therefore, </span>
+<span class="u-blue-zig">a large number</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">genuine complaints</span>
+<span class="u-green">go </span>
+<span class="u-blue-zig">unaddressed.</span>
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">2. NHRC Summary:</strong>
+<span class="u-green">To summarize, </span>
+<span class="u-blue-zig">the Government of India</span>
+<span class="u-green">did comprehend the need to establish </span>
+<span class="u-blue-zig">an independent body</span>
+<span class="u-green">to promote and protect </span>
+<span class="u-blue-zig">human rights.</span>
+</p>
+
+<p>
+<strong style="color: var(--primary-red);">3. Autonomous Mandate:</strong>
+<span class="u-blue-zig">The establishment</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">an autonomous</span>
+<span class="u-blue-zig"> National Human Rights Commission</span>
+<span class="u-green"> by </span>
+<span class="u-blue-zig">the Government of India</span>
+<span class="u-green">mirrors its commitment for </span>
+<span class="u-blue-zig">effective execution</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">human rights provisions</span>
+<span class="u-green"> under </span>
+<span class="u-blue-zig">national</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">international instruments.</span>
+</p>
+
+<p>
+<strong style="color: var(--primary-red);">4. Accountability Linkage:</strong>
+<span class="u-green">According to </span>
+<span class="u-blue-zig">news reports</span>,
+<span class="u-blue-zig">Human rights commissions</span>
+<span class="u-green">are most active when </span>
+<span class="u-blue-zig">their tasks</span>
+<span class="u-green">are passably supported by </span>
+<span class="u-blue-zig">other mechanisms</span>
+<span class="u-green"> that safeguard </span>
+<span class="u-blue-zig">a government's accountability.</span>
+</p>
+
+<div class="main-topic-header">NATIONAL COMMISSION FOR WOMEN</div>
+
+<ul>
+<li>
+<strong>1. Constitutional Norm:</strong>
+<span class="u-blue-zig">The norm</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">gender equality</span>
+<span class="u-green">is protected in </span>
+<span class="u-blue-zig">the Indian Constitution.</span>
+</li>
+<li>
+<strong>2. Preamble Guarantee:</strong>
+<span class="u-blue-zig">The Preamble</span>,
+<span class="u-green"> promotes </span>
+<span class="u-blue-zig">"Equality of status</span>
+<span class="u-green"> and of </span>
+<span class="u-blue-zig">opportunity".</span>
+</li>
+<li>
+<strong>3. FR and DPSP:</strong>
+<span class="u-blue-zig">The Fundamental Rights</span>
+<span class="u-green">enshrined in </span>
+<span class="u-blue-zig">Part III</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Indian Constitution</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Directive Principles</span>
+<span class="u-green">enshrined in </span>
+<span class="u-blue-zig">Part IV</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Constitution</span>
+<span class="u-green"> all promote </span>
+<span class="u-blue-zig">gender equality.</span>
+</li>
+<li>
+<strong>4. Special Provisions:</strong>
+<span class="u-blue-zig">The Constitution</span>
+<span class="u-green">not only allows </span>
+<span class="u-blue-zig">equality to women</span>
+<span class="u-green">but has also made </span>
+<span class="u-blue-zig">special provisions</span>
+<span class="u-green"> for safeguarding </span>
+<span class="u-blue-zig">equality.</span>
+</li>
+<li>
+<strong>5. NCW Establishment:</strong>
+<span class="u-green">Thus in </span>
+<span class="u-red-zig">January 1992</span>,
+<span class="u-blue-zig">the National Commission for Women</span>
+<span class="u-green">was set up as </span>
+<span class="u-blue-zig">a statutory body</span>
+<span class="u-green"> under </span>
+<span class="u-blue-zig">the National Commission for Women Act</span>,
+<span class="u-red-zig">1990</span>
+<span class="u-green"> to perform </span>
+<span class="u-blue-zig">the mandate</span>
+<span class="u-green">set by </span>
+<span class="u-blue-zig">the Act.</span>
+</li>
+</ul>
+
+<div class="section-header">COMPOSITION</div>
+
+<div class="page-number">Page 226</div>
+</div>
+
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>1. Chairperson:</strong>
+<span class="u-blue-zig">A Chairperson</span>,
+<span class="u-green">committed to </span>
+<span class="u-blue-zig">the cause of women</span>,
+<span class="u-green">to be nominated by </span>
+<span class="u-blue-zig">the Central Government.</span>
+</li>
+<li>
+<strong>2. Five Members:</strong>
+<span class="u-blue-zig">Five Members</span>
+<span class="u-green">to be nominated by </span>
+<span class="u-blue-zig">the Central Government</span>
+<span class="u-green"> from amongst </span>
+<span class="u-blue-zig">persons of ability</span>,
+<span class="u-blue-zig">integrity</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">standing</span>
+<span class="u-green"> who have had experience in </span>
+<span class="u-blue-zig">law</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">legislation</span>,
+<span class="u-blue-zig">trade unionism</span>,
+<span class="u-blue-zig">management of an industry</span>
+<span class="u-blue-zig"> potential of women</span>,
+<span class="u-blue-zig">women's voluntary organizations</span> (
+<span class="u-green">including </span>
+<span class="u-blue-zig">women activist</span> ),
+<span class="u-blue-zig">administration</span>,
+<span class="u-blue-zig">economic development</span>,
+<span class="u-blue-zig">health</span>,
+<span class="u-blue-zig">education</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">social welfare.</span>
+</li>
+<li>
+<strong>3. SC/ST Representation:</strong>
+<span class="u-green">Provided that </span>
+<span class="u-blue-zig">at least one Member each</span>
+<span class="u-green">shall be from amongst </span>
+<span class="u-blue-zig">persons belonging to</span>
+<span class="u-blue-zig"> the Scheduled Castes</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Scheduled Tribes</span>
+<span class="u-blue-zig"> respectively.</span>
+<ul>
+<li>
+<strong>a. Tenure:</strong>
+<span class="u-blue-zig">The tenure</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">each person in office</span>
+<span class="u-green"> is for </span>
+<span class="u-blue-zig">a period of five years</span>
+<span class="u-green"> or till attains </span>
+<span class="u-blue-zig">the age of seventy.</span>
+</li>
+<li>
+<strong>b. SC/ST Mandate:</strong>
+<span class="u-green">At least </span>
+<span class="u-blue-zig">one member each</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Commission</span>
+<span class="u-green">must belong to </span>
+<span class="u-blue-zig">a Scheduled Caste</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">Scheduled Tribe.</span>
+</li>
+<li>
+<strong>c. External Committees:</strong>
+<span class="u-green">In addition to </span>
+<span class="u-blue-zig">the aforementioned members</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Commission</span>,
+<span class="u-blue-zig">the Commission</span>
+<span class="u-green">has the power to set up </span>
+<span class="u-blue-zig">committees</span>
+<span class="u-green"> with </span>
+<span class="u-blue-zig">members</span>
+<span class="u-green"> from outside </span>
+<span class="u-blue-zig">the Commission.</span>
+</li>
+</ul>
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">4. First Chairperson:</strong>
+<span class="u-blue-zig">The first head</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the commission</span>
+<span class="u-green"> was </span>
+<span class="u-red-zig">Jayanti Patnaik.</span>
+</p>
+
+<div class="section-header">FUNCTIONS</div>
+
+<ul>
+<li>
+<strong>1. NRI Complaints:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> work as </span>
+<span class="u-blue-zig">the coordinating agency</span>
+<span class="u-green">to receive and process </span>
+<span class="u-blue-zig">all the complaints</span>
+<span class="u-green">related to </span>
+<span class="u-blue-zig">Indian Women</span>
+<span class="u-green">deserted by </span>
+<span class="u-blue-zig">their Overseas Indian husbands.</span>
+</li>
+<li>
+<strong>2. Conciliation Assistance:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall render </span>
+<span class="u-blue-zig">all possible assistance</span>
+<span class="u-green"> to </span>
+<span class="u-blue-zig">the complaints</span>
+<span class="u-green">including </span>
+<span class="u-blue-zig">conciliation</span>,
+<span class="u-blue-zig">mediation</span>
+<span class="u-green"> between </span>
+<span class="u-blue-zig">the parties</span>
+<span class="u-green"> and advising </span>
+<span class="u-blue-zig">the complainant</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">related issues.</span>
+</li>
+<li>
+<strong>3. NGO Networking:</strong>
+<span class="u-green">Associating, networking with </span>
+<span class="u-blue-zig">NGOs</span>,
+<span class="u-blue-zig">community organizations</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">India</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">overseas</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">State women Commissions</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">wider area coverage</span>,
+<span class="u-green">so as to assist </span>
+<span class="u-blue-zig">easy access</span>
+<span class="u-green"> and provide </span>
+<span class="u-blue-zig">support services.</span>
+</li>
+<li>
+<strong>4. Coordinated Response:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall endeavour towards </span>
+<span class="u-blue-zig">a coordinated response</span>
+<span class="u-green"> amongst </span>
+<span class="u-blue-zig">various Government agencies</span>/<span class="u-blue-zig">organizations</span>
+<span class="u-green"> such as </span>
+<span class="u-blue-zig">State Governments</span>,
+<span class="u-blue-zig">The National Human Rights Commission</span>,
+<span class="u-blue-zig">Indian Embassies and Mission</span>,
+<span class="u-blue-zig">concerned Ministries</span>
+<span class="u-blue-zig"> etc.</span>
+</li>
+<li>
+<strong>5. Litigation Support:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> provides assistance to </span>
+<span class="u-blue-zig">the distressed woman</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">litigation</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">other issues</span>
+<span class="u-green">pertaining to </span>
+<span class="u-blue-zig">the complainant/case.</span>
+</li>
+<li>
+<strong>6. Data Bank:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall maintain </span>
+<span class="u-blue-zig">a data bank record</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">cases registered.</span>
+</li>
+<li>
+<strong>7. State Reports:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> seeks reports from </span>
+<span class="u-blue-zig">the State Government</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">other authorities</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">the complaints filed</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">action taken thereon.</span>
+</li>
+<li>
+<strong>8. NRI Marriage Policy:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall advice and recommend </span>
+<span class="u-blue-zig">the government</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">any policy</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">issue</span>
+<span class="u-green">relating to </span>
+<span class="u-blue-zig">the NRI marriages.</span>
+</li>
+<li>
+<strong>9. Legal Treaty Investigation:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> investigates </span>
+<span class="u-blue-zig">various legal treaties</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">the issue</span>
+<span class="u-green"> and advice </span>
+<span class="u-blue-zig">the Government</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">the subject</span>,
+<span class="u-green">wherever </span>
+<span class="u-blue-zig">required.</span>
+</li>
+<li>
+<strong>10. Advisory Panel:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall constitute </span>
+<span class="u-blue-zig">an advisory committee panel</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">reputed advocates/NGOs</span>,
+<span class="u-green"> both in </span>
+<span class="u-red-zig">India</span>
+<span class="u-green"> as well as </span>
+<span class="u-blue-zig">abroad</span>,
+<span class="u-green"> which shall intermittently review </span>
+<span class="u-blue-zig">the functioning</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the cell</span>,
+<span class="u-blue-zig">cases filed</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">policy issues.</span>
+</li>
+</ul>
+
+<div class="page-number">Page 227</div>
+</div>
+
+<div class="pdf-page">
+
+<ul>
+<li>
+<strong>11. Expert Panel:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall constitute </span>
+<span class="u-blue-zig">a panel of experts</span> (<span class="u-blue-zig">All India</span>)
+<span class="u-green">to support </span>
+<span class="u-blue-zig">the aggrieved wife</span>
+<span class="u-green"> and rendering </span>
+<span class="u-blue-zig">legal services</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">other assistance</span>,
+<span class="u-green">including </span>
+<span class="u-blue-zig">mediation</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">conciliation</span>
+</li>
+<li>
+<strong>12. Training Modules:</strong>
+<span class="u-blue-zig">Planning of training modules</span>
+<span class="u-green"> and conducting </span>
+<span class="u-blue-zig">training</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">sensitisation</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">the subject</span>
+<span class="u-green"> to </span>
+<span class="u-blue-zig">the various agencies</span>
+<span class="u-green">entrusted with the task of </span>
+<span class="u-blue-zig">providing justice</span>,
+<span class="u-blue-zig">vig. Judiciary</span>,
+<span class="u-blue-zig">police</span>,
+<span class="u-blue-zig">administration</span>,
+<span class="u-blue-zig">etc.</span>
+</li>
+<li>
+<strong>13. Awareness Campaigns:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall organize </span>
+<span class="u-blue-zig">awareness campaigns</span>
+<span class="u-green"> for </span>
+<span class="u-blue-zig">the masses</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">the issue.</span>
+</li>
+<li>
+<strong>14. Research Support:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> has responsibility to </span>
+<span class="u-blue-zig">encourage /support</span>
+<span class="u-blue-zig"> research and study</span>
+<span class="u-green"> in the related field like </span>
+<span class="u-blue-zig">issues of grievances</span>
+<span class="u-green">associated with </span>
+<span class="u-blue-zig">dual citizenship</span>,
+<span class="u-blue-zig">enactment of new legislation</span>
+<span class="u-green"> or </span>
+<span class="u-blue-zig">signing of international treaties</span>,
+<span class="u-blue-zig">marriage laws</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">other countries</span>,
+<span class="u-blue-zig">etc.</span>
+</li>
+<li>
+<strong>15. Suo-Moto Power:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> must look into </span>
+<span class="u-blue-zig">complaints</span>
+<span class="u-green"> and take </span>
+<span class="u-blue-zig">suo-moto notice</span>
+<span class="u-green"> on </span>
+<span class="u-blue-zig">any issue</span>
+<span class="u-green">brought to the notice of </span>
+<span class="u-blue-zig">the NRI Cell</span>
+<span class="u-green"> in accordance with </span>
+<span class="u-blue-zig">Section 10 (1)(f)</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the National Commission</span>
+<span class="u-blue-zig"> for Women Act</span>,
+<span class="u-red-zig">1990</span>
+<span class="u-green"> read with </span>
+<span class="u-blue-zig">sub-section 4</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">Section 10</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Section 8</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Act.</span>
+</li>
+<li>
+<strong>16. Own Procedure:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> shall control </span>
+<span class="u-blue-zig">its own procedures</span>
+<span class="u-green"> in accordance with </span>
+<span class="u-blue-zig">the National Commission</span>
+<span class="u-blue-zig"> for Women Act</span>
+<span class="u-red-zig"> 1990.</span>
+</li>
+<li>
+<strong>17. Additional Functions:</strong>
+<span class="u-red-zig">NCW</span>
+<span class="u-green"> must perform </span>
+<span class="u-blue-zig">any other function</span>
+<span class="u-green">as assigned to it by </span>
+<span class="u-blue-zig">the Commission</span>/<span class="u-blue-zig">Central Government.</span>
+</li>
+</ul>
+
+<div class="section-header">SIGNIFICANCE</div>
+
+<ul>
+<li>
+<strong>1. Patriarchal Society:</strong>
+<span class="u-blue-zig">Women.</span>
+<span class="u-red-zig">India</span>
+<span class="u-green">has conventionally been </span>
+<span class="u-blue-zig">a male-controlled society</span>
+<span class="u-green"> and therefore </span>
+<span class="u-blue-zig">women</span>
+<span class="u-green">are visualized as </span>
+<span class="u-blue-zig">a weak entity</span>
+<span class="u-green"> in </span>
+<span class="u-blue-zig">Indian society.</span>
+</li>
+<li>
+<strong>2. No Specific Provision:</strong>
+<span class="u-blue-zig">The Constitution</span>
+<span class="u-green">does not contain </span>
+<span class="u-blue-zig">any provision</span>
+<span class="u-green">precisely made to favour </span>
+<span class="u-blue-zig">women as such.</span>
+</li>
+<li>
+<strong>3. Enabling Articles:</strong>
+<span class="u-green">Though </span>
+<span class="u-blue-zig">Art. 15 (3)</span>,
+<span class="u-blue-zig">Art. 21</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">Art. 14</span>
+<span class="u-green"> are in favour of </span>
+<span class="u-blue-zig">women.</span>
+</li>
+<li>
+<strong>4. Judicial Interpretation:</strong>
+<span class="u-blue-zig">The Supreme Court</span>
+<span class="u-green">through </span>
+<span class="u-blue-zig">interpretive processes</span>
+<span class="u-green">has tried to extend </span>
+<span class="u-blue-zig">some protections</span>
+<span class="u-green"> to </span>
+<span class="u-blue-zig">women.</span>
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">5. Landmark Judgments:</strong>
+<span class="u-green">Through judgments in cases such as </span>
+<span class="u-red-zig">Bodhisattwa Gautam v. Subra Chakraborty</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">the</span>
+<span class="u-red-zig"> Chairman Rly Board v. Chandrima Das</span>
+<span class="u-blue-zig"> case</span>
+<span class="u-green"> where </span>
+<span class="u-blue-zig">rape</span>
+<span class="u-green">was declared </span>
+<span class="u-blue-zig">a monstrous crime</span>,
+<span class="u-green">as well as </span>
+<span class="u-blue-zig">the breakthrough judgment</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">Visakha v. State of Rajasthan.</span>
+</p>
+
+<ul>
+<li>
+<strong>6. Need for NCW:</strong>
+<span class="u-blue-zig">The absence</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">constitutional mechanism</span>,
+<span class="u-blue-zig">judicial capability</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">social interest</span>
+<span class="u-green">formed the motivation and need for </span>
+<span class="u-blue-zig">the creation</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the National Commission for Women.</span>
+</li>
+</ul>
+
+<p>
+<strong style="color: var(--primary-red);">7. Historical Context:</strong>
+<span class="u-green">It is apparent from </span>
+<span class="u-blue-zig">the prior mentioned conditions</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">problems</span>
+<span class="u-green"> that </span>
+<span class="u-blue-zig">women</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">India</span>,
+<span class="u-green">though in </span>
+<span class="u-blue-zig">a better position</span>
+<span class="u-green"> than </span>
+<span class="u-blue-zig">their ancestors</span>,
+<span class="u-green">were handicapped to </span>
+<span class="u-blue-zig">a great extent</span>
+<span class="u-green"> in the </span>
+<span class="u-blue-zig">early 1990s</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">these handicaps</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">prejudices</span>
+<span class="u-green"> against </span>
+<span class="u-blue-zig">Indian women</span>
+<span class="u-green">prompted </span>
+<span class="u-blue-zig">the Indian Government</span>
+<span class="u-green">to establish </span>
+<span class="u-blue-zig">the first</span>
+<span class="u-blue-zig"> National Commission for Women</span>
+<span class="u-green"> in </span>
+<span class="u-red-zig">1992.</span>
+</p>
+
+<div class="main-topic-header">THE DIRECTORATE OF ENFORCEMENT</div>
+
+<p>
+<strong style="color: var(--primary-red);">1. Organizational Mandate:</strong>
+<span class="u-green">It is </span>
+<span class="u-blue-zig">a multi-disciplinary organization</span>
+<span class="u-green">mandated with </span>
+<span class="u-blue-zig">investigation</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">offence of money laundering</span>
+<span class="u-green"> and </span>
+<span class="u-blue-zig">violations</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">foreign exchange laws.</span>
+</p>
+
+<ul>
+<li>
+<strong>2. Administrative Control:</strong>
+<span class="u-green">It functions under </span>
+<span class="u-blue-zig">the Department of Revenue</span>
+<span class="u-green"> of </span>
+<span class="u-blue-zig">the Ministry of Finance.</span>
+</li>
+</ul>
+
+<div class="page-number">Page 228</div>
+</div>
+
+<!-- ==================== PAGE 229 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">THE DIRECTORATE OF ENFORCEMENT</div>
+    <ul>
+        <li>
+            <strong>1. Origin:</strong>
+            <span class="u-green">On </span><span class="u-red-zig">1st May, 1956</span>,<span class="u-green"> it was originated in the </span><span class="u-blue-zig">Department of Economic Affairs</span><span class="u-green"> for handling </span><span class="u-blue-zig">Exchange Control Laws violations</span><span class="u-green"> under </span><span class="u-blue-zig">Foreign Exchange Regulation Act</span> (<span class="u-blue-zig">FERA</span>),<span class="u-blue-zig"> 1947</span>.
+        </li>
+        <li>
+            <strong>2. Headquarters:</strong>
+            <span class="u-blue-zig">The Directorate of Enforcement</span>,<span class="u-green"> with its headquarters at </span><span class="u-red-zig">New Delhi</span>,<span class="u-green"> is headed by the </span><span class="u-blue-zig">Director of Enforcement</span>.
+        </li>
+    </ul>
+    <ul>
+        <ul>
+            <li>
+                <strong>a. Regional Offices:</strong>
+                <span class="u-blue-zig">Five regional offices</span><span class="u-green"> at </span><span class="u-red-zig">Mumbai</span>, <span class="u-red-zig">Chennai</span>, <span class="u-red-zig">Chandigarh</span>, <span class="u-red-zig">Kolkata</span><span class="u-green"> and </span><span class="u-red-zig">Delhi</span><span class="u-green"> headed by </span><span class="u-blue-zig">Special Directors of Enforcement</span>.
+            </li>
+            <li>
+                <strong>b. Zonal Offices:</strong>
+                <span class="u-blue-zig">The Directorate</span><span class="u-green"> has </span><span class="u-blue-zig">10 Zonal offices</span><span class="u-green"> each of which is headed by </span><span class="u-blue-zig">a Deputy Director</span><span class="u-green"> and </span><span class="u-blue-zig">11 sub Zonal Offices</span><span class="u-green"> each of which is headed by </span><span class="u-blue-zig">an Assistant Director</span>.
+            </li>
+        </ul>
+    </ul>
+
+    <div class="section-header">RECRUITMENT</div>
+    <ul>
+        <li>
+            <strong>1. Recruitment Mode:</strong>
+            <span class="u-green">Is done </span><span class="u-blue-zig">directly</span><span class="u-green"> and by drawing </span><span class="u-blue-zig">officers</span><span class="u-green"> from </span><span class="u-blue-zig">other investigation agencies</span>.
+        </li>
+        <li>
+            <strong>2. Officer Composition:</strong>
+            <span class="u-green">It comprises </span><span class="u-blue-zig">officers</span><span class="u-green"> of </span><span class="u-blue-zig">IRS</span>, <span class="u-blue-zig">IPS</span><span class="u-green"> and </span><span class="u-blue-zig">IAS</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">TENURE</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. Tenure Extension Ordinance:</strong> <span class="u-green">In </span><span class="u-red-zig">November 2021</span>, <span class="u-blue-zig">the President of India</span><span class="u-green"> promulgated </span><span class="u-blue-zig">two ordinances</span><span class="u-green"> allowing the </span><span class="u-blue-zig">Centre</span><span class="u-green"> to extend the </span><span class="u-blue-zig">tenures of the directors</span><span class="u-green"> of the </span><span class="u-blue-zig">Central Bureau of Investigation</span> (<span class="u-blue-zig">CBI</span>)<span class="u-green"> and the </span><span class="u-blue-zig">Enforcement Directorate</span><span class="u-green"> from </span><span class="u-blue-zig">two years</span><span class="u-green"> to up to </span><span class="u-blue-zig">five years</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>1. Amendment Provision:</strong>
+            <span class="u-blue-zig">The Delhi Special Police Establishment</span> (<span class="u-blue-zig">DSPE</span>) <span class="u-blue-zig">Act, 1946</span> (<span class="u-green">for </span><span class="u-blue-zig">ED</span>)<span class="u-green"> and the </span><span class="u-blue-zig">Central Vigilance Commission</span> (<span class="u-blue-zig">CVC</span>) <span class="u-blue-zig">Act, 2003</span> (<span class="u-green">for </span><span class="u-blue-zig">CV Commissioners</span>)<span class="u-green"> have been amended to give the </span><span class="u-blue-zig">government</span><span class="u-green"> the power to keep the </span><span class="u-blue-zig">two chiefs</span><span class="u-green"> in their posts for </span><span class="u-blue-zig">one year</span><span class="u-green"> after they have completed </span><span class="u-blue-zig">their two-year terms</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">2. Maximum Tenure Cap:</strong> <span class="u-green">However, </span><span class="u-blue-zig">no further extension</span><span class="u-green"> can be granted after the </span><span class="u-blue-zig">completion of a period</span><span class="u-green"> of </span><span class="u-blue-zig">five years in total</span><span class="u-green"> including the </span><span class="u-blue-zig">period mentioned</span><span class="u-green"> in the </span><span class="u-blue-zig">initial appointment</span>.
+    </p>
+
+    <div class="section-header">WHY TO FIX THE TENURE?</div>
+    <ul>
+        <li>
+            <strong>1. Stability & Continuity:</strong>
+            <span class="u-green">To ensure </span><span class="u-blue-zig">stability</span><span class="u-green"> and </span><span class="u-blue-zig">continuity</span>.
+        </li>
+        <li>
+            <strong>2. Effective Investigation:</strong>
+            <span class="u-blue-zig">Essential</span><span class="u-green"> for the </span><span class="u-blue-zig">effective investigation</span><span class="u-green"> and </span><span class="u-blue-zig">prosecution</span><span class="u-green"> of </span><span class="u-blue-zig">complex and transnational</span> <span class="u-blue-zig">financial crimes</span>.
+        </li>
+        <li>
+            <strong>3. Political Insulation:</strong>
+            <span class="u-green">Protect from </span><span class="u-blue-zig">political interference</span><span class="u-green"> and </span><span class="u-blue-zig">pressure</span>.
+        </li>
+        <li>
+            <strong>4. Institutional Credibility:</strong>
+            <span class="u-green">To enhance the </span><span class="u-blue-zig">credibility</span><span class="u-green"> and </span><span class="u-blue-zig">reputation</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">STATUTORY FUNCTIONS</div>
+
+    <div class="section-header">THE PREVENTION OF MONEY LAUNDERING ACT, 2002 (PMLA)</div>
+    <ul>
+        <li>
+            <strong>1. Nature of Law:</strong>
+            <span class="u-green">It is a </span><span class="u-blue-zig">criminal law</span><span class="u-green"> enacted to prevent </span><span class="u-blue-zig">money laundering</span><span class="u-green"> and to provide for </span><span class="u-blue-zig">confiscation of property</span><span class="u-green"> derived from, or involved in, </span><span class="u-blue-zig">money-laundering</span><span class="u-green"> and for </span><span class="u-blue-zig">matters connected therewith</span><span class="u-green"> or </span><span class="u-blue-zig">incidental thereto</span>.
+        </li>
+        <li>
+            <strong>2. ED Responsibility:</strong>
+            <span class="u-blue-zig">ED</span><span class="u-green"> has been given the </span><span class="u-blue-zig">responsibility</span><span class="u-green"> to enforce the </span><span class="u-blue-zig">provisions of the PMLA</span><span class="u-green"> by conducting </span><span class="u-blue-zig">investigation</span><span class="u-green"> to trace the </span><span class="u-blue-zig">assets derived from</span> <span class="u-blue-zig">proceeds of crime</span>,<span class="u-green"> to provisionally attach the </span><span class="u-blue-zig">property</span><span class="u-green"> and to ensure </span><span class="u-blue-zig">prosecution of the offenders</span><span class="u-green"> and </span><span class="u-blue-zig">confiscation of the property</span><span class="u-green"> by the </span><span class="u-blue-zig">Special court</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">THE FOREIGN EXCHANGE MANAGEMENT ACT, 1999 (FEMA)</div>
+
+    <div class="page-number">Page 229</div>
+</div>
+
+<!-- ==================== PAGE 230 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Nature of Law:</strong>
+            <span class="u-green">It is a </span><span class="u-blue-zig">civil law</span><span class="u-green"> enacted to consolidate and amend the </span><span class="u-blue-zig">laws</span><span class="u-green"> relating to facilitate </span><span class="u-blue-zig">external trade and payments</span><span class="u-green"> and to promote the </span><span class="u-blue-zig">orderly development</span><span class="u-green"> and </span><span class="u-blue-zig">maintenance</span><span class="u-green"> of </span><span class="u-blue-zig">foreign exchange market</span><span class="u-green"> in </span><span class="u-red-zig">India</span>.
+        </li>
+        <li>
+            <strong>2. ED Responsibility:</strong>
+            <span class="u-blue-zig">ED</span><span class="u-green"> has been given the </span><span class="u-blue-zig">responsibility</span><span class="u-green"> to conduct </span><span class="u-blue-zig">investigation</span><span class="u-green"> into </span><span class="u-blue-zig">suspected contraventions</span><span class="u-green"> of </span><span class="u-blue-zig">foreign exchange laws</span><span class="u-green"> and </span><span class="u-blue-zig">regulations</span>,<span class="u-green"> to adjudicate and impose </span><span class="u-blue-zig">penalties</span><span class="u-green"> on those adjudged to have </span><span class="u-blue-zig">contravened the law</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">THE FUGITIVE ECONOMIC OFFENDERS ACT, 2018 (FEOA)</div>
+    <ul>
+        <li>
+            <strong>1. Purpose:</strong>
+            <span class="u-green">This law was enacted to deter </span><span class="u-blue-zig">economic offenders</span><span class="u-green"> from evading the </span><span class="u-blue-zig">process of Indian law</span><span class="u-green"> by remaining outside the </span><span class="u-blue-zig">jurisdiction of Indian courts</span>.
+        </li>
+        <li>
+            <strong>2. ED Mandate:</strong>
+            <span class="u-green">It is a law whereby </span><span class="u-blue-zig">Directorate</span><span class="u-green"> is mandated to attach the </span><span class="u-blue-zig">properties</span><span class="u-green"> of the </span><span class="u-blue-zig">fugitive economic offenders</span><span class="u-green"> who have escaped from the </span><span class="u-red-zig">India</span><span class="u-green"> warranting </span><span class="u-blue-zig">arrest</span><span class="u-green"> and provide for the </span><span class="u-blue-zig">confiscation of their properties</span><span class="u-green"> to the </span><span class="u-blue-zig">Central Government</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">THE FOREIGN EXCHANGE REGULATION ACT, 1973 (FERA)</div>
+    <ul>
+        <li>
+            <strong>1. Functions under FERA:</strong>
+            <span class="u-blue-zig">The main functions</span><span class="u-green"> under the </span><span class="u-blue-zig">repealed FERA</span><span class="u-green"> are to adjudicate the </span><span class="u-blue-zig">Show Cause Notices</span><span class="u-green"> issued under the </span><span class="u-blue-zig">the said Act</span><span class="u-green"> upto </span><span class="u-blue-zig">31.5.2002</span><span class="u-green"> for the alleged </span><span class="u-blue-zig">contraventions of the Act</span><span class="u-green"> which may result in </span><span class="u-blue-zig">imposition of penalties</span><span class="u-green"> and to pursue </span><span class="u-blue-zig">prosecutions</span><span class="u-green"> launched under </span><span class="u-blue-zig">FERA</span><span class="u-green"> in the </span><span class="u-blue-zig">concerned courts</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SPONSORING AGENCY UNDER COFEPOSA</div>
+    <ul>
+        <li>
+            <strong>1. Preventive Detention Power:</strong>
+            <span class="u-green">Under the </span><span class="u-blue-zig">Conservation of Foreign Exchange</span><span class="u-green"> and </span><span class="u-blue-zig">Prevention of Smuggling</span> <span class="u-blue-zig">Activities Act, 1974</span> (<span class="u-blue-zig">COFEPOSA</span>),<span class="u-green"> this Directorate is empowered to </span><span class="u-blue-zig">sponsor cases</span><span class="u-green"> of </span><span class="u-blue-zig">preventive detention</span><span class="u-green"> with regard to </span><span class="u-blue-zig">contraventions of FEMA</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">JURISDICTION</div>
+    <ul>
+        <li>
+            <strong>1. Scope of Action:</strong>
+            <span class="u-blue-zig">The ED</span><span class="u-green"> can take action against </span><span class="u-blue-zig">any person</span><span class="u-green"> on which </span><span class="u-blue-zig">FEMA</span><span class="u-green"> or </span><span class="u-blue-zig">PMLA act</span><span class="u-green"> applies</span>.
+        </li>
+        <li>
+            <strong>2. Court Jurisdiction:</strong>
+            <span class="u-blue-zig">Cases under FEMA</span><span class="u-green"> may lie in </span><span class="u-blue-zig">civil courts</span><span class="u-green"> where </span><span class="u-blue-zig">PMLA cases</span><span class="u-green"> will lie in </span><span class="u-blue-zig">criminal courts</span>.
+        </li>
+        <li>
+            <strong>3. Public Servants:</strong>
+            <span class="u-blue-zig">All the public servants</span><span class="u-green"> come under the </span><span class="u-blue-zig">jurisdiction of the agency</span><span class="u-green"> if they are involved in </span><span class="u-blue-zig">any offence</span><span class="u-green"> related to </span><span class="u-blue-zig">money laundering</span>.
+        </li>
+    </ul>
+    <ul>
+        <ul>
+            <li>
+                <strong>a. No Suo Motu Power:</strong>
+                <span class="u-blue-zig">ED</span><span class="u-green"> can not take </span><span class="u-blue-zig">an action suo motu</span>.
+            </li>
+        </ul>
+    </ul>
+    <ul>
+        <li>
+            <strong>4. Investigation Process:</strong>
+            <span class="u-blue-zig">The ED</span><span class="u-green"> will investigate the </span><span class="u-blue-zig">matter</span><span class="u-green"> and may attach the </span><span class="u-blue-zig">property of an accused person</span><span class="u-green"> and also make </span><span class="u-blue-zig">an arrest</span><span class="u-green"> and start </span><span class="u-blue-zig">proceeding</span><span class="u-green"> with the </span><span class="u-blue-zig">violation of the provisions</span><span class="u-green"> of </span><span class="u-blue-zig">FEMA</span><span class="u-green"> and </span><span class="u-blue-zig">PMLA act</span>.
+        </li>
+    </ul>
+    <p>
+        <strong style="color: var(--primary-red);">1. Adjudication Process:</strong> <span class="u-blue-zig">The matter</span><span class="u-green"> will be resolved by </span><span class="u-blue-zig">way of adjudication</span><span class="u-green"> by </span><span class="u-blue-zig">courts</span><span class="u-green"> or </span><span class="u-blue-zig">PMLA courts</span>.
+    </p>
+
+    <div class="section-header">CHALLENGES</div>
+    <ul>
+        <li>
+            <strong>1. Political Misuse:</strong>
+            <span class="u-green">It is often used as a </span><span class="u-blue-zig">political tool</span><span class="u-green"> by the </span><span class="u-blue-zig">ruling party</span><span class="u-green"> to target its </span><span class="u-blue-zig">opponents</span><span class="u-green"> and </span><span class="u-blue-zig">critics</span>.
+        </li>
+        <li>
+            <strong>2. Selective Enforcement:</strong>
+            <span class="u-blue-zig">The ED</span><span class="u-green"> has been accused of </span><span class="u-blue-zig">selective and arbitrary enforcement</span><span class="u-green"> of </span><span class="u-blue-zig">cases</span>, <span class="u-blue-zig">harassment</span><span class="u-green"> and </span><span class="u-blue-zig">intimidation</span><span class="u-green"> of </span><span class="u-blue-zig">witnesses and accused</span>,<span class="u-green"> and </span><span class="u-blue-zig">leaking sensitive information</span><span class="u-green"> to the </span><span class="u-blue-zig">media</span><span class="u-green"> to influence </span><span class="u-blue-zig">public opinion</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 230</div>
+</div>
+
+<!-- ==================== PAGE 231 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>3. Independence Concern:</strong>
+            <span class="u-green">It raised questions about the </span><span class="u-blue-zig">independence</span><span class="u-green"> and </span><span class="u-blue-zig">impartiality of the ED</span><span class="u-green"> and its </span><span class="u-blue-zig">susceptibility</span><span class="u-green"> to </span><span class="u-blue-zig">political interference</span>.
+        </li>
+        <li>
+            <strong>4. Low Conviction Rate:</strong>
+            <span class="u-green">According to </span><span class="u-blue-zig">a report</span>,<span class="u-green"> out of </span><span class="u-blue-zig">41,000 cases</span><span class="u-green"> registered by the </span><span class="u-blue-zig">ED</span><span class="u-green"> between </span><span class="u-red-zig">2009</span><span class="u-green"> and </span><span class="u-red-zig">2019</span>,<span class="u-green"> only </span><span class="u-blue-zig">8,000</span><span class="u-green"> were </span><span class="u-blue-zig">charge-sheeted</span><span class="u-green"> and only </span><span class="u-blue-zig">3,000</span><span class="u-green"> resulted in a </span><span class="u-blue-zig">conviction</span>.
+        </li>
+        <li>
+            <strong>5. Low Success Rate:</strong>
+            <span class="u-blue-zig">The ED</span><span class="u-green"> has a </span><span class="u-blue-zig">low success rate</span><span class="u-green"> in proving its </span><span class="u-blue-zig">cases</span><span class="u-green"> and securing </span><span class="u-blue-zig">justice</span><span class="u-green"> for the </span><span class="u-blue-zig">victims of financial crimes</span>.
+        </li>
+        <li>
+            <strong>6. Resource Deficit:</strong>
+            <span class="u-green">It lacks </span><span class="u-blue-zig">adequate resources</span><span class="u-green"> and </span><span class="u-blue-zig">manpower</span><span class="u-green"> to deal with the </span><span class="u-blue-zig">increasing complexity</span><span class="u-green"> and </span><span class="u-blue-zig">volume</span><span class="u-green"> of </span><span class="u-blue-zig">economic offences</span>.
+        </li>
+        <li>
+            <strong>7. Cross-border Challenges:</strong>
+            <span class="u-blue-zig">The ED</span><span class="u-green"> also faces challenges in </span><span class="u-blue-zig">obtaining cooperation</span><span class="u-green"> from </span><span class="u-blue-zig">foreign jurisdictions</span>,<span class="u-green"> accessing </span><span class="u-blue-zig">digital evidence</span>,<span class="u-green"> and dealing with </span><span class="u-blue-zig">new forms</span><span class="u-green"> of </span><span class="u-blue-zig">financial crimes</span><span class="u-green"> such as </span><span class="u-blue-zig">cryptocurrency</span><span class="u-green"> and </span><span class="u-blue-zig">cyber fraud</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">WAY FORWARD</div>
+    <ul>
+        <li>
+            <strong>1. Strengthening the autonomy</strong>
+        </li>
+        <li>
+            <strong>2. Enhancing the Professionalism</strong>
+        </li>
+        <li>
+            <strong>3. Expanding the infrastructure</strong>
+        </li>
+        <li>
+            <strong>4. Improving the coordination and cooperation</strong>
+        </li>
+        <li>
+            <strong>5. Streamlining the legal framework</strong>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 231</div>
+</div>
+
+</body>
+</html>

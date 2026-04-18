@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH16 - Centre-State Relations | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 48 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH16 - Centre-State Relations</h1>
+        <p class="subtitle">Part XI | Articles 245-300 | Legislative, Administrative &amp; Financial Relations</p>
+    </header>
+
+    <div class="main-topic-header">CENTRE &ndash; STATE RELATIONS</div>
+
+    <div class="section-header">ARTICLE 245</div>
+
+    <ul>
+        <li>
+            <strong>1. Territorial Jurisdiction:</strong> (1) <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">Parliament</span> <span class="u-green">may make laws for </span><span class="u-blue-zig">the whole or any part</span> <span class="u-green">of </span><span class="u-blue-zig">the territory of India</span>, <span class="u-green">and </span><span class="u-blue-zig">the Legislature of a State</span> <span class="u-green">may make laws for </span><span class="u-blue-zig">the whole or any part</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>.
+        </li>
+        <li>
+            <strong>2. Extraterritorial Operation:</strong> (2) <span class="u-blue-zig">No law made by Parliament</span> <span class="u-green">shall be deemed to be </span><span class="u-blue-zig">invalid</span> <span class="u-green">on the ground that </span><span class="u-green">it would have </span><span class="u-blue-zig">extraterritorial operation</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 246</div>
+
+    <ul>
+        <li>
+            <strong>1. Union List:</strong> (1) <span class="u-blue-zig">Parliament</span> <span class="u-green">has </span><span class="u-blue-zig">exclusive power</span> <span class="u-green">to make laws with respect to </span><span class="u-blue-zig">any of the matters</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">List I (Union List)</span> <span class="u-green">in </span><span class="u-blue-zig">the Seventh Schedule</span>.
+        </li>
+        <li>
+            <strong>2. Concurrent List:</strong> (2) <span class="u-blue-zig">Parliament</span> <span class="u-green">and </span><span class="u-blue-zig">the Legislature of any State</span> <span class="u-green">also have power to </span><span class="u-blue-zig">make laws</span> <span class="u-green">with respect to </span><span class="u-blue-zig">any of the matters</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">List III (Concurrent List)</span> <span class="u-green">in </span><span class="u-blue-zig">the Seventh Schedule</span>.
+        </li>
+        <li>
+            <strong>3. Centre's Supremacy:</strong> <span class="u-green">But </span><span class="u-blue-zig">the Centre</span> <span class="u-green">has </span><span class="u-blue-zig">a prior and supreme claim</span> <span class="u-green">to legislate on </span><span class="u-blue-zig">concurrent subjects</span>. <span class="u-green">In case of </span><span class="u-blue-zig">conflict</span> <span class="u-green">between </span><span class="u-blue-zig">the law of the State</span> <span class="u-green">and </span><span class="u-blue-zig">Union law</span> <span class="u-green">on </span><span class="u-blue-zig">a subject</span> <span class="u-green">in </span><span class="u-blue-zig">the Concurrent list</span>, <span class="u-blue-zig">the law of the Parliament</span> <span class="u-green">prevails</span>.
+        </li>
+        <li>
+            <strong>4. State List:</strong> (3) <span class="u-blue-zig">The Legislature of any State</span> <span class="u-green">has </span><span class="u-blue-zig">exclusive power</span> <span class="u-green">to make laws for </span><span class="u-blue-zig">such State</span> <span class="u-green">or any part thereof with respect to </span><span class="u-blue-zig">any of the matters</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">List II (State List)</span> <span class="u-green">in </span><span class="u-blue-zig">the Seventh Schedule</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 248</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Residuary Powers:</strong> <span class="u-blue-zig">The residuary powers</span> <span class="u-green">have been granted to </span><span class="u-blue-zig">the Union</span> <span class="u-green">contrary to </span><span class="u-blue-zig">the convention</span> <span class="u-green">in </span><span class="u-blue-zig">other federations</span> <span class="u-green">of the world</span>, <span class="u-green">where </span><span class="u-blue-zig">the residuary powers</span> <span class="u-green">are given to </span><span class="u-blue-zig">the States</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Judicial Review:</strong> <span class="u-green">In case of </span><span class="u-blue-zig">any conflict</span>, <span class="u-green">whether </span><span class="u-blue-zig">a particular matter</span> <span class="u-green">falls under </span><span class="u-blue-zig">the residuary power</span> <span class="u-green">or not is to be decided by </span><span class="u-blue-zig">the court</span>.
+    </p>
+
+    <div class="page-number">Page 48</div>
+</div>
+
+<!-- ==================== PAGE 49 ==================== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">PARLIAMENT'S POWER TO LEGISLATE ON STATE LIST</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Special Conditions:</strong> <span class="u-green">Though under </span><span class="u-blue-zig">ordinary circumstances</span> <span class="u-blue-zig">the Central Government</span> <span class="u-green">does not possess power to </span><span class="u-blue-zig">legislate on subjects</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the State List</span>, <span class="u-green">but under </span><span class="u-blue-zig">certain special conditions</span> <span class="u-blue-zig">the Union Parliament</span> <span class="u-green">can make laws even on </span><span class="u-blue-zig">these subjects</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 249</div>
+
+    <ul>
+        <li>
+            <strong>1. National Interest:</strong> <span class="u-green">In the </span><span class="u-blue-zig">national interest</span>, <span class="u-green">if </span><span class="u-blue-zig">the Rajya Sabha</span> <span class="u-green">declares by </span><span class="u-blue-zig">a resolution</span> <span class="u-green">supported by </span><span class="u-blue-zig">not less than 2/3</span> <span class="u-green">of </span><span class="u-blue-zig">its members present and voting</span>, <span class="u-green">that it is </span><span class="u-blue-zig">necessary or expedient</span> <span class="u-green">in the national interest that </span><span class="u-blue-zig">Parliament</span> <span class="u-green">should make laws with respect to </span><span class="u-blue-zig">any matter</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the State List</span>.
+        </li>
+        <li>
+            <strong>2. Territorial Scope:</strong> <span class="u-green">After such </span><span class="u-blue-zig">a resolution</span> <span class="u-green">is passed</span>, <span class="u-blue-zig">Parliament</span> <span class="u-green">can make laws for </span><span class="u-blue-zig">the whole or any part</span> <span class="u-green">of </span><span class="u-blue-zig">the territory of India</span>. <span class="u-blue-zig">Such a resolution</span> <span class="u-green">remains in force for </span><span class="u-blue-zig">a period of 1 year</span> <span class="u-green">and can be </span><span class="u-blue-zig">further extended by one year</span> <span class="u-green">by means of </span><span class="u-blue-zig">a subsequent resolution</span>.
+        </li>
+        <li>
+            <strong>3. Duration Limit:</strong> (2) <span class="u-blue-zig">A resolution</span> <span class="u-green">passed under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">shall remain in force for </span><span class="u-blue-zig">such period</span> <span class="u-green">not exceeding </span><span class="u-blue-zig">one year</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 250</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. National Emergency:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">can legislate on </span><span class="u-blue-zig">the subjects</span> <span class="u-green">mentioned in </span><span class="u-blue-zig">the State List</span> <span class="u-green">when </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">of </span><span class="u-blue-zig">National Emergency</span> <span class="u-green">is in operation</span>. <span class="u-green">However</span>, <span class="u-blue-zig">the laws made by Parliament</span> <span class="u-green">under this provision shall </span><span class="u-blue-zig">cease to have effect</span> <span class="u-green">on the expiration of </span><span class="u-blue-zig">a period of six months</span> <span class="u-green">after </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">has ceased to operate</span>, <span class="u-green">except as respects </span><span class="u-blue-zig">things done or omitted</span> <span class="u-green">to be done before </span><span class="u-blue-zig">the expiry of the said period</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 252</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Agreement Between States:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">can also legislate on </span><span class="u-blue-zig">a State subject</span> <span class="u-green">if </span><span class="u-blue-zig">the legislatures</span> <span class="u-green">of </span><span class="u-blue-zig">two or more states</span> <span class="u-green">resolve that it is </span><span class="u-blue-zig">lawful</span> <span class="u-green">for </span><span class="u-blue-zig">Parliament</span> <span class="u-green">to make laws with respect to </span><span class="u-blue-zig">any matter</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the State List</span> <span class="u-green">relating to </span><span class="u-blue-zig">those States</span>. <span class="u-blue-zig">Any Act</span> <span class="u-green">passed by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">shall apply to </span><span class="u-blue-zig">such states</span> <span class="u-green">and to </span><span class="u-blue-zig">any other state</span> <span class="u-green">which passes </span><span class="u-blue-zig">such a resolution</span>. <span class="u-blue-zig">Parliament</span> <span class="u-green">also reserves the right to </span><span class="u-blue-zig">amend or repeal</span> <span class="u-green">any such act</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 253</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Implement Treaties:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">can make law for </span><span class="u-blue-zig">the whole or any part</span> <span class="u-green">of </span><span class="u-blue-zig">the territory of India</span> <span class="u-green">for implementing </span><span class="u-blue-zig">any treaty</span>, <span class="u-blue-zig">international agreement</span> <span class="u-green">or </span><span class="u-blue-zig">convention</span> <span class="u-green">with </span><span class="u-blue-zig">any other country</span>. <span class="u-blue-zig">Any law</span> <span class="u-green">passed by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">for this purpose cannot be </span><span class="u-blue-zig">invalidated</span> <span class="u-green">on the ground that it relates to </span><span class="u-blue-zig">the subject</span> <span class="u-green">mentioned in </span><span class="u-blue-zig">the State list</span>.
+    </p>
+
+    <div class="section-header">OTHER</div>
+
+    <div class="page-number">Page 49</div>
+</div>
+
+<!-- ==================== PAGE 50 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. President's Rule:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">can also authorize </span><span class="u-blue-zig">Parliament</span> <span class="u-green">to exercise </span><span class="u-blue-zig">the powers</span> <span class="u-green">of </span><span class="u-blue-zig">the State legislature</span> <span class="u-green">during </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">of </span><span class="u-blue-zig">President's Rule</span>.
+        </li>
+        <li>
+            <strong>2. Reserved Bills:</strong> <span class="u-blue-zig">The Governor</span> <span class="u-green">can reserve </span><span class="u-blue-zig">certain types of bills</span> <span class="u-green">passed by </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">for </span><span class="u-blue-zig">the consideration</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>. <span class="u-blue-zig">The President</span> <span class="u-green">enjoys </span><span class="u-blue-zig">absolute veto</span> <span class="u-green">over </span><span class="u-blue-zig">them</span>.
+        </li>
+        <li>
+            <strong>3. Financial Emergency:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">can direct </span><span class="u-blue-zig">the states</span> <span class="u-green">to reserve </span><span class="u-blue-zig">money bills</span> <span class="u-green">and </span><span class="u-blue-zig">other financial bills</span> <span class="u-green">passed by </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">for </span><span class="u-blue-zig">his consideration</span> <span class="u-green">during </span><span class="u-blue-zig">a financial emergency</span>.
+        </li>
+        <li>
+            <strong>4. Trade Restrictions:</strong> <span class="u-blue-zig">Bills</span> <span class="u-green">on </span><span class="u-blue-zig">certain matters</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the State List</span> <span class="u-green">can be introduced in </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">only with </span><span class="u-blue-zig">the previous sanction</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">as imposing </span><span class="u-blue-zig">restrictions</span> <span class="u-green">on </span><span class="u-blue-zig">freedom of trade and commerce</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">ADMINISTRATIVE RELATIONS (ARTICLE 256-263)</div>
+
+    <div class="section-header">ARTICLE 256</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. State Compliance:</strong> <span class="u-blue-zig">The executive power</span> <span class="u-green">of </span><span class="u-blue-zig">every State</span> <span class="u-green">shall be so exercised as to </span><span class="u-blue-zig">ensure compliance</span> <span class="u-green">with </span><span class="u-blue-zig">the laws made by Parliament</span> <span class="u-green">and </span><span class="u-blue-zig">any existing laws</span> <span class="u-green">which apply in </span><span class="u-blue-zig">that State</span>, <span class="u-green">and </span><span class="u-blue-zig">the executive power of the Union</span> <span class="u-green">shall extend to </span><span class="u-blue-zig">the giving of such directions</span> <span class="u-green">to </span><span class="u-blue-zig">a State</span> <span class="u-green">as may appear to </span><span class="u-blue-zig">the Government of India</span> <span class="u-green">to be necessary for </span><span class="u-blue-zig">that purpose</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 257</div>
+
+    <ul>
+        <li>
+            <strong>1. Non-Impediment:</strong> (1) <span class="u-blue-zig">The executive power</span> <span class="u-green">of </span><span class="u-blue-zig">every State</span> <span class="u-green">shall be so exercised as </span><span class="u-blue-zig">not to impede or prejudice</span> <span class="u-blue-zig">the exercise</span> <span class="u-green">of </span><span class="u-blue-zig">the executive power of the Union</span>, <span class="u-green">and </span><span class="u-blue-zig">the executive power of the Union</span> <span class="u-green">shall extend to </span><span class="u-blue-zig">giving of such directions</span> <span class="u-green">to </span><span class="u-blue-zig">a State</span>.
+        </li>
+        <li>
+            <strong>2. National Communications:</strong> (2) <span class="u-blue-zig">The Union Government</span> <span class="u-green">can give directions to </span><span class="u-blue-zig">the State</span> <span class="u-green">with regard to </span><span class="u-blue-zig">construction and maintenance</span> <span class="u-green">of </span><span class="u-blue-zig">the means of communication</span> <span class="u-green">declared to be of </span><span class="u-blue-zig">national or military importance</span>.
+        </li>
+        <li>
+            <strong>3. Railway Protection:</strong> (3) <span class="u-blue-zig">Union</span> <span class="u-green">can issue </span><span class="u-blue-zig">State Governments</span> <span class="u-blue-zig">necessary directions</span> <span class="u-green">regarding </span><span class="u-blue-zig">the measures</span> <span class="u-green">to be taken for </span><span class="u-blue-zig">the protection of the railways</span> <span class="u-green">within </span><span class="u-blue-zig">the jurisdiction of the State</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 258</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Delegation of Functions:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">may</span>, <span class="u-green">with </span><span class="u-blue-zig">the consent</span> <span class="u-green">of </span><span class="u-blue-zig">the Government of a State</span>, <span class="u-green">entrust either </span><span class="u-blue-zig">conditionally or unconditionally</span> <span class="u-green">to </span><span class="u-blue-zig">that Government</span> <span class="u-green">or to </span><span class="u-blue-zig">its officers</span> <span class="u-blue-zig">functions</span> <span class="u-green">in relation to </span><span class="u-blue-zig">any matter</span> <span class="u-green">to which </span><span class="u-blue-zig">the executive power of the Union</span> <span class="u-green">extends</span>.
+    </p>
+
+    <div class="page-number">Page 50</div>
+</div>
+
+<!-- ==================== PAGE 51 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 261</div>
+
+    <ul>
+        <li>
+            <strong>1. Full Faith &amp; Credit:</strong> (1) <span class="u-blue-zig">Full faith and credit</span> <span class="u-green">shall be given throughout </span><span class="u-blue-zig">the territory of India</span> <span class="u-green">to </span><span class="u-blue-zig">public acts, records</span> <span class="u-green">and </span><span class="u-blue-zig">judicial proceedings</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and of </span><span class="u-blue-zig">every State</span>.
+        </li>
+        <li>
+            <strong>2. Judgment Execution:</strong> (3) <span class="u-blue-zig">Final judgments or orders</span> <span class="u-green">delivered or passed by </span><span class="u-blue-zig">civil courts</span> <span class="u-green">in </span><span class="u-blue-zig">any part of the territory</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">shall be capable of </span><span class="u-blue-zig">execution</span> <span class="u-green">anywhere within </span><span class="u-blue-zig">that territory</span> <span class="u-green">according to </span><span class="u-blue-zig">law</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">OTHER</div>
+
+    <ul>
+        <li>
+            <strong>1. Constitutional Governance:</strong> <span class="u-blue-zig">Union</span> <span class="u-green">can direct </span><span class="u-blue-zig">the State Governments</span> <span class="u-green">to ensure that </span><span class="u-blue-zig">the government of a State</span> <span class="u-green">is carried on in accordance with </span><span class="u-blue-zig">the provision of the Constitution</span>.
+        </li>
+        <li>
+            <strong>2. All India Services:</strong> <span class="u-blue-zig">The members</span> <span class="u-green">of </span><span class="u-blue-zig">the All India Services</span> <span class="u-green">are recruited and appointed by </span><span class="u-blue-zig">the Union Public Service Commission</span>. <span class="u-blue-zig">The members</span> <span class="u-green">of these services are posted on </span><span class="u-blue-zig">key posts in the States</span>, <span class="u-green">but remain loyal to </span><span class="u-blue-zig">the Union Government</span>.
+        </li>
+        <li>
+            <strong>3. Scheduled Tribes:</strong> <span class="u-blue-zig">Union</span> <span class="u-green">can direct </span><span class="u-blue-zig">the State Governments</span> <span class="u-green">to ensure </span><span class="u-blue-zig">execution of schemes</span> <span class="u-green">essential for </span><span class="u-blue-zig">the welfare</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Tribes</span> <span class="u-green">in </span><span class="u-blue-zig">the States</span>.
+        </li>
+        <li>
+            <strong>4. Delegated Legislation:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">can enact law authorizing </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">to delegate </span><span class="u-blue-zig">its functions</span> <span class="u-green">to </span><span class="u-blue-zig">the State Governments</span> <span class="u-green">or </span><span class="u-blue-zig">its officers</span> <span class="u-green">irrespective of </span><span class="u-blue-zig">the consent</span> <span class="u-green">of </span><span class="u-blue-zig">such State Government</span>.
+        </li>
+        <li>
+            <strong>5. Hindi Language:</strong> <span class="u-blue-zig">Union</span> <span class="u-green">can direct </span><span class="u-blue-zig">the State</span> <span class="u-green">to ensure </span><span class="u-blue-zig">the development</span> <span class="u-green">of </span><span class="u-blue-zig">the Hindi language</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 262</div>
+
+    <ul>
+        <li>
+            <strong>1. Water Disputes:</strong> (1) <span class="u-blue-zig">Parliament</span> <span class="u-green">may by law provide for </span><span class="u-blue-zig">the adjudication</span> <span class="u-green">of </span><span class="u-blue-zig">any dispute or complaint</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the use, distribution or control</span> <span class="u-green">of </span><span class="u-blue-zig">the waters</span> <span class="u-green">of</span>, <span class="u-green">or in</span>, <span class="u-blue-zig">any inter-State river</span> <span class="u-green">or </span><span class="u-blue-zig">river valley</span>.
+        </li>
+        <li>
+            <strong>2. Court Exclusion:</strong> (2) <span class="u-green">Notwithstanding </span><span class="u-blue-zig">anything in this Constitution</span>, <span class="u-blue-zig">Parliament</span> <span class="u-green">may by law provide that </span><span class="u-blue-zig">neither the Supreme Court</span> <span class="u-green">nor </span><span class="u-blue-zig">any other court</span> <span class="u-green">shall exercise </span><span class="u-blue-zig">jurisdiction</span> <span class="u-green">in respect of </span><span class="u-blue-zig">any such dispute</span> <span class="u-green">as is referred to in </span><span class="u-blue-zig">clause (1)</span>.
+        </li>
+    </ul>
+
+    <div class="info-box">
+        <div class="info-box-header">Water &amp; Inter-State Rivers</div>
+        <ul>
+            <li>
+                <strong>1. State List Entry:</strong> <span class="u-blue-zig">Water</span> <span class="u-green">is </span><span class="u-blue-zig">Entry 17</span> <span class="u-green">of </span><span class="u-blue-zig">the State List</span> <span class="u-green">and so</span>, <span class="u-blue-zig">states</span> <span class="u-green">can legislate with respect to </span><span class="u-blue-zig">rivers</span>.
+            </li>
+            <li>
+                <strong>2. Union List Entry:</strong> <span class="u-blue-zig">Entry 56</span> <span class="u-green">of </span><span class="u-blue-zig">the Union List</span> <span class="u-green">gives </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">the power to </span><span class="u-blue-zig">regulate and develop</span> <span class="u-blue-zig">inter-state rivers</span> <span class="u-green">and </span><span class="u-blue-zig">river valleys</span>.
+            </li>
+            <li>
+                <strong>3. River Board Act:</strong> <span class="u-blue-zig">River Board Act, 1956</span> <span class="u-green">empowered </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">to establish </span><span class="u-blue-zig">Boards</span> <span class="u-green">for </span><span class="u-blue-zig">Interstate Rivers</span> <span class="u-green">and </span><span class="u-blue-zig">river valleys</span> <span class="u-green">in consultation with </span><span class="u-blue-zig">State Governments</span>.
+            </li>
+            <li>
+                <strong>4. Implementation:</strong> <span class="u-blue-zig">No river board</span> <span class="u-green">has been created</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-number">Page 51</div>
+</div>
+
+<!-- ==================== PAGE 52 ==================== -->
+<div class="pdf-page">
+
+    <div class="info-box">
+        <div class="info-box-header">Inter-State Water Dispute Act, 1956</div>
+        <ul>
+            <li>
+                <strong>1. Tribunal Formation:</strong> <span class="u-green">Under </span><span class="u-blue-zig">Inter-State Water Dispute Act, 1956</span>, <span class="u-green">if </span><span class="u-blue-zig">a state government</span> <span class="u-green">approaches </span><span class="u-blue-zig">the Centre</span> <span class="u-green">for </span><span class="u-blue-zig">the constitution of a tribunal</span>, <span class="u-blue-zig">the government</span> <span class="u-green">may form </span><span class="u-blue-zig">a tribunal</span> <span class="u-green">after trying to </span><span class="u-blue-zig">resolve the dispute</span> <span class="u-green">through </span><span class="u-blue-zig">consultations</span>.
+            </li>
+            <li>
+                <strong>2. Tribunal Composition:</strong> <span class="u-blue-zig">The tribunal</span> <span class="u-green">consists of </span><span class="u-blue-zig">the Chief Justice of India</span>, <span class="u-blue-zig">a sitting judge</span> <span class="u-green">from </span><span class="u-blue-zig">the Supreme Court</span>, <span class="u-green">and </span><span class="u-blue-zig">two other judges</span> <span class="u-green">who are from either </span><span class="u-blue-zig">the SC</span> <span class="u-green">or </span><span class="u-blue-zig">a High Court</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-box-red">
+        <div class="info-box-header">The Inter-State River Water Disputes (Amendment) Bill, 2019</div>
+        <ul>
+            <li>
+                <strong>1. DRC Setup:</strong> <span class="u-blue-zig">The central government</span> <span class="u-green">will then set up </span><span class="u-blue-zig">a Disputes Resolution Committee</span> (<span class="u-blue-zig">DRC</span>) <span class="u-green">to resolve </span><span class="u-blue-zig">the dispute amicably</span>.
+            </li>
+            <li>
+                <strong>2. DRC Composition:</strong> <span class="u-blue-zig">The DRC</span> <span class="u-green">will comprise of </span><span class="u-blue-zig">a Chairperson</span>, <span class="u-green">and </span><span class="u-blue-zig">experts</span> <span class="u-green">with at least </span><span class="u-blue-zig">15 years of experience</span> <span class="u-green">in </span><span class="u-blue-zig">relevant sectors</span>.
+                <ul>
+                    <li>
+                        <strong>a. Nominated:</strong> <span class="u-green">These will be </span><span class="u-blue-zig">nominated</span> <span class="u-green">by </span><span class="u-blue-zig">the central government</span>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>3. State Members:</strong> <span class="u-green">It will also comprise </span><span class="u-blue-zig">one member from each state</span> (<span class="u-blue-zig">at Joint Secretary level</span>), <span class="u-green">which is </span><span class="u-blue-zig">a party to the dispute</span>.
+                <ul>
+                    <li>
+                        <strong>a. State Nomination:</strong> <span class="u-blue-zig">These members</span> <span class="u-green">will be nominated by </span><span class="u-blue-zig">the concerned state government</span>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>4. DRC Timeline:</strong> <span class="u-blue-zig">The DRC</span> <span class="u-green">will seek to </span><span class="u-blue-zig">resolve the dispute</span> <span class="u-green">through </span><span class="u-blue-zig">negotiations</span>, <span class="u-green">within </span><span class="u-blue-zig">one year</span> (<span class="u-blue-zig">extendable by 6 months</span>).
+            </li>
+            <li>
+                <strong>5. DRC Report:</strong> <span class="u-green">It will then submit </span><span class="u-blue-zig">its report</span> <span class="u-green">to </span><span class="u-blue-zig">the central government</span>.
+            </li>
+            <li>
+                <strong>6. Tribunal Referral:</strong> <span class="u-green">If </span><span class="u-blue-zig">a dispute</span> <span class="u-green">cannot be settled by </span><span class="u-blue-zig">the DRC</span>, <span class="u-blue-zig">the central government</span> <span class="u-green">will refer it to </span><span class="u-blue-zig">the Inter-State River Water Disputes Tribunal</span>.
+            </li>
+            <li>
+                <strong>7. Tribunal Setup:</strong> <span class="u-blue-zig">The central government</span> <span class="u-green">will set up </span><span class="u-blue-zig">an Inter-State River Water Disputes Tribunal</span>, <span class="u-green">for </span><span class="u-blue-zig">the adjudication</span> <span class="u-green">of </span><span class="u-blue-zig">all water disputes</span>.
+                <ul>
+                    <li>
+                        <strong>a. Multiple Benches:</strong> <span class="u-blue-zig">This Tribunal</span> <span class="u-green">can have </span><span class="u-blue-zig">multiple benches</span>.
+                    </li>
+                    <li>
+                        <strong>b. Existing Dissolved:</strong> <span class="u-blue-zig">All five existing tribunals</span> <span class="u-green">under </span><span class="u-blue-zig">the 1956 Act</span> <span class="u-green">would be </span><span class="u-blue-zig">dissolved</span>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>8. Tribunal Composition:</strong> <span class="u-blue-zig">The Tribunal</span> <span class="u-green">will consist of </span><span class="u-blue-zig">a Chairperson</span>, <span class="u-blue-zig">Vice-Chairperson</span>, <span class="u-blue-zig">3 judicial members</span>, <span class="u-green">and </span><span class="u-blue-zig">3 expert members</span>.
+                <ul>
+                    <li>
+                        <strong>a. Selection Committee:</strong> <span class="u-green">They will be appointed by </span><span class="u-blue-zig">the central government</span> <span class="u-green">on the recommendation of </span><span class="u-blue-zig">a Selection Committee</span>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>9. Assessors:</strong> <span class="u-blue-zig">The central government</span> <span class="u-green">may also appoint </span><span class="u-blue-zig">two experts</span> <span class="u-green">serving in </span><span class="u-blue-zig">the Central Water Engineering Service</span> <span class="u-green">as </span><span class="u-blue-zig">assessors</span> <span class="u-green">to advise </span><span class="u-blue-zig">the Bench</span> <span class="u-green">in </span><span class="u-blue-zig">its proceedings</span>.
+                <ul>
+                    <li>
+                        <strong>a. Impartiality:</strong> <span class="u-blue-zig">The assessor</span> <span class="u-green">should not be from </span><span class="u-blue-zig">the state</span> <span class="u-green">which is </span><span class="u-blue-zig">a party to the dispute</span>.
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>10. Decision Timeline:</strong> <span class="u-green">Under </span><span class="u-blue-zig">the Act</span>, <span class="u-blue-zig">the Tribunal</span> <span class="u-green">must give </span><span class="u-blue-zig">its decision</span> <span class="u-green">within </span><span class="u-blue-zig">3 years</span>, <span class="u-green">which may be extended by </span><span class="u-blue-zig">2 years</span>.
+            </li>
+            <li>
+                <strong>11. No Appeal:</strong> <span class="u-green">There is </span><span class="u-blue-zig">no provision</span> <span class="u-green">for </span><span class="u-blue-zig">appeal</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-topic-header">INTER-STATE COUNCIL</div>
+
+    <div class="section-header">ARTICLE 263</div>
+
+    <div class="page-number">Page 52</div>
+</div>
+
+<!-- ==================== PAGE 53 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Establishment Clause:</strong> <span class="u-green">If at any time it appears to </span><span class="u-blue-zig">the President</span> <span class="u-green">that </span><span class="u-blue-zig">the public interests</span> <span class="u-green">would be served by </span><span class="u-blue-zig">the establishment</span> <span class="u-green">of </span><span class="u-blue-zig">a Council</span> <span class="u-green">charged with the duty of</span> &mdash;
+            <ul>
+                <li>
+                    <strong>a. Dispute Inquiry:</strong> (a) <span class="u-green">inquiring into and advising upon </span><span class="u-blue-zig">disputes</span> <span class="u-green">which may have arisen between </span><span class="u-blue-zig">States</span>;
+                </li>
+                <li>
+                    <strong>b. Common Interest:</strong> (b) <span class="u-green">investigating and discussing </span><span class="u-blue-zig">subjects</span> <span class="u-green">in which </span><span class="u-blue-zig">some or all of the States</span>, <span class="u-green">or </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">one or more of the States</span>, <span class="u-green">have </span><span class="u-blue-zig">a common interest</span>; <span class="u-green">or</span>
+                </li>
+                <li>
+                    <strong>c. Recommendations:</strong> (c) <span class="u-green">making </span><span class="u-blue-zig">recommendations</span> <span class="u-green">upon </span><span class="u-blue-zig">any such subject</span> <span class="u-green">and</span>, <span class="u-green">in particular</span>, <span class="u-blue-zig">recommendations</span> <span class="u-green">for </span><span class="u-blue-zig">the better co-ordination</span> <span class="u-green">of </span><span class="u-blue-zig">policy and action</span> <span class="u-green">with respect to </span><span class="u-blue-zig">that subject</span>,
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Presidential Power:</strong> <span class="u-green">it shall be lawful for </span><span class="u-blue-zig">the President</span> <span class="u-green">by order to establish </span><span class="u-blue-zig">such a Council</span>, <span class="u-green">and to define </span><span class="u-blue-zig">the nature of the duties</span> <span class="u-green">to be performed by it and </span><span class="u-blue-zig">its organisation and procedure</span>.
+        </li>
+    </ul>
+
+    <div class="info-box">
+        <div class="info-box-header">Composition of the Inter-State Council</div>
+        <ul>
+            <li>
+                <strong>1. Chairman:</strong> <span class="u-blue-zig">Prime Minister</span> <span class="u-green">acts as </span><span class="u-blue-zig">the chairman</span> <span class="u-green">of </span><span class="u-blue-zig">the council</span>.
+            </li>
+            <li>
+                <strong>2. Union Ministers:</strong> <span class="u-blue-zig">Union Ministers of Cabinet rank</span> <span class="u-green">in </span><span class="u-blue-zig">the Union Council of Ministers</span> <span class="u-green">nominated by </span><span class="u-blue-zig">the Prime Minister</span>.
+            </li>
+            <li>
+                <strong>3. Chief Ministers:</strong> <span class="u-blue-zig">Chief Ministers</span> <span class="u-green">of </span><span class="u-blue-zig">all States</span>.
+            </li>
+            <li>
+                <strong>4. UT Representatives:</strong> <span class="u-blue-zig">Chief Ministers</span> <span class="u-green">of </span><span class="u-blue-zig">Union Territories</span> <span class="u-green">having </span><span class="u-blue-zig">a Legislative Assembly</span> <span class="u-green">and </span><span class="u-blue-zig">Administrators of UTs</span> <span class="u-green">not having </span><span class="u-blue-zig">a Legislative Assembly</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-topic-header">ZONAL COUNCILS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Statutory Bodies:</strong> <span class="u-blue-zig">Zonal Councils</span> <span class="u-green">are </span><span class="u-blue-zig">statutory bodies</span> <span class="u-green">set up under </span><span class="u-red-zig">States Reorganization Act, 1956</span> <span class="u-green">to foster </span><span class="u-blue-zig">Inter-State co-operation</span> <span class="u-green">and </span><span class="u-blue-zig">co-ordination</span> <span class="u-green">among </span><span class="u-blue-zig">the States</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Council Mandate:</strong> <span class="u-blue-zig">These councils</span> <span class="u-green">are mandated to give </span><span class="u-blue-zig">recommendations</span> <span class="u-green">on </span><span class="u-blue-zig">any matter of common interest</span> <span class="u-green">in field of </span><span class="u-blue-zig">socio-economic planning</span>, <span class="u-blue-zig">border disputes</span>, <span class="u-blue-zig">linguistic minorities</span>, <span class="u-blue-zig">inter-State transport</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Five Councils:</strong> <span class="u-green">There are total </span><span class="u-blue-zig">five councils</span> <span class="u-green">created as per </span><span class="u-red-zig">States Reorganization Act 1956</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Northern Zone:</strong> <span class="u-blue-zig">Northern Zonal Council</span>: <span class="u-red-zig">Haryana</span>, <span class="u-red-zig">Punjab</span>, <span class="u-red-zig">Rajasthan</span>, <span class="u-red-zig">Himachal Pradesh</span>, <span class="u-red-zig">Jammu &amp; Kashmir</span>, <span class="u-red-zig">National Capital Territory of Delhi</span> (UT) <span class="u-green">and </span><span class="u-red-zig">Chandigarh</span> (UT).
+        </li>
+        <li>
+            <strong>2. Central Zone:</strong> <span class="u-blue-zig">Central Zonal Council</span>: <span class="u-red-zig">Chhattisgarh</span>, <span class="u-red-zig">Madhya Pradesh</span>, <span class="u-red-zig">Uttarakhand</span> <span class="u-green">and </span><span class="u-red-zig">Uttar Pradesh</span>.
+        </li>
+        <li>
+            <strong>3. Eastern Zone:</strong> <span class="u-blue-zig">Eastern Zonal Council</span>: <span class="u-red-zig">Odisha</span>, <span class="u-red-zig">West Bengal</span>, <span class="u-red-zig">Bihar</span> <span class="u-green">and </span><span class="u-red-zig">Jharkhand</span>.
+        </li>
+        <li>
+            <strong>4. Western Zone:</strong> <span class="u-blue-zig">Western Zonal Council</span>: <span class="u-red-zig">Goa</span>, <span class="u-red-zig">Gujarat</span>, <span class="u-red-zig">Maharashtra</span> <span class="u-green">and </span><span class="u-blue-zig">UTs of</span> <span class="u-red-zig">Daman &amp; Diu</span> <span class="u-green">and </span><span class="u-red-zig">Dadra &amp; Nagar Haveli</span>.
+        </li>
+        <li>
+            <strong>5. Southern Zone:</strong> <span class="u-blue-zig">Southern Zonal Council</span>: <span class="u-red-zig">Karnataka</span>, <span class="u-red-zig">Andhra Pradesh</span>, <span class="u-red-zig">Telangana</span>, <span class="u-red-zig">Kerala</span>, <span class="u-red-zig">Tamil Nadu</span> <span class="u-green">and </span><span class="u-red-zig">Puducherry</span> (UT).
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Chairmanship:</strong> <span class="u-blue-zig">All zonal councils</span> <span class="u-green">are chaired by </span><span class="u-blue-zig">Union Home Minister</span>. <span class="u-blue-zig">Chief Ministers of States</span> <span class="u-green">serve as </span><span class="u-blue-zig">Vice-Chairman</span> <span class="u-green">of </span><span class="u-blue-zig">respective zone</span> <span class="u-green">on </span><span class="u-blue-zig">rotational basis</span>, <span class="u-green">each holding office for </span><span class="u-blue-zig">period of one year</span> <span class="u-green">at </span><span class="u-blue-zig">a time</span>.
+    </p>
+
+    <div class="info-box">
+        <div class="info-box-header">North Eastern Council</div>
+        <ul>
+            <li>
+                <strong>1. Statutory Basis:</strong> <span class="u-blue-zig">North Eastern Council</span>, <span class="u-green">set up under </span><span class="u-red-zig">North Eastern Council Act, 1972</span>. <span class="u-red-zig">Assam</span>, <span class="u-red-zig">Arunachal Pradesh</span>, <span class="u-red-zig">Manipur</span>, <span class="u-red-zig">Tripura</span>, <span class="u-red-zig">Mizoram</span>, <span class="u-red-zig">Meghalaya</span>, <span class="u-red-zig">Nagaland</span> <span class="u-green">and </span><span class="u-red-zig">Sikkim</span> <span class="u-green">are in </span><span class="u-blue-zig">the Councils</span>.
+            </li>
+            <li>
+                <strong>2. NEC Leadership:</strong> <span class="u-green">It is also chaired by </span><span class="u-blue-zig">Union Home Minister</span>. <span class="u-blue-zig">Minister of Development of North East Region</span> (<span class="u-blue-zig">DoNER</span>) <span class="u-green">is its </span><span class="u-blue-zig">Vice Chairman</span>. <span class="u-blue-zig">Governors</span> <span class="u-green">and </span><span class="u-blue-zig">Chief Ministers</span> <span class="u-green">of </span><span class="u-blue-zig">all these eight North Eastern States</span> <span class="u-green">are its </span><span class="u-blue-zig">members</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="page-number">Page 53</div>
+</div>
+
+<!-- ==================== PAGE 54 ==================== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">FINANCIAL RELATIONS (ARTICLE 264 &ndash; 300)</div>
+
+    <div class="section-header">ARTICLE 266</div>
+
+    <div class="info-box-red">
+        <div class="info-box-header">Consolidated Fund of India</div>
+        <ul>
+            <li>
+                <strong>1. Direct &amp; Indirect Taxes:</strong> <span class="u-blue-zig">All revenue received</span> <span class="u-green">from </span><span class="u-blue-zig">direct and indirect taxes</span>.
+            </li>
+            <li>
+                <strong>2. Government Loans:</strong> <span class="u-blue-zig">All loans taken</span> <span class="u-green">by </span><span class="u-blue-zig">Government of India</span>.
+            </li>
+            <li>
+                <strong>3. Interest Received:</strong> <span class="u-blue-zig">Principal + Interest received</span> <span class="u-green">by </span><span class="u-blue-zig">Government of India</span> <span class="u-green">on </span><span class="u-blue-zig">loans given</span>.
+            </li>
+            <li>
+                <strong>4. Parliamentary Approval:</strong> <span class="u-green">Needs </span><span class="u-blue-zig">Parliament's approval</span> <span class="u-green">to spend from </span><span class="u-blue-zig">this fund</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-box">
+        <div class="info-box-header">Public Accounts of India</div>
+        <ul>
+            <li>
+                <strong>1. Bank Savings:</strong> <span class="u-blue-zig">Bank savings account</span> <span class="u-green">of </span><span class="u-blue-zig">the departments/ministries</span> (<span class="u-blue-zig">for day to day transactions</span>).
+            </li>
+            <li>
+                <strong>2. NIF:</strong> <span class="u-blue-zig">National Investment Fund</span> (<span class="u-blue-zig">NIF</span>) &mdash; <span class="u-blue-zig">Money earned</span> <span class="u-green">from </span><span class="u-blue-zig">disinvestment</span>.
+            </li>
+            <li>
+                <strong>3. NCCF/NDRF:</strong> <span class="u-blue-zig">National Calamity &amp; Contingency Fund</span> (<span class="u-blue-zig">NCCF</span>) (<span class="u-green">Under </span><span class="u-blue-zig">Home Ministry</span>) &mdash; <span class="u-green">Now merged with </span><span class="u-blue-zig">National Disaster Relief Fund</span> (<span class="u-blue-zig">NDRF</span>).
+            </li>
+            <li>
+                <strong>4. Other Funds:</strong> <span class="u-blue-zig">National small savings fund</span>, <span class="u-blue-zig">defence fund</span>, <span class="u-blue-zig">provident fund</span>, <span class="u-blue-zig">postal insurance</span> etc.
+            </li>
+            <li>
+                <strong>5. Cess &amp; Surcharges:</strong> <span class="u-blue-zig">All Cess</span> <span class="u-green">and </span><span class="u-blue-zig">specific purpose surcharges</span>.
+            </li>
+            <li>
+                <strong>6. Scheme Funds:</strong> <span class="u-blue-zig">Government schemes fund</span> (Ex. <span class="u-red-zig">MNREGA</span>).
+            </li>
+            <li>
+                <strong>7. No Approval Needed:</strong> <span class="u-blue-zig">No need</span> <span class="u-green">of </span><span class="u-blue-zig">Parliament's approval</span> <span class="u-green">to spend from </span><span class="u-blue-zig">this fund</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section-header">ARTICLE 267</div>
+
+    <div class="info-box-red">
+        <div class="info-box-header">Contingency Fund of India</div>
+        <ul>
+            <li>
+                <strong>1. Held by President:</strong> <span class="u-green">Held by </span><span class="u-blue-zig">the President of India</span> <span class="u-green">viz. </span><span class="u-blue-zig">Rs. 500 cr</span>.
+            </li>
+            <li>
+                <strong>2. Operated By:</strong> <span class="u-green">Operated by </span><span class="u-blue-zig">Finance Secretary</span> <span class="u-green">on accounts of </span><span class="u-blue-zig">President</span>.
+            </li>
+            <li>
+                <strong>3. Emergency Spending:</strong> <span class="u-blue-zig">President</span> <span class="u-green">can spend cash from </span><span class="u-blue-zig">this fund</span> <span class="u-green">for </span><span class="u-blue-zig">emergency/unforeseen circumstances</span> <span class="u-green">without </span><span class="u-blue-zig">the authorization of Parliament</span>.
+            </li>
+            <li>
+                <strong>4. Replenishment:</strong> <span class="u-green">Though </span><span class="u-blue-zig">Parliament's approval</span> <span class="u-green">is needed to </span><span class="u-blue-zig">again replenish</span> <span class="u-blue-zig">this fund</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section-header">TAXES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Taxation Powers:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">has </span><span class="u-blue-zig">exclusive power</span> <span class="u-green">to levy taxes on </span><span class="u-blue-zig">subjects</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the Union List</span>, <span class="u-blue-zig">the State Legislature</span> <span class="u-green">has </span><span class="u-blue-zig">exclusive power</span> <span class="u-green">to levy taxes on </span><span class="u-blue-zig">subjects</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the State List</span>, <span class="u-green">both </span><span class="u-green">can levy taxes on </span><span class="u-blue-zig">the subjects</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">Concurrent List</span> <span class="u-green">whereas </span><span class="u-blue-zig">residuary power of taxation</span> <span class="u-green">lies with </span><span class="u-blue-zig">Parliament only</span>.
+    </p>
+
+    <div class="section-header">DISTRIBUTION OF THE TAX-REVENUE</div>
+
+    <ul>
+        <li>
+            <strong>1. Union Levied, State Collected:</strong> <span class="u-blue-zig">Duties levied by the Union</span> <span class="u-green">but </span><span class="u-blue-zig">collected and appropriated by the States</span>: <span class="u-blue-zig">stamp duties</span> <span class="u-green">on </span><span class="u-blue-zig">bills of exchange</span>, etc., <span class="u-green">and </span><span class="u-blue-zig">excise duties</span> <span class="u-green">on </span><span class="u-blue-zig">medical and toilet preparations</span> <span class="u-green">containing </span><span class="u-blue-zig">alcohol</span>. <span class="u-blue-zig">These taxes</span> <span class="u-green">don't form the part of </span><span class="u-blue-zig">the Consolidated Fund of India</span>, <span class="u-green">but are assigned to </span><span class="u-blue-zig">that state only</span>.
+        </li>
+        <li>
+            <strong>2. Service Tax:</strong> <span class="u-blue-zig">Service Tax</span> <span class="u-green">are levied by </span><span class="u-blue-zig">the Centre</span> <span class="u-green">but collected and appropriated by </span><span class="u-blue-zig">the Centre and the States</span>.
+        </li>
+        <li>
+            <strong>3. Union Collected, State Assigned:</strong> <span class="u-blue-zig">Taxes levied</span> <span class="u-green">as well as </span><span class="u-blue-zig">collected by the Union</span>, <span class="u-green">but </span><span class="u-blue-zig">assigned to the States</span>:
+        </li>
+    </ul>
+
+    <div class="page-number">Page 54</div>
+</div>
+
+<!-- ==================== PAGE 55 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Inter-State Trade:</strong> <span class="u-green">These include </span><span class="u-blue-zig">taxes</span> <span class="u-green">on </span><span class="u-blue-zig">the sale and purchase of goods</span> <span class="u-green">in the course of </span><span class="u-blue-zig">inter-state trade or commerce</span> <span class="u-green">or </span><span class="u-blue-zig">the taxes</span> <span class="u-green">on </span><span class="u-blue-zig">the consignment of goods</span> <span class="u-green">in the course of </span><span class="u-blue-zig">inter-state trade or commerce</span>.
+        </li>
+        <li>
+            <strong>2. Union Distributed:</strong> <span class="u-blue-zig">Taxes levied and collected by the Union</span> <span class="u-green">and </span><span class="u-blue-zig">distributed between Union and the States</span>: <span class="u-blue-zig">Certain taxes</span> <span class="u-green">shall be levied as well as collected by </span><span class="u-blue-zig">the Union</span>, <span class="u-green">but </span><span class="u-blue-zig">their proceeds</span> <span class="u-green">shall be divided between </span><span class="u-blue-zig">the Union and the States</span> <span class="u-green">in </span><span class="u-blue-zig">a certain proportion</span>, <span class="u-green">in order to effect </span><span class="u-blue-zig">an equitable division</span> <span class="u-green">of </span><span class="u-blue-zig">the financial resources</span>. <span class="u-green">This category includes </span><span class="u-blue-zig">all taxes</span> <span class="u-green">referred in </span><span class="u-blue-zig">Union List</span> <span class="u-green">except </span><span class="u-blue-zig">the duties and taxes</span> <span class="u-green">referred to in </span><span class="u-blue-zig">Article 268, 268-A and 269</span>; <span class="u-blue-zig">surcharge on taxes and duties</span> <span class="u-green">mentioned in </span><span class="u-blue-zig">Article 271</span> <span class="u-green">or </span><span class="u-blue-zig">any Cess</span> <span class="u-green">levied for </span><span class="u-blue-zig">specific purposes</span>.
+        </li>
+        <li>
+            <strong>3. Union Surcharge:</strong> <span class="u-blue-zig">Surcharge</span> <span class="u-green">on </span><span class="u-blue-zig">certain duties and taxes</span> <span class="u-green">for purposes of </span><span class="u-blue-zig">the Union</span>: <span class="u-blue-zig">Parliament</span> <span class="u-green">may at any time increase </span><span class="u-blue-zig">any of the duties or taxes</span> <span class="u-green">referred in those articles by </span><span class="u-blue-zig">a surcharge</span> <span class="u-green">for purposes of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the whole proceeds</span> <span class="u-green">of any such surcharge shall form part of </span><span class="u-blue-zig">the Consolidated Fund of India</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">GRANTS-IN-AID</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Provision:</strong> <span class="u-blue-zig">The Constitution</span> <span class="u-green">provides for </span><span class="u-blue-zig">Grants-in-aid</span> <span class="u-green">to </span><span class="u-blue-zig">the States</span> <span class="u-green">from </span><span class="u-blue-zig">the Central resources</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Statutory Grants:</strong> <span class="u-blue-zig">Statutory Grants</span> <span class="u-green">are given by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">out of </span><span class="u-blue-zig">the Consolidated Fund of India</span> <span class="u-green">to </span><span class="u-blue-zig">such States</span> <span class="u-green">which are in </span><span class="u-blue-zig">need of assistance</span>. <span class="u-blue-zig">Different States</span> <span class="u-green">may be granted </span><span class="u-blue-zig">different sums</span>. <span class="u-blue-zig">Specific grants</span> <span class="u-green">are also given to promote </span><span class="u-blue-zig">the welfare</span> <span class="u-green">of </span><span class="u-blue-zig">scheduled tribes</span> <span class="u-green">in </span><span class="u-blue-zig">a state</span> <span class="u-green">or to raise </span><span class="u-blue-zig">the level of administration</span> <span class="u-green">of </span><span class="u-blue-zig">the Scheduled Areas</span> <span class="u-green">therein</span> (<span class="u-blue-zig">Art.275</span>).
+        </li>
+        <li>
+            <strong>2. Discretionary Grants:</strong> <span class="u-blue-zig">Centre</span> <span class="u-green">provides </span><span class="u-blue-zig">certain grants</span> <span class="u-green">to </span><span class="u-blue-zig">the States</span> <span class="u-green">on the recommendations of </span><span class="u-blue-zig">the Planning Commission</span> <span class="u-green">which are at </span><span class="u-blue-zig">the discretion</span> <span class="u-green">of </span><span class="u-blue-zig">the Union Government</span>. <span class="u-green">These are given to help </span><span class="u-blue-zig">the State financially</span> <span class="u-green">to fulfill </span><span class="u-blue-zig">plan targets</span> (<span class="u-blue-zig">Art.282</span>).
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 292</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Union Borrowing:</strong> <span class="u-blue-zig">Borrowing</span> <span class="u-green">by </span><span class="u-blue-zig">the Government of India</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 293</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. State Borrowing:</strong> <span class="u-blue-zig">Borrowing</span> <span class="u-green">by </span><span class="u-blue-zig">States</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 297</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Union Resources:</strong> <span class="u-blue-zig">Things of value</span> <span class="u-green">within </span><span class="u-blue-zig">territorial waters</span> <span class="u-green">or </span><span class="u-blue-zig">continental shelf</span> <span class="u-green">and </span><span class="u-blue-zig">resources</span> <span class="u-green">of </span><span class="u-blue-zig">the exclusive economic zone</span> <span class="u-green">to vest in </span><span class="u-blue-zig">the Union</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 298</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Trade &amp; Property:</strong> <span class="u-blue-zig">The executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and of </span><span class="u-blue-zig">each State</span> <span class="u-green">shall extend to </span><span class="u-blue-zig">the carrying on</span> <span class="u-green">of </span><span class="u-blue-zig">any trade or business</span> <span class="u-green">and to </span><span class="u-blue-zig">the acquisition, holding</span> <span class="u-green">and </span><span class="u-blue-zig">disposal of property</span> <span class="u-green">and </span><span class="u-blue-zig">the making of contracts</span> <span class="u-green">for </span><span class="u-blue-zig">any purpose</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 300</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Suits &amp; Proceedings:</strong> <span class="u-blue-zig">The Government of India</span> <span class="u-green">may sue or be sued by </span><span class="u-blue-zig">the name</span> <span class="u-green">of </span><span class="u-blue-zig">the Union of India</span> <span class="u-green">and </span><span class="u-blue-zig">the Government of a State</span> <span class="u-green">may sue or be sued by </span><span class="u-blue-zig">the name of the State</span>.
+    </p>
+
+    <div class="page-number">Page 55</div>
+</div>
+
+<!-- ==================== PAGE 185 (Page 56) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Suits & Proceedings:</strong> <span class="u-green">may be made by </span><span class="u-blue-zig">Act of Parliament</span> <span class="u-green">or of </span><span class="u-blue-zig">the Legislature of such State</span> <span class="u-green">enacted by virtue of </span><span class="u-blue-zig">powers conferred</span> <span class="u-green">by </span><span class="u-blue-zig">this Constitution</span>, <span class="u-green">sue or be sued in relation to </span><span class="u-blue-zig">their respective affairs</span> <span class="u-green">in the like cases as </span><span class="u-blue-zig">the Dominion of India</span> <span class="u-green">and </span><span class="u-blue-zig">the corresponding Provinces</span> <span class="u-green">or </span><span class="u-blue-zig">the corresponding Indian States</span> <span class="u-green">might have sued or been sued if </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">had not been enacted</span>.
+    </p>
+
+    <div class="main-topic-header">FINANCE COMMISSION</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Revenue Allocation:</strong> <span class="u-green">Although </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">has made an effort to allocate </span><span class="u-blue-zig">every possible source of revenue</span> <span class="u-green">either to </span><span class="u-blue-zig">the Union</span> <span class="u-green">or </span><span class="u-blue-zig">the States</span>, <span class="u-green">but </span><span class="u-blue-zig">this allocation</span> <span class="u-green">is </span><span class="u-blue-zig">quite broad based</span>. <span class="u-green">For the purpose of </span><span class="u-blue-zig">allocation of certain sources</span> <span class="u-green">of </span><span class="u-blue-zig">revenue</span>, <span class="u-green">between </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the State Governments</span>, <span class="u-blue-zig">the Constitution</span> <span class="u-green">provides for the establishment of </span><span class="u-blue-zig">a Finance Commission</span> <span class="u-green">under </span><span class="u-blue-zig">Article 280</span>. <span class="u-green">According to </span><span class="u-blue-zig">the Constitution</span>, <span class="u-blue-zig">the President of India</span> <span class="u-green">is authorized to set up </span><span class="u-blue-zig">a Finance Commission</span> <span class="u-blue-zig">every five years</span> <span class="u-green">to make recommendation regarding </span><span class="u-blue-zig">distribution of financial resources</span> <span class="u-green">between </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the States</span>.
+    </p>
+
+    <div class="info-box">
+        <div class="info-box-header">Constitution</div>
+        <ul>
+            <li>
+                <strong>1. Presidential Constitution:</strong> <span class="u-blue-zig">Finance Commission</span> <span class="u-green">is to be constituted by </span><span class="u-blue-zig">the President</span> <span class="u-blue-zig">every 5 years</span>.
+            </li>
+            <li>
+                <strong>2. Chairman Qualification:</strong> <span class="u-blue-zig">The Chairman</span> <span class="u-green">must be </span><span class="u-blue-zig">a person</span> <span class="u-green">having </span><span class="u-blue-zig">'experience in public affairs'</span>.
+            </li>
+            <li>
+                <strong>3. Member Appointment:</strong> <span class="u-blue-zig">Other four members</span> <span class="u-green">must be appointed from amongst </span><span class="u-blue-zig">the following</span>:-
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <strong>4. High Court Judge:</strong> <span class="u-blue-zig">A High Court Judge</span> <span class="u-green">or </span><span class="u-blue-zig">one qualified</span> <span class="u-green">to be appointed as </span><span class="u-blue-zig">High Court Judge</span>;
+            </li>
+            <li>
+                <strong>5. Finance Knowledge:</strong> <span class="u-blue-zig">A person</span> <span class="u-green">having </span><span class="u-blue-zig">knowledge of the finances</span> <span class="u-green">and </span><span class="u-blue-zig">accounts of the Government</span>;
+            </li>
+            <li>
+                <strong>6. Financial Experience:</strong> <span class="u-blue-zig">A person</span> <span class="u-green">having </span><span class="u-blue-zig">work experience</span> <span class="u-green">in </span><span class="u-blue-zig">financial matters and administration</span>;
+            </li>
+            <li>
+                <strong>7. Economics Knowledge:</strong> <span class="u-blue-zig">A person</span> <span class="u-green">having </span><span class="u-blue-zig">special knowledge of economics</span>.
+            </li>
+        </ul>
+    </div>
+
+    <div class="section-header">FUNCTIONS</div>
+
+    <ul>
+        <li>
+            <strong>1. Tax Distribution:</strong> <span class="u-blue-zig">The distribution</span> <span class="u-green">between </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the States</span> <span class="u-green">of </span><span class="u-blue-zig">the net proceeds of taxes</span> <span class="u-green">to be divided between them and </span><span class="u-blue-zig">the allocation</span> <span class="u-green">between </span><span class="u-blue-zig">the States</span> <span class="u-green">of </span><span class="u-blue-zig">respective shares of such proceeds</span>;
+        </li>
+        <li>
+            <strong>2. Grants-in-Aid:</strong> <span class="u-blue-zig">The principles</span> <span class="u-green">which should govern </span><span class="u-blue-zig">the grants-in-aid</span> <span class="u-green">of </span><span class="u-blue-zig">the revenue of the States</span> <span class="u-green">out of </span><span class="u-blue-zig">the Consolidated Fund of India</span>.
+        </li>
+        <li>
+            <strong>3. Local Body Resources:</strong> <span class="u-blue-zig">The measures needed</span> <span class="u-green">to augment </span><span class="u-blue-zig">the Consolidated Fund of a State</span> <span class="u-green">to supplement </span><span class="u-blue-zig">the resources</span> <span class="u-green">of </span><span class="u-blue-zig">the Panchayats and Municipalities</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span>;
+        </li>
+        <li>
+            <strong>4. Sound Finance:</strong> <span class="u-blue-zig">Any other matter</span> <span class="u-green">referred to </span><span class="u-blue-zig">the Commission</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span> <span class="u-green">in the interest of </span><span class="u-blue-zig">sound finance</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">GOODS AND SERVICES TAX</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. GST Overview:</strong> <span class="u-blue-zig">GST</span> <span class="u-green">is </span><span class="u-blue-zig">a comprehensive indirect tax</span> <span class="u-green">on </span><span class="u-blue-zig">manufacture, sale, and consumption</span> <span class="u-green">of </span><span class="u-blue-zig">goods and services</span> <span class="u-green">throughout </span><span class="u-red-zig">India</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Destination Based:</strong> <span class="u-green">It is </span><span class="u-blue-zig">a destination-based taxation system</span>.
+        </li>
+        <li>
+            <strong>3. Tax Replacement:</strong> <span class="u-blue-zig">GST</span> <span class="u-green">would replace </span><span class="u-blue-zig">respective taxes</span> <span class="u-green">levied by </span><span class="u-blue-zig">the central and state governments</span>. <span class="u-blue-zig">1 July 2017</span> <span class="u-blue-zig">GST</span> <span class="u-green">to be applicable across </span><span class="u-red-zig">India</span>.
+        </li>
+        <li>
+            <strong>4. Constitutional Basis:</strong> <span class="u-green">It has been established by </span><span class="u-blue-zig">the 101st Constitutional Amendment Act</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 246 A</div>
+
+    <div class="page-number">Page 56</div>
+</div>
+
+<!-- ==================== PAGE 186 (Page 57) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. GST Power:</strong> (1) <span class="u-blue-zig">Power to impose GST</span> [<span class="u-blue-zig">New Provisions</span>] <span class="u-green">Notwithstanding anything contained in </span><span class="u-blue-zig">articles 246 and 254</span>, <span class="u-blue-zig">Parliament</span>, <span class="u-green">and, subject to </span><span class="u-blue-zig">clause (2)</span>, <span class="u-blue-zig">the Legislature of every State</span>, <span class="u-green">have power to make laws with respect to </span><span class="u-blue-zig">goods and services tax</span> <span class="u-green">imposed by </span><span class="u-blue-zig">the Union</span> <span class="u-green">or by </span><span class="u-blue-zig">such state</span>.
+        </li>
+        <li>
+            <strong>2. Inter-State Trade:</strong> (2) <span class="u-blue-zig">Parliament</span> <span class="u-green">has </span><span class="u-blue-zig">exclusive power</span> <span class="u-green">to make laws with respect to </span><span class="u-blue-zig">goods and services tax</span> <span class="u-green">where </span><span class="u-blue-zig">the supply of goods</span>, <span class="u-green">or of </span><span class="u-blue-zig">services</span>, <span class="u-green">or </span><span class="u-blue-zig">both</span> <span class="u-green">takes place in the course of </span><span class="u-blue-zig">inter-State trade or commerce</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 269 A</div>
+
+    <ul>
+        <li>
+            <strong>1. Levy & Collection:</strong> <span class="u-blue-zig">GST</span> <span class="u-green">shall be levied and collected by </span><span class="u-blue-zig">the Central Government</span> <span class="u-green">and </span><span class="u-blue-zig">such tax</span> <span class="u-green">shall be apportioned between </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the States</span> <span class="u-green">in the manner as may be provided by </span><span class="u-blue-zig">Parliament by law</span> <span class="u-green">on the recommendations of </span><span class="u-blue-zig">GST Council</span>.
+        </li>
+        <li>
+            <strong>2. Import Supply:</strong> <span class="u-blue-zig">Supply of goods</span>, <span class="u-green">or of </span><span class="u-blue-zig">services</span>, <span class="u-green">or </span><span class="u-blue-zig">both</span> <span class="u-green">in the course of </span><span class="u-blue-zig">import into the territory</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">shall be deemed to be </span><span class="u-blue-zig">supply in the course</span> <span class="u-green">of </span><span class="u-blue-zig">inter-State trade or commerce</span>.
+        </li>
+        <li>
+            <strong>3. Place of Supply:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">will formulate </span><span class="u-blue-zig">the principles</span> <span class="u-green">for determining </span><span class="u-blue-zig">the place of supply</span>, <span class="u-green">and when </span><span class="u-blue-zig">a supply</span> <span class="u-green">takes place in the course of </span><span class="u-blue-zig">inter-State trade or commerce</span>.
+        </li>
+        <li>
+            <strong>4. State Apportionment:</strong> <span class="u-blue-zig">The amount apportioned</span> <span class="u-green">to </span><span class="u-blue-zig">a State</span> <span class="u-green">from </span><span class="u-blue-zig">the tax collected</span> <span class="u-green">on </span><span class="u-blue-zig">supplies in the course</span> <span class="u-green">of </span><span class="u-blue-zig">inter-state trade or commerce</span>.
+        </li>
+        <li>
+            <strong>5. IGST for SGST:</strong> <span class="u-green">Where </span><span class="u-blue-zig">an amount collected as tax</span> <span class="u-green">levied in the course of </span><span class="u-blue-zig">inter-state trade or commerce</span> <span class="u-green">has been used for payment of </span><span class="u-blue-zig">the tax levied by a State</span> <span class="u-green">under </span><span class="u-blue-zig">article 246A</span>. <span class="u-green">In other words, where </span><span class="u-blue-zig">IGST</span> <span class="u-green">is used for payment of </span><span class="u-blue-zig">SGST</span>.
+        </li>
+        <li>
+            <strong>6. SGST for IGST:</strong> <span class="u-green">Where </span><span class="u-blue-zig">an amount collected as tax</span> <span class="u-green">levied by </span><span class="u-blue-zig">a State</span> <span class="u-green">under </span><span class="u-blue-zig">article 246A</span> <span class="u-green">has been used for payment of </span><span class="u-blue-zig">the tax levied</span> <span class="u-green">under clause </span><span class="u-blue-zig">inter-state trade or commerce</span>. <span class="u-green">When </span><span class="u-blue-zig">SGST</span> <span class="u-green">is used for payment of </span><span class="u-blue-zig">IGST</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 279 A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. GST Council:</strong> <span class="u-green">Provides for constituting </span><span class="u-blue-zig">a Council</span> <span class="u-green">called </span><span class="u-blue-zig">the Goods and Services Tax Council</span> <span class="u-green">within </span><span class="u-blue-zig">60 days</span> <span class="u-green">from </span><span class="u-blue-zig">date of commencement</span> <span class="u-green">of </span><span class="u-blue-zig">101st Constitution Amendment Act, 2016</span>.
+    </p>
+
+    <div class="section-header">MEMBERS</div>
+
+    <ul>
+        <li>
+            <strong>1. Chairperson:</strong> (a) <span class="u-blue-zig">the Union Finance Minister</span> <span class="u-green">as </span><span class="u-blue-zig">Chairperson</span>;
+        </li>
+        <li>
+            <strong>2. MoS Revenue:</strong> (b) <span class="u-blue-zig">the Union Minister of State</span> <span class="u-green">in charge of </span><span class="u-blue-zig">Revenue or Finance</span>;
+        </li>
+        <li>
+            <strong>3. State Ministers:</strong> (c) <span class="u-blue-zig">the Minister in charge</span> <span class="u-green">of </span><span class="u-blue-zig">Finance or Taxation</span> <span class="u-green">or </span><span class="u-blue-zig">any other Minister</span> <span class="u-green">nominated by </span><span class="u-blue-zig">each State Government</span>.
+        </li>
+        <li>
+            <strong>4. Vice Chairperson:</strong> (d) <span class="u-blue-zig">Vice Chairperson</span> <span class="u-green">to be chosen among </span><span class="u-blue-zig">the members</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">QUORUM</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Quorum Requirement:</strong> <span class="u-blue-zig">One-half of the total number</span> <span class="u-green">of </span><span class="u-blue-zig">Members</span> <span class="u-green">of </span><span class="u-blue-zig">the Goods and Services Tax Council</span>.
+    </p>
+
+    <div class="section-header">DECISIONS</div>
+
+    <div class="page-number">Page 57</div>
+</div>
+
+<!-- ==================== PAGE 187 (Page 58) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Voting Majority:</strong> <span class="u-blue-zig">All decisions</span> <span class="u-green">by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">not less than three-fourths</span> <span class="u-green">of </span><span class="u-blue-zig">the weighted votes</span> <span class="u-green">of </span><span class="u-blue-zig">the members present and voting</span>.
+    </p>
+
+    <div class="section-header">WEIGHTAGE OF VOTES</div>
+
+    <ul>
+        <li>
+            <strong>1. Central Weightage:</strong> <span class="u-blue-zig">Central Government</span> – <span class="u-blue-zig">1/3rd of the total votes cast</span>.
+        </li>
+        <li>
+            <strong>2. State Weightage:</strong> <span class="u-blue-zig">State Governments</span> – <span class="u-blue-zig">2/3rd of the total votes cast</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">RECOMMENDATIONS</div>
+
+    <ul>
+        <li>
+            <strong>1. Tax Subsumption:</strong> <span class="u-blue-zig">The taxes, cesses and surcharges</span> <span class="u-green">that may be </span><span class="u-blue-zig">subsumed</span>.
+        </li>
+        <li>
+            <strong>2. GST Applicability:</strong> <span class="u-blue-zig">The goods and services</span> <span class="u-green">that may be subjected to or exempted from </span><span class="u-blue-zig">GST</span>.
+        </li>
+        <li>
+            <strong>3. Model GST Laws:</strong> <span class="u-blue-zig">Model Goods and Services Tax Laws</span>, <span class="u-blue-zig">principles of levy</span>, <span class="u-blue-zig">apportionment</span> <span class="u-green">of </span><span class="u-blue-zig">Goods and Services Tax</span> <span class="u-green">levied under </span><span class="u-blue-zig">Article 269A</span> <span class="u-green">and </span><span class="u-blue-zig">the principles</span> <span class="u-green">that govern </span><span class="u-blue-zig">the place of supply</span>.
+        </li>
+        <li>
+            <strong>4. Threshold Limit:</strong> <span class="u-blue-zig">The threshold limit of turnover</span> <span class="u-green">below which </span><span class="u-blue-zig">goods and services</span> <span class="u-green">may be </span><span class="u-blue-zig">exempted</span>.
+        </li>
+        <li>
+            <strong>5. Rate Structure:</strong> <span class="u-blue-zig">Rates</span>, <span class="u-blue-zig">floor rates</span>, <span class="u-blue-zig">band</span>, <span class="u-blue-zig">special rates</span>.
+        </li>
+        <li>
+            <strong>6. Special Provisions:</strong> <span class="u-blue-zig">Special provision</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the States</span> <span class="u-green">of </span><span class="u-red-zig">Arunachal Pradesh</span>, <span class="u-red-zig">Assam</span>, <span class="u-red-zig">Jammu and Kashmir</span>, <span class="u-red-zig">Manipur</span>, <span class="u-red-zig">Meghalaya</span>, <span class="u-red-zig">Mizoram</span>, <span class="u-red-zig">Nagaland</span>, <span class="u-red-zig">Sikkim</span>, <span class="u-red-zig">Tripura</span>, <span class="u-red-zig">Himachal Pradesh</span> <span class="u-green">and </span><span class="u-red-zig">Uttarakhand</span>.
+        </li>
+        <li>
+            <strong>7. Petroleum Products:</strong> <span class="u-blue-zig">Date</span> <span class="u-green">on which </span><span class="u-blue-zig">GST</span> <span class="u-green">be levied on </span><span class="u-blue-zig">petroleum crude</span>, <span class="u-blue-zig">HSD</span>, <span class="u-blue-zig">Petrol</span>, <span class="u-blue-zig">natural gas</span> <span class="u-green">and </span><span class="u-blue-zig">ATF</span>.
+        </li>
+        <li>
+            <strong>8. Other Matters:</strong> <span class="u-blue-zig">Any other matter</span> <span class="u-green">relating to </span><span class="u-blue-zig">the goods and services tax</span>, <span class="u-green">as </span><span class="u-blue-zig">the Council</span> <span class="u-green">may decide</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 286</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. State Restrictions:</strong> <span class="u-blue-zig">Restrictions on the States</span> <span class="u-green">to impose </span><span class="u-blue-zig">any tax</span> <span class="u-green">on </span><span class="u-blue-zig">the supply of the goods</span> <span class="u-green">or </span><span class="u-blue-zig">services or both</span>, <span class="u-green">where such supply takes place</span>: a. <span class="u-blue-zig">Outside the State</span> b. <span class="u-green">in the course of </span><span class="u-blue-zig">the import of the goods</span> <span class="u-green">into</span>, <span class="u-green">or </span><span class="u-blue-zig">export of the goods</span> <span class="u-green">out of</span>, <span class="u-blue-zig">the territory of India</span>.
+    </p>
+
+    <div class="main-topic-header">COOPERATIVE FEDERALISM IS PROMOTING HEALTHY CENTRE STATE RELATIONS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Federal Philosophy:</strong> <span class="u-blue-zig">Federalism</span> <span class="u-green">is derived from </span><span class="u-blue-zig">the Latin word foedus</span>, <span class="u-green">which means </span><span class="u-blue-zig">agreement or treaty</span>. <span class="u-green">Thus, it is </span><span class="u-blue-zig">a philosophy of political organization</span> <span class="u-green">that involves </span><span class="u-blue-zig">a combination</span> <span class="u-green">of the principles of </span><span class="u-blue-zig">centralization, non-centralization</span>, <span class="u-green">and </span><span class="u-blue-zig">power-sharing</span>. <span class="u-red-zig">Sardar Patel</span> <span class="u-green">was strongly an advocate of </span><span class="u-blue-zig">the federal system</span> <span class="u-green">and played a crucial role in </span><span class="u-blue-zig">crafting a federal constitution</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. S.R. Bommai Case:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-blue-zig">the S.R. Bommai case</span>, <span class="u-blue-zig">the States</span> <span class="u-green">are not </span><span class="u-blue-zig">mere appendages of the Union</span> <span class="u-green">and the latter should ensure that </span><span class="u-blue-zig">the powers of the States</span> <span class="u-green">are not </span><span class="u-blue-zig">trampled with</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Cooperative Federalism:</strong> <span class="u-blue-zig">Federal India</span> <span class="u-green">is no longer </span><span class="u-blue-zig">a hindrance</span> <span class="u-green">for </span><span class="u-blue-zig">better centre-state relations</span> <span class="u-green">but rather it has given </span><span class="u-blue-zig">new hope</span> <span class="u-green">to the mixed efforts of </span><span class="u-blue-zig">the Centre and states</span> <span class="u-green">which may be referred to as </span><span class="u-blue-zig">cooperative federalism</span>. <span class="u-blue-zig">The Indian Constitution</span> <span class="u-green">already distinguishes </span><span class="u-blue-zig">the authority</span> <span class="u-green">of </span><span class="u-blue-zig">the Centre and the states</span>. <span class="u-blue-zig">The provision for separate lists</span> <span class="u-green">reduces </span><span class="u-blue-zig">misunderstanding and disagreement</span> <span class="u-green">between </span><span class="u-blue-zig">the Centre and the states</span>. <span class="u-green">There would be </span><span class="u-blue-zig">less confusion</span> <span class="u-green">and </span><span class="u-blue-zig">more amicable interactions</span> <span class="u-green">between </span><span class="u-blue-zig">the Center and the states</span> (<span class="u-blue-zig">Art. 246</span>).
+    </p>
+
+    <div class="page-number">Page 58</div>
+</div>
+
+<!-- ==================== PAGE 188 (Page 59) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. NITI Aayog:</strong> <span class="u-green">Replacing </span><span class="u-blue-zig">the older Planning Commission</span> <span class="u-green">where only </span><span class="u-blue-zig">the Union</span> <span class="u-green">had a say</span>, <span class="u-red-zig">NITI Aayog</span> <span class="u-green">boosts </span><span class="u-blue-zig">the morale of the states</span> <span class="u-green">and holds them responsible for </span><span class="u-blue-zig">better decision making</span> <span class="u-green">since they are now </span><span class="u-blue-zig">a part of the process</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Dual GST Model:</strong> <span class="u-green">In </span><span class="u-blue-zig">2017</span>, <span class="u-red-zig">India</span> <span class="u-green">adopted </span><span class="u-blue-zig">a dual-structure GST model</span> <span class="u-green">wherein </span><span class="u-blue-zig">both the Centre</span> <span class="u-green">as well as </span><span class="u-blue-zig">the states</span> <span class="u-green">have </span><span class="u-blue-zig">an important role</span>. <span class="u-green">Both are empowered to </span><span class="u-blue-zig">levy and collect taxes</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. State Governance:</strong> <span class="u-blue-zig">States</span> <span class="u-green">play a crucial role since they can </span><span class="u-blue-zig">manage the situation</span> <span class="u-green">and </span><span class="u-blue-zig">rule the region</span> <span class="u-green">in accordance with </span><span class="u-blue-zig">the demands of the population</span>, <span class="u-green">which will ultimately result in </span><span class="u-blue-zig">the inclusion</span> <span class="u-green">of </span><span class="u-blue-zig">additional groups of people</span> <span class="u-green">in </span><span class="u-blue-zig">mainstream society</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Efficient Administration:</strong> <span class="u-blue-zig">A federal system of government</span> <span class="u-green">divides </span><span class="u-blue-zig">authority</span> <span class="u-green">between </span><span class="u-blue-zig">the central government</span> <span class="u-green">and </span><span class="u-blue-zig">the states</span>, <span class="u-green">which facilitates </span><span class="u-blue-zig">efficient administration</span>. <span class="u-green">Additionally, </span><span class="u-blue-zig">the states</span> <span class="u-green">would be better equipped to control </span><span class="u-blue-zig">the problems associated with it</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Trust & Faith:</strong> <span class="u-green">This way, </span><span class="u-blue-zig">a better relation</span> <span class="u-green">of </span><span class="u-blue-zig">trust and faith</span> <span class="u-green">can be witnessed between </span><span class="u-blue-zig">the Centre and the states</span>.
+    </p>
+
+    <div class="main-topic-header">ARTICLE 246 IS THE CORNERSTONE OF CENTRE STATE LEGISLATIVE RELATIONS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Division of Powers:</strong> <span class="u-blue-zig">The essential principles</span> <span class="u-green">guiding </span><span class="u-blue-zig">the division of powers</span> <span class="u-green">between </span><span class="u-blue-zig">the Central and state governments</span> <span class="u-green">are outlined in </span><span class="u-blue-zig">Part XI of Article 246</span> <span class="u-green">of </span><span class="u-blue-zig">the Indian Constitution</span>. <span class="u-blue-zig">The purpose of the Constitution</span> <span class="u-green">is to grant </span><span class="u-blue-zig">a constitutionally powerful Centre</span> <span class="u-green">with </span><span class="u-blue-zig">sufficient powers</span>, <span class="u-green">both in terms of </span><span class="u-blue-zig">scope and nature</span>, <span class="u-green">to protect and uphold </span><span class="u-blue-zig">the nation's unity and integrity</span>. <span class="u-blue-zig">The Indian Constitution</span> <span class="u-green">aims to create </span><span class="u-blue-zig">three distinct functional areas</span>:
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Centre's Area:</strong> <span class="u-blue-zig">An exclusive area</span> <span class="u-green">for </span><span class="u-blue-zig">the Centre</span>;
+        </li>
+        <li>
+            <strong>3. States' Area:</strong> <span class="u-blue-zig">An exclusive area</span> <span class="u-green">for </span><span class="u-blue-zig">the States</span>; <span class="u-green">and</span>
+        </li>
+        <li>
+            <strong>4. Concurrent Area:</strong> <span class="u-blue-zig">A shared or concurrent area</span> <span class="u-green">in which </span><span class="u-blue-zig">the Centre and the States</span> <span class="u-green">may coexist, subject to </span><span class="u-blue-zig">the Centre's ultimate supremacy</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Historical Basis:</strong> <span class="u-blue-zig">The Union</span> <span class="u-green">was given </span><span class="u-blue-zig">larger powers</span> <span class="u-green">relative to </span><span class="u-red-zig">US</span>, <span class="u-green">due to </span><span class="u-blue-zig">historical reasons</span>, <span class="u-blue-zig">partition</span> <span class="u-green">and to control </span><span class="u-blue-zig">certain separatist tendencies</span> <span class="u-green">and for </span><span class="u-blue-zig">equal development of all regions</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Union List:</strong> <span class="u-green">According to </span><span class="u-blue-zig">Article 246(1)</span>, <span class="u-blue-zig">Parliament</span> <span class="u-green">has </span><span class="u-blue-zig">the "exclusive power"</span> <span class="u-green">to enact laws regarding </span><span class="u-blue-zig">any item on the Union List</span>. <span class="u-blue-zig">This List</span> <span class="u-green">includes entries such as </span><span class="u-blue-zig">the necessity for a uniform law</span> <span class="u-green">for </span><span class="u-blue-zig">the entire country</span>. <span class="u-blue-zig">The states</span> <span class="u-green">have no authority to enact </span><span class="u-blue-zig">legislation</span> <span class="u-green">in </span><span class="u-blue-zig">this area</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. State List:</strong> <span class="u-blue-zig">Article 246 (3)</span> <span class="u-green">gives </span><span class="u-blue-zig">the states</span> <span class="u-blue-zig">the exclusive power</span> <span class="u-green">to make laws concerning </span><span class="u-blue-zig">the items</span> <span class="u-green">included in </span><span class="u-blue-zig">the State List</span>. <span class="u-green">These are issues that allow for </span><span class="u-blue-zig">local variances</span> <span class="u-green">and are best handled at </span><span class="u-blue-zig">the state level</span> <span class="u-green">from </span><span class="u-blue-zig">an administrative standpoint</span>, <span class="u-green">hence, </span><span class="u-blue-zig">the Centre</span> <span class="u-green">is barred from legislating on </span><span class="u-blue-zig">these issues</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. Concurrent List:</strong> <span class="u-blue-zig">This division of powers</span> <span class="u-green">has helped in </span><span class="u-blue-zig">clarity of domains</span> <span class="u-green">and </span><span class="u-blue-zig">effective exercise</span> <span class="u-green">by </span><span class="u-blue-zig">the Union and states</span> <span class="u-green">while the provision in </span><span class="u-blue-zig">concurrent lists</span> <span class="u-green">give </span><span class="u-blue-zig">flexibility and initiative</span> <span class="u-green">to either sides for </span><span class="u-blue-zig">judgement of situation</span> <span class="u-green">and </span><span class="u-blue-zig">legislation</span> <span class="u-green">in issues that have </span><span class="u-blue-zig">both a national and local connotation</span>.
+    </p>
+
+    <div class="main-topic-header">PROCLAMATION OF NATIONAL EMERGENCY AFFECTS CENTRE STATE RELATIONS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Changed Relations:</strong> <span class="u-blue-zig">The normal fabric</span> <span class="u-green">of </span><span class="u-blue-zig">the Centre-state relations</span> <span class="u-green">undergoes </span><span class="u-blue-zig">a basic change</span> <span class="u-green">during </span><span class="u-blue-zig">national emergency</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Executive Directions:</strong> <span class="u-blue-zig">The Centre</span> <span class="u-green">becomes entitled to give </span><span class="u-blue-zig">executive directions</span> <span class="u-green">on </span><span class="u-blue-zig">any matter</span>. <span class="u-green">Thus, </span><span class="u-blue-zig">the state governments</span> <span class="u-green">are brought under </span><span class="u-blue-zig">the complete control of the Centre</span>, <span class="u-green">though they are not </span><span class="u-blue-zig">suspended</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 59</div>
+</div>
+
+<!-- ==================== PAGE 189 (Page 60) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Parliamentary Power:</strong> <span class="u-blue-zig">The Parliament</span> <span class="u-green">becomes empowered to make laws on </span><span class="u-blue-zig">any subject</span> <span class="u-green">mentioned in </span><span class="u-blue-zig">the state list</span>. <span class="u-green">Although </span><span class="u-blue-zig">the legislative power</span> <span class="u-green">of </span><span class="u-blue-zig">state legislature</span> <span class="u-green">is not </span><span class="u-blue-zig">suspended</span>.
+        </li>
+        <li>
+            <strong>2. Presidential Ordinance:</strong> <span class="u-blue-zig">President</span> <span class="u-green">can issue </span><span class="u-blue-zig">ordinances</span> <span class="u-green">on </span><span class="u-blue-zig">the state subject</span>, <span class="u-green">if </span><span class="u-blue-zig">the Parliament</span> <span class="u-green">is not in </span><span class="u-blue-zig">session</span>.
+        </li>
+        <li>
+            <strong>3. Unitary Character:</strong> <span class="u-blue-zig">The Constitution</span> <span class="u-green">becomes </span><span class="u-blue-zig">unitary</span> <span class="u-green">than </span><span class="u-blue-zig">federal</span>.
+        </li>
+        <li>
+            <strong>4. Revenue Modification:</strong> <span class="u-blue-zig">The president</span> <span class="u-green">can modify, reduce or cancel, </span><span class="u-blue-zig">the constitutional distribution</span> <span class="u-green">of </span><span class="u-blue-zig">revenues</span> <span class="u-green">between </span><span class="u-blue-zig">the Centre and the states</span>.
+        </li>
+        <li>
+            <strong>5. Financial Year Limit:</strong> <span class="u-blue-zig">Such modification</span> <span class="u-green">continues till </span><span class="u-blue-zig">the end of the financial year</span> <span class="u-green">in which </span><span class="u-blue-zig">the emergency</span> <span class="u-green">is </span><span class="u-blue-zig">revoked</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Necessary Evil:</strong> <span class="u-green">During </span><span class="u-blue-zig">National emergency time</span> <span class="u-blue-zig">the Centre</span> <span class="u-green">becomes </span><span class="u-blue-zig">all powerful</span>. <span class="u-blue-zig">The Constitution</span> <span class="u-green">becomes </span><span class="u-blue-zig">unitary rather than federal</span> <span class="u-green">without even amending </span><span class="u-blue-zig">the Constitution</span>. <span class="u-green">However </span><span class="u-blue-zig">these powers</span> <span class="u-green">are </span><span class="u-blue-zig">a necessary evil</span> <span class="u-green">to enable </span><span class="u-blue-zig">central government</span> <span class="u-green">to meet </span><span class="u-blue-zig">any abnormal situations</span> <span class="u-green">effectively</span>.
+    </p>
+
+    <div class="main-topic-header">THE ROLE OF THE FINANCE COMMISSION IN MAINTAINING FISCAL FEDERALISM IN INDIA</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Mandate:</strong> <span class="u-blue-zig">The Finance Commission</span> (<span class="u-blue-zig">Art. 280</span>) <span class="u-green">is </span><span class="u-blue-zig">a Constitutionally mandated body</span> <span class="u-green">that is at the centre of </span><span class="u-blue-zig">fiscal federalism</span> <span class="u-green">by performing following functions</span> -
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Tax Proceeds:</strong> <span class="u-blue-zig">The distribution</span> <span class="u-green">between </span><span class="u-blue-zig">the Union</span> <span class="u-green">and </span><span class="u-blue-zig">the States</span> <span class="u-green">of </span><span class="u-blue-zig">the net proceeds of taxes</span> <span class="u-green">which are to be divided between them and </span><span class="u-blue-zig">the allocation</span> <span class="u-green">between </span><span class="u-blue-zig">the States</span> <span class="u-green">of </span><span class="u-blue-zig">the respective shares</span> <span class="u-green">of </span><span class="u-blue-zig">such proceeds</span>.
+        </li>
+        <li>
+            <strong>3. Grants-in-Aid:</strong> <span class="u-blue-zig">Determination of principles</span> <span class="u-green">and </span><span class="u-blue-zig">quantum of grants-in-aid</span> <span class="u-green">to </span><span class="u-blue-zig">States</span> <span class="u-green">which are in need of </span><span class="u-blue-zig">such assistance</span>.
+        </li>
+        <li>
+            <strong>4. Local Body Funds:</strong> <span class="u-blue-zig">Measures needed</span> <span class="u-green">to augment </span><span class="u-blue-zig">the Consolidated Fund of a State</span> <span class="u-green">to supplement </span><span class="u-blue-zig">the resources</span> <span class="u-green">of </span><span class="u-blue-zig">the Panchayats and Municipalities</span> <span class="u-green">in the State on the basis of </span><span class="u-blue-zig">the recommendations</span> <span class="u-green">made by </span><span class="u-blue-zig">the Finance Commission of the State</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Permanent Status:</strong> <span class="u-green">Despite </span><span class="u-blue-zig">the changing fiscal environment</span> <span class="u-green">and </span><span class="u-blue-zig">considerable expansion in its functions</span>, <span class="u-blue-zig">the institution</span> <span class="u-green">of </span><span class="u-blue-zig">the Finance Commission</span> <span class="u-green">has ensured </span><span class="u-blue-zig">smooth functioning</span> <span class="u-green">of </span><span class="u-blue-zig">Centre-State fiscal relations</span>. <span class="u-green">Yet the demand to accord </span><span class="u-blue-zig">permanent status</span> <span class="u-green">to </span><span class="u-blue-zig">the Finance Commission</span> <span class="u-green">seems right on the following grounds</span>-
+    </p>
+
+    <ul>
+        <li>
+            <strong>6. Fiscal Consolidation:</strong> <span class="u-green">There is a need for </span><span class="u-blue-zig">robust expenditure planning</span> <span class="u-green">without compromising on </span><span class="u-blue-zig">fiscal consolidation</span> <span class="u-green">as </span><span class="u-blue-zig">fiscal federalism</span> <span class="u-green">gathers momentum in the era of </span><span class="u-blue-zig">uniform Goods and Services tax</span> (<span class="u-blue-zig">GST</span>).
+        </li>
+        <li>
+            <strong>7. Fund Flow Certainty:</strong> <span class="u-green">There is a need to ensure </span><span class="u-blue-zig">consistency</span> <span class="u-green">between </span><span class="u-blue-zig">Finance Commissions</span> <span class="u-green">so that there is </span><span class="u-blue-zig">some certainty</span> <span class="u-green">in </span><span class="u-blue-zig">the flow of funds to States</span>.
+        </li>
+        <li>
+            <strong>8. Implementation Issues:</strong> <span class="u-green">During </span><span class="u-blue-zig">the intervening period</span>, <span class="u-green">it can also address </span><span class="u-blue-zig">issues arising</span> <span class="u-green">from </span><span class="u-blue-zig">implementation of the recommendation</span> <span class="u-green">of </span><span class="u-blue-zig">the Commission</span>.
+        </li>
+        <li>
+            <strong>9. Fiscal Prudence:</strong> <span class="u-green">This will also help add </span><span class="u-blue-zig">knowledge and capacities</span> <span class="u-green">and boost </span><span class="u-blue-zig">fiscal prudence</span>. <span class="u-blue-zig">The upcoming Finance Commission</span> <span class="u-green">will be able to get </span><span class="u-blue-zig">a clear hearing</span> <span class="u-green">on </span><span class="u-blue-zig">the challenges</span> <span class="u-green">and </span><span class="u-blue-zig">rate of effectiveness</span> <span class="u-green">of </span><span class="u-blue-zig">its likely recommendations</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 60</div>
+</div>
+
+<!-- ==================== PAGE 190 (Page 61) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Leaner Entity:</strong> <span class="u-blue-zig">The Commission</span> <span class="u-green">can function as </span><span class="u-blue-zig">a leaner entity</span> <span class="u-green">in </span><span class="u-blue-zig">the intervening period</span> <span class="u-green">till </span><span class="u-blue-zig">the next Finance Commission</span> <span class="u-green">is set up in </span><span class="u-blue-zig">a full-fledged manner</span>.
+        </li>
+        <li>
+            <strong>2. Apolitical Body:</strong> <span class="u-green">There is </span><span class="u-blue-zig">considerable merit</span> <span class="u-green">in having </span><span class="u-blue-zig">one apolitical body</span> <span class="u-green">that provides </span><span class="u-blue-zig">stability and predictability</span> <span class="u-green">primarily to </span><span class="u-blue-zig">share taxes</span> <span class="u-green">that ensures </span><span class="u-blue-zig">fiscal balance</span> <span class="u-green">and to refocus </span><span class="u-blue-zig">the scope</span> <span class="u-green">of </span><span class="u-blue-zig">the Finance Commission</span> <span class="u-green">to maintain </span><span class="u-blue-zig">the trust of all stakeholders</span> <span class="u-green">in </span><span class="u-blue-zig">the institution</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">THE ROLE THAT INTER STATE COUNCIL PLAY IN IMPROVING CENTRE STATE ADMINISTRATIVE RELATIONS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Basis:</strong> <span class="u-blue-zig">Inter State Council</span> <span class="u-green">is </span><span class="u-blue-zig">a constitutional body</span> <span class="u-green">set up on the basis of </span><span class="u-blue-zig">provisions</span> <span class="u-green">in </span><span class="u-blue-zig">Article 263</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution of India</span> <span class="u-green">by </span><span class="u-blue-zig">a Presidential Order</span> <span class="u-green">in </span><span class="u-blue-zig">1990</span> <span class="u-green">on recommendation of </span><span class="u-red-zig">Sarkaria Commission</span>. <span class="u-blue-zig">Inter-State Council</span> <span class="u-green">is </span><span class="u-blue-zig">a recommendatory body</span> <span class="u-green">and it investigates and discusses </span><span class="u-blue-zig">such subjects</span>, <span class="u-green">in which </span><span class="u-blue-zig">some or all of the States</span> <span class="u-green">or </span><span class="u-blue-zig">the Union</span> <span class="u-green">have </span><span class="u-blue-zig">a common interest</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Dispute Resolution:</strong> <span class="u-green">Inquiring into and advising upon </span><span class="u-blue-zig">disputes</span> <span class="u-green">which may have arisen </span><span class="u-blue-zig">between/among States</span>.
+        </li>
+        <li>
+            <strong>3. Common Interest:</strong> <span class="u-green">Investigating and discussing </span><span class="u-blue-zig">subjects</span> <span class="u-green">that have </span><span class="u-blue-zig">a common interest</span>.
+        </li>
+        <li>
+            <strong>4. Better Coordination:</strong> <span class="u-green">Making </span><span class="u-blue-zig">recommendations</span> <span class="u-green">upon </span><span class="u-blue-zig">any such subject</span> <span class="u-green">for </span><span class="u-blue-zig">the better coordination</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">NEED</div>
+
+    <ul>
+        <li>
+            <strong>1. Rejuvenated Council:</strong> <span class="u-blue-zig">A rejuvenated Inter-State Council</span> <span class="u-green">will have </span><span class="u-blue-zig">an important role</span> <span class="u-green">to play in </span><span class="u-blue-zig">the coming years</span>, <span class="u-green">especially since </span><span class="u-blue-zig">its members</span> <span class="u-green">are </span><span class="u-blue-zig">the political leaders</span> <span class="u-green">of </span><span class="u-blue-zig">their respective states</span>.
+        </li>
+        <li>
+            <strong>2. Trust Deficit:</strong> <span class="u-green">Bridge </span><span class="u-blue-zig">trust deficit</span> <span class="u-green">between </span><span class="u-blue-zig">center and states</span>.
+        </li>
+        <li>
+            <strong>3. Governor's Role:</strong> <span class="u-green">It can reach </span><span class="u-blue-zig">a consensus</span> <span class="u-green">on </span><span class="u-blue-zig">role of Governor</span>.
+        </li>
+        <li>
+            <strong>4. Article 356:</strong> <span class="u-green">It can decide upon </span><span class="u-blue-zig">the use of article 356</span> <span class="u-green">and </span><span class="u-blue-zig">other such constitutional matters</span>.
+        </li>
+        <li>
+            <strong>5. Proactive Executives:</strong> <span class="u-blue-zig">Increased accountability</span> <span class="u-green">and </span><span class="u-blue-zig">enthusiasm</span>, <span class="u-green">making </span><span class="u-blue-zig">executives proactive</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Regular Meetings:</strong> <span class="u-green">If </span><span class="u-blue-zig">the Inter-State Council</span> <span class="u-green">is to emerge as </span><span class="u-blue-zig">the key institution</span> <span class="u-green">to manage </span><span class="u-blue-zig">inter-state frictions</span>, <span class="u-green">it first needs to have </span><span class="u-blue-zig">a regular meeting schedule</span>. <span class="u-blue-zig">The council</span> <span class="u-green">also has to have </span><span class="u-blue-zig">a permanent secretariat</span> <span class="u-green">which will ensure that </span><span class="u-blue-zig">the periodic meetings</span> <span class="u-green">are more </span><span class="u-blue-zig">fruitful</span>. <span class="u-blue-zig">The council</span> <span class="u-green">is as yet just </span><span class="u-blue-zig">a discussion group</span>, <span class="u-green">but it should have </span><span class="u-blue-zig">a greater say</span> <span class="u-green">in </span><span class="u-blue-zig">federal coordination</span> <span class="u-green">in </span><span class="u-blue-zig">the future</span>.
+    </p>
+
+    <div class="main-topic-header">DIFFERENCES BETWEEN THE COOPERATIVE FEDERALISM AND COMPETITIVE FEDERALISM</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Horizontal Relationship:</strong> <span class="u-blue-zig">The concept of cooperative federalism</span> <span class="u-green">professes </span><span class="u-blue-zig">a horizontal relationship</span> <span class="u-green">between </span><span class="u-blue-zig">the Central and the State governments</span>, <span class="u-green">where </span><span class="u-blue-zig">the Union</span> <span class="u-green">as well as </span><span class="u-blue-zig">the State levels</span> <span class="u-green">cooperate to serve </span><span class="u-blue-zig">the larger public interest</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. National Concerns:</strong> <span class="u-green">Guided by </span><span class="u-blue-zig">the broader national concerns</span> <span class="u-green">of using </span><span class="u-blue-zig">the available resources</span> <span class="u-green">for </span><span class="u-blue-zig">the benefit of the people</span>.
+        </li>
+        <li>
+            <strong>3. Human Capabilities:</strong> <span class="u-green">Encourages </span><span class="u-blue-zig">the Government at different levels</span> <span class="u-green">to take advantage of </span><span class="u-blue-zig">a large resources</span> <span class="u-green">and </span><span class="u-blue-zig">the potential of human capabilities</span> <span class="u-green">in </span><span class="u-blue-zig">all parts of the country</span> <span class="u-green">and from </span><span class="u-blue-zig">all sections of the society</span> <span class="u-green">for building </span><span class="u-blue-zig">a prosperous nation</span>.
+        </li>
+        <li>
+            <strong>4. Basic Services:</strong> <span class="u-green">To ensure </span><span class="u-blue-zig">a minimum bundle</span> <span class="u-green">of </span><span class="u-blue-zig">basic services</span> <span class="u-green">and </span><span class="u-blue-zig">a nationally acceptable level of living</span> <span class="u-green">for </span><span class="u-blue-zig">all the people of the country</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 61</div>
+</div>
+
+<!-- ==================== PAGE 191 (Page 62) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Vertical Relationship:</strong> <span class="u-green">In </span><span class="u-blue-zig">competitive federalism</span>, <span class="u-blue-zig">the States</span> <span class="u-green">share </span><span class="u-blue-zig">a vertical relationship</span> <span class="u-green">with </span><span class="u-blue-zig">the Central government</span> <span class="u-green">while competing </span><span class="u-blue-zig">amongst themselves</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. State Perks:</strong> <span class="u-blue-zig">States</span> <span class="u-green">want </span><span class="u-blue-zig">more funds and perks</span> <span class="u-green">from </span><span class="u-blue-zig">the state government</span> <span class="u-green">for </span><span class="u-blue-zig">growth</span>.
+        </li>
+        <li>
+            <strong>3. Bottom-Up Approach:</strong> <span class="u-green">It follows </span><span class="u-blue-zig">the concept</span> <span class="u-blue-zig">bottom-up approach</span> <span class="u-green">as it will bring </span><span class="u-blue-zig">the change</span> <span class="u-green">from </span><span class="u-blue-zig">the states</span>.
+        </li>
+        <li>
+            <strong>4. Inclusive Development:</strong> <span class="u-green">It ensures </span><span class="u-blue-zig">inclusive development</span> <span class="u-green">in </span><span class="u-blue-zig">the country</span>.
+        </li>
+        <li>
+            <strong>5. Reducing Inequalities:</strong> <span class="u-green">It helps in reducing </span><span class="u-blue-zig">inter-states and intra-states inequalities</span> <span class="u-green">through </span><span class="u-blue-zig">development</span>.
+        </li>
+        <li>
+            <strong>6. Whole Country:</strong> <span class="u-green">It ensures that </span><span class="u-blue-zig">every limb of the whole country</span> <span class="u-green">is </span><span class="u-blue-zig">developing</span>.
+        </li>
+        <li>
+            <strong>7. City Administrations:</strong> <span class="u-green">It helps in instilling </span><span class="u-blue-zig">sense of responsibility</span> <span class="u-green">in </span><span class="u-blue-zig">city administrations</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">THE ISSUES OF COOPERATIVE FEDERALISM</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Centre-State Cooperation:</strong> <span class="u-blue-zig">Cooperative federalism</span> <span class="u-green">is the concept which reflects </span><span class="u-blue-zig">the relationship</span> <span class="u-green">between </span><span class="u-blue-zig">centre and state</span> <span class="u-green">where they both come together and resolve </span><span class="u-blue-zig">the common problems</span> <span class="u-green">with </span><span class="u-blue-zig">each other's cooperation</span>. <span class="u-green">It is </span><span class="u-blue-zig">the horizontal relationship</span> <span class="u-green">between </span><span class="u-blue-zig">union and states</span> <span class="u-green">and shows </span><span class="u-blue-zig">neither is above the other</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Inter-State Council:</strong> <span class="u-blue-zig">The Inter-State Council</span> <span class="u-green">as mentioned in </span><span class="u-blue-zig">Article 263</span> <span class="u-green">is supposed to be </span><span class="u-blue-zig">a body</span> <span class="u-green">for </span><span class="u-blue-zig">intergovernmental consultation</span> <span class="u-green">and </span><span class="u-blue-zig">co-operation</span>. <span class="u-green">But it has not been given </span><span class="u-blue-zig">the powers</span> <span class="u-green">to inquire and advise on </span><span class="u-blue-zig">disputes between States</span>.
+        </li>
+        <li>
+            <strong>3. Water Disputes:</strong> <span class="u-blue-zig">Article 262</span> <span class="u-green">that provides for </span><span class="u-blue-zig">the resolution</span> <span class="u-green">of </span><span class="u-blue-zig">inter-state water disputes</span> <span class="u-green">which also failed to contain </span><span class="u-blue-zig">many disputes</span> <span class="u-green">which reached it despite </span><span class="u-blue-zig">repeated hearings and decisions</span>. <span class="u-blue-zig">Failure of this</span> <span class="u-green">can be because of </span><span class="u-blue-zig">both structural and procedural inadequacies</span>.
+        </li>
+        <li>
+            <strong>4. Governor's Appointment:</strong> <span class="u-green">This has been evident since long that </span><span class="u-green">as </span><span class="u-blue-zig">the political party</span> <span class="u-green">gets changed in </span><span class="u-blue-zig">the centre</span> <span class="u-blue-zig">the Governors</span> <span class="u-green">appointed by </span><span class="u-blue-zig">the earlier party</span> <span class="u-green">were asked to </span><span class="u-blue-zig">resign</span>. <span class="u-blue-zig">Governor's appointment</span> <span class="u-green">should not be </span><span class="u-blue-zig">politically motivated</span>.
+        </li>
+        <li>
+            <strong>5. 7th Schedule Reform:</strong> <span class="u-blue-zig">The 7th Schedule</span> <span class="u-green">needs to be reformed to ensure </span><span class="u-blue-zig">greater empowerment of States</span> <span class="u-green">in accordance with </span><span class="u-blue-zig">increased financial transfers</span> <span class="u-green">characteristic of </span><span class="u-blue-zig">cooperative federalism</span>.
+        </li>
+        <li>
+            <strong>6. Rajya Sabha Equality:</strong> <span class="u-blue-zig">Equal representation of states</span> <span class="u-green">in </span><span class="u-blue-zig">Rajya Sabha</span> <span class="u-green">is another blow to </span><span class="u-blue-zig">the cooperative federalism</span>. <span class="u-green">There should be </span><span class="u-blue-zig">equal representation</span> <span class="u-green">as there is in </span><span class="u-blue-zig">United States of America</span>.
+        </li>
+        <li>
+            <strong>7. Presidential Assent:</strong> <span class="u-blue-zig">State bills</span> <span class="u-green">which are reserved for </span><span class="u-blue-zig">President assent</span> <span class="u-green">should be disposed of </span><span class="u-blue-zig">as early as possible</span>. <span class="u-green">This creates </span><span class="u-blue-zig">impediment in the growth</span> <span class="u-green">of </span><span class="u-blue-zig">the country</span> <span class="u-green">and ultimately it hits </span><span class="u-blue-zig">the cooperation</span> <span class="u-green">between </span><span class="u-blue-zig">centre and state</span>.
+        </li>
+        <li>
+            <strong>8. NITI Aayog Flaws:</strong> <span class="u-green">Though, </span><span class="u-red-zig">NITI Aayog</span> <span class="u-green">is established with the aim to foster </span><span class="u-blue-zig">the cooperative federalism</span> <span class="u-green">but if we look at </span><span class="u-blue-zig">the structure and function</span> <span class="u-green">of it, it is </span><span class="u-blue-zig">flawed in many ways</span>. <span class="u-blue-zig">The function and jurisdiction</span> <span class="u-green">of </span><span class="u-red-zig">NITI Aayog</span> <span class="u-green">is not </span><span class="u-blue-zig">specifically laid down</span>.
+        </li>
+        <li>
+            <strong>9. International Treaties:</strong> <span class="u-blue-zig">International treaties</span> <span class="u-green">which are greatly overlooked </span><span class="u-blue-zig">the involvement of the states</span>, <span class="u-green">it should be strengthened as </span><span class="u-green">while negotiating </span><span class="u-blue-zig">the international treaties</span> <span class="u-blue-zig">involvement of states</span> <span class="u-green">should be there with </span><span class="u-blue-zig">greater extent</span> <span class="u-green">as its implementing will surely going to impact on </span><span class="u-blue-zig">the states</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 62</div>
+</div>
+
+<!-- ==================== PAGE 192 (Page 63) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Implementation Gap:</strong> <span class="u-green">We have seen that through </span><span class="u-blue-zig">the above lacunas</span> <span class="u-green">that </span><span class="u-blue-zig">implementation</span> <span class="u-green">is </span><span class="u-blue-zig">the root cause</span> <span class="u-green">of </span><span class="u-blue-zig">every problem</span> <span class="u-green">in </span><span class="u-red-zig">India</span> <span class="u-green">which is also </span><span class="u-blue-zig">a blow to cooperative federalism</span>. <span class="u-blue-zig">These obstacles</span> <span class="u-green">need to be taken care of </span><span class="u-blue-zig">as soon as possible</span> <span class="u-green">if we really want to make </span><span class="u-blue-zig">the centre-state relationship</span> <span class="u-blue-zig">strong</span>.
+    </p>
+
+    <div class="page-number">Page 63</div>
+</div>
+</body>
+</html>

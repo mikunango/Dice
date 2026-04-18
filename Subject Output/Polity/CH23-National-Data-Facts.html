@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH23 - National Data/Facts | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 103 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">POLITY</span>
+        <h1>CH23- National Data/Facts</h1>
+        <p class="subtitle">National Symbols, Emblems & Identity</p>
+    </header>
+
+    <div class="section-header">State Emblem</div>
+
+    <div class="quote-box">
+        <span class="u-blue-zig">a heraldic instrument</span><span class="u-green"> or </span><span class="u-blue-zig">symbolic object</span><span class="u-green"> as </span><span class="u-blue-zig">a unique insignia</span><span class="u-green"> of </span><span class="u-blue-zig">a nation</span>, <span class="u-blue-zig">organization</span>, <span class="u-green">or </span><span class="u-blue-zig">family</span>.
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Lion Capital Adaptation:</strong>
+        <span class="u-blue-zig">The State Emblem</span><span class="u-green"> is an adaptation of </span><span class="u-blue-zig">the Lion Capital</span><span class="u-green"> of </span><span class="u-red-zig">Asoka</span><span class="u-green"> at </span><span class="u-red-zig">Sarnath</span>. <span class="u-green">In </span><span class="u-blue-zig">the original</span>, <span class="u-green">there are </span><span class="u-blue-zig">four lions</span>, <span class="u-green">mounted </span><span class="u-blue-zig">back to back</span>, <span class="u-green">on </span><span class="u-blue-zig">a circular abacus</span>, <span class="u-green">which itself rests on </span><span class="u-blue-zig">a bell-shaped lotus</span>. <span class="u-blue-zig">The frieze of the abacus</span><span class="u-green"> has </span><span class="u-blue-zig">sculptures in high relief</span><span class="u-green"> of </span><span class="u-blue-zig">an elephant</span>, <span class="u-blue-zig">a galloping horse</span>, <span class="u-blue-zig">a bull</span><span class="u-green"> and </span><span class="u-blue-zig">a lion</span><span class="u-green"> separated by </span><span class="u-blue-zig">intervening Dharma Chakras</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">2. Adoption as State Emblem:</strong>
+        <span class="u-blue-zig">The profile</span><span class="u-green"> of </span><span class="u-blue-zig">the Lion Capital</span><span class="u-green"> showing </span><span class="u-blue-zig">three lions</span><span class="u-green"> mounted on </span><span class="u-blue-zig">the abacus</span><span class="u-green"> with </span><span class="u-blue-zig">a Dharma Chakra</span><span class="u-green"> in </span><span class="u-blue-zig">the centre</span>, <span class="u-blue-zig">a bull</span><span class="u-green"> on </span><span class="u-blue-zig">the right</span><span class="u-green"> and </span><span class="u-blue-zig">a galloping horse</span><span class="u-green"> on </span><span class="u-blue-zig">the left</span>, <span class="u-green">and </span><span class="u-blue-zig">outlines of Dharma Chakras</span><span class="u-green"> on </span><span class="u-blue-zig">the extreme right</span><span class="u-green"> and </span><span class="u-blue-zig">left</span><span class="u-green"> was adopted as </span><span class="u-blue-zig">the State Emblem of India</span><span class="u-green"> on </span><span class="u-red-zig">January 26, 1950</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">3. Lotus Omission:</strong>
+        <span class="u-blue-zig">The bell-shaped lotus</span><span class="u-green"> was </span><span class="u-blue-zig">omitted</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">4. Satyameva Jayate Motto:</strong>
+        <span class="u-blue-zig">The motto</span> <span class="u-red-zig">Satyameva Jayate</span>, <span class="u-green">which means </span><span class="u-blue-zig">'Truth Alone Triumphs'</span>, <span class="u-green">written in </span><span class="u-blue-zig">Devanagari script</span><span class="u-green"> below </span><span class="u-blue-zig">the profile</span><span class="u-green"> of </span><span class="u-blue-zig">the Lion Capital</span><span class="u-green"> is part of </span><span class="u-blue-zig">the State Emblem of India</span>
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Power & Courage:</strong>
+            <span class="u-blue-zig">Four lions</span><span class="u-green"> seated </span><span class="u-blue-zig">back to back</span><span class="u-green"> which imply </span><span class="u-blue-zig">power</span>, <span class="u-blue-zig">courage</span>, <span class="u-blue-zig">confidence</span><span class="u-green"> and </span><span class="u-blue-zig">pride</span>.
+        </li>
+        <li>
+            <strong>2. Elephant Symbolism:</strong>
+            <span class="u-blue-zig">The elephant</span><span class="u-green"> denotes </span><span class="u-blue-zig">Buddha's outset</span>.
+        </li>
+        <li>
+            <strong>3. Bull Symbolism:</strong>
+            <span class="u-blue-zig">The bull</span><span class="u-green"> symbolizes </span><span class="u-blue-zig">Zodiac sign of Buddha</span>- <span class="u-red-zig">Taurus</span>.
+        </li>
+        <li>
+            <strong>4. Horse Symbolism:</strong>
+            <span class="u-blue-zig">The horse</span><span class="u-green"> signifies </span><span class="u-blue-zig">Buddha's horse</span>, <span class="u-green">which he rode at </span><span class="u-blue-zig">the time of departing</span><span class="u-green"> from </span><span class="u-blue-zig">the citadel</span>.
+        </li>
+        <li>
+            <strong>5. Lion Significance:</strong>
+            <span class="u-blue-zig">The lion</span><span class="u-green"> indicates </span><span class="u-blue-zig">enlightenment</span>.
+        </li>
+        <li>
+            <strong>6. Satyameva Jayate Origin:</strong>
+            <span class="u-blue-zig">Slogan</span> <span class="u-red-zig">'Satyameva Jayate'</span><span class="u-green"> is a quote from </span><span class="u-blue-zig">the Mundaka Upanishad</span>.
+        </li>
+        <li>
+            <strong>7. Emblem Designer:</strong>
+            <span class="u-red-zig">Dinanath Bhargava</span><span class="u-green"> is believed to visit </span><span class="u-red-zig">Alipore Zoo</span><span class="u-green"> in </span><span class="u-red-zig">Kolkata</span><span class="u-green"> to see </span><span class="u-blue-zig">a lion</span><span class="u-green"> before he depicts </span><span class="u-blue-zig">the same</span><span class="u-green"> on </span><span class="u-blue-zig">paper</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">National Anthem</div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Original Composition:</strong>
+        <span class="u-blue-zig">The 'Jana Gana Mana'</span><span class="u-green"> was originally composed in </span><span class="u-blue-zig">Bengali</span><span class="u-green"> by </span><span class="u-blue-zig">India's first Nobel laureate</span> <span class="u-red-zig">Rabindranath Tagore</span><span class="u-green"> on </span><span class="u-red-zig">December 11, 1911</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">2. Brahmo Hymn Source:</strong>
+        <span class="u-blue-zig">The parent song</span>, <span class="u-red-zig">'Bharoto Bhagyo Bidhata'</span><span class="u-green"> is </span><span class="u-blue-zig">a Brahmo hymn</span><span class="u-green"> which has </span><span class="u-blue-zig">five verses</span><span class="u-green"> and only </span><span class="u-blue-zig">the first verse</span><span class="u-green"> has been adopted as </span><span class="u-blue-zig">National Anthem</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">3. Unity in Diversity:</strong>
+        <span class="u-green">If put forwards </span><span class="u-blue-zig">succinctly</span>, <span class="u-blue-zig">the National Anthem</span><span class="u-green"> conveys </span><span class="u-blue-zig">the spirit of pluralism</span><span class="u-green"> or in </span><span class="u-blue-zig">more popular term</span><span class="u-green"> the concept of </span><span class="u-blue-zig">'Unity in Diversity'</span>, <span class="u-green">which lies at the core of </span><span class="u-blue-zig">India's cultural heritage</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">4. English Translation:</strong>
+        <span class="u-blue-zig">The idea</span><span class="u-green"> of translating </span><span class="u-blue-zig">the song</span><span class="u-green"> from </span><span class="u-blue-zig">Bengali</span><span class="u-green"> to </span><span class="u-blue-zig">English</span><span class="u-green"> came to </span><span class="u-red-zig">Tagore</span><span class="u-green"> while he was visiting </span><span class="u-blue-zig">the Besant Theosophical College</span><span class="u-green"> on the invitation of </span><span class="u-blue-zig">Irish poet</span> <span class="u-red-zig">James H. Cousins</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">5. Translation Location:</strong>
+        <span class="u-green">He did </span><span class="u-blue-zig">the English translation</span><span class="u-green"> during his stay at </span><span class="u-red-zig">Madanapalle</span>, <span class="u-green">in </span><span class="u-red-zig">Chittoor</span><span class="u-green"> of </span><span class="u-red-zig">Andhra Pradesh</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">6. First Performance:</strong>
+        <span class="u-blue-zig">The song</span> <span class="u-red-zig">'Bharat Bhagya Bidhata'</span><span class="u-green"> was first sung at </span><span class="u-blue-zig">the annual session</span><span class="u-green"> of </span><span class="u-blue-zig">the Indian National Congress</span><span class="u-green"> in </span><span class="u-red-zig">Calcutta</span><span class="u-green"> on </span><span class="u-red-zig">December 27, 1911</span>.
+    </p>
+
+    <div class="page-number">Page 103</div>
+</div>
+
+<!-- ==================== PAGE 104 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. First Performance:</strong>
+            <span class="u-blue-zig">Song</span><span class="u-green"> was performed by </span><span class="u-red-zig">Sarala Devi Chowdhurani</span>, <span class="u-red-zig">Tagore</span>'s <span class="u-blue-zig">niece</span>, <span class="u-green">along with </span><span class="u-blue-zig">a group of school students</span>, <span class="u-green">in front of </span><span class="u-red-zig">Bishan Narayan Dhar</span>, <span class="u-blue-zig">Indian National Congress President</span><span class="u-green"> and </span><span class="u-red-zig">Ambika Charan Majumdar</span>.
+        </li>
+        <li>
+            <strong>2. Publication History:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1912</span>, <span class="u-blue-zig">the song</span><span class="u-green"> was published under </span><span class="u-blue-zig">the title</span> <span class="u-blue-zig">Bharat Bidhata</span><span class="u-green"> in </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Tatwabodhini Patrika</span>, <span class="u-green">which was </span><span class="u-blue-zig">the official publication</span><span class="u-green"> of </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Brahmo Samaj</span><span class="u-green"> and of which </span><span class="u-red-zig">Tagore</span><span class="u-green"> was </span><span class="u-blue-zig">the Editor</span>.
+        </li>
+        <li>
+            <strong>3. Official Proclamation:</strong>
+            <span class="u-red-zig">Jana Gana Mana</span><span class="u-green"> was officially proclaimed as </span><span class="u-blue-zig">India's National Anthem</span><span class="u-green"> by </span><span class="u-blue-zig">the Constituent Assembly of India</span><span class="u-green"> on </span><span class="u-red-zig">January 24, 1950</span>.
+        </li>
+        <li>
+            <strong>4. Raga Origin:</strong>
+            <span class="u-green">It was originally set in </span><span class="u-blue-zig">Raga Alhaiya Bilawal</span>, <span class="u-blue-zig">still</span>, <span class="u-green">it is sung with </span><span class="u-blue-zig">slight variations</span><span class="u-green"> to </span><span class="u-blue-zig">the classical form</span><span class="u-green"> of </span><span class="u-blue-zig">the raga</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Hindustani Translation:</strong>
+        <span class="u-red-zig">Subhas Chandra Bose</span><span class="u-green"> had authorized </span><span class="u-blue-zig">a free translation</span><span class="u-green"> of </span><span class="u-blue-zig">the National Anthem</span><span class="u-green"> from </span><span class="u-blue-zig">Sanskritized Bengali</span><span class="u-green"> to </span><span class="u-blue-zig">a well-known form</span><span class="u-green"> in </span><span class="u-blue-zig">Hindustani</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>5. INA Version:</strong>
+            <span class="u-red-zig">Captain Abid Ali</span><span class="u-green"> of </span><span class="u-blue-zig">the Indian National Army</span> (<span class="u-blue-zig">INA</span>)<span class="u-green"> had shaped </span><span class="u-blue-zig">the version</span><span class="u-green"> called </span><span class="u-blue-zig">'Subh Sukh chain'</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">National Song</div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Composition Origin:</strong>
+        <span class="u-red-zig">Bankim Chandra Chatterjee</span>'s <span class="u-blue-zig">poem</span> <span class="u-blue-zig">Vande Maataram</span><span class="u-green"> was written in </span><span class="u-blue-zig">highly sanskritized Bengali</span><span class="u-green"> in </span><span class="u-blue-zig">his novel</span> <span class="u-blue-zig">Anandamath</span><span class="u-green"> in </span><span class="u-red-zig">1882</span><span class="u-green"> at </span><span class="u-red-zig">Chinsura</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. First Rendition:</strong>
+            <span class="u-red-zig">Rabindranath Tagore</span><span class="u-green"> performed </span><span class="u-blue-zig">the poem</span><span class="u-green"> for the first time before </span><span class="u-blue-zig">the Indian National Congress</span><span class="u-green"> in </span><span class="u-red-zig">1896</span>.
+        </li>
+        <li>
+            <strong>2. National Song Selection:</strong>
+            <span class="u-blue-zig">The Congress Working Committee</span><span class="u-green"> selected </span><span class="u-blue-zig">the first two verses</span><span class="u-green"> of </span><span class="u-blue-zig">the song</span><span class="u-green"> as </span><span class="u-blue-zig">the National Song of India</span><span class="u-green"> in </span><span class="u-red-zig">October 1937</span>.
+        </li>
+        <li>
+            <strong>3. Modern Composition:</strong>
+            <span class="u-blue-zig">The modern Vande Mataram</span> <span class="u-blue-zig">composition</span><span class="u-green"> is credited to </span><span class="u-red-zig">V. D. Paluskar</span>, <span class="u-blue-zig">the founder</span><span class="u-green"> of </span><span class="u-blue-zig">the Gandharva Mahavidyalaya</span><span class="u-green"> and </span><span class="u-blue-zig">Akhil Bharatiya Gandharva</span> <span class="u-blue-zig">Mahavidyalaya Mandal</span>.
+        </li>
+        <li>
+            <strong>4. English Translation:</strong>
+            <span class="u-blue-zig">The Vande Mataram</span><span class="u-green"> was translated into </span><span class="u-blue-zig">English</span><span class="u-green"> by </span><span class="u-red-zig">Nares Chandra Sen-Gupta</span>, <span class="u-green">in </span><span class="u-red-zig">1906</span>.
+        </li>
+        <li>
+            <strong>5. Benares Session:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1905</span>, <span class="u-red-zig">Sarala Devi Chaudurani</span><span class="u-green"> sang </span><span class="u-blue-zig">the national song</span><span class="u-green"> in </span><span class="u-blue-zig">the Benares Congress Session</span>.
+        </li>
+        <li>
+            <strong>6. First Publication:</strong>
+            <span class="u-green">It was first published in </span><span class="u-red-zig">Bankim</span>'s <span class="u-blue-zig">magazine</span> <span class="u-blue-zig">Banga darshan</span><span class="u-green"> to fill up </span><span class="u-blue-zig">a blank page</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">National Calendar</div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Saka Era Origin:</strong>
+        <span class="u-blue-zig">The Saka Samvat</span>, <span class="u-blue-zig">a historic Hindu calendar</span><span class="u-green"> that was eventually established as </span><span class="u-blue-zig">the 'Indian National Calendar'</span><span class="u-green"> in </span><span class="u-red-zig">1957</span>, <span class="u-green">began during </span><span class="u-blue-zig">the Saka Era</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Dynasty Founder:</strong>
+            <span class="u-blue-zig">The Saka Era</span><span class="u-green"> is thought to have been founded by </span><span class="u-red-zig">King Shalivanhana</span><span class="u-green"> of </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Shatavahana</span> <span class="u-blue-zig">dynasty</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red)">2. Chaitra Month:</strong>
+        <span class="u-red-zig">Chaitra</span>, <span class="u-blue-zig">the first month</span><span class="u-green"> of </span><span class="u-blue-zig">the Saka Samvat</span>, <span class="u-green">begins on </span><span class="u-red-zig">March 22</span>, <span class="u-green">which corresponds to </span><span class="u-red-zig">March 21</span><span class="u-green"> during </span><span class="u-blue-zig">the leap year</span>.
+    </p>
+
+    <div class="page-number">Page 104</div>
+</div>
+
+<!-- ==================== PAGE 105 ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Calendar Harmonisation:</strong>
+        <span class="u-green">It was chosen as </span><span class="u-blue-zig">India's National Calendar</span><span class="u-green"> to harmonize </span><span class="u-blue-zig">the use of</span> <span class="u-blue-zig">30 various types</span><span class="u-green"> of </span><span class="u-blue-zig">calendars in the country</span><span class="u-green"> at </span><span class="u-blue-zig">the time</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">2. Calendar Months:</strong>
+        <span class="u-blue-zig">Chaitra</span> - <span class="u-blue-zig">Vaishakha</span> &ndash; <span class="u-blue-zig">Jyeshtha</span> &ndash; <span class="u-blue-zig">Ashadha</span> &ndash; <span class="u-blue-zig">Shravana</span> &ndash; <span class="u-blue-zig">Bhadra</span> &ndash; <span class="u-blue-zig">Ashwin</span> &ndash; <span class="u-blue-zig">Kartika</span> &ndash; <span class="u-blue-zig">Agrahayana</span> &ndash; <span class="u-blue-zig">Pausha</span> &ndash; <span class="u-blue-zig">Magha</span> - <span class="u-blue-zig">Phalguna</span>
+    </p>
+
+    <div class="section-header">VIKRAM SAMVAT</div>
+    <ul>
+        <li>
+            <strong>1. Era Origin:</strong>
+            <span class="u-blue-zig">The Vikram era</span><span class="u-green"> began </span><span class="u-blue-zig">56 years before</span> <span class="u-blue-zig">the Christian era</span>, <span class="u-green">in </span><span class="u-blue-zig">around 56 BC</span>, <span class="u-green">and is still in effect in </span><span class="u-blue-zig">almost all of India</span><span class="u-green"> except </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Bengal</span> <span class="u-blue-zig">region</span>.
+        </li>
+        <li>
+            <strong>2. Victory Commemoration:</strong>
+            <span class="u-green">According to </span><span class="u-blue-zig">historians</span>, <span class="u-red-zig">King Vikramaditya</span><span class="u-green"> of </span><span class="u-red-zig">Ujjain</span><span class="u-green"> established this era to commemorate </span><span class="u-blue-zig">his victory</span><span class="u-green"> over </span><span class="u-blue-zig">the Saka rulers</span>.
+        </li>
+        <li>
+            <strong>3. Lunar Calendar:</strong>
+            <span class="u-green">It is </span><span class="u-blue-zig">a lunar calendar</span><span class="u-green"> based on </span><span class="u-blue-zig">the Hindu calendar</span><span class="u-green"> of </span><span class="u-blue-zig">ancient times</span>.
+        </li>
+        <li>
+            <strong>4. New Year Timing:</strong>
+            <span class="u-blue-zig">The new year</span><span class="u-green"> begins on </span><span class="u-blue-zig">the first day following</span> <span class="u-blue-zig">the new moon</span><span class="u-green"> in </span><span class="u-blue-zig">the month of Chaitra</span>, <span class="u-green">which corresponds to </span><span class="u-blue-zig">March&ndash;April</span><span class="u-green"> in </span><span class="u-blue-zig">the Gregorian calendar</span>.
+        </li>
+        <li>
+            <strong>5. Fortnight Division:</strong>
+            <span class="u-blue-zig">Each month</span><span class="u-green"> is divided into </span><span class="u-blue-zig">two halves (fortnights)</span> &ndash; <span class="u-blue-zig">the bright</span><span class="u-green"> and </span><span class="u-blue-zig">dark halves</span>.
+        </li>
+        <li>
+            <strong>6. Adhik Masa Correction:</strong>
+            <span class="u-green">To compensate for </span><span class="u-blue-zig">the 11-day difference</span><span class="u-green"> with </span><span class="u-blue-zig">the solar year</span>, <span class="u-blue-zig">Vikram samvat</span><span class="u-green"> has </span><span class="u-blue-zig">13 months</span><span class="u-green"> after </span><span class="u-blue-zig">a cycle of every 3 years</span><span class="u-green"> and </span><span class="u-blue-zig">every 5 years</span>, <span class="u-green">with </span><span class="u-blue-zig">an extra month added</span><span class="u-green"> known as </span><span class="u-blue-zig">Adhik Masa</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SAKA SAMVAT</div>
+    <ul>
+        <li>
+            <strong>1. Calendar Origin:</strong>
+            <span class="u-green">In </span><span class="u-blue-zig">78 AD</span>, <span class="u-red-zig">King Shalivahan</span><span class="u-green"> instituted </span><span class="u-blue-zig">this calendar form</span>.
+        </li>
+        <li>
+            <strong>2. Saka Era Name:</strong>
+            <span class="u-green">It was also known as </span><span class="u-blue-zig">the Saka era</span><span class="u-green"> because </span><span class="u-red-zig">Shalivahan</span><span class="u-green"> belonged to </span><span class="u-blue-zig">this tribe</span>.
+        </li>
+        <li>
+            <strong>3. Solar-Lunar Nature:</strong>
+            <span class="u-blue-zig">The Saka Calendar</span><span class="u-green"> is both </span><span class="u-blue-zig">solar and lunar</span>, <span class="u-green">with </span><span class="u-blue-zig">lunar months</span><span class="u-green"> and </span><span class="u-blue-zig">a solar year</span>, <span class="u-green">and it has the same </span><span class="u-blue-zig">number of months</span><span class="u-green"> as </span><span class="u-blue-zig">the Vikram epoch did</span>.
+        </li>
+        <li>
+            <strong>4. Year Commencement:</strong>
+            <span class="u-blue-zig">The Saka Calendar</span><span class="u-green"> begins on </span><span class="u-blue-zig">March 22nd every year</span>, <span class="u-green">except in </span><span class="u-blue-zig">Gregorian leap years</span>, <span class="u-green">when it begins on </span><span class="u-blue-zig">March 21st</span>.
+        </li>
+        <li>
+            <strong>5. Fixed Month Days:</strong>
+            <span class="u-blue-zig">The Saka calendar</span><span class="u-green"> has </span><span class="u-blue-zig">a fixed number of days</span><span class="u-green"> in </span><span class="u-blue-zig">each month</span>.
+        </li>
+        <li>
+            <strong>6. Year Duration:</strong>
+            <span class="u-blue-zig">A saka year</span><span class="u-green"> is made up of </span><span class="u-blue-zig">365 days</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">GREGORIAN CALENDAR</div>
+    <ul>
+        <li>
+            <strong>1. Christian Basis:</strong>
+            <span class="u-blue-zig">This calendar</span><span class="u-green"> is based on </span><span class="u-blue-zig">the birthday</span><span class="u-green"> of </span><span class="u-blue-zig">Christianity's founder</span>, <span class="u-red-zig">Jesus Christ</span>.
+        </li>
+        <li>
+            <strong>2. Calendar Implementation:</strong>
+            <span class="u-green">In </span><span class="u-blue-zig">October 1582</span>, <span class="u-blue-zig">the Gregorian calendar</span>, <span class="u-green">which was devised as </span><span class="u-blue-zig">a corrective</span><span class="u-green"> to </span><span class="u-blue-zig">the Julian Calendar</span>, <span class="u-green">was implemented</span>.
+        </li>
+        <li>
+            <strong>3. Papal Naming:</strong>
+            <span class="u-blue-zig">This calendar</span><span class="u-green"> is named after </span><span class="u-red-zig">Pope Gregory XIII</span>.
+        </li>
+        <li>
+            <strong>4. Solar Year Duration:</strong>
+            <span class="u-green">It is </span><span class="u-blue-zig">a solar year</span><span class="u-green"> that begins on </span><span class="u-blue-zig">January 1st</span><span class="u-green"> and lasts </span><span class="u-blue-zig">365 days, 5 hours</span>, <span class="u-blue-zig">48 minutes</span>, <span class="u-green">and </span><span class="u-blue-zig">46 seconds</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">National Animal</div>
+    <p>
+        <strong style="color: var(--primary-red)">1. National Animal Status:</strong>
+        <span class="u-blue-zig">Royal Bengal Tiger</span>(<span class="u-blue-zig">Panthera Tigris</span>)<span class="u-green"> is </span><span class="u-blue-zig">the National Animal</span><span class="u-green"> of </span><span class="u-red-zig">India</span>. <span class="u-green">It was conferred </span><span class="u-blue-zig">the status</span><span class="u-green"> in </span><span class="u-blue-zig">April 1973</span>.
+    </p>
+
+    <div class="page-number">Page 105</div>
+</div>
+
+<!-- ==================== PAGE 106 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. National Animal Selection:</strong>
+            <span class="u-blue-zig">Tiger</span><span class="u-green"> was picked as </span><span class="u-blue-zig">the National animal</span><span class="u-green"> of </span><span class="u-red-zig">India</span><span class="u-green"> because of </span><span class="u-blue-zig">its elegance, strength</span>, <span class="u-blue-zig">agility</span>, <span class="u-green">and </span><span class="u-blue-zig">colossal power</span>.
+        </li>
+        <li>
+            <strong>2. Emblematic Representative:</strong>
+            <span class="u-green">It is one of </span><span class="u-blue-zig">the emblematic representatives</span><span class="u-green"> of </span><span class="u-blue-zig">a country's natural wealth</span>.
+        </li>
+        <li>
+            <strong>3. Largest Cat Specimen:</strong>
+            <span class="u-blue-zig">Tigers</span><span class="u-green"> are </span><span class="u-blue-zig">the largest specimen</span><span class="u-green"> in </span><span class="u-blue-zig">the cat family</span>.
+        </li>
+        <li>
+            <strong>4. Tiger Capital:</strong>
+            <span class="u-red-zig">Nagpur</span><span class="u-green"> is known as </span><span class="u-blue-zig">the 'Tiger Capital of India'</span>
+        </li>
+        <li>
+            <strong>5. Endangered Status:</strong>
+            <span class="u-green">According to </span><span class="u-blue-zig">the</span> <span class="u-red-zig">IUCN</span> <span class="u-blue-zig">Red list</span>, <span class="u-blue-zig">the tiger</span><span class="u-green"> is listed as </span><span class="u-blue-zig">an endangered animal</span>.
+        </li>
+        <li>
+            <strong>6. Project Tiger Initiative:</strong>
+            <span class="u-green">To conserve </span><span class="u-blue-zig">the Tiger</span>, <span class="u-blue-zig">the Indian Government</span><span class="u-green"> launched </span><span class="u-blue-zig">Project Tiger</span><span class="u-green"> in </span><span class="u-blue-zig">1973</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">National Bird</div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. National Bird Designation:</strong>
+        <span class="u-blue-zig">The peacock</span> (<span class="u-blue-zig">Pavo cristatus</span> [<span class="u-blue-zig">Linnaeus</span>])<span class="u-green"> was named </span><span class="u-blue-zig">the National Bird</span><span class="u-green"> of </span><span class="u-red-zig">India</span><span class="u-green"> in </span><span class="u-blue-zig">1963</span><span class="u-green"> because it is </span><span class="u-blue-zig">the most auspicious animal</span><span class="u-green"> that embodies </span><span class="u-blue-zig">our country's fauna</span><span class="u-green"> and has </span><span class="u-blue-zig">a long history</span><span class="u-green"> of </span><span class="u-blue-zig">religious and legendary significance</span><span class="u-green"> in </span><span class="u-blue-zig">Indian culture</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. National Spirit Embodiment:</strong>
+            <span class="u-blue-zig">The Peacock</span><span class="u-green"> embodies </span><span class="u-blue-zig">the national spirit</span><span class="u-green"> whose </span><span class="u-blue-zig">colours</span><span class="u-green"> are connected with </span><span class="u-blue-zig">Indian identity</span>.
+        </li>
+        <li>
+            <strong>2. Indigenous Habitat:</strong>
+            <span class="u-blue-zig">Indian peacocks</span><span class="u-green"> are </span><span class="u-blue-zig">the swan's size</span><span class="u-green"> and are indigenous to </span><span class="u-red-zig">Nepal</span>, <span class="u-red-zig">Sri Lanka</span>, <span class="u-red-zig">Bangladesh</span>, <span class="u-red-zig">Myanmar</span><span class="u-green"> and </span><span class="u-red-zig">India</span>.
+        </li>
+        <li>
+            <strong>3. Pan-India Presence:</strong>
+            <span class="u-blue-zig">The peacock bird</span><span class="u-green"> is found </span><span class="u-blue-zig">all over the country</span><span class="u-green"> and is also well known to </span><span class="u-blue-zig">the common masses</span><span class="u-green"> of </span><span class="u-red-zig">India</span>.
+        </li>
+        <li>
+            <strong>4. Hindu Religious Symbol:</strong>
+            <span class="u-green">It is also used as </span><span class="u-blue-zig">an image</span><span class="u-green"> of </span><span class="u-blue-zig">the god of rain</span>, <span class="u-blue-zig">thunder and war</span><span class="u-green"> in </span><span class="u-blue-zig">Hinduism</span>.
+        </li>
+        <li>
+            <strong>5. Wildlife Protection:</strong>
+            <span class="u-green">It has been given </span><span class="u-blue-zig">complete protection</span><span class="u-green"> under </span><span class="u-blue-zig">the Wildlife Protection Act 1972</span>.
+        </li>
+        <li>
+            <strong>6. Sacred Association:</strong>
+            <span class="u-green">They are also considered </span><span class="u-blue-zig">sacred</span><span class="u-green"> by </span><span class="u-blue-zig">the Hindus</span><span class="u-green"> as it is also linked to </span><span class="u-red-zig">Lord Murugan</span>, <span class="u-blue-zig">the son</span><span class="u-green"> of </span><span class="u-red-zig">Lord Shiva</span>.
+        </li>
+        <li>
+            <strong>7. Maurya Dynasty Link:</strong>
+            <span class="u-red-zig">Chandragupta Maurya</span>, <span class="u-green">who was the founder of </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Maurya</span> <span class="u-blue-zig">dynasty</span>, <span class="u-green">is also considered to be </span><span class="u-blue-zig">the son</span><span class="u-green"> of </span><span class="u-blue-zig">peacock tamers</span><span class="u-green"> or </span><span class="u-blue-zig">the 'Mayur Poshikas'</span><span class="u-green"> in </span><span class="u-blue-zig">Sanskrit</span>.
+        </li>
+        <li>
+            <strong>8. Habitat Pattern:</strong>
+            <span class="u-blue-zig">The peacocks</span><span class="u-green"> are </span><span class="u-blue-zig">omnivorous</span><span class="u-green"> and are usually found in </span><span class="u-blue-zig">low altitude grasslands</span>, <span class="u-blue-zig">adjacent human habitats</span><span class="u-green"> and </span><span class="u-blue-zig">forest plains</span>.
+        </li>
+        <li>
+            <strong>9. Least Concerned Status:</strong>
+            <span class="u-blue-zig">The Red List</span><span class="u-green"> of </span><span class="u-red-zig">IUCN</span><span class="u-green"> categorizes </span><span class="u-blue-zig">the peacocks</span><span class="u-green"> under </span><span class="u-blue-zig">the least concerned category</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">National Tree</div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Banyan Tree Identity:</strong>
+        <span class="u-blue-zig">The national tree</span><span class="u-green"> of </span><span class="u-red-zig">India</span><span class="u-green"> is </span><span class="u-blue-zig">the Banyan tree</span>(<span class="u-blue-zig">Ficus benghalensis</span>), <span class="u-green">known for </span><span class="u-blue-zig">its distinct hanging roots</span><span class="u-green"> and </span><span class="u-blue-zig">excellent medicinal properties</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Strength and Unity:</strong>
+            <span class="u-blue-zig">The banyan tree</span><span class="u-green"> signifies </span><span class="u-blue-zig">strength and unity</span><span class="u-green"> and is therefore considered </span><span class="u-blue-zig">the national tree</span><span class="u-green"> of </span><span class="u-red-zig">India</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 106</div>
+</div>
+
+<!-- ==================== PAGE 107 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>2. Sacred Significance:</strong>
+            <span class="u-green">In </span><span class="u-blue-zig">Hinduism</span>, <span class="u-blue-zig">the Bargad (Banyan) tree</span><span class="u-green"> is considered pious and is called </span><span class="u-blue-zig">'Ashwath Vriksha'</span>.
+        </li>
+        <li>
+            <strong>3. Edible Fruits:</strong>
+            <span class="u-blue-zig">Its fruits</span><span class="u-green"> are </span><span class="u-blue-zig">edible and nutritious</span><span class="u-green"> and can relieve </span><span class="u-blue-zig">skin irritation</span><span class="u-green"> and </span><span class="u-blue-zig">swelling</span>.
+        </li>
+        <li>
+            <strong>4. Bleeding Treatment:</strong>
+            <span class="u-blue-zig">Its bark</span><span class="u-green"> and </span><span class="u-blue-zig">leaf extracts</span><span class="u-green"> are used to </span><span class="u-blue-zig">stop bleeding</span>.
+        </li>
+        <li>
+            <strong>5. Diarrhea Remedy:</strong>
+            <span class="u-blue-zig">Leaf bud infusion</span><span class="u-green"> is used to treat </span><span class="u-blue-zig">chronic diarrhea/dysentery</span>.
+        </li>
+        <li>
+            <strong>6. Shellac Production:</strong>
+            <span class="u-blue-zig">Banyan tree</span><span class="u-green"> is known for making </span><span class="u-blue-zig">shellac</span>, <span class="u-green">used as </span><span class="u-blue-zig">a surface abrasive</span><span class="u-green"> and </span><span class="u-blue-zig">glue</span>.
+        </li>
+        <li>
+            <strong>7. Metal Polishing:</strong>
+            <span class="u-blue-zig">Its milky white sap</span><span class="u-green"> is used to polish </span><span class="u-blue-zig">metals</span><span class="u-green"> such as </span><span class="u-blue-zig">brass</span><span class="u-green"> and </span><span class="u-blue-zig">copper</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">NATIONAL FLAG</div>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. First Flag Hoisting:</strong>
+        <span class="u-blue-zig">The first national flag</span><span class="u-green"> in </span><span class="u-red-zig">India</span><span class="u-green"> is said to have been hoisted on </span><span class="u-blue-zig">August 7, 1906</span>, <span class="u-green">in </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Parsee Bagan Square</span> (<span class="u-blue-zig">Green Park</span>)<span class="u-green"> in </span><span class="u-red-zig">Calcutta</span> <span class="u-blue-zig">now</span> <span class="u-red-zig">Kolkata</span><span class="u-green"> on </span><span class="u-blue-zig">the anniversary</span><span class="u-green"> of </span><span class="u-blue-zig">anti-partition movement</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Flag Designer:</strong>
+            <span class="u-blue-zig">The flag</span><span class="u-green"> was designed by </span><span class="u-red-zig">SACHINDRA PRASAD BOSE</span>.
+        </li>
+        <li>
+            <strong>2. Tricolour Composition:</strong>
+            <span class="u-blue-zig">The flag</span><span class="u-green"> was composed of </span><span class="u-blue-zig">three horizontal stripes</span><span class="u-green"> of </span><span class="u-blue-zig">red, yellow and green</span>.
+        </li>
+        <li>
+            <strong>3. Second Flag in Paris:</strong>
+            <span class="u-red-zig">Mrs Cama</span><span class="u-green"> and </span><span class="u-blue-zig">her band</span><span class="u-green"> of </span><span class="u-blue-zig">exiled revolutionaries</span><span class="u-green"> hoisted </span><span class="u-blue-zig">the second flag</span><span class="u-green"> in </span><span class="u-red-zig">Paris</span><span class="u-green"> in </span><span class="u-blue-zig">1907</span><span class="u-green"> which was made by </span><span class="u-red-zig">HEM CHANDRA DAS</span>..
+        </li>
+        <li>
+            <strong>4. Similar to First:</strong>
+            <span class="u-green">This was very similar to </span><span class="u-blue-zig">the first flag</span><span class="u-green"> except that </span><span class="u-blue-zig">the top strip</span><span class="u-green"> had </span><span class="u-blue-zig">only one lotus</span><span class="u-green"> but </span><span class="u-blue-zig">the Saptarishi</span><span class="u-green"> was denoted by </span><span class="u-blue-zig">seven stars</span>.
+        </li>
+        <li>
+            <strong>5. Berlin Display:</strong>
+            <span class="u-blue-zig">The flag</span><span class="u-green"> was also on display at </span><span class="u-blue-zig">a</span> <span class="u-red-zig">Berlin</span> <span class="u-blue-zig">socialist conference</span>.
+        </li>
+        <li>
+            <strong>6. Home Rule Flag:</strong>
+            <span class="u-green">During </span><span class="u-blue-zig">the Home Rule Movement</span><span class="u-green"> in </span><span class="u-blue-zig">1917</span> <span class="u-red-zig">Bal Gangadhar Tilak</span><span class="u-green"> and </span><span class="u-red-zig">Mrs. Anne Besant</span><span class="u-green"> also designed </span><span class="u-blue-zig">a flag</span>.
+        </li>
+        <li>
+            <strong>7. Flag Arrangement:</strong>
+            <span class="u-green">This flag was arranged </span><span class="u-blue-zig">alternately</span><span class="u-green"> with </span><span class="u-blue-zig">five red</span><span class="u-green"> and </span><span class="u-blue-zig">four green horizontal stripes</span>, <span class="u-green">with </span><span class="u-blue-zig">seven stars</span><span class="u-green"> superimposed on </span><span class="u-blue-zig">them</span><span class="u-green"> in </span><span class="u-blue-zig">the Saptarishi configuration</span>.
+        </li>
+        <li>
+            <strong>8. Union Jack Corner:</strong>
+            <span class="u-blue-zig">The Union Jack</span><span class="u-green"> stood in </span><span class="u-blue-zig">the top left-hand corner</span> (<span class="u-blue-zig">the pole end</span>). <span class="u-green">There was also </span><span class="u-blue-zig">a white crescent</span><span class="u-green"> and </span><span class="u-blue-zig">star</span><span class="u-green"> in </span><span class="u-blue-zig">one corner</span>.
+        </li>
+        <li>
+            <strong>9. Bezwada Flag Design:</strong>
+            <span class="u-green">During </span><span class="u-blue-zig">the All India Congress</span> <span class="u-blue-zig">Committee meeting</span><span class="u-green"> in </span><span class="u-red-zig">Bezwada</span> <span class="u-red-zig">Mr Pingley Venkayya</span><span class="u-green"> design </span><span class="u-blue-zig">a national flag</span><span class="u-green"> for </span><span class="u-blue-zig">Freedom Movement</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 107</div>
+</div>
+
+<!-- ==================== PAGE 108 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Swaraj Flag:</strong>
+            <span class="u-green">It was also called </span><span class="u-blue-zig">the Swaraj flag</span>.
+        </li>
+        <li>
+            <strong>2. Two-Colour Design:</strong>
+            <span class="u-green">It consisted of </span><span class="u-blue-zig">two red and green colours</span><span class="u-green"> reflecting </span><span class="u-blue-zig">the two main cultures</span>, i.e. <span class="u-blue-zig">Hindus</span>, <span class="u-green">and </span><span class="u-blue-zig">Muslims</span>.
+        </li>
+        <li>
+            <strong>3. Gandhi's Suggestion:</strong>
+            <span class="u-red-zig">Gandhi</span><span class="u-green"> suggested the addition of </span><span class="u-blue-zig">a white strip</span><span class="u-green"> to represent </span><span class="u-blue-zig">the remaining communities</span> <span class="u-blue-zig">of India</span><span class="u-green"> and </span><span class="u-blue-zig">the spinning wheel</span><span class="u-green"> to symbolise </span><span class="u-blue-zig">the progress of the Nation</span>.
+        </li>
+        <li>
+            <strong>4. Flag Committee 1931:</strong>
+            <span class="u-green">In </span><span class="u-blue-zig">1931</span>, <span class="u-blue-zig">a seven-member flag committee</span><span class="u-green"> was established in </span><span class="u-red-zig">Karachi</span><span class="u-green"> to modify </span><span class="u-blue-zig">the flag</span><span class="u-green"> and they had given </span><span class="u-blue-zig">a new design</span>.
+        </li>
+        <li>
+            <strong>5. Present Flag's Forebear:</strong>
+            <span class="u-blue-zig">This flag</span>, <span class="u-blue-zig">the present one's forebear</span>, <span class="u-green">was </span><span class="u-blue-zig">saffron, white and green</span><span class="u-green"> with </span><span class="u-blue-zig">the spinning wheel</span><span class="u-green"> of </span><span class="u-red-zig">Mahatma Gandhi</span><span class="u-blue-zig"> in the middle</span>.
+        </li>
+        <li>
+            <strong>6. Ad-hoc Flag Committee:</strong>
+            <span class="u-blue-zig">An ad-hoc flag committee</span><span class="u-green"> was headed by </span><span class="u-red-zig">Dr. Rajendra Prasad</span><span class="u-green"> to design </span><span class="u-blue-zig">the flag for free India</span>.
+        </li>
+        <li>
+            <strong>7. Flag Adoption Date:</strong>
+            <span class="u-blue-zig">The National Flag</span><span class="u-green"> was adopted on </span><span class="u-blue-zig">22 July, 1947</span>.
+        </li>
+        <li>
+            <strong>8. Saffron Colour:</strong>
+            <span class="u-blue-zig">Saffron colour</span> > <span class="u-green">indicating </span><span class="u-blue-zig">the strength and courage</span> <span class="u-blue-zig">of the country</span>.
+        </li>
+        <li>
+            <strong>9. White Colour:</strong>
+            <span class="u-blue-zig">White colour</span> > <span class="u-green">indicates </span><span class="u-blue-zig">peace and truth</span><span class="u-green"> with </span><span class="u-blue-zig">Dharma Chakra</span>.
+        </li>
+        <li>
+            <strong>10. Dharma Chakra Origin:</strong>
+            <span class="u-blue-zig">Dharma Chakra</span><span class="u-green"> depicted </span><span class="u-blue-zig">the "wheel of the law"</span><span class="u-green"> in </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Sarnath</span> <span class="u-blue-zig">Lion Capital</span>.
+        </li>
+        <li>
+            <strong>11. Sarnath Abacus:</strong>
+            <span class="u-green">Appears on </span><span class="u-blue-zig">the abacus</span><span class="u-green"> of </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Sarnath</span> <span class="u-blue-zig">Lion Capital</span><span class="u-green"> of </span><span class="u-red-zig">Ashoka</span>.
+        </li>
+        <li>
+            <strong>12. Life in Movement:</strong>
+            <span class="u-blue-zig">The chakra</span><span class="u-green"> intends to show that </span><span class="u-blue-zig">there is life in movement</span><span class="u-green"> and </span><span class="u-blue-zig">death in stagnation</span>.
+        </li>
+        <li>
+            <strong>13. Diameter and Spokes:</strong>
+            <span class="u-blue-zig">Its diameter</span><span class="u-green"> approximates to </span><span class="u-blue-zig">the width of the white band</span><span class="u-green"> and it has </span><span class="u-blue-zig">24 spokes</span>.
+        </li>
+        <li>
+            <strong>14. Green Colour:</strong>
+            <span class="u-blue-zig">Green colour</span> > <span class="u-green">shows </span><span class="u-blue-zig">the fertility, growth</span><span class="u-green"> and </span><span class="u-blue-zig">auspiciousness of the land</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red)">1. Constitutional Duty:</strong>
+        <span class="u-green">According to </span><span class="u-blue-zig">Article 51A (a)</span>, <span class="u-green">it shall be the duty of </span><span class="u-blue-zig">every citizen of India</span><span class="u-green"> to abide by </span><span class="u-blue-zig">the Constitution</span><span class="u-green"> and respect </span><span class="u-blue-zig">its ideals and institutions</span>, <span class="u-blue-zig">the National Flag</span><span class="u-green"> and </span><span class="u-blue-zig">the National Anthem</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red)">2. Election Disqualification:</strong>
+        <span class="u-blue-zig">A person</span><span class="u-green"> who is convicted for </span><span class="u-blue-zig">the offences</span><span class="u-green"> under </span><span class="u-blue-zig">the Prevention of Insults</span> <span class="u-blue-zig">to National Honour Act of 1971</span><span class="u-green"> is disqualified to contest in </span><span class="u-blue-zig">the elections</span> <span class="u-blue-zig">to the Parliament</span><span class="u-green"> and </span><span class="u-blue-zig">state legislature</span><span class="u-green"> for </span><span class="u-blue-zig">6 years</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>15. Khadi Mandate:</strong>
+            <span class="u-green">According to </span><span class="u-blue-zig">the law</span>, <span class="u-blue-zig">the National Flag of India</span><span class="u-green"> is to be made by </span><span class="u-blue-zig">'Khadi'</span><span class="u-green"> which is </span><span class="u-blue-zig">hand-spun wool/cotton/silk</span> <span class="u-blue-zig">Khadi cloth</span>. <span class="u-red-zig">Karnataka Khadi Gramodyoga Samyukta Sangha</span><span class="u-green"> is the only unit in </span><span class="u-red-zig">India</span><span class="u-green"> that is accredited to </span><span class="u-blue-zig">supply and manufacture</span> <span class="u-blue-zig">the Flag of India</span>.
+        </li>
+        <li>
+            <strong>16. Flag Dimensions:</strong>
+            <span class="u-blue-zig">The National Flag</span><span class="u-green"> should be </span><span class="u-blue-zig">rectangular in shape</span><span class="u-green"> with </span><span class="u-blue-zig">a length to width ratio</span> <span class="u-blue-zig">of 3:2</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">FLAG CODE OF INDIA 2022</div>
+
+    <ul>
+        <li>
+            <strong>1. Day and Night Hoisting:</strong>
+            <span class="u-blue-zig">National Flag</span><span class="u-green"> can now be flown </span><span class="u-blue-zig">day and night</span><span class="u-green"> if it has been hoisted </span><span class="u-blue-zig">in the open</span><span class="u-green"> or on </span><span class="u-blue-zig">the house of a member</span> <span class="u-blue-zig">of the public</span>.
+        </li>
+        <li>
+            <strong>2. Polyester and Machine-Made:</strong>
+            <span class="u-blue-zig">The Indian national flag</span><span class="u-green"> can be made of </span><span class="u-blue-zig">polyester</span><span class="u-green"> and with </span><span class="u-blue-zig">the help of machines</span>.
+        </li>
+        <li>
+            <strong>3. Nine Standard Dimensions:</strong>
+            <span class="u-blue-zig">The tricolour</span><span class="u-green"> can be of </span><span class="u-blue-zig">nine standard dimensions</span> &mdash; <span class="u-blue-zig">6300 x 4200</span>, <span class="u-blue-zig">3600 x 2400</span>, <span class="u-blue-zig">2700 x 1800</span>, <span class="u-blue-zig">1800 x 1200</span>, <span class="u-blue-zig">1350 x 900</span>, <span class="u-blue-zig">900 x 600</span>, <span class="u-blue-zig">450 x 300</span>, <span class="u-blue-zig">225 x 150</span><span class="u-green"> and </span><span class="u-blue-zig">150 x 100</span> (<span class="u-blue-zig">all sizes in mm</span>).
+        </li>
+        <li>
+            <strong>4. BIS Conformity:</strong>
+            <span class="u-blue-zig">The flags</span><span class="u-green"> that conform to </span><span class="u-blue-zig">the specifications</span><span class="u-green"> as laid down by </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Bureau of Indian Standards</span><span class="u-green"> and </span><span class="u-blue-zig">bearing their mark</span><span class="u-green"> can only be used for </span><span class="u-blue-zig">official display</span>
+        </li>
+        <li>
+            <strong>5. Har Ghar Tiranga Campaign:</strong>
+            <span class="u-red-zig">Har Ghar Tiranga</span><span class="u-green"> is a campaign under </span><span class="u-blue-zig">the aegis</span><span class="u-green"> of </span><span class="u-red-zig">Azadi Ka Amrit Mahotsav</span><span class="u-green"> to encourage </span><span class="u-blue-zig">people</span><span class="u-green"> to bring </span><span class="u-blue-zig">the Tiranga home</span><span class="u-green"> and to hoist it to mark </span><span class="u-blue-zig">the 75th year</span> <span class="u-blue-zig">of India's independence</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 108</div>
+</div>
+
+<!-- ==================== PAGE 109 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">PINGALI VENKAYYA</div>
+
+    <ul>
+        <li>
+            <strong>1. Freedom Fighter and Designer:</strong>
+            <span class="u-blue-zig">A fervent freedom fighter</span><span class="u-green"> and </span><span class="u-blue-zig">the designer of the flag</span>.
+        </li>
+        <li>
+            <strong>2. Birth Details:</strong>
+            <span class="u-green">Born on </span><span class="u-blue-zig">2 August, 1876</span><span class="u-green"> at </span><span class="u-red-zig">Bhatlapenumarru</span>, <span class="u-green">near </span><span class="u-red-zig">Masulipatnam</span>, <span class="u-green">in </span><span class="u-red-zig">Andhra Pradesh</span>.
+        </li>
+        <li>
+            <strong>3. Expertise and Education:</strong>
+            <span class="u-green">He was an authority in </span><span class="u-blue-zig">geology, agriculture</span><span class="u-green"> and also </span><span class="u-blue-zig">an educationist</span><span class="u-green"> who set up </span><span class="u-blue-zig">an educational institution</span><span class="u-green"> in </span><span class="u-red-zig">Machilipatnam</span>.
+        </li>
+        <li>
+            <strong>4. Death in Poverty:</strong>
+            <span class="u-green">He, however, died in </span><span class="u-blue-zig">poverty</span><span class="u-green"> in </span><span class="u-blue-zig">1963</span>.
+        </li>
+        <li>
+            <strong>5. Posthumous Honours:</strong>
+            <span class="u-green">He was honoured with </span><span class="u-blue-zig">a postage stamp</span><span class="u-green"> in </span><span class="u-blue-zig">2009</span><span class="u-green"> for his contribution towards </span><span class="u-blue-zig">Indian freedom struggle</span><span class="u-green"> and in </span><span class="u-blue-zig">2011</span><span class="u-green"> it was proposed that </span><span class="u-green">he be posthumously awarded </span><span class="u-blue-zig">the</span> <span class="u-red-zig">Bharat Ratna</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 109</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH14 - Supreme Court & High Court</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 164 (Page 35) ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH14- Supreme Court &amp; High Court</h1>
+        <p class="subtitle">Articles 124-234</p>
+    </header>
+
+    <div class="section-header">ARTICLE 124</div>
+
+    <ul>
+        <li>
+            <strong>1. Composition:</strong> <span class="u-green">(1) There shall be </span><span class="u-blue-zig">a Supreme Court of India</span> <span class="u-green">consisting of </span><span class="u-blue-zig">a Chief Justice of India</span> <span class="u-green">and</span>, <span class="u-green">until </span><span class="u-blue-zig">Parliament</span> <span class="u-green">by </span><span class="u-blue-zig">law</span> <span class="u-green">prescribes </span><span class="u-blue-zig">a larger number</span>, <span class="u-green">of </span><span class="u-blue-zig">not more than thirty</span> <span class="u-blue-zig">other Judges</span>.
+        </li>
+        <li>
+            <strong>2. Appointment &amp; Tenure:</strong> <span class="u-green">(2) </span><span class="u-blue-zig">Every Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">by </span><span class="u-blue-zig">warrant under his hand</span> <span class="u-green">and </span><span class="u-blue-zig">seal</span> <span class="u-green">and shall hold office until </span><span class="u-blue-zig">he</span> <span class="u-green">attains </span><span class="u-blue-zig">the age of sixty-five Years</span>.
+            <ul>
+                <li>
+                    <strong>a. Resignation:</strong> <span class="u-green">(a) </span><span class="u-blue-zig">a Judge</span> <span class="u-green">may</span>, <span class="u-green">by </span><span class="u-blue-zig">writing under his hand</span> <span class="u-green">addressed to </span><span class="u-blue-zig">the President</span>, <span class="u-green">resign </span><span class="u-blue-zig">his office</span>;
+                </li>
+                <li>
+                    <strong>b. Removal:</strong> <span class="u-green">(b) </span><span class="u-blue-zig">a Judge</span> <span class="u-green">may be removed from </span><span class="u-blue-zig">his office</span> <span class="u-green">in </span><span class="u-blue-zig">the manner</span> <span class="u-green">provided in </span><span class="u-blue-zig">clause (4)</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. Qualification:</strong> <span class="u-green">(3) </span><span class="u-blue-zig">A person</span> <span class="u-green">shall not be qualified for </span><span class="u-blue-zig">appointment</span> <span class="u-green">as </span><span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">unless </span><span class="u-blue-zig">he</span> <span class="u-green">is </span><span class="u-blue-zig">a citizen of India</span> <span class="u-green">and</span>—
+            <ul>
+                <li>
+                    <strong>a. HC Judge:</strong> <span class="u-green">(a) has been for </span><span class="u-blue-zig">at least five years</span> <span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-blue-zig">a High Court</span> <span class="u-green">or of </span><span class="u-blue-zig">two or more such Courts</span> <span class="u-green">in </span><span class="u-blue-zig">succession</span>; <span class="u-green">or</span>
+                </li>
+                <li>
+                    <strong>b. HC Advocate:</strong> <span class="u-green">(b) has been for </span><span class="u-blue-zig">at least ten years</span> <span class="u-blue-zig">an advocate</span> <span class="u-green">of </span><span class="u-blue-zig">a High Court</span> <span class="u-green">or of </span><span class="u-blue-zig">two or more such Courts</span> <span class="u-green">in </span><span class="u-blue-zig">succession</span>; <span class="u-green">or</span>
+                </li>
+                <li>
+                    <strong>c. Distinguished Jurist:</strong> <span class="u-green">(c) is</span>, <span class="u-green">in </span><span class="u-blue-zig">the opinion</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>, <span class="u-blue-zig">a distinguished jurist</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>4. Removal Procedure:</strong> <span class="u-green">(4) </span><span class="u-blue-zig">A Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">shall not be removed from </span><span class="u-blue-zig">his office</span> <span class="u-green">except by </span><span class="u-blue-zig">an order</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">passed after </span><span class="u-blue-zig">an address</span> <span class="u-green">by </span><span class="u-blue-zig">each House of Parliament</span> <span class="u-green">supported by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">the total membership</span> <span class="u-green">of </span><span class="u-blue-zig">that House</span> <span class="u-green">and by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">not less than two-thirds</span> <span class="u-green">of </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">that House</span> <span class="u-blue-zig">present and voting</span> <span class="u-green">has been presented to </span><span class="u-blue-zig">the President</span> <span class="u-green">in </span><span class="u-blue-zig">the same session</span> <span class="u-green">for </span><span class="u-blue-zig">such removal</span> <span class="u-green">on </span><span class="u-blue-zig">the ground</span> <span class="u-green">of </span><span class="u-blue-zig">proved misbehaviour</span> <span class="u-green">or </span><span class="u-blue-zig">incapacity</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 125</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Judicial Salaries:</strong> <span class="u-blue-zig">Salaries, etc.</span>, <span class="u-green">of </span><span class="u-blue-zig">Judges</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Salary Details:</strong> <span class="u-blue-zig">Chief Justice of India</span> : <span class="u-blue-zig">2,80,000/-</span> <span class="u-blue-zig">Judges </span>: <span class="u-blue-zig">2,50,000/-</span>
+    </p>
+
+    <div class="section-header">ARTICLE 126</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Acting Chief Justice:</strong> <span class="u-blue-zig">Appointment </span><span class="u-green">of </span><span class="u-blue-zig">acting Chief Justice</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 127</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Ad Hoc Judges:</strong> <span class="u-blue-zig">Appointment </span><span class="u-green">of </span><span class="u-blue-zig">ad hoc Judges</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Quorum Absence:</strong> <span class="u-green">There should not be </span><span class="u-blue-zig">a quorum</span> <span class="u-green">of </span><span class="u-blue-zig">the Judges</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">available to hold or </span><span class="u-green">continue </span><span class="u-blue-zig">any session</span> <span class="u-green">of </span><span class="u-blue-zig">the Court</span>.
+    </p>
+
+    <div class="page-number">Page 35</div>
+</div>
+
+<!-- ==================== PAGE 165 (Page 36) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Presidential Consent:</strong> <span class="u-green">By </span><span class="u-blue-zig">the Chief Justice of India</span>, <span class="u-green">may with </span><span class="u-blue-zig">the previous consent</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>.
+        </li>
+        <li>
+            <strong>2. HC Consultation:</strong> <span class="u-green">After </span><span class="u-blue-zig">consultation</span> <span class="u-green">with </span><span class="u-blue-zig">the Chief Justice</span> <span class="u-green">of </span><span class="u-blue-zig">the High Court concerned</span>.
+        </li>
+        <li>
+            <strong>3. SC Qualification:</strong> <span class="u-blue-zig">Duly qualified</span> <span class="u-green">for </span><span class="u-blue-zig">appointment</span> <span class="u-green">as </span><span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 128</div>
+
+    <ul>
+        <li>
+            <strong>1. Retired Judges:</strong> <span class="u-blue-zig">Attendance </span><span class="u-green">of </span><span class="u-blue-zig">retired Judges </span><span class="u-green">at </span><span class="u-blue-zig">sittings </span><span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>.
+        </li>
+        <li>
+            <strong>2. Presidential Consent:</strong> <span class="u-green">With </span><span class="u-blue-zig">the previous consent</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>. <span class="u-green">held </span><span class="u-blue-zig">the office</span> <span class="u-green">of </span><span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>.
+        </li>
+        <li>
+            <strong>3. Jurisdiction &amp; Powers:</strong> <span class="u-green">Have </span><span class="u-blue-zig">all the jurisdiction</span>, <span class="u-blue-zig">powers </span><span class="u-green">and </span><span class="u-blue-zig">privileges </span>.
+        </li>
+        <li>
+            <strong>4. Allowance Entitlement:</strong> <span class="u-green">Entitled to </span><span class="u-blue-zig">such allowances</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may by </span><span class="u-blue-zig">order determine</span>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 130</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Seat of SC:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">shall sit in </span><span class="u-red-zig">Delhi</span> <span class="u-green">or in </span><span class="u-blue-zig">such other place or places</span>, <span class="u-green">as </span><span class="u-blue-zig">the Chief Justice of India</span> <span class="u-green">may</span>, <span class="u-green">with </span><span class="u-blue-zig">the approval</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>, <span class="u-green">from </span><span class="u-blue-zig">time to time</span>, <span class="u-green">appoint</span>.
+    </p>
+
+    <div class="main-topic-header">JURISDICTION OF THE SUPREME COURT</div>
+
+    <div class="section-header">ARTICLE 131 — ORIGINAL JURISDICTION</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Exclusive Original Jurisdiction:</strong> <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">the Supreme Court</span> <span class="u-green">shall</span>, <span class="u-green">to </span><span class="u-blue-zig">the exclusion</span> <span class="u-green">of </span><span class="u-blue-zig">any other court</span>, <span class="u-green">have </span><span class="u-blue-zig">original jurisdiction</span> <span class="u-green">in </span><span class="u-blue-zig">any dispute</span>—
+    </p>
+
+    <ul>
+        <li>
+            <strong>a. Union vs State:</strong> <span class="u-green">(a) between </span><span class="u-blue-zig">the Government of India</span> <span class="u-green">and </span><span class="u-blue-zig">one or more States</span>; <span class="u-green">or</span>
+        </li>
+        <li>
+            <strong>b. Union &amp; State vs States:</strong> <span class="u-green">(b) between </span><span class="u-blue-zig">the Government of India</span> <span class="u-green">and </span><span class="u-blue-zig">any State or States</span> <span class="u-green">on </span><span class="u-blue-zig">one side</span> <span class="u-green">and </span><span class="u-blue-zig">one or more other States</span> <span class="u-green">on </span><span class="u-blue-zig">the other</span>; <span class="u-green">or</span>
+        </li>
+        <li>
+            <strong>c. Inter-State Dispute:</strong> <span class="u-green">(c) between </span><span class="u-blue-zig">two or more States</span>,
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 132 — APPELLATE JURISDICTION</div>
+
+    <ul>
+        <li>
+            <strong>1. Constitutional Appeal:</strong> <span class="u-green">(1) </span><span class="u-blue-zig">An appeal</span> <span class="u-green">shall lie to </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">from </span><span class="u-blue-zig">any judgment, decree</span> <span class="u-green">or </span><span class="u-blue-zig">final order</span> <span class="u-green">of </span><span class="u-blue-zig">a High Court</span> <span class="u-green">in </span><span class="u-blue-zig">the territory of India</span>, <span class="u-green">whether in </span><span class="u-blue-zig">a civil, criminal</span> <span class="u-green">or </span><span class="u-blue-zig">other proceeding</span>, <span class="u-green">if </span><span class="u-blue-zig">the High Court</span> <span class="u-green">certifies under </span><span class="u-blue-zig">article 134A</span> <span class="u-green">that </span><span class="u-blue-zig">the case</span> <span class="u-green">involves </span><span class="u-blue-zig">a substantial question of law</span> <span class="u-green">as to </span><span class="u-blue-zig">the interpretation</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>.
+        </li>
+        <li>
+            <strong>2. Right of Appeal:</strong> <span class="u-green">(3) Where </span><span class="u-blue-zig">such a certificate</span> <span class="u-green">is given</span>, <span class="u-blue-zig">any party</span> <span class="u-green">in </span><span class="u-blue-zig">the case</span> <span class="u-green">may appeal to </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">on </span><span class="u-blue-zig">the ground</span> <span class="u-green">that </span><span class="u-blue-zig">any such question</span> <span class="u-green">as aforesaid </span><span class="u-green">has been wrongly decided</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 133</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Civil Appellate Jurisdiction:</strong> <span class="u-blue-zig">Appellate jurisdiction</span> <span class="u-green">of </span><span class="u-blue-zig">Supreme Court</span> <span class="u-green">in </span><span class="u-blue-zig">appeals</span> <span class="u-green">from </span><span class="u-blue-zig">High Courts</span> <span class="u-green">in regard to </span><span class="u-blue-zig">civil matters</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 134</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Criminal Appellate Jurisdiction:</strong> <span class="u-blue-zig">Appellate jurisdiction</span> <span class="u-green">of </span><span class="u-blue-zig">Supreme Court</span> <span class="u-green">in </span><span class="u-blue-zig">appeals</span> <span class="u-green">from </span><span class="u-blue-zig">High Courts</span> <span class="u-green">in regard to </span><span class="u-blue-zig">criminal matters</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>a. Death Sentence Reversal:</strong> <span class="u-green">(a) has on appeal reversed </span><span class="u-blue-zig">an order of acquittal</span> <span class="u-green">of </span><span class="u-blue-zig">an accused person</span> <span class="u-green">and sentenced him to </span><span class="u-blue-zig">death</span>; <span class="u-green">or</span>
+        </li>
+        <li>
+            <strong>b. Withdrawn Trial:</strong> <span class="u-green">(b) has withdrawn for </span><span class="u-blue-zig">trial</span> <span class="u-green">before itself </span><span class="u-blue-zig">any case</span> <span class="u-green">from </span><span class="u-blue-zig">any court</span> <span class="u-green">subordinate to </span><span class="u-blue-zig">its authority</span> <span class="u-green">and has in </span><span class="u-blue-zig">such trial</span> <span class="u-green">convicted </span><span class="u-blue-zig">the accused person</span> <span class="u-green">and sentenced him to </span><span class="u-blue-zig">death</span>; <span class="u-green">or</span>
+        </li>
+        <li>
+            <strong>c. Certification:</strong> <span class="u-green">(c) certifies under </span><span class="u-blue-zig">article 134A</span> <span class="u-green">that </span><span class="u-blue-zig">the case</span> <span class="u-green">is a fit one for </span><span class="u-blue-zig">appeal</span> <span class="u-green">to </span><span class="u-blue-zig">the Supreme Court</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 36</div>
+</div>
+
+<!-- ==================== PAGE 166 (Page 37) ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 134A</div>
+    <p>
+        <span class="u-blue-zig">Certificate</span><span class="u-green"> for </span><span class="u-blue-zig">appeal</span><span class="u-green"> to </span><span class="u-blue-zig">the Supreme Court</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 136</div>
+    <p>
+        <span class="u-blue-zig">The Supreme Court</span><span class="u-green"> may, in its discretion, grant </span><span class="u-blue-zig">special leave to appeal</span><span class="u-green"> from </span><span class="u-blue-zig">any judgment, decree,</span> <span class="u-blue-zig">determination, sentence</span><span class="u-green"> or </span><span class="u-blue-zig">order</span><span class="u-green"> in </span><span class="u-blue-zig">any cause</span><span class="u-green"> or </span><span class="u-blue-zig">matter</span><span class="u-green"> passed or made by </span><span class="u-blue-zig">any court</span><span class="u-green"> or </span><span class="u-blue-zig">tribunal</span><span class="u-green"> in </span><span class="u-blue-zig">the territory</span><span class="u-green"> of </span><span class="u-red-zig">India</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 137</div>
+    <p>
+        <span class="u-blue-zig">Review</span><span class="u-green"> of </span><span class="u-blue-zig">judgments</span><span class="u-green"> or </span><span class="u-blue-zig">orders</span><span class="u-green"> by </span><span class="u-blue-zig">the Supreme Court</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 138</div>
+    <ul>
+        <li>
+            <strong>1. Parliamentary Conferral:</strong>
+            <span class="u-blue-zig">the Supreme Court</span><span class="u-green"> shall have </span><span class="u-blue-zig">such further jurisdiction</span><span class="u-green"> and </span><span class="u-blue-zig">powers</span><span class="u-green"> with respect to </span><span class="u-blue-zig">any of the matters</span><span class="u-green"> in </span><span class="u-blue-zig">the Union List</span><span class="u-green"> as </span><span class="u-red-zig">Parliament</span><span class="u-green"> may by law confer</span>.
+        </li>
+        <li>
+            <strong>2. Special Agreement:</strong>
+            <span class="u-blue-zig">The Supreme Court</span><span class="u-green"> shall have </span><span class="u-blue-zig">such further jurisdiction</span><span class="u-green"> and </span><span class="u-blue-zig">powers</span><span class="u-green"> with respect to </span><span class="u-blue-zig">any matter</span><span class="u-green"> as </span><span class="u-blue-zig">the Government of India</span><span class="u-green"> and </span><span class="u-blue-zig">the Government of any State</span><span class="u-green"> may by </span><span class="u-blue-zig">special agreement</span><span class="u-green"> confer, if </span><span class="u-red-zig">Parliament</span><span class="u-green"> by law provides for </span><span class="u-blue-zig">the exercise</span><span class="u-green"> of </span><span class="u-blue-zig">such jurisdiction</span><span class="u-green"> and </span><span class="u-blue-zig">powers</span><span class="u-green"> by </span><span class="u-blue-zig">the Supreme Court</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 139</div>
+    <p>
+        <span class="u-red-zig">Parliament</span><span class="u-green"> may by law confer on </span><span class="u-blue-zig">the Supreme Court</span><span class="u-blue-zig"> power</span><span class="u-green"> to issue </span><span class="u-blue-zig">directions, orders</span><span class="u-green"> or </span><span class="u-blue-zig">writs,</span><span class="u-green"> including </span><span class="u-blue-zig">writs</span><span class="u-green"> in the nature of </span><span class="u-red-zig">HABEAS CORPUS</span>, <span class="u-red-zig">MANDAMUS</span>, <span class="u-red-zig">PROHIBITION</span>, <span class="u-red-zig">QUO WARRANTO</span><span class="u-green"> and </span><span class="u-red-zig">CERTIORARI</span>,<span class="u-green"> or </span><span class="u-blue-zig">any of them,</span><span class="u-green"> for </span><span class="u-blue-zig">any purposes</span><span class="u-green"> other than </span><span class="u-blue-zig">those mentioned</span><span class="u-green"> in </span><span class="u-blue-zig">clause (2)</span><span class="u-green"> of </span><span class="u-blue-zig">article 32</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 139A</div>
+    <p>
+        <span class="u-green">Where </span><span class="u-blue-zig">cases</span><span class="u-green"> involving </span><span class="u-blue-zig">the same</span><span class="u-green"> or </span><span class="u-blue-zig">substantially the same</span> <span class="u-blue-zig">questions of law</span><span class="u-green"> are pending before </span><span class="u-blue-zig">the Supreme Court</span><span class="u-green"> and </span><span class="u-blue-zig">one or more</span> <span class="u-blue-zig">High Courts</span><span class="u-green"> or </span><span class="u-green">before </span><span class="u-blue-zig">two or more</span> <span class="u-blue-zig">High Courts</span><span class="u-green"> and </span><span class="u-blue-zig">the Supreme Court</span><span class="u-green"> is satisfied on </span><span class="u-blue-zig">its own motion</span><span class="u-green"> or on </span><span class="u-blue-zig">an application</span><span class="u-green"> made by </span><span class="u-red-zig">the Attorney-General of India</span><span class="u-green"> or by </span><span class="u-blue-zig">a party</span><span class="u-green"> to </span><span class="u-blue-zig">any such case</span><span class="u-green"> that </span><span class="u-blue-zig">such questions</span><span class="u-green"> are </span><span class="u-blue-zig">substantial questions</span><span class="u-green"> of </span><span class="u-blue-zig">general importance,</span> <span class="u-blue-zig">the Supreme Court</span><span class="u-green"> may withdraw </span><span class="u-blue-zig">the case</span><span class="u-green"> or </span><span class="u-blue-zig">cases</span><span class="u-green"> pending before </span><span class="u-blue-zig">the High Court</span><span class="u-green"> or </span><span class="u-blue-zig">the High Courts</span><span class="u-green"> and dispose of </span><span class="u-blue-zig">all the cases itself</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 140</div>
+    <p>
+        <span class="u-red-zig">Parliament</span><span class="u-green"> may by law make provision for </span><span class="u-green">conferring upon </span><span class="u-blue-zig">the Supreme Court</span><span class="u-blue-zig"> such supplemental powers</span><span class="u-green"> not inconsistent with </span><span class="u-blue-zig">any of the provisions</span><span class="u-green"> of </span><span class="u-blue-zig">this Constitution</span><span class="u-green"> as may appear to be </span><span class="u-blue-zig">necessary</span><span class="u-green"> or </span><span class="u-blue-zig">desirable</span><span class="u-green"> for the purpose of enabling </span><span class="u-blue-zig">the Court</span><span class="u-green"> more effectively to exercise </span><span class="u-blue-zig">the jurisdiction</span><span class="u-green"> conferred upon it by or under </span><span class="u-blue-zig">this Constitution</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 141</div>
+    <p>
+        <span class="u-blue-zig">The law</span><span class="u-green"> declared by </span><span class="u-blue-zig">the Supreme Court</span><span class="u-green"> shall be binding on </span><span class="u-blue-zig">all courts</span><span class="u-green"> within </span><span class="u-blue-zig">the territory</span><span class="u-green"> of </span><span class="u-red-zig">India</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 142</div>
+    <p>
+        <span class="u-blue-zig">Enforcement</span><span class="u-green"> of </span><span class="u-blue-zig">decrees</span><span class="u-green"> and </span><span class="u-blue-zig">orders</span><span class="u-green"> of </span><span class="u-blue-zig">Supreme Court</span><span class="u-green"> and </span><span class="u-blue-zig">orders</span><span class="u-green"> as to </span><span class="u-blue-zig">discovery,</span> <span class="u-blue-zig">etc</span>.
+    </p>
+
+    <div class="page-number">Page 37</div>
+</div>
+
+<!-- ==================== PAGE 167 (Page 38) ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 143</div>
+    <p>
+        <span class="u-blue-zig">Power</span><span class="u-green"> of </span><span class="u-blue-zig">President</span><span class="u-green"> to consult </span><span class="u-blue-zig">Supreme Court</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 144</div>
+    <p>
+        <span class="u-blue-zig">All authorities,</span> <span class="u-blue-zig">civil</span><span class="u-green"> and </span><span class="u-blue-zig">judicial,</span><span class="u-green"> in </span><span class="u-blue-zig">the territory</span><span class="u-green"> of </span><span class="u-red-zig">India</span><span class="u-green"> shall act in aid of </span><span class="u-blue-zig">the Supreme Court</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 145</div>
+    <div class="section-header">RULES OF COURT</div>
+    <ul>
+        <li>
+            <strong>1. Rule-Making Power:</strong>
+            <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span><span class="u-green"> of </span><span class="u-blue-zig">any law</span><span class="u-green"> made by </span><span class="u-red-zig">Parliament</span>, <span class="u-blue-zig">the Supreme Court</span><span class="u-green"> may from time to time, </span><span class="u-green">with the approval of </span><span class="u-blue-zig">the President</span>,<span class="u-green"> make </span><span class="u-blue-zig">rules</span><span class="u-green"> for regulating generally </span><span class="u-blue-zig">the practice</span><span class="u-green"> and </span><span class="u-blue-zig">procedure</span><span class="u-green"> of </span><span class="u-blue-zig">the Court</span><span class="u-green"> including</span>—
+            <ul>
+                <li><strong>a. Practitioners:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the persons</span><span class="u-green"> practising before </span><span class="u-blue-zig">the Court</span>;</li>
+                <li><strong>b. Appeal Procedure:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the procedure</span><span class="u-green"> for hearing </span><span class="u-blue-zig">appeals</span><span class="u-green"> and </span><span class="u-blue-zig">other matters</span><span class="u-green"> pertaining to </span><span class="u-blue-zig">appeals</span><span class="u-green"> including </span><span class="u-blue-zig">the time</span><span class="u-green"> within which </span><span class="u-blue-zig">appeals</span><span class="u-green"> to </span><span class="u-blue-zig">the Court</span><span class="u-green"> are to be entered</span>;</li>
+                <li><strong>c. FR Enforcement:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the proceedings</span><span class="u-green"> in </span><span class="u-blue-zig">the Court</span><span class="u-green"> for the enforcement of </span><span class="u-blue-zig">any of the rights</span><span class="u-green"> conferred by </span><span class="u-blue-zig">Part III</span>;</li>
+                <li><strong>d. Criminal Appeal:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the entertainment</span><span class="u-green"> of </span><span class="u-blue-zig">appeals</span><span class="u-green"> under </span><span class="u-blue-zig">sub-clause (c)</span><span class="u-green"> of </span><span class="u-blue-zig">clause (1)</span><span class="u-green"> of </span><span class="u-blue-zig">article 134</span>;</li>
+                <li><strong>e. Review Procedure:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the conditions</span><span class="u-green"> subject to which </span><span class="u-blue-zig">any judgment</span><span class="u-green"> pronounced or </span><span class="u-blue-zig">order</span><span class="u-green"> made by </span><span class="u-blue-zig">the Court</span><span class="u-green"> may be reviewed and </span><span class="u-blue-zig">the procedure</span><span class="u-green"> for </span><span class="u-blue-zig">such review</span><span class="u-green"> including </span><span class="u-blue-zig">the time</span><span class="u-green"> within which </span><span class="u-blue-zig">applications</span><span class="u-green"> to </span><span class="u-blue-zig">the Court</span><span class="u-green"> for </span><span class="u-blue-zig">such review</span><span class="u-green"> are to be entered</span>;</li>
+                <li><strong>f. Costs &amp; Fees:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the costs</span><span class="u-green"> of and incidental to </span><span class="u-blue-zig">any proceedings</span><span class="u-green"> in </span><span class="u-blue-zig">the Court</span><span class="u-green"> and as to </span><span class="u-blue-zig">the fees</span><span class="u-green"> to be charged in respect of </span><span class="u-blue-zig">proceedings therein</span>;</li>
+                <li><strong>g. Bail Rules:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the granting</span><span class="u-green"> of </span><span class="u-blue-zig">bail</span>;</li>
+                <li><strong>h. Stay of Proceedings:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">stay</span><span class="u-green"> of </span><span class="u-blue-zig">proceedings</span>;</li>
+                <li><strong>i. Summary Determination:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> providing for </span><span class="u-blue-zig">the summary determination</span><span class="u-green"> of </span><span class="u-blue-zig">any appeal</span><span class="u-green"> which appears to </span><span class="u-blue-zig">the Court</span><span class="u-green"> to be </span><span class="u-blue-zig">frivolous</span><span class="u-green"> or </span><span class="u-blue-zig">vexatious</span><span class="u-green"> or brought for the purpose of </span><span class="u-blue-zig">delay</span>;</li>
+                <li><strong>j. UPSC Inquiry:</strong> <span class="u-blue-zig">rules</span><span class="u-green"> as to </span><span class="u-blue-zig">the procedure</span><span class="u-green"> for </span><span class="u-blue-zig">inquiries</span><span class="u-green"> referred to in </span><span class="u-blue-zig">clause (1)</span><span class="u-green"> of </span><span class="u-blue-zig">article 317</span></li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Bench Composition:</strong>
+            <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span><span class="u-green"> of </span><span class="u-blue-zig">clause (3),</span> <span class="u-blue-zig">rules</span><span class="u-green"> made under </span><span class="u-blue-zig">this article</span><span class="u-green"> may fix </span><span class="u-blue-zig">the minimum number</span><span class="u-green"> of </span><span class="u-blue-zig">Judges</span><span class="u-green"> who are to sit for </span><span class="u-blue-zig">any purpose,</span><span class="u-green"> and may provide for </span><span class="u-blue-zig">the powers</span><span class="u-green"> of </span><span class="u-blue-zig">single Judges</span><span class="u-green"> and </span><span class="u-blue-zig">Division Courts</span>.
+        </li>
+        <li>
+            <strong>3. Constitutional Bench:</strong>
+            <span class="u-blue-zig">The minimum number</span><span class="u-green"> of </span><span class="u-blue-zig">Judges</span><span class="u-green"> who are to sit for the purpose of </span><span class="u-green">deciding </span><span class="u-blue-zig">any case</span><span class="u-green"> involving </span><span class="u-blue-zig">a substantial question</span><span class="u-green"> of </span><span class="u-blue-zig">law</span><span class="u-green"> as to </span><span class="u-blue-zig">the interpretation</span><span class="u-green"> of </span><span class="u-blue-zig">this Constitution</span><span class="u-green"> or for the purpose of </span><span class="u-green">hearing </span><span class="u-blue-zig">any reference</span><span class="u-green"> under </span><span class="u-blue-zig">article 143</span><span class="u-green"> shall be </span><span class="u-blue-zig">five</span>.
+        </li>
+        <li>
+            <strong>4. Open Court Judgment:</strong>
+            <span class="u-blue-zig">No judgment</span><span class="u-green"> shall be delivered by </span><span class="u-blue-zig">the Supreme Court</span><span class="u-green"> save in </span><span class="u-blue-zig">open Court,</span><span class="u-green"> and </span><span class="u-blue-zig">no report</span><span class="u-green"> shall be made under </span><span class="u-blue-zig">article 143</span><span class="u-green"> save in accordance with </span><span class="u-blue-zig">an opinion</span><span class="u-green"> also delivered in </span><span class="u-blue-zig">open Court</span>.
+        </li>
+        <li>
+            <strong>5. Majority Concurrence:</strong>
+            <span class="u-blue-zig">No judgment</span><span class="u-green"> and </span><span class="u-blue-zig">no such opinion</span><span class="u-green"> shall be delivered by </span><span class="u-blue-zig">the Supreme Court</span><span class="u-green"> save with </span><span class="u-blue-zig">the concurrence</span><span class="u-green"> of </span><span class="u-blue-zig">a majority</span><span class="u-green"> of </span><span class="u-blue-zig">the Judges</span><span class="u-green"> present at </span><span class="u-blue-zig">the hearing</span><span class="u-green"> of </span><span class="u-blue-zig">the case</span>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 146</div>
+
+    <div class="page-number">Page 38</div>
+</div>
+
+<!-- ==================== PAGE 168 (Page 39) ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Court Staff Appointments:</strong> <span class="u-blue-zig">Appointments of officers</span> <span class="u-green">and </span><span class="u-blue-zig">servants</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">shall be made by </span><span class="u-blue-zig">the Chief Justice of India</span> <span class="u-green">or </span><span class="u-blue-zig">such other Judge</span> <span class="u-green">or </span><span class="u-blue-zig">officer of the Court</span> <span class="u-green">as he may direct</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Administrative Expenses:</strong> <span class="u-blue-zig">The administrative expenses</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>, <span class="u-green">including </span><span class="u-blue-zig">all salaries, allowances</span> <span class="u-green">and </span><span class="u-blue-zig">pensions payable</span> <span class="u-green">to or in respect of </span><span class="u-blue-zig">the officers</span> <span class="u-green">and </span><span class="u-blue-zig">servants of the Court</span>, <span class="u-green">shall be charged upon </span><span class="u-blue-zig">the Consolidated Fund of India</span>, <span class="u-green">and </span><span class="u-blue-zig">any fees</span> <span class="u-green">or </span><span class="u-blue-zig">other moneys</span> <span class="u-green">taken by </span><span class="u-blue-zig">the Court</span> <span class="u-green">shall form part of </span><span class="u-blue-zig">that Fund</span>.
+    </p>
+
+    <div class="main-topic-header">DOCTRINE OF PITH AND SUBSTANCE</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Applicability Principle:</strong> <span class="u-blue-zig">The Doctrine of Pith</span> <span class="u-green">and </span><span class="u-blue-zig">Substance</span> <span class="u-green">is used when </span><span class="u-blue-zig">legislation</span> <span class="u-green">approved by </span><span class="u-blue-zig">one legislature</span> <span class="u-green">is contested or relied upon by </span><span class="u-blue-zig">another</span>. <span class="u-green">According to </span><span class="u-blue-zig">this principle</span>, <span class="u-blue-zig">the court</span> <span class="u-green">considers </span><span class="u-blue-zig">the facts of the case</span> <span class="u-green">while determining whether </span><span class="u-blue-zig">a given law</span> <span class="u-green">applies to </span><span class="u-blue-zig">a particular issue</span>. <span class="u-green">If </span><span class="u-blue-zig">one of the three lists</span> <span class="u-green">resolves </span><span class="u-blue-zig">the fundamental problem</span>, <span class="u-blue-zig">involvement </span><span class="u-green">with </span><span class="u-blue-zig">the other lists</span> <span class="u-green">is viewed as </span><span class="u-blue-zig">intra vires</span> <span class="u-green">and is not forbidden</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Statute Scope:</strong> <span class="u-blue-zig">The statute</span> <span class="u-green">as </span><span class="u-blue-zig">a whole</span>,</li>
+        <li><strong>2. Major Objects:</strong> <span class="u-blue-zig">Its major objects</span>, <span class="u-green">and</span></li>
+        <li><strong>3. Scope and Impact:</strong> <span class="u-blue-zig">The scope</span> <span class="u-green">and </span><span class="u-blue-zig">impact</span> <span class="u-green">of </span><span class="u-blue-zig">its provisions</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Substance Over Form:</strong> <span class="u-green">When determining whether </span><span class="u-blue-zig">a certain statute</span> <span class="u-green">applies to </span><span class="u-blue-zig">a specific issue</span> <span class="u-green">stated in </span><span class="u-blue-zig">one list</span> <span class="u-green">or </span><span class="u-blue-zig">the other</span>, <span class="u-blue-zig">the courts</span> <span class="u-green">examine </span><span class="u-blue-zig">the substance</span> <span class="u-green">of </span><span class="u-blue-zig">the enactment</span>. <span class="u-green">As a result, if </span><span class="u-blue-zig">the legislation's provisions</span> <span class="u-green">are inside </span><span class="u-blue-zig">the Union List</span>, <span class="u-blue-zig">the State List's</span> <span class="u-blue-zig">inadvertent invasion</span> <span class="u-green">does not make </span><span class="u-blue-zig">the law unconstitutional</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. True Nature Test:</strong> <span class="u-green">One must consider </span><span class="u-blue-zig">the law at issue</span> <span class="u-green">as </span><span class="u-blue-zig">a whole</span>, <span class="u-blue-zig">its objectives</span> <span class="u-green">as well as </span><span class="u-blue-zig">the scope</span> <span class="u-green">and </span><span class="u-blue-zig">impact of its provisions</span>, <span class="u-green">in order to determine </span><span class="u-blue-zig">its actual nature</span>. <span class="u-green">If according to </span><span class="u-blue-zig">its 'true nature</span> <span class="u-green">and </span><span class="u-blue-zig">character'</span>, <span class="u-blue-zig">the legislation</span> <span class="u-green">substantially relates to </span><span class="u-blue-zig">a topic</span> <span class="u-green">assigned to </span><span class="u-blue-zig">the Legislature</span> <span class="u-green">which has enacted it</span>, <span class="u-green">then it is not </span><span class="u-blue-zig">invalid</span> <span class="u-green">merely because it </span><span class="u-blue-zig">incidentally trenches</span> <span class="u-green">or </span><span class="u-blue-zig">encroaches</span> <span class="u-green">on </span><span class="u-blue-zig">matters</span> <span class="u-green">assigned to </span><span class="u-blue-zig">another legislature</span>.
+    </p>
+
+    <div class="main-topic-header">THE EFFICIENCY OF THE COLLEGIUM SYSTEM</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Judicial Innovation:</strong> <span class="u-blue-zig">The Collegium of judges</span> <span class="u-green">is </span><span class="u-blue-zig">the Supreme Court's invention</span>. <span class="u-green">It does not figure in </span><span class="u-blue-zig">the Constitution</span>. <span class="u-green">In effect, it is </span><span class="u-blue-zig">a system</span> <span class="u-green">under which </span><span class="u-blue-zig">judges</span> <span class="u-green">are appointed by </span><span class="u-blue-zig">an institution</span> <span class="u-green">comprising </span><span class="u-blue-zig">judges</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Collegium Composition:</strong> <span class="u-blue-zig">The collegium system</span> <span class="u-green">is headed by </span><span class="u-blue-zig">the Chief Justice of India</span> (<span class="u-red-zig">CJI</span>) <span class="u-green">and </span><span class="u-blue-zig">four senior-most judges</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Criticism of System:</strong> <span class="u-blue-zig">Many </span><span class="u-green">have faulted </span><span class="u-blue-zig">the system</span>, <span class="u-green">not only for </span><span class="u-blue-zig">its being seen</span> <span class="u-green">as </span><span class="u-blue-zig">something unforeseen</span> <span class="u-green">by </span><span class="u-blue-zig">the Constitution makers</span>, <span class="u-green">but also for </span><span class="u-blue-zig">the way</span> <span class="u-green">it functions</span>. <span class="u-blue-zig">Opaqueness </span><span class="u-green">and </span><span class="u-blue-zig">a lack of transparency</span> <span class="u-green">and </span><span class="u-blue-zig">the scope for nepotism</span> <span class="u-green">are cited often</span>.
+    </p>
+
+    <ul>
+        <li><strong>2. Nepotism Risk:</strong> <span class="u-blue-zig">The mystique</span> <span class="u-green">of </span><span class="u-blue-zig">the process</span>, <span class="u-blue-zig">the small base</span> <span class="u-green">from which </span><span class="u-blue-zig">the selections</span> <span class="u-green">were made and </span><span class="u-blue-zig">the secrecy</span> <span class="u-green">and </span><span class="u-blue-zig">confidentiality</span> <span class="u-green">ensured that </span><span class="u-blue-zig">the process</span> <span class="u-green">may on occasions, make </span><span class="u-blue-zig">wrong appointments</span> <span class="u-green">and, worse still, lend itself to </span><span class="u-blue-zig">nepotism</span> (<span class="u-red-zig">Justice Ruma Pal</span>).</li>
+        <li><strong>3. Transfer Concerns:</strong> <span class="u-blue-zig">Some </span><span class="u-green">do not believe in </span><span class="u-blue-zig">full disclosure of reasons</span> <span class="u-green">for </span><span class="u-blue-zig">transfers</span>, <span class="u-green">as it may make </span><span class="u-blue-zig">lawyers</span> <span class="u-green">in </span><span class="u-blue-zig">the destination court</span> <span class="u-green">chary of </span><span class="u-blue-zig">the transferred judge</span>. <span class="u-blue-zig">Embroilment </span><span class="u-green">in </span><span class="u-blue-zig">public controversies</span> <span class="u-green">and having </span><span class="u-blue-zig">relatives practising</span> <span class="u-green">in </span><span class="u-blue-zig">the same High Court</span> <span class="u-green">could be </span><span class="u-blue-zig">common reasons</span> <span class="u-green">for </span><span class="u-blue-zig">transfers</span>.</li>
+    </ul>
+
+    <div class="page-number">Page 39</div>
+</div>
+
+<!-- ==================== PAGE 169 (Page 40) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li><strong>4. Memorandum Status:</strong> <span class="u-blue-zig">The status</span> <span class="u-green">of </span><span class="u-blue-zig">a proposed new</span> <span class="u-blue-zig">memorandum of procedure</span>, <span class="u-green">to infuse </span><span class="u-blue-zig">greater accountability</span>, <span class="u-green">is also </span><span class="u-blue-zig">unclear</span>.</li>
+        <li><strong>5. Zone of Consideration:</strong> <span class="u-green">In respect of </span><span class="u-blue-zig">appointments</span>, <span class="u-green">there has been </span><span class="u-blue-zig">an acknowledgement</span> <span class="u-green">that </span><span class="u-blue-zig">the "zone of consideration"</span> <span class="u-green">must be expanded to avoid </span><span class="u-blue-zig">criticism</span> <span class="u-green">that </span><span class="u-blue-zig">many appointees</span> <span class="u-green">hail from </span><span class="u-blue-zig">families </span><span class="u-green">of </span><span class="u-blue-zig">retired judges</span>.</li>
+        <li><strong>6. Representational Deficit:</strong> <span class="u-blue-zig">The collegium system</span> <span class="u-green">structurally tends to favour </span><span class="u-blue-zig">upper-caste males</span> <span class="u-green">and is far from being </span><span class="u-blue-zig">representative </span><span class="u-green">of </span><span class="u-blue-zig">the population </span><span class="u-green">for whom it seeks to deliver </span><span class="u-blue-zig">justice </span>.</li>
+        <li><strong>7. Appointment Delay:</strong> <span class="u-blue-zig">The process</span> <span class="u-green">of </span><span class="u-blue-zig">judicial appointment</span> <span class="u-green">is delayed due to </span><span class="u-blue-zig">delay in recommendations</span> <span class="u-green">by </span><span class="u-blue-zig">the collegium</span> <span class="u-green">for </span><span class="u-blue-zig">the higher judiciary</span>.</li>
+        <li><strong>8. NJAC Struck Down:</strong> <span class="u-blue-zig">The attempt</span> <span class="u-green">made to replace it by a </span>'<span class="u-red-zig">National Judicial Appointments Commission</span>' <span class="u-green">was struck down by </span><span class="u-blue-zig">the court</span> <span class="u-green">in </span><span class="u-red-zig">2015</span> <span class="u-green">on the ground that </span><span class="u-green">it posed </span><span class="u-blue-zig">a threat</span> <span class="u-green">to </span><span class="u-blue-zig">the independence</span> <span class="u-green">of </span><span class="u-blue-zig">the judiciary</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Independent Body Need:</strong> <span class="u-green">However, it is time to think of </span><span class="u-blue-zig">a permanent, independent body</span> <span class="u-green">to institutionalize </span><span class="u-blue-zig">the process</span> <span class="u-green">with </span><span class="u-blue-zig">adequate safeguards</span> <span class="u-green">to preserve </span><span class="u-blue-zig">the judiciary's independence</span> <span class="u-green">guaranteeing </span><span class="u-blue-zig">judicial primacy</span> <span class="u-green">but not </span><span class="u-blue-zig">judicial exclusivity</span>.
+    </p>
+
+    <div class="main-topic-header">THE JURISDICTION OF THE SUPREME COURT UNDER ARTICLE 142</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Institutional Overreach:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">said that </span><span class="u-green">thinking of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">as </span><span class="u-blue-zig">a "one-stop solution</span> <span class="u-green">to resolve </span><span class="u-blue-zig">complicated issues</span> <span class="u-green">of </span><span class="u-blue-zig">policy </span><span class="u-green">and </span><span class="u-blue-zig">society" </span><span class="u-green">is </span><span class="u-blue-zig">a reflection</span> <span class="u-green">of </span><span class="u-blue-zig">the waning power</span> <span class="u-green">of </span><span class="u-blue-zig">discourse </span><span class="u-green">and </span><span class="u-blue-zig">consensus-building</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Complete Justice Power:</strong> <span class="u-blue-zig">The Indian constitution</span> <span class="u-green">believe that </span><span class="u-blue-zig">every citizen of India</span> <span class="u-green">must get </span><span class="u-blue-zig">COMPLETE JUSTICE</span>. <span class="u-red-zig">Article 142</span> <span class="u-green">provides </span><span class="u-blue-zig">discretionary power</span> <span class="u-green">to </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">as it states that </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">in the exercise of </span><span class="u-blue-zig">its jurisdiction</span> <span class="u-green">may pass </span><span class="u-blue-zig">such decree</span> <span class="u-green">or make </span><span class="u-blue-zig">such order</span> <span class="u-green">as is necessary for doing </span><span class="u-blue-zig">complete justice</span> <span class="u-green">in </span><span class="u-blue-zig">any cause</span> <span class="u-green">or </span><span class="u-blue-zig">matter pending</span> <span class="u-green">before it</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. No Specific Guidelines:</strong> <span class="u-green">But since </span><span class="u-blue-zig">the past few years</span> <span class="u-green">it has become </span><span class="u-blue-zig">a gigantic part</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">which is invoked </span><span class="u-blue-zig">several times</span> <span class="u-green">to decide </span><span class="u-blue-zig">the case</span> <span class="u-green">and to do </span><span class="u-blue-zig">the complete justice</span>. <span class="u-green">Further, there is </span><span class="u-blue-zig">no specific guideline</span> <span class="u-green">or </span><span class="u-blue-zig">rule</span> <span class="u-green">provided by </span><span class="u-blue-zig">the law</span> <span class="u-green">which explains </span><span class="u-blue-zig">when, where</span> <span class="u-green">and </span><span class="u-blue-zig">under which circumstances</span> <span class="u-blue-zig">the Apex Court</span> <span class="u-green">can invoke </span><span class="u-blue-zig">the said article</span> <span class="u-green">to do </span><span class="u-blue-zig">the complete justice</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Ayodhya Observation:</strong> <span class="u-green">In </span><span class="u-red-zig">Ayodhya</span> <span class="u-blue-zig">case</span> <span class="u-blue-zig">the Supreme Court</span> <span class="u-green">described</span>—
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Equity Jurisdiction:</strong> <span class="u-blue-zig">The phrase</span> '<span class="u-blue-zig">is necessary</span> <span class="u-green">for doing </span><span class="u-blue-zig">complete justice</span>' <span class="u-green">is of </span><span class="u-blue-zig">a wide amplitude</span> <span class="u-green">and encompasses </span><span class="u-blue-zig">a power of equity</span> <span class="u-green">which is employed when </span><span class="u-blue-zig">the strict application</span> <span class="u-green">of </span><span class="u-blue-zig">the law</span> <span class="u-green">is inadequate to produce </span><span class="u-blue-zig">a just outcome</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Accountability Deficit:</strong> <span class="u-green">Unlike </span><span class="u-blue-zig">the executive</span> <span class="u-green">and </span><span class="u-blue-zig">legislature</span>, <span class="u-blue-zig">Supreme Court</span> <span class="u-green">cannot be held accountable for </span><span class="u-blue-zig">its decisions</span>. <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">did not hear </span><span class="u-blue-zig">individuals</span> <span class="u-green">and </span><span class="u-blue-zig">their particular facts</span>, <span class="u-green">but only </span><span class="u-blue-zig">their associations</span> <span class="u-green">were heard</span>. <span class="u-green">In </span><span class="u-blue-zig">the coal block allocation case</span>
+    </p>
+
+    <ul>
+        <li><strong>1. Judicial Under-Reach:</strong> <span class="u-blue-zig">The problem</span> <span class="u-green">of </span><span class="u-blue-zig">judicial under-reach</span> <span class="u-green">arises where </span><span class="u-blue-zig">courts</span> <span class="u-green">shirk </span><span class="u-blue-zig">its responsibilities</span>, <span class="u-green">despite having </span><span class="u-blue-zig">the jurisdiction</span>, <span class="u-green">resulting in </span><span class="u-blue-zig">injustice</span>.</li>
+        <li><strong>2. Vishakha Guidelines:</strong> <span class="u-blue-zig">Supreme Court</span> <span class="u-green">laid down </span><span class="u-blue-zig">The guidelines</span> <span class="u-green">to protect </span><span class="u-blue-zig">a woman</span> <span class="u-green">from </span><span class="u-blue-zig">sexual harassment</span> <span class="u-green">at </span><span class="u-blue-zig">its workplace</span>.( <span class="u-red-zig">Vishakha case</span>)</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Regulation Need:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">needs to introspect on whether </span><span class="u-blue-zig">the use</span> <span class="u-green">of </span><span class="u-red-zig">Article 142</span> <span class="u-green">as </span><span class="u-blue-zig">an independent source</span> <span class="u-green">of </span><span class="u-blue-zig">power</span> <span class="u-green">should be regulated by </span><span class="u-blue-zig">strict guidelines</span> <span class="u-green">or it should be referred to </span><span class="u-blue-zig">a Constitution Bench</span>.
+    </p>
+
+    <div class="page-number">Page 40</div>
+</div>
+
+<!-- ==================== PAGE 170 (Page 41) ==================== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">THE HIGH COURTS IN THE STATES</div>
+
+    <div class="section-header">ARTICLE 214</div>
+    <p>
+        <span class="u-blue-zig">There shall be </span><span class="u-blue-zig">a High Court </span><span class="u-green">for </span><span class="u-blue-zig">each State</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 215</div>
+    <p>
+        <span class="u-blue-zig">High Courts </span><span class="u-green">to be </span><span class="u-blue-zig">courts of record</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 216</div>
+    <p>
+        <span class="u-blue-zig">Every High Court </span><span class="u-green">shall consist of </span><span class="u-blue-zig">a Chief Justice </span><span class="u-green">and </span><span class="u-blue-zig">such other Judges </span><span class="u-green">as </span><span class="u-blue-zig">the President </span><span class="u-green">may from time to time </span><span class="u-green">deem it necessary to appoint</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 217</div>
+    <ul>
+        <li>
+            <strong>1. Appointment &amp; Tenure:</strong>
+            <span class="u-blue-zig">Every Judge </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President </span><span class="u-green">by </span><span class="u-blue-zig">warrant under his hand </span><span class="u-green">and </span><span class="u-blue-zig">seal </span><span class="u-blue-zig">the Governor </span><span class="u-green">of </span><span class="u-blue-zig">the State,</span> <span class="u-green">and, in the case of </span><span class="u-blue-zig">appointment </span><span class="u-green">of </span><span class="u-blue-zig">a Judge </span><span class="u-green">other than </span><span class="u-blue-zig">the Chief Justice, </span><span class="u-blue-zig">the Chief Justice </span><span class="u-green">of </span><span class="u-blue-zig">the High Court, </span><span class="u-green">and shall hold office, </span><span class="u-green">in the case of </span><span class="u-blue-zig">an additional </span><span class="u-green">or </span><span class="u-blue-zig">acting Judge, </span><span class="u-green">as provided in </span><span class="u-blue-zig">article 224, </span><span class="u-green">and in any other case, </span><span class="u-green">until he attains </span><span class="u-blue-zig">the age </span><span class="u-green">of </span><span class="u-blue-zig">sixtytwo years</span>
+            <ul>
+                <li><strong>a. Resignation:</strong> <span class="u-blue-zig">a Judge </span><span class="u-green">may, by </span><span class="u-blue-zig">writing under his hand </span><span class="u-green">addressed to </span><span class="u-blue-zig">the President, </span><span class="u-green">resign </span><span class="u-blue-zig">his office</span>;</li>
+                <li><strong>b. Removal:</strong> <span class="u-blue-zig">a Judge </span><span class="u-green">may be removed from </span><span class="u-blue-zig">his office </span><span class="u-green">by </span><span class="u-blue-zig">the President </span><span class="u-green">in the manner provided in </span><span class="u-blue-zig">clause (4) </span><span class="u-green">of </span><span class="u-blue-zig">article 124 </span><span class="u-green">for the removal of </span><span class="u-blue-zig">a Judge </span><span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>;</li>
+                <li><strong>c. Vacancy:</strong> <span class="u-blue-zig">the office </span><span class="u-green">of </span><span class="u-blue-zig">a Judge </span><span class="u-green">shall be vacated by </span><span class="u-blue-zig">his being appointed </span><span class="u-green">by </span><span class="u-blue-zig">the President </span><span class="u-green">to be </span><span class="u-blue-zig">a Judge </span><span class="u-green">of </span><span class="u-blue-zig">the Supreme Court </span><span class="u-green">or by </span><span class="u-blue-zig">his being transferred </span><span class="u-green">by </span><span class="u-blue-zig">the President </span><span class="u-green">to </span><span class="u-blue-zig">any other High Court </span><span class="u-green">within </span><span class="u-blue-zig">the territory </span><span class="u-green">of </span><span class="u-red-zig">India</span>.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Qualification:</strong>
+            <span class="u-blue-zig">A person </span><span class="u-green">shall not be qualified for </span><span class="u-blue-zig">appointment </span><span class="u-green">as </span><span class="u-blue-zig">a Judge </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">unless he is </span><span class="u-blue-zig">a citizen </span><span class="u-green">of </span><span class="u-red-zig">India </span><span class="u-green">and</span>—
+            <ul>
+                <li><strong>a. Judicial Experience:</strong> <span class="u-green">has for at least </span><span class="u-blue-zig">ten years </span><span class="u-green">held </span><span class="u-blue-zig">a judicial office </span><span class="u-green">in </span><span class="u-blue-zig">the territory </span><span class="u-green">of </span><span class="u-red-zig">India</span>; <span class="u-green">or</span></li>
+                <li><strong>b. Advocate Experience:</strong> <span class="u-green">has for at least </span><span class="u-blue-zig">ten years </span><span class="u-green">been </span><span class="u-blue-zig">an advocate </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">or of </span><span class="u-blue-zig">two or more such Courts </span><span class="u-green">in </span><span class="u-blue-zig">succession</span>.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 219</div>
+    <ul>
+        <li>
+            <strong>1. Oath of Office:</strong>
+            <span class="u-blue-zig">Every person </span><span class="u-green">appointed to be </span><span class="u-blue-zig">a Judge </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">shall, before he enters </span><span class="u-green">upon </span><span class="u-blue-zig">his office, </span><span class="u-green">make and subscribe </span><span class="u-green">before </span><span class="u-blue-zig">the Governor </span><span class="u-green">of </span><span class="u-blue-zig">the State, </span><span class="u-green">or </span><span class="u-blue-zig">some person </span><span class="u-green">appointed in that behalf by </span><span class="u-blue-zig">him, </span><span class="u-blue-zig">an oath </span><span class="u-green">or </span><span class="u-blue-zig">affirmation </span><span class="u-green">according to </span><span class="u-blue-zig">the form set out </span><span class="u-green">for the purpose in </span><span class="u-blue-zig">the Third Schedule</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 220</div>
+    <ul>
+        <li>
+            <strong>1. Post-Retirement Bar:</strong>
+            <span class="u-blue-zig">No person </span><span class="u-green">who, after </span><span class="u-blue-zig">the commencement </span><span class="u-green">of </span><span class="u-blue-zig">this Constitution, </span><span class="u-green">has held office as </span><span class="u-blue-zig">a permanent Judge </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">shall plead or act in </span><span class="u-blue-zig">any court </span><span class="u-green">or before </span><span class="u-blue-zig">any authority </span><span class="u-green">in </span><span class="u-red-zig">India </span><span class="u-green">except </span><span class="u-blue-zig">the Supreme Court </span><span class="u-green">and </span><span class="u-blue-zig">the other High Courts</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 221</div>
+    <ul>
+        <li><strong>1. Judges' Salaries:</strong> <span class="u-blue-zig">Salaries, etc., </span><span class="u-green">of </span><span class="u-blue-zig">Judges</span>.</li>
+        <li><strong>2. Chief Justice Salary:</strong> <span class="u-blue-zig">Chief Justice </span>: <span class="u-blue-zig">2,50,000/-</span></li>
+        <li><strong>3. Judges Salary:</strong> <span class="u-blue-zig">Judges </span>: <span class="u-blue-zig">2,25,000/-</span></li>
+    </ul>
+
+    <div class="page-number">Page 41</div>
+</div>
+
+<!-- ==================== PAGE 171 (Page 42) ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 222</div>
+    <ul>
+        <li>
+            <strong>1. Transfer of Judges:</strong>
+            <span class="u-blue-zig">The President </span><span class="u-green">may transfer </span><span class="u-blue-zig">a Judge </span><span class="u-green">from </span><span class="u-blue-zig">one High Court </span><span class="u-green">to </span><span class="u-blue-zig">any other High Court</span>.
+        </li>
+        <li>
+            <strong>2. Compensatory Allowance:</strong>
+            <span class="u-green">When </span><span class="u-blue-zig">a Judge </span><span class="u-green">has been or is so </span><span class="u-blue-zig">transferred, </span><span class="u-green">he shall, during </span><span class="u-blue-zig">the period </span><span class="u-green">he serves, as </span><span class="u-blue-zig">a Judge </span><span class="u-green">of </span><span class="u-blue-zig">the other High Court, </span><span class="u-green">be entitled to receive </span><span class="u-green">in addition to </span><span class="u-blue-zig">his salary </span><span class="u-blue-zig">such compensatory allowance </span><span class="u-green">as may be determined by </span><span class="u-blue-zig">Parliament </span><span class="u-green">by </span><span class="u-blue-zig">law </span><span class="u-green">and, until so determined, </span><span class="u-blue-zig">such compensatory allowance </span><span class="u-green">as </span><span class="u-blue-zig">the President </span><span class="u-green">may by order </span><span class="u-blue-zig">fix</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 223</div>
+    <ul>
+        <li><strong>1. Acting Chief Justice:</strong> <span class="u-blue-zig">Appointment </span><span class="u-green">of </span><span class="u-blue-zig">acting Chief Justice </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">by </span><span class="u-blue-zig">the President</span></li>
+    </ul>
+
+    <div class="section-header">ARTICLE 224</div>
+    <ul>
+        <li><strong>1. Additional &amp; Acting Judges:</strong> <span class="u-blue-zig">Appointment </span><span class="u-green">of </span><span class="u-blue-zig">additional </span><span class="u-green">and </span><span class="u-blue-zig">acting Judges </span><span class="u-green">by </span><span class="u-blue-zig">the President</span>.</li>
+        <li><strong>2. Age Limit:</strong> <span class="u-blue-zig">No person </span><span class="u-green">appointed as </span><span class="u-blue-zig">an additional </span><span class="u-green">or </span><span class="u-blue-zig">acting Judge </span><span class="u-green">of </span><span class="u-blue-zig">a High Court </span><span class="u-green">shall hold office after </span><span class="u-green">attaining </span><span class="u-blue-zig">the age </span><span class="u-green">of </span><span class="u-blue-zig">sixty-two years</span>.</li>
+    </ul>
+
+    <div class="section-header">ARTICLE 224 A</div>
+    <ul>
+        <li><strong>1. Retired Judges:</strong> <span class="u-blue-zig">Appointment </span><span class="u-green">of </span><span class="u-blue-zig">retired Judges </span><span class="u-green">at </span><span class="u-blue-zig">sittings </span><span class="u-green">of </span><span class="u-blue-zig">High Courts</span>.</li>
+    </ul>
+
+    <div class="section-header">ARTICLE 226</div>
+    <ul>
+        <li><strong>1. Writ Jurisdiction:</strong> <span class="u-blue-zig">Power </span><span class="u-green">of </span><span class="u-blue-zig">High Courts </span><span class="u-green">to issue </span><span class="u-blue-zig">certain writs</span>.</li>
+    </ul>
+
+    <div class="section-header">ARTICLE 230</div>
+    <ul>
+        <li><strong>1. UT Jurisdiction:</strong> <span class="u-blue-zig">Extension </span><span class="u-green">of </span><span class="u-blue-zig">jurisdiction </span><span class="u-green">of </span><span class="u-blue-zig">High Courts </span><span class="u-green">to </span><span class="u-blue-zig">Union territories</span>.</li>
+    </ul>
+
+    <div class="section-header">ARTICLE 231</div>
+    <ul>
+        <li><strong>1. Common High Court:</strong> <span class="u-blue-zig">Establishment </span><span class="u-green">of </span><span class="u-blue-zig">a common High Court </span><span class="u-green">for </span><span class="u-blue-zig">two or more States</span>.</li>
+    </ul>
+
+    <div class="section-header">ARTICLE 233</div>
+    <ul>
+        <li><strong>1. District Judge Appointment:</strong> <span class="u-blue-zig">Appointment </span><span class="u-green">of </span><span class="u-blue-zig">district judges</span>.</li>
+        <li>
+            <strong>2. Governor's Role:</strong>
+            <span class="u-blue-zig">Appointments of persons </span><span class="u-green">to be, and </span><span class="u-blue-zig">the posting </span><span class="u-green">and </span><span class="u-blue-zig">promotion, </span><span class="u-green">of </span><span class="u-blue-zig">district judges </span><span class="u-green">in </span><span class="u-blue-zig">any State </span><span class="u-green">shall be made by </span><span class="u-blue-zig">the Governor </span><span class="u-green">of </span><span class="u-blue-zig">the State </span><span class="u-green">in consultation with </span><span class="u-blue-zig">the High Court </span><span class="u-green">exercising jurisdiction </span><span class="u-green">in relation to </span><span class="u-blue-zig">such State</span>.
+        </li>
+        <li>
+            <strong>3. Eligibility Criteria:</strong>
+            <span class="u-blue-zig">A person </span><span class="u-green">not already in </span><span class="u-blue-zig">the service </span><span class="u-green">of </span><span class="u-blue-zig">the Union </span><span class="u-green">or of </span><span class="u-blue-zig">the State </span><span class="u-green">shall only be eligible </span><span class="u-green">to be appointed </span><span class="u-blue-zig">a district judge </span><span class="u-green">if he has been for </span><span class="u-blue-zig">not less than seven years </span><span class="u-blue-zig">an advocate </span><span class="u-green">or </span><span class="u-blue-zig">a pleader </span><span class="u-green">and is recommended by </span><span class="u-blue-zig">the High Court </span><span class="u-green">for </span><span class="u-blue-zig">appointment</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 234</div>
+    <ul>
+        <li>
+            <strong>1. Judicial Service Appointment:</strong>
+            <span class="u-blue-zig">Appointments of persons </span><span class="u-green">other than </span><span class="u-blue-zig">district judges </span><span class="u-green">to </span><span class="u-blue-zig">the judicial service </span><span class="u-green">of </span><span class="u-blue-zig">a State </span><span class="u-green">shall be made by </span><span class="u-blue-zig">the Governor </span><span class="u-green">of </span><span class="u-blue-zig">the State </span><span class="u-green">in accordance with </span><span class="u-blue-zig">rules </span><span class="u-green">made by him </span><span class="u-green">in that behalf after </span><span class="u-blue-zig">consultation </span><span class="u-green">with </span><span class="u-blue-zig">the State Public Service Commission </span><span class="u-green">and with </span><span class="u-blue-zig">the High Court </span><span class="u-green">exercising jurisdiction </span><span class="u-green">in relation to </span><span class="u-blue-zig">such State</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 42</div>
+</div>
+
+</body>
+</html>

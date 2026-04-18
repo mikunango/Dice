@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH11 - Governor, AG, CAG & Union Territories | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH11- The Governor, AG, CAG &amp; Union Territories</h1>
+        <p class="subtitle">Articles 153-167 | 76, 88 | 148-152 | 165 | 239-241</p>
+    </header>
+
+    <div class="main-topic-header">The Governor & State executive</div>
+
+    <div class="section-header">ARTICLE 153</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Governor for State:</strong> <span class="u-green">There shall be </span><span class="u-blue-zig">a Governor</span> <span class="u-green">for </span><span class="u-blue-zig">each State</span>:
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Dual Appointment:</strong> <span class="u-blue-zig">Nothing in this article</span> <span class="u-green">shall prevent </span><span class="u-blue-zig">the appointment</span> <span class="u-green">of </span><span class="u-blue-zig">the same person</span> <span class="u-green">as </span><span class="u-blue-zig">Governor</span> <span class="u-green">for </span><span class="u-blue-zig">two or more States</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 154</div>
+
+    <ul>
+        <li>
+            <strong>1. Executive Power:</strong> (1) <span class="u-blue-zig">The executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">shall be vested in </span><span class="u-blue-zig">the Governor</span> <span class="u-green">and shall be exercised by </span><span class="u-blue-zig">him</span> <span class="u-green">either </span><span class="u-blue-zig">directly</span> <span class="u-green">or through </span><span class="u-blue-zig">officers subordinate to him</span> <span class="u-green">in accordance with </span><span class="u-blue-zig">this Constitution</span>.
+        </li>
+        <li>
+            <strong>2. Limitation Clause:</strong> (2) <span class="u-blue-zig">Nothing in this article</span> <span class="u-green">shall</span>—
+            <ul>
+                <li>
+                    <strong>a. Existing Law:</strong> (a) <span class="u-green">be deemed to transfer to </span><span class="u-blue-zig">the Governor</span> <span class="u-blue-zig">any functions</span> <span class="u-green">conferred by </span><span class="u-blue-zig">any existing law</span> <span class="u-green">on </span><span class="u-blue-zig">any other authority</span>; <span class="u-green">or</span>
+                </li>
+                <li>
+                    <strong>b. Legislative Power:</strong> (b) <span class="u-green">prevent </span><span class="u-blue-zig">Parliament</span> <span class="u-green">or </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">from conferring by </span><span class="u-blue-zig">law functions</span> <span class="u-green">on </span><span class="u-blue-zig">any authority</span> <span class="u-green">subordinate to </span><span class="u-blue-zig">the Governor</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 155</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Presidential Appointment:</strong> <span class="u-blue-zig">The Governor of a State</span> <span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">by </span><span class="u-blue-zig">warrant under his hand</span> <span class="u-green">and </span><span class="u-blue-zig">seal</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 156</div>
+
+    <ul>
+        <li>
+            <strong>1. Pleasure Doctrine:</strong> (1) <span class="u-blue-zig">The Governor</span> <span class="u-green">shall hold office during </span><span class="u-blue-zig">the pleasure of the President</span>.
+        </li>
+        <li>
+            <strong>2. Resignation Provision:</strong> (2) <span class="u-blue-zig">The Governor</span> <span class="u-green">may</span>, <span class="u-green">by </span><span class="u-blue-zig">writing under his hand</span> <span class="u-green">addressed to </span><span class="u-blue-zig">the President</span>, <span class="u-green">resign </span><span class="u-blue-zig">his office</span>.
+        </li>
+        <li>
+            <strong>3. Five-Year Term:</strong> (3) <span class="u-green">Subject to </span><span class="u-blue-zig">the foregoing provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this article</span>, <span class="u-blue-zig">a Governor</span> <span class="u-green">shall hold office for </span><span class="u-blue-zig">a term of five years</span> <span class="u-green">from </span><span class="u-blue-zig">the date</span> <span class="u-green">on which </span><span class="u-blue-zig">he enters upon his office</span>:
+        </li>
+        <li>
+            <strong>4. Continuation Proviso:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">a Governor</span> <span class="u-green">shall</span>, <span class="u-green">notwithstanding </span><span class="u-blue-zig">the expiration of his term</span>, <span class="u-green">continue to hold office until </span><span class="u-blue-zig">his successor</span> <span class="u-green">enters upon </span><span class="u-blue-zig">his office</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 157</div>
+
+    <div class="page-number">Page 117</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Eligibility Criteria:</strong> <span class="u-blue-zig">No person</span> <span class="u-green">shall be eligible for </span><span class="u-blue-zig">appointment as Governor</span> <span class="u-green">unless </span><span class="u-blue-zig">he</span> <span class="u-green">is </span><span class="u-blue-zig">a citizen of India</span> <span class="u-green">and has completed </span><span class="u-blue-zig">the age of thirty-five years</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 158</div>
+
+    <ul>
+        <li>
+            <strong>1. Membership Bar:</strong> (1) <span class="u-blue-zig">The Governor</span> <span class="u-green">shall not be </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">or of </span><span class="u-blue-zig">a House of the Legislature</span> <span class="u-green">of </span><span class="u-blue-zig">any State</span> <span class="u-green">specified in </span><span class="u-blue-zig">the First Schedule</span>, <span class="u-green">and if </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">or of </span><span class="u-blue-zig">a House of the Legislature</span> <span class="u-green">of </span><span class="u-blue-zig">any such State</span> <span class="u-green">be appointed </span><span class="u-blue-zig">Governor</span>, <span class="u-blue-zig">he</span> <span class="u-green">shall be deemed to have </span><span class="u-blue-zig">vacated his seat</span> <span class="u-green">in </span><span class="u-blue-zig">that House</span> <span class="u-green">on </span><span class="u-blue-zig">the date</span> <span class="u-green">on which he enters upon </span><span class="u-blue-zig">his office as Governor</span>.
+        </li>
+        <li>
+            <strong>2. Office of Profit:</strong> (2) <span class="u-blue-zig">The Governor</span> <span class="u-green">shall not hold </span><span class="u-blue-zig">any other office of profit</span>.
+        </li>
+        <li>
+            <strong>3. Emoluments &amp; Residence:</strong> (3) <span class="u-blue-zig">The Governor</span> <span class="u-green">shall be entitled without </span><span class="u-blue-zig">payment of rent</span> <span class="u-green">to </span><span class="u-blue-zig">the use</span> <span class="u-green">of </span><span class="u-blue-zig">his official residences</span> <span class="u-green">and shall be also entitled to </span><span class="u-blue-zig">such emoluments, allowances</span> <span class="u-green">and </span><span class="u-blue-zig">privileges</span> <span class="u-green">as may be determined by </span><span class="u-blue-zig">Parliament by law</span> <span class="u-green">and</span>, <span class="u-green">until </span><span class="u-blue-zig">provision in that behalf</span> <span class="u-green">is so made</span>, <span class="u-blue-zig">such emoluments, allowances</span> <span class="u-green">and </span><span class="u-blue-zig">privileges</span> <span class="u-green">as are specified in </span><span class="u-blue-zig">the Second Schedule</span>.
+        </li>
+        <li>
+            <strong>4. Allocation for States:</strong> (3A) <span class="u-green">Where </span><span class="u-blue-zig">the same person</span> <span class="u-green">is appointed as </span><span class="u-blue-zig">Governor</span> <span class="u-green">of </span><span class="u-blue-zig">two or more States</span>, <span class="u-blue-zig">the emoluments and allowances</span> <span class="u-green">payable to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">shall be allocated among </span><span class="u-blue-zig">the States</span> <span class="u-green">in </span><span class="u-blue-zig">such proportion</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may by </span><span class="u-blue-zig">order determine</span>.
+        </li>
+        <li>
+            <strong>5. Non-Diminution Clause:</strong> (4) <span class="u-blue-zig">The emoluments and allowances</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor</span> <span class="u-green">shall not be diminished during </span><span class="u-blue-zig">his term of office</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 159</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Oath of Office:</strong> <span class="u-blue-zig">Every Governor</span> <span class="u-green">and </span><span class="u-blue-zig">every person</span> <span class="u-green">discharging </span><span class="u-blue-zig">the functions of the Governor</span> <span class="u-green">shall</span>, <span class="u-green">before entering upon </span><span class="u-blue-zig">his office</span>, <span class="u-green">make and subscribe in </span><span class="u-blue-zig">the presence</span> <span class="u-green">of </span><span class="u-blue-zig">the Chief Justice</span> <span class="u-green">of </span><span class="u-blue-zig">the High Court</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 160</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Contingency Provision:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">may make </span><span class="u-blue-zig">such provision</span> <span class="u-green">as he thinks fit for </span><span class="u-blue-zig">the discharge</span> <span class="u-green">of </span><span class="u-blue-zig">the functions of the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">in </span><span class="u-blue-zig">any contingency</span> <span class="u-green">not provided for in </span><span class="u-blue-zig">this Chapter</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 161</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Pardoning Power:</strong> <span class="u-blue-zig">The Governor of a State</span> <span class="u-green">shall have the power to </span><span class="u-blue-zig">grant pardons, reprieves</span>, <span class="u-blue-zig">respites</span> <span class="u-green">or </span><span class="u-blue-zig">remissions of punishment</span> <span class="u-green">or to </span><span class="u-blue-zig">suspend, remit</span> <span class="u-green">or </span><span class="u-blue-zig">commute the sentence</span> <span class="u-green">of </span><span class="u-blue-zig">any person</span> <span class="u-green">convicted of </span><span class="u-blue-zig">any offence</span> <span class="u-green">against </span><span class="u-blue-zig">any law</span> <span class="u-blue-zig">Relating to a matter</span> <span class="u-green">to which </span><span class="u-blue-zig">the executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the State extends</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 171 (5)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Nominated Members:</strong> <span class="u-blue-zig">The members</span> <span class="u-green">to be nominated by </span><span class="u-blue-zig">the Governor</span> <span class="u-green">under </span><span class="u-blue-zig">sub-clause (e)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (3)</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">persons</span> <span class="u-green">having </span><span class="u-blue-zig">special knowledge</span> <span class="u-green">or </span><span class="u-blue-zig">practical experience</span> <span class="u-green">in respect of </span><span class="u-blue-zig">such matters</span> <span class="u-green">as </span><span class="u-blue-zig">the following</span>, <span class="u-green">namely</span>:—
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Subject Areas:</strong> <span class="u-blue-zig">Literature</span>, <span class="u-blue-zig">science</span>, <span class="u-blue-zig">art</span>, <span class="u-blue-zig">co-operative movement</span> <span class="u-green">and </span><span class="u-blue-zig">social service</span>
+    </p>
+
+    <div class="page-number">Page 118</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 174</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Legislative Sessions:</strong> <span class="u-blue-zig">Sessions of the State Legislature</span>, <span class="u-blue-zig">prorogation</span> <span class="u-green">and </span><span class="u-blue-zig">dissolution</span> <span class="u-green">by </span><span class="u-blue-zig">the Governor</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 175</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Governor's Address:</strong> <span class="u-blue-zig">Right of Governor</span> <span class="u-green">to </span><span class="u-blue-zig">address</span> <span class="u-green">and </span><span class="u-blue-zig">send messages</span> <span class="u-green">to </span><span class="u-blue-zig">the House or Houses</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 176</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Special Address:</strong> <span class="u-blue-zig">Special address</span> <span class="u-green">by </span><span class="u-blue-zig">the Governor</span> <span class="u-green">in </span><span class="u-blue-zig">the House or Houses</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 200</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Assent to Bills:</strong> <span class="u-blue-zig">Assent to Bills</span> -
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Bill Presentation:</strong> <span class="u-green">When </span><span class="u-blue-zig">a Bill</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">or</span>, <span class="u-green">in the case of </span><span class="u-blue-zig">a State</span> <span class="u-green">having </span><span class="u-blue-zig">a Legislative Council</span>, <span class="u-green">has been passed by </span><span class="u-blue-zig">both Houses</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of the State</span>, <span class="u-green">it shall be presented to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">and </span><span class="u-blue-zig">the Governor</span> <span class="u-green">shall declare either that </span><span class="u-blue-zig">he assents to the Bill</span> <span class="u-green">or that </span><span class="u-blue-zig">he withholds assent</span> <span class="u-green">therefrom or that </span><span class="u-blue-zig">he reserves the Bill</span> <span class="u-green">for </span><span class="u-blue-zig">the consideration</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>
+    </p>
+
+    <div class="section-header">ARTICLE 201</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Non-Money Bill:</strong> <span class="u-green">Provided that</span>, <span class="u-green">where </span><span class="u-blue-zig">the Bill</span> <span class="u-green">is not </span><span class="u-blue-zig">a Money Bill</span>, <span class="u-blue-zig">the President</span> <span class="u-green">may direct </span><span class="u-blue-zig">the Governor</span> <span class="u-green">to return </span><span class="u-blue-zig">the Bill</span> <span class="u-green">to </span><span class="u-blue-zig">the House</span> <span class="u-green">or</span>, <span class="u-green">as the case may be</span>, <span class="u-blue-zig">the Houses</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">together with </span><span class="u-blue-zig">such a message</span> <span class="u-green">as is mentioned in </span><span class="u-blue-zig">the first proviso</span> <span class="u-green">to </span><span class="u-blue-zig">article 200</span> <span class="u-green">and</span>, <span class="u-green">when </span><span class="u-blue-zig">a Bill</span> <span class="u-green">is so returned</span>, <span class="u-blue-zig">the House or Houses</span> <span class="u-green">shall reconsider </span><span class="u-blue-zig">it accordingly</span> <span class="u-green">within </span><span class="u-blue-zig">a period of six months</span> <span class="u-green">from </span><span class="u-blue-zig">the date of receipt</span> <span class="u-green">of </span><span class="u-blue-zig">such message</span> <span class="u-green">and</span>, <span class="u-green">if it is again passed by </span><span class="u-blue-zig">the House or Houses</span> <span class="u-green">with or without </span><span class="u-blue-zig">amendment</span>, <span class="u-green">it shall be presented again to </span><span class="u-blue-zig">the President</span> <span class="u-green">for </span><span class="u-blue-zig">his consideration</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 202</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Financial Statement:</strong> <span class="u-blue-zig">Annual financial statement</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 213</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Ordinance Power:</strong> <span class="u-blue-zig">Power of Governor</span> <span class="u-green">to </span><span class="u-blue-zig">promulgate Ordinances</span> <span class="u-green">during </span><span class="u-blue-zig">recess of Legislature</span>..
+    </p>
+
+    <div class="quote-box">
+        <span class="u-green">Has </span><span class="u-blue-zig">the Governor</span> <span class="u-green">been acting more of </span><span class="u-blue-zig">an 'agent of the centre'</span> <span class="u-green">rather than being </span><span class="u-blue-zig">the 'constitutional head of state'</span>.
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Rajamannar Committee:</strong> <span class="u-red-zig">The Rajamannar Committee</span> <span class="u-green">emphasised that </span><span class="u-blue-zig">the governor of the state</span> <span class="u-green">should not consider himself as </span><span class="u-blue-zig">an agent of the centre</span> <span class="u-green">but play his role as </span><span class="u-blue-zig">the constitutional head</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Cooperative Federalism:</strong> <span class="u-blue-zig">The Position of the Governor</span> <span class="u-green">is </span><span class="u-blue-zig">controversial</span> <span class="u-green">in light of </span><span class="u-blue-zig">emergence of concept</span> <span class="u-green">of </span><span class="u-blue-zig">cooperative federalism</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Post-Election Controversy:</strong> <span class="u-blue-zig">The issue</span> <span class="u-green">has recently cropped up over </span><span class="u-blue-zig">controversial role of Governor</span> <span class="u-green">in </span><span class="u-blue-zig">post-election scenario</span> <span class="u-green">in </span><span class="u-red-zig">Maharashtra</span> <span class="u-green">and </span><span class="u-red-zig">Karnataka</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Centre's Puppet:</strong> <span class="u-blue-zig">Governor</span> <span class="u-green">is being criticised for being </span><span class="u-blue-zig">a puppet</span> <span class="u-green">of </span><span class="u-blue-zig">central government</span> <span class="u-green">as </span><span class="u-blue-zig">agent of centre</span> <span class="u-green">than being </span><span class="u-blue-zig">the constitutional head</span> <span class="u-green">of </span><span class="u-blue-zig">state</span>.
+    </p>
+
+    <div class="page-number">Page 119</div>
+</div>
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. President's Rule Misuse:</strong> <span class="u-blue-zig">Imposition of President's Rule</span> <span class="u-green">under </span><span class="u-blue-zig">Article 356</span> <span class="u-green">was made to deal with </span><span class="u-blue-zig">serious situations</span> <span class="u-green">and to be used as </span><span class="u-blue-zig">a last resort</span>.
+            <ul>
+                <li>
+                    <strong>a. Majority Dismissal:</strong> <span class="u-green">Dismissing </span><span class="u-blue-zig">a State's government</span> <span class="u-green">having </span><span class="u-blue-zig">majority in the Assembly</span>
+                </li>
+                <li>
+                    <strong>b. Partisan Dissolution:</strong> <span class="u-green">Suspending and dissolving </span><span class="u-blue-zig">the Assembly</span> <span class="u-green">in </span><span class="u-blue-zig">a partisan consideration</span>.
+                </li>
+                <li>
+                    <strong>c. Indecisive Verdict:</strong> <span class="u-green">Not giving </span><span class="u-blue-zig">a chance</span> <span class="u-green">to </span><span class="u-blue-zig">the opposition</span> <span class="u-green">to form </span><span class="u-blue-zig">government</span> <span class="u-green">when </span><span class="u-blue-zig">electoral verdict</span> <span class="u-green">is </span><span class="u-blue-zig">indecisive</span>.
+                </li>
+                <li>
+                    <strong>d. Denied Opportunity:</strong> <span class="u-green">Denying </span><span class="u-blue-zig">opportunity</span> <span class="u-green">to </span><span class="u-blue-zig">the opposition</span> <span class="u-green">to form </span><span class="u-blue-zig">a government</span> <span class="u-green">when </span><span class="u-blue-zig">a ministry resigned</span> <span class="u-green">in anticipation of </span><span class="u-blue-zig">a defeat</span> <span class="u-green">on </span><span class="u-blue-zig">the floor of the House</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Para-Military Forces:</strong> <span class="u-blue-zig">Many times the Centre</span> <span class="u-green">sends </span><span class="u-blue-zig">para-military forces</span> <span class="u-green">into </span><span class="u-blue-zig">the States</span> <span class="u-green">to maintain </span><span class="u-blue-zig">law and order</span> <span class="u-green">without consulting </span><span class="u-blue-zig">the State's Government</span>, <span class="u-green">and sometimes even against </span><span class="u-blue-zig">the wishes</span> <span class="u-green">of </span><span class="u-blue-zig">the concerned State</span>.
+        </li>
+        <li>
+            <strong>3. Bill Reservation:</strong> <span class="u-blue-zig">The power of a Governor</span> <span class="u-green">to reserve </span><span class="u-blue-zig">a bill</span> <span class="u-green">for </span><span class="u-blue-zig">the assent of the President</span>, <span class="u-green">is </span><span class="u-blue-zig">another cause of tension</span>.
+        </li>
+        <li>
+            <strong>4. Partisan Preference:</strong> <span class="u-blue-zig">Governors</span> <span class="u-green">are not shy of revealing </span><span class="u-blue-zig">their partisan preference</span>. <span class="u-green">Recently</span>, <span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-red-zig">Rajasthan</span> <span class="u-green">has been charged with </span><span class="u-blue-zig">the violation</span> <span class="u-green">of </span><span class="u-blue-zig">the model code of conduct</span>.
+        </li>
+        <li>
+            <strong>5. Removal &amp; Bias:</strong> <span class="u-green">There have been </span><span class="u-blue-zig">instances of removal</span> <span class="u-green">of </span><span class="u-blue-zig">governors</span> <span class="u-green">in </span><span class="u-blue-zig">States</span> <span class="u-green">with </span><span class="u-blue-zig">Government change</span> <span class="u-green">at </span><span class="u-blue-zig">the centre</span>. <span class="u-green">Thus </span><span class="u-blue-zig">governors</span> <span class="u-blue-zig">most of the time</span> <span class="u-green">due to </span><span class="u-blue-zig">fear of removal</span> <span class="u-green">favour </span><span class="u-blue-zig">political party in centre</span> <span class="u-green">and work as </span><span class="u-blue-zig">agent for them</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SUGGESTION</div>
+
+    <ul>
+        <li>
+            <strong>1. State Cabinet Approval:</strong> <span class="u-blue-zig">The appointment</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor</span> <span class="u-green">should be made with </span><span class="u-blue-zig">the approval</span> <span class="u-green">of </span><span class="u-blue-zig">the State Cabinet</span>. (<span class="u-red-zig">Sarkaria Commission</span>)
+        </li>
+        <li>
+            <strong>2. Post-Retirement Bar:</strong> <span class="u-blue-zig">A person</span> <span class="u-green">retiring from </span><span class="u-blue-zig">the office of Governor</span> <span class="u-green">should not be eligible to </span><span class="u-blue-zig">any other office</span> <span class="u-green">other than </span><span class="u-blue-zig">the President</span> <span class="u-green">and </span><span class="u-blue-zig">the Vice President of India</span>.
+        </li>
+        <li>
+            <strong>3. Judicial Guidance:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">should lay down </span><span class="u-blue-zig">the law</span> <span class="u-green">on how </span><span class="u-blue-zig">the Governor</span> <span class="u-green">ought to act when </span><span class="u-blue-zig">an election</span> <span class="u-green">yields </span><span class="u-blue-zig">a fractured verdict</span>.
+        </li>
+        <li>
+            <strong>4. Article 356 Reform:</strong> <span class="u-blue-zig">Changes in Article 356</span> <span class="u-green">with a view to </span><span class="u-blue-zig">preventing</span> <span class="u-blue-zig">its easy and frequent use</span> <span class="u-green">by </span><span class="u-blue-zig">the Central Government</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Code of Conduct:</strong> <span class="u-green">In order to enable </span><span class="u-blue-zig">the Governor</span> <span class="u-green">to successfully discharge </span><span class="u-blue-zig">his functions</span> <span class="u-green">under </span><span class="u-blue-zig">the constitution</span>, <span class="u-blue-zig">an agreed 'Code of Conduct'</span> <span class="u-green">approved by </span><span class="u-blue-zig">the state governments</span>, <span class="u-blue-zig">the central government</span>, <span class="u-blue-zig">the parliament</span>, <span class="u-green">and </span><span class="u-blue-zig">the state legislatures</span> <span class="u-green">should be evolved</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>5. Sardar Patel's View:</strong> <span class="u-red-zig">Sardar Patel</span> <span class="u-green">stated that </span><span class="u-green">keeping in view </span><span class="u-blue-zig">the dignity of this post</span>, <span class="u-green">it is necessary that </span><span class="u-blue-zig">the governor</span> <span class="u-green">should hold </span><span class="u-blue-zig">elections</span> <span class="u-green">on the basis of </span><span class="u-blue-zig">adult suffrage</span>.
+        </li>
+        <li>
+            <strong>6. Ambedkar's Assertion:</strong> <span class="u-red-zig">B.R.Ambedkar</span> <span class="u-green">asserted that </span><span class="u-blue-zig">the governor</span> <span class="u-green">does not have </span><span class="u-blue-zig">any work</span> <span class="u-green">to be </span><span class="u-blue-zig">executes</span> <span class="u-green">on the basis of </span><span class="u-blue-zig">discretion</span> <span class="u-green">or </span><span class="u-blue-zig">personal decisions</span> <span class="u-green">and thus </span><span class="u-blue-zig">the election system</span> <span class="u-green">will not be </span><span class="u-blue-zig">profitable</span> <span class="u-green">in terms of </span><span class="u-blue-zig">time, convenience and money</span>.
+        </li>
+        <li>
+            <strong>7. Punchhi Commission:</strong> <span class="u-blue-zig">The</span> <span class="u-red-zig">"Punchhi commission"</span> <span class="u-green">recommended that </span><span class="u-blue-zig">these Articles 355 &amp; 356</span> <span class="u-green">be amended</span>. <span class="u-green">It sought to protect </span><span class="u-blue-zig">the interests of the States</span> <span class="u-green">by trying to curb </span><span class="u-blue-zig">their misuse</span> <span class="u-green">by </span><span class="u-blue-zig">the Centre</span>.
+        </li>
+        <li>
+            <strong>8. Sarkaria Commission:</strong> <span class="u-red-zig">The Sarkaria Commission</span> (<span class="u-red-zig">1988</span>) <span class="u-green">recommended that </span><span class="u-blue-zig">Article 356</span> <span class="u-green">should be used in </span><span class="u-blue-zig">very rare cases</span> <span class="u-green">when it becomes </span><span class="u-blue-zig">unavoidable</span> <span class="u-green">to restore </span><span class="u-blue-zig">the breakdown</span> <span class="u-green">of </span><span class="u-blue-zig">constitutional machinery</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 120</div>
+</div>
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>9. Nabam Rebia Case:</strong> <span class="u-blue-zig">Supreme Court</span> <span class="u-green">gave judgement in </span><span class="u-red-zig">the Nabam Rebia case</span> (<span class="u-red-zig">2016</span>) <span class="u-green">that </span><span class="u-blue-zig">the exercise</span> <span class="u-green">of </span><span class="u-blue-zig">Governor's discretion</span> <span class="u-blue-zig">Article 163</span> <span class="u-green">is </span><span class="u-blue-zig">limited</span> <span class="u-green">and </span><span class="u-blue-zig">his choice of action</span> <span class="u-green">should not be </span><span class="u-blue-zig">arbitrary or fanciful</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Floor Test</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Provisions:</strong> <span class="u-blue-zig">The Constitutional Provisions</span> <span class="u-green">related to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">in calling for </span><span class="u-blue-zig">a Floor Test</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Confidence Motion:</strong> <span class="u-blue-zig">A floor test</span> <span class="u-green">is </span><span class="u-blue-zig">a confidence motion</span> <span class="u-green">for or against </span><span class="u-blue-zig">the government in-house</span>. <span class="u-green">This is done to ensure </span><span class="u-green">whether </span><span class="u-blue-zig">the government in position</span> <span class="u-green">enjoys </span><span class="u-blue-zig">the support</span> <span class="u-green">of </span><span class="u-blue-zig">the majority legislature</span>. <span class="u-red-zig">Shivraj Singh Chouhan</span> <span class="u-blue-zig">case 2020</span> <span class="u-green">is </span><span class="u-blue-zig">one of the most prominent</span> <span class="u-green">and </span><span class="u-blue-zig">recent case laws</span> <span class="u-green">regarding </span><span class="u-blue-zig">a Governor</span> <span class="u-green">ordering </span><span class="u-blue-zig">a floor test</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Summoning Power:</strong> <span class="u-green">As per </span><span class="u-blue-zig">Article 174</span> <span class="u-blue-zig">the Governor</span> <span class="u-green">can summon </span><span class="u-blue-zig">the floor test</span> <span class="u-green">when he feels that </span><span class="u-blue-zig">the sitting Chief Minister</span> <span class="u-green">has lost </span><span class="u-blue-zig">the confidence</span> <span class="u-green">of </span><span class="u-blue-zig">the majority</span>. <span class="u-green">But </span><span class="u-blue-zig">the Court</span> <span class="u-green">also added that </span><span class="u-blue-zig">this exceptional power</span> <span class="u-green">should be handled with </span><span class="u-blue-zig">proper care and caution</span>. <span class="u-blue-zig">The Governor</span> <span class="u-green">is </span><span class="u-blue-zig">an appointee of the President</span> <span class="u-green">but does not represent </span><span class="u-green">either </span><span class="u-blue-zig">a political ideology</span> <span class="u-green">or </span><span class="u-blue-zig">a political view</span>. <span class="u-green">Therefore</span>, <span class="u-blue-zig">the Governor</span> <span class="u-green">is expected to discharge </span><span class="u-blue-zig">the role</span> <span class="u-green">of </span><span class="u-blue-zig">a constitutional statesman</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Continuing Power:</strong> <span class="u-blue-zig">The Governor's right</span> <span class="u-green">to ask for </span><span class="u-blue-zig">a floor test</span> <span class="u-green">does not end when </span><span class="u-blue-zig">a State government</span> <span class="u-green">takes office following </span><span class="u-blue-zig">elections</span>, <span class="u-green">but it continues during </span><span class="u-blue-zig">its term</span>. <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">has ruled that </span><span class="u-blue-zig">the Governor's power</span> <span class="u-green">of </span><span class="u-blue-zig">trust vote</span> <span class="u-green">has no bearing on </span><span class="u-blue-zig">any pending disqualification</span> <span class="u-blue-zig">proceedings</span> <span class="u-green">before </span><span class="u-blue-zig">the Speaker</span>.
+    </p>
+
+    <div class="main-topic-header">CHIEF MINISTER</div>
+
+    <div class="section-header">Article 163</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Aid &amp; Advise:</strong> <span class="u-blue-zig">Article 163</span> <span class="u-green">of </span><span class="u-blue-zig">Indian constitution</span> <span class="u-green">talks about that </span><span class="u-green">there should be </span><span class="u-blue-zig">a chief minister</span> <span class="u-green">along with </span><span class="u-blue-zig">council of ministers</span> <span class="u-green">"to aid and advise </span><span class="u-blue-zig">the governor</span> <span class="u-green">in the exercise of </span><span class="u-blue-zig">his functions"</span>. <span class="u-blue-zig">article 163(1)</span>
+    </p>
+
+    <div class="section-header">Article 164</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. CM Appointment:</strong> <span class="u-blue-zig">The Chief minister</span> <span class="u-green">is done by </span><span class="u-blue-zig">the governor</span> <span class="u-green">as per </span><span class="u-blue-zig">Article 164</span> <span class="u-green">of </span><span class="u-blue-zig">Indian constitution</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Pleasure of Governor:</strong> <span class="u-blue-zig">Article 164(1)</span> <span class="u-green">also mentions that </span><span class="u-blue-zig">the Chief minister</span> <span class="u-green">and </span><span class="u-blue-zig">the other ministers</span> <span class="u-green">shall hold </span><span class="u-blue-zig">the office</span> <span class="u-green">during </span><span class="u-blue-zig">the pleasure of the governor</span>.
+        </li>
+        <li>
+            <strong>2. Tribal Welfare:</strong> <span class="u-green">provided that in </span><span class="u-red-zig">Bihar</span>, <span class="u-red-zig">Madhya Pradesh</span>, <span class="u-green">and </span><span class="u-red-zig">Orissa</span>, <span class="u-green">there have to be </span><span class="u-blue-zig">a Minister in charge</span> <span class="u-green">responsible for </span><span class="u-blue-zig">tribal welfare</span>, <span class="u-green">who may additionally be </span><span class="u-green">responsible for </span><span class="u-blue-zig">enlisted caste</span> <span class="u-green">and </span><span class="u-blue-zig">backward class welfare</span> <span class="u-green">or </span><span class="u-blue-zig">any other duties</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. B.R. Kapoor Case:</strong> <span class="u-green">In the case of </span><span class="u-red-zig">B.R. Kapoor</span> <span class="u-blue-zig">case</span> <span class="u-blue-zig">the Supreme Court</span> <span class="u-green">said that </span><span class="u-blue-zig">the person</span> <span class="u-green">convicted of </span><span class="u-blue-zig">any criminal offence</span> <span class="u-green">or has been sentenced to </span><span class="u-blue-zig">punishment</span> <span class="u-green">of </span><span class="u-blue-zig">more than 2 years</span> <span class="u-green">of </span><span class="u-blue-zig">imprisonment</span> <span class="u-green">and also is been </span><span class="u-blue-zig">disqualified</span> <span class="u-green">by </span><span class="u-blue-zig">the election commission</span> <span class="u-green">to contest </span><span class="u-blue-zig">elections</span> <span class="u-green">under </span><span class="u-blue-zig">the Representation</span> <span class="u-green">of </span><span class="u-blue-zig">People's Act</span> ; <span class="u-green">cannot be appointed as </span><span class="u-blue-zig">the Chief Minister</span>, <span class="u-green">as it will be violative of </span><span class="u-blue-zig">Article 164(4)</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Mahabir Prasad Case:</strong> <span class="u-green">In </span><span class="u-red-zig">Mahabir Prasad Sharma</span> <span class="u-blue-zig">case</span> <span class="u-blue-zig">the High Court</span> <span class="u-green">said that </span><span class="u-blue-zig">the exercise</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor's pleasure</span> <span class="u-green">under </span><span class="u-blue-zig">Article 164(1)</span> <span class="u-green">is not fettered by </span><span class="u-blue-zig">any condition or restriction</span>, <span class="u-green">and </span><span class="u-blue-zig">the withdrawal</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor's pleasure</span> <span class="u-green">is </span><span class="u-blue-zig">a matter entirely</span> <span class="u-green">in </span><span class="u-blue-zig">the discretion</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 164(1)(a)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Ministers Limit:</strong> <span class="u-green">mentions that </span><span class="u-blue-zig">a total number of ministers</span> <span class="u-green">in </span><span class="u-blue-zig">a state</span> <span class="u-green">shall not exceed </span><span class="u-blue-zig">15% limit</span> <span class="u-green">of </span><span class="u-blue-zig">the total number of ministers</span> <span class="u-green">in </span><span class="u-blue-zig">the state</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 164(1)(b)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. 91st Amendment:</strong> <span class="u-blue-zig">the Act</span> <span class="u-green">was added by </span><span class="u-blue-zig">the 91st Amendment</span>, <span class="u-green">which refers to </span><span class="u-blue-zig">the disqualification</span> <span class="u-green">of </span><span class="u-blue-zig">the Minister of state</span>.
+    </p>
+
+    <div class="page-number">Page 121</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 164(2)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Collective Responsibility:</strong> <span class="u-blue-zig">The Council of Ministers</span> <span class="u-green">is </span><span class="u-blue-zig">jointly accountable</span> <span class="u-green">to </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 164(3)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Oath Administration:</strong> <span class="u-green">Before </span><span class="u-blue-zig">the Minister</span> <span class="u-green">takes office</span>, <span class="u-blue-zig">the Governor</span> <span class="u-green">shall administer to </span><span class="u-blue-zig">him</span> <span class="u-blue-zig">the oaths</span> <span class="u-green">of </span><span class="u-blue-zig">the concerned office</span> <span class="u-green">and of </span><span class="u-blue-zig">secretary</span> <span class="u-green">based on </span><span class="u-blue-zig">the forms set out</span> <span class="u-green">for </span><span class="u-blue-zig">this purpose</span> <span class="u-green">in </span><span class="u-blue-zig">the Third Schedule</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 164(4)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Six-Month Rule:</strong> <span class="u-blue-zig">This clause</span> <span class="u-green">deals with </span><span class="u-blue-zig">the provision</span> <span class="u-green">which states that </span><span class="u-blue-zig">a minister</span> <span class="u-green">who has not been </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">for </span><span class="u-blue-zig">six consecutive months</span> <span class="u-green">will cease to be </span><span class="u-blue-zig">a minister</span> <span class="u-green">at the end of </span><span class="u-blue-zig">that period</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 164(5)</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Salary Determination:</strong> <span class="u-blue-zig">The salaries and allowances</span> <span class="u-green">of </span><span class="u-blue-zig">the Minister</span> <span class="u-green">shall be determined by </span><span class="u-blue-zig">law</span> <span class="u-green">from time to time by </span><span class="u-blue-zig">the State Legislature</span>, <span class="u-green">and until </span><span class="u-blue-zig">the legislature of the state</span> <span class="u-green">so determines</span>, <span class="u-green">shall be as set forth in </span><span class="u-blue-zig">the Second Schedule</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 167</div>
+
+    <ul>
+        <li>
+            <strong>1. Communication Duty:</strong> <span class="u-green">It states that it is </span><span class="u-blue-zig">the duty</span> <span class="u-green">of </span><span class="u-blue-zig">the Chief Minister</span> <span class="u-green">to communicate to </span><span class="u-blue-zig">the governor of the states</span> <span class="u-green">about </span><span class="u-blue-zig">the decisions taken</span> <span class="u-green">by </span><span class="u-blue-zig">the council of ministers</span> <span class="u-green">in relation to </span><span class="u-blue-zig">the administration</span> <span class="u-green">of </span><span class="u-blue-zig">the state affairs</span> <span class="u-green">and </span><span class="u-blue-zig">the legislation proposals</span>.
+        </li>
+        <li>
+            <strong>2. Council Reconsideration:</strong> <span class="u-green">It is also </span><span class="u-blue-zig">the duty</span> <span class="u-green">of </span><span class="u-blue-zig">the Chief minister</span>, <span class="u-green">as directed by </span><span class="u-blue-zig">the Governor</span> <span class="u-green">to ask </span><span class="u-blue-zig">the Council</span> <span class="u-green">to consider </span><span class="u-blue-zig">the decision of the minister</span> <span class="u-green">whose </span><span class="u-blue-zig">decision</span> <span class="u-green">has not been considered on </span><span class="u-blue-zig">matter</span> <span class="u-green">on which </span><span class="u-blue-zig">that minister</span> <span class="u-green">has given </span><span class="u-blue-zig">his opinion</span>.
+        </li>
+        <li>
+            <strong>3. Prorogation &amp; Summon:</strong> <span class="u-blue-zig">The Chief minister</span> <span class="u-green">can also advice </span><span class="u-blue-zig">the Governor</span> <span class="u-green">to </span><span class="u-blue-zig">prorogue</span> <span class="u-green">or </span><span class="u-blue-zig">summon the session</span> <span class="u-green">of </span><span class="u-blue-zig">the state legislature</span>.
+        </li>
+        <li>
+            <strong>4. Assembly Dissolution:</strong> <span class="u-blue-zig">The Legislative assembly</span> <span class="u-green">can be dissolved any time at </span><span class="u-blue-zig">the CM's recommendation</span> <span class="u-green">to </span><span class="u-blue-zig">the Governor</span>.
+        </li>
+        <li>
+            <strong>5. Policy Announcement:</strong> <span class="u-blue-zig">All government policies</span> <span class="u-green">are announced by </span><span class="u-blue-zig">the Chief minister</span> <span class="u-green">on </span><span class="u-blue-zig">the floor of the house</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Planning Board:</strong> <span class="u-green">He is </span><span class="u-blue-zig">the Chairman</span> <span class="u-green">of </span><span class="u-blue-zig">the State's Planning Board</span> <span class="u-green">and also by </span><span class="u-blue-zig">rotation</span> <span class="u-green">serves as </span><span class="u-blue-zig">the Vice-chairman</span> <span class="u-green">of </span><span class="u-blue-zig">the concerned zonal council</span>, <span class="u-green">for </span><span class="u-blue-zig">the term of one year</span> <span class="u-green">at </span><span class="u-blue-zig">a time</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>6. Inter State Council:</strong> <span class="u-green">He is </span><span class="u-blue-zig">the chief spokesman</span> <span class="u-green">of </span><span class="u-blue-zig">the state legislature</span> <span class="u-green">and is also </span><span class="u-blue-zig">the member</span> <span class="u-green">of </span><span class="u-blue-zig">Prime Minister's</span> <span class="u-blue-zig">Inter State Council</span> <span class="u-green">and </span><span class="u-blue-zig">the Governing Council</span> <span class="u-green">of </span><span class="u-blue-zig">NITI Aayog</span>.
+        </li>
+        <li>
+            <strong>7. Political Head:</strong> <span class="u-green">He is known as </span><span class="u-blue-zig">the political head</span> <span class="u-green">of </span><span class="u-blue-zig">the services</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 122</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="main-topic-header">The Attorney-General for India</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Article Reference:</strong> ARTICLE - 76
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. CAG Reference:</strong> COMPTROLLER AND AUDITOR-GENERAL OF INDIA
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. CAG Articles:</strong> ARTICLE - 148 - 152
+    </p>
+
+    <div class="section-header">ARTICLE 76</div>
+
+    <ul>
+        <li>
+            <strong>1. Appointment Qualification:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">shall appoint </span><span class="u-blue-zig">a person</span> <span class="u-green">who is qualified to be </span><span class="u-blue-zig">appointed</span> <span class="u-blue-zig">a Judge of the Supreme Court</span> <span class="u-green">to be </span><span class="u-blue-zig">Attorney-General for India</span>.
+        </li>
+        <li>
+            <strong>2. Legal Advisory Duty:</strong> (2) <span class="u-green">It shall be </span><span class="u-blue-zig">the duty</span> <span class="u-green">of </span><span class="u-blue-zig">the Attorney-General</span> <span class="u-green">to give </span><span class="u-blue-zig">advice</span> <span class="u-green">to </span><span class="u-blue-zig">the Government of India</span> <span class="u-green">upon </span><span class="u-blue-zig">such legal matters</span>, <span class="u-green">and to perform </span><span class="u-blue-zig">such other duties</span> <span class="u-green">of </span><span class="u-blue-zig">a legal character</span>, <span class="u-green">as may from time to time be </span><span class="u-blue-zig">referred or assigned</span> <span class="u-green">to </span><span class="u-blue-zig">him</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span>, <span class="u-green">and to discharge </span><span class="u-blue-zig">the functions</span> <span class="u-green">conferred on him by or under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">or </span><span class="u-blue-zig">any other law</span> <span class="u-green">for the time being in force</span>.
+        </li>
+        <li>
+            <strong>3. Right of Audience:</strong> (3) <span class="u-green">In the performance of </span><span class="u-blue-zig">his duties</span> <span class="u-blue-zig">the Attorney-General</span> <span class="u-green">shall have </span><span class="u-blue-zig">right of audience</span> <span class="u-green">in </span><span class="u-blue-zig">all courts</span> <span class="u-green">in </span><span class="u-blue-zig">the territory of India</span>.
+        </li>
+        <li>
+            <strong>4. Tenure &amp; Remuneration:</strong> (4) <span class="u-blue-zig">The Attorney-General</span> <span class="u-green">shall hold office during </span><span class="u-blue-zig">the pleasure of the President</span>, <span class="u-green">and shall receive </span><span class="u-blue-zig">such remuneration</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may determine</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 88</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Parliamentary Rights:</strong> <span class="u-blue-zig">The Attorney-General of India</span> <span class="u-green">shall have the right to </span><span class="u-blue-zig">speak in</span>, <span class="u-green">and </span><span class="u-blue-zig">take part</span> <span class="u-green">in </span><span class="u-blue-zig">the proceedings</span>, <span class="u-green">of </span><span class="u-blue-zig">either House</span>, <span class="u-blue-zig">any joint sitting</span> <span class="u-green">of </span><span class="u-blue-zig">the Houses</span>, <span class="u-green">and </span><span class="u-blue-zig">any committee of Parliament</span> <span class="u-green">but shall not by virtue of </span><span class="u-blue-zig">this article</span> <span class="u-green">be entitled to </span><span class="u-blue-zig">vote</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Parliamentary Privileges:</strong> <span class="u-green">He enjoys </span><span class="u-blue-zig">all the privileges</span> <span class="u-green">and </span><span class="u-blue-zig">immunities</span> <span class="u-green">that are available to </span><span class="u-blue-zig">a member of parliament</span>.
+        </li>
+        <li>
+            <strong>2. Decisive Vote:</strong> <span class="u-green">Cast </span><span class="u-blue-zig">decisive vote</span> <span class="u-green">in </span><span class="u-blue-zig">President election</span>.
+        </li>
+        <li>
+            <strong>3. Advisory Restriction:</strong> <span class="u-green">He should not </span><span class="u-blue-zig">advise</span> <span class="u-green">or </span><span class="u-blue-zig">hold a brief</span> <span class="u-green">against </span><span class="u-blue-zig">the Government of India</span>.
+        </li>
+        <li>
+            <strong>4. Criminal Defence Bar:</strong> <span class="u-green">He should not </span><span class="u-blue-zig">defend accused persons</span> <span class="u-green">in </span><span class="u-blue-zig">criminal cases</span> <span class="u-green">without </span><span class="u-blue-zig">the permission</span> <span class="u-green">of </span><span class="u-blue-zig">the government of India</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 123</div>
+</div>
+
+<!-- Chapter 11 Part 2: Pages 124-129 (Continuation — no chapter header) -->
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Solicitor Generals:</strong> <span class="u-green">Assisted by </span><span class="u-blue-zig">2 solicitor generals</span> (<span class="u-green">appointed for </span><span class="u-blue-zig">3 yrs</span>) &amp; <span class="u-blue-zig">4 additional solicitor generals</span> (<span class="u-green">appointed for </span><span class="u-blue-zig">3 yrs</span>), <span class="u-blue-zig">eligible for re-appointment</span>, <span class="u-green">for </span><span class="u-blue-zig">a further term</span> <span class="u-green">not exceeding </span><span class="u-blue-zig">three years</span>.
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-blue-zig">The Attorney-General</span> <span class="u-green">is </span><span class="u-blue-zig">the principal legal adviser</span> <span class="u-green">and </span><span class="u-blue-zig">lawyer</span> <span class="u-green">of </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-red-zig">India</span>.
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Pivotal Institution:</strong> <span class="u-blue-zig">The Attorney General</span> <span class="u-green">ought to be </span><span class="u-blue-zig">a pivotal institution</span> <span class="u-green">that helps </span><span class="u-blue-zig">the government</span> <span class="u-green">act in accordance with </span><span class="u-blue-zig">the rule of law</span>. <span class="u-green">He is appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">under </span><span class="u-blue-zig">Article 76</span> <span class="u-green">of </span><span class="u-blue-zig">Indian Constitution</span> <span class="u-green">should be qualified to be appointed </span><span class="u-blue-zig">a judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Legal Assistance:</strong> <span class="u-green">He assists </span><span class="u-blue-zig">the government</span> <span class="u-green">in </span><span class="u-blue-zig">all its legal matters</span>.
+        </li>
+        <li>
+            <strong>3. Court Appearances:</strong> <span class="u-green">Appears in </span><span class="u-blue-zig">all the cases</span> <span class="u-green">in </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">and </span><span class="u-blue-zig">High Courts</span> <span class="u-green">in which </span><span class="u-blue-zig">the Government of India</span> <span class="u-green">is concerned</span>.
+        </li>
+        <li>
+            <strong>4. Presidential Advisory:</strong> <span class="u-green">Gives advice in </span><span class="u-blue-zig">such legal matters</span> <span class="u-green">which are assigned to him by </span><span class="u-blue-zig">the President</span> <span class="u-green">under </span><span class="u-blue-zig">Article 143</span>.
+        </li>
+        <li>
+            <strong>5. Parliamentary Rights:</strong> <span class="u-blue-zig">Right to speak</span> <span class="u-green">and </span><span class="u-blue-zig">take a part</span> <span class="u-green">in </span><span class="u-blue-zig">the proceeding</span> <span class="u-green">of </span><span class="u-blue-zig">any house of Parliament</span> <span class="u-green">and </span><span class="u-blue-zig">committee of the Parliament</span> <span class="u-green">without </span><span class="u-blue-zig">the right to give vote</span> (<span class="u-blue-zig">Article 88</span>).
+        </li>
+        <li>
+            <strong>6. MP Privileges:</strong> <span class="u-green">Entitled to get </span><span class="u-blue-zig">all the immunities</span> <span class="u-green">and </span><span class="u-blue-zig">privileges</span> <span class="u-green">as </span><span class="u-blue-zig">a Member of Parliament</span>.
+        </li>
+        <li>
+            <strong>7. Brief Acceptance:</strong> <span class="u-green">Can accept </span><span class="u-blue-zig">briefs</span> <span class="u-green">but cannot appear against </span><span class="u-blue-zig">the Government</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. No Executive Authority:</strong> <span class="u-green">Unlike </span><span class="u-blue-zig">the Attorney General</span> <span class="u-green">of </span><span class="u-red-zig">the United States</span>, <span class="u-blue-zig">the Attorney General</span> <span class="u-green">for </span><span class="u-red-zig">India</span> <span class="u-green">does not have </span><span class="u-blue-zig">any executive authority</span>, <span class="u-green">but he is </span><span class="u-blue-zig">a part</span> <span class="u-green">of </span><span class="u-blue-zig">the Union executive</span>. <span class="u-green">Without </span><span class="u-blue-zig">the permission</span> <span class="u-green">of </span><span class="u-blue-zig">the government</span> <span class="u-green">he should not </span>-
+    </p>
+    <ul>
+        <li>
+            <strong>a. Criminal Defence:</strong> <span class="u-green">defend </span><span class="u-blue-zig">accused persons</span> <span class="u-green">in </span><span class="u-blue-zig">criminal cases</span>.
+        </li>
+        <li>
+            <strong>b. Company Directorship:</strong> <span class="u-green">should not accept </span><span class="u-blue-zig">an appointment</span> <span class="u-green">as </span><span class="u-blue-zig">a director</span> <span class="u-green">in </span><span class="u-blue-zig">any company</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">COMPTROLLER AND AUDITOR-GENERAL OF INDIA</div>
+
+    <div class="section-header">ARTICLE 148</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Appointment &amp; Removal:</strong> (1) <span class="u-green">There shall be </span><span class="u-blue-zig">a Comptroller and Auditor-General</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">who shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">by </span><span class="u-blue-zig">warrant under his hand</span> <span class="u-green">and </span><span class="u-blue-zig">seal</span> <span class="u-green">and shall only be removed from </span><span class="u-blue-zig">office</span> <span class="u-green">in like manner and on </span><span class="u-blue-zig">the like grounds</span> <span class="u-green">as </span><span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Oath of Office:</strong> (2) <span class="u-blue-zig">Every person</span> <span class="u-green">appointed to be </span><span class="u-blue-zig">the Comptroller and Auditor-General</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">shall</span>, <span class="u-green">before he enters upon </span><span class="u-blue-zig">his office</span>, <span class="u-green">make and subscribe before </span><span class="u-blue-zig">the President</span>, <span class="u-green">or </span><span class="u-blue-zig">some person</span> <span class="u-green">appointed in that behalf by </span><span class="u-blue-zig">him</span>, <span class="u-blue-zig">an oath</span> <span class="u-green">or </span><span class="u-blue-zig">affirmation</span> <span class="u-green">according to </span><span class="u-blue-zig">the form set out</span> <span class="u-green">for </span><span class="u-blue-zig">the purpose</span> <span class="u-green">in </span><span class="u-blue-zig">the Third Schedule</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Salary Conditions:</strong> (3) <span class="u-blue-zig">The salary</span> <span class="u-green">and </span><span class="u-blue-zig">other conditions of service</span> <span class="u-green">of </span><span class="u-blue-zig">the Comptroller and Auditor-General</span> <span class="u-green">shall be such as may be determined by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">by </span><span class="u-blue-zig">law</span> <span class="u-green">and</span>, <span class="u-green">until they are so determined</span>, <span class="u-green">shall be as specified in </span><span class="u-blue-zig">the Second Schedule</span>:
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Service Protection:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">neither the salary</span> <span class="u-green">of </span><span class="u-blue-zig">a Comptroller and Auditor-General</span> <span class="u-green">nor </span><span class="u-blue-zig">his rights</span> <span class="u-green">in respect of </span><span class="u-blue-zig">leave of absence</span>, <span class="u-blue-zig">pension</span> <span class="u-green">or </span><span class="u-blue-zig">age of retirement</span> <span class="u-green">shall be varied to </span><span class="u-blue-zig">his disadvantage</span> <span class="u-green">after </span><span class="u-blue-zig">his appointment</span>.
+    </p>
+
+    <div class="page-number">Page 124</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Post-Retirement Bar:</strong> (4) <span class="u-blue-zig">The Comptroller and Auditor-General</span> <span class="u-green">shall not be eligible for </span><span class="u-blue-zig">further office</span> <span class="u-green">either under </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">or under </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-blue-zig">any State</span> <span class="u-green">after he has ceased to hold </span><span class="u-blue-zig">his office</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Administrative Powers:</strong> (5) <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">and of </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span>, <span class="u-blue-zig">the conditions of service</span> <span class="u-green">of </span><span class="u-blue-zig">persons serving</span> <span class="u-green">in </span><span class="u-blue-zig">the Indian Audit</span> <span class="u-green">and </span><span class="u-blue-zig">Accounts Department</span> <span class="u-green">and </span><span class="u-blue-zig">the administrative powers</span> <span class="u-green">of </span><span class="u-blue-zig">the Comptroller and Auditor-General</span> <span class="u-green">shall be such as may be prescribed by </span><span class="u-blue-zig">rules</span> <span class="u-green">made by </span><span class="u-blue-zig">the President</span> <span class="u-green">after consultation with </span><span class="u-blue-zig">the Comptroller and Auditor-General</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Consolidated Fund:</strong> (6) <span class="u-blue-zig">The administrative expenses</span> <span class="u-green">of </span><span class="u-blue-zig">the office</span> <span class="u-green">of </span><span class="u-blue-zig">the Comptroller and Auditor-General</span>, <span class="u-green">including </span><span class="u-blue-zig">all salaries</span>, <span class="u-blue-zig">allowances</span> <span class="u-green">and </span><span class="u-blue-zig">pensions</span> <span class="u-green">payable to or in respect of </span><span class="u-blue-zig">the persons serving</span> <span class="u-green">in </span><span class="u-blue-zig">that office</span>, <span class="u-green">shall be charged upon </span><span class="u-blue-zig">the Consolidated Fund</span> <span class="u-green">of </span><span class="u-red-zig">India</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 149</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Duties &amp; Powers:</strong> <span class="u-blue-zig">The Comptroller and Auditor-General</span> <span class="u-green">shall perform </span><span class="u-blue-zig">such duties</span> <span class="u-green">and exercise </span><span class="u-blue-zig">such powers</span> <span class="u-green">in relation to </span><span class="u-blue-zig">the accounts</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and of </span><span class="u-blue-zig">the States</span> <span class="u-green">and of </span><span class="u-blue-zig">any other authority</span> <span class="u-green">or </span><span class="u-blue-zig">body</span> <span class="u-green">as may be prescribed by or under </span><span class="u-blue-zig">any law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">and</span>, <span class="u-green">until provision in that behalf is so made</span>, <span class="u-green">shall perform </span><span class="u-blue-zig">such duties</span> <span class="u-green">and exercise </span><span class="u-blue-zig">such powers</span> <span class="u-green">in relation to </span><span class="u-blue-zig">the accounts</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and of </span><span class="u-blue-zig">the States</span> <span class="u-green">as were conferred on or exercisable by </span><span class="u-blue-zig">the Auditor-General</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">immediately before </span><span class="u-blue-zig">the commencement</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">in relation to </span><span class="u-blue-zig">the accounts</span> <span class="u-green">of </span><span class="u-blue-zig">the Dominion of India</span> <span class="u-green">and of </span><span class="u-blue-zig">the Provinces respectively</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 150</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Account Form:</strong> <span class="u-blue-zig">The accounts</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">and of </span><span class="u-blue-zig">the States</span> <span class="u-green">shall be kept in </span><span class="u-blue-zig">such form</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may</span>, <span class="u-green">on the advice of] </span><span class="u-blue-zig">the Comptroller and Auditor-General</span> <span class="u-green">of </span><span class="u-red-zig">India</span>, <span class="u-green">prescribe</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 151</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Union Reports:</strong> (1) <span class="u-blue-zig">The reports</span> <span class="u-green">of </span><span class="u-blue-zig">the Comptroller and Auditor-General</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">relating to </span><span class="u-blue-zig">the accounts</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall be submitted to </span><span class="u-blue-zig">the President</span>, <span class="u-green">who shall cause them to be laid before </span><span class="u-blue-zig">each House of Parliament</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. State Reports:</strong> (2) <span class="u-blue-zig">The reports</span> <span class="u-green">of </span><span class="u-blue-zig">the Comptroller and Auditor-General</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">relating to </span><span class="u-blue-zig">the accounts</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall be submitted to </span><span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>, <span class="u-green">who shall cause them to be laid before </span><span class="u-blue-zig">the Legislature</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 152</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Definition Scope:</strong> <span class="u-green">In </span><span class="u-blue-zig">this Part</span>, <span class="u-green">unless </span><span class="u-blue-zig">the context</span> <span class="u-green">otherwise requires</span>, <span class="u-blue-zig">the expression</span> <span class="u-blue-zig">"State"</span> <span class="u-green">does not include </span><span class="u-blue-zig">the State</span> <span class="u-green">of </span><span class="u-red-zig">Jammu and Kashmir</span> (<span class="u-red-zig">1958</span>).
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Accountant General:</strong> <span class="u-blue-zig">Office of the Accountant General</span> <span class="u-green">was established in </span><span class="u-red-zig">1858</span>.
+        </li>
+        <li>
+            <strong>2. First Auditor General:</strong> <span class="u-red-zig">Sir Edward Drummond</span> <span class="u-green">was </span><span class="u-blue-zig">the first Auditor General</span>.
+        </li>
+        <li>
+            <strong>3. Statutory Independence:</strong> <span class="u-blue-zig">The Auditor General</span> <span class="u-green">became </span><span class="u-blue-zig">independent</span> <span class="u-green">and </span><span class="u-blue-zig">a statutory body</span> <span class="u-green">by </span><span class="u-blue-zig">the Government of India Act</span> <span class="u-red-zig">1919</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 125</div>
+</div>
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Parliamentary Membership:</strong> <span class="u-green">In </span><span class="u-red-zig">India</span>, <span class="u-blue-zig">CAG</span> <span class="u-green">is not </span><span class="u-blue-zig">a member of the parliament</span> <span class="u-green">while in </span><span class="u-red-zig">Britain</span>; <span class="u-blue-zig">CAG</span> <span class="u-green">is </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">house of the Commons</span>.
+        </li>
+        <li>
+            <strong>2. Audit Reports:</strong> <span class="u-blue-zig">CAG audit reports</span> <span class="u-green">are handed over to </span><span class="u-blue-zig">the Public Accounts Committee</span>.
+        </li>
+        <li>
+            <strong>3. PAC Philosopher:</strong> <span class="u-blue-zig">CAG</span> <span class="u-green">acts as </span><span class="u-blue-zig">a philosopher</span> <span class="u-green">of </span><span class="u-blue-zig">the Public Accounts Committee</span> <span class="u-green">of </span><span class="u-blue-zig">the Parliament</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Watchdog of Public Money:</strong> <span class="u-blue-zig">CAG</span> <span class="u-green">is called </span><span class="u-blue-zig">the watch dog</span> <span class="u-green">of </span><span class="u-blue-zig">public money</span>.
+    </p>
+
+    <div class="quote-box">
+        <span class="u-green">He is </span><span class="u-blue-zig">the one man</span> <span class="u-green">who is going to see that </span><span class="u-blue-zig">the expenses</span> <span class="u-green">voted by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">are not exceeded</span>, <span class="u-green">or varied from </span><span class="u-blue-zig">what</span> <span class="u-green">has been laid down by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">in </span><span class="u-blue-zig">the Appropriation Act</span>.
+        <span class="quote-author">Dr. B.R Ambedkar</span>
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Constitutional Watchdog:</strong> <span class="u-blue-zig">CAG</span> <span class="u-green">was founded under </span><span class="u-blue-zig">Article 148</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">for serving as </span><span class="u-blue-zig">a watchdog</span> <span class="u-green">and reveals </span><span class="u-blue-zig">financial performance</span> <span class="u-green">and </span><span class="u-blue-zig">compliance reports</span> <span class="u-green">of </span><span class="u-blue-zig">the government</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>3. Scrutiny Functions:</strong> <span class="u-blue-zig">Its responsibilities</span> <span class="u-green">include scrutinizing </span><span class="u-blue-zig">the legitimacy</span>, <span class="u-blue-zig">authenticity</span>, <span class="u-blue-zig">regularity</span>, <span class="u-blue-zig">propriety</span>, <span class="u-blue-zig">economy</span>, <span class="u-blue-zig">efficacy</span> <span class="u-green">and </span><span class="u-blue-zig">effectiveness</span> <span class="u-green">of </span><span class="u-blue-zig">the government's financial management</span>.
+        </li>
+        <li>
+            <strong>4. PAC Guide:</strong> <span class="u-green">Acts as </span><span class="u-blue-zig">a guide</span>, <span class="u-blue-zig">friend</span> <span class="u-green">and </span><span class="u-blue-zig">philosopher</span> <span class="u-green">of </span><span class="u-blue-zig">the Public Accounts Committee</span>.
+        </li>
+        <li>
+            <strong>5. Fund Audit:</strong> <span class="u-green">Audits </span><span class="u-blue-zig">all expenditure</span> <span class="u-green">from </span><span class="u-blue-zig">the Contingency</span> <span class="u-green">and </span><span class="u-blue-zig">the Public Account Fund</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">as well as of </span><span class="u-blue-zig">each state</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Overreaching Mandate:</strong> <span class="u-green">In </span><span class="u-blue-zig">the recent times</span>, <span class="u-blue-zig">CAG</span> <span class="u-green">has faced </span><span class="u-blue-zig">criticisms</span> <span class="u-green">for having </span><span class="u-blue-zig">overreaching mandate</span> <span class="u-green">than </span><span class="u-blue-zig">outreach</span>.
+    </p>
+    <ul>
+        <li>
+            <strong>4. Notional Loss:</strong> <span class="u-blue-zig">CAG</span> <span class="u-green">has arose </span><span class="u-blue-zig">the concept</span> <span class="u-green">of </span><span class="u-blue-zig">notional loss</span> <span class="u-green">and judging </span><span class="u-blue-zig">the actions of Executive</span> <span class="u-green">at </span><span class="u-blue-zig">a micro level</span>.
+        </li>
+        <li>
+            <strong>5. Lopsided Auditing:</strong> <span class="u-blue-zig">Evaluation methodologies</span> <span class="u-green">are highly confined to </span><span class="u-blue-zig">lopsided auditing techniques</span> <span class="u-green">that judge </span><span class="u-blue-zig">issue</span> <span class="u-green">from </span><span class="u-blue-zig">expenditure angle only</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Curbing Pilferage:</strong> <span class="u-green">In fact</span>, <span class="u-blue-zig">CAG</span> <span class="u-green">is aimed at curbing </span><span class="u-blue-zig">the pilferage</span>, <span class="u-blue-zig">wastage</span> <span class="u-green">and </span><span class="u-blue-zig">unnecessary expenditures</span> <span class="u-green">of </span><span class="u-blue-zig">the public account</span>. <span class="u-green">To maintain </span><span class="u-blue-zig">its allegiance</span>, <span class="u-green">it is inevitable for </span><span class="u-blue-zig">the CAG</span> <span class="u-green">to be </span><span class="u-blue-zig">hyperactive</span> <span class="u-green">in dealing with </span><span class="u-blue-zig">public finance</span>.
+    </p>
+
+    <div class="main-topic-header">THE ADVOCATE-GENERAL FOR THE STATE</div>
+
+    <div class="section-header">ARTICLE 165</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Appointment Qualification:</strong> (1) <span class="u-blue-zig">The Governor</span> <span class="u-green">of </span><span class="u-blue-zig">each State</span> <span class="u-green">shall appoint </span><span class="u-blue-zig">a person</span> <span class="u-green">who is qualified to be appointed </span><span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-blue-zig">a High Court</span> <span class="u-green">to be </span><span class="u-blue-zig">Advocate-General</span> <span class="u-green">for </span><span class="u-blue-zig">the State</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Duties &amp; Functions:</strong> (2) <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Advocate-General</span> <span class="u-green">to give advice to </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">upon </span><span class="u-blue-zig">such legal matters</span>, <span class="u-green">and to perform </span><span class="u-blue-zig">such other duties</span> <span class="u-green">of </span><span class="u-blue-zig">a legal character</span>, <span class="u-green">as may from time to time be referred or assigned to him by </span><span class="u-blue-zig">the Governor</span>, <span class="u-green">and to discharge </span><span class="u-blue-zig">the functions</span> <span class="u-green">conferred on him by or under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">or </span><span class="u-blue-zig">any other law</span> <span class="u-green">for the time being in force</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Tenure &amp; Remuneration:</strong> (3) <span class="u-blue-zig">The Advocate-General</span> <span class="u-green">shall hold office during </span><span class="u-blue-zig">the pleasure</span> <span class="u-green">of </span><span class="u-blue-zig">the Governor</span>, <span class="u-green">and shall receive </span><span class="u-blue-zig">such remuneration</span> <span class="u-green">as </span><span class="u-blue-zig">the Governor</span> <span class="u-green">may determine</span>.
+    </p>
+
+    <div class="page-number">Page 126</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="main-topic-header">THE UNION TERRITORIES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Article Range:</strong> <span class="u-blue-zig">ARTICLE</span> - <span class="u-blue-zig">239</span> - <span class="u-blue-zig">152</span>
+    </p>
+
+    <div class="section-header">ARTICLE 239</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Presidential Administration:</strong> (1) <span class="u-blue-zig">Union territory</span> <span class="u-green">shall be administered by </span><span class="u-blue-zig">the President</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Governor as Administrator:</strong> (2) <span class="u-blue-zig">The President</span> <span class="u-green">may appoint </span><span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">as </span><span class="u-blue-zig">the administrator</span> <span class="u-green">of </span><span class="u-blue-zig">an adjoining Union territory</span>, <span class="u-green">and where </span><span class="u-blue-zig">a Governor</span> <span class="u-green">is so appointed</span>, <span class="u-green">he shall exercise </span><span class="u-blue-zig">his functions</span> <span class="u-green">as such administrator </span><span class="u-blue-zig">independently</span> <span class="u-green">of </span><span class="u-blue-zig">his Council of Ministers</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 239 A</div>
+
+    <ul>
+        <li>
+            <strong>1. 14th Amendment:</strong> <span class="u-green">Add by </span><span class="u-blue-zig">Constitution</span> (<span class="u-blue-zig">Fourteenth Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1962</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Puducherry Legislature:</strong> <span class="u-blue-zig">Parliament</span> <span class="u-green">may by law create for </span><span class="u-blue-zig">the Union territory</span> <span class="u-green">of </span><span class="u-red-zig">Puducherry</span> <span class="u-green">which has </span><span class="u-blue-zig">a Legislature</span> <span class="u-green">and </span><span class="u-blue-zig">a Council of Ministers</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 239 A [sic - should be 239AA]</div>
+
+    <ul>
+        <li>
+            <strong>1. 69th Amendment:</strong> <span class="u-green">Add by </span><span class="u-blue-zig">Constitution</span> (<span class="u-blue-zig">Sixty-ninth Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1991</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. NCT Designation:</strong> (1) <span class="u-blue-zig">The Union territory</span> <span class="u-green">of </span><span class="u-red-zig">Delhi</span> <span class="u-green">shall be called </span><span class="u-blue-zig">the National Capital Territory</span> <span class="u-green">of </span><span class="u-red-zig">Delhi</span> (<span class="u-green">hereafter in </span><span class="u-blue-zig">this Part</span> <span class="u-green">referred to as </span><span class="u-blue-zig">the National Capital Territory</span>) <span class="u-green">and </span><span class="u-blue-zig">the administrator thereof</span> <span class="u-green">appointed under </span><span class="u-blue-zig">article 239</span> <span class="u-green">shall be designated as </span><span class="u-blue-zig">the Lieutenant Governor</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Legislative Assembly:</strong> (2) (a) <span class="u-green">There shall be </span><span class="u-blue-zig">a Legislative Assembly</span> <span class="u-green">for </span><span class="u-blue-zig">the National Capital Territory</span> <span class="u-green">and </span><span class="u-blue-zig">the seats</span> <span class="u-green">in </span><span class="u-blue-zig">such Assembly</span> <span class="u-green">shall be filled by </span><span class="u-blue-zig">members</span> <span class="u-green">chosen by </span><span class="u-blue-zig">direct election</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. SC Reservation:</strong> (b) <span class="u-blue-zig">The number of seats</span> <span class="u-green">reserved for </span><span class="u-blue-zig">Scheduled Castes</span> <span class="u-green">and </span><span class="u-blue-zig">all other matters</span> <span class="u-green">relating to </span><span class="u-blue-zig">the functioning</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">shall be regulated by </span><span class="u-blue-zig">law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Electoral Provisions:</strong> (c) <span class="u-blue-zig">The provisions</span> <span class="u-green">of </span><span class="u-blue-zig">articles 324 to 327</span> <span class="u-green">and </span><span class="u-blue-zig">329</span> <span class="u-green">shall apply in relation to </span><span class="u-blue-zig">the National Capital Territory</span>, <span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">the National Capital Territory</span> <span class="u-green">and </span><span class="u-blue-zig">the members thereof</span> <span class="u-green">as they apply</span>, <span class="u-green">in relation to </span><span class="u-blue-zig">a State</span>, <span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">and </span><span class="u-blue-zig">the members thereof</span> <span class="u-blue-zig">respectively</span>; <span class="u-green">and </span><span class="u-blue-zig">any reference</span> <span class="u-green">in </span><span class="u-blue-zig">articles 326</span> <span class="u-green">and </span><span class="u-blue-zig">329</span> <span class="u-green">to </span><span class="u-blue-zig">"appropriate Legislature"</span> <span class="u-green">shall be deemed to be </span><span class="u-blue-zig">a reference</span> <span class="u-green">to </span><span class="u-blue-zig">Parliament</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Legislative Power:</strong> 3) (a) <span class="u-green">Subject to </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">shall have power to make </span><span class="u-blue-zig">laws</span> <span class="u-green">for </span><span class="u-blue-zig">the whole</span> <span class="u-green">or </span><span class="u-blue-zig">any part</span> <span class="u-green">of </span><span class="u-blue-zig">the National Capital Territory</span> <span class="u-green">with respect to </span><span class="u-blue-zig">any of the matters</span> <span class="u-green">enumerated in </span><span class="u-blue-zig">the State List</span> <span class="u-green">or in </span><span class="u-blue-zig">the Concurrent List</span> <span class="u-green">in so far as </span><span class="u-blue-zig">any such matter</span> <span class="u-green">is applicable to </span><span class="u-blue-zig">Union territories</span> <span class="u-green">except </span><span class="u-blue-zig">matters</span> <span class="u-green">with respect to </span><span class="u-blue-zig">Entries 1, 2 and 18</span> <span class="u-green">of </span><span class="u-blue-zig">the State List</span> <span class="u-green">and </span><span class="u-blue-zig">Entries 64, 65 and 66</span> <span class="u-green">of </span><span class="u-blue-zig">that List</span> <span class="u-green">in so far as they relate to </span><span class="u-blue-zig">the said Entries 1, 2 and 18</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Parliamentary Supremacy:</strong> (b) <span class="u-green">Nothing in </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">shall derogate from </span><span class="u-blue-zig">the powers</span> <span class="u-green">of </span><span class="u-blue-zig">Parliament</span> <span class="u-green">under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">to make </span><span class="u-blue-zig">laws</span> <span class="u-green">with respect to </span><span class="u-blue-zig">any matter</span> <span class="u-green">for </span><span class="u-blue-zig">a Union territory</span> <span class="u-green">or </span><span class="u-blue-zig">any part thereof</span>.
+    </p>
+
+    <div class="page-number">Page 127</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Repugnancy Clause:</strong> (c) <span class="u-green">If </span><span class="u-blue-zig">any provision</span> <span class="u-green">of </span><span class="u-blue-zig">a law</span> <span class="u-green">made by </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">with respect to </span><span class="u-blue-zig">any matter</span> <span class="u-green">is repugnant to </span><span class="u-blue-zig">any provision</span> <span class="u-green">of </span><span class="u-blue-zig">a law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">with respect to </span><span class="u-blue-zig">that matter</span>, <span class="u-green">whether passed before or after </span><span class="u-blue-zig">the law</span> <span class="u-green">made by </span><span class="u-blue-zig">the Legislative Assembly</span>, <span class="u-green">or of </span><span class="u-blue-zig">an earlier law</span>, <span class="u-green">other than </span><span class="u-blue-zig">a law</span> <span class="u-green">made by </span><span class="u-blue-zig">the Legislative Assembly</span>, <span class="u-green">then</span>, <span class="u-green">in either case</span>, <span class="u-blue-zig">the law</span> <span class="u-green">made by </span><span class="u-blue-zig">Parliament</span>, <span class="u-green">or</span>, <span class="u-green">as the case may be</span>, <span class="u-blue-zig">such earlier law</span>, <span class="u-green">shall prevail and </span><span class="u-blue-zig">the law</span> <span class="u-green">made by </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">shall</span>, <span class="u-green">to the extent of </span><span class="u-blue-zig">the repugnancy</span>, <span class="u-green">be </span><span class="u-blue-zig">void</span>:
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. Presidential Assent:</strong> <span class="u-green">Provided that if </span><span class="u-blue-zig">any such law</span> <span class="u-green">made by </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">has been reserved for </span><span class="u-blue-zig">the consideration</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">and has received </span><span class="u-blue-zig">his assent</span>, <span class="u-blue-zig">such law</span> <span class="u-green">shall prevail in </span><span class="u-blue-zig">the National Capital Territory</span>:
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">9. Parliamentary Override:</strong> <span class="u-green">Provided further that </span><span class="u-blue-zig">nothing</span> <span class="u-green">in </span><span class="u-blue-zig">this sub-clause</span> <span class="u-green">shall prevent </span><span class="u-blue-zig">Parliament</span> <span class="u-green">from enacting at any time </span><span class="u-blue-zig">any law</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the same matter</span> <span class="u-green">including </span><span class="u-blue-zig">a law</span> <span class="u-green">adding to</span>, <span class="u-green">amending</span>, <span class="u-green">varying or repealing </span><span class="u-blue-zig">the law</span> <span class="u-green">so made by </span><span class="u-blue-zig">the Legislative Assembly</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">10. Council of Ministers:</strong> (4) <span class="u-green">There shall be </span><span class="u-blue-zig">a Council of Ministers</span> <span class="u-green">consisting of </span><span class="u-blue-zig">not more than ten per cent.</span> <span class="u-green">of </span><span class="u-blue-zig">the total number of members</span> <span class="u-green">in </span><span class="u-blue-zig">the Legislative Assembly</span>, <span class="u-green">with </span><span class="u-blue-zig">the Chief Minister</span> <span class="u-green">at </span><span class="u-blue-zig">the head</span> <span class="u-green">to aid and advise </span><span class="u-blue-zig">the Lieutenant Governor</span> <span class="u-green">in the exercise of </span><span class="u-blue-zig">his functions</span> <span class="u-green">in relation to </span><span class="u-blue-zig">matters</span> <span class="u-green">with respect to which </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">has power to make </span><span class="u-blue-zig">laws</span>, <span class="u-green">except in so far as he is</span>, <span class="u-green">by or under </span><span class="u-blue-zig">any law</span>, <span class="u-green">required to act in </span><span class="u-blue-zig">his discretion</span>:
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">11. Difference of Opinion:</strong> <span class="u-green">Provided that in </span><span class="u-blue-zig">the case</span> <span class="u-green">of </span><span class="u-blue-zig">difference of opinion</span> <span class="u-green">between </span><span class="u-blue-zig">the Lieutenant Governor</span> <span class="u-green">and </span><span class="u-blue-zig">his Ministers</span> <span class="u-green">on </span><span class="u-blue-zig">any matter</span>, <span class="u-blue-zig">the Lieutenant Governor</span> <span class="u-green">shall refer it to </span><span class="u-blue-zig">the President</span> <span class="u-green">for </span><span class="u-blue-zig">decision</span> <span class="u-green">and act according to </span><span class="u-blue-zig">the decision</span> <span class="u-green">given thereon by </span><span class="u-blue-zig">the President</span> <span class="u-green">and pending </span><span class="u-blue-zig">such decision</span> <span class="u-green">it shall be competent for </span><span class="u-blue-zig">the Lieutenant Governor</span> <span class="u-green">in any case where </span><span class="u-blue-zig">the matter</span>, <span class="u-green">in his opinion</span>, <span class="u-green">is so urgent that it is necessary for him to take </span><span class="u-blue-zig">immediate action</span>, <span class="u-green">to take </span><span class="u-blue-zig">such action</span> <span class="u-green">or to give </span><span class="u-blue-zig">such direction</span> <span class="u-green">in </span><span class="u-blue-zig">the matter</span> <span class="u-green">as he deems </span><span class="u-blue-zig">necessary</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">12. CM Appointment:</strong> (5) <span class="u-blue-zig">The Chief Minister</span> <span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">and </span><span class="u-blue-zig">the other Ministers</span> <span class="u-green">shall be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">on the advice of </span><span class="u-blue-zig">the Chief Minister</span> <span class="u-green">and </span><span class="u-blue-zig">the Ministers</span> <span class="u-green">shall hold office during </span><span class="u-blue-zig">the pleasure</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">13. Collective Responsibility:</strong> (6) <span class="u-blue-zig">The Council of Ministers</span> <span class="u-green">shall be </span><span class="u-blue-zig">collectively responsible</span> <span class="u-green">to </span><span class="u-blue-zig">the Legislative Assembly</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">14. Supplementing Provisions:</strong> (7) (a)] <span class="u-blue-zig">Parliament</span> <span class="u-green">may</span>, <span class="u-green">by law</span>, <span class="u-green">make provisions for giving effect to</span>, <span class="u-green">or supplementing </span><span class="u-blue-zig">the provisions</span> <span class="u-green">contained in </span><span class="u-blue-zig">the foregoing clauses</span> <span class="u-green">and for </span><span class="u-blue-zig">all matters</span> <span class="u-blue-zig">incidental</span> <span class="u-green">or </span><span class="u-blue-zig">consequential thereto</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">15. Non-Amendment Clause:</strong> (b) <span class="u-blue-zig">Any such law</span> <span class="u-green">as is referred to in </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">shall not be deemed to be </span><span class="u-blue-zig">an amendment</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">for the purposes of </span><span class="u-blue-zig">article 368</span> <span class="u-green">notwithstanding that it contains </span><span class="u-blue-zig">any provision</span> <span class="u-green">which amends or has the effect of amending</span>, <span class="u-blue-zig">this Constitution</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">16. Puducherry Application:</strong> (8) <span class="u-blue-zig">The provisions</span> <span class="u-green">of </span><span class="u-blue-zig">article 239B</span> <span class="u-green">shall</span>, <span class="u-green">so far as may be</span>, <span class="u-green">apply in relation to </span><span class="u-blue-zig">the National Capital Territory</span>, <span class="u-blue-zig">the Lieutenant Governor</span> <span class="u-green">and </span><span class="u-blue-zig">the Legislative Assembly</span>, <span class="u-green">as they apply in relation to </span><span class="u-blue-zig">the</span>
+    </p>
+
+    <div class="page-number">Page 128</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <span class="u-blue-zig">Union territory</span> <span class="u-green">of </span><span class="u-red-zig">Puducherry</span>, <span class="u-blue-zig">the administrator</span> <span class="u-green">and </span><span class="u-blue-zig">its Legislature</span>, <span class="u-blue-zig">respectively</span>; <span class="u-green">and </span><span class="u-blue-zig">any reference</span> <span class="u-green">in </span><span class="u-blue-zig">that article</span> <span class="u-green">to </span><span class="u-blue-zig">"clause (1) of article 239A"</span> <span class="u-green">shall be deemed to be </span><span class="u-blue-zig">a reference</span> <span class="u-green">to </span><span class="u-blue-zig">this article</span> <span class="u-green">or </span><span class="u-blue-zig">article 239AB</span>, <span class="u-green">as the case may be</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 239AB</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Suspension Power:</strong> <span class="u-green">On receipt of </span><span class="u-blue-zig">a report</span> <span class="u-green">from </span><span class="u-blue-zig">the Lieutenant Governor</span> <span class="u-green">or otherwise</span>,, <span class="u-blue-zig">the President</span> <span class="u-green">may by order suspend </span><span class="u-blue-zig">the operation</span> <span class="u-green">of </span><span class="u-blue-zig">any provision</span> <span class="u-green">of </span><span class="u-blue-zig">article 239AA</span> <span class="u-green">or of </span><span class="u-blue-zig">all</span> <span class="u-green">in </span><span class="u-blue-zig">the National Capital Territory</span>
+    </p>
+
+    <div class="section-header">ARTICLE 239B</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Ordinance Power:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">no such Ordinance</span> <span class="u-green">shall be promulgated by </span><span class="u-blue-zig">the administrator</span> <span class="u-green">except after obtaining </span><span class="u-blue-zig">instructions</span> <span class="u-green">from </span><span class="u-blue-zig">the President</span> <span class="u-green">in that behalf in </span><span class="u-red-zig">Puducherry</span> .
+    </p>
+
+    <div class="section-header">ARTICLE 240</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Regulation Making:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">may make </span><span class="u-blue-zig">regulations</span> <span class="u-green">for </span><span class="u-blue-zig">the peace</span>, <span class="u-blue-zig">progress</span> <span class="u-green">and </span><span class="u-blue-zig">good government</span> <span class="u-green">of </span><span class="u-blue-zig">the Union Territory</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 241</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. High Court Constitution:</strong> (1) <span class="u-blue-zig">Parliament</span> <span class="u-green">may by law constitute </span><span class="u-blue-zig">a High Court</span> <span class="u-green">for </span><span class="u-blue-zig">a Union territory</span> <span class="u-green">or declare </span><span class="u-blue-zig">any court</span> <span class="u-green">in </span><span class="u-blue-zig">any such territory</span> <span class="u-green">to be </span><span class="u-blue-zig">a High Court</span> <span class="u-green">for </span><span class="u-blue-zig">all</span> <span class="u-green">or </span><span class="u-blue-zig">any of the purposes</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Delhi High Court:</strong> <span class="u-red-zig">Delhi</span> <span class="u-green">is </span><span class="u-blue-zig">the only territory</span> <span class="u-green">to have </span><span class="u-blue-zig">a High Court</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 129</div>
+</div>
+
+</body>
+</html>

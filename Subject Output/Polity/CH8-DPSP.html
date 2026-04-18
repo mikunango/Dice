@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH8 - Directive Principles of State Policy | Indian Polity</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH8 - Directive Principles of State Policy</h1>
+        <p class="subtitle">Part IV — Article 36 to 51</p>
+    </header>
+
+    <p>
+        <span class="u-blue-zig">the kernel of</span> <span class="u-blue-zig">the Indian Constitution</span>
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Social & Economic Democracy:</strong> <span class="u-blue-zig">The concept behind</span> <span class="u-blue-zig">the DPSP</span> <span class="u-green">is not only </span><span class="u-green">establishing </span><span class="u-blue-zig">political democracy</span> <span class="u-green">but also </span><span class="u-blue-zig">social and economic democracy</span> <span class="u-green">in </span><span class="u-blue-zig">the state</span>.
+        </li>
+        <li>
+            <strong>2. Novel Features:</strong> <span class="u-green">According to </span><span class="u-red-zig">Dr B R Ambedkar</span>, <span class="u-blue-zig">these principles</span> <span class="u-green">are </span><span class="u-blue-zig">'novel features'</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span>.
+        </li>
+        <li>
+            <strong>3. Source of DPSP:</strong> <span class="u-blue-zig">The source of the concept</span> <span class="u-green">of </span><span class="u-blue-zig">DPSP</span> <span class="u-green">is </span><span class="u-blue-zig">the Spanish Constitution</span> <span class="u-green">from which it came in </span><span class="u-blue-zig">the Irish Constitution</span>.
+        </li>
+        <li>
+            <strong>4. GOI Act Influence:</strong> <span class="u-blue-zig">The Government of India Act</span> <span class="u-green">also had </span><span class="u-blue-zig">some instructions</span> <span class="u-green">related to </span><span class="u-blue-zig">this concept</span> <span class="u-green">which became </span><span class="u-blue-zig">an important source</span> <span class="u-green">of </span><span class="u-blue-zig">DPSP</span> <span class="u-green">at </span><span class="u-blue-zig">that time</span>.
+        </li>
+        <li>
+            <strong>5. Sapru Report:</strong> <span class="u-red-zig">Sapru Report</span> <span class="u-green">of </span><span class="u-red-zig">1945</span> <span class="u-green">divided </span><span class="u-blue-zig">fundamental rights</span> <span class="u-green">into </span><span class="u-blue-zig">justifiable</span> <span class="u-green">and </span><span class="u-blue-zig">non-justifiable rights</span>.
+        </li>
+        <li>
+            <strong>6. Non-Justifiable Rights:</strong> <span class="u-blue-zig">Non-justifiable rights</span> <span class="u-green">were included in </span><span class="u-blue-zig">part IV</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution of India</span> <span class="u-green">as </span><span class="u-blue-zig">Directive Principles of State Policy</span>.
+        </li>
+        <li>
+            <strong>7. Preamble Aim:</strong> <span class="u-blue-zig">The expression</span> <span class="u-blue-zig">"Justice – Social, economic and political"</span> <span class="u-green">that is mentioned in </span><span class="u-blue-zig">the preamble</span>, <span class="u-green">is </span><span class="u-blue-zig">the ultimate aim</span> <span class="u-green">of </span><span class="u-blue-zig">the DPSP</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">FEATURES</div>
+
+    <div class="main-topic-header">SOCIALIST PRINCIPLES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Welfare State:</strong> <span class="u-blue-zig">Its ultimate aim</span> <span class="u-green">is to provide </span><span class="u-blue-zig">social and economic justice</span> <span class="u-green">to </span><span class="u-blue-zig">all its citizens</span> <span class="u-green">so that </span><span class="u-blue-zig">the state</span> <span class="u-green">can fulfil </span><span class="u-blue-zig">the criteria</span> <span class="u-green">required for </span><span class="u-blue-zig">a welfare state</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Related Articles:</strong> <span class="u-blue-zig">Article 38</span>, <span class="u-blue-zig">Article 39</span>, <span class="u-blue-zig">Article 39 A</span>, <span class="u-blue-zig">Article 41</span>, <span class="u-blue-zig">Article 42</span>, <span class="u-blue-zig">Article 43</span>, <span class="u-blue-zig">Article 43 A</span> <span class="u-green">and </span><span class="u-blue-zig">Article 47</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 38</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Social Order:</strong> (1)<span class="u-blue-zig">The State</span> <span class="u-green">shall strive to promote </span><span class="u-blue-zig">the welfare of the people</span> <span class="u-green">by securing and protecting </span><span class="u-green">as effectively as it may </span><span class="u-blue-zig">a social order</span> <span class="u-green">in which </span><span class="u-blue-zig">justice, social, economic and political</span>, <span class="u-green">shall inform </span><span class="u-blue-zig">all the institutions</span> <span class="u-green">of </span><span class="u-blue-zig">the national life</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Minimise Inequalities:</strong> (2) <span class="u-blue-zig">The State</span> <span class="u-green">shall, in particular, strive to </span><span class="u-green">minimise </span><span class="u-blue-zig">the inequalities in income</span>, <span class="u-green">and endeavour to eliminate </span><span class="u-blue-zig">inequalities in status</span>, <span class="u-blue-zig">facilities and opportunities</span>, <span class="u-green">not only amongst </span><span class="u-blue-zig">individuals</span> <span class="u-green">but also amongst </span><span class="u-blue-zig">groups of people</span> <span class="u-green">residing in </span><span class="u-blue-zig">different areas</span> <span class="u-green">or engaged in </span><span class="u-blue-zig">different vocations</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>3. Subject Matter:</strong> <span class="u-green">Talks about </span><span class="u-blue-zig">Social, Political and Economic Justice</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 85</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 39</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Policy Direction:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall, in particular, direct </span><span class="u-blue-zig">its policy</span> <span class="u-green">towards securing</span>—
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Adequate Livelihood:</strong> (a) <span class="u-green">that </span><span class="u-blue-zig">the citizens, men and women</span> <span class="u-blue-zig">equally</span>, <span class="u-green">have </span><span class="u-blue-zig">the right</span> <span class="u-green">to </span><span class="u-blue-zig">an adequate means</span> <span class="u-green">of </span><span class="u-blue-zig">livelihood</span>;
+        </li>
+        <li>
+            <strong>3. Common Good:</strong> (b) <span class="u-green">that </span><span class="u-blue-zig">the ownership and control</span> <span class="u-green">of </span><span class="u-blue-zig">the material resources</span> <span class="u-green">of </span><span class="u-blue-zig">the community</span> <span class="u-green">are so distributed as </span><span class="u-green">best to sub serve </span><span class="u-blue-zig">the common good</span>;
+        </li>
+        <li>
+            <strong>4. Wealth Concentration:</strong> (c) <span class="u-green">that </span><span class="u-blue-zig">the operation</span> <span class="u-green">of </span><span class="u-blue-zig">the economic system</span> <span class="u-green">does not result in </span><span class="u-blue-zig">the concentration of wealth</span> <span class="u-green">and </span><span class="u-blue-zig">means of production</span> <span class="u-green">to </span><span class="u-blue-zig">the common detriment</span>;
+        </li>
+        <li>
+            <strong>5. Equal Pay:</strong> (d) <span class="u-green">that there is </span><span class="u-blue-zig">equal pay</span> <span class="u-green">for </span><span class="u-blue-zig">equal work</span> <span class="u-green">for </span><span class="u-blue-zig">both men and women</span>;
+        </li>
+        <li>
+            <strong>6. Worker Protection:</strong> (e) <span class="u-green">that </span><span class="u-blue-zig">the health and strength</span> <span class="u-green">of </span><span class="u-blue-zig">workers, men and women</span>, <span class="u-green">and </span><span class="u-blue-zig">the tender age of children</span> <span class="u-green">are not abused and that </span><span class="u-blue-zig">citizens</span> <span class="u-green">are not forced by </span><span class="u-blue-zig">economic necessity</span> <span class="u-green">to enter </span><span class="u-blue-zig">avocations</span> <span class="u-green">unsuited to </span><span class="u-blue-zig">their age or strength</span>;
+        </li>
+        <li>
+            <strong>7. Child Welfare:</strong> (f) <span class="u-green">that </span><span class="u-blue-zig">children</span> <span class="u-green">are given </span><span class="u-blue-zig">opportunities and facilities</span> <span class="u-green">to develop in </span><span class="u-blue-zig">a healthy manner</span> <span class="u-green">and in </span><span class="u-blue-zig">conditions of freedom and dignity</span> <span class="u-green">and that </span><span class="u-blue-zig">childhood and youth</span> <span class="u-green">are protected against </span><span class="u-blue-zig">exploitation</span> <span class="u-green">and against </span><span class="u-blue-zig">moral and material abandonment</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>8. State Policy Principles:</strong> <span class="u-blue-zig">Certain principles of policy</span> <span class="u-green">to be followed by </span><span class="u-blue-zig">the State</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 39A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Equal Justice:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall secure that </span><span class="u-blue-zig">the operation</span> <span class="u-green">of </span><span class="u-blue-zig">the legal system</span> <span class="u-green">promotes </span><span class="u-blue-zig">justice</span>, <span class="u-green">on </span><span class="u-blue-zig">a basis of equal opportunity</span>, <span class="u-green">and shall, in particular, provide </span><span class="u-blue-zig">free legal aid</span>, <span class="u-green">by </span><span class="u-blue-zig">suitable legislation or schemes</span> <span class="u-green">or in </span><span class="u-blue-zig">any other way</span>, <span class="u-green">to ensure that </span><span class="u-blue-zig">opportunities</span> <span class="u-green">for securing </span><span class="u-blue-zig">justice</span> <span class="u-green">are not denied to </span><span class="u-blue-zig">any citizen</span> <span class="u-green">by reason of </span><span class="u-blue-zig">economic or other disabilities</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Free Legal Aid:</strong> <span class="u-blue-zig">Equal justice</span> <span class="u-green">and </span><span class="u-blue-zig">free legal aid</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 41</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Right to Work:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall, within </span><span class="u-blue-zig">the limits</span> <span class="u-green">of </span><span class="u-blue-zig">its economic capacity and development</span>, <span class="u-green">make effective provision for securing </span><span class="u-blue-zig">the right to work</span>, <span class="u-green">to </span><span class="u-blue-zig">education</span> <span class="u-green">and to </span><span class="u-blue-zig">public assistance</span> <span class="u-green">in cases of </span><span class="u-blue-zig">unemployment, old age, sickness</span> <span class="u-green">and </span><span class="u-blue-zig">disablement</span>, <span class="u-green">and in other cases of </span><span class="u-blue-zig">undeserved want</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Welfare Government:</strong> <span class="u-green">Talks about </span><span class="u-blue-zig">Welfare Government</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 42</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Humane Conditions:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall make provision for securing </span><span class="u-blue-zig">just and humane conditions</span> <span class="u-green">of </span><span class="u-blue-zig">work</span> <span class="u-green">and for </span><span class="u-blue-zig">maternity relief</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 43</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Living Wage:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to secure</span>, <span class="u-green">by </span><span class="u-blue-zig">suitable legislation</span> <span class="u-green">or </span><span class="u-blue-zig">economic organisation</span> <span class="u-green">or in </span><span class="u-blue-zig">any other way</span>, <span class="u-green">to </span><span class="u-blue-zig">all workers</span>, <span class="u-blue-zig">agricultural, industrial or otherwise</span>, <span class="u-blue-zig">work</span>, <span class="u-blue-zig">a living wage</span>, <span class="u-blue-zig">conditions of work</span> <span class="u-green">ensuring </span><span class="u-blue-zig">a decent standard of life</span> <span class="u-green">and </span><span class="u-blue-zig">full enjoyment of leisure</span> <span class="u-green">and </span><span class="u-blue-zig">social and cultural opportunities</span>
+    </p>
+
+    <div class="page-number">Page 86</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Cottage Industries:</strong> <span class="u-green">and, in particular, </span><span class="u-blue-zig">the State</span> <span class="u-green">shall endeavour to promote </span><span class="u-blue-zig">cottage industries</span> <span class="u-green">on </span><span class="u-blue-zig">an individual or co-operative basis</span> <span class="u-green">in </span><span class="u-blue-zig">rural areas</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 43 A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Worker Participation:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall take steps</span>, <span class="u-green">by </span><span class="u-blue-zig">suitable legislation</span> <span class="u-green">or in </span><span class="u-blue-zig">any other way</span>, <span class="u-green">to secure </span><span class="u-blue-zig">the participation of workers</span> <span class="u-green">in </span><span class="u-blue-zig">the management</span> <span class="u-green">of </span><span class="u-blue-zig">undertakings, establishments</span> <span class="u-green">or </span><span class="u-blue-zig">other organisations</span> <span class="u-green">engaged in </span><span class="u-blue-zig">any industry</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 47</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Public Health:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall regard </span><span class="u-blue-zig">the raising of the level</span> <span class="u-green">of </span><span class="u-blue-zig">nutrition</span> <span class="u-green">and </span><span class="u-blue-zig">the standard of living</span> <span class="u-green">of </span><span class="u-blue-zig">its people</span> <span class="u-green">and </span><span class="u-blue-zig">the improvement</span> <span class="u-green">of </span><span class="u-blue-zig">public health</span> <span class="u-green">as among </span><span class="u-blue-zig">its primary duties</span> <span class="u-green">and, in particular, </span><span class="u-blue-zig">the State</span> <span class="u-green">shall endeavour to bring about </span><span class="u-blue-zig">prohibition of the consumption</span> <span class="u-green">except for </span><span class="u-blue-zig">medicinal purposes</span> <span class="u-green">of </span><span class="u-blue-zig">intoxicating drinks</span> <span class="u-green">and of </span><span class="u-blue-zig">drugs</span> <span class="u-green">which are injurious to </span><span class="u-blue-zig">health</span>.
+    </p>
+
+    <div class="main-topic-header">GANDHIAN PRINCIPLES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Gandhian Thought:</strong> <span class="u-blue-zig">Gandhian thinking</span> <span class="u-green">promotes </span><span class="u-blue-zig">a non-violent social order</span>. <span class="u-blue-zig">Swaraj</span> ( <span class="u-blue-zig">Self-rule</span>), <span class="u-blue-zig">Sarvodaya</span> ( <span class="u-blue-zig">welfare for all</span> ) <span class="u-green">and </span><span class="u-blue-zig">swavlamban</span> (<span class="u-blue-zig">self-reliance</span>) <span class="u-green">are </span><span class="u-blue-zig">the basic principles</span> <span class="u-green">of </span><span class="u-blue-zig">Gandhian thought</span>. <span class="u-blue-zig">His philosophy and actions</span> <span class="u-green">guided not only </span><span class="u-blue-zig">our freedom movement</span> <span class="u-green">but also </span><span class="u-blue-zig">the framing</span> <span class="u-green">of </span><span class="u-blue-zig">the Indian Constitution</span>. <span class="u-blue-zig">The following Directive Principles</span>, <span class="u-green">in particular, reflect </span><span class="u-blue-zig">Gandhian thought</span>:
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Weaker Sections:</strong> <span class="u-blue-zig">The state</span> <span class="u-green">shall promote </span><span class="u-blue-zig">the educational and economic interests</span> <span class="u-green">of </span><span class="u-blue-zig">the weaker sections</span> <span class="u-green">of </span><span class="u-blue-zig">the society</span> <span class="u-green">and in particular </span><span class="u-blue-zig">the interests</span> <span class="u-green">of </span><span class="u-blue-zig">the scheduled castes</span> <span class="u-green">and </span><span class="u-blue-zig">scheduled tribes</span>. (<span class="u-blue-zig">Article 46</span>)
+        </li>
+        <li>
+            <strong>3. Village Panchayats:</strong> <span class="u-blue-zig">The state</span> <span class="u-green">shall take steps to organise </span><span class="u-blue-zig">the village panchayats</span>. <span class="u-blue-zig">These panchayats</span> <span class="u-green">should be given </span><span class="u-blue-zig">such powers and authority</span> <span class="u-green">as may be necessary to enable </span><span class="u-green">them to function as </span><span class="u-blue-zig">units of self-government</span>. (<span class="u-blue-zig">Article 40</span>)
+        </li>
+        <li>
+            <strong>4. Alcoholic Drinks:</strong> <span class="u-blue-zig">The state</span> <span class="u-green">shall make efforts to prevent </span><span class="u-blue-zig">the consumption</span> <span class="u-green">of </span><span class="u-blue-zig">alcoholic drinks</span> <span class="u-green">and </span><span class="u-blue-zig">other harmful drugs</span>. (<span class="u-blue-zig">Article 47</span>)
+        </li>
+        <li>
+            <strong>5. Cottage Industries:</strong> <span class="u-blue-zig">The state</span> <span class="u-green">shall try to promote </span><span class="u-blue-zig">cottage industries</span> <span class="u-green">in </span><span class="u-blue-zig">rural areas</span>. (<span class="u-blue-zig">Article 43</span>)
+        </li>
+        <li>
+            <strong>6. Co-operative Societies:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to promote </span><span class="u-blue-zig">voluntary formation</span>, <span class="u-blue-zig">autonomous functioning</span>, <span class="u-blue-zig">democratic control</span> <span class="u-green">and </span><span class="u-blue-zig">professional management</span> <span class="u-green">of </span><span class="u-blue-zig">co-operative societies</span>. (<span class="u-blue-zig">Article 43 B</span>)
+        </li>
+        <li>
+            <strong>7. Animal Husbandry:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to organise </span><span class="u-blue-zig">agriculture and animal husbandry</span> <span class="u-green">on </span><span class="u-blue-zig">modern and scientific lines</span> <span class="u-green">and shall, in particular, take steps for </span><span class="u-green">preserving and improving </span><span class="u-blue-zig">the breeds</span>, <span class="u-green">and prohibiting </span><span class="u-blue-zig">the slaughter</span>, <span class="u-green">of </span><span class="u-blue-zig">cows and calves</span> <span class="u-green">and </span><span class="u-blue-zig">other milch and draught cattle</span>. (<span class="u-blue-zig">Article 48</span>)
+        </li>
+    </ul>
+
+    <div class="main-topic-header">LIBERAL-INTELLECTUAL PRINCIPLES</div>
+
+    <ul>
+        <li>
+            <strong>1. Liberalism Ideology:</strong> <span class="u-blue-zig">These principles</span> <span class="u-green">follow </span><span class="u-blue-zig">the 'Liberalism' ideology</span>.
+        </li>
+        <li>
+            <strong>2. Related Articles:</strong> <span class="u-blue-zig">Article 44</span>, <span class="u-blue-zig">Article 45</span>, <span class="u-blue-zig">Article 48</span>, <span class="u-blue-zig">Article 48 A</span>, <span class="u-blue-zig">Article 49</span>, <span class="u-blue-zig">Article 50</span> <span class="u-green">and </span><span class="u-blue-zig">Article 51</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 44</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Uniform Civil Code:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to secure for </span><span class="u-blue-zig">the citizens</span> <span class="u-blue-zig">a uniform civil code</span> <span class="u-green">throughout </span><span class="u-blue-zig">the territory of India</span>.
+    </p>
+
+    <div class="page-number">Page 87</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 45</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Early Childhood Care:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to provide </span><span class="u-blue-zig">early childhood care and education</span> <span class="u-green">for </span><span class="u-blue-zig">all children</span> <span class="u-green">until they complete </span><span class="u-blue-zig">the age of SIX years</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Compulsory Education:</strong> <span class="u-blue-zig">Free and compulsory education</span> <span class="u-green">for </span><span class="u-blue-zig">the children</span> <span class="u-green">until they are </span><span class="u-blue-zig">14 years old</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 48 A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Environment Protection:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to protect and improve </span><span class="u-blue-zig">the environment</span> <span class="u-green">and to safeguard </span><span class="u-blue-zig">the forests and wild life</span> <span class="u-green">of </span><span class="u-blue-zig">the country</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 49</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Monument Protection:</strong> <span class="u-green">It shall be the obligation of </span><span class="u-blue-zig">the State</span> <span class="u-green">to protect </span><span class="u-blue-zig">every monument or place</span> <span class="u-green">or </span><span class="u-blue-zig">object of artistic or historic interest</span>, 2[<span class="u-green">declared by or under </span><span class="u-blue-zig">law made by Parliament</span>] <span class="u-green">to be of </span><span class="u-blue-zig">national importance</span>, <span class="u-green">from </span><span class="u-blue-zig">spoliation, disfigurement, destruction</span>, <span class="u-blue-zig">removal, disposal or export</span>, <span class="u-green">as the case may be</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 50</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Judicial Separation:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall take steps to separate </span><span class="u-blue-zig">the judiciary</span> <span class="u-green">from </span><span class="u-blue-zig">the executive</span> <span class="u-green">in </span><span class="u-blue-zig">the public services</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 51</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. International Peace:</strong> <span class="u-blue-zig">The State</span> <span class="u-green">shall endeavour to</span>—
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Peace & Security:</strong> (a) <span class="u-green">promote </span><span class="u-blue-zig">international peace and security</span>;
+        </li>
+        <li>
+            <strong>3. Just Relations:</strong> (b) <span class="u-green">maintain </span><span class="u-blue-zig">just and honourable relations</span> <span class="u-green">between </span><span class="u-blue-zig">nations</span>;
+        </li>
+        <li>
+            <strong>4. International Law:</strong> (c) <span class="u-green">foster </span><span class="u-blue-zig">respect</span> <span class="u-green">for </span><span class="u-blue-zig">international law</span> <span class="u-green">and </span><span class="u-blue-zig">treaty obligations</span> <span class="u-green">in </span><span class="u-blue-zig">the dealings</span> <span class="u-green">of </span><span class="u-blue-zig">organised peoples</span> <span class="u-green">with </span><span class="u-blue-zig">one another</span>; <span class="u-green">and</span>
+        </li>
+        <li>
+            <strong>5. Dispute Arbitration:</strong> (d) <span class="u-green">encourage </span><span class="u-blue-zig">settlement</span> <span class="u-green">of </span><span class="u-blue-zig">international disputes</span> <span class="u-green">by </span><span class="u-blue-zig">arbitration</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">AMENDMENT</div>
+
+    <ul>
+        <li>
+            <strong>1. 42nd Amendment:</strong>
+            <ul>
+                <li><strong>a. Added Articles:</strong> <span class="u-blue-zig">Article 39(f)</span>, <span class="u-blue-zig">Article 39 A</span>, <span class="u-blue-zig">Article 43 A</span>, <span class="u-blue-zig">Article 48 A</span></li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. 44th Amendment:</strong>
+            <ul>
+                <li><strong>a. Added Clause:</strong> <span class="u-blue-zig">Article 38(2)</span></li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. 86th Amendment:</strong>
+            <ul>
+                <li><strong>a. Subject Change:</strong> <span class="u-green">Changed the subject of </span><span class="u-blue-zig">Article 45</span></li>
+            </ul>
+        </li>
+        <li>
+            <strong>4. 97th Amendment:</strong>
+            <ul>
+                <li><strong>a. Added Article:</strong> <span class="u-blue-zig">Article 43(B)</span></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="main-topic-header">SIGNIFICANCE</div>
+
+    <ul>
+        <li>
+            <strong>1. Vox Populi:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">are based on </span><span class="u-blue-zig">Vox Populi</span> (<span class="u-blue-zig">voice of the people</span>).
+        </li>
+        <li>
+            <strong>2. Welfare State:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">makes </span><span class="u-blue-zig">a responsibility</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">to develop </span><span class="u-blue-zig">the welfare state</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 88</div>
+</div>
+
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>3. Policy Framework:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">helps </span><span class="u-blue-zig">the government</span> <span class="u-green">to make </span><span class="u-blue-zig">policies and laws</span> <span class="u-green">for the purpose of securing </span><span class="u-blue-zig">justice and welfare</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span>.
+        </li>
+        <li>
+            <strong>4. Supplementary to FR:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">are supplementary to </span><span class="u-blue-zig">Fundamental Rights</span> <span class="u-green">which offers </span><span class="u-blue-zig">political rights</span> <span class="u-green">and </span><span class="u-blue-zig">other freedoms</span>.
+        </li>
+        <li>
+            <strong>5. Guiding Principles:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">ensures that </span><span class="u-blue-zig">every Government</span> <span class="u-green">will follow </span><span class="u-blue-zig">the set of principles</span> <span class="u-green">in the form of </span><span class="u-blue-zig">DPSP</span> <span class="u-green">while formulating </span><span class="u-blue-zig">its laws</span>.
+        </li>
+        <li>
+            <strong>6. Positive Directions:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">are </span><span class="u-blue-zig">positive directions</span> <span class="u-green">for </span><span class="u-blue-zig">the State</span> <span class="u-green">to secure </span><span class="u-blue-zig">social and economic justice</span>.
+        </li>
+        <li>
+            <strong>7. Court Interpretation:</strong> <span class="u-blue-zig">DPSP</span> <span class="u-green">provide </span><span class="u-blue-zig">useful information</span> <span class="u-green">to </span><span class="u-blue-zig">the courts</span> <span class="u-green">in interpreting </span><span class="u-blue-zig">the provisions</span> <span class="u-green">in </span><span class="u-blue-zig">the Constitution</span>
+        </li>
+    </ul>
+
+    <div class="main-topic-header">CRITICAL ANALYSIS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Abstract Directives:</strong> <span class="u-blue-zig">Non-justiciable and abstract</span> <span class="u-blue-zig">Directive Principles</span> <span class="u-green">which may be safely ignored by </span><span class="u-blue-zig">the legislator</span>...<span class="u-green">do not enhance </span><span class="u-blue-zig">the true prestige</span> <span class="u-green">of </span><span class="u-blue-zig">a written constitution</span>." <span class="u-red-zig">M. Anantnarayan</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Holy Wishes:</strong> <span class="u-blue-zig">Many critics</span> <span class="u-green">have called </span><span class="u-blue-zig">these Directive Principles</span> <span class="u-green">of </span><span class="u-blue-zig">State Policy</span> <span class="u-green">as not better than </span><span class="u-blue-zig">'New Year Greetings'</span>. <span class="u-green">Even </span><span class="u-blue-zig">the rationale</span> <span class="u-green">of inserting </span><span class="u-blue-zig">such high sounding promises</span> <span class="u-green">has been questioned</span>. <span class="u-green">It has been asserted that </span><span class="u-blue-zig">Directives</span> <span class="u-green">are in the form of </span><span class="u-blue-zig">holy wishes</span> <span class="u-green">having </span><span class="u-blue-zig">no legal sanction</span> <span class="u-green">behind </span><span class="u-blue-zig">them</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>3. Unenforceable Directives:</strong> <span class="u-blue-zig">These principles</span> <span class="u-green">are </span><span class="u-blue-zig">unenforceable directives</span>, <span class="u-blue-zig">these principles</span> <span class="u-green">do not carry </span><span class="u-blue-zig">any weight</span>. <span class="u-blue-zig">Their violation or non-realization</span> <span class="u-green">cannot be challenged in </span><span class="u-blue-zig">any court</span>.
+        </li>
+        <li>
+            <strong>4. No Time-Limit:</strong> <span class="u-blue-zig">The Constitution</span> <span class="u-green">does not make them </span><span class="u-blue-zig">justiciable</span> <span class="u-green">and neither fixes </span><span class="u-blue-zig">the time-limit</span> <span class="u-green">within which these are to be secured</span>. <span class="u-red-zig">T. Shah</span> <span class="u-green">describe it as </span><span class="u-blue-zig">a cheque payable</span> <span class="u-green">by </span><span class="u-blue-zig">the bank</span> <span class="u-green">at </span><span class="u-blue-zig">its convenience</span>.
+        </li>
+        <li>
+            <strong>5. Poorly Classified:</strong> <span class="u-blue-zig">These Directives</span> <span class="u-green">are neither properly classified nor </span><span class="u-green">logically arranged</span>. <span class="u-blue-zig">The declaration</span> <span class="u-green">mixes up </span><span class="u-blue-zig">relatively unimportant issues</span> <span class="u-green">with </span><span class="u-blue-zig">the most vital economic</span> <span class="u-green">and </span><span class="u-blue-zig">social questions</span>.
+        </li>
+        <li>
+            <strong>6. Vague Formulation:</strong> <span class="u-blue-zig">The formulation</span> <span class="u-green">of </span><span class="u-blue-zig">the Directive Principles</span> <span class="u-green">of </span><span class="u-blue-zig">State Policy</span> <span class="u-green">can hardly be considered </span><span class="u-blue-zig">inspiring</span>. <span class="u-green">It is </span><span class="u-blue-zig">both vague and repetitive</span>.
+        </li>
+        <li>
+            <strong>7. Pious Promises:</strong> <span class="u-blue-zig">Directive principles</span> <span class="u-green">are designed to serve as </span><span class="u-blue-zig">pious promises</span> <span class="u-green">for creating </span><span class="u-blue-zig">an impression</span> <span class="u-green">about </span><span class="u-blue-zig">the just and useful exercise</span> <span class="u-green">of </span><span class="u-blue-zig">the power of the state</span>. <span class="u-green">They aim to secure </span><span class="u-blue-zig">support</span> <span class="u-green">by making </span><span class="u-blue-zig">promises</span> <span class="u-green">and not through </span><span class="u-blue-zig">action</span>.
+        </li>
+        <li>
+            <strong>8. Foreign Foundations:</strong> <span class="u-blue-zig">The critics</span> <span class="u-green">criticize </span><span class="u-blue-zig">Part IV</span> <span class="u-green">also for the fact that </span><span class="u-blue-zig">most of the Directive Principles</span> <span class="u-green">incorporated in it are based on </span><span class="u-blue-zig">age-old and foreign</span> <span class="u-blue-zig">philosophical foundations</span> <span class="u-green">which essentially </span><span class="u-blue-zig">the foundations</span> <span class="u-green">of </span><span class="u-blue-zig">Fabian Socialism</span>.
+        </li>
+        <li>
+            <strong>9. Utopian Ideals:</strong> <span class="u-blue-zig">Some directives</span> <span class="u-green">can only be successfully executed in </span><span class="u-blue-zig">a utopian society</span>. <span class="u-green">They are therefore </span><span class="u-blue-zig">not ideal</span>.
+        </li>
+        <li>
+            <strong>10. Moral Promises:</strong> <span class="u-green">Gaining </span><span class="u-blue-zig">support</span> <span class="u-green">through </span><span class="u-blue-zig">these vague moral promises</span> <span class="u-green">and not through </span><span class="u-blue-zig">appropriate firm actions</span> <span class="u-green">makes it </span><span class="u-blue-zig">useless</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">11. Importance Upheld:</strong> <span class="u-green">However, despite </span><span class="u-blue-zig">the various criticisms</span>, <span class="u-blue-zig">the importance and significance</span> <span class="u-green">of </span><span class="u-blue-zig">the Directive Principle</span> <span class="u-green">of </span><span class="u-blue-zig">State Policy</span> <span class="u-green">cannot be undermined</span>.
+    </p>
+
+    <div class="page-number">Page 89</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="quote-box">
+        <span class="u-green">Being </span><span class="u-blue-zig">a part</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span>, <span class="u-blue-zig">Directive Principles</span> <span class="u-green">represent not </span><span class="u-blue-zig">the temporary will</span> <span class="u-green">of </span><span class="u-blue-zig">the majority</span>, <span class="u-green">but </span><span class="u-blue-zig">the deliberate wisdom</span> <span class="u-green">of </span><span class="u-blue-zig">the nation</span> <span class="u-green">expressed through </span><span class="u-blue-zig">the Constituent Assembly</span>.
+        <span class="quote-author">(Chief Justice Kania)</span>
+    </div>
+
+    <div class="main-topic-header">DPSP & FR</div>
+
+    <div class="image-placeholder" style="width:250px; height:200px;">DPSP & Fundamental Rights Comparison Diagram</div>
+
+    <div class="image-placeholder" style="width:250px; height:200px;">DPSP & Fundamental Rights Comparison Diagram</div>
+
+    <ul>
+        <li>
+            <strong>1. FR Superior:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">State of Madras v. Champakam</span> <span class="u-blue-zig">case</span> <span class="u-green">that </span><span class="u-blue-zig">the Fundamental rights</span> <span class="u-green">are superior to </span><span class="u-blue-zig">the DPSP</span> <span class="u-green">and </span><span class="u-blue-zig">the Fundamental Rights</span> <span class="u-green">under </span><span class="u-blue-zig">Part III</span> <span class="u-green">prevails over </span><span class="u-blue-zig">DPSP</span> <span class="u-green">in case of </span><span class="u-blue-zig">any conflict</span> <span class="u-green">between </span><span class="u-blue-zig">them</span>.
+        </li>
+        <li>
+            <strong>2. Golaknath Case:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">Golaknath</span> <span class="u-blue-zig">case</span> <span class="u-green">that </span><span class="u-blue-zig">the provisions</span> <span class="u-green">mentioned under </span><span class="u-blue-zig">Part III</span> <span class="u-green">cannot be undermined just to implement </span><span class="u-blue-zig">the provisions</span> <span class="u-green">given under </span><span class="u-blue-zig">Part IV</span>.
+        </li>
+        <li>
+            <strong>3. Minerva Mills Case:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">Minerva Mills</span> <span class="u-blue-zig">case</span> <span class="u-green">that </span>—
+        </li>
+        <li>
+            <strong>4. Article 31C Restored:</strong> <span class="u-green">It restored </span><span class="u-blue-zig">Article 31C</span> <span class="u-green">to </span><span class="u-blue-zig">its pre-1976 position</span>. <span class="u-blue-zig">A law</span> <span class="u-green">would be protected by </span><span class="u-blue-zig">Article 31C</span> <span class="u-green">only in the case if it has been made to implement </span><span class="u-blue-zig">the Article 39 (b)</span> <span class="u-green">and </span><span class="u-blue-zig">Article39 (c)</span> <span class="u-green">of </span><span class="u-blue-zig">the DPSP</span> <span class="u-green">and not any of </span><span class="u-blue-zig">the other directive</span> <span class="u-green">included in </span><span class="u-blue-zig">Part IV</span>.
+        </li>
+        <li>
+            <strong>5. Fine Balance:</strong> <span class="u-green">There is </span><span class="u-blue-zig">a fine balance</span> <span class="u-green">in </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">between </span><span class="u-blue-zig">the DPSP</span> <span class="u-green">and </span><span class="u-blue-zig">the Fundamental Rights</span>, <span class="u-green">which should be adhered by </span><span class="u-blue-zig">the Courts</span> <span class="u-green">without placing any of them as </span><span class="u-blue-zig">superior</span>.
+        </li>
+        <li>
+            <strong>6. Complementary Rights:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">Unnikrshanan</span> <span class="u-blue-zig">case</span> <span class="u-green">that </span><span class="u-blue-zig">the Fundamental Rights</span> <span class="u-green">and </span><span class="u-blue-zig">Directive Principles</span> <span class="u-green">are not </span><span class="u-blue-zig">exclusive</span> <span class="u-green">but </span><span class="u-blue-zig">complementary to each other</span>. <span class="u-blue-zig">The Court</span> <span class="u-green">said that </span><span class="u-blue-zig">the Fundamental Rights</span> <span class="u-green">are the ways through which </span><span class="u-blue-zig">the goals</span> <span class="u-green">given in </span><span class="u-blue-zig">Part IV</span> <span class="u-green">can be achieved</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 90</div>
+</div>
+
+</body>
+</html>

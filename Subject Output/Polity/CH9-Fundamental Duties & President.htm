@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH9 - Fundamental Duties & The President | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH9- Fundamental Duties &amp; The President</h1>
+        <p class="subtitle">Part IVA — Article 51A | Part V</p>
+    </header>
+
+    <div class="main-topic-header">FUNDAMENTAL DUTIES</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Basis:</strong> PART IVA
+    </p>
+
+    <div class="section-header">ARTICLE 51 A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. 42nd Amendment:</strong> <span class="u-green">Added by </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">Forty-second Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1976</span>
+    </p>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Gandhi</span> <span class="u-green">said</span>, <span class="u-green">Begin with </span><span class="u-blue-zig">a Charter of Duties</span> <span class="u-green">of </span><span class="u-blue-zig">man</span>, <span class="u-green">and</span>, <span class="u-green">I promise</span>, <span class="u-blue-zig">the rights</span> <span class="u-green">will follow as </span><span class="u-blue-zig">spring</span> <span class="u-green">follows </span><span class="u-blue-zig">winter</span>.
+        <span class="quote-author">— Gandhi</span>
+    </div>
+
+    <ul>
+        <li>
+            <strong>1. Rights &amp; Duties:</strong> <span class="u-blue-zig">Rights and duties</span> <span class="u-green">are </span><span class="u-blue-zig">two sides</span> <span class="u-green">of </span><span class="u-blue-zig">the same coin</span>.
+        </li>
+        <li>
+            <strong>2. Source of Right:</strong> <span class="u-red-zig">Gandhi ji</span> <span class="u-green">said that </span><span class="u-blue-zig">the true source</span> <span class="u-green">of </span><span class="u-blue-zig">right</span> <span class="u-green">is </span><span class="u-blue-zig">duty</span>.
+        </li>
+        <li>
+            <strong>3. Gandhian Constitution:</strong> <span class="u-blue-zig">"Gandhian Constitution</span> <span class="u-green">For </span><span class="u-blue-zig">Free India"</span>, <span class="u-green">by </span><span class="u-red-zig">Shri S.N. Aggrawal</span> <span class="u-green">has </span><span class="u-blue-zig">a full Chapter</span> <span class="u-green">on </span><span class="u-blue-zig">Fundamental Rights and Duties</span>.
+        </li>
+        <li>
+            <strong>4. Constituent Assembly:</strong> <span class="u-blue-zig">A suggestion</span> <span class="u-green">to define </span><span class="u-blue-zig">the duties</span> <span class="u-green">of </span><span class="u-blue-zig">the citizen</span> <span class="u-green">was mooted by </span><span class="u-red-zig">Dr. Rajendra Prasad</span> <span class="u-green">in </span><span class="u-blue-zig">constituent assembly</span>.
+        </li>
+        <li>
+            <strong>5. UDHR Article 29:</strong> <span class="u-blue-zig">Article 29 (1)</span> <span class="u-green">of </span><span class="u-blue-zig">Universal Declaration</span> <span class="u-green">of </span><span class="u-blue-zig">Human Rights</span> (<span class="u-red-zig">1948</span>), <span class="u-green">stated that </span><span class="u-blue-zig">Everyone has duties</span> <span class="u-green">to </span><span class="u-blue-zig">the community</span> <span class="u-green">in which </span><span class="u-blue-zig">halone the free</span> <span class="u-green">and </span><span class="u-blue-zig">full development</span> <span class="u-green">of </span><span class="u-blue-zig">his personality</span> <span class="u-green">is </span><span class="u-blue-zig">possible</span>.
+        </li>
+        <li>
+            <strong>6. Legal Community:</strong> <span class="u-red-zig">Shri H.R.Gokhale</span>, <span class="u-green">exhorted </span><span class="u-blue-zig">the legal community</span> <span class="u-green">to consider </span><span class="u-blue-zig">the possibility</span> <span class="u-green">of introducing </span><span class="u-blue-zig">a Chapter</span> <span class="u-green">on </span><span class="u-blue-zig">Fundamental Duties</span> <span class="u-green">in </span><span class="u-blue-zig">the Indian Constitution</span>.
+        </li>
+        <li>
+            <strong>7. Swaran Singh Committee:</strong> <span class="u-blue-zig">Government</span> <span class="u-green">appointed </span><span class="u-blue-zig">the Swaran Singh Committee</span>.
+        </li>
+        <li>
+            <strong>8. Committee Recommendation:</strong> <span class="u-blue-zig">The Swaran Singh Committee</span> <span class="u-green">recommended </span><span class="u-blue-zig">inclusion</span> <span class="u-green">of </span><span class="u-blue-zig">the following eight</span> <span class="u-blue-zig">Fundamental Duties</span> <span class="u-green">for </span><span class="u-blue-zig">incorporation</span> <span class="u-green">into </span><span class="u-blue-zig">the Constitution</span>.
+        </li>
+        <li>
+            <strong>9. Obligatory Nature:</strong> <span class="u-blue-zig">The duties</span> <span class="u-green">proposed by </span><span class="u-blue-zig">the Committee</span> <span class="u-green">were to be </span><span class="u-blue-zig">obligatory in nature</span>.
+        </li>
+        <li>
+            <strong>10. Non-Enforceable:</strong> <span class="u-blue-zig">The duties</span> <span class="u-green">were not made </span><span class="u-blue-zig">enforceable</span> <span class="u-green">in </span><span class="u-blue-zig">a Court of Law</span>.
+        </li>
+        <li>
+            <strong>11. Socio-Economic Revolution:</strong> <span class="u-blue-zig">The objects and reasons</span> <span class="u-green">of </span><span class="u-blue-zig">the Fundamental duties</span> <span class="u-green">was intended to achieve </span><span class="u-blue-zig">the objective</span> <span class="u-green">of </span><span class="u-blue-zig">socio-economic revolution</span>, <span class="u-green">which </span><span class="u-green">end </span><span class="u-blue-zig">poverty and ignorance</span> <span class="u-green">and </span><span class="u-blue-zig">disease and inequality</span> <span class="u-green">of </span><span class="u-blue-zig">opportunity</span>.
+        </li>
+        <li>
+            <strong>12. Gokhale's Description:</strong> <span class="u-red-zig">Shri H.R.Gokhale</span> <span class="u-green">described </span><span class="u-blue-zig">the Chapter</span> <span class="u-green">as </span><span class="u-blue-zig">"by far the most fundamental</span> <span class="u-green">and </span><span class="u-blue-zig">very important</span> <span class="u-green">for </span><span class="u-blue-zig">the purpose</span> <span class="u-green">of </span><span class="u-blue-zig">every generation</span>, <span class="u-blue-zig">the present</span> <span class="u-green">as well as </span><span class="u-blue-zig">the future"</span>.
+        </li>
+        <li>
+            <strong>13. Noble Principles:</strong> <span class="u-blue-zig">The Fundamental Duties</span> <span class="u-green">contain </span><span class="u-blue-zig">noble principles</span>.
+        </li>
+        <li>
+            <strong>14. Citizen Obligation:</strong> <span class="u-blue-zig">The Fundamental Duties</span> <span class="u-green">is </span><span class="u-blue-zig">obligatory</span> <span class="u-green">on the part of </span><span class="u-blue-zig">every citizen</span> <span class="u-green">who seeks </span><span class="u-blue-zig">the enforcement</span> <span class="u-green">of </span><span class="u-blue-zig">his Fundamental Rights</span> <span class="u-green">not to violate </span><span class="u-blue-zig">the Fundamental Rights</span> <span class="u-green">of </span><span class="u-blue-zig">any other person</span>.
+        </li>
+        <li>
+            <strong>15. DPSP &amp; Rights:</strong> <span class="u-blue-zig">Our Constitution</span> <span class="u-green">was notable for </span><span class="u-green">highlighting </span><span class="u-blue-zig">Directive Principles</span> <span class="u-green">along with </span><span class="u-blue-zig">Fundamental Rights</span>. <span class="u-blue-zig">Neither</span> <span class="u-green">can bear </span><span class="u-blue-zig">flower and fruit</span> <span class="u-green">without </span><span class="u-blue-zig">performance</span> <span class="u-green">of </span><span class="u-blue-zig">the duties"</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 91</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 51A</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Citizen's Duty:</strong> <span class="u-green">It shall be </span><span class="u-blue-zig">the duty</span> <span class="u-green">of </span><span class="u-blue-zig">every citizen of India</span>—
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Constitutional Respect:</strong> (a) <span class="u-green">to abide by </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">and respect </span><span class="u-blue-zig">its ideals and institutions</span>, <span class="u-blue-zig">the National Flag</span> <span class="u-green">and </span><span class="u-blue-zig">the National Anthem</span>;
+        </li>
+        <li>
+            <strong>3. National Struggle Ideals:</strong> (b) <span class="u-green">to cherish and follow </span><span class="u-blue-zig">the noble ideals</span> <span class="u-green">which inspired </span><span class="u-blue-zig">our national struggle</span> <span class="u-green">for </span><span class="u-blue-zig">freedom</span>;
+        </li>
+        <li>
+            <strong>4. Sovereignty &amp; Unity:</strong> (c) <span class="u-green">to uphold and protect </span><span class="u-blue-zig">the sovereignty, unity</span> <span class="u-green">and </span><span class="u-blue-zig">integrity of India</span>;
+        </li>
+        <li>
+            <strong>5. National Defence:</strong> (d) <span class="u-green">to defend </span><span class="u-blue-zig">the country</span> <span class="u-green">and render </span><span class="u-blue-zig">national service</span> <span class="u-green">when called upon </span><span class="u-green">to do so</span>;
+        </li>
+        <li>
+            <strong>6. Common Brotherhood:</strong> (e) <span class="u-green">to promote </span><span class="u-blue-zig">harmony</span> <span class="u-green">and </span><span class="u-blue-zig">the spirit</span> <span class="u-green">of </span><span class="u-blue-zig">common brotherhood</span> <span class="u-green">amongst </span><span class="u-blue-zig">all the people of India</span> <span class="u-green">transcending </span><span class="u-blue-zig">religious, linguistic</span> <span class="u-green">and </span><span class="u-blue-zig">regional or sectional diversities</span>; <span class="u-green">to renounce </span><span class="u-blue-zig">practices derogatory</span> <span class="u-green">to </span><span class="u-blue-zig">the dignity of women</span>;
+        </li>
+        <li>
+            <strong>7. Composite Culture:</strong> (f) <span class="u-green">to value and preserve </span><span class="u-blue-zig">the rich heritage</span> <span class="u-green">of </span><span class="u-blue-zig">our composite culture</span>;
+        </li>
+        <li>
+            <strong>8. Natural Environment:</strong> (g) <span class="u-green">to protect and improve </span><span class="u-blue-zig">the natural environment</span> <span class="u-green">including </span><span class="u-blue-zig">forests, lakes, rivers</span> <span class="u-green">and </span><span class="u-blue-zig">wild life</span>, <span class="u-green">and to have </span><span class="u-blue-zig">compassion</span> <span class="u-green">for </span><span class="u-blue-zig">living creatures</span>;
+        </li>
+        <li>
+            <strong>9. Scientific Temper:</strong> (h) <span class="u-green">to develop </span><span class="u-blue-zig">the scientific temper</span>, <span class="u-blue-zig">humanism</span> <span class="u-green">and </span><span class="u-blue-zig">the spirit of inquiry</span> <span class="u-green">and </span><span class="u-blue-zig">reform</span>;
+        </li>
+        <li>
+            <strong>10. Public Property:</strong> (i) <span class="u-green">to safeguard </span><span class="u-blue-zig">public property</span> <span class="u-green">and to abjure </span><span class="u-blue-zig">violence</span>;
+        </li>
+        <li>
+            <strong>11. Collective Excellence:</strong> (j) <span class="u-green">to strive towards </span><span class="u-blue-zig">excellence</span> <span class="u-green">in </span><span class="u-blue-zig">all spheres</span> <span class="u-green">of </span><span class="u-blue-zig">individual and collective activity</span> <span class="u-green">so that </span><span class="u-blue-zig">the nation</span> <span class="u-green">constantly rises to </span><span class="u-blue-zig">higher levels</span> <span class="u-green">of </span><span class="u-blue-zig">endeavour and achievement</span>;
+        </li>
+        <li>
+            <strong>12. Child Education:</strong> (k) <span class="u-green">who is </span><span class="u-blue-zig">a parent or guardian</span> <span class="u-green">to provide </span><span class="u-blue-zig">opportunities</span> <span class="u-green">for </span><span class="u-blue-zig">education</span> <span class="u-green">to </span><span class="u-blue-zig">his child</span> <span class="u-green">or</span>, <span class="u-green">as the case may be</span>, <span class="u-blue-zig">ward</span> <span class="u-green">between </span><span class="u-blue-zig">the age</span> <span class="u-green">of </span><span class="u-blue-zig">six and fourteen years</span>. <span class="u-green">Added by </span><span class="u-blue-zig">the Constitution</span> <span class="u-blue-zig">Eighty-sixth Amendment Act</span>, <span class="u-red-zig">2002</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 92</div>
+</div>
+
+<div class="pdf-page">
+
+   <header>
+        <h1>CH9(b)- The President</h1>
+        <p class="subtitle">Part V</p>
+    </header>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Provision:</strong> PART V
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. President of India:</strong> <span class="u-green">There shall be </span><span class="u-blue-zig">a President of India</span>. (<span class="u-blue-zig">Article 52</span>)
+    </p>
+
+    <div class="section-header">ARTICLE 53</div>
+
+    <ul>
+        <li>
+            <strong>1. Executive Power:</strong> (1) <span class="u-blue-zig">The executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall be vested in </span><span class="u-blue-zig">the President</span> <span class="u-green">and shall be exercised by </span><span class="u-blue-zig">him</span> <span class="u-green">either </span><span class="u-blue-zig">directly</span> <span class="u-green">or through </span><span class="u-blue-zig">officers subordinate to him</span> <span class="u-green">in accordance with </span><span class="u-blue-zig">this Constitution</span>.
+        </li>
+        <li>
+            <strong>2. Defence Command:</strong> (2) <span class="u-green">Without prejudice to </span><span class="u-blue-zig">the generality</span> <span class="u-green">of </span><span class="u-blue-zig">the foregoing provision</span>, <span class="u-blue-zig">the supreme command</span> <span class="u-green">of </span><span class="u-blue-zig">the Defence Forces</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall be vested in </span><span class="u-blue-zig">the President</span> <span class="u-green">and </span><span class="u-blue-zig">the exercise thereof</span> <span class="u-green">shall be regulated by </span><span class="u-blue-zig">law</span>.
+        </li>
+        <li>
+            <strong>3. Limitation Clause:</strong> (3) <span class="u-blue-zig">Nothing in this article</span> <span class="u-green">shall</span>—
+            <ul>
+                <li>
+                    <strong>a. State Functions:</strong> (a) <span class="u-green">be deemed to transfer to </span><span class="u-blue-zig">the President</span> <span class="u-blue-zig">any functions</span> <span class="u-green">conferred by </span><span class="u-blue-zig">any existing law</span> <span class="u-green">on </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-blue-zig">any State</span> <span class="u-green">or </span><span class="u-blue-zig">other authority</span>; <span class="u-green">or</span>
+                </li>
+                <li>
+                    <strong>b. Parliament Powers:</strong> (b) <span class="u-green">prevent </span><span class="u-blue-zig">Parliament</span> <span class="u-green">from conferring by </span><span class="u-blue-zig">law</span> <span class="u-blue-zig">functions</span> <span class="u-green">on </span><span class="u-blue-zig">authorities other</span> <span class="u-green">than </span><span class="u-blue-zig">the President</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">AS A TITULAR HEAD</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Real Position:</strong> <span class="u-blue-zig">The real position</span> <span class="u-green">of </span><span class="u-blue-zig">the President of India</span> <span class="u-green">is clouded with </span><span class="u-blue-zig">different suspects</span> <span class="u-green">as </span><span class="u-blue-zig">a mere figure head</span>, <span class="u-blue-zig">titular head</span>, <span class="u-blue-zig">rubber stamp</span> <span class="u-green">or </span><span class="u-blue-zig">golden zero</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Head of State:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">is </span><span class="u-blue-zig">the head</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>, <span class="u-green">not of </span><span class="u-blue-zig">the Government</span>.
+        </li>
+        <li>
+            <strong>3. Article 53 Provision:</strong> <span class="u-blue-zig">Article 53</span> <span class="u-green">clearly states that </span><span class="u-blue-zig">"the executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall be vested in </span><span class="u-blue-zig">the President</span> <span class="u-green">which means that </span><span class="u-blue-zig">the Parliament</span> <span class="u-green">has the power to confer </span><span class="u-green">only </span><span class="u-blue-zig">the functions</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">on </span><span class="u-blue-zig">any other authorities</span> <span class="u-green">and not </span><span class="u-blue-zig">the powers</span>.
+        </li>
+        <li>
+            <strong>4. Not Presidential System:</strong> <span class="u-green">Does not have </span><span class="u-blue-zig">the Presidential form</span> <span class="u-green">of </span><span class="u-blue-zig">Government</span>.
+        </li>
+        <li>
+            <strong>5. British Tradition:</strong> <span class="u-blue-zig">British tradition</span> <span class="u-green">still prevails in </span><span class="u-blue-zig">our constitution</span>.
+        </li>
+        <li>
+            <strong>6. Titular Head Status:</strong> <span class="u-blue-zig">The last but not the least</span> <span class="u-green">is that </span><span class="u-blue-zig">the President</span> <span class="u-green">is </span><span class="u-blue-zig">Constitutionally bound</span> <span class="u-green">to act on </span><span class="u-blue-zig">the advise</span> <span class="u-green">of </span><span class="u-blue-zig">the Council of Ministers</span> <span class="u-green">and has </span><span class="u-blue-zig">few discretionary powers</span>, <span class="u-blue-zig">he/she</span> <span class="u-green">is referred to as </span><span class="u-blue-zig">the titular head</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. 42nd Amendment:</strong> <span class="u-blue-zig">The Constitution</span> <span class="u-blue-zig">42nd Amendment Act</span>, <span class="u-red-zig">1976</span> <span class="u-green">provided in </span><span class="u-blue-zig">article 74</span> <span class="u-green">that </span><span class="u-blue-zig">"there shall be</span> <span class="u-blue-zig">a Council of Ministers</span> <span class="u-green">with </span><span class="u-blue-zig">the Prime Minister</span> <span class="u-green">at </span><span class="u-blue-zig">the head</span> <span class="u-green">to aid and advise </span><span class="u-blue-zig">the President</span> <span class="u-green">who shall</span>, <span class="u-green">in the exercise of </span><span class="u-blue-zig">his functions</span>, <span class="u-green">act in accordance with </span><span class="u-blue-zig">such advice."</span> <span class="u-green">That is how </span><span class="u-blue-zig">the rubber stamp-theory</span> <span class="u-green">gained </span><span class="u-blue-zig">currency</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. 44th Amendment:</strong> <span class="u-green">By </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">Forty-fourth Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1978</span> <span class="u-green">provided that </span><span class="u-blue-zig">the President</span> <span class="u-green">may require </span><span class="u-blue-zig">the Council of Ministers</span> <span class="u-green">to reconsider </span><span class="u-blue-zig">such advice</span>, <span class="u-green">either </span><span class="u-blue-zig">generally</span> <span class="u-green">or </span><span class="u-blue-zig">otherwise</span>, <span class="u-green">and </span><span class="u-blue-zig">the President</span> <span class="u-green">shall act in accordance with </span><span class="u-blue-zig">the advice tendered</span> <span class="u-green">after </span><span class="u-blue-zig">such reconsideration</span>.
+    </p>
+
+    <div class="page-number">Page 93</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">DISCRETIONARY POWERS</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. De Jure Head:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">is </span><span class="u-blue-zig">the De Jure head</span> <span class="u-green">of </span><span class="u-blue-zig">the state</span> <span class="u-green">therefore it is </span><span class="u-blue-zig">his responsibility</span> <span class="u-green">to </span><span class="u-blue-zig">preserve, protect and defend</span> <span class="u-blue-zig">the Constitution of India</span>. <span class="u-blue-zig">He</span> <span class="u-green">is not </span><span class="u-blue-zig">a ceremonial head</span> <span class="u-green">so </span><span class="u-blue-zig">all important decisions</span> <span class="u-green">are taken in the name of </span><span class="u-blue-zig">the President</span>, <span class="u-green">though most of these </span><span class="u-green">will be based on </span><span class="u-blue-zig">the binding advice</span> <span class="u-green">given by </span><span class="u-blue-zig">Council of Ministers</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Pocket Veto:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">is at his discretion to </span><span class="u-green">give </span><span class="u-blue-zig">his assent</span>, <span class="u-green">or withhold </span><span class="u-blue-zig">his assent</span> <span class="u-green">for </span><span class="u-blue-zig">an indefinite period</span> <span class="u-green">or return </span><span class="u-blue-zig">the Bill</span> <span class="u-green">to </span><span class="u-blue-zig">the House</span> <span class="u-green">for </span><span class="u-blue-zig">reconsideration</span> (<span class="u-green">except in case of </span><span class="u-blue-zig">a money bill</span>). <span class="u-blue-zig">The power of pocket veto</span> (<span class="u-blue-zig">article 111</span>) <span class="u-green">was used by </span><span class="u-blue-zig">former President</span> <span class="u-red-zig">Giani Zail Singh</span> <span class="u-green">in </span><span class="u-red-zig">1986</span> <span class="u-green">when he refused to grant </span><span class="u-blue-zig">assent</span> <span class="u-green">to </span><span class="u-blue-zig">the Post Office</span> (<span class="u-blue-zig">Amendment</span>) <span class="u-blue-zig">Bill</span>.
+        </li>
+        <li>
+            <strong>3. Article 78 Power:</strong> <span class="u-blue-zig">Article 78</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">empowers </span><span class="u-blue-zig">the President</span> <span class="u-green">to seek </span><span class="u-blue-zig">information</span> <span class="u-green">regarding </span><span class="u-blue-zig">the affairs</span> <span class="u-green">of </span><span class="u-blue-zig">the Union Government</span> <span class="u-green">from </span><span class="u-blue-zig">the Prime Minister</span>.
+        </li>
+        <li>
+            <strong>4. Government Formation:</strong> <span class="u-green">When </span><span class="u-blue-zig">no political party</span> <span class="u-green">or </span><span class="u-blue-zig">a coalition of parties</span> <span class="u-green">assumes </span><span class="u-blue-zig">a majority</span> <span class="u-green">in </span><span class="u-blue-zig">the Lok Sabha</span> <span class="u-green">post </span><span class="u-blue-zig">general elections</span>, <span class="u-blue-zig">he</span> <span class="u-green">may exercise </span><span class="u-blue-zig">his discretion</span> <span class="u-green">in selecting </span><span class="u-blue-zig">someone</span> <span class="u-green">who in his opinion </span><span class="u-green">will be able to form </span><span class="u-blue-zig">a stable government</span>.
+        </li>
+        <li>
+            <strong>5. Dinesh Chandra Case:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">Dinesh Chandra</span> <span class="u-blue-zig">case</span> <span class="u-green">that to argue </span><span class="u-blue-zig">pleasure</span> <span class="u-green">could be interpreted in </span><span class="u-blue-zig">Art.75(2)</span> <span class="u-green">to mean </span><span class="u-blue-zig">the President</span> <span class="u-green">can dismiss </span><span class="u-blue-zig">any minister</span> <span class="u-green">at </span><span class="u-blue-zig">any time</span>, <span class="u-green">at </span><span class="u-blue-zig">his will</span>.
+        </li>
+        <li>
+            <strong>6. PM Succession:</strong> <span class="u-green">When </span><span class="u-blue-zig">a Prime Minister</span> <span class="u-green">in </span><span class="u-blue-zig">office</span> <span class="u-green">dies suddenly and </span><span class="u-green">there is </span><span class="u-blue-zig">no successor</span> <span class="u-green">to replace </span><span class="u-blue-zig">him</span>, <span class="u-blue-zig">the President</span> <span class="u-green">has to take charge in </span><span class="u-blue-zig">the selection and appointment</span> <span class="u-green">of </span><span class="u-blue-zig">the next Prime Minister</span> (<span class="u-red-zig">Rajeev Gandhi</span> <span class="u-green">by </span><span class="u-red-zig">Zail Singh</span>).
+        </li>
+        <li>
+            <strong>7. Caretaker Government:</strong> <span class="u-blue-zig">The president</span> <span class="u-green">wields </span><span class="u-blue-zig">a major responsibility</span> <span class="u-green">in taking </span><span class="u-blue-zig">important administrative decisions</span> <span class="u-green">in the governance of </span><span class="u-blue-zig">a caretaker government</span>.
+        </li>
+        <li>
+            <strong>8. House Dissolution:</strong> <span class="u-green">When </span><span class="u-blue-zig">a Council of Ministers</span> <span class="u-green">loses </span><span class="u-blue-zig">majority</span> <span class="u-green">in </span><span class="u-blue-zig">the Lok Sabha</span>, <span class="u-green">it is </span><span class="u-blue-zig">the discretion</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">to decide if </span><span class="u-blue-zig">the house</span> <span class="u-green">should be dissolved </span><span class="u-green">or </span><span class="u-blue-zig">not</span>.
+        </li>
+        <li>
+            <strong>9. Summoning Houses:</strong> <span class="u-green">According to </span><span class="u-blue-zig">Article 85</span>, <span class="u-blue-zig">the President</span> <span class="u-green">enjoys </span><span class="u-blue-zig">the discretion</span> <span class="u-green">of </span><span class="u-blue-zig">summoning and proroguing</span> <span class="u-green">both </span><span class="u-blue-zig">the Houses</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">10. Executive Check:</strong> <span class="u-blue-zig">The discretionary powers</span> <span class="u-green">vested with </span><span class="u-blue-zig">the President</span> <span class="u-green">empower him with </span><span class="u-blue-zig">the authority</span> <span class="u-green">to check </span><span class="u-blue-zig">the arbitrariness</span> <span class="u-green">of </span><span class="u-blue-zig">the executive</span> <span class="u-green">and wield </span><span class="u-blue-zig">a substantial amount</span> <span class="u-green">of </span><span class="u-blue-zig">control over them</span> <span class="u-green">thereby protecting </span><span class="u-blue-zig">the interests</span> <span class="u-green">of </span><span class="u-blue-zig">the vast majority</span> <span class="u-green">in </span><span class="u-blue-zig">the country</span> <span class="u-green">and fulfilling </span><span class="u-blue-zig">the responsibility</span> <span class="u-green">of </span><span class="u-blue-zig">a true leader</span>.
+    </p>
+
+    <div class="section-header">IMMUNITIES TO THE PRESIDENT (ARTICLE - 361)</div>
+
+    <ul>
+        <li>
+            <strong>1. Good Faith Actions:</strong> <span class="u-blue-zig">The actions taken</span> <span class="u-green">in </span><span class="u-blue-zig">good faith</span>, <span class="u-green">in exercise of </span><span class="u-blue-zig">powers</span> <span class="u-green">or </span><span class="u-blue-zig">performance of functions</span>, <span class="u-green">by </span><span class="u-blue-zig">the President</span> <span class="u-green">can not be challenged in </span><span class="u-blue-zig">any court</span>.
+        </li>
+        <li>
+            <strong>2. Civil Suit Immunity:</strong> <span class="u-blue-zig">No civil suit</span> <span class="u-green">can be instituted against </span><span class="u-blue-zig">him</span> <span class="u-green">in </span><span class="u-blue-zig">any court</span> <span class="u-green">either in </span><span class="u-blue-zig">personal capacity</span> <span class="u-green">or in </span><span class="u-blue-zig">official capacity</span>.
+        </li>
+        <li>
+            <strong>3. Criminal Immunity:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">is not liable for </span><span class="u-blue-zig">any criminal proceedings</span> <span class="u-green">in </span><span class="u-blue-zig">existing matters</span> <span class="u-green">or in </span><span class="u-blue-zig">future matter</span> <span class="u-green">during </span><span class="u-blue-zig">he holds the office</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>.
+        </li>
+        <li>
+            <strong>4. Writ Immunity:</strong> <span class="u-blue-zig">No writ</span> <span class="u-green">of </span><span class="u-blue-zig">Mandamus</span> <span class="u-green">or </span><span class="u-blue-zig">Quo Warranto</span> <span class="u-green">can be issued against </span><span class="u-blue-zig">him</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 94</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ELECTION</div>
+
+    <div class="section-header">ARTICLE 54</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Electoral College:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">shall be elected by </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">an electoral college</span> <span class="u-green">consisting of</span>—
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Parliament Members:</strong> (a) <span class="u-blue-zig">the elected members</span> <span class="u-green">of </span><span class="u-blue-zig">both Houses of Parliament</span>; <span class="u-green">and</span>
+        </li>
+        <li>
+            <strong>3. State Assembly Members:</strong> (b) <span class="u-blue-zig">the elected members</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assemblies</span> <span class="u-green">of </span><span class="u-blue-zig">the States</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. 70th Amendment:</strong> (<span class="u-green">In this article and in </span><span class="u-blue-zig">article 55</span>, <span class="u-blue-zig">"State"</span> <span class="u-green">includes </span><span class="u-blue-zig">the National Capital Territory</span> <span class="u-green">of </span><span class="u-red-zig">Delhi</span> <span class="u-green">and </span><span class="u-blue-zig">the Union territory</span> <span class="u-green">of </span><span class="u-red-zig">Pondicherry</span>, <span class="u-green">by </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">Seventieth Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1992</span>).
+    </p>
+
+    <div class="section-header">ARTICLE 55</div>
+
+    <ul>
+        <li>
+            <strong>1. Uniformity Principle:</strong> (1) <span class="u-green">As far as </span><span class="u-blue-zig">practicable</span>, <span class="u-green">there shall be </span><span class="u-blue-zig">uniformity</span> <span class="u-green">in </span><span class="u-blue-zig">the scale of representation</span> <span class="u-green">of </span><span class="u-blue-zig">the different States</span> <span class="u-green">at </span><span class="u-blue-zig">the election</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>.
+        </li>
+        <li>
+            <strong>2. Parity Formula:</strong> (2) <span class="u-green">For the purpose of </span><span class="u-green">securing </span><span class="u-blue-zig">such uniformity</span> <span class="u-green">among </span><span class="u-blue-zig">the States inter se</span> <span class="u-green">as well as </span><span class="u-blue-zig">parity</span> <span class="u-green">between </span><span class="u-blue-zig">the States as a whole</span> <span class="u-green">and </span><span class="u-blue-zig">the Union</span>, <span class="u-blue-zig">the number of votes</span> <span class="u-green">which </span><span class="u-blue-zig">each elected member</span> <span class="u-green">of </span><span class="u-blue-zig">Parliament</span> <span class="u-green">and of </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">each State</span> <span class="u-green">is entitled to cast at </span><span class="u-blue-zig">such election</span> <span class="u-green">shall be determined in </span><span class="u-blue-zig">the following manner</span>:—
+            <ul>
+                <li>
+                    <strong>a. MLA Vote Value:</strong> (a) <span class="u-blue-zig">every elected member</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">shall have </span><span class="u-blue-zig">as many votes</span> <span class="u-green">as there are </span><span class="u-blue-zig">multiples of one thousand</span> <span class="u-green">in </span><span class="u-blue-zig">the quotient</span> <span class="u-green">obtained by dividing </span><span class="u-blue-zig">the population</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">by </span><span class="u-blue-zig">the total number</span> <span class="u-green">of </span><span class="u-blue-zig">the elected members</span> <span class="u-green">of </span><span class="u-blue-zig">the Assembly</span>;
+                </li>
+                <li>
+                    <strong>b. Remainder Rule:</strong> (b) <span class="u-green">if</span>, <span class="u-green">after taking </span><span class="u-blue-zig">the said multiples</span> <span class="u-green">of </span><span class="u-blue-zig">one thousand</span>, <span class="u-blue-zig">the remainder</span> <span class="u-green">is not less than </span><span class="u-blue-zig">five hundred</span>, <span class="u-green">then </span><span class="u-blue-zig">the vote</span> <span class="u-green">of </span><span class="u-blue-zig">each member</span> <span class="u-green">referred to in </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">shall be further </span><span class="u-green">increased by </span><span class="u-blue-zig">one</span>;
+                </li>
+                <li>
+                    <strong>c. MP Vote Value:</strong> (c) <span class="u-blue-zig">each elected member</span> <span class="u-green">of </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">shall have </span><span class="u-blue-zig">such number of votes</span> <span class="u-green">as may be obtained by </span><span class="u-green">dividing </span><span class="u-blue-zig">the total number of votes</span> <span class="u-green">assigned to </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislative Assemblies</span> <span class="u-green">of </span><span class="u-blue-zig">the States</span> <span class="u-green">under </span><span class="u-blue-zig">sub-clauses (a) and (b)</span> <span class="u-green">by </span><span class="u-blue-zig">the total number</span> <span class="u-green">of </span><span class="u-blue-zig">the elected members</span> <span class="u-green">of </span><span class="u-blue-zig">both Houses of Parliament</span>, <span class="u-blue-zig">fractions exceeding one half</span> <span class="u-green">being counted as </span><span class="u-blue-zig">one</span> <span class="u-green">and </span><span class="u-blue-zig">other fractions</span> <span class="u-green">being </span><span class="u-blue-zig">disregarded</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. Proportional Representation:</strong> (3) <span class="u-blue-zig">The election</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">shall be held in </span><span class="u-green">accordance with </span><span class="u-blue-zig">the system</span> <span class="u-green">of </span><span class="u-blue-zig">proportional representation</span> <span class="u-green">by means of </span><span class="u-blue-zig">the single transferable vote</span> <span class="u-green">and </span><span class="u-blue-zig">the voting</span> <span class="u-green">at </span><span class="u-blue-zig">such election</span> <span class="u-green">shall be by </span><span class="u-blue-zig">secret ballot</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Population Explanation:</strong> (<span class="u-green">In this article</span>, <span class="u-blue-zig">the expression</span> <span class="u-blue-zig">"population"</span> <span class="u-green">means </span><span class="u-blue-zig">the population</span> <span class="u-green">as ascertained at </span><span class="u-blue-zig">the last preceding census</span> <span class="u-green">of which </span><span class="u-blue-zig">the relevant figures</span> <span class="u-green">have been </span><span class="u-blue-zig">published</span>: <span class="u-green">Provided that </span><span class="u-blue-zig">the reference</span> <span class="u-green">in this Explanation to </span><span class="u-blue-zig">the last preceding census</span> <span class="u-green">of which </span><span class="u-blue-zig">the relevant figures</span> <span class="u-green">have been published shall</span>, <span class="u-green">until </span><span class="u-blue-zig">the relevant figures</span> <span class="u-green">for </span><span class="u-blue-zig">the first census</span> <span class="u-green">taken after </span><span class="u-blue-zig">the year</span> <span class="u-red-zig">2026</span> <span class="u-green">have been published</span>, <span class="u-green">be construed as </span><span class="u-blue-zig">a reference</span> <span class="u-green">to </span><span class="u-blue-zig">the 1971 census</span>). (<span class="u-green">by </span><span class="u-blue-zig">the Constitution</span> <span class="u-blue-zig">Forty-second Amendment Act</span>, <span class="u-red-zig">1976</span>).
+    </p>
+
+    <div class="page-number">Page 95</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 57</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Re-election Eligibility:</strong> <span class="u-blue-zig">A person</span> <span class="u-green">who holds</span>, <span class="u-green">or who has held</span>, <span class="u-blue-zig">office as President</span> <span class="u-green">shall</span>, <span class="u-green">subject to </span><span class="u-blue-zig">the other provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-green">be eligible for </span><span class="u-blue-zig">re-election</span> <span class="u-green">to </span><span class="u-blue-zig">that office</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 58</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Eligibility Conditions:</strong> (1) <span class="u-blue-zig">No person</span> <span class="u-green">shall be eligible for </span><span class="u-blue-zig">election as President</span> <span class="u-green">unless </span><span class="u-blue-zig">he</span>—
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Citizenship:</strong> (a) <span class="u-green">is </span><span class="u-blue-zig">a citizen of India</span>,
+        </li>
+        <li>
+            <strong>3. Age Requirement:</strong> (b) <span class="u-green">has completed </span><span class="u-blue-zig">the age</span> <span class="u-green">of </span><span class="u-blue-zig">thirty-five years</span>, <span class="u-green">and</span>
+        </li>
+        <li>
+            <strong>4. Lok Sabha Qualification:</strong> (c) <span class="u-green">is qualified for </span><span class="u-blue-zig">election</span> <span class="u-green">as </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span>.
+        </li>
+        <li>
+            <strong>5. Office of Profit:</strong> (2) <span class="u-blue-zig">A person</span> <span class="u-green">shall not be eligible for </span><span class="u-blue-zig">election as President</span> <span class="u-green">if he holds </span><span class="u-blue-zig">any office of profit</span> <span class="u-green">under </span><span class="u-blue-zig">the Government of India</span> <span class="u-green">or </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-blue-zig">any State</span> <span class="u-green">or under </span><span class="u-blue-zig">any local</span> <span class="u-green">or </span><span class="u-blue-zig">other authority</span> <span class="u-green">subject to the control of </span><span class="u-blue-zig">any of the said Governments</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 59</div>
+
+    <ul>
+        <li>
+            <strong>1. Parliament Membership:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">shall not be </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">or of </span><span class="u-blue-zig">a House</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature</span> <span class="u-green">of </span><span class="u-blue-zig">any State</span>, <span class="u-green">and if </span><span class="u-blue-zig">a member</span> <span class="u-green">of </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">or of </span><span class="u-blue-zig">a House</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature</span> <span class="u-green">of </span><span class="u-blue-zig">any State</span> <span class="u-green">be elected </span><span class="u-blue-zig">President</span>, <span class="u-blue-zig">he</span> <span class="u-green">shall be deemed to have </span><span class="u-green">vacated </span><span class="u-blue-zig">his seat</span> <span class="u-green">in </span><span class="u-blue-zig">that House</span> <span class="u-green">on </span><span class="u-blue-zig">the date</span> <span class="u-green">on which </span><span class="u-blue-zig">he</span> <span class="u-green">enters upon </span><span class="u-blue-zig">his office</span> <span class="u-green">as </span><span class="u-blue-zig">President</span>.
+        </li>
+        <li>
+            <strong>2. No Office of Profit:</strong> (2) <span class="u-blue-zig">The President</span> <span class="u-green">shall not hold </span><span class="u-blue-zig">any other office of profit</span>.
+        </li>
+        <li>
+            <strong>3. Official Residences:</strong> (3) <span class="u-blue-zig">The President</span> <span class="u-green">shall be entitled </span><span class="u-green">without </span><span class="u-blue-zig">payment of rent</span> <span class="u-green">to </span><span class="u-blue-zig">the use</span> <span class="u-green">of </span><span class="u-blue-zig">his official residences</span> <span class="u-green">and shall be also entitled to </span><span class="u-blue-zig">such emoluments, allowances</span> <span class="u-green">and </span><span class="u-blue-zig">privileges</span> <span class="u-green">as may be determined by </span><span class="u-blue-zig">Parliament</span> <span class="u-green">by </span><span class="u-blue-zig">law</span> <span class="u-green">and</span>, <span class="u-green">until </span><span class="u-blue-zig">provision</span> <span class="u-green">in that behalf is so made</span>, <span class="u-blue-zig">such emoluments, allowances</span> <span class="u-green">and </span><span class="u-blue-zig">privileges</span> <span class="u-green">as are specified in </span><span class="u-blue-zig">the Second Schedule</span>.
+        </li>
+        <li>
+            <strong>4. Non-Diminishable Emoluments:</strong> (4) <span class="u-blue-zig">The emoluments and allowances</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">shall not be diminished during </span><span class="u-blue-zig">his term of office</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 60</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Presidential Oath:</strong> <span class="u-blue-zig">Every President</span> <span class="u-green">and </span><span class="u-blue-zig">every person</span> <span class="u-green">acting as </span><span class="u-blue-zig">President</span> <span class="u-green">or discharging </span><span class="u-blue-zig">the functions</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">shall</span>, <span class="u-green">before entering upon </span><span class="u-blue-zig">his office</span>, <span class="u-green">make and subscribe in </span><span class="u-blue-zig">the presence</span> <span class="u-green">of </span><span class="u-blue-zig">the Chief Justice of India</span> <span class="u-green">or</span>, <span class="u-green">in </span><span class="u-blue-zig">his absence</span>, <span class="u-blue-zig">the senior-most Judge</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-blue-zig">available</span>, <span class="u-blue-zig">an oath</span> <span class="u-green">or </span><span class="u-blue-zig">affirmation</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Oath Text:</strong> <span class="u-blue-zig">"I, A.B.</span>, <span class="u-green">do swear in </span><span class="u-blue-zig">the name of God</span> <span class="u-green">solemnly affirm that </span><span class="u-blue-zig">I</span> <span class="u-green">will faithfully execute </span><span class="u-blue-zig">the office of President</span> (<span class="u-green">or discharge </span><span class="u-blue-zig">the functions</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>) <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">and will to </span><span class="u-blue-zig">the best of my ability</span>
+    </p>
+
+    <div class="page-number">Page 96</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Oath Continuation:</strong> <span class="u-green">preserve, protect and defend </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">and </span><span class="u-blue-zig">the law</span> <span class="u-green">and that </span><span class="u-blue-zig">I</span> <span class="u-green">will devote myself to </span><span class="u-blue-zig">the service and well-being</span> <span class="u-green">of </span><span class="u-blue-zig">the people of India"</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 62</div>
+
+    <ul>
+        <li>
+            <strong>1. Term Expiry Election:</strong> (1) <span class="u-blue-zig">An election</span> <span class="u-green">to fill </span><span class="u-blue-zig">a vacancy</span> <span class="u-green">caused by </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">the term of office</span> <span class="u-green">of </span><span class="u-blue-zig">President</span> <span class="u-green">shall be completed before </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">the term</span>.
+        </li>
+        <li>
+            <strong>2. Vacancy Election:</strong> (2) <span class="u-blue-zig">An election</span> <span class="u-green">to fill </span><span class="u-blue-zig">a vacancy</span> <span class="u-green">in </span><span class="u-blue-zig">the office of President</span> <span class="u-green">occurring by reason of </span><span class="u-blue-zig">his death, resignation</span> <span class="u-green">or </span><span class="u-blue-zig">removal</span>, <span class="u-green">or </span><span class="u-blue-zig">otherwise</span> <span class="u-green">shall be held </span><span class="u-blue-zig">as soon as possible</span> <span class="u-green">after</span>, <span class="u-green">and in no case later than </span><span class="u-blue-zig">six months</span> <span class="u-green">from</span>, <span class="u-blue-zig">the date of occurrence</span> <span class="u-green">of </span><span class="u-blue-zig">the vacancy</span>; <span class="u-green">and </span><span class="u-blue-zig">the person elected</span> <span class="u-green">to fill </span><span class="u-blue-zig">the vacancy</span> <span class="u-green">shall</span>, <span class="u-green">subject to the provisions of </span><span class="u-blue-zig">article 56</span>, <span class="u-green">be entitled to hold </span><span class="u-blue-zig">office</span> <span class="u-green">for </span><span class="u-blue-zig">the full term</span> <span class="u-green">of </span><span class="u-blue-zig">five years</span> <span class="u-green">from </span><span class="u-blue-zig">the date</span> <span class="u-green">on which </span><span class="u-blue-zig">he</span> <span class="u-green">enters upon </span><span class="u-blue-zig">his office</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 71</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. 39th Amendment:</strong> (<span class="u-blue-zig">Thirty-ninth Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1975</span>)
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Election Disputes:</strong> (1) <span class="u-blue-zig">All doubts and disputes</span> <span class="u-green">arising out of </span><span class="u-green">or in connection with </span><span class="u-blue-zig">the election</span> <span class="u-green">of </span><span class="u-blue-zig">a President</span> <span class="u-green">or </span><span class="u-blue-zig">Vice-President</span> <span class="u-green">shall be inquired into </span><span class="u-green">and decided by </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">whose </span><span class="u-blue-zig">decision</span> <span class="u-green">shall be </span><span class="u-blue-zig">final</span>.
+        </li>
+        <li>
+            <strong>2. Void Election Effect:</strong> (2) <span class="u-green">If </span><span class="u-blue-zig">the election</span> <span class="u-green">of </span><span class="u-blue-zig">a person</span> <span class="u-green">as </span><span class="u-blue-zig">President</span> <span class="u-green">or </span><span class="u-blue-zig">Vice-President</span> <span class="u-green">is declared void by </span><span class="u-blue-zig">the Supreme Court</span>, <span class="u-blue-zig">acts done by him</span> <span class="u-green">in the exercise and performance of </span><span class="u-blue-zig">the powers and duties</span> <span class="u-green">of </span><span class="u-blue-zig">the office</span> <span class="u-green">of </span><span class="u-blue-zig">President</span> <span class="u-green">or </span><span class="u-blue-zig">Vice-President</span>, <span class="u-green">as the case may be</span>, <span class="u-green">on or before </span><span class="u-blue-zig">the date</span> <span class="u-green">of </span><span class="u-blue-zig">the decision</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">shall not be invalidated by </span><span class="u-green">reason of </span><span class="u-blue-zig">that declaration</span>.
+        </li>
+        <li>
+            <strong>3. Parliamentary Regulation:</strong> (3) <span class="u-green">Subject to the provisions of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">Parliament</span> <span class="u-green">may by </span><span class="u-blue-zig">law</span> <span class="u-green">regulate </span><span class="u-blue-zig">any matter</span> <span class="u-green">relating to or connected with </span><span class="u-blue-zig">the election</span> <span class="u-green">of </span><span class="u-blue-zig">a President</span> <span class="u-green">or </span><span class="u-blue-zig">Vice-President</span>.
+        </li>
+        <li>
+            <strong>4. Vacancy Ground:</strong> (4) <span class="u-blue-zig">The election</span> <span class="u-green">of </span><span class="u-blue-zig">a person</span> <span class="u-green">as </span><span class="u-blue-zig">President</span> <span class="u-green">or </span><span class="u-blue-zig">Vice-President</span> <span class="u-green">shall not be called in </span><span class="u-green">question on </span><span class="u-blue-zig">the ground</span> <span class="u-green">of </span><span class="u-blue-zig">the existence</span> <span class="u-green">of </span><span class="u-blue-zig">any vacancy</span> <span class="u-green">for </span><span class="u-blue-zig">whatever reason</span> <span class="u-green">among </span><span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the electoral college</span> <span class="u-green">electing </span><span class="u-blue-zig">him</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">TENURE</div>
+
+    <div class="section-header">ARTICLE 56</div>
+
+    <ul>
+        <li>
+            <strong>1. Five-Year Term:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">shall hold </span><span class="u-blue-zig">office</span> <span class="u-green">for </span><span class="u-blue-zig">a term</span> <span class="u-green">of </span><span class="u-blue-zig">five years</span> <span class="u-green">from </span><span class="u-blue-zig">the date</span> <span class="u-green">on which </span><span class="u-blue-zig">he</span> <span class="u-green">enters upon </span><span class="u-blue-zig">his office</span>: <span class="u-green">Provided that</span>—
+            <ul>
+                <li>
+                    <strong>a. Resignation:</strong> (a) <span class="u-blue-zig">the President</span> <span class="u-green">may</span>, <span class="u-green">by </span><span class="u-blue-zig">writing</span> <span class="u-green">under </span><span class="u-blue-zig">his hand</span> <span class="u-green">addressed to </span><span class="u-blue-zig">the Vice-President</span>, <span class="u-green">resign </span><span class="u-blue-zig">his office</span>;
+                </li>
+                <li>
+                    <strong>b. Impeachment:</strong> (b) <span class="u-blue-zig">the President</span> <span class="u-green">may</span>, <span class="u-green">for </span><span class="u-blue-zig">violation</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span>, <span class="u-green">be removed from </span><span class="u-blue-zig">office</span> <span class="u-green">by </span><span class="u-blue-zig">impeachment</span> <span class="u-green">in the manner provided in </span><span class="u-blue-zig">article 61</span>;
+                </li>
+                <li>
+                    <strong>c. Continuation Clause:</strong> (c) <span class="u-blue-zig">the President</span> <span class="u-green">shall</span>, <span class="u-green">notwithstanding </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">his term</span>, <span class="u-green">continue to hold </span><span class="u-blue-zig">office</span> <span class="u-green">until </span><span class="u-blue-zig">his successor</span> <span class="u-green">enters upon </span><span class="u-blue-zig">his office</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Speaker Communication:</strong> (2) <span class="u-blue-zig">Any resignation</span> <span class="u-green">addressed to </span><span class="u-blue-zig">the Vice-President</span> <span class="u-green">under </span><span class="u-blue-zig">clause (a)</span> <span class="u-green">of </span><span class="u-blue-zig">the proviso</span> <span class="u-green">to </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">shall forthwith be </span><span class="u-green">communicated by </span><span class="u-blue-zig">him</span> <span class="u-green">to </span><span class="u-blue-zig">the Speaker</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 97</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 61</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Impeachment Process:</strong> (1) <span class="u-green">When </span><span class="u-blue-zig">a President</span> <span class="u-green">is to be impeached for </span><span class="u-blue-zig">violation</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span>, <span class="u-blue-zig">the charge</span> <span class="u-green">shall be preferred by </span><span class="u-blue-zig">either House of Parliament</span>.
+    </p>
+
+    <div class="section-header">DISTINCTION BETWEEN INDIAN PRESIDENT AND AMERICAN PRESIDENT</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Comparative Overview:</strong> <span class="u-blue-zig">Apparently</span> <span class="u-green">there seems to be </span><span class="u-blue-zig">much in common</span> <span class="u-green">between </span><span class="u-blue-zig">the Presidents</span> <span class="u-green">of </span><span class="u-red-zig">India</span> <span class="u-green">and </span><span class="u-red-zig">USA</span>. <span class="u-green">Both are </span><span class="u-blue-zig">elected heads</span> <span class="u-green">of </span><span class="u-blue-zig">their respective</span>. <span class="u-green">But in fact </span><span class="u-green">there is </span><span class="u-blue-zig">nothing in common</span> <span class="u-green">between </span><span class="u-blue-zig">the two</span> <span class="u-green">except </span><span class="u-blue-zig">their names</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>2. Head of State vs Govt:</strong> <span class="u-blue-zig">The President of India</span> <span class="u-green">is </span><span class="u-blue-zig">Head of the State</span>, <span class="u-green">but not </span><span class="u-blue-zig">the head of Government</span> <span class="u-green">while </span><span class="u-blue-zig">the US President</span> <span class="u-green">is that </span><span class="u-blue-zig">the head of state</span> <span class="u-green">and </span><span class="u-blue-zig">mayor of state</span>.
+        </li>
+        <li>
+            <strong>3. Election Method:</strong> <span class="u-blue-zig">US president</span> <span class="u-green">is </span><span class="u-blue-zig">more or less</span> <span class="u-blue-zig">directly elected</span> <span class="u-green">whereas </span><span class="u-blue-zig">the Indian President</span> <span class="u-green">is </span><span class="u-blue-zig">indirectly elected</span>. <span class="u-blue-zig">The advantage</span> <span class="u-green">of </span><span class="u-blue-zig">the directly elected head</span> <span class="u-green">of </span><span class="u-blue-zig">the government</span> <span class="u-green">is </span><span class="u-blue-zig">the stability</span> <span class="u-green">of </span><span class="u-blue-zig">the government</span>.
+        </li>
+        <li>
+            <strong>4. Council vs Cabinet:</strong> <span class="u-blue-zig">The Council of Ministers</span> <span class="u-green">is </span><span class="u-blue-zig">more powerful</span> <span class="u-green">than </span><span class="u-blue-zig">the President</span> <span class="u-green">while in </span><span class="u-red-zig">US</span> <span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the cupboard</span> <span class="u-green">are chosen by </span><span class="u-blue-zig">the President</span> <span class="u-green">and they are called </span><span class="u-blue-zig">secretaries</span> <span class="u-green">not </span><span class="u-blue-zig">Ministers</span>.
+        </li>
+        <li>
+            <strong>5. Binding Advice:</strong> <span class="u-blue-zig">The President of India</span> <span class="u-green">is sure to accept </span><span class="u-blue-zig">the recommendation</span> <span class="u-green">of </span><span class="u-blue-zig">the Council of Ministers</span>. <span class="u-blue-zig">He</span> <span class="u-green">has the power to return </span><span class="u-blue-zig">its advice</span> <span class="u-green">to </span><span class="u-blue-zig">the Council of Ministers</span> <span class="u-green">for </span><span class="u-blue-zig">reconsideration</span>. <span class="u-green">But he is bound to accept </span><span class="u-blue-zig">it</span>, <span class="u-green">if </span><span class="u-blue-zig">the same advice</span> <span class="u-green">is sent back to </span><span class="u-blue-zig">him</span> <span class="u-green">after </span><span class="u-blue-zig">reconsideration</span> <span class="u-green">by </span><span class="u-blue-zig">the Council of Ministers</span>. <span class="u-blue-zig">The US President</span> <span class="u-green">is </span><span class="u-blue-zig">Boss</span> <span class="u-green">and </span><span class="u-blue-zig">Secretaries</span> <span class="u-green">are </span><span class="u-blue-zig">his subordinates</span> <span class="u-green">and he is not sure to </span><span class="u-green">stick on </span><span class="u-blue-zig">the recommendation</span> <span class="u-green">of </span><span class="u-blue-zig">the cupboard</span> <span class="u-green">and have </span><span class="u-blue-zig">perfect veto</span>.
+        </li>
+        <li>
+            <strong>6. Separation of Powers:</strong> <span class="u-blue-zig">Doctrine of Separation</span> <span class="u-green">of </span><span class="u-blue-zig">Powers</span> <span class="u-green">strictly appealed in </span><span class="u-red-zig">America</span>. <span class="u-blue-zig">The President</span> <span class="u-green">is not </span><span class="u-blue-zig">a member of legislature</span>. <span class="u-green">It is </span><span class="u-blue-zig">the responsibility</span> <span class="u-green">of </span><span class="u-blue-zig">the Congress</span> <span class="u-green">to make </span><span class="u-blue-zig">the laws</span>.
+        </li>
+        <li>
+            <strong>7. Re-election Limit:</strong> <span class="u-blue-zig">American President</span> <span class="u-green">can only be elected </span><span class="u-blue-zig">twice</span> <span class="u-green">where as </span><span class="u-blue-zig">Indian</span> <span class="u-green">can be chosen </span><span class="u-blue-zig">multiple times</span>.
+        </li>
+        <li>
+            <strong>8. Impeachment Ground:</strong> <span class="u-blue-zig">Indian President</span> <span class="u-green">can only be impeached </span><span class="u-green">only for </span><span class="u-blue-zig">violation of constitution</span> <span class="u-green">where as </span><span class="u-blue-zig">the US President</span> <span class="u-green">can be impeached for </span><span class="u-blue-zig">misbehaviour too</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">9. Plenitude of Power:</strong> <span class="u-green">Thus it is said that </span><span class="u-blue-zig">the American President</span> <span class="u-green">exercises </span><span class="u-blue-zig">" The largest amount</span> <span class="u-green">of </span><span class="u-blue-zig">authority</span> <span class="u-green">ever wielded by </span><span class="u-blue-zig">any man</span> <span class="u-green">in </span><span class="u-blue-zig">a democracy"</span>. <span class="u-blue-zig">The Indian President</span> <span class="u-green">has </span><span class="u-blue-zig">no such plenitude of powers</span> <span class="u-green">in </span><span class="u-blue-zig">actual fact</span>.
+    </p>
+
+    <div class="section-header">POWERS</div>
+
+    <div class="page-number">Page 98</div>
+</div>
+
+<div class="pdf-page">
+
+    <div class="section-header">LEGISLATIVE POWER</div>
+
+    <div class="section-header">POWER TO NOMINATE THE MEMBERS OF THE PARLIAMENT</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Nominated Members:</strong> ARTICLE 80(3) <span class="u-blue-zig">The members</span> <span class="u-green">to be nominated by </span><span class="u-blue-zig">the President</span> <span class="u-green">under </span><span class="u-blue-zig">sub-clause (a)</span> <span class="u-green">of </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">persons</span> <span class="u-green">having </span><span class="u-blue-zig">special knowledge</span> <span class="u-green">or </span><span class="u-blue-zig">practical experience</span> <span class="u-green">in respect of </span><span class="u-blue-zig">such matters</span> <span class="u-green">as </span><span class="u-blue-zig">the following</span>, <span class="u-blue-zig">namely</span>:—
+        <span class="u-blue-zig">Literature, science, art</span> <span class="u-green">and </span><span class="u-blue-zig">social service</span>
+    </p>
+
+    <div class="section-header">POWER TO SUMMON THE SESSION OF THE PARLIAMENT</div>
+
+    <div class="section-header">POWER TO PROROGUE OR END THE SESSIONS, SENDING A MESSAGE TO THE PARLIAMENT</div>
+
+    <div class="section-header">ARTICLE 85</div>
+
+    <ul>
+        <li>
+            <strong>1. Session Summoning:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">shall from time to time </span><span class="u-green">summon </span><span class="u-blue-zig">each House of Parliament</span> <span class="u-green">to meet at </span><span class="u-blue-zig">such time and place</span> <span class="u-green">as he thinks fit</span>, <span class="u-green">but </span><span class="u-blue-zig">SIX MONTHS</span> <span class="u-green">shall not intervene between </span><span class="u-blue-zig">its last sitting</span> <span class="u-green">in </span><span class="u-blue-zig">one session</span> <span class="u-green">and </span><span class="u-blue-zig">the date appointed</span> <span class="u-green">for </span><span class="u-blue-zig">its first sitting</span> <span class="u-green">in </span><span class="u-blue-zig">the next session</span>.
+        </li>
+        <li>
+            <strong>2. Prorogation Power:</strong> (2) <span class="u-blue-zig">The President</span> <span class="u-green">may from time to time</span>—
+            <ul>
+                <li>
+                    <strong>a. Prorogue Houses:</strong> (a) <span class="u-green">prorogue </span><span class="u-blue-zig">the Houses</span> <span class="u-green">or </span><span class="u-blue-zig">either House</span>;
+                </li>
+                <li>
+                    <strong>b. Dissolve Lok Sabha:</strong> (b) <span class="u-green">dissolve </span><span class="u-blue-zig">the House of the People</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 86</div>
+
+    <ul>
+        <li>
+            <strong>1. Address Parliament:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">may address </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">or </span><span class="u-blue-zig">both Houses</span> <span class="u-blue-zig">assembled together</span>, <span class="u-green">and for that purpose </span><span class="u-green">require </span><span class="u-blue-zig">the attendance of members</span>.
+        </li>
+        <li>
+            <strong>2. Send Messages:</strong> (2) <span class="u-blue-zig">The President</span> <span class="u-green">may send </span><span class="u-blue-zig">messages</span> <span class="u-green">to </span><span class="u-blue-zig">either House of Parliament</span>, <span class="u-green">whether with respect to </span><span class="u-blue-zig">a Bill</span> <span class="u-green">then pending in </span><span class="u-blue-zig">Parliament</span> <span class="u-green">or </span><span class="u-blue-zig">otherwise</span>, <span class="u-green">and </span><span class="u-blue-zig">a House</span> <span class="u-green">to which </span><span class="u-blue-zig">any message</span> <span class="u-green">is so sent shall with </span><span class="u-blue-zig">all convenient despatch</span> <span class="u-green">consider </span><span class="u-blue-zig">any matter</span> <span class="u-green">required by </span><span class="u-blue-zig">the message</span> <span class="u-green">to be taken into </span><span class="u-blue-zig">consideration</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ARTICLE 87</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Presidential Address:</strong> (1) <span class="u-green">At </span><span class="u-blue-zig">the commencement</span> <span class="u-green">of </span><span class="u-blue-zig">the first session</span> <span class="u-green">after </span><span class="u-blue-zig">each general election</span> <span class="u-green">to </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">and at </span><span class="u-blue-zig">the commencement</span> <span class="u-green">of </span><span class="u-blue-zig">the first session</span> <span class="u-green">of </span><span class="u-blue-zig">each year</span> <span class="u-blue-zig">the President</span> <span class="u-green">shall address </span><span class="u-blue-zig">both Houses of Parliament</span> <span class="u-blue-zig">assembled together</span> <span class="u-green">and inform </span><span class="u-blue-zig">Parliament</span> <span class="u-green">of </span><span class="u-blue-zig">the causes of its summons</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 108</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Joint Sitting:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">calls </span><span class="u-blue-zig">Joint sitting</span> <span class="u-green">of </span><span class="u-blue-zig">both Houses</span> <span class="u-green">in </span><span class="u-blue-zig">certain cases</span>.
+    </p>
+
+    <div class="section-header">POWER TO ASSENT BILLS</div>
+
+    <div class="section-header">ARTICLE 111</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Assent Provision:</strong> <span class="u-green">When </span><span class="u-blue-zig">a Bill</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the Houses of Parliament</span>, <span class="u-green">it shall be presented to </span><span class="u-blue-zig">the President</span>, <span class="u-green">and </span><span class="u-blue-zig">the President</span> <span class="u-green">shall declare either that </span><span class="u-blue-zig">he</span> <span class="u-green">assents to </span><span class="u-blue-zig">the Bill</span>, <span class="u-green">or that he withholds </span><span class="u-blue-zig">assent therefrom</span>:
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Reconsideration Proviso:</strong> <span class="u-green">Provided that </span><span class="u-blue-zig">the President</span> <span class="u-green">may</span>, <span class="u-green">as soon as possible after </span><span class="u-blue-zig">the presentation</span> <span class="u-green">to </span><span class="u-blue-zig">him</span> <span class="u-green">of </span><span class="u-blue-zig">a Bill</span> <span class="u-green">for </span><span class="u-blue-zig">assent</span>, <span class="u-green">return </span><span class="u-blue-zig">the Bill</span> <span class="u-green">if it is not </span><span class="u-blue-zig">a MONEY BILL</span> <span class="u-green">to </span><span class="u-blue-zig">the Houses</span> <span class="u-green">with </span><span class="u-blue-zig">a message</span> <span class="u-green">requesting that </span>
+    </p>
+
+    <div class="page-number">Page 99</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Bill Reconsideration:</strong> <span class="u-blue-zig">they</span> <span class="u-green">will reconsider </span><span class="u-blue-zig">the Bill</span> <span class="u-green">or </span><span class="u-blue-zig">any specified provisions thereof</span> <span class="u-green">and</span>, <span class="u-green">in particular</span>, <span class="u-green">will consider </span><span class="u-blue-zig">the desirability</span> <span class="u-green">of introducing </span><span class="u-blue-zig">any such amendments</span> <span class="u-green">as he may recommend in </span><span class="u-blue-zig">his message</span>, <span class="u-green">and when </span><span class="u-blue-zig">a Bill</span> <span class="u-green">is so returned</span>, <span class="u-blue-zig">the Houses</span> <span class="u-green">shall reconsider </span><span class="u-blue-zig">the Bill accordingly</span>, <span class="u-green">and if </span><span class="u-blue-zig">the Bill</span> <span class="u-green">is passed again by </span><span class="u-blue-zig">the Houses</span> <span class="u-green">with or without </span><span class="u-blue-zig">amendment</span> <span class="u-green">and presented to </span><span class="u-blue-zig">the President</span> <span class="u-green">for </span><span class="u-blue-zig">assent</span>, <span class="u-blue-zig">the President</span> <span class="u-green">shall not with hold </span><span class="u-blue-zig">assent there from</span>.
+    </p>
+
+    <div class="section-header">POWER TO PROCLAIM AN ORDINANCE</div>
+
+    <div class="section-header">ARTICLE 123</div>
+
+    <ul>
+        <li>
+            <strong>1. Ordinance Power:</strong> (1) <span class="u-green">If at any time</span>, <span class="u-green">except when </span><span class="u-blue-zig">both Houses of Parliament</span> <span class="u-green">are in </span><span class="u-blue-zig">session</span>, <span class="u-blue-zig">the President</span> <span class="u-green">is satisfied that </span><span class="u-blue-zig">circumstances</span> <span class="u-green">exist which render it </span><span class="u-green">necessary for </span><span class="u-blue-zig">him</span> <span class="u-green">to take </span><span class="u-blue-zig">immediate action</span>, <span class="u-blue-zig">he</span> <span class="u-green">may promulgate </span><span class="u-blue-zig">such Ordinances</span> <span class="u-green">as </span><span class="u-blue-zig">the circumstances</span> <span class="u-green">appear to him to require</span>.
+        </li>
+        <li>
+            <strong>2. Force of Act:</strong> (2) <span class="u-blue-zig">An Ordinance</span> <span class="u-green">promulgated under </span><span class="u-blue-zig">this article</span> <span class="u-green">shall have </span><span class="u-blue-zig">the same force and effect</span> <span class="u-green">as </span><span class="u-blue-zig">an Act of Parliament</span>, <span class="u-green">but </span><span class="u-blue-zig">every such Ordinance</span>—
+            <ul>
+                <li>
+                    <strong>a. Expiration Clause:</strong> (a) <span class="u-green">shall be laid before </span><span class="u-blue-zig">both Houses of Parliament</span> <span class="u-green">and shall cease to operate </span><span class="u-green">at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">six weeks</span> <span class="u-green">from </span><span class="u-blue-zig">the reassembly of Parliament</span>, <span class="u-green">or</span>, <span class="u-green">if before </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">that period</span> <span class="u-blue-zig">resolutions disapproving it</span> <span class="u-green">are passed by </span><span class="u-blue-zig">both Houses</span>, <span class="u-green">upon </span><span class="u-blue-zig">the passing</span> <span class="u-green">of </span><span class="u-blue-zig">the second</span> <span class="u-green">of </span><span class="u-blue-zig">those resolutions</span>; <span class="u-green">and</span>
+                </li>
+                <li>
+                    <strong>b. Withdrawal Power:</strong> (b) <span class="u-green">may be withdrawn at </span><span class="u-blue-zig">any time</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span>.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. Void Provision:</strong> (3) <span class="u-green">If and so far as </span><span class="u-blue-zig">an Ordinance</span> <span class="u-green">under </span><span class="u-blue-zig">this article</span> <span class="u-green">makes </span><span class="u-blue-zig">any provision</span> <span class="u-green">which </span><span class="u-blue-zig">Parliament</span> <span class="u-green">would not under </span><span class="u-blue-zig">this Constitution</span> <span class="u-green">be competent to enact</span>, <span class="u-green">it shall be </span><span class="u-blue-zig">void</span>.
+        </li>
+        <li>
+            <strong>4. Ordinance Lifespan:</strong> <span class="u-blue-zig">Its life span</span> <span class="u-green">is </span><span class="u-blue-zig">6 months and 6 weeks</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ORDINANCE MAKING POWER IS TO BE USED AS A LAST RESORT</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Constitutional Fraud:</strong> <span class="u-blue-zig">Ordinance</span> <span class="u-green">is </span><span class="u-blue-zig">a constitutional fraud</span>. <span class="u-blue-zig">Supreme Court</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Executive Power:</strong> <span class="u-blue-zig">Article 123</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">allows </span><span class="u-blue-zig">the head of executive</span> <span class="u-green">to promulgate </span><span class="u-blue-zig">ordinances</span> <span class="u-green">to deal with </span><span class="u-blue-zig">situations</span> <span class="u-green">which require </span><span class="u-blue-zig">immediate attention</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>3. Temporary Laws:</strong> <span class="u-blue-zig">Temporary laws</span> <span class="u-green">which can be issued by </span><span class="u-blue-zig">the President</span> <span class="u-green">when </span><span class="u-blue-zig">Parliament</span> <span class="u-green">is not in </span><span class="u-blue-zig">session</span>.
+        </li>
+        <li>
+            <strong>4. Cabinet Advice:</strong> <span class="u-green">Issued on </span><span class="u-blue-zig">the advice</span> <span class="u-green">of </span><span class="u-blue-zig">the Union Cabinet</span>.
+        </li>
+        <li>
+            <strong>5. Immediate Action:</strong> <span class="u-green">To allow </span><span class="u-blue-zig">governments</span> <span class="u-green">to take </span><span class="u-blue-zig">immediate legislative action</span> <span class="u-green">if </span><span class="u-blue-zig">circumstances</span> <span class="u-green">make it necessary </span><span class="u-green">to do so</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Loophole Concern:</strong> <span class="u-blue-zig">Ordinances</span> <span class="u-green">appear to be </span><span class="u-blue-zig">a loophole</span> <span class="u-green">that </span><span class="u-blue-zig">the ruling Governments</span> <span class="u-green">have found to push </span><span class="u-blue-zig">laws</span> <span class="u-green">without bringing </span><span class="u-blue-zig">much attention</span> <span class="u-green">or spending </span><span class="u-blue-zig">time</span> <span class="u-green">in </span><span class="u-blue-zig">Parliament</span> <span class="u-green">and also </span><span class="u-blue-zig">lack of consensus</span> <span class="u-green">in </span><span class="u-blue-zig">Parliament</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Re-promulgation Ban:</strong> <span class="u-blue-zig">Exercise</span> <span class="u-green">of </span><span class="u-blue-zig">repeated re-promulgation</span> <span class="u-green">of </span><span class="u-blue-zig">ordinances</span> <span class="u-green">by </span><span class="u-blue-zig">Article 123</span> <span class="u-green">is </span><span class="u-blue-zig">a subversion and perversion</span> <span class="u-green">of </span><span class="u-blue-zig">Article 123 itself</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>8. D.C. Wadhwa Case:</strong> <span class="u-green">It is </span><span class="u-blue-zig">unconstitutional</span> <span class="u-green">to repromulgate </span><span class="u-blue-zig">ordinances</span>, <span class="u-green">unless in </span><span class="u-blue-zig">exceptional circumstances</span>.(<span class="u-red-zig">D. C. Wadhwa</span> <span class="u-blue-zig">case</span>)
+        </li>
+    </ul>
+
+    <div class="section-header">SAFEGAURD</div>
+
+    <div class="page-number">Page 100</div>
+</div>
+
+<!-- Chapter 9 - President (Part 2 of 2) — Pages 101-109 -->
+
+<!-- ===== PAGE 101 ===== -->
+<div class="pdf-page">
+
+
+    <ul>
+        <li><strong>1. Parliament Not in Session:</strong> <span class="u-green">When both </span><span class="u-blue-zig">the Houses of Parliament</span> <span class="u-green">are not in </span><span class="u-blue-zig">session</span>. <span class="u-green">Thus, </span><span class="u-blue-zig">the power of the President</span> <span class="u-green">to legislate by </span><span class="u-blue-zig">ordinance</span> <span class="u-green">is not </span><span class="u-blue-zig">a parallel power</span> <span class="u-green">of </span><span class="u-blue-zig">legislation</span>.</li>
+        <li><strong>2. Parliamentary Subjects:</strong> <span class="u-green">They can only be made about </span><span class="u-blue-zig">subjects</span> <span class="u-green">on which </span><span class="u-blue-zig">the Parliament</span> <span class="u-green">has the power to make </span><span class="u-blue-zig">laws</span>.</li>
+        <li><strong>3. Immediate Action:</strong> <span class="u-blue-zig">The circumstances</span> <span class="u-green">make it necessary for him to take </span><span class="u-blue-zig">immediate action</span>.</li>
+        <li><strong>4. Mala-fide Challenge:</strong> <span class="u-blue-zig">The President's satisfaction</span> <span class="u-green">can be questioned in </span><span class="u-blue-zig">a court</span> <span class="u-green">on the ground of </span><span class="u-blue-zig">mala-fide</span>. (<span class="u-red-zig">Cooper case</span>)</li>
+        <li><strong>5. Fundamental Rights:</strong> <span class="u-blue-zig">An ordinance</span> <span class="u-green">cannot abridge or take away </span><span class="u-blue-zig">any of the fundamental rights</span>.</li>
+        <li><strong>6. Parliamentary Approval:</strong> <span class="u-green">Must be laid before </span><span class="u-blue-zig">both the Houses of Parliament</span> <span class="u-green">when it </span><span class="u-blue-zig">reassembles</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Constitutional Sanctity:</strong> <span class="u-blue-zig">The sanctity of the Constitution</span> <span class="u-green">rests on the fact that </span><span class="u-green">there be </span><span class="u-blue-zig">a never-ending tussle</span> <span class="u-green">amongst </span><span class="u-blue-zig">the three branches</span> <span class="u-green">of </span><span class="u-blue-zig">the government</span> <span class="u-green">so that </span><span class="u-blue-zig">the bird of democracy</span> <span class="u-green">may sing </span><span class="u-blue-zig">its beautiful song all day</span>. <span class="u-green">However, </span><span class="u-green">this requires </span><span class="u-blue-zig">constant scrutiny</span> <span class="u-green">by </span><span class="u-blue-zig">the branches</span>, <span class="u-green">and </span><span class="u-blue-zig">the citizens alike</span>.
+    </p>
+
+    <div class="section-header">JUDICIAL POWER</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Pardon Power:</strong> <span class="u-blue-zig">ARTICLE 72</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Constitutional Scheme:</strong> <span class="u-blue-zig">The pardon power</span> <span class="u-green">is a part of </span><span class="u-blue-zig">the Constitutional scheme</span> (<span class="u-blue-zig">Article 72</span>) <span class="u-green">to repair </span><span class="u-blue-zig">potential judicial errors</span>. <span class="u-blue-zig">The President</span> <span class="u-green">has the authority to give </span><span class="u-blue-zig">pardons</span>, <span class="u-blue-zig">reprieves</span>, <span class="u-blue-zig">respites</span>, <span class="u-green">or </span><span class="u-blue-zig">remissions of punishment</span>, <span class="u-green">as well as to </span><span class="u-blue-zig">suspend</span>, <span class="u-blue-zig">remit</span>, <span class="u-green">or </span><span class="u-blue-zig">commute the sentence</span> <span class="u-green">of </span><span class="u-blue-zig">anyone</span> <span class="u-green">who has been convicted of </span><span class="u-blue-zig">a crime</span> -
+    </p>
+    <ul>
+        <li><strong>3. Court Martial:</strong> <span class="u-green">Where </span><span class="u-blue-zig">the punishment or sentence</span> <span class="u-green">is by </span><span class="u-blue-zig">a Court Martial</span>.</li>
+        <li><strong>4. Union Executive Power:</strong> <span class="u-green">Where </span><span class="u-blue-zig">the punishment or sentence</span> <span class="u-green">is for </span><span class="u-blue-zig">an offense</span> <span class="u-green">against </span><span class="u-blue-zig">any law</span> <span class="u-green">relating to </span><span class="u-blue-zig">a matter</span> <span class="u-green">to which </span><span class="u-blue-zig">the executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">extends</span>.</li>
+        <li><strong>5. Death Sentence:</strong> <span class="u-green">Where </span><span class="u-blue-zig">the sentence</span> <span class="u-green">is </span><span class="u-blue-zig">a sentence of death</span>.</li>
+        <li><strong>6. Pardon Effect:</strong> <span class="u-blue-zig">Pardon</span> <span class="u-green">removes both </span><span class="u-blue-zig">the sentence</span> <span class="u-green">and </span><span class="u-blue-zig">the conviction</span>.</li>
+        <li><strong>7. Commutation Meaning:</strong> <span class="u-blue-zig">Commutation</span> <span class="u-green">means to replace </span><span class="u-blue-zig">the punishment</span> <span class="u-green">with </span><span class="u-blue-zig">less severe punishment</span>.</li>
+        <li><strong>8. Remission Meaning:</strong> <span class="u-blue-zig">Remission</span> <span class="u-green">means </span><span class="u-blue-zig">the reduction</span> <span class="u-green">of </span><span class="u-blue-zig">the amount of sentence</span> <span class="u-green">without changing </span><span class="u-blue-zig">its character</span>.</li>
+        <li><strong>9. Respite Meaning:</strong> <span class="u-blue-zig">Respite</span> <span class="u-green">means awarding </span><span class="u-blue-zig">a lesser punishment</span> <span class="u-green">on </span><span class="u-blue-zig">some special grounds</span>.</li>
+        <li><strong>10. Reprieve Meaning:</strong> <span class="u-blue-zig">Reprieve</span> <span class="u-green">means </span><span class="u-blue-zig">temporary suspension</span> <span class="u-green">of </span><span class="u-blue-zig">death sentence</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">11. Judicial Review Grounds:</strong> <span class="u-green">It is subject to </span><span class="u-blue-zig">judicial review</span> <span class="u-green">on the grounds mentioned in </span><span class="u-red-zig">Maru Ram case</span> -
+    </p>
+    <ul>
+        <li><strong>12. Without Application:</strong> <span class="u-blue-zig">The order</span> <span class="u-green">has been passed without </span><span class="u-blue-zig">application of mind</span>.</li>
+        <li><strong>13. Mala Fide Order:</strong> <span class="u-blue-zig">The order</span> <span class="u-green">is </span><span class="u-blue-zig">mala fide</span>.</li>
+        <li><strong>14. Irrelevant Considerations:</strong> <span class="u-blue-zig">The order</span> <span class="u-green">has been passed on </span><span class="u-blue-zig">extraneous</span> <span class="u-green">or </span><span class="u-blue-zig">wholly irrelevant considerations</span>.</li>
+        <li><strong>15. Material Exclusion:</strong> <span class="u-blue-zig">Relevant material</span> <span class="u-green">has been kept out of </span><span class="u-blue-zig">consideration</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">16. Clemency Challenge:</strong> <span class="u-blue-zig">Granting of clemency</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span> <span class="u-green">can be challenged on </span><span class="u-blue-zig">the following grounds</span> (<span class="u-red-zig">Epuru Sudhakar case</span>).
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">17. Mercy Petition Delay:</strong> <span class="u-blue-zig">Delay</span> <span class="u-green">by </span><span class="u-blue-zig">the government</span> <span class="u-green">in taking </span><span class="u-blue-zig">a decision</span> <span class="u-green">about </span><span class="u-blue-zig">the mercy petition</span> <span class="u-green">of </span><span class="u-blue-zig">the death row convicts</span> <span class="u-green">was in fact </span><span class="u-blue-zig">a valid ground</span> <span class="u-green">for </span><span class="u-blue-zig">commutation</span> <span class="u-green">of </span><span class="u-blue-zig">their sentence</span> (<span class="u-red-zig">Shatrughan Chauhan case</span>).
+    </p>
+
+    <div class="page-number">Page 101</div>
+</div>
+
+<!-- ===== PAGE 102 ===== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Dhananjoy Chatterjee Case:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">Dhananjoy Chatterjee</span> <span class="u-blue-zig">alias Dhana</span> <span class="u-blue-zig">v State of West Bengal</span> <span class="u-green">that </span><span class="u-blue-zig">the power</span> <span class="u-green">under </span><span class="u-blue-zig">Articles 72 and 161</span> <span class="u-green">of </span><span class="u-blue-zig">the Constitution</span> <span class="u-green">can be exercised by </span><span class="u-blue-zig">the Central</span> <span class="u-green">and </span><span class="u-blue-zig">State Governments</span>, <span class="u-green">not by </span><span class="u-blue-zig">the President</span> <span class="u-green">or </span><span class="u-blue-zig">Governor</span> <span class="u-green">on </span><span class="u-blue-zig">their own</span>. <span class="u-blue-zig">The advice</span> <span class="u-green">of </span><span class="u-blue-zig">the appropriate Government</span> <span class="u-green">binds </span><span class="u-blue-zig">the Head of the state</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Keher Singh Case:</strong> <span class="u-blue-zig">The Supreme Court</span> <span class="u-green">held in </span><span class="u-red-zig">Keher Singh</span> <span class="u-blue-zig">v. Union of India</span> <span class="u-green">held that </span><span class="u-blue-zig">the pardoning power</span> <span class="u-green">is </span><span class="u-blue-zig">an act</span> <span class="u-green">which is done under </span><span class="u-blue-zig">Constitutional scheme</span>. <span class="u-green">It further said that it should be compared with </span><span class="u-blue-zig">the American President</span> <span class="u-green">who acts on </span><span class="u-blue-zig">his own</span> <span class="u-green">and not like </span><span class="u-blue-zig">the crown</span> <span class="u-green">in </span><span class="u-blue-zig">the United Kingdom</span>, <span class="u-green">where it acts on </span><span class="u-blue-zig">the ministerial advice</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Advisory Jurisdiction:</strong> <span class="u-blue-zig">ARTICLE 143</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">4. Supreme Court Opinion:</strong> (1) <span class="u-green">If at any time it appears to </span><span class="u-blue-zig">the President</span> <span class="u-green">that </span><span class="u-blue-zig">a question of law</span> <span class="u-green">or </span><span class="u-blue-zig">fact</span> <span class="u-green">has arisen, or is likely to arise, which is of </span><span class="u-blue-zig">such a nature</span> <span class="u-green">and of </span><span class="u-blue-zig">such public importance</span> <span class="u-green">that it is expedient to obtain </span><span class="u-blue-zig">the opinion</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">upon it, </span><span class="u-green">he may refer </span><span class="u-blue-zig">the question</span> <span class="u-green">to </span><span class="u-blue-zig">that Court</span> <span class="u-green">for </span><span class="u-blue-zig">consideration</span> <span class="u-green">and </span><span class="u-blue-zig">the Court</span> <span class="u-green">may, after </span><span class="u-blue-zig">such hearing</span> <span class="u-green">as it thinks fit, </span><span class="u-green">report to </span><span class="u-blue-zig">the President</span> <span class="u-blue-zig">its opinion thereon</span>.
+    </p>
+
+    <div class="section-header">FINANCIAL POWER</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Financial Powers Scope:</strong> <span class="u-blue-zig">Introduction of the budget</span>(<span class="u-blue-zig">Article 112</span>), <span class="u-blue-zig">levy of taxes</span>, <span class="u-blue-zig">a power</span> <span class="u-green">to assent </span><span class="u-blue-zig">the financial bills</span>, <span class="u-blue-zig">a power</span> <span class="u-green">to constitute </span><span class="u-blue-zig">Finance Commission</span>(<span class="u-blue-zig">Article 280</span>), <span class="u-blue-zig">presentation of audit report</span> <span class="u-blue-zig">etc</span>. <span class="u-green">are some of </span><span class="u-blue-zig">the financial powers</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span>. <span class="u-blue-zig">The contingency fund</span>(<span class="u-blue-zig">Article 267</span>) <span class="u-green">at </span><span class="u-blue-zig">his disposal</span>.
+    </p>
+
+    <div class="section-header">MILITARY POWER</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Supreme Commander:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">is </span><span class="u-blue-zig">the supreme commander-in-chief</span> <span class="u-green">of </span><span class="u-blue-zig">the defense force</span>. <span class="u-green">It is his duty to </span><span class="u-green">refrain </span><span class="u-blue-zig">the state</span> <span class="u-green">from </span><span class="u-blue-zig">foreign aggression</span>. <span class="u-green">He is authorized to extend </span><span class="u-blue-zig">the foreign relations</span> <span class="u-green">and to sign </span><span class="u-blue-zig">the treaties</span> <span class="u-green">with </span><span class="u-blue-zig">different sovereign states</span>.
+    </p>
+
+    <div class="section-header">DIPLOMATIC POWER</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Treaty Negotiation:</strong> <span class="u-blue-zig">The negotiation</span> <span class="u-green">of </span><span class="u-blue-zig">all treaties and agreements</span> <span class="u-green">are made in the name of </span><span class="u-blue-zig">the President</span>. <span class="u-green">He accredits </span><span class="u-blue-zig">the ambassadors</span> <span class="u-green">and </span><span class="u-blue-zig">envoys</span> <span class="u-green">to </span><span class="u-blue-zig">foreign States</span> <span class="u-green">and accepts </span><span class="u-blue-zig">the letters of credence</span> <span class="u-green">of </span><span class="u-blue-zig">the foreign diplomatic representatives</span>.
+    </p>
+
+    <div class="section-header">NORMAL POWER</div>
+
+    <ul>
+        <li><strong>1. Appointment Power:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">appoints </span><span class="u-blue-zig">the Prime Minister</span>, <span class="u-blue-zig">the Judges</span> <span class="u-green">of </span><span class="u-blue-zig">Supreme Court</span> <span class="u-green">and </span><span class="u-blue-zig">High Court</span> <span class="u-green">and </span><span class="u-blue-zig">the high officials</span> <span class="u-green">like </span><span class="u-blue-zig">C.A.G.</span>, <span class="u-blue-zig">Election Commissioners</span>, <span class="u-blue-zig">CVC</span>, <span class="u-blue-zig">Member of U.P.S.C</span>, <span class="u-blue-zig">Governors</span> <span class="u-green">of </span><span class="u-blue-zig">different states etc</span>.</li>
+        <li><strong>2. Removal Power:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">can remove </span><span class="u-blue-zig">any minister</span> <span class="u-green">from </span><span class="u-blue-zig">the Council of ministers</span> <span class="u-green">of </span><span class="u-blue-zig">the Parliament</span>, <span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">any state</span>, <span class="u-blue-zig">the judges</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span>, <span class="u-blue-zig">High Courts</span>, <span class="u-blue-zig">Election Commissioners</span>, <span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the U.P.S.C</span>.</li>
+    </ul>
+
+    <div class="page-number">Page 102</div>
+</div>
+
+<!-- ===== PAGE 103 ===== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">EMERGENCY POWERS</div>
+
+    <div class="section-header">NATIONAL EMERGENCY</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Article 352 Provision:</strong> <span class="u-blue-zig">ARTICLE 352</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Grave Emergency Declaration:</strong> (1) <span class="u-green">If </span><span class="u-blue-zig">the President</span> <span class="u-green">is satisfied that </span><span class="u-blue-zig">a grave emergency</span> <span class="u-green">exists whereby </span><span class="u-blue-zig">the security of India</span> <span class="u-green">or of </span><span class="u-blue-zig">any part of the territory</span> <span class="u-blue-zig">thereof</span> <span class="u-green">is threatened, whether by </span><span class="u-blue-zig">war</span> <span class="u-green">or </span><span class="u-blue-zig">external aggression</span> <span class="u-green">or </span>[<span class="u-blue-zig">armed rebellion</span> (<span class="u-green">by </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">Forty-fourth Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1978</span>)], <span class="u-green">he may, by </span><span class="u-blue-zig">Proclamation</span>, <span class="u-green">make </span><span class="u-blue-zig">a declaration</span> <span class="u-green">to that effect in respect of </span><span class="u-blue-zig">the whole of India</span> <span class="u-green">or of </span><span class="u-blue-zig">such part of the territory</span> <span class="u-blue-zig">thereof</span> <span class="u-green">as may be specified in </span><span class="u-blue-zig">the Proclamation</span>.. (<span class="u-green">by </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">Forty-second Amendment</span>) <span class="u-blue-zig">Act</span>, <span class="u-red-zig">1976</span>)
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Union Cabinet Approval:</strong> (3) <span class="u-blue-zig">The President</span> <span class="u-green">shall not issue </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">or </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">varying </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">unless </span><span class="u-blue-zig">the decision</span> <span class="u-green">of </span><span class="u-blue-zig">the UNION CABINET</span> <span class="u-green">that </span><span class="u-blue-zig">such a Proclamation</span> <span class="u-green">may be issued </span><span class="u-green">has been communicated to him in </span><span class="u-blue-zig">WRITING</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Parliamentary Approval:</strong> (4) <span class="u-blue-zig">Every Proclamation</span> <span class="u-green">issued under </span><span class="u-blue-zig">this article</span> <span class="u-green">shall be laid before </span><span class="u-blue-zig">each House of Parliament</span> <span class="u-green">and shall, except where it is </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">revoking </span><span class="u-blue-zig">a previous Proclamation</span>, <span class="u-green">cease to operate at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">one month</span> <span class="u-green">unless before </span><span class="u-blue-zig">the expiration of that period</span> <span class="u-green">it has been approved by </span><span class="u-blue-zig">resolution</span> <span class="u-green">of </span><span class="u-blue-zig">both Houses of Parliament</span>:
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Lok Sabha Dissolution:</strong> <span class="u-green">If </span><span class="u-blue-zig">any such Proclamation</span> <span class="u-green">is issued at a time when </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">has been dissolved, or </span><span class="u-blue-zig">the dissolution</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">takes place during </span><span class="u-blue-zig">the period of one month</span> <span class="u-green">referred to in </span><span class="u-blue-zig">this clause</span>, <span class="u-green">and if </span><span class="u-blue-zig">a resolution</span> <span class="u-green">approving </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the Council of States</span>, <span class="u-green">but </span><span class="u-blue-zig">no resolution</span> <span class="u-green">with respect to </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">before </span><span class="u-blue-zig">the expiration of that period</span>, <span class="u-blue-zig">the Proclamation</span> <span class="u-green">shall cease to operate at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">thirty days</span> <span class="u-green">from the date on which </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">first sits after </span><span class="u-blue-zig">its reconstitution</span>, <span class="u-green">unless before </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">the said period of thirty days</span> <span class="u-blue-zig">a resolution</span> <span class="u-green">approving </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">has been also passed by </span><span class="u-blue-zig">the House of the People</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Six Month Duration:</strong> (5) <span class="u-blue-zig">A Proclamation</span> <span class="u-green">so approved shall, unless </span><span class="u-blue-zig">revoked</span>, <span class="u-green">cease to operate on </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">a period</span> <span class="u-green">of </span><span class="u-blue-zig">SIX MONTHS</span> <span class="u-green">from the date of </span><span class="u-blue-zig">the passing</span> <span class="u-green">of </span><span class="u-blue-zig">the second of the resolutions</span> <span class="u-green">approving </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">under </span><span class="u-blue-zig">clause (4)</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Special Majority:</strong> (6) <span class="u-green">For the purposes of </span><span class="u-blue-zig">clauses (4) and (5)</span>, <span class="u-blue-zig">a resolution</span> <span class="u-green">may be passed by </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">only by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of </span><span class="u-blue-zig">the total membership</span> <span class="u-green">of </span><span class="u-blue-zig">that House</span> <span class="u-green">and by </span><span class="u-blue-zig">a majority</span> <span class="u-green">of not less than </span><span class="u-blue-zig">two-thirds of the members</span> <span class="u-green">of </span><span class="u-blue-zig">that House</span> <span class="u-blue-zig">present and voting</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. Revocation by Lok Sabha:</strong> (7) <span class="u-green">Notwithstanding anything contained in </span><span class="u-blue-zig">the foregoing clauses</span>, <span class="u-blue-zig">the President</span> <span class="u-green">shall revoke </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">issued under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">or </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">varying </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">if </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">passes </span><span class="u-blue-zig">a resolution</span> <span class="u-green">disapproving, or, as the case may be, </span><span class="u-green">disapproving </span><span class="u-blue-zig">the continuance in force</span>, <span class="u-green">of, </span><span class="u-blue-zig">such Proclamation</span>.
+    </p>
+
+    <div class="page-number">Page 103</div>
+</div>
+
+<!-- ===== PAGE 104 ===== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Disapproval Notice:</strong> (8) <span class="u-green">Where </span><span class="u-blue-zig">a notice in writing</span> <span class="u-green">signed by not less than </span><span class="u-blue-zig">ONE-TENTH</span> <span class="u-green">of </span><span class="u-blue-zig">the total number of members</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">has been given, of </span><span class="u-blue-zig">their intention</span> <span class="u-green">to move </span><span class="u-blue-zig">a resolution</span> <span class="u-green">for </span><span class="u-blue-zig">disapproving</span>.
+    </p>
+    <ul>
+        <li><strong>2. Speaker Notification:</strong> (a) <span class="u-green">to </span><span class="u-blue-zig">the Speaker</span>, <span class="u-green">if </span><span class="u-blue-zig">the House</span> <span class="u-green">is in </span><span class="u-blue-zig">session</span>; <span class="u-green">or</span></li>
+        <li><strong>3. President Notification:</strong> (b) <span class="u-green">to </span><span class="u-blue-zig">the President</span>, <span class="u-green">if </span><span class="u-blue-zig">the House</span> <span class="u-green">is not in </span><span class="u-blue-zig">session</span>, <span class="u-blue-zig">a special sitting</span> <span class="u-green">of </span><span class="u-blue-zig">the House</span> <span class="u-green">shall be held within </span><span class="u-blue-zig">FOURTEEN DAYS</span> <span class="u-green">from the date on which </span><span class="u-blue-zig">such notice</span> <span class="u-green">is received by </span><span class="u-blue-zig">the Speaker</span>, <span class="u-green">or, as the case may be, by </span><span class="u-blue-zig">the President</span>, <span class="u-green">for the purpose of considering </span><span class="u-blue-zig">such resolution</span>.</li>
+    </ul>
+
+    <ul>
+        <li><strong>4. First Proclamation (1962):</strong> <span class="u-blue-zig">President</span> <span class="u-green">announces </span><span class="u-blue-zig">this emergency</span> <span class="u-green">on the grounds of </span><span class="u-blue-zig">external aggression</span> <span class="u-green">of </span><span class="u-blue-zig">Article 352</span>. <span class="u-red-zig">China</span> <span class="u-blue-zig">attack</span> <span class="u-green">on </span><span class="u-red-zig">India</span>.</li>
+        <ul>
+            <li><strong>a. Duration:</strong> <span class="u-blue-zig">Longest period</span> (<span class="u-red-zig">October 1962</span>- <span class="u-red-zig">January 1968</span>)</li>
+        </ul>
+        <li><strong>5. Second Proclamation (1971):</strong> <span class="u-blue-zig">President</span> <span class="u-green">announces </span><span class="u-blue-zig">this emergency</span> <span class="u-green">on the grounds of </span><span class="u-blue-zig">external aggression</span> <span class="u-green">of </span><span class="u-blue-zig">Article 352</span> <span class="u-red-zig">Pakistan</span> <span class="u-blue-zig">attack</span> <span class="u-green">on </span><span class="u-red-zig">India</span>- <span class="u-red-zig">3rd December 1971</span>.</li>
+        <li><strong>6. Third Proclamation (1975):</strong> <span class="u-blue-zig">President</span> <span class="u-green">announces </span><span class="u-blue-zig">this emergency</span> <span class="u-green">on the grounds of </span><span class="u-blue-zig">internal disturbance</span> <span class="u-green">of </span><span class="u-blue-zig">Article 352</span> (<span class="u-red-zig">25 June 1975</span>- <span class="u-red-zig">23 march 1977</span>)</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Article 353 Effect:</strong> <span class="u-blue-zig">ARTCLE 353</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">8. Executive Power Extension:</strong> <span class="u-green">While </span><span class="u-blue-zig">a Proclamation of Emergency</span> <span class="u-green">is in operation, then </span>-
+    </p>
+    <ul>
+        <li><strong>9. Union Direction Power:</strong> (a) <span class="u-green">notwithstanding anything in </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">the executive power</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall extend to </span><span class="u-blue-zig">the giving of directions</span> <span class="u-green">to </span><span class="u-blue-zig">any State</span> <span class="u-green">as to </span><span class="u-blue-zig">the manner</span> <span class="u-green">in which </span><span class="u-blue-zig">the executive power thereof</span> <span class="u-green">is to be exercised</span>.</li>
+        <li><strong>10. Parliamentary Law-Making:</strong> (b) <span class="u-blue-zig">the power of Parliament</span> <span class="u-green">to make laws with respect to </span><span class="u-blue-zig">any matter</span> <span class="u-green">shall include </span><span class="u-blue-zig">power to make laws</span> <span class="u-green">conferring </span><span class="u-blue-zig">powers</span> <span class="u-green">and imposing </span><span class="u-blue-zig">duties</span>, <span class="u-green">or authorising </span><span class="u-blue-zig">the conferring of powers</span> <span class="u-green">and </span><span class="u-blue-zig">the imposition of duties</span>, <span class="u-green">upon </span><span class="u-blue-zig">the Union</span> <span class="u-green">or </span><span class="u-blue-zig">officers and authorities</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">as respects </span><span class="u-blue-zig">that matter</span>, <span class="u-green">notwithstanding that it is </span><span class="u-blue-zig">one</span> <span class="u-green">which is not enumerated in </span><span class="u-blue-zig">the Union List</span>.</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">11. Article 354 Provision:</strong> <span class="u-blue-zig">ARTICLE 354</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">12. Financial Provisions Override:</strong> (1) <span class="u-blue-zig">The President</span> <span class="u-green">may, while </span><span class="u-blue-zig">a Proclamation of Emergency</span> <span class="u-green">is in operation, by </span><span class="u-blue-zig">order</span> <span class="u-green">direct that </span><span class="u-blue-zig">all or any of the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">articles 268 to 279</span> <span class="u-green">shall for </span><span class="u-blue-zig">such period</span>, <span class="u-green">not extending </span><span class="u-blue-zig">invisions of this Constitution</span>. <span class="u-blue-zig">any case</span> <span class="u-green">beyond </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">the financial year</span> <span class="u-green">in which </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">ceases to operate, as may be specified in </span><span class="u-blue-zig">the order</span>, <span class="u-green">have effect subject to </span><span class="u-blue-zig">such exceptions</span> <span class="u-green">or </span><span class="u-blue-zig">modifications</span> <span class="u-green">as he thinks fit</span>.
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">13. Parliamentary Laying:</strong> (2) <span class="u-blue-zig">Every order</span> <span class="u-green">made under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">shall, as soon as may be after it is made, be laid before </span><span class="u-blue-zig">each House of Parliament</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">14. Article 355 Duty:</strong> <span class="u-blue-zig">ARTICLE 355</span>
+    </p>
+
+    <div class="page-number">Page 104</div>
+</div>
+
+<!-- ===== PAGE 105 ===== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Union's Protective Duty:</strong> <span class="u-green">It shall be the duty of </span><span class="u-blue-zig">the Union</span> <span class="u-green">to protect </span><span class="u-blue-zig">every State</span> <span class="u-green">against </span><span class="u-blue-zig">external aggression</span> <span class="u-green">and </span><span class="u-blue-zig">internal disturbance</span> <span class="u-green">and to ensure that </span><span class="u-blue-zig">the Government</span> <span class="u-green">of </span><span class="u-blue-zig">every State</span> <span class="u-green">is carried on in accordance with </span><span class="u-blue-zig">the provision</span> <span class="u-green">of </span><span class="u-blue-zig">the constitution</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Article 358 Scope:</strong> <span class="u-blue-zig">ARTICLE 358</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">3. Suspension of Article 19:</strong> <span class="u-green">While </span><span class="u-blue-zig">a Proclamation of Emergency</span> <span class="u-green">declaring that </span><span class="u-blue-zig">the security of India</span> <span class="u-green">or </span><span class="u-blue-zig">any part of the territory</span> <span class="u-blue-zig">thereof</span> <span class="u-green">is threatened by </span><span class="u-blue-zig">war</span> <span class="u-green">or by </span><span class="u-blue-zig">external aggression</span> <span class="u-green">is in operation, </span><span class="u-blue-zig">nothing</span> <span class="u-green">in </span><span class="u-blue-zig">article 19</span> <span class="u-green">shall restrict </span><span class="u-blue-zig">the power of the State</span> <span class="u-green">as defined in </span><span class="u-blue-zig">Part III</span> <span class="u-green">to make </span><span class="u-blue-zig">any law</span> <span class="u-green">or to take </span><span class="u-blue-zig">any executive action</span> <span class="u-green">which </span><span class="u-blue-zig">the State</span> <span class="u-green">would but for </span><span class="u-blue-zig">the provisions</span> <span class="u-green">contained in </span><span class="u-blue-zig">that Part</span> <span class="u-green">be competent to make or to take, </span><span class="u-green">but </span><span class="u-blue-zig">any law so made</span> <span class="u-green">shall, to the extent of </span><span class="u-blue-zig">the incompetency</span>, <span class="u-green">cease to have effect as soon as </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">ceases to operate, except as respects </span><span class="u-blue-zig">things done</span> <span class="u-green">or </span><span class="u-blue-zig">omitted to be done</span> <span class="u-green">before </span><span class="u-blue-zig">the law</span> <span class="u-green">so ceases to have effect</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Article 359 Scope:</strong> <span class="u-blue-zig">ARTICLE 359</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">5. Suspension of Enforcement:</strong> (1) <span class="u-green">Where </span><span class="u-blue-zig">a Proclamation of Emergency</span> <span class="u-green">is in operation, </span><span class="u-blue-zig">the President</span> <span class="u-green">may by </span><span class="u-blue-zig">order</span> <span class="u-green">declare that </span><span class="u-blue-zig">the right to move any court</span> <span class="u-green">for </span><span class="u-blue-zig">the enforcement</span> <span class="u-green">of </span><span class="u-blue-zig">such of the rights</span> <span class="u-green">conferred by </span><span class="u-blue-zig">Part III</span> (<span class="u-green">except </span><span class="u-blue-zig">articles 20 and 21</span>)] <span class="u-green">as may be mentioned in </span><span class="u-blue-zig">the order</span> <span class="u-green">and </span><span class="u-blue-zig">all proceedings pending</span> <span class="u-green">in </span><span class="u-blue-zig">any court</span> <span class="u-green">for </span><span class="u-blue-zig">the enforcement of the rights</span> <span class="u-green">so mentioned shall remain </span><span class="u-blue-zig">suspended</span> <span class="u-green">for </span><span class="u-blue-zig">the period</span> <span class="u-green">during which </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">is in force or for </span><span class="u-blue-zig">such shorter period</span> <span class="u-green">as may be specified in </span><span class="u-blue-zig">the order</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. State Power During Order:</strong> (1A) <span class="u-green">While </span><span class="u-blue-zig">an order</span> <span class="u-green">made under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">mentioning </span><span class="u-blue-zig">any of the rights</span> <span class="u-green">conferred by </span><span class="u-blue-zig">Part III</span> (<span class="u-green">except </span><span class="u-blue-zig">articles 20 and 21</span>)] <span class="u-green">is in operation, </span><span class="u-blue-zig">nothing</span> <span class="u-green">in </span><span class="u-blue-zig">that Part</span> <span class="u-green">conferring </span><span class="u-blue-zig">those rights</span> <span class="u-green">shall restrict </span><span class="u-blue-zig">the power of the State</span> <span class="u-green">as defined in </span><span class="u-blue-zig">the said Part</span> <span class="u-green">to make </span><span class="u-blue-zig">any law</span> <span class="u-green">or to take </span><span class="u-blue-zig">any executive action</span> <span class="u-green">which </span><span class="u-blue-zig">the State</span> <span class="u-green">would but for </span><span class="u-blue-zig">the provisions</span> <span class="u-green">contained in </span><span class="u-blue-zig">that Part</span> <span class="u-green">be competent to make or to take, </span><span class="u-green">but </span><span class="u-blue-zig">any law so made</span> <span class="u-green">shall, to the extent of </span><span class="u-blue-zig">the incompetency</span>, <span class="u-green">cease to have effect as soon as </span><span class="u-blue-zig">the order aforesaid</span> <span class="u-green">ceases to operate, except as respects </span><span class="u-blue-zig">things done</span> <span class="u-green">or </span><span class="u-blue-zig">omitted to be done</span> <span class="u-green">before </span><span class="u-blue-zig">the law</span> <span class="u-green">so ceases to have effect</span>:
+    </p>
+
+    <ul>
+        <li><strong>7. Recital Requirement:</strong> (2) <span class="u-green">Nothing in </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">shall apply</span>—</li>
+        <ul>
+            <li><strong>a. Law Recital:</strong> (a) <span class="u-green">to </span><span class="u-blue-zig">any law</span> <span class="u-green">which does not contain </span><span class="u-blue-zig">a recital</span> <span class="u-green">to the effect that </span><span class="u-blue-zig">such law</span> <span class="u-green">is in relation to </span><span class="u-blue-zig">the Proclamation of Emergency</span> <span class="u-green">in operation when it is made</span>; <span class="u-green">or</span></li>
+            <li><strong>b. Executive Action:</strong> (b) <span class="u-green">to </span><span class="u-blue-zig">any executive action</span> <span class="u-green">taken otherwise than under </span><span class="u-blue-zig">a law</span> <span class="u-green">containing </span><span class="u-blue-zig">such a recital</span>.]</li>
+        </ul>
+        <li><strong>8. Clause 1A Limitation:</strong> (1B) <span class="u-green">Nothing in </span><span class="u-blue-zig">clause (1A)</span> <span class="u-green">shall apply</span>—</li>
+        <ul>
+            <li><strong>a. Law Recital:</strong> (a) <span class="u-green">to </span><span class="u-blue-zig">any law</span> <span class="u-green">which does not contain </span><span class="u-blue-zig">a recital</span> <span class="u-green">to the effect that </span><span class="u-blue-zig">such law</span> <span class="u-green">is in relation to </span><span class="u-blue-zig">the Proclamation of Emergency</span> <span class="u-green">in operation when it is made</span>; <span class="u-green">or</span></li>
+            <li><strong>b. Executive Action:</strong> (b) <span class="u-green">to </span><span class="u-blue-zig">any executive action</span> <span class="u-green">taken otherwise than under </span><span class="u-blue-zig">a law</span> <span class="u-green">containing </span><span class="u-blue-zig">such a recital</span>.</li>
+        </ul>
+    </ul>
+
+    <div class="page-number">Page 105</div>
+</div>
+
+<!-- ===== PAGE 106 ===== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Parliamentary Laying:</strong> (3) <span class="u-blue-zig">Every order</span> <span class="u-green">made under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">shall, as soon as may be after it is made, be laid before </span><span class="u-blue-zig">each House of Parliament</span>.
+    </p>
+
+    <div class="main-topic-header">PRESIDENT RULE</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Article 356 Provision:</strong> <span class="u-blue-zig">ARTICLE 356</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Governor's Report:</strong> (1) <span class="u-green">If </span><span class="u-blue-zig">the President</span>, <span class="u-green">on receipt of </span><span class="u-blue-zig">a report</span> <span class="u-green">from </span><span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span> <span class="u-green">or otherwise, is satisfied that </span><span class="u-blue-zig">a situation</span> <span class="u-green">has arisen in which </span><span class="u-blue-zig">the Government of the State</span> <span class="u-green">cannot be carried on in accordance with </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">this Constitution</span>, <span class="u-blue-zig">the President</span> <span class="u-green">may by </span><span class="u-blue-zig">Proclamation</span>—
+    </p>
+    <ul>
+        <li><strong>3. Assume State Functions:</strong> (a) <span class="u-green">assume to himself </span><span class="u-blue-zig">all or any of the functions</span> <span class="u-green">of </span><span class="u-blue-zig">the Government of the State</span> <span class="u-green">and </span><span class="u-blue-zig">all or any of the powers</span> <span class="u-green">vested in or exercisable by </span><span class="u-blue-zig">the Governor</span> <span class="u-green">or </span><span class="u-blue-zig">any body or authority</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span> <span class="u-green">other than </span><span class="u-blue-zig">the Legislature of the State</span>;</li>
+        <li><strong>4. Legislature Under Parliament:</strong> (b) <span class="u-green">declare that </span><span class="u-blue-zig">the powers</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">shall be exercisable by or under </span><span class="u-blue-zig">the authority of Parliament</span>;</li>
+        <li><strong>5. Incidental Provisions:</strong> (c) <span class="u-green">make such </span><span class="u-blue-zig">incidental and consequential provisions</span> <span class="u-green">as appear to </span><span class="u-blue-zig">the President</span> <span class="u-green">to be necessary or desirable for giving effect to </span><span class="u-blue-zig">the objects</span> <span class="u-green">of </span><span class="u-blue-zig">the Proclamation</span>, <span class="u-green">including </span><span class="u-blue-zig">provisions</span> <span class="u-green">for suspending in whole or in part </span><span class="u-blue-zig">the operation</span> <span class="u-green">of </span><span class="u-blue-zig">any provisions of this Constitution</span> <span class="u-green">relating to </span><span class="u-blue-zig">any body or authority</span> <span class="u-green">in </span><span class="u-blue-zig">the State</span>:</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. High Court Protection:</strong> <span class="u-green">Provided that nothing in </span><span class="u-blue-zig">this clause</span> <span class="u-green">shall authorise </span><span class="u-blue-zig">the President</span> <span class="u-green">to assume to himself </span><span class="u-blue-zig">any of the powers</span> <span class="u-green">vested in or exercisable by </span><span class="u-blue-zig">a High Court</span>, <span class="u-green">or to suspend in whole or in part </span><span class="u-blue-zig">the operation</span> <span class="u-green">of </span><span class="u-blue-zig">any provision of this Constitution</span> <span class="u-green">relating to </span><span class="u-blue-zig">High Courts</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Revocation Power:</strong> (2) <span class="u-blue-zig">any such Proclamation</span> <span class="u-green">may be revoked or varied by </span><span class="u-blue-zig">a subsequent Proclamation</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">8. Two Month Limit:</strong> (3) <span class="u-blue-zig">Every Proclamation</span> <span class="u-green">under </span><span class="u-blue-zig">this article</span> <span class="u-green">shall be laid before </span><span class="u-blue-zig">each House of Parliament</span> <span class="u-green">and shall, except where it is </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">revoking </span><span class="u-blue-zig">a previous Proclamation</span>, <span class="u-green">cease to operate at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">TWO MONTHS</span> <span class="u-green">unless before </span><span class="u-blue-zig">the expiration of that period</span> <span class="u-green">it has been approved by </span><span class="u-blue-zig">resolutions</span> <span class="u-green">of </span><span class="u-blue-zig">both Houses of Parliament</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">9. Six Month Duration:</strong> (4) <span class="u-blue-zig">A Proclamation</span> <span class="u-green">so approved shall, unless </span><span class="u-blue-zig">revoked</span>, <span class="u-green">cease to operate on </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">a period of six months</span> <span class="u-green">from the date of issue of </span><span class="u-blue-zig">the Proclamation</span>.(<span class="u-blue-zig">no such Proclamation</span> <span class="u-green">shall in any case remain in force for more than </span><span class="u-blue-zig">three years</span>).
+    </p>
+
+    <ul>
+        <li><strong>10. Rajya Sabha Approval:</strong> <span class="u-green">If </span><span class="u-blue-zig">the dissolution</span> <span class="u-green">of </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">takes place during </span><span class="u-blue-zig">any such period of six months</span> <span class="u-green">and </span><span class="u-blue-zig">a resolution</span> <span class="u-green">approving </span><span class="u-blue-zig">the continuance in force</span> <span class="u-green">of </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the Council of States</span>.</li>
+        <li><strong>11. Lok Sabha Reconstitution:</strong> <span class="u-blue-zig">No resolution</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the continuance in force</span> <span class="u-green">of </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">during </span><span class="u-blue-zig">the said period</span>, <span class="u-blue-zig">the Proclamation</span> <span class="u-green">shall cease to</span></li>
+    </ul>
+
+    <div class="page-number">Page 106</div>
+</div>
+
+<!-- ===== PAGE 107 ===== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Thirty Day Limit:</strong> <span class="u-green">operate at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">THIRTY DAYS</span> <span class="u-green">from the date on which </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">first sits after </span><span class="u-blue-zig">its reconstitution</span> <span class="u-green">unless before </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">the said period of thirty days</span> <span class="u-blue-zig">a resolution</span> <span class="u-green">approving </span><span class="u-blue-zig">the continuance in force</span> <span class="u-green">of </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">has been also passed by </span><span class="u-blue-zig">the House of the People</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. One Year Extension:</strong> (5) <span class="u-green">Notwithstanding anything contained in </span><span class="u-blue-zig">clause (4)</span>, <span class="u-blue-zig">a resolution</span> <span class="u-green">with respect to </span><span class="u-blue-zig">the continuance in force</span> <span class="u-green">of </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">approved under </span><span class="u-blue-zig">clause (3)</span> <span class="u-green">for </span><span class="u-blue-zig">any period</span> <span class="u-green">beyond </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">one year</span> <span class="u-green">from the date of issue of </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">shall not be passed by </span><span class="u-blue-zig">either House of Parliament</span> <span class="u-green">unless</span>—
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">3. Election Commission Role:</strong> <span class="u-blue-zig">The Election Commission</span> <span class="u-green">certifies that </span><span class="u-blue-zig">the continuance in force</span> <span class="u-green">of </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">approved under </span><span class="u-blue-zig">clause (3)</span> <span class="u-green">during </span><span class="u-blue-zig">the period</span> <span class="u-green">specified in </span><span class="u-blue-zig">such resolution</span> <span class="u-green">is necessary on account of </span><span class="u-blue-zig">difficulties</span> <span class="u-green">in holding </span><span class="u-blue-zig">general elections</span> <span class="u-green">to </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of </span><span class="u-blue-zig">the State concerned</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Ambedkar's Vision:</strong> <span class="u-red-zig">Dr. Ambedkar</span> <span class="u-green">envisaged it to remain </span><span class="u-blue-zig">a 'dead letter'</span> <span class="u-green">in </span><span class="u-blue-zig">the constitution</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Bommai Case Ruling:</strong> <span class="u-blue-zig">A nine-judge Constitution Bench</span> <span class="u-green">of </span><span class="u-blue-zig">the court</span> <span class="u-green">in the </span><span class="u-red-zig">Bommai case</span>, <span class="u-green">which is </span><span class="u-blue-zig">the reigning authority</span> <span class="u-green">on </span><span class="u-blue-zig">the use and misuse</span> <span class="u-green">of </span><span class="u-blue-zig">Article 356</span>, <span class="u-green">had held that </span><span class="u-blue-zig">political whim or fancy</span> <span class="u-green">cannot form the basis for </span><span class="u-blue-zig">the President</span> <span class="u-green">to proclaim </span><span class="u-blue-zig">central rule</span> <span class="u-green">in </span><span class="u-blue-zig">a State</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Parliamentary Pre-condition:</strong> <span class="u-blue-zig">The President</span> <span class="u-green">should exercise </span><span class="u-blue-zig">the power</span> <span class="u-green">only after </span><span class="u-blue-zig">his proclamation</span> (<span class="u-green">imposing </span><span class="u-blue-zig">his/her rule</span>) <span class="u-green">is approved by </span><span class="u-blue-zig">both Houses of Parliament</span>. <span class="u-green">Till then </span><span class="u-blue-zig">the President</span> <span class="u-green">can only suspend </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">by suspending </span><span class="u-blue-zig">the provisions of Constitution</span> <span class="u-green">relating to </span><span class="u-blue-zig">the Legislative Assembly</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">7. Objective Material Test:</strong> <span class="u-green">It is not </span><span class="u-blue-zig">the personal whim, wish, view</span> <span class="u-green">or </span><span class="u-blue-zig">opinion of the President</span> <span class="u-blue-zig">de hors the material</span>, <span class="u-green">but </span><span class="u-blue-zig">a legitimate inference</span> <span class="u-green">drawn from </span><span class="u-blue-zig">the material</span> <span class="u-green">placed before him which is relevant for </span><span class="u-blue-zig">the purpose</span>. <span class="u-blue-zig">Such objective material</span> <span class="u-green">may be available in </span><span class="u-blue-zig">the report</span> <span class="u-green">sent to </span><span class="u-blue-zig">the President</span> <span class="u-green">by </span><span class="u-blue-zig">the Governor</span> <span class="u-green">or otherwise or both from </span><span class="u-blue-zig">the report</span> <span class="u-green">and </span><span class="u-blue-zig">other sources</span>.
+    </p>
+
+    <ul>
+        <li><strong>8. Judicial Review Scope:</strong> <span class="u-blue-zig">The court</span> <span class="u-green">had stated that although </span><span class="u-blue-zig">the sufficiency</span> <span class="u-green">or otherwise of </span><span class="u-blue-zig">the material</span> <span class="u-green">cannot be questioned, </span><span class="u-blue-zig">the legitimacy of inference</span> <span class="u-green">drawn from </span><span class="u-blue-zig">such material</span> <span class="u-green">is </span>"<span class="u-blue-zig">certainly open</span> <span class="u-green">to </span><span class="u-blue-zig">judicial review</span>".</li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">9. Ministerial Advice:</strong> <span class="u-blue-zig">The proclamation</span> <span class="u-green">by </span><span class="u-blue-zig">the President</span> <span class="u-green">under </span><span class="u-blue-zig">Article 356</span> <span class="u-green">is on </span><span class="u-blue-zig">the advice</span> <span class="u-green">of </span><span class="u-blue-zig">the Council of Ministers</span> <span class="u-green">tendered under </span><span class="u-blue-zig">Article 74(1)</span>. <span class="u-blue-zig">The judgment</span> <span class="u-green">had explained that in </span><span class="u-blue-zig">a multi-party political system</span>, <span class="u-blue-zig">chances</span> <span class="u-green">are high that </span><span class="u-blue-zig">the political parties</span> <span class="u-green">in </span><span class="u-blue-zig">the Centre</span> <span class="u-green">and </span><span class="u-blue-zig">the State concerned</span> <span class="u-green">may not be </span><span class="u-blue-zig">the same</span>. <span class="u-blue-zig">Article 356</span> <span class="u-green">cannot be used for the purpose of </span><span class="u-blue-zig">political one-upmanship</span> <span class="u-green">by </span><span class="u-blue-zig">the Centre</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">10. Framers' Intent:</strong> <span class="u-green">That is why </span><span class="u-blue-zig">the framers of the Constitution</span> <span class="u-green">had taken pains to specify that </span><span class="u-blue-zig">President</span> <span class="u-green">should proclaim </span><span class="u-blue-zig">central rule</span> <span class="u-green">in </span><span class="u-blue-zig">a State</span> <span class="u-blue-zig">only, and only</span>, <span class="u-green">if </span><span class="u-blue-zig">a situation</span> <span class="u-green">arises by which </span><span class="u-blue-zig">governance of the State</span> <span class="u-green">is either disabled or prevented from continuing </span>"<span class="u-green">in accordance with </span><span class="u-blue-zig">the provisions of the Constitution</span>".
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">11. Sarkaria Commission:</strong> <span class="u-blue-zig">The</span> <span class="u-red-zig">Sarkaria Commission</span> <span class="u-green">has also recommended to make </span><span class="u-blue-zig">appropriate amendment</span> <span class="u-green">in </span><span class="u-blue-zig">the article</span>.
+    </p>
+
+    <div class="page-number">Page 107</div>
+</div>
+
+<!-- ===== PAGE 108 ===== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Rameshwar Prasad Case:</strong> <span class="u-green">In </span><span class="u-red-zig">Rameshwar Prasad</span> <span class="u-blue-zig">v. Union of India</span>, <span class="u-blue-zig">the Court</span> <span class="u-green">reiterated that </span><span class="u-blue-zig">the Court</span> <span class="u-green">can revive </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">whether kept in </span><span class="u-blue-zig">suspended animation</span> <span class="u-green">or </span><span class="u-blue-zig">dissolved</span> <span class="u-green">and restore </span><span class="u-blue-zig">the dismissed government</span> <span class="u-green">it strikes down </span><span class="u-blue-zig">the proclamation</span> <span class="u-green">issued under </span><span class="u-blue-zig">article 356</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Article 357 Provision:</strong> <span class="u-blue-zig">ARTICLE 357</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">3. Legislature Under Parliament:</strong> (1) <span class="u-green">Where by </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">issued under </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">of </span><span class="u-blue-zig">article 356</span>, <span class="u-green">it has been declared that </span><span class="u-blue-zig">the powers</span> <span class="u-green">of </span><span class="u-blue-zig">the Legislature of the State</span> <span class="u-green">shall be exercisable by or under </span><span class="u-blue-zig">the authority of Parliament</span>.
+    </p>
+    <ul>
+        <li><strong>4. Consolidated Fund Expenditure:</strong> <span class="u-green">For </span><span class="u-blue-zig">the President</span> <span class="u-green">to authorise when </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">is not in </span><span class="u-blue-zig">session</span> <span class="u-blue-zig">expenditure</span> <span class="u-green">from </span><span class="u-blue-zig">the Consolidated Fund</span> <span class="u-green">of </span><span class="u-blue-zig">the State</span> <span class="u-green">pending </span><span class="u-blue-zig">the sanction</span> <span class="u-green">of </span><span class="u-blue-zig">such expenditure</span> <span class="u-green">by </span><span class="u-blue-zig">Parliament</span>.</li>
+    </ul>
+
+    <div class="main-topic-header">FINANCIAL EMERGENCY</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Article 360 Provision:</strong> <span class="u-blue-zig">ARTICLE 360</span>
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. Financial Stability Threat:</strong> (1) <span class="u-green">If </span><span class="u-blue-zig">the President</span> <span class="u-green">is satisfied that </span><span class="u-blue-zig">a situation</span> <span class="u-green">has arisen whereby </span><span class="u-blue-zig">the financial stability</span> <span class="u-green">or </span><span class="u-blue-zig">credit of India</span> <span class="u-green">or of </span><span class="u-blue-zig">any part of the territory</span> <span class="u-blue-zig">thereof</span> <span class="u-green">is threatened, </span><span class="u-green">he may by </span><span class="u-blue-zig">a Proclamation</span> <span class="u-green">make </span><span class="u-blue-zig">a declaration</span> <span class="u-green">to that effect</span>.
+    </p>
+
+    <ul>
+        <li><strong>3. Revocation Power:</strong> (2) <span class="u-blue-zig">A Proclamation</span> <span class="u-green">issued under </span><span class="u-blue-zig">clause (1)</span>—</li>
+        <ul>
+            <li><strong>a. Subsequent Proclamation:</strong> (a) <span class="u-green">may be revoked or varied by </span><span class="u-blue-zig">a subsequent Proclamation</span>;</li>
+            <li><strong>b. Parliamentary Laying:</strong> (b) <span class="u-green">shall be laid before </span><span class="u-blue-zig">each House of Parliament</span>;</li>
+            <li><strong>c. Two Month Limit:</strong> (c) <span class="u-green">shall cease to operate at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">TWO MONTHS</span>, <span class="u-green">unless before </span><span class="u-blue-zig">the expiration of that period</span> <span class="u-green">it has been approved by </span><span class="u-blue-zig">resolutions</span> <span class="u-green">of </span><span class="u-blue-zig">both Houses of Parliament</span>:</li>
+        </ul>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Lok Sabha Reconstitution:</strong> <span class="u-green">If </span><span class="u-blue-zig">a resolution</span> <span class="u-green">approving </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the Council of States</span>, <span class="u-green">but </span><span class="u-blue-zig">no resolution</span> <span class="u-green">with respect to </span><span class="u-blue-zig">such Proclamation</span> <span class="u-green">has been passed by </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">before </span><span class="u-blue-zig">the expiration of that period</span>, <span class="u-blue-zig">the Proclamation</span> <span class="u-green">shall cease to operate at </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">THIRTY DAYS</span> <span class="u-green">from the date on which </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">first sits after </span><span class="u-blue-zig">its reconstitution</span> <span class="u-green">unless before </span><span class="u-blue-zig">the expiration</span> <span class="u-green">of </span><span class="u-blue-zig">the said period of thirty days</span> <span class="u-blue-zig">a resolution</span> <span class="u-green">approving </span><span class="u-blue-zig">the Proclamation</span> <span class="u-green">has been also passed by </span><span class="u-blue-zig">the House of the People</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Union Executive Authority:</strong> (3) <span class="u-green">During </span><span class="u-blue-zig">the period</span> <span class="u-blue-zig">any such Proclamation</span> <span class="u-green">as is mentioned in </span><span class="u-blue-zig">clause (1)</span> <span class="u-green">is in operation, </span><span class="u-blue-zig">the executive authority</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">shall extend to </span><span class="u-blue-zig">the giving of directions</span> <span class="u-green">to </span><span class="u-blue-zig">any State</span> <span class="u-green">to observe </span><span class="u-blue-zig">such canons of financial propriety</span> <span class="u-green">as may be specified in </span><span class="u-blue-zig">the directions</span>, <span class="u-green">and to the giving of </span><span class="u-blue-zig">such other directions</span> <span class="u-green">as </span><span class="u-blue-zig">the President</span> <span class="u-green">may deem necessary and adequate for </span><span class="u-blue-zig">the purpose</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">6. Salary Reduction Direction:</strong> (4) <span class="u-green">Notwithstanding anything in </span><span class="u-blue-zig">this Constitution</span>—
+    </p>
+    <ul>
+        <li><strong>7. State Salary Reduction:</strong> (a) <span class="u-blue-zig">any such direction</span> <span class="u-green">may include</span>—</li>
+        <ul>
+            <li><strong>a. Salary Provision:</strong> (i) <span class="u-blue-zig">a provision</span> <span class="u-green">requiring </span><span class="u-blue-zig">the reduction</span> <span class="u-green">of </span><span class="u-blue-zig">salaries and allowances</span> <span class="u-green">of </span><span class="u-blue-zig">all or any class of persons</span> <span class="u-green">serving in connection with </span><span class="u-blue-zig">the affairs</span> <span class="u-green">of </span><span class="u-blue-zig">a State</span>;</li>
+        </ul>
+    </ul>
+
+    <div class="page-number">Page 108</div>
+</div>
+
+<!-- ===== PAGE 109 ===== -->
+<div class="pdf-page">
+
+    <ul>
+        <ul>
+            <li><strong>1. Money Bills Reservation:</strong> (ii) <span class="u-blue-zig">a provision</span> <span class="u-green">requiring </span><span class="u-blue-zig">all Money Bills</span> <span class="u-green">or </span><span class="u-blue-zig">other Bills</span> <span class="u-green">to which </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">article 207</span> <span class="u-green">apply to be reserved for </span><span class="u-blue-zig">the consideration</span> <span class="u-green">of </span><span class="u-blue-zig">the President</span> <span class="u-green">after they are passed by </span><span class="u-blue-zig">the Legislature of the State</span>;</li>
+        </ul>
+        <li><strong>2. Union Salary Reduction:</strong> (b) <span class="u-green">it shall be competent for </span><span class="u-blue-zig">the President</span> <span class="u-green">during </span><span class="u-blue-zig">the period</span> <span class="u-blue-zig">any Proclamation</span> <span class="u-green">issued under </span><span class="u-blue-zig">this article</span> <span class="u-green">is in operation to issue </span><span class="u-blue-zig">directions</span> <span class="u-green">for </span><span class="u-blue-zig">the reduction</span> <span class="u-green">of </span><span class="u-blue-zig">salaries and allowances</span> <span class="u-green">of </span><span class="u-blue-zig">all or any class of persons</span> <span class="u-green">serving in connection with </span><span class="u-blue-zig">the affairs</span> <span class="u-green">of </span><span class="u-blue-zig">the Union</span> <span class="u-green">including </span><span class="u-blue-zig">the Judges</span> <span class="u-green">of </span><span class="u-blue-zig">the Supreme Court</span> <span class="u-green">and </span><span class="u-blue-zig">the High Courts</span>.</li>
+    </ul>
+
+    <div class="page-number">Page 109</div>
+</div>
+
+</body>
+</html>

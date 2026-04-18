@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH18 - Tribunals</title>
+    <style>
+        :root {
+            --primary-blue: #1a4a7c;
+            --primary-red: #b22222;
+            --secondary-blue: #eef4fb;
+            --secondary-red: #fdeaea;
+            --text-gray: #333;
+            --border-gray: #ddd;
+            --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .pdf-page {
+            background: white;
+            width: 100%;
+            max-width: 850px;
+            padding: 60px 80px;
+            box-shadow: var(--page-shadow);
+            border-top: 8px solid var(--primary-red);
+            min-height: 1100px;
+            box-sizing: border-box;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--secondary-red);
+            padding-bottom: 20px;
+        }
+
+        .subject-tag {
+            background: var(--primary-red);
+            color: white;
+            padding: 4px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        h1 {
+            color: var(--primary-red);
+            margin: 15px 0 5px 0;
+            font-size: 1.8rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .main-topic-header {
+            background: var(--secondary-red);
+            color: var(--primary-red);
+            padding: 10px 15px;
+            border-left: 5px solid var(--primary-red);
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+        }
+
+        .section-header {
+            background: var(--secondary-blue);
+            color: var(--primary-blue);
+            padding: 10px 15px;
+            border-left: 5px solid var(--primary-blue);
+            font-weight: bold;
+            margin: 25px 0 15px 0;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+
+        ul ul {
+            margin-top: 5px;
+            list-style-type: circle;
+        }
+
+        ul ul ul {
+            list-style-type: square;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+            font-weight: bold;
+            color: var(--primary-red);
+        }
+
+        .info-box {
+            background: var(--secondary-blue);
+            border: 1.5px solid var(--primary-blue);
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .info-box-red {
+            background: var(--secondary-red);
+            border: 1.5px solid var(--primary-red);
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+
+        .info-box-header {
+            font-weight: bold;
+            color: var(--primary-blue);
+            font-size: 1rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-box-red .info-box-header {
+            color: var(--primary-red);
+        }
+
+        .quote-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--primary-blue);
+            padding: 12px 18px;
+            margin: 18px 0;
+            font-style: italic;
+            font-size: 0.93rem;
+            color: #444;
+        }
+
+        .quote-box .quote-author {
+            font-style: normal;
+            font-weight: bold;
+            display: block;
+            margin-top: 6px;
+            color: var(--primary-red);
+        }
+
+        .pyq-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 0.92rem;
+        }
+
+        .pyq-table thead th {
+            background: var(--primary-blue);
+            color: white;
+            padding: 10px 14px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+
+        .pyq-table tbody td {
+            border: 1px solid var(--border-gray);
+            padding: 10px 14px;
+            vertical-align: top;
+        }
+
+        .pyq-table tbody td:last-child {
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-red);
+            white-space: nowrap;
+            width: 60px;
+        }
+
+        .pyq-table tbody tr:nth-child(even) {
+            background: #f7fafd;
+        }
+
+        .image-placeholder {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #ccc;
+            background: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            color: #999;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .u-green {
+            text-decoration: underline;
+            text-decoration-color: #00FF00;
+            text-decoration-style: solid;
+        }
+
+        .u-red-zig {
+            text-decoration: underline;
+            text-decoration-color: #FF0000;
+            text-decoration-style: wavy;
+        }
+
+        .u-blue-zig {
+            text-decoration: underline;
+            text-decoration-color: rgba(0,0,255,255);
+            text-decoration-style: wavy;
+            text-decoration-thickness: 1px;
+        }
+
+        h1, h2, h3, h4, h5, h6,
+        .subject-tag,
+        .subtitle,
+        .main-topic-header,
+        .section-header,
+        li strong,
+        li b {
+            text-decoration: none !important;
+            font-weight: bold;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .pdf-page {
+                box-shadow: none;
+                margin: 0;
+                border: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="pdf-page">
+        <header>
+            <span class="subject-tag">INDIAN POLITY</span>
+            <h1>CH18- Tribunals</h1>
+            <div class="subtitle">Part XIV-A — Article 323A - 323B</div>
+        </header>
+
+        <p><strong style="color: var(--primary-red);">Tribunals:</strong> A <span class="u-blue-zig">tribunal</span><span class="u-green"> is a </span><span class="u-blue-zig">quasi-judicial institution</span><span class="u-green"> that deals with the </span><span class="u-blue-zig">resolution of disputes</span><span class="u-green"> pertaining to </span><span class="u-blue-zig">administration</span>, <span class="u-blue-zig">taxation</span>, <span class="u-blue-zig">environment</span>, <span class="u-blue-zig">securities</span>, <span class="u-green">etc</span>.</p>
+
+        <p><span class="u-green">The </span><span class="u-blue-zig">original Constitution</span><span class="u-green"> did not contain </span><span class="u-blue-zig">provisions</span><span class="u-green"> with respect to </span><span class="u-blue-zig">tribunals</span>. <span class="u-green">The </span><span class="u-red-zig">42nd Amendment Act</span><span class="u-green"> of </span><span class="u-blue-zig">1976</span><span class="u-green"> added a new </span><span class="u-blue-zig">Part XIV-A</span><span class="u-green"> to the </span><span class="u-blue-zig">Constitution</span>.</p>
+
+        <div class="section-header">ARTICLE 323A</div>
+
+        <p><span class="u-green">Empowers the </span><span class="u-red-zig">Parliament</span><span class="u-green"> to provide for the </span><span class="u-blue-zig">establishment</span><span class="u-green"> of </span><span class="u-blue-zig">administrative tribunals</span><span class="u-green"> for the </span><span class="u-blue-zig">adjudication of disputes</span><span class="u-green"> relating to </span><span class="u-blue-zig">recruitment</span><span class="u-green"> and </span><span class="u-blue-zig">conditions of service</span><span class="u-green"> of </span><span class="u-blue-zig">persons appointed</span><span class="u-green"> to </span><span class="u-blue-zig">public services</span><span class="u-green"> of the </span><span class="u-blue-zig">Centre</span>, <span class="u-green">the </span><span class="u-blue-zig">states</span>, <span class="u-blue-zig">local bodies</span>, <span class="u-blue-zig">public corporations</span>, <span class="u-green">and </span><span class="u-blue-zig">other public authorities</span>.</p>
+
+        <ul>
+            <li><strong>1. Parliament Enacted:</strong> &#10044; <span class="u-green">The </span><span class="u-red-zig">Parliament</span><span class="u-green"> enacted the </span><span class="u-red-zig">Administrative Tribunals Act</span><span class="u-green"> in </span><span class="u-blue-zig">1985</span>, <span class="u-green">which empowers the </span><span class="u-blue-zig">Central government</span><span class="u-green"> to establish the </span><span class="u-red-zig">Central Administrative Tribunal</span><span class="u-green"> and </span><span class="u-blue-zig">state-level</span> <span class="u-blue-zig">administrative tribunals</span>.</li>
+        </ul>
+
+        <div class="section-header">ARTICLE 323B</div>
+
+        <p><span class="u-green">Empowers the </span><span class="u-red-zig">Parliament</span><span class="u-green"> and </span><span class="u-blue-zig">state legislatures</span><span class="u-green"> to set up </span><span class="u-blue-zig">tribunals</span><span class="u-green"> for </span><span class="u-blue-zig">various matters</span><span class="u-green"> like </span><span class="u-blue-zig">Industrial and labour</span>, <span class="u-blue-zig">Foreign exchange</span>, <span class="u-blue-zig">import and export</span>, <span class="u-blue-zig">Land reforms</span>, <span class="u-blue-zig">Food</span>, <span class="u-green">The </span><span class="u-blue-zig">ceiling on urban property</span>, <span class="u-blue-zig">Elections</span><span class="u-green"> to </span><span class="u-red-zig">Parliament</span><span class="u-green"> and </span><span class="u-blue-zig">state legislatures</span>, <span class="u-blue-zig">Rent and tenancy rights</span>, <span class="u-green">etc</span>.</p>
+
+        <div class="section-header">FEATURES</div>
+
+        <ul>
+            <li><strong>1. Natural Justice:</strong> <span class="u-blue-zig">Tribunals</span><span class="u-green"> the </span><span class="u-blue-zig">principle of natural justice</span>, <span class="u-green">which requires that </span><span class="u-blue-zig">all parties</span><span class="u-green"> to a </span><span class="u-blue-zig">legal proceeding</span><span class="u-green"> be given a </span><span class="u-blue-zig">fair and impartial hearing</span><span class="u-green"> and that </span><span class="u-blue-zig">no person</span><span class="u-green"> should be a </span><span class="u-blue-zig">judge</span><span class="u-green"> in </span><span class="u-blue-zig">their own cause</span>.</li>
+            <li><strong>2. Not Bound by Strict Rules:</strong> <span class="u-blue-zig">Tribunals</span><span class="u-green"> are not bound by the </span><span class="u-blue-zig">strict rules</span><span class="u-green"> of </span><span class="u-blue-zig">procedure and evidence</span><span class="u-green"> set out in the </span><span class="u-red-zig">CPC</span>.</li>
+            <li><strong>3. Specialized Expertise:</strong> <span class="u-green">It is comprised of </span><span class="u-blue-zig">members</span><span class="u-green"> who have </span><span class="u-blue-zig">specialized expertise</span><span class="u-green"> in the </span><span class="u-blue-zig">subject matter</span><span class="u-green"> over which they have </span><span class="u-blue-zig">jurisdiction</span>.</li>
+            <li><strong>4. Binding Decisions:</strong> <span class="u-blue-zig">Tribunals</span><span class="u-green"> can </span><span class="u-blue-zig">hear evidence</span>, <span class="u-blue-zig">examine witnesses</span>, <span class="u-blue-zig">make findings of fact</span>, <span class="u-green">apply the </span><span class="u-blue-zig">law</span><span class="u-green"> to the </span><span class="u-blue-zig">facts</span>, <span class="u-green">and </span><span class="u-blue-zig">make binding decisions</span>.</li>
+            <li><strong>5. Appeal:</strong> <span class="u-green">The </span><span class="u-blue-zig">decisions of tribunals</span><span class="u-green"> can be appealed to a </span><span class="u-blue-zig">higher court</span>.</li>
+            <li><strong>6. Time-bound:</strong> <span class="u-blue-zig">Time-bound resolution</span>.</li>
+        </ul>
+
+        <div class="section-header">SIGNIFICANCE</div>
+
+        <ul>
+            <li><strong>1. Reduce Workload:</strong> <span class="u-green">The </span><span class="u-blue-zig">Tribunals</span><span class="u-green"> were set up to </span><span class="u-blue-zig">reduce the workload</span><span class="u-green"> of </span><span class="u-blue-zig">courts</span>, <span class="u-green">to </span><span class="u-blue-zig">expedite decisions</span><span class="u-green"> and to provide a </span><span class="u-blue-zig">forum</span><span class="u-green"> which would be </span><span class="u-blue-zig">manned by lawyers</span><span class="u-green"> and </span><span class="u-blue-zig">experts</span><span class="u-green"> in the </span><span class="u-blue-zig">areas</span><span class="u-green"> falling under the </span><span class="u-blue-zig">jurisdiction</span><span class="u-green"> of the </span><span class="u-blue-zig">Tribunal</span>.</li>
+        </ul>
+
+        <div class="page-number">Page 70</div>
+    </div>
+
+<div class="pdf-page">
+
+<!-- SIGNIFICANCE (continued) -->
+<ul>
+    <li><strong style="color: var(--primary-red);">1. Specialised Role:</strong> <span class="u-red-zig">The tribunals</span> <span class="u-green">perform </span><span class="u-blue-zig">an important and specialised role</span> <span class="u-green">in </span><span class="u-blue-zig">justice mechanism</span>. <span class="u-green">They take a load off </span><span class="u-blue-zig">the already overburdened courts</span>. <span class="u-green">They hear disputes related to </span><span class="u-blue-zig">the environment</span>, <span class="u-blue-zig">armed forces</span>, <span class="u-blue-zig">tax</span> <span class="u-green">and </span><span class="u-blue-zig">administrative issues</span>.</li>
+    <li><strong style="color: var(--primary-red);">2. Pendency of Cases:</strong> <span class="u-green">To tackle </span><span class="u-blue-zig">the humongous pendency</span> <span class="u-green">of cases in </span><span class="u-blue-zig">various Courts</span>.</li>
+</ul>
+
+<!-- ADMINISTRATIVE TRIBUNALS -->
+<div class="main-topic-header">ADMINISTRATIVE TRIBUNALS</div>
+
+<!-- CENTRAL ADMINISTRATIVE TRIBUNAL (CAT) -->
+<div class="section-header">CENTRAL ADMINISTRATIVE TRIBUNAL (CAT)</div>
+<ul>
+    <li><strong style="color: var(--primary-red);">1. Jurisdiction:</strong> <span class="u-green">Related to </span><span class="u-blue-zig">recruitment</span> <span class="u-green">and </span><span class="u-blue-zig">all service matters</span> <span class="u-green">of </span><span class="u-blue-zig">public servants</span> <span class="u-green">covered by it</span>.</li>
+    <li><strong style="color: var(--primary-red);">2. Extent:</strong> <span class="u-green">Its jurisdiction extends to </span><span class="u-blue-zig">the All-India services</span>, <span class="u-blue-zig">the Central civil services</span>, <span class="u-blue-zig">civil posts</span> <span class="u-green">under </span><span class="u-blue-zig">the Centre</span>, <span class="u-green">and </span><span class="u-blue-zig">civilian employees</span> <span class="u-green">of </span><span class="u-blue-zig">defense services</span>.</li>
+    <li><strong style="color: var(--primary-red);">3. Exclusions:</strong> However, <span class="u-blue-zig">the members</span> <span class="u-green">of </span><span class="u-blue-zig">the defense forces</span>, <span class="u-blue-zig">officers and servants</span> <span class="u-green">of </span><span class="u-red-zig">the Supreme Court</span>, <span class="u-green">and </span><span class="u-blue-zig">the secretarial staff</span> <span class="u-green">of </span><span class="u-blue-zig">the Parliament</span> <span class="u-green">are not covered by it</span>.</li>
+    <li><strong style="color: var(--primary-red);">4. Appointment:</strong> <span class="u-blue-zig">The chairman and the members</span> <span class="u-green">of </span><span class="u-red-zig">CAT</span> <span class="u-green">are appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">after consultation with </span><span class="u-red-zig">the Chief Justice of India</span>.</li>
+</ul>
+
+<!-- STATE ADMINISTRATIVE TRIBUNALS (SATS) -->
+<div class="section-header">STATE ADMINISTRATIVE TRIBUNALS (SATS)</div>
+<ul>
+    <li><strong style="color: var(--primary-red);">1. Establishment:</strong> <span class="u-blue-zig">The Administrative Tribunals Act</span> <span class="u-green">of </span><span class="u-blue-zig">1985</span> <span class="u-green">empowers </span><span class="u-blue-zig">the Central government</span> <span class="u-green">to establish </span><span class="u-red-zig">SATs</span> <span class="u-green">at the specific request of </span><span class="u-blue-zig">the concerned state governments</span>.</li>
+    <li><strong style="color: var(--primary-red);">2. Original Jurisdiction:</strong> <span class="u-red-zig">The SATs</span> <span class="u-green">exercise </span><span class="u-blue-zig">original jurisdiction</span> <span class="u-green">in relation to </span><span class="u-blue-zig">recruitment</span> <span class="u-green">and </span><span class="u-blue-zig">all service matters</span> <span class="u-green">of </span><span class="u-blue-zig">state government employees</span>.</li>
+    <li><strong style="color: var(--primary-red);">3. Appointment:</strong> <span class="u-blue-zig">The chairman and members</span> <span class="u-green">of </span><span class="u-red-zig">the SATs</span> <span class="u-green">are appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">after consultation with </span><span class="u-blue-zig">the Governor</span> <span class="u-green">of </span><span class="u-blue-zig">the state concerned</span>.</li>
+</ul>
+
+<!-- JOINT ADMINISTRATIVE TRIBUNAL (JAT) -->
+<div class="section-header">JOINT ADMINISTRATIVE TRIBUNAL (JAT)</div>
+<ul>
+    <li><strong style="color: var(--primary-red);">1. Provision:</strong> <span class="u-blue-zig">The Administrative Tribunals Act</span> <span class="u-green">of </span><span class="u-blue-zig">1985</span> <span class="u-green">also makes a provision for </span><span class="u-blue-zig">setting up</span> <span class="u-red-zig">Joint Administrative Tribunal</span> (<span class="u-red-zig">JAT</span>) <span class="u-green">for </span><span class="u-blue-zig">two or more states</span>.</li>
+    <li><strong style="color: var(--primary-red);">2. Powers:</strong> A <span class="u-red-zig">JAT</span> <span class="u-green">exercises all </span><span class="u-blue-zig">the jurisdiction and powers</span> <span class="u-green">exercisable by </span><span class="u-blue-zig">the administrative tribunals</span> <span class="u-green">for </span><span class="u-blue-zig">such states</span>.</li>
+    <li><strong style="color: var(--primary-red);">3. Appointment:</strong> <span class="u-blue-zig">The chairman and members</span> <span class="u-green">of a </span><span class="u-red-zig">JAT</span> <span class="u-green">are appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">after consultation with </span><span class="u-blue-zig">the Governors</span> <span class="u-green">of </span><span class="u-blue-zig">the concerned states</span>.</li>
+</ul>
+
+<div class="page-number">Page 71</div>
+</div>
+
+<!-- ==================== PAGE 72 (PDF 201) ==================== -->
+<div class="pdf-page">
+
+        <header>
+            <span class="subject-tag">INDIAN POLITY</span>
+            <h1>CH19- Election Commission</h1>
+        </header>
+
+    <p class="subtitle" style="text-align: center; margin-top: -10px;">Part XV — Article 324 - 329</p>
+
+    <div class="section-header">ARTICLE 324</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">Scope:</strong> <span class="u-blue-zig">Superintendence, direction and control</span> <span class="u-green">of elections to be vested in</span> <span class="u-blue-zig">an Election Commission</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Parliament Elections:</strong> <span class="u-blue-zig">All elections</span> <span class="u-green">to </span><span class="u-red-zig">Parliament</span>.
+        </li>
+        <li>
+            <strong>2. State Legislature:</strong> <span class="u-blue-zig">All elections</span> <span class="u-green">to </span><span class="u-blue-zig">the Legislature</span> <span class="u-green">of </span><span class="u-blue-zig">every State</span>.
+        </li>
+        <li>
+            <strong>3. President &amp; VP:</strong> <span class="u-blue-zig">Elections</span> <span class="u-green">to the offices of </span><span class="u-red-zig">President</span> <span class="u-green">and </span><span class="u-red-zig">Vice-President</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">Composition:</strong> (2) <span class="u-red-zig">Election Commission</span> <span class="u-green">shall consist of </span><span class="u-blue-zig">the Chief Election Commissioner</span> <span class="u-green">and </span><span class="u-blue-zig">two Election Commissioners</span>,
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">Chairman:</strong> (3) <span class="u-blue-zig">The Chief Election Commissioner</span> <span class="u-green">shall act as </span><span class="u-blue-zig">the Chairman</span> <span class="u-green">of </span><span class="u-red-zig">the Election Commission</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">Regional Commissioners:</strong> (4) <span class="u-green">Before each general election to </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">and to </span><span class="u-blue-zig">the Legislative Assembly</span> <span class="u-green">of each </span><span class="u-blue-zig">State</span>, <span class="u-green">and each biennial election to </span><span class="u-blue-zig">the Legislative Council</span> <span class="u-green">of each </span><span class="u-blue-zig">State</span> <span class="u-green">having such </span><span class="u-blue-zig">Council</span>, <span class="u-blue-zig">the President</span> <span class="u-green">may also appoint after </span><span class="u-green">consultation with </span><span class="u-red-zig">the Election Commission</span> <span class="u-blue-zig">such Regional Commissioners</span> <span class="u-green">as he may consider </span><span class="u-blue-zig">necessary</span> <span class="u-green">to assist </span><span class="u-red-zig">the Election Commission</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">CEC Removal:</strong> (5) <span class="u-blue-zig">The Chief Election Commissioner</span> <span class="u-green">shall not be removed from </span><span class="u-blue-zig">his office</span> <span class="u-green">except in like manner and </span><span class="u-green">on the like grounds as </span><span class="u-blue-zig">a Judge</span> <span class="u-green">of </span><span class="u-red-zig">the Supreme Court</span> <span class="u-green">and </span><span class="u-blue-zig">the conditions of service</span> <span class="u-green">of </span><span class="u-blue-zig">the Chief Election Commissioner</span> <span class="u-green">shall not be varied to </span><span class="u-blue-zig">his disadvantage</span> <span class="u-green">after his appointment</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">EC Removal:</strong> <span class="u-blue-zig">Election Commissioner</span> <span class="u-green">or </span><span class="u-blue-zig">a Regional Commissioner</span> <span class="u-green">shall not be removed from </span><span class="u-blue-zig">office</span> <span class="u-green">except on the recommendation of </span><span class="u-blue-zig">the Chief Election Commissioner</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 325</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">Electoral Roll:</strong> <span class="u-green">There shall be </span><span class="u-blue-zig">one general electoral roll</span> <span class="u-green">for </span><span class="u-blue-zig">every territorial constituency</span> <span class="u-green">for election to </span><span class="u-blue-zig">either House</span> <span class="u-green">of </span><span class="u-red-zig">Parliament</span> <span class="u-green">or to </span><span class="u-blue-zig">the House</span> <span class="u-green">or either House of </span><span class="u-blue-zig">the Legislature</span> <span class="u-green">of a </span><span class="u-blue-zig">State</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">No Discrimination:</strong> <span class="u-blue-zig">No person</span> <span class="u-green">to be ineligible for </span><span class="u-blue-zig">inclusion in</span>, <span class="u-green">or to claim to be included in </span><span class="u-blue-zig">a special, electoral roll</span> <span class="u-green">on grounds of </span><span class="u-blue-zig">religion, race, caste or sex</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 326</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">Adult Suffrage:</strong> <span class="u-blue-zig">Elections</span> <span class="u-green">to </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">and to </span><span class="u-blue-zig">the Legislative Assemblies</span> <span class="u-green">of </span><span class="u-blue-zig">States</span> <span class="u-green">to be on the basis of </span><span class="u-blue-zig">adult suffrage</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 327</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">Parliament Power:</strong> <span class="u-blue-zig">Power</span> <span class="u-green">of </span><span class="u-red-zig">Parliament</span> <span class="u-green">to make provision with </span><span class="u-green">respect to elections to </span><span class="u-blue-zig">Legislatures</span>.
+    </p>
+
+    <div class="section-header">ARTICLE 328</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">State Legislature Power:</strong> <span class="u-blue-zig">Power</span> <span class="u-green">of </span><span class="u-blue-zig">Legislature of a State</span> <span class="u-green">to make provision with </span><span class="u-green">respect to elections to </span><span class="u-blue-zig">such Legislature</span>.
+    </p>
+
+    <div class="page-number">Page 72</div>
+</div>
+
+<!-- ==================== PAGE 202 (Page 73) ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">ARTICLE 329</div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Bar:</strong> <span class="u-green">Bar to interference by </span><span class="u-blue-zig">courts</span> <span class="u-green">in </span><span class="u-blue-zig">electoral matters</span>.
+    </p>
+
+    <div class="section-header">STEPS</div>
+
+    <ul>
+        <li><strong>1. Announcement:</strong> &#10054; <span class="u-blue-zig">ANNOUNCEMENT</span></li>
+        <li><strong>2. Notification:</strong> &#10054; <span class="u-blue-zig">NOTIFICATION</span></li>
+        <li><strong>3. Nomination:</strong> &#10054; <span class="u-blue-zig">LAST DATE</span> <span class="u-green">OF </span><span class="u-blue-zig">NOMINATION</span></li>
+        <li><strong>4. Scrutiny:</strong> &#10054; <span class="u-blue-zig">SCRUTINY</span> <span class="u-green">OF </span><span class="u-blue-zig">NOMINATION</span></li>
+        <li><strong>5. Withdrawal:</strong> &#10054; <span class="u-blue-zig">WITHDRAWAL</span> <span class="u-green">OF </span><span class="u-blue-zig">CANDIDATE</span></li>
+    </ul>
+
+    <div class="section-header">MODEL CODE OF CONDUCT</div>
+
+    <ul>
+        <li>
+            <strong>1. Definition:</strong> <span class="u-blue-zig">The MCC</span> <span class="u-green">is a set of </span><span class="u-blue-zig">guidelines</span> <span class="u-green">issued by </span><span class="u-blue-zig">the Election Commission</span> <span class="u-green">to regulate </span><span class="u-blue-zig">political parties</span> <span class="u-green">and </span><span class="u-blue-zig">candidates</span> <span class="u-green">prior to elections</span>, <span class="u-green">to ensure </span><span class="u-blue-zig">free and fair elections</span>.
+        </li>
+        <li>
+            <strong>2. Duration:</strong> <span class="u-blue-zig">The MCC</span> <span class="u-green">is operational from </span><span class="u-blue-zig">the date</span> <span class="u-green">that the election schedule is </span><span class="u-blue-zig">announced</span> <span class="u-green">till the date that </span><span class="u-blue-zig">results</span> <span class="u-green">are announced</span>.
+        </li>
+        <li>
+            <strong>3. Origin:</strong> <span class="u-blue-zig">The MCC</span> <span class="u-green">was first introduced in </span><span class="u-blue-zig">the state assembly elections</span> <span class="u-green">in </span><span class="u-red-zig">Kerala</span> <span class="u-green">in </span><span class="u-red-zig">1960</span>.
+        </li>
+        <li>
+            <strong>4. Manifestos:</strong> <span class="u-green">In </span><span class="u-red-zig">2013</span>, <span class="u-blue-zig">the</span> <span class="u-red-zig">Supreme Court</span> <span class="u-green">directed </span><span class="u-blue-zig">the Election Commission</span> <span class="u-green">to include guidelines regarding </span><span class="u-blue-zig">election manifestos</span>.
+        </li>
+        <li>
+            <strong>5. No Statute:</strong> <span class="u-blue-zig">The MCC</span> <span class="u-green">has </span><span class="u-blue-zig">no statutory backing</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ELECTION SILENCE</div>
+
+    <ul>
+        <li>
+            <strong>1. Prohibition:</strong> <span class="u-green">Holding public meetings during </span><span class="u-blue-zig">the 48-hour period</span> <span class="u-green">before the hour fixed for </span><span class="u-blue-zig">the closing of the poll</span> <span class="u-green">is </span><span class="u-blue-zig">prohibited</span>.
+        </li>
+        <li>
+            <strong>2. Definition:</strong> <span class="u-blue-zig">The 48-hour period</span> <span class="u-green">is known as </span><span class="u-blue-zig">election silence</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">THE EXPENDITURE LIMIT</div>
+
+    <ul>
+        <li>
+            <strong>1. Lok Sabha Limit:</strong> <span class="u-blue-zig">A candidate</span> <span class="u-green">can spend between </span><span class="u-blue-zig">Rs 50 lakh</span> <span class="u-green">and </span><span class="u-blue-zig">Rs 70 lakh</span>, <span class="u-green">depending on the state they are </span><span class="u-green">contesting the </span><span class="u-blue-zig">Lok Sabha election</span> <span class="u-green">from</span>.
+        </li>
+        <li>
+            <strong>2. General Cap:</strong> <span class="u-green">For all states</span>, <span class="u-green">except </span><span class="u-red-zig">Arunachal Pradesh</span>, <span class="u-red-zig">Goa</span> <span class="u-green">and </span><span class="u-red-zig">Sikkim</span>, <span class="u-blue-zig">a candidate</span> <span class="u-green">can spend a maximum of </span><span class="u-blue-zig">Rs 70 lakh</span> <span class="u-green">on </span><span class="u-blue-zig">canvassing</span>.
+        </li>
+        <li>
+            <strong>3. Small State Cap:</strong> <span class="u-green">The cap for </span><span class="u-red-zig">Arunachal Pradesh</span>, <span class="u-red-zig">Goa</span> <span class="u-green">and </span><span class="u-red-zig">Sikkim</span> <span class="u-green">is </span><span class="u-blue-zig">Rs 54 lakh</span>.
+        </li>
+        <li>
+            <strong>4. Delhi &amp; UTs:</strong> <span class="u-green">And</span>, <span class="u-green">it is </span><span class="u-blue-zig">Rs 70 lakh</span> <span class="u-green">for </span><span class="u-red-zig">Delhi</span> <span class="u-green">and </span><span class="u-blue-zig">Rs 54 lakh</span> <span class="u-green">for other </span><span class="u-blue-zig">Union territories</span>.
+        </li>
+        <li>
+            <strong>5. Assembly Limit:</strong> <span class="u-green">For the assembly elections</span>, <span class="u-blue-zig">the ceiling</span> <span class="u-green">is between </span><span class="u-blue-zig">Rs 20 lakh</span> <span class="u-green">and </span><span class="u-blue-zig">Rs 28 lakh</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">INK</div>
+
+    <ul>
+        <li>
+            <strong>1. Origin:</strong> <span class="u-green">In the 1950s </span><span class="u-red-zig">CSIR</span> <span class="u-green">made it at </span><span class="u-red-zig">National Physical Laboratory of India</span>.
+        </li>
+        <li>
+            <strong>2. Composition:</strong> <span class="u-blue-zig">The ink</span> <span class="u-green">used contains </span><span class="u-red-zig">SILVER NITRATE</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ELECTRONIC VOTING</div>
+
+    <ul>
+        <li>
+            <strong>1. First Use:</strong> <span class="u-blue-zig">BHAVIK</span> (<span class="u-blue-zig">EVM</span>) <span class="u-green">were first used in </span><span class="u-blue-zig">the</span> <span class="u-red-zig">1997</span> <span class="u-blue-zig">election</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">VOTER VERIFIABLE PAPER AUDIT TRAIL (VVPAT)</div>
+
+    <ul>
+        <li>
+            <strong>1. Definition:</strong> <span class="u-blue-zig">The VVPAT</span> <span class="u-green">is an independent </span><span class="u-blue-zig">printer system</span> <span class="u-green">attached with </span><span class="u-blue-zig">Electronic Voting Machine</span> (<span class="u-blue-zig">EVM</span>) <span class="u-green">that allows the voters to </span><span class="u-blue-zig">verify</span> <span class="u-green">that their votes are </span><span class="u-blue-zig">cast as intended</span>.
+        </li>
+        <li>
+            <strong>2. Function:</strong> <span class="u-green">It generates </span><span class="u-blue-zig">a paper slip</span> <span class="u-green">every time a voter casts </span><span class="u-blue-zig">his vote</span>, <span class="u-green">recording the party to </span><span class="u-green">whom the vote was made</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 73</div>
+</div>
+
+<!-- ==================== PAGE 74 (Physical 203) ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">5. Visible Duration:</strong> <span class="u-green">The </span><span class="u-red-zig">VVPAT</span> <span class="u-blue-zig">is visible</span> <span class="u-green">for </span><span class="u-blue-zig">seven seconds</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">6. Slip Contents:</strong> <span class="u-blue-zig">The slip</span> <span class="u-green">contains the </span><span class="u-blue-zig">poll symbol</span> <span class="u-green">and </span><span class="u-blue-zig">name of the candidate</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">7. Voter Verification:</strong> <span class="u-green">It allows the voter to </span><span class="u-blue-zig">verify</span> <span class="u-blue-zig">his/her choice</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">8. Fraud Detection:</strong> <span class="u-blue-zig">The VVPAT</span> <span class="u-green">helps to detect </span><span class="u-blue-zig">potential election fraud</span> <span class="u-green">or </span><span class="u-blue-zig">malfunction</span> <span class="u-green">in the </span><span class="u-red-zig">Electronic Voting Machine</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ELECTRONIC VOTING MACHINES (EVM)</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Introduction:</strong> <span class="u-green">It was introduced in </span><span class="u-red-zig">India</span> <span class="u-green">in </span><span class="u-blue-zig">1982</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Function:</strong> <span class="u-red-zig">EVMs</span> <span class="u-green">are </span><span class="u-blue-zig">electronic voting machines</span> <span class="u-green">which enable the voter </span><span class="u-green">with </span><span class="u-blue-zig">a button</span> <span class="u-green">for each choice of </span><span class="u-blue-zig">candidate</span>. <span class="u-green">It is attached by </span><span class="u-blue-zig">a cable</span> <span class="u-green">to an </span><span class="u-blue-zig">electronic ballot box</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Two Units:</strong> <span class="u-green">It comprises </span><span class="u-blue-zig">two units</span> – <span class="u-blue-zig">control unit</span> <span class="u-green">and </span><span class="u-blue-zig">balloting unit</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. Manufacturers:</strong> <span class="u-blue-zig">The EVMs</span> <span class="u-green">are manufactured by </span><span class="u-blue-zig">two central government</span> <span class="u-blue-zig">undertakings</span> viz. <span class="u-red-zig">Bharat Electronics Limited</span> <span class="u-green">and </span><span class="u-red-zig">Electronics Corporation of India Limited</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">5. Candidate Limit:</strong> <span class="u-green">Elections can be conducted </span><span class="u-green">through </span><span class="u-blue-zig">EVMs</span> <span class="u-green">when the maximum number of </span><span class="u-blue-zig">candidates</span> <span class="u-green">does not exceed </span><span class="u-blue-zig">64</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">POLITICAL PARTIES</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Multi-Party System:</strong> <span class="u-red-zig">India</span> <span class="u-green">follows </span><span class="u-blue-zig">multi-party system</span> <span class="u-green">and has the </span><span class="u-blue-zig">largest number</span> <span class="u-green">of </span><span class="u-blue-zig">political parties</span> <span class="u-green">in the world</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Registration:</strong> <span class="u-blue-zig">Registration</span> <span class="u-green">of </span><span class="u-blue-zig">Political parties</span> <span class="u-green">is governed by </span><span class="u-blue-zig">the provisions</span> <span class="u-green">of </span><span class="u-blue-zig">Section 29A</span> <span class="u-green">of the </span><span class="u-red-zig">Representation of the People Act</span>, <span class="u-blue-zig">1951</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">NATIONAL POLITICAL PARTY OF INDIA</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Valid Votes:</strong> <span class="u-green">It secures at least </span><span class="u-blue-zig">six percent</span> <span class="u-green">of the </span><span class="u-blue-zig">valid votes polled</span> <span class="u-green">in any </span><span class="u-blue-zig">four or more states</span>, <span class="u-green">at a general election to </span><span class="u-blue-zig">the House of the People</span> <span class="u-green">or, to the </span><span class="u-blue-zig">State Legislative Assembly</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Four Seats:</strong> <span class="u-green">In addition, it wins </span><span class="u-blue-zig">at least four seats</span> <span class="u-green">in the </span><span class="u-blue-zig">House of the People</span> <span class="u-green">from any </span><span class="u-blue-zig">State or States</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Two Percent Seats:</strong> <span class="u-green">It wins at least </span><span class="u-blue-zig">two percent seats</span> <span class="u-green">in the </span><span class="u-blue-zig">House of the People</span> (i.e., <span class="u-blue-zig">11 seats</span> <span class="u-green">in the existing House </span><span class="u-green">having </span><span class="u-blue-zig">543 members</span>), <span class="u-green">and these members are </span><span class="u-green">elected from at least </span><span class="u-blue-zig">three different States</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">4. National Parties:</strong> <span class="u-red-zig">Bahujan Samaj Party</span>, <span class="u-red-zig">Bhartiya Janta Party</span>, <span class="u-red-zig">Indian National Congress</span>, <span class="u-red-zig">Communist Party of India</span>, <span class="u-red-zig">Communist Party of India (Marxist)</span>, <span class="u-red-zig">National Congress Party</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">STATE POLITICAL PARTY</div>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Six Percent Votes:</strong> <span class="u-green">It secures at least </span><span class="u-blue-zig">six percent</span> <span class="u-green">of the </span><span class="u-blue-zig">valid votes polled</span> <span class="u-green">in the </span><span class="u-blue-zig">State</span> <span class="u-green">at a general election</span>, <span class="u-green">either to the </span><span class="u-blue-zig">House of the People</span> <span class="u-green">or to the </span><span class="u-blue-zig">Legislative Assembly</span> <span class="u-green">of the </span><span class="u-blue-zig">State concerned</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">2. Two Assembly Seats:</strong> <span class="u-green">In addition, it wins </span><span class="u-blue-zig">at least two seats</span> <span class="u-green">in the </span><span class="u-blue-zig">Legislative Assembly</span> <span class="u-green">of the </span><span class="u-blue-zig">State concerned</span>.
+        </li>
+        <li>
+            <strong style="color: var(--primary-red);">3. Three Percent Seats:</strong> <span class="u-green">It wins at least </span><span class="u-blue-zig">three percent (3%)</span> <span class="u-green">of the </span><span class="u-blue-zig">total number of seats</span> <span class="u-green">in the </span><span class="u-blue-zig">Legislative Assembly</span> <span class="u-green">of the </span><span class="u-blue-zig">State</span>, <span class="u-green">or at least </span><span class="u-blue-zig">three seats</span> <span class="u-green">in the </span><span class="u-blue-zig">Assembly</span>, <span class="u-blue-zig">whichever is more</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">ECI Role:</strong> <span class="u-blue-zig">The role</span> <span class="u-green">played by the </span><span class="u-red-zig">Election Commission of India</span> <span class="u-green">has bestowed a </span><span class="u-blue-zig">very high level</span> <span class="u-green">of </span><span class="u-blue-zig">confidence</span> <span class="u-green">in the minds of </span><span class="u-red-zig">Indian</span> <span class="u-blue-zig">citizens</span> <span class="u-green">in ensuring the </span><span class="u-blue-zig">purity</span> <span class="u-green">of the </span><span class="u-blue-zig">elected legislative bodies</span> <span class="u-green">in the country</span>.
+    </p>
+
+    <div class="page-number">Page 74</div>
+</div>
+
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">Toothless Commission:</strong> <span class="u-green">The </span><span class="u-red-zig">Supreme Court</span> <span class="u-green">that it was </span>"<span class="u-blue-zig">toothless</span>", <span class="u-green">and did not have </span><span class="u-blue-zig">enough powers</span> <span class="u-green">to deal with </span><span class="u-blue-zig">inflammatory or divisive speeches</span> <span class="u-green">in the election campaign</span>.
+    </p>
+
+    <ul>
+        <li>
+            <strong>1. Permanent Body:</strong> <span class="u-blue-zig">Election Commission</span> <span class="u-green">is a </span><span class="u-blue-zig">permanent and independent body</span> <span class="u-green">established by </span><span class="u-red-zig">the Constitution of India</span> <span class="u-green">directly to ensure </span><span class="u-blue-zig">free and fair elections</span> <span class="u-green">in the country</span>.
+        </li>
+        <li>
+            <strong>2. Constitutional Values:</strong> <span class="u-green">It upholds the values </span><span class="u-blue-zig">enshrined in the Constitution</span> viz, <span class="u-blue-zig">equality</span>, <span class="u-blue-zig">equity</span>, <span class="u-blue-zig">impartiality</span>, <span class="u-blue-zig">independence</span>; <span class="u-green">and </span><span class="u-blue-zig">rule of law</span> <span class="u-green">in superintendence</span>, <span class="u-blue-zig">direction and control</span> <span class="u-green">over the </span><span class="u-blue-zig">electoral governance</span>.
+        </li>
+        <li>
+            <strong>3. Highest Standard:</strong> <span class="u-green">It conducts elections with </span><span class="u-blue-zig">the highest standard</span> <span class="u-green">of </span><span class="u-blue-zig">credibility</span>, <span class="u-blue-zig">freeness</span>, <span class="u-blue-zig">fairness</span>, <span class="u-blue-zig">transparency</span>, <span class="u-blue-zig">integrity</span>, <span class="u-blue-zig">accountability</span>, <span class="u-blue-zig">autonomy</span> <span class="u-green">and </span><span class="u-blue-zig">professionalism</span>.
+        </li>
+        <li>
+            <strong>4. Inclusive Environment:</strong> <span class="u-green">It ensures participation of </span><span class="u-blue-zig">all eligible citizens</span> <span class="u-green">in the electoral process in </span><span class="u-blue-zig">an inclusive voter-centric</span> <span class="u-green">and </span><span class="u-blue-zig">voter-friendly environment</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">ISSUES</div>
+
+    <ul>
+        <li>
+            <strong>1. Commissioner Appointment:</strong> <span class="u-green">The government continues to </span><span class="u-blue-zig">appoint election commissioners</span> <span class="u-green">on its own</span>.
+        </li>
+        <li>
+            <strong>2. Removal Process:</strong> <span class="u-blue-zig">Removal</span> <span class="u-green">of the </span><span class="u-blue-zig">Election Commissioners</span> <span class="u-green">does not require </span><span class="u-blue-zig">such a process of impeachment</span>.
+        </li>
+        <li>
+            <strong>3. Financial Dependence:</strong> <span class="u-green">It is still dependent on </span><span class="u-blue-zig">the Union Government</span> <span class="u-green">for </span><span class="u-blue-zig">financial matters</span>.
+        </li>
+        <li>
+            <strong>4. MCC Enforcement:</strong> <span class="u-green">There is no clarity </span><span class="u-green">regarding the enforcing </span><span class="u-blue-zig">the Model Code of Conduct</span>.
+        </li>
+        <li>
+            <strong>5. No Legal Backing:</strong> &#10003; <span class="u-blue-zig">MCC</span> <span class="u-green">has not been given </span><span class="u-blue-zig">any legal backing</span>.
+        </li>
+        <li>
+            <strong>6. Deregistration Power:</strong> <span class="u-blue-zig">EC</span> <span class="u-green">cannot deregister </span><span class="u-blue-zig">political parties</span> <span class="u-green">in any event</span>, <span class="u-green">for the gravest of </span><span class="u-blue-zig">infringement</span>.
+        </li>
+        <li>
+            <strong>7. Inner-Party Democracy:</strong> <span class="u-blue-zig">The ECI</span> <span class="u-green">has no power in enforcing </span><span class="u-blue-zig">inner-party democracy</span> <span class="u-green">and </span><span class="u-blue-zig">regulation of party finances</span>.
+        </li>
+        <li>
+            <strong>8. Disqualification Power:</strong> <span class="u-blue-zig">The EC</span> <span class="u-green">does not have the power to </span><span class="u-blue-zig">disqualify candidates</span> <span class="u-green">who commit </span><span class="u-blue-zig">electoral malpractices</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">SUGGESTIONS</div>
+
+    <ul>
+        <li>
+            <strong>1. CEC Appointment:</strong> <span class="u-blue-zig">The CEC</span> <span class="u-green">should be appointed by </span><span class="u-blue-zig">the President</span> <span class="u-green">in consultation with </span><span class="u-blue-zig">the Chief Justice of India</span> <span class="u-green">and the </span><span class="u-blue-zig">Leader of the Opposition</span> <span class="u-green">in the </span><span class="u-red-zig">Lok Sabha</span>. (<span class="u-red-zig">Goswami Committee</span>)
+        </li>
+        <li>
+            <strong>2. Equal Procedures:</strong> <span class="u-green">There must be similar </span><span class="u-blue-zig">election and removal procedures</span> <span class="u-green">for </span><span class="u-blue-zig">CEC and ECs</span>, <span class="u-green">and they must exercise </span><span class="u-blue-zig">the same powers</span> <span class="u-green">unless specifically </span><span class="u-blue-zig">prescribed by law</span>.
+        </li>
+        <li>
+            <strong>3. Charged Expenses:</strong> <span class="u-blue-zig">The expenses of ECI</span> <span class="u-green">must be charged on </span><span class="u-red-zig">the Consolidated Fund of India</span>.
+        </li>
+        <li>
+            <strong>4. Independent Secretariat:</strong> <span class="u-green">Create a </span><span class="u-blue-zig">permanent, independent secretariat</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 75</div>
+</div>
+
+</body>
+</html>

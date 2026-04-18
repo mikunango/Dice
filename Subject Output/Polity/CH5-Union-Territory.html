@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH5 - The Union & Its Territory</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 39 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH5- The Union &amp; Its Territory</h1>
+        <p class="subtitle">Articles 1-4 | Reorganisation of States</p>
+    </header>
+
+    <div class="main-topic-header">THE UNION &amp; IT'S TEROTORY</div>
+
+    <ul>
+        <li><strong>1. Article 1 - Union of States:</strong>
+            (1) <span class="u-red-zig">India</span>,<span class="u-green"> that is </span><span class="u-red-zig">Bharat</span>,<span class="u-green"> shall be </span><span class="u-blue-zig">a Union of States</span>.
+            <ul>
+                <li><strong>a. First Schedule:</strong>
+                    (2) <span class="u-blue-zig">The States</span><span class="u-green"> and </span><span class="u-blue-zig">the territories thereof</span><span class="u-green"> shall be as specified in </span><span class="u-blue-zig">the First Schedule</span>.
+                </li>
+                <li><strong>b. Territory of India:</strong>
+                    (3) <span class="u-blue-zig">The territory of India</span><span class="u-green"> shall comprise </span>—
+                    <ul>
+                        <li><strong>i. State Territories:</strong>
+                            (a) <span class="u-blue-zig">the territories</span><span class="u-green"> of </span><span class="u-blue-zig">the States</span>;
+                        </li>
+                        <li><strong>ii. Union Territories:</strong>
+                            (b) <span class="u-blue-zig">the Union territories</span><span class="u-green"> specified in </span><span class="u-blue-zig">the First Schedule</span>;<span class="u-green"> and </span>
+                        </li>
+                        <li><strong>iii. Acquired Territories:</strong>
+                            (c) <span class="u-blue-zig">such other territories</span><span class="u-green"> as may be acquired</span>.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>2. Article 2 - New States:</strong>
+            <span class="u-blue-zig">Parliament</span><span class="u-green"> may by law </span><span class="u-blue-zig">admit into the Union</span>,<span class="u-green"> or </span><span class="u-blue-zig">establish</span>,<span class="u-blue-zig"> new States</span><span class="u-green"> on such </span><span class="u-blue-zig">terms and conditions</span><span class="u-green"> as it thinks fit</span>.
+        </li>
+
+        <li><strong>3. Article 2A - Sikkim:</strong>
+            <span class="u-red-zig">Sikkim</span><span class="u-green"> to be associated with </span><span class="u-blue-zig">the Union</span>. <span class="u-blue-zig">Rep.</span><span class="u-green"> by </span><span class="u-blue-zig">the Constitution</span> (<span class="u-blue-zig">Thirty-sixth Amendment</span>) <span class="u-blue-zig">Act</span>,<span class="u-red-zig"> 1975</span>, <span class="u-blue-zig">s. 5</span> (<span class="u-blue-zig">w.e.f.</span><span class="u-red-zig"> 26-4-1975</span>).
+        </li>
+
+        <li><strong>4. Article 3 - Formation of States:</strong>
+            <span class="u-blue-zig">Parliament</span><span class="u-green"> may by law </span>—
+            <ul>
+                <li><strong>a. New State Formation:</strong>
+                    (a) <span class="u-green">form </span><span class="u-blue-zig">a new State</span><span class="u-green"> by </span><span class="u-blue-zig">separation of territory</span><span class="u-green"> from </span><span class="u-blue-zig">any State</span><span class="u-green"> or by </span><span class="u-blue-zig">uniting two or more States</span><span class="u-green"> or </span><span class="u-blue-zig">parts of States</span><span class="u-green"> or by </span><span class="u-blue-zig">uniting any territory</span><span class="u-green"> to </span><span class="u-blue-zig">a part of any State</span>;
+                </li>
+                <li><strong>b. Area Increase:</strong>
+                    (b) <span class="u-green">increase </span><span class="u-blue-zig">the area</span><span class="u-green"> of </span><span class="u-blue-zig">any State</span>;
+                </li>
+                <li><strong>c. Area Diminish:</strong>
+                    (c) <span class="u-green">diminish </span><span class="u-blue-zig">the area</span><span class="u-green"> of </span><span class="u-blue-zig">any State</span>;
+                </li>
+                <li><strong>d. Boundary Alteration:</strong>
+                    (d) <span class="u-green">alter </span><span class="u-blue-zig">the boundaries</span><span class="u-green"> of </span><span class="u-blue-zig">any State</span>;
+                </li>
+                <li><strong>e. Name Alteration:</strong>
+                    (e) <span class="u-green">alter </span><span class="u-blue-zig">the name</span><span class="u-green"> of </span><span class="u-blue-zig">any State</span>:
+                </li>
+            </ul>
+        </li>
+
+        <li><strong>5. Proviso - Presidential Recommendation:</strong>
+            <span class="u-green">Provided that </span><span class="u-blue-zig">no Bill</span><span class="u-green"> for the purpose </span><span class="u-green">shall be introduced in </span><span class="u-blue-zig">either House of Parliament</span><span class="u-green"> except on </span><span class="u-blue-zig">the recommendation</span><span class="u-green"> of </span><span class="u-blue-zig">the President</span><span class="u-green"> and unless, where </span><span class="u-blue-zig">the proposal</span><span class="u-green"> contained in </span><span class="u-blue-zig">the Bill</span><span class="u-green"> affects </span><span class="u-blue-zig">the area, boundaries</span><span class="u-green"> or </span><span class="u-blue-zig">name</span><span class="u-green"> of </span><span class="u-blue-zig">any of the States</span>, <span class="u-blue-zig">the Bill</span><span class="u-green"> has been referred by </span><span class="u-blue-zig">the President</span><span class="u-green"> to </span><span class="u-blue-zig">the Legislature</span><span class="u-green"> of </span><span class="u-blue-zig">that State</span><span class="u-green"> for expressing </span><span class="u-blue-zig">its views thereon</span><span class="u-green"> within </span><span class="u-blue-zig">such period</span><span class="u-green"> as may be specified in </span><span class="u-blue-zig">the reference</span><span class="u-green"> or within </span><span class="u-blue-zig">such further period</span><span class="u-green"> as </span><span class="u-blue-zig">the President</span><span class="u-green"> may allow and </span><span class="u-blue-zig">the period so specified</span><span class="u-green"> or </span><span class="u-blue-zig">allowed</span><span class="u-green"> has expired</span>.
+        </li>
+
+        <li><strong>6. Article 4 - Amendment:</strong>
+            (1) <span class="u-blue-zig">Any law</span><span class="u-green"> referred to in </span><span class="u-blue-zig">article 2</span><span class="u-green"> or </span><span class="u-blue-zig">article 3</span><span class="u-green"> shall contain </span><span class="u-blue-zig">such provisions</span><span class="u-green"> for </span><span class="u-blue-zig">the amendment</span><span class="u-green"> of </span><span class="u-blue-zig">the First Schedule</span><span class="u-green"> and </span><span class="u-blue-zig">the Fourth Schedule</span><span class="u-green"> as may be necessary </span><span class="u-green">to give effect to </span><span class="u-blue-zig">the provisions</span><span class="u-green"> of </span><span class="u-blue-zig">the law</span><span class="u-green"> and </span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 39</div>
+</div>
+
+<!-- ==================== PAGE 40 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li><strong>7. Supplemental Provisions:</strong>
+            <span class="u-green">may also contain </span><span class="u-blue-zig">such supplemental, incidental</span><span class="u-green"> and </span><span class="u-blue-zig">consequential provisions</span> (<span class="u-green">including </span><span class="u-blue-zig">provisions</span><span class="u-green"> as to </span><span class="u-blue-zig">representation in Parliament</span><span class="u-green"> and in </span><span class="u-blue-zig">the Legislature</span><span class="u-green"> or </span><span class="u-blue-zig">Legislatures</span><span class="u-green"> of </span><span class="u-blue-zig">the State</span><span class="u-green"> or </span><span class="u-blue-zig">States</span><span class="u-green"> affected by </span><span class="u-blue-zig">such law</span>)<span class="u-green"> as </span><span class="u-blue-zig">Parliament</span><span class="u-green"> may deem necessary</span>.
+        </li>
+
+        <li><strong>8. Non-Amendment Clause:</strong>
+            (2) <span class="u-blue-zig">No such law</span><span class="u-green"> as aforesaid </span><span class="u-green">shall be deemed to be </span><span class="u-blue-zig">an amendment</span><span class="u-green"> of </span><span class="u-blue-zig">this Constitution</span><span class="u-green"> for the purposes of </span><span class="u-blue-zig">article 368</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. 100th Amendment:</strong>
+        <span class="u-blue-zig">The 100th Amendment</span><span class="u-green"> of </span><span class="u-blue-zig">the Indian Constitution</span><span class="u-green"> passed in </span><span class="u-red-zig">2015</span>,<span class="u-green"> established </span><span class="u-blue-zig">the exchange</span><span class="u-green"> of </span><span class="u-blue-zig">some territories</span><span class="u-green"> between </span><span class="u-red-zig">Bangladesh</span><span class="u-green"> and </span><span class="u-red-zig">India</span>.<span class="u-green"> It approved </span><span class="u-blue-zig">the 1974 Land Boundary Agreement</span> (<span class="u-green">and its </span><span class="u-blue-zig">2011 protocol</span>),<span class="u-green"> which resulted in </span><span class="u-blue-zig">the exchange of enclaves</span><span class="u-green"> and </span><span class="u-blue-zig">the retention of property</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. 2015 LBA Provisions:</strong>
+        <span class="u-green">Thereby, </span><span class="u-blue-zig">the 2015 LBA</span><span class="u-green"> addresses </span><span class="u-blue-zig">the unsettled issues</span><span class="u-green"> stemming from </span><span class="u-blue-zig">the approximately</span> <span class="u-blue-zig">6.1-kilometre-long land boundary</span><span class="u-green"> in </span><span class="u-blue-zig">three sectors</span>: <span class="u-red-zig">Daikhata-56</span> (<span class="u-red-zig">West Bengal</span>), <span class="u-red-zig">Muhuri River–Belonia</span> (<span class="u-red-zig">Tripura</span>),<span class="u-green"> and </span><span class="u-red-zig">Lathitila–Dumabari</span> (<span class="u-red-zig">Assam</span>); <span class="u-blue-zig">exchange of enclaves</span>;<span class="u-green"> and </span><span class="u-blue-zig">adverse possessions</span>,<span class="u-green"> which were first acknowledged in </span><span class="u-blue-zig">the 2011 Protocol</span>.
+    </p>
+
+    <div class="main-topic-header">REORGANISATION OF STATES</div>
+
+    <div class="info-box">
+        <div class="info-box-header">Bases of Reorganisation</div>
+        <ul>
+            <li><strong>1. Geographical Basis:</strong> <span class="u-blue-zig">Geographical Basis</span></li>
+            <li><strong>2. Linguistic Basis:</strong> <span class="u-blue-zig">Linguistic Basis</span></li>
+            <li><strong>3. Administrative Basis:</strong> <span class="u-blue-zig">Administrative Basis</span></li>
+        </ul>
+    </div>
+
+    <div class="section-header">DHAR COMMISSION</div>
+
+    <ul>
+        <li><strong>1. Setup Year:</strong>
+            <span class="u-green">Setup in </span><span class="u-red-zig">1948</span>.
+        </li>
+        <li><strong>2. Commission Head:</strong>
+            <span class="u-red-zig">S K Dhar</span><span class="u-green"> was </span><span class="u-blue-zig">a judge</span><span class="u-green"> of </span><span class="u-blue-zig">the Allahabad High Court</span>.
+        </li>
+        <li><strong>3. Commission Members:</strong>
+            <span class="u-blue-zig">The members</span><span class="u-green"> were </span><span class="u-red-zig">Jagat Narain</span>,<span class="u-red-zig"> Panna Lai</span><span class="u-green"> and </span><span class="u-red-zig">B.C. Bannerji</span>,
+        </li>
+        <li><strong>4. Linguistic Rejection:</strong>
+            <span class="u-green">Rejected </span><span class="u-blue-zig">the demand</span><span class="u-green"> of </span><span class="u-blue-zig">political organization</span><span class="u-green"> of </span><span class="u-blue-zig">the country</span><span class="u-green"> along </span><span class="u-blue-zig">linguistic lines</span><span class="u-green"> that it would do </span><span class="u-blue-zig">immense harm</span><span class="u-green"> to </span><span class="u-blue-zig">national unity</span>.
+        </li>
+        <li><strong>5. Key Considerations:</strong>
+            <span class="u-blue-zig">The commission</span><span class="u-green"> gave more importance to </span><span class="u-blue-zig">historical, geographical</span><span class="u-green"> and </span><span class="u-blue-zig">economic considerations</span>.
+        </li>
+        <li><strong>6. Reorganisation Basis:</strong>
+            <span class="u-blue-zig">The commission</span><span class="u-green"> favoured </span><span class="u-blue-zig">reorganization</span><span class="u-green"> on the basis of </span>–
+            <ul>
+                <li><strong>a. Geographical Contiguity:</strong>
+                    <span class="u-blue-zig">Geographical contiguity</span><span class="u-green"> and </span><span class="u-blue-zig">absence of pockets</span><span class="u-green"> and </span><span class="u-blue-zig">corridors</span>.
+                </li>
+                <li><strong>b. Financial Self-sufficiency:</strong>
+                    <span class="u-blue-zig">Financial self-sufficiency</span>.
+                </li>
+                <li><strong>c. Administrative Convenience:</strong>
+                    <span class="u-blue-zig">Administrative convenience</span>.
+                </li>
+                <li><strong>d. Future Development:</strong>
+                    <span class="u-blue-zig">Capacity</span><span class="u-green"> for </span><span class="u-blue-zig">future development</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">JVP COMMITTEE</div>
+
+    <ul>
+        <li><strong>1. Setup Year:</strong>
+            <span class="u-green">Setup in </span><span class="u-red-zig">December, 1948</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 40</div>
+</div>
+
+<!-- ==================== PAGE 41 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li><strong>2. Committee Members:</strong>
+            <span class="u-red-zig">Jawaharlal Nehru</span>,<span class="u-red-zig"> Vallabh bhai Patel</span><span class="u-green"> and </span><span class="u-red-zig">Pattabhi Sitaramayya</span><span class="u-green"> were </span><span class="u-blue-zig">the members</span>.
+        </li>
+        <li><strong>3. Linguistic Dismissal:</strong>
+            <span class="u-blue-zig">The committee</span><span class="u-green"> dismissed </span><span class="u-blue-zig">the idea</span><span class="u-green"> of </span><span class="u-blue-zig">reorganization</span><span class="u-green"> on </span><span class="u-blue-zig">a linguistic basis</span>.
+        </li>
+        <li><strong>4. Nehru's View:</strong>
+            <span class="u-red-zig">Nehru</span><span class="u-green"> said that </span><span class="u-blue-zig">cultural, geographic</span><span class="u-green"> and </span><span class="u-blue-zig">economic factors</span><span class="u-green"> as well as </span><span class="u-blue-zig">language</span><span class="u-green"> must be taken into account</span>.
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Andhra State Formation:</strong>
+        <span class="u-red-zig">Wanchoo Commission</span>,<span class="u-green"> and </span><span class="u-red-zig">Justice L.S. Misra Commission</span><span class="u-green"> were related to </span><span class="u-blue-zig">the formation</span><span class="u-green"> of </span><span class="u-blue-zig">the Andhra State</span>.
+    </p>
+
+    <ul>
+        <li><strong>5. First Linguistic State:</strong>
+            <span class="u-blue-zig">The first linguistic state</span><span class="u-green"> of </span><span class="u-red-zig">Andhra Pradesh</span><span class="u-green"> was createdon </span><span class="u-red-zig">October 1, 1953</span><span class="u-green"> with its capital at </span><span class="u-red-zig">Kurnool</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">FAZL ALI COMMISSION</div>
+
+    <ul>
+        <li><strong>1. Setup Date:</strong>
+            <span class="u-green">Setup on </span><span class="u-red-zig">December 22, 1953</span>.
+        </li>
+        <li><strong>2. Commission Members:</strong>
+            <span class="u-red-zig">Fazl Ali</span><span class="u-green"> was </span><span class="u-blue-zig">the chairperson</span><span class="u-green"> and </span><span class="u-blue-zig">two members</span><span class="u-green"> were </span><span class="u-red-zig">K M Panikkar</span><span class="u-green"> and </span><span class="u-red-zig">HN Kunzru</span>.
+        </li>
+        <li><strong>3. Reorganisation Recommendation:</strong>
+            <span class="u-green">It recommended </span><span class="u-blue-zig">the reorganization</span><span class="u-green"> of </span><span class="u-blue-zig">the whole country</span><span class="u-green"> into </span><span class="u-blue-zig">sixteen states</span><span class="u-green"> and </span><span class="u-blue-zig">three centrally administered areas</span>.
+        </li>
+        <li><strong>4. States Reorganisation Act:</strong>
+            <span class="u-blue-zig">States Reorganisation Act</span><span class="u-red-zig"> 1956</span><span class="u-green"> was passed</span>.
+        </li>
+        <li><strong>5. Division Result:</strong>
+            <span class="u-green">It divided </span><span class="u-blue-zig">the country</span><span class="u-green"> into </span><span class="u-blue-zig">14 states</span><span class="u-green"> and </span><span class="u-blue-zig">6 union territories</span>.
+            <ul>
+                <li><strong>a. States List:</strong>
+                    <span class="u-blue-zig">STATES</span> - <span class="u-red-zig">Andhra Pradesh</span>,<span class="u-red-zig"> Assam</span>,<span class="u-red-zig"> Bihar</span>,<span class="u-red-zig"> Bombay</span>,<span class="u-red-zig"> Jammu and Kashmir</span>,<span class="u-red-zig"> Kerala</span>,<span class="u-red-zig"> Madhya Pradesh</span>,<span class="u-red-zig"> Madras</span>,<span class="u-red-zig"> Mysore</span>,<span class="u-red-zig"> Orissa</span>,<span class="u-red-zig"> Punjab</span>,<span class="u-red-zig"> Rajasthan</span>,<span class="u-red-zig"> Uttar Pradesh</span><span class="u-green"> and </span><span class="u-red-zig">West Bengal</span>.
+                </li>
+                <li><strong>b. Union Territories List:</strong>
+                    <span class="u-blue-zig">UNION TERRITORIES</span> - <span class="u-red-zig">Andaman and Nicobar Islands</span>,<span class="u-red-zig"> Delhi</span>,<span class="u-red-zig"> Himachal Pradesh</span>,<span class="u-blue-zig"> Laccadive, Minicoy</span><span class="u-green"> and </span><span class="u-blue-zig">Amindivi Islands</span>,<span class="u-red-zig"> Manipur</span><span class="u-green"> and </span><span class="u-red-zig">Tripura</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>6. Maharashtra &amp; Gujarat:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1960</span><span class="u-red-zig"> Maharashtra</span><span class="u-green"> and </span><span class="u-red-zig">Gujarat</span><span class="u-green"> were created by </span><span class="u-blue-zig">bifurcating the state</span><span class="u-green"> of </span><span class="u-red-zig">Bombay</span>.
+        </li>
+        <li><strong>7. Nagaland Formation:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1963</span>, <span class="u-blue-zig">the state</span><span class="u-green"> of </span><span class="u-red-zig">Nagaland</span><span class="u-green"> was formed</span>.
+        </li>
+        <li><strong>8. Punjab Reorganization:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1966</span>, <span class="u-blue-zig">the Parliament</span><span class="u-green"> passed </span><span class="u-blue-zig">the Punjab Reorganization Act</span><span class="u-green"> on the recommendation of </span><span class="u-red-zig">the Shah Commission</span>.
+        </li>
+        <li><strong>9. Punjab &amp; Haryana:</strong>
+            <span class="u-red-zig">Punjab</span><span class="u-green"> and </span><span class="u-red-zig">Haryana</span><span class="u-blue-zig"> states</span><span class="u-green"> were formed</span>.
+        </li>
+        <li><strong>10. Chandigarh UT:</strong>
+            <span class="u-red-zig">Chandigarh</span><span class="u-green"> was made </span><span class="u-blue-zig">a Union Territory</span>.
+        </li>
+        <li><strong>11. Meghalaya Formation:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1969</span>, <span class="u-blue-zig">the state</span><span class="u-green"> of </span><span class="u-red-zig">Meghalaya</span><span class="u-green"> was created out of </span><span class="u-blue-zig">the state</span><span class="u-green"> of </span><span class="u-red-zig">Assam</span>.
+        </li>
+        <li><strong>12. Statehood Upgrade:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1971</span>, <span class="u-blue-zig">the Union Territories</span><span class="u-green"> of </span><span class="u-red-zig">Himachal Pradesh</span>,<span class="u-red-zig"> Tripura</span><span class="u-green"> and </span><span class="u-red-zig">Manipur</span><span class="u-green"> was given status of </span><span class="u-blue-zig">a full-fledged state states</span>.
+        </li>
+        <li><strong>13. Sikkim Admission:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1975</span>,<span class="u-red-zig"> Sikkim</span><span class="u-green"> was admitted as </span><span class="u-blue-zig">a state</span><span class="u-green"> of </span><span class="u-blue-zig">the Indian Union</span><span class="u-green"> and made </span><span class="u-blue-zig">a full-fledged state</span>.
+        </li>
+        <li><strong>14. Mizoram Statehood:</strong>
+            <span class="u-green">In </span><span class="u-red-zig">1987</span><span class="u-red-zig"> Mizoram</span><span class="u-green"> became </span><span class="u-blue-zig">the 23rd state</span>.
+        </li>
+        <li><strong>15. Arunachal Pradesh:</strong>
+            <span class="u-green">In </span><span class="u-blue-zig">February</span><span class="u-red-zig"> 1987</span><span class="u-red-zig"> Arunachal Pradesh</span><span class="u-green"> became </span><span class="u-blue-zig">the 24th state</span>.
+        </li>
+        <li><strong>16. Goa Statehood:</strong>
+            <span class="u-green">In </span><span class="u-blue-zig">May</span><span class="u-red-zig"> 1987</span><span class="u-red-zig"> Goa</span><span class="u-green"> became </span><span class="u-blue-zig">the 25th state</span>.
+        </li>
+        <li><strong>17. New States 2000:</strong>
+            <span class="u-red-zig">Chhattisgarh</span>,<span class="u-red-zig"> Jharkhand</span><span class="u-green"> and </span><span class="u-red-zig">Uttarakhand</span><span class="u-green"> were created in </span><span class="u-red-zig">November 2000</span>.
+        </li>
+        <li><strong>18. Sri Krishna Committee:</strong>
+            <span class="u-red-zig">Sri Krishna Committee</span><span class="u-blue-zig"> report</span><span class="u-green"> was related to </span><span class="u-blue-zig">formation</span><span class="u-green"> of </span><span class="u-red-zig">Telangana</span>.
+        </li>
+        <li><strong>19. Telangana Formation:</strong>
+            <span class="u-red-zig">Telangana</span><span class="u-green"> was officially formed on </span><span class="u-red-zig">2 June 2014</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 41</div>
+</div>
+
+<!-- ==================== PAGE 42 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li><strong>20. J&amp;K Reorganisation:</strong>
+            <span class="u-blue-zig">The Jammu and Kashmir Reorganisation Act</span>,<span class="u-red-zig"> 2019</span><span class="u-green"> divided </span><span class="u-blue-zig">the state</span><span class="u-green"> into </span><span class="u-blue-zig">two separate UTs</span>; <span class="u-blue-zig">one</span><span class="u-green"> is </span><span class="u-blue-zig">Union Territory</span><span class="u-green"> of </span><span class="u-red-zig">Jammu and Kashmir</span><span class="u-green"> with </span><span class="u-blue-zig">legislative assembly</span><span class="u-green"> and </span><span class="u-blue-zig">the other</span><span class="u-green"> is </span><span class="u-blue-zig">Union Territory</span><span class="u-green"> of </span><span class="u-red-zig">Ladakh</span><span class="u-green"> without </span><span class="u-blue-zig">Legislative Assembly</span>.
+        </li>
+        <li><strong>21. Dadra &amp; Daman Merger:</strong>
+            <span class="u-blue-zig">The Dadra and Nagar Haveli</span><span class="u-green"> and </span><span class="u-blue-zig">Daman and Diu</span> (<span class="u-blue-zig">Merger of Union Territories</span>) <span class="u-blue-zig">Bill</span>,<span class="u-red-zig"> 2019</span><span class="u-green"> made them </span><span class="u-blue-zig">single Union Territory</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li><strong>1. First Demand 1874:</strong>
+            <span class="u-blue-zig">The demand</span><span class="u-green"> for </span><span class="u-blue-zig">linguistic states</span><span class="u-green"> was emerged for </span><span class="u-blue-zig">the first time</span><span class="u-green"> in </span><span class="u-red-zig">1874</span><span class="u-green"> when </span><span class="u-red-zig">Sylhet</span><span class="u-green"> was transferred from </span><span class="u-red-zig">Bengal</span><span class="u-green"> to </span><span class="u-red-zig">Assam</span>.
+        </li>
+        <li><strong>2. Tilak's Support:</strong>
+            <span class="u-red-zig">Bal Gangadhar Tilak</span><span class="u-green"> was </span><span class="u-blue-zig">the first leader</span><span class="u-green"> to support </span><span class="u-blue-zig">the idea</span><span class="u-green"> of </span><span class="u-blue-zig">linguistic basis</span>.
+        </li>
+        <li><strong>3. C.R. Das Declaration:</strong>
+            <span class="u-red-zig">Deshbandhu C, R. Das</span><span class="u-green"> declared in </span><span class="u-red-zig">1922</span><span class="u-green"> that </span><span class="u-blue-zig">provinces</span><span class="u-green"> should be demarcated on </span><span class="u-blue-zig">the linguistic basis</span>.
+        </li>
+        <li><strong>4. Simon Commission:</strong>
+            <span class="u-red-zig">Simon Commission</span><span class="u-green"> supported </span><span class="u-blue-zig">linguistic redistribution</span><span class="u-green"> of </span><span class="u-blue-zig">the provinces</span>.
+        </li>
+        <li><strong>5. Madras Session 1927:</strong>
+            <span class="u-red-zig">Madras</span><span class="u-blue-zig"> session</span>(<span class="u-red-zig">1927</span>)<span class="u-green"> of </span><span class="u-blue-zig">All India Csongress Committee</span><span class="u-green"> supported </span><span class="u-blue-zig">linguistic redistribution</span><span class="u-green"> of </span><span class="u-blue-zig">the provinces</span>.
+        </li>
+        <li><strong>6. GOI Act 1935:</strong>
+            <span class="u-green">After </span><span class="u-blue-zig">Government of India Act</span><span class="u-red-zig"> 1935</span>, <span class="u-blue-zig">the provinces</span><span class="u-green"> of </span><span class="u-red-zig">Orissa</span><span class="u-green"> and </span><span class="u-red-zig">Sind</span><span class="u-green"> were created in </span><span class="u-red-zig">1936</span><span class="u-green"> on </span><span class="u-blue-zig">linguistic basis</span>.
+        </li>
+        <li><strong>7. Sitaramayya's Demand:</strong>
+            <span class="u-red-zig">Pattabhi Sitaramayya</span><span class="u-green"> raised </span><span class="u-blue-zig">the demand</span><span class="u-green"> of </span><span class="u-blue-zig">creation of states</span><span class="u-green"> on </span><span class="u-blue-zig">linguistic basis</span>.
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-blue-zig">Linguistic redistribution</span><span class="u-green"> should not militate against </span><span class="u-blue-zig">the organic unity</span><span class="u-green"> of </span><span class="u-red-zig">India</span>.<span class="u-blue-zig"> Autonomy</span><span class="u-green"> does not and should not mean </span><span class="u-blue-zig">disruption</span>.
+        <span class="quote-author">— Gandhi</span>
+    </div>
+
+    <div class="quote-box">
+        <span class="u-blue-zig">The formation</span><span class="u-green"> of </span><span class="u-blue-zig">linguistic states</span>,<span class="u-green"> although </span><span class="u-blue-zig">essential</span>,<span class="u-green"> cannot be decided by </span><span class="u-blue-zig">any sort of hooliganism</span>.<span class="u-green"> Nor it must be solved in </span><span class="u-blue-zig">a manner</span><span class="u-green"> that will serve </span><span class="u-blue-zig">party interest</span>.<span class="u-green"> It must be solved by </span><span class="u-blue-zig">cold blooded reasoning</span>.
+        <span class="quote-author">— B. R. Ambedkar</span>
+    </div>
+
+    <div class="section-header">MERITS</div>
+
+    <ul>
+        <li><strong>1. Vernacular Flourishing:</strong>
+            <span class="u-blue-zig">The vernacular languages</span><span class="u-green"> could flourish</span>.
+        </li>
+        <li><strong>2. Local Participation:</strong>
+            <span class="u-green">Ensure </span><span class="u-blue-zig">larger participation</span><span class="u-green"> of </span><span class="u-blue-zig">the local people</span>.
+        </li>
+        <li><strong>3. Volatile Situation:</strong>
+            <span class="u-blue-zig">Decision</span><span class="u-green"> to form </span><span class="u-blue-zig">linguistic states</span><span class="u-green"> helped to tackle </span><span class="u-blue-zig">volatile situation</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">DEMERITS</div>
+
+    <ul>
+        <li><strong>1. Regionalism Feeling:</strong>
+            <span class="u-green">Encouraged </span><span class="u-blue-zig">a feeling</span><span class="u-green"> of </span><span class="u-blue-zig">regionalism</span>.
+        </li>
+        <li><strong>2. Economic Cooperation:</strong>
+            <span class="u-green">Hindered </span><span class="u-blue-zig">economic cooperation</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Language vs Nations:</strong>
+        <span class="u-green">If </span><span class="u-blue-zig">the political leaders</span><span class="u-green"> of </span><span class="u-blue-zig">our country</span><span class="u-green"> had turned a blind eye to </span><span class="u-blue-zig">the demand</span><span class="u-green"> of </span><span class="u-blue-zig">language groups</span><span class="u-green"> for </span><span class="u-blue-zig">separate states</span>,<span class="u-green"> we might have had </span><span class="u-blue-zig">"one language,</span><span class="u-green"> but </span><span class="u-blue-zig">14 or 15 nations</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">2. First Demand 1874:</strong>
+        <span class="u-blue-zig">The demand</span><span class="u-green"> for </span><span class="u-blue-zig">linguistic states</span><span class="u-green"> was emerged for </span><span class="u-blue-zig">the first time</span><span class="u-green"> in </span><span class="u-red-zig">1874</span><span class="u-green"> when </span><span class="u-red-zig">Sylhet</span><span class="u-green"> was transferred from </span><span class="u-red-zig">Bengal</span><span class="u-green"> to </span><span class="u-red-zig">Assam</span>.<span class="u-red-zig"> Bal Gangadhar Tilak</span><span class="u-green"> was </span><span class="u-blue-zig">the first leader</span><span class="u-green"> to support </span><span class="u-blue-zig">the idea</span><span class="u-green"> of </span><span class="u-blue-zig">linguistic basis</span>.<span class="u-green"> At the time of </span><span class="u-blue-zig">independence</span><span class="u-blue-zig"> the grouping of states</span><span class="u-green"> was done on the basis </span>
+    </p>
+
+    <div class="page-number">Page 42</div>
+</div>
+
+<!-- ==================== PAGE 43 ==================== -->
+<div class="pdf-page">
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Andhra Pradesh Creation:</strong>
+        <span class="u-green">of </span><span class="u-blue-zig">political and historical considerations</span><span class="u-green"> rather than on </span><span class="u-blue-zig">linguistic</span>.<span class="u-green"> In </span><span class="u-red-zig">1953</span>, <span class="u-blue-zig">the government</span><span class="u-green"> was forced to create </span><span class="u-blue-zig">a separate state</span><span class="u-green"> of </span><span class="u-red-zig">Andhra Pradesh</span><span class="u-green"> for </span><span class="u-blue-zig">Telugu-speaking people</span>.
+    </p>
+
+    <p>
+        <strong style="color: var(--primary-red);">4. Munshi's Opposition:</strong>
+        <span class="u-red-zig">K M Munshi</span><span class="u-green"> opposed </span><span class="u-blue-zig">the linguistic reorganisation proposal</span><span class="u-green"> saying that </span><span class="u-blue-zig">the political ambition</span><span class="u-green"> of </span><span class="u-blue-zig">a linguistic group</span><span class="u-green"> can only be satisfied by </span><span class="u-blue-zig">the exclusion</span><span class="u-green"> and </span><span class="u-blue-zig">discrimination</span><span class="u-green"> of </span><span class="u-blue-zig">other linguistic group</span><span class="u-green"> within </span><span class="u-blue-zig">the area</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Political Narrative:</strong>
+            <span class="u-green">It strengthened </span><span class="u-blue-zig">political narrative</span><span class="u-green"> of </span><span class="u-blue-zig">certain sections</span><span class="u-green"> that allowed them to propagate </span><span class="u-blue-zig">regionalism</span>,<span class="u-blue-zig"> linguistic chauvinism</span><span class="u-green"> and </span><span class="u-blue-zig">Sons of the soil doctrine</span>.
+        </li>
+        <li><strong>2. Linguistic Minorities:</strong>
+            <span class="u-blue-zig">Linguistic minorities</span><span class="u-green"> have been considered </span><span class="u-blue-zig">alien</span><span class="u-green"> and </span><span class="u-blue-zig">their rights</span><span class="u-green"> are being suppressed</span>.
+        </li>
+        <li><strong>3. Separate State Demand:</strong>
+            <span class="u-blue-zig">Small language</span><span class="u-green"> and </span><span class="u-blue-zig">ethnic groups</span><span class="u-green"> of </span><span class="u-red-zig">North East India</span><span class="u-green"> will also demand for </span><span class="u-blue-zig">separate States</span><span class="u-green"> without having </span><span class="u-blue-zig">economic resources</span><span class="u-green"> which </span><span class="u-blue-zig">threat</span><span class="u-green"> to </span><span class="u-blue-zig">India's integrity</span>.
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-green">We will </span><span class="u-blue-zig">Balkanize</span><span class="u-red-zig"> India</span><span class="u-green"> if we further </span><span class="u-blue-zig">dismember the state</span><span class="u-green"> instead of creating </span><span class="u-blue-zig">large units</span>.
+        <span class="quote-author">— Krishna Menon</span>
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">5. Sarkaria Recommendation:</strong>
+        <span class="u-green">Therefore </span><span class="u-red-zig">Sarkaria commission</span><span class="u-green"> recommended to create </span><span class="u-blue-zig">the states</span><span class="u-green"> on the basis of </span><span class="u-blue-zig">Administrative units</span><span class="u-green"> and </span><span class="u-blue-zig">ban</span><span class="u-green"> on </span><span class="u-blue-zig">Political parties</span><span class="u-green"> and </span><span class="u-blue-zig">other organisations</span><span class="u-green"> trying to promote </span><span class="u-blue-zig">Linguism</span>.
+    </p>
+
+    <div class="page-number">Page 43</div>
+</div>
+
+</body>
+</html>

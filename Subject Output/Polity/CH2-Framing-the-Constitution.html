@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CH2 - Framing the Constitution | Indian Polity</title>
+<style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* ——— BOX CONTENT STYLES ——— */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+</style>
+</head>
+<body>
+
+<!-- =============================== PAGE 20 =============================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">POLITY</span>
+        <h1>CH2- Framing the Constitution</h1>
+        <p class="subtitle">Constitutional Framework and Constituent Assembly</p>
+    </header>
+
+    <div class="main-topic-header">CABINET MISSION PLAN 1946</div>
+    <ul>
+        <li>
+            <strong>1. Mission Plan:</strong>
+            <span class="u-blue-zig">The Cabinet Mission Plan </span>(<span class="u-red-zig">May 16, 1946</span>)
+            <span class="u-green">contained </span>
+            <span class="u-blue-zig">proposals </span>
+            <span class="u-green">regarding the </span>
+            <span class="u-blue-zig">constitutional future </span>
+            <span class="u-blue-zig">of India.</span>
+        </li>
+        <li>
+            <strong>2. Members:</strong>
+            <span class="u-red-zig">Lord Penthick Lawrence</span>(<span class="u-blue-zig">Secretary of State for India</span>),
+            <span class="u-red-zig">Sir Stafford Cripps</span>(<span class="u-blue-zig">President of the Board of Trade</span>)
+            <span class="u-green">and </span>
+            <span class="u-red-zig">A.V Alexander</span>(<span class="u-blue-zig">First Lord of Admiralty</span>).
+        </li>
+        <li>
+            <strong>3. Mission Arrival:</strong>
+            <span class="u-blue-zig">The Mission </span>
+            <span class="u-green">arrived on </span>
+            <span class="u-red-zig">24th March, 1946.</span>
+        </li>
+        <li>
+            <strong>4. Congress Representatives:</strong>
+            <span class="u-blue-zig">The congress </span>
+            <span class="u-green">was represented by </span>
+            <span class="u-red-zig">Jawaharlal Lal Nehru, </span>
+            <span class="u-red-zig">Valabhai Patel, </span>
+            <span class="u-red-zig">Abdul Kalam Azad </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Ghaffar Khan.</span>
+        </li>
+        <li>
+            <strong>5. Muslim League Representatives:</strong>
+            <span class="u-blue-zig">Muslim League </span>
+            <span class="u-green">was represented by </span>
+            <span class="u-red-zig">M.A. Jinnah, </span>
+            <span class="u-red-zig">Liaquat Ali Khan, </span>
+            <span class="u-red-zig">Nawab Ismail </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Sardar Abdul Rab Nishtar.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">OBJECTIVE</div>
+    <ul>
+        <li>
+            <strong>1. Constitution-making Body:</strong>
+            <span class="u-green">To formulate </span>
+            <span class="u-blue-zig">a Constitution-making body </span>
+            {<span class="u-blue-zig">Constituent Assembly</span>}.
+        </li>
+        <li>
+            <strong>2. Interim Government:</strong>
+            <span class="u-green">To form the </span>
+            <span class="u-blue-zig">Interim government.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">FEATURES</div>
+    <ul>
+        <li>
+            <strong>1. Union of India:</strong>
+            <span class="u-green">There should be </span>
+            <span class="u-blue-zig">Union of India</span>—
+            <ul>
+                <li>
+                    <strong>a. Composition:</strong>
+                    <span class="u-blue-zig">British India </span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">Native States</span>
+                </li>
+                <li>
+                    <strong>b. Union Subjects:</strong>
+                    <span class="u-green">Deal with the </span>
+                    <span class="u-blue-zig">subjects of Communication, </span>
+                    <span class="u-blue-zig">Defence </span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">Foreign Affairs</span>
+                </li>
+                <li>
+                    <strong>c. Financial Powers:</strong>
+                    <span class="u-green">Have power to </span>
+                    <span class="u-blue-zig">raise finance </span>
+                    <span class="u-green">required for the </span>
+                    <span class="u-blue-zig">subjects.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Provincial Groups:</strong>
+            <span class="u-green">There should be </span>
+            <span class="u-blue-zig">three groups of provinces.</span>
+            <ul>
+                <li>
+                    <strong>a. Group A:</strong>
+                    <span class="u-blue-zig">Group A, </span>
+                    <span class="u-green">consisting of </span>
+                    <span class="u-blue-zig">six Hindu majority provinces; </span>
+                    <span class="u-red-zig">Bombay, </span>
+                    <span class="u-red-zig">Madras, </span>
+                    <span class="u-blue-zig">United provinces, </span>
+                    <span class="u-blue-zig">Central provinces </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">Bihar.</span>
+                </li>
+                <li>
+                    <strong>b. Group B:</strong>
+                    <span class="u-blue-zig">Group B, </span>
+                    <span class="u-green">consisting of </span>
+                    <span class="u-red-zig">Punjab, </span>
+                    <span class="u-red-zig">Sindh, </span>
+                    <span class="u-red-zig">NWFP </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">Baluchistan.</span>
+                </li>
+                <li>
+                    <strong>c. Group C:</strong>
+                    <span class="u-red-zig">Bengal </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">Assam.</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 20</div>
+</div>
+
+<!-- =============================== PAGE 21 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>3. Union Executive and Legislature:</strong>
+            <span class="u-blue-zig">The Union </span>
+            <span class="u-green">should have </span>
+            <span class="u-blue-zig">an Executive </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">a Legislature </span>
+            <span class="u-green">constituted from </span>
+            <span class="u-blue-zig">British Indian </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">States' representatives.</span>
+        </li>
+        <li>
+            <strong>4. Provincial Subjects:</strong>
+            <span class="u-blue-zig">All subjects </span>
+            <span class="u-green">other than </span>
+            <span class="u-blue-zig">the Union </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Residuary </span>
+            <span class="u-green">should vested in </span>
+            <span class="u-blue-zig">the Provinces.</span>
+        </li>
+        <li>
+            <strong>5. Proportional Representation:</strong>
+            <span class="u-green">To allot to </span>
+            <span class="u-blue-zig">each province </span>
+            <span class="u-blue-zig">a total number of seats </span>
+            <span class="u-green">proportional to </span>
+            <span class="u-blue-zig">its population, </span>
+            <span class="u-green">roughly in the ratio of </span>
+            <span class="u-blue-zig">one to a million.</span>
+        </li>
+        <li>
+            <strong>6. Adult Suffrage:</strong>
+            <span class="u-blue-zig">Representation </span>
+            <span class="u-green">by </span>
+            <span class="u-blue-zig">adult suffrage.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">INTERIM GOVERNMENT</div>
+    <ul>
+        <li>
+            <strong>1. Formation:</strong>
+            <span class="u-blue-zig">The interim government of </span>
+            <span class="u-red-zig">India </span>
+            <span class="u-green">was formed on </span>
+            <span class="u-red-zig">September 2, 1946 </span>
+            <span class="u-green">from the </span>
+            <span class="u-blue-zig">newly elected </span>
+            <span class="u-blue-zig">Constituent Assembly.</span>
+        </li>
+        <li>
+            <strong>2. British Representation:</strong>
+            <span class="u-blue-zig">The members </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">interim government </span>
+            <span class="u-green">also include </span>
+            <span class="u-blue-zig">the Viceroy </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Commander-in-Chief </span>
+            <span class="u-green">of </span>
+            <span class="u-red-zig">Britain</span>
+        </li>
+    </ul>
+
+    <div class="section-header">MEMBERS OF INTERIM GOVERNMENT</div>
+    <table class="pyq-table" style="table-layout: fixed; width: 100%;">
+        <thead>
+            <tr>
+                <th>Portfolio</th>
+                <th style="width: auto; white-space: normal; text-align: center;">Member (Party)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Viceroy and Governor-General </span><span class="u-green">of </span><span class="u-red-zig">India</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">The Viscount Wavell</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Commander-in-Chief</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Sir Claude Auchinleck </span><span class="u-blue-zig">(Britain)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Vice President </span><span class="u-green">of the </span><span class="u-blue-zig">Executive Council</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Jawaharlal Nehru </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Home Affairs, </span><span class="u-blue-zig">Information and Broadcasting</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Vallabhbhai Patel </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Agriculture and Food</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Rajendra Prasad </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Commerce</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Ibrahim Ismail Chundrigar </span><span class="u-blue-zig">(All-India Muslim League)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Education and Arts</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">C. Rajagopalachari </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Defence</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Baldev Singh </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Finance</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Liquat Ali Khan </span><span class="u-blue-zig">(All-India Muslim league)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Health</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Ghazanfar Ali Khan </span><span class="u-blue-zig">(All-India Muslim League)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Industries and Supplies</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">C. Rajagopalachari </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Labour</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Jagjivan Ram </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Law</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Jogendra Nath Mandal </span><span class="u-blue-zig">(All-India Muslim League)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Posts and Air</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Abdur Rab Nishtar </span><span class="u-blue-zig">(All-India Muslim League)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Railways and Communications</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Asaf Ali </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-blue-zig">Work, Mines and Power</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">C.H. Bhabha </span><span class="u-blue-zig">(INC)</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="section-header">MERITS</div>
+    <ul>
+        <li>
+            <strong>1. Democratic Principles:</strong>
+            <span class="u-blue-zig">Democratic Principles</span>
+        </li>
+        <li>
+            <strong>2. All Indian Nature:</strong>
+            <span class="u-blue-zig">All Indian Nature</span>
+        </li>
+        <li>
+            <strong>3. Minority Protection:</strong>
+            <span class="u-blue-zig">Minority Protection</span>
+        </li>
+        <li>
+            <strong>4. Recognition of Pakistan:</strong>
+            <span class="u-blue-zig">Recognition </span>
+            <span class="u-green">of </span>
+            <span class="u-red-zig">Pakistan</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 21</div>
+</div>
+
+<!-- =============================== PAGE 22 =============================== -->
+<div class="pdf-page">
+
+    <div class="section-header">DEMERIT</div>
+    <ul>
+        <li>
+            <strong>1. Provincial Groupings:</strong>
+            <span class="u-blue-zig">Groupings of provinces </span>
+            <span class="u-green">on the basis of </span>
+            <span class="u-blue-zig">Hindu-Muslim majority.</span>
+        </li>
+        <li>
+            <strong>2. Defective Drafting:</strong>
+            <span class="u-blue-zig">Defective Method </span>
+            <span class="u-green">of </span>
+            <span class="u-blue-zig">Drafting Constitutions.</span>
+        </li>
+        <li>
+            <strong>3. Minorities Ignored:</strong>
+            <span class="u-blue-zig">Other Minorities </span>
+            <span class="u-green">were </span>
+            <span class="u-blue-zig">ignored.</span>
+        </li>
+        <li>
+            <strong>4. Direct Action Agitation:</strong>
+            <span class="u-red-zig">Jinnah </span>
+            <span class="u-green">geared to agitate for </span>
+            <span class="u-red-zig">Pakistan </span>
+            <span class="u-green">and urged </span>
+            <span class="u-blue-zig">(Direct Action day </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">16 August 1946</span><span class="u-blue-zig">).</span>
+        </li>
+        <li>
+            <strong>5. Sikh Rejection:</strong>
+            <span class="u-blue-zig">Sikhs </span>
+            <span class="u-green">rejected </span>
+            <span class="u-blue-zig">the scheme.</span>
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Gandhi ji </span>
+        <span class="u-green">said, </span>
+        <span class="u-blue-zig">The mission </span>
+        <span class="u-green">had brought </span>
+        <span class="u-blue-zig">something </span>
+        <span class="u-green">of which </span>
+        <span class="u-blue-zig">they had every reason </span>
+        <span class="u-green">to be </span>
+        <span class="u-blue-zig">proud.</span>
+    </div>
+
+    <div class="main-topic-header">Constituent Assembly</div>
+
+    <div class="section-header">BACKGROUND</div>
+    <ul>
+        <li>
+            <strong>1. Gandhi's Vision:</strong>
+            <span class="u-red-zig">Mahatma Gandhi </span>
+            <span class="u-green">had indicated in </span>
+            <span class="u-red-zig">1922 </span>
+            <span class="u-green">that </span>
+            <span class="u-blue-zig">constitution of India </span>
+            <span class="u-green">would be drafted by </span>
+            <span class="u-blue-zig">the Indians.</span>
+        </li>
+        <li>
+            <strong>2. Besant's Initiative:</strong>
+            <span class="u-red-zig">Annie Besant </span>
+            <span class="u-green">called the </span>
+            <span class="u-blue-zig">meeting of the members </span>
+            <span class="u-blue-zig">of central legislative council </span>
+            <span class="u-green">to discuss about </span>
+            <span class="u-blue-zig">framing the constitution </span>
+            <span class="u-blue-zig">of India.</span>
+        </li>
+        <li>
+            <strong>3. National Demand Resolution:</strong>
+            <span class="u-blue-zig">National Demand resolution </span>
+            <span class="u-green">was introduced by </span>
+            <span class="u-red-zig">Motilal Nehru </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">8 February 1924.</span>
+        </li>
+        <li>
+            <strong>4. Constituent Assembly Idea:</strong>
+            <span class="u-red-zig">M N Roy </span>
+            <span class="u-green">proposed the </span>
+            <span class="u-blue-zig">idea of a constituent assembly </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">1934.</span>
+        </li>
+        <li>
+            <strong>5. Congress Official Demand:</strong>
+            <span class="u-blue-zig">The Congress Party </span>
+            <span class="u-green">put the </span>
+            <span class="u-blue-zig">official demand </span>
+            <span class="u-blue-zig">of constituent assembly </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">1936 </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">Lucknow </span>
+            <span class="u-blue-zig">session.</span>
+        </li>
+        <li>
+            <strong>6. British Acceptance:</strong>
+            <span class="u-blue-zig">The British </span>
+            <span class="u-green">accepted the </span>
+            <span class="u-blue-zig">demand of constituent assembly </span>
+            <span class="u-green">in the </span>
+            <span class="u-blue-zig">August Offer.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">COMPOSITION</div>
+    <ul>
+        <li>
+            <strong>1. Indirect Election:</strong>
+            <span class="u-green">Chosen by </span>
+            <span class="u-blue-zig">indirect election </span>
+            <span class="u-green">by the </span>
+            <span class="u-blue-zig">members of the </span>
+            <span class="u-blue-zig">Provincial Legislative Assemblies.</span>
+        </li>
+        <li>
+            <strong>2. Provincial Members:</strong>
+            <span class="u-blue-zig">292 members </span>
+            <span class="u-green">were elected through </span>
+            <span class="u-blue-zig">the Provincial Legislative Assemblies.</span>
+        </li>
+        <li>
+            <strong>3. Princely States:</strong>
+            <span class="u-blue-zig">93 members </span>
+            <span class="u-green">represented the </span>
+            <span class="u-blue-zig">Indian Princely States.</span>
+        </li>
+        <li>
+            <strong>4. Chief Commissioners' Provinces:</strong>
+            <span class="u-blue-zig">4 members </span>
+            <span class="u-green">represented the </span>
+            <span class="u-blue-zig">Chief Commissioners' Provinces.</span>
+        </li>
+        <li>
+            <strong>5. Initial Strength:</strong>
+            <span class="u-blue-zig">Initially, </span>
+            <span class="u-blue-zig">the number of members </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">389.</span>
+        </li>
+        <li>
+            <strong>6. Post-Partition Strength:</strong>
+            <span class="u-blue-zig">After partition, </span>
+            <span class="u-blue-zig">the number </span>
+            <span class="u-green">came down to </span>
+            <span class="u-blue-zig">299.</span>
+            <ul>
+                <li>
+                    <strong>a. British Provinces:</strong>
+                    <span class="u-blue-zig">229 </span>
+                    <span class="u-green">were from the </span>
+                    <span class="u-blue-zig">British provinces</span>
+                </li>
+                <li>
+                    <strong>b. Princely States:</strong>
+                    <span class="u-blue-zig">70 </span>
+                    <span class="u-green">were nominated from </span>
+                    <span class="u-blue-zig">the princely states.</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">FACTS</div>
+    <ul>
+        <li>
+            <strong>1. Temporary Chairman:</strong>
+            <span class="u-green">On </span>
+            <span class="u-red-zig">December 9, 1946, </span>
+            <span class="u-red-zig">Dr. Sachchidananda Sinha </span>
+            <span class="u-green">was elected as the </span>
+            <span class="u-blue-zig">first temporary chairman.</span>
+        </li>
+        <li>
+            <strong>2. President Elected:</strong>
+            <span class="u-green">On </span>
+            <span class="u-red-zig">December 11, 1946, </span>
+            <span class="u-red-zig">Dr. Rajendra Prasad </span>
+            <span class="u-green">was elected as the </span>
+            <span class="u-blue-zig">President.</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 22</div>
+</div>
+
+<!-- =============================== PAGE 23 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>3. Vice President:</strong>
+            <span class="u-red-zig">Harendra Coomar Mookerjee </span>
+            <span class="u-green">was elected as </span>
+            <span class="u-blue-zig">the Vice President.</span>
+        </li>
+        <li>
+            <strong>4. Constitutional Advisor:</strong>
+            <span class="u-red-zig">BN Rau </span>
+            <span class="u-green">was elected as </span>
+            <span class="u-blue-zig">the constitutional advisor.</span>
+        </li>
+        <li>
+            <strong>5. Objective Resolution:</strong>
+            <span class="u-green">On </span>
+            <span class="u-red-zig">December 13,1946, </span>
+            <span class="u-red-zig">Jawaharlal Nehru </span>
+            <span class="u-green">moved </span>
+            <span class="u-blue-zig">the 'Objective Resolution'.</span>
+            <ul>
+                <li>
+                    <strong>a. Preamble Adoption:</strong>
+                    <span class="u-blue-zig">This resolution </span>
+                    <span class="u-green">was unanimously adopted on </span>
+                    <span class="u-red-zig">22 January 1947 </span>
+                    <span class="u-green">and it became </span>
+                    <span class="u-blue-zig">the Preamble.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>6. Drafting Committee Setup:</strong>
+            <span class="u-green">On </span>
+            <span class="u-red-zig">August 29, 1947, </span>
+            <span class="u-blue-zig">the Constituent Assembly </span>
+            <span class="u-green">set up </span>
+            <span class="u-blue-zig">a Drafting Committee.</span>
+        </li>
+    </ul>
+
+    <div class="info-box">
+        <div class="info-box-header">DRAFTING COMMITTEE</div>
+        <p>
+            <strong>Chairman:</strong>
+            <span class="u-red-zig">Dr. BR Ambedkar</span>
+        </p>
+        <p><strong>Members:</strong></p>
+        <ul>
+            <li>
+                <strong>a.</strong>
+                <span class="u-red-zig">N Gopalaswamy Ayyangar</span>
+            </li>
+            <li>
+                <strong>b.</strong>
+                <span class="u-red-zig">Mohammed Saadullah</span>
+            </li>
+            <li>
+                <strong>c.</strong>
+                <span class="u-red-zig">Alladi Krishnaswami Ayyar</span>
+            </li>
+            <li>
+                <strong>d.</strong>
+                <span class="u-red-zig">KM Munshi</span>
+            </li>
+            <li>
+                <strong>e.</strong>
+                <span class="u-red-zig">BL Mittar </span>
+                <span class="u-green">substituted by </span>
+                <span class="u-red-zig">N Madhava Rao </span>
+                <span class="u-green">following </span>
+                <span class="u-blue-zig">his resignation </span>
+                <span class="u-blue-zig">on health issues</span>
+            </li>
+            <li>
+                <strong>f.</strong>
+                <span class="u-red-zig">Dr. DP Khaitan </span>
+                <span class="u-blue-zig">(died in </span><span class="u-red-zig">1948 </span>
+                <span class="u-green">and was substituted by </span>
+                <span class="u-red-zig">TT Krishnamachari</span><span class="u-blue-zig">)</span>
+            </li>
+        </ul>
+    </div>
+
+    <ul>
+        <li>
+            <strong>7. Draft Presentation:</strong>
+            <span class="u-green">On </span>
+            <span class="u-red-zig">February 21, 1948, </span>
+            <span class="u-blue-zig">the Draft of the Constitution </span>
+            <span class="u-green">was presented.</span>
+            <ul>
+                <li>
+                    <strong>a. First Reading:</strong>
+                    <span class="u-blue-zig">First Reading </span>
+                    <span class="u-green">was held between </span>
+                    <span class="u-red-zig">Nov 4, 1948 </span>—
+                    <span class="u-red-zig">Nov 9, 1948.</span>
+                </li>
+                <li>
+                    <strong>b. Second Reading:</strong>
+                    <span class="u-blue-zig">Second Reading </span>
+                    <span class="u-green">was held between </span>
+                    <span class="u-red-zig">Nov 15, 1948 </span>—
+                    <span class="u-red-zig">Oct 17, 1949.</span>
+                </li>
+                <li>
+                    <strong>c. Third Reading:</strong>
+                    <span class="u-blue-zig">Third Reading </span>
+                    <span class="u-green">was held between </span>
+                    <span class="u-red-zig">Nov 14, 1949 </span>—
+                    <span class="u-red-zig">Nov 26, 1949.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>8. Total Session Days:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">met for </span>
+            <span class="u-blue-zig">a total number of </span>
+            <span class="u-blue-zig">165 days </span>
+            <span class="u-green">between </span>
+            <span class="u-red-zig">1946 </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">1950.</span>
+        </li>
+        <li>
+            <strong>9. Discussion Duration:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">discussed </span>
+            <span class="u-blue-zig">the text of the Constitution </span>
+            <span class="u-blue-zig">for 101 days.</span>
+        </li>
+        <li>
+            <strong>10. Assembly Debates:</strong>
+            <span class="u-blue-zig">Approximately 36 lakh words </span>
+            <span class="u-green">were spoken during </span>
+            <span class="u-blue-zig">Assembly debates.</span>
+        </li>
+        <li>
+            <strong>11. Women Members:</strong>
+            <span class="u-blue-zig">15 women </span>
+            <span class="u-green">were a part of </span>
+            <span class="u-blue-zig">the Constituent Assembly, </span>
+            <span class="u-blue-zig">of which 10 </span>
+            <span class="u-green">participated in </span>
+            <span class="u-blue-zig">debates.</span>
+            <ul>
+                <li>
+                    <strong>a. Women Participants:</strong>
+                    <span class="u-red-zig">G. Durgabai, </span>
+                    <span class="u-red-zig">Begum Aizaz Rasul, </span>
+                    <span class="u-red-zig">Renuka Ray, </span>
+                    <span class="u-red-zig">Purnima Banerji, </span>
+                    <span class="u-red-zig">Dakshayani Velayudhan, </span>
+                    <span class="u-red-zig">Annie Mascarene, </span>
+                    <span class="u-red-zig">Sarojini Naidu, </span>
+                    <span class="u-red-zig">Hansa Mehta, </span>
+                    <span class="u-red-zig">Vijayalakshmi Pandit, </span>
+                    <span class="u-red-zig">Ammu Swaminathan</span>
+                </li>
+                <li>
+                    <strong>b. Justice for Women:</strong>
+                    <span class="u-red-zig">Hansa Mehta </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">Renuka Ray </span>
+                    <span class="u-green">participated in </span>
+                    <span class="u-blue-zig">debates on justice </span>
+                    <span class="u-blue-zig">for women in </span>
+                    <span class="u-red-zig">India.</span>
+                </li>
+                <li>
+                    <strong>c. Judiciary Debates:</strong>
+                    <span class="u-red-zig">G. Durgabai </span>
+                    <span class="u-green">spoke extensively on </span>
+                    <span class="u-blue-zig">the judiciary </span>
+                    <span class="u-blue-zig">during the debates.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>12. Time Taken:</strong>
+            <span class="u-blue-zig">The time </span>
+            <span class="u-green">is taken by </span>
+            <span class="u-blue-zig">the assembly </span>—
+            <span class="u-blue-zig">2 years, 11 months </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">18 days.</span>
+        </li>
+        <li>
+            <strong>13. Framing Cost:</strong>
+            <span class="u-blue-zig">Money spent </span>
+            <span class="u-green">in framing </span>
+            <span class="u-blue-zig">the constitution: </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">Rs.64 lakhs.</span>
+        </li>
+        <li>
+            <strong>14. National Flag:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">adopted </span>
+            <span class="u-blue-zig">the national flag </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">July 22, 1947.</span>
+        </li>
+        <li>
+            <strong>15. Commonwealth Membership:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">ratified </span>
+            <span class="u-blue-zig">India's membership </span>
+            <span class="u-blue-zig">of the Commonwealth </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">May 1949.</span>
+        </li>
+        <li>
+            <strong>16. National Anthem:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">adopted </span>
+            <span class="u-blue-zig">the national anthem </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">January 24, 1950.</span>
+        </li>
+        <li>
+            <strong>17. National Song:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">adopted </span>
+            <span class="u-blue-zig">the national song </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">January 24, 1950.</span>
+        </li>
+        <li>
+            <strong>18. First President:</strong>
+            <span class="u-blue-zig">The Constituent Assembly </span>
+            <span class="u-green">elected </span>
+            <span class="u-red-zig">Dr. Rajendra Prasad </span>
+            <span class="u-green">as the </span>
+            <span class="u-blue-zig">first President of </span>
+            <span class="u-red-zig">India </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">January 24, 1950.</span>
+        </li>
+        <li>
+            <strong>19. Constitution Signing:</strong>
+            <span class="u-blue-zig">The members </span>
+            <span class="u-green">signed </span>
+            <span class="u-blue-zig">the Constitution of </span>
+            <span class="u-red-zig">India </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">24 January, 1950.</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 23</div>
+</div>
+
+<!-- =============================== PAGE 24 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>20. Total Sessions:</strong>
+            <span class="u-green">There were </span>
+            <span class="u-blue-zig">total eleven sessions.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">CRITICISM</div>
+    <ul>
+        <li>
+            <strong>1. Not Representative:</strong>
+            <span class="u-blue-zig">Not a representative body.</span>
+        </li>
+        <li>
+            <strong>2. No Adult Franchise:</strong>
+            <span class="u-blue-zig">Members </span>
+            <span class="u-green">were not elected by </span>
+            <span class="u-blue-zig">adult franchise.</span>
+        </li>
+        <li>
+            <strong>3. Not Sovereign:</strong>
+            <span class="u-blue-zig">Not a sovereign body.</span>
+        </li>
+        <li>
+            <strong>4. Congress Dominance:</strong>
+            <span class="u-green">Dominated by the </span>
+            <span class="u-red-zig">Congress Party.</span>
+        </li>
+        <li>
+            <strong>5. Complicated Language:</strong>
+            <span class="u-blue-zig">Language </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">complicated.</span>
+        </li>
+        <li>
+            <strong>6. Gandhi's View on Assembly:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">Gandhi ji, </span>
+            <span class="u-blue-zig">Constituent Assembly </span>
+            <span class="u-green">is the </span>
+            <span class="u-blue-zig">real mirror </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">Indian brain.</span>
+        </li>
+        <li>
+            <strong>7. Communal Harmony:</strong>
+            <span class="u-green">According to </span>
+            <span class="u-red-zig">Gandhi ji, </span>
+            <span class="u-blue-zig">Constituent Assembly </span>
+            <span class="u-green">would remove the </span>
+            <span class="u-blue-zig">communal unrest.</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Reflection of Indian Polity:</strong>
+        <span class="u-blue-zig">Constituent Assembly </span>
+        <span class="u-green">is the </span>
+        <span class="u-blue-zig">real mirror </span>
+        <span class="u-green">of the </span>
+        <span class="u-blue-zig">Indian brain.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Communal Harmony as Core Value:</strong>
+        <span class="u-blue-zig">Communal harmony </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">mutual brotherhood </span>
+        <span class="u-green">is the </span>
+        <span class="u-blue-zig">basic concept </span>
+        <span class="u-green">of </span>
+        <span class="u-blue-zig">Indian culture. </span>
+        <span class="u-green">By reaching the </span>
+        <span class="u-blue-zig">last phase </span>
+        <span class="u-green">of the </span>
+        <span class="u-blue-zig">freedom movement, </span>
+        <span class="u-blue-zig">this concept </span>
+        <span class="u-green">started taking </span>
+        <span class="u-blue-zig">its original form. </span>
+        <span class="u-blue-zig">The demand </span>
+        <span class="u-green">of </span>
+        <span class="u-red-zig">Muslim League </span>
+        <span class="u-green">for </span>
+        <span class="u-blue-zig">seprate nation </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">Hindu Muslim riots </span>
+        <span class="u-green">distracted </span>
+        <span class="u-red-zig">Gandhiji. </span>
+        <span class="u-red-zig">Gandhiji </span>
+        <span class="u-green">accepted </span>
+        <span class="u-red-zig">Cabinet Mission </span>
+        <span class="u-blue-zig">with pleasure </span>
+        <span class="u-green">and said that </span>
+        <span class="u-blue-zig">Constituent Assembly </span>
+        <span class="u-green">would protect the </span>
+        <span class="u-blue-zig">basic concepts </span>
+        <span class="u-green">of </span>
+        <span class="u-blue-zig">Indian culture </span>
+        <span class="u-green">and would be organized </span>
+        <span class="u-blue-zig">in such a way </span>
+        <span class="u-green">that it would reflect </span>
+        <span class="u-blue-zig">the whole </span>
+        <span class="u-green">of </span>
+        <span class="u-red-zig">India.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">3. Indigenous Constitution:</strong>
+        <span class="u-green">For </span>
+        <span class="u-red-zig">Gandhi, </span>
+        <span class="u-blue-zig">a Constituent Assembly </span>
+        <span class="u-green">would not just produce </span>
+        <span class="u-blue-zig">a Constitution indigenous </span>
+        <span class="u-green">to the </span>
+        <span class="u-blue-zig">country </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">truly and fully </span>
+        <span class="u-green">representing the </span>
+        <span class="u-blue-zig">will of the people, </span>
+        <span class="u-green">but would also solve the </span>
+        <span class="u-blue-zig">communal problem.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">4. Mini-India Representation:</strong>
+        <span class="u-blue-zig">All communities </span>
+        <span class="u-green">would be represented in the </span>
+        <span class="u-blue-zig">Assembly </span>
+        <span class="u-green">in their </span>
+        <span class="u-blue-zig">exact proportion. </span>
+        <span class="u-green">Therefore the </span>
+        <span class="u-blue-zig">Constituent Assembly </span>
+        <span class="u-green">was also known as </span>
+        <span class="u-blue-zig">Mini-India </span>
+        <span class="u-green">because it represented </span>
+        <span class="u-blue-zig">all the major religions </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">sections of Indian society.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">5. Minority Safeguards:</strong>
+        <span class="u-blue-zig">The Constituent Assembly </span>
+        <span class="u-green">recognised that </span>
+        <span class="u-green">unless </span>
+        <span class="u-blue-zig">safeguards </span>
+        <span class="u-green">were created, </span>
+        <span class="u-blue-zig">minorities </span>
+        <span class="u-green">would never be able to gain </span>
+        <span class="u-blue-zig">parity with the majority </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">basic features </span>
+        <span class="u-green">of the </span>
+        <span class="u-blue-zig">Constitution </span>
+        <span class="u-green">and its commitment to </span>
+        <span class="u-blue-zig">a plural </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">democratic polity </span>
+        <span class="u-green">would remain </span>
+        <span class="u-blue-zig">mere lip-service.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">6. Freedom Movement Direction:</strong>
+        <span class="u-red-zig">Gandhi </span>
+        <span class="u-green">seemed convinced that </span>
+        <span class="u-blue-zig">the setting up </span>
+        <span class="u-green">of a </span>
+        <span class="u-blue-zig">Constituent Assembly </span>
+        <span class="u-green">was the </span>
+        <span class="u-blue-zig">only way out </span>
+        <span class="u-green">and urged </span>
+        <span class="u-blue-zig">Indian leaders </span>
+        <span class="u-green">to work towards </span>
+        <span class="u-blue-zig">this goal </span>
+        <span class="u-green">and steer the </span>
+        <span class="u-blue-zig">freedom movement </span>
+        <span class="u-green">in this </span>
+        <span class="u-blue-zig">direction.</span>
+    </p>
+
+    <table class="pyq-table" style="table-layout: fixed; width: 100%;">
+        <thead>
+            <tr>
+                <th>STATE</th>
+                <th style="width: auto; white-space: normal; text-align: center;">NO. OF MEMBERS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Madras</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">49</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Bombay</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">21</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">West Bengal</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">19</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">United Provinces</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">55</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">East Punjab</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">12</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Bihar</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">36</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">C.P. and Berar</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">17</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Assam</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">8</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Orissa</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">9</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Delhi</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">1</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Ajmer-Merwara</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">1</td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;"><span class="u-red-zig">Coorg</span></td>
+                <td style="word-break: break-word; white-space: normal; text-align: center; color: var(--primary-red); font-weight: bold;">1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <div class="info-box-header">INDIAN STATES</div>
+        <span class="u-blue-zig">Total </span>—
+        <span class="u-blue-zig">70</span><br>
+        <span class="u-blue-zig">MAX </span>—
+        <span class="u-red-zig">Mysore</span>(<span class="u-blue-zig">7</span>) —
+        <span class="u-red-zig">Travancore</span>(<span class="u-blue-zig">6</span>)
+    </div>
+
+    <div class="page-number">Page 24</div>
+</div>
+
+<!-- =============================== PAGE 25 =============================== -->
+<div class="pdf-page">
+
+    <div class="section-header">Committees of the Constituent Assembly</div>
+
+    <table class="pyq-table" style="table-layout: fixed; width: 100%;">
+        <thead>
+            <tr>
+                <th>Name of the Committee</th>
+                <th style="width: auto; white-space: normal; text-align: center;">Chairman</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Committee on the Rules of Procedure</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Rajendra Prasad</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Steering Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Rajendra Prasad</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Finance and Staff Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Rajendra Prasad</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Ad hoc Committee on National Flag</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Rajendra Prasad</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">House Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">B. Pattabhi Sitaramayya</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Order of Business Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">K.M. Munsi</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">States Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Jawaharlal Nehru</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Advisory Committee </span><span class="u-blue-zig">Fundamental Rights, </span><span class="u-blue-zig">Minorities and Tribal </span><span class="u-blue-zig">and Excluded Areas</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Vallabhbhai Patel</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Minorities Sub-Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">H.C. Mookherjee</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Fundamental Rights Sub-Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">J.B. Kripalani</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Union Powers Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Jawaharlal Nehru</span>
+                </td>
+            </tr>
+            <tr>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <b><span class="u-blue-zig">Union Constitution Committee</span></b>
+                </td>
+                <td style="word-break: break-word; white-space: normal; text-align: left; color: var(--text-gray); font-weight: normal;">
+                    <span class="u-red-zig">Jawaharlal Nehru</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="page-number">Page 25</div>
+</div>
+
+</body>
+</html>

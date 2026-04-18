@@ -1,0 +1,1540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH10 - Vice-President & CH10(B) - Prime Minister | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+
+<!-- ==================== PAGE 110 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH10- Vice-President</h1>
+        <p class="subtitle">Part V - Article 63 to 69</p>
+    </header>
+
+    <div class="section-header">Article 63</div>
+    <p>
+        <span class="u-green">There shall be </span>
+        <span class="u-blue-zig">a Vice-President of India</span>.
+    </p>
+
+    <div class="section-header">Article 64</div>
+    <p>
+        <span class="u-blue-zig">The Vice-President</span>
+        <span class="u-green"> to be </span>
+        <span class="u-blue-zig">ex officio Chairman</span>
+        <span class="u-green"> of the </span>
+        <span class="u-red-zig">Council of States</span>.
+    </p>
+
+    <div class="section-header">Article 65</div>
+    <p>
+        <span class="u-blue-zig">The Vice-President</span>
+        <span class="u-green"> to act as </span>
+        <span class="u-blue-zig">President</span>
+        <span class="u-green"> or to discharge </span>
+        <span class="u-blue-zig">his functions</span>
+        <span class="u-green"> during </span>
+        <span class="u-blue-zig">casual vacancies</span>
+        <span class="u-green"> in the </span>
+        <span class="u-blue-zig">office</span>,
+        <span class="u-green"> or during the absence</span>,
+        <span class="u-green"> of </span>
+        <span class="u-blue-zig">President</span>.
+    </p>
+
+    <div class="section-header">Article 66</div>
+    <ul>
+        <li>
+            <strong>1. Electoral College:</strong>
+            <span class="u-blue-zig">The Vice-President</span>
+            <span class="u-green"> shall be elected by </span>
+            <span class="u-blue-zig">the members</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">an electoral college</span>
+            <span class="u-green"> consisting of the </span>
+            <span class="u-blue-zig">members</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">both Houses of Parliament</span>
+            <span class="u-green"> in accordance with </span>
+            <span class="u-blue-zig">the system</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">proportional representation</span>
+            <span class="u-green"> by means of </span>
+            <span class="u-blue-zig">the single transferable vote</span>
+            <span class="u-green"> and the </span>
+            <span class="u-blue-zig">voting</span>
+            <span class="u-green"> at such election shall be by </span>
+            <span class="u-blue-zig">secret ballot</span>.
+        </li>
+
+        <li>
+            <strong>2. Membership Restriction:</strong>
+            <span class="u-blue-zig">The Vice-President</span>
+            <span class="u-green"> shall not be </span>
+            <span class="u-blue-zig">a member</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">either House of Parliament</span>
+            <span class="u-green"> or of </span>
+            <span class="u-blue-zig">a House of the Legislature</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">any State</span>,
+            <span class="u-green"> and if </span>
+            <span class="u-blue-zig">a member</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">either House of Parliament</span>
+            <span class="u-green"> or of </span>
+            <span class="u-blue-zig">a House of the Legislature</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">any State</span>
+            <span class="u-green"> be elected </span>
+            <span class="u-blue-zig">Vice-President</span>,
+            <span class="u-green">he shall be deemed to have </span>
+            <span class="u-green">vacated </span>
+            <span class="u-blue-zig">his seat</span>
+            <span class="u-green"> in </span>
+            <span class="u-blue-zig">that House</span>
+            <span class="u-green"> on the date on which he enters upon </span>
+            <span class="u-blue-zig">his office</span>
+            <span class="u-green"> as </span>
+            <span class="u-blue-zig">Vice-President</span>.
+        </li>
+
+        <li>
+            <strong>3. Eligibility Conditions:</strong>
+            <span class="u-blue-zig">No person</span>
+            <span class="u-green"> shall be eligible for </span>
+            <span class="u-blue-zig">election</span>
+            <span class="u-green"> as </span>
+            <span class="u-blue-zig">Vice-President</span>
+            <span class="u-green"> unless he </span>—
+            <ul>
+                <li>
+                    <strong>a. Citizenship:</strong>
+                    <span class="u-green">is </span>
+                    <span class="u-blue-zig">a citizen of India</span>;
+                </li>
+                <li>
+                    <strong>b. Age Requirement:</strong>
+                    <span class="u-green">has completed </span>
+                    <span class="u-blue-zig">the age</span>
+                    <span class="u-green"> of </span>
+                    <span class="u-blue-zig">thirty-five years</span>;
+                    <span class="u-green"> and </span>
+                </li>
+                <li>
+                    <strong>c. Council Qualification:</strong>
+                    <span class="u-green">is qualified for </span>
+                    <span class="u-blue-zig">election</span>
+                    <span class="u-green"> as </span>
+                    <span class="u-blue-zig">a member</span>
+                    <span class="u-green"> of the </span>
+                    <span class="u-red-zig">Council of States</span>.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>4. Office of Profit Bar:</strong>
+            <span class="u-blue-zig">A person</span>
+            <span class="u-green"> shall not be eligible for </span>
+            <span class="u-blue-zig">election</span>
+            <span class="u-green"> as </span>
+            <span class="u-blue-zig">Vice-President</span>
+            <span class="u-green"> if he holds </span>
+            <span class="u-blue-zig">any office of profit</span>
+            <span class="u-green"> under the </span>
+            <span class="u-blue-zig">Government of India</span>
+            <span class="u-green"> or the </span>
+            <span class="u-blue-zig">Government of any State</span>
+            <span class="u-green"> or under </span>
+            <span class="u-blue-zig">any local or other authority</span>
+            <span class="u-green"> subject to the control of </span>
+            <span class="u-blue-zig">any of the said Governments</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 110</div>
+</div>
+
+<!-- ==================== PAGE 111 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">Article 67</div>
+    <ul>
+        <li>
+            <strong>1. Term of Office:</strong>
+            <span class="u-blue-zig">The Vice-President</span>
+            <span class="u-green"> shall hold office for </span>
+            <span class="u-blue-zig">a term of five years</span>
+            <span class="u-green"> from the date on which he enters upon </span>
+            <span class="u-blue-zig">his office</span>:
+        </li>
+    </ul>
+    <p>
+        <span class="u-green">Provided that </span>—
+    </p>
+    <ul>
+        <li>
+            <strong>a. Resignation:</strong>
+            <span class="u-blue-zig">a Vice-President</span>
+            <span class="u-green"> may, by </span>
+            <span class="u-blue-zig">writing under his hand</span>
+            <span class="u-green"> addressed to the </span>
+            <span class="u-blue-zig">President</span>,
+            <span class="u-green"> resign </span>
+            <span class="u-blue-zig">his office</span>;
+        </li>
+
+        <li>
+            <strong>b. Removal Process:</strong>
+            <span class="u-blue-zig">a Vice-President</span>
+            <span class="u-green"> may be removed from </span>
+            <span class="u-blue-zig">his office</span>
+            <span class="u-green"> by </span>
+            <span class="u-blue-zig">a resolution</span>
+            <span class="u-green"> of the </span>
+            <span class="u-red-zig">Council of States</span>
+            <span class="u-green"> passed by </span>
+            <span class="u-blue-zig">a majority</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">all the then members</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Council</span>
+            <span class="u-green"> and agreed to by the </span>
+            <span class="u-red-zig">House of the People</span>;
+            <span class="u-green"> but </span>
+            <span class="u-blue-zig">no resolution</span>
+            <span class="u-green"> for the purpose of </span>
+            <span class="u-blue-zig">this clause</span>
+            <span class="u-green"> shall be moved unless </span>
+            <span class="u-blue-zig">at least fourteen days' notice</span>
+            <span class="u-green"> has been given of </span>
+            <span class="u-blue-zig">the intention</span>
+            <span class="u-green"> to move the </span>
+            <span class="u-blue-zig">resolution</span>;
+        </li>
+
+        <li>
+            <strong>c. Continuation Clause:</strong>
+            <span class="u-blue-zig">a Vice-President</span>
+            <span class="u-green"> shall, notwithstanding the </span>
+            <span class="u-blue-zig">expiration</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">his term</span>,
+            <span class="u-green"> continue to hold </span>
+            <span class="u-blue-zig">office</span>
+            <span class="u-green"> until </span>
+            <span class="u-blue-zig">his successor</span>
+            <span class="u-green"> enters upon </span>
+            <span class="u-blue-zig">his office</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Article 68</div>
+    <ul>
+        <li>
+            <strong>1. Term Expiry Vacancy:</strong>
+            <span class="u-blue-zig">An election</span>
+            <span class="u-green"> to fill </span>
+            <span class="u-blue-zig">a vacancy</span>
+            <span class="u-green"> caused by the </span>
+            <span class="u-blue-zig">expiration</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">term of office</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">Vice-President</span>
+            <span class="u-green"> shall be completed before </span>
+            <span class="u-blue-zig">the expiration</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">term</span>.
+        </li>
+
+        <li>
+            <strong>2. Casual Vacancy:</strong>
+            <span class="u-blue-zig">An election</span>
+            <span class="u-green"> to fill </span>
+            <span class="u-blue-zig">a vacancy</span>
+            <span class="u-green"> in the office of </span>
+            <span class="u-blue-zig">Vice-President</span>
+            <span class="u-green"> occurring by reason of </span>
+            <span class="u-blue-zig">his death</span>,
+            <span class="u-blue-zig">resignation</span>
+            <span class="u-green"> or </span>
+            <span class="u-blue-zig">removal</span>,
+            <span class="u-green"> or otherwise shall be held </span>
+            <span class="u-blue-zig">as soon as possible</span>
+            <span class="u-green"> after the occurrence of the </span>
+            <span class="u-blue-zig">vacancy</span>,
+            <span class="u-green"> and the </span>
+            <span class="u-blue-zig">person elected</span>
+            <span class="u-green"> to fill the </span>
+            <span class="u-blue-zig">vacancy</span>
+            <span class="u-green"> shall, subject to the provisions of </span>
+            <span class="u-blue-zig">article 67</span>,
+            <span class="u-green"> be entitled to hold </span>
+            <span class="u-blue-zig">office</span>
+            <span class="u-green"> for the </span>
+            <span class="u-blue-zig">full term of five years</span>
+            <span class="u-green"> from the date on which he enters upon </span>
+            <span class="u-blue-zig">his office</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Article 69</div>
+    <p>
+        <span class="u-blue-zig">Every Vice-President</span>
+        <span class="u-green"> shall, before entering upon </span>
+        <span class="u-blue-zig">his office</span>,
+        <span class="u-green"> make and subscribe before the </span>
+        <span class="u-blue-zig">President</span>,
+        <span class="u-green"> or </span>
+        <span class="u-blue-zig">some person</span>
+        <span class="u-green"> appointed in that behalf by </span>
+        <span class="u-blue-zig">him</span>.
+    </p>
+
+    <div class="main-topic-header">Vice-President of India</div>
+
+    <div style="display: flex; gap: 20px; justify-content: center; margin: 20px 0;">
+        <div class="image-placeholder" style="width: 170px; height: 143px;">
+            [Vice-President Image 1]
+        </div>
+        <div class="image-placeholder" style="width: 172px; height: 142px;">
+            [Vice-President Image 2]
+        </div>
+    </div>
+
+    <div class="page-number">Page 111</div>
+</div>
+
+<!-- ==================== PAGE 112 ==================== -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">INDIAN POLITY</span>
+        <h1>CH10(B)- Prime Minister</h1>
+        <p class="subtitle">Prime Minister is the real custodian of all executive authority</p>
+    </header>
+
+    <div class="section-header">Article 75</div>
+    <ul>
+        <li>
+            <strong>1. Presidential Appointment:</strong>
+            <span class="u-blue-zig">The Prime Minister</span>
+            <span class="u-green"> shall be appointed by the </span>
+            <span class="u-blue-zig">President</span>
+        </li>
+
+        <li>
+            <strong>2. Majority Leader:</strong>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> appoints the </span>
+            <span class="u-blue-zig">leader of the majority</span>
+            <span class="u-green"> in the </span>
+            <span class="u-red-zig">Lok Sabha</span>
+            <span class="u-green"> as the </span>
+            <span class="u-blue-zig">Prime Minister</span>.
+        </li>
+
+        <li>
+            <strong>3. Presidential Discretion:</strong>
+            <span class="u-green">In case </span>
+            <span class="u-blue-zig">no party</span>
+            <span class="u-green"> gets </span>
+            <span class="u-blue-zig">a majority</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">some parties</span>
+            <span class="u-green"> are even unable to elect </span>
+            <span class="u-blue-zig">a common candidate</span>
+            <span class="u-green"> as </span>
+            <span class="u-blue-zig">their leader</span>,
+            <span class="u-blue-zig">the President</span>
+            <span class="u-green"> can play </span>
+            <span class="u-blue-zig">a real role</span>
+            <span class="u-green"> in the appointment of the </span>
+            <span class="u-blue-zig">Prime Minister</span>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <ul>
+                <li>
+                    <strong>a. House Eligibility:</strong>
+                    <span class="u-blue-zig">The Prime Minister</span>
+                    <span class="u-green"> can be from </span>
+                    <span class="u-blue-zig">either House</span>
+                    <span class="u-green"> of the </span>
+                    <span class="u-blue-zig">Parliament</span>.
+                </li>
+
+                <li>
+                    <strong>b. Essential Condition:</strong>
+                    <span class="u-blue-zig">The only essential condition</span>
+                    <span class="u-green"> is that he must be the </span>
+                    <span class="u-blue-zig">adopted or elected leader</span>
+                    <span class="u-green"> of </span>
+                    <span class="u-blue-zig">majority</span>
+                    <span class="u-green"> in the </span>
+                    <span class="u-red-zig">Lok Sabha</span>.
+                </li>
+
+                <li>
+                    <strong>c. Non-Member Provision:</strong>
+                    <span class="u-blue-zig">Any person</span>
+                    <span class="u-green"> who is not </span>
+                    <span class="u-blue-zig">a member</span>
+                    <span class="u-green"> of </span>
+                    <span class="u-blue-zig">either House of the Parliament</span>
+                    <span class="u-green"> can also becomes </span>
+                    <span class="u-blue-zig">a minister or the Prime Minister</span>
+                    <span class="u-green"> and e he can remain so for </span>
+                    <span class="u-blue-zig">six months</span>,
+                    <span class="u-green"> within this period he has to essentially get </span>
+                    <span class="u-blue-zig">the membership</span>
+                    <span class="u-green"> of </span>
+                    <span class="u-blue-zig">either House</span>.
+                </li>
+
+                <li>
+                    <strong>d. Pleasure Doctrine:</strong>
+                    <span class="u-blue-zig">The Prime Minister</span>
+                    <span class="u-green"> holds office during the </span>
+                    <span class="u-blue-zig">pleasure</span>
+                    <span class="u-green"> of the </span>
+                    <span class="u-blue-zig">President</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">4. No-Confidence Motion:</strong>
+            <span class="u-red-zig">Lok Sabha</span>
+            <span class="u-green"> can pass </span>
+            <span class="u-blue-zig">a vote of no-confidence</span>
+            <span class="u-green"> against him and in this case the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> either submits </span>
+            <span class="u-blue-zig">his resignation</span>
+            <span class="u-green"> to the </span>
+            <span class="u-blue-zig">President</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Powers and Functions</div>
+
+    <div class="section-header">Article 74</div>
+    <ul>
+        <li>
+            <strong>1. Council of Ministers:</strong>
+            <span class="u-green">There shall be </span>
+            <span class="u-blue-zig">a Council of Ministers</span>
+            <span class="u-green"> with the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> at the head to </span>
+            <span class="u-green">aid and advise </span>
+            <span class="u-blue-zig">the President</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Article 75</div>
+    <ul>
+        <li>
+            <strong>1. Ministerial Appointment:</strong>
+            <span class="u-blue-zig">the other Ministers</span>
+            <span class="u-green"> shall be appointed by the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> on the advice of the </span>
+            <span class="u-blue-zig">Prime Minister</span>.
+        </li>
+
+        <li>
+            <strong>1A. 15% Ceiling:</strong>
+            <span class="u-blue-zig">The total number of Ministers</span>,
+            <span class="u-green"> including the </span>
+            <span class="u-blue-zig">Prime Minister</span>,
+            <span class="u-green"> in the </span>
+            <span class="u-blue-zig">Council of Ministers</span>
+            <span class="u-green"> shall not exceed </span>
+            <span class="u-blue-zig">fifteen per cent</span>.
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">total number of members</span>
+            <span class="u-green"> of the </span>
+            <span class="u-red-zig">House of the People</span>.
+            (<span class="u-red-zig">Ninety-first Amendment) Act, 2003</span>),
+        </li>
+
+        <li>
+            <strong>2. Pleasure of President:</strong>
+            <span class="u-blue-zig">The Ministers</span>
+            <span class="u-green"> shall hold office during the </span>
+            <span class="u-blue-zig">pleasure</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">President</span>.
+        </li>
+
+        <li>
+            <strong>3. Collective Responsibility:</strong>
+            <span class="u-blue-zig">The Council of Ministers</span>
+            <span class="u-green"> shall be collectively responsible to the </span>
+            <span class="u-red-zig">House of the People</span>.
+        </li>
+
+        <li>
+            <strong>5. Six-Month Rule:</strong>
+            <span class="u-blue-zig">A Minister</span>
+            <span class="u-green"> who for </span>
+            <span class="u-blue-zig">any period of six consecutive months</span>
+            <span class="u-green"> is not </span>
+            <span class="u-blue-zig">a member</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">either House of Parliament</span>
+            <span class="u-green"> shall at the expiration of </span>
+            <span class="u-blue-zig">that period</span>
+            <span class="u-green"> cease to be </span>
+            <span class="u-blue-zig">a Minister</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 112</div>
+</div>
+
+<!-- ==================== PAGE 113 ==================== -->
+<div class="pdf-page">
+
+    <div class="section-header">Article 78</div>
+    <p>
+        <span class="u-green">It shall be the duty of the </span>
+        <span class="u-blue-zig">Prime Minister</span>—
+    </p>
+    <ul>
+        <li>
+            <strong>a. Communication Duty:</strong>
+            <span class="u-green">to communicate to the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-blue-zig"> all decisions</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Council of Ministers</span>
+            <span class="u-green"> relating to the </span>
+            <span class="u-blue-zig">administration</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">affairs of the Union</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">proposals for legislation</span>;
+        </li>
+
+        <li>
+            <strong>b. Information Duty:</strong>
+            <span class="u-green">to furnish </span>
+            <span class="u-blue-zig">such information</span>
+            <span class="u-green"> relating to the </span>
+            <span class="u-blue-zig">administration</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">affairs of the Union</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">proposals for legislation</span>
+            <span class="u-green"> as the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> may call for </span>;
+            <span class="u-green"> and </span>
+        </li>
+
+        <li>
+            <strong>c. Submission Duty:</strong>
+            <span class="u-green">if the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> so requires, to submit for the </span>
+            <span class="u-blue-zig">consideration</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Council of Ministers</span>
+            <span class="u-blue-zig"> any matter</span>
+            <span class="u-green"> on which </span>
+            <span class="u-blue-zig">a decision</span>
+            <span class="u-green"> has been taken by </span>
+            <span class="u-blue-zig">a Minister</span>
+            <span class="u-green"> but which has not been considered by the </span>
+            <span class="u-blue-zig">Council</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <ul>
+                <li>
+                    <strong>d. Portfolio Allocation:</strong>
+                    <span class="u-blue-zig">Allocation of Portfolios</span>
+                </li>
+                <li>
+                    <strong>e. Presidential Link:</strong>
+                    <span class="u-blue-zig">Link between the President and the Cabinet</span>
+                </li>
+                <li>
+                    <strong>f. Parliamentary Leader:</strong>
+                    <span class="u-blue-zig">Leader of the Parliament</span>
+                </li>
+                <li>
+                    <strong>g. Dissolution Power:</strong>
+                    <span class="u-blue-zig">Power to get the Parliament Dissolved</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Position of the Prime Minister</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Executive Duality:</strong>
+            <span class="u-blue-zig">The President</span>
+            <span class="u-green"> is the </span>
+            <span class="u-blue-zig">de jure executive</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> is the </span>
+            <span class="u-blue-zig">de facto executive(real)</span>
+            <span class="u-green"> in the scheme of the </span>
+            <span class="u-blue-zig">parliamentary system of government</span>
+            <span class="u-green"> provided by the </span>
+            <span class="u-blue-zig">constitution</span>.
+            <span class="u-blue-zig">The general accepted theory</span>
+            <span class="u-green"> is that the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> is just like </span>
+            <span class="u-blue-zig">primus inter pares</span>
+            (<span class="u-blue-zig">first among equals</span>).
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>1. Concentration of Power:</strong>
+            <span class="u-green">This Constitution concentrates </span>
+            <span class="u-blue-zig">so much power and influence</span>
+            <span class="u-green"> in the hands of the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> that there is </span>
+            <span class="u-blue-zig">every danger</span>
+            <span class="u-green"> to apprehend that the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> may become </span>
+            <span class="u-blue-zig">a dictator</span>
+            <span class="u-green"> if he chooses to do so </span>.
+            (<span class="u-red-zig">K.T. Shah</span>)
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Council Dependency:</strong>
+            <span class="u-green">Since the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> stands at the head of the </span>
+            <span class="u-blue-zig">council of ministers</span>,
+            <span class="u-blue-zig">the other ministers</span>
+            <span class="u-green"> cannot function when the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> resigns or dies </span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>2. Vacancy Effect:</strong>
+            <span class="u-blue-zig">The resignation or death</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">an incumbent Prime Minister</span>
+            <span class="u-green"> automatically dissolves the </span>
+            <span class="u-blue-zig">council of ministers</span>
+            <span class="u-green"> and thereby generates </span>
+            <span class="u-blue-zig">a vacuum</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">4. Dissolution Advisory:</strong>
+            <span class="u-blue-zig">The Prime Minister</span>
+            <span class="u-green"> has the power to advise the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> in favour of </span>
+            <span class="u-blue-zig">a dissolution</span>
+            <span class="u-green"> of the </span>
+            <span class="u-red-zig">Lok Sabha</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>3. Member Dependency:</strong>
+            <span class="u-green">Means that the </span>
+            <span class="u-blue-zig">members</span>
+            <span class="u-green"> hold </span>
+            <span class="u-blue-zig">their seats</span>
+            <span class="u-green"> in the </span>
+            <span class="u-blue-zig">House</span>
+            <span class="u-green"> at the mercy of the </span>
+            <span class="u-blue-zig">Prime Minister</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">6. Lower House Leader:</strong>
+            <span class="u-blue-zig">The Prime Minister</span>
+            <span class="u-green"> is the </span>
+            <span class="u-blue-zig">leader of the Lower House</span>.
+            <span class="u-green">In this capacity, he enjoys the following </span>
+            <span class="u-blue-zig">powers</span> -
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>4. Session Advisory:</strong>
+            <span class="u-green">He advises the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> about </span>
+            <span class="u-blue-zig">summoning and proroguing</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">sessions of the Parliament</span>.
+        </li>
+
+        <li>
+            <strong>5. Dissolution Recommendation:</strong>
+            <span class="u-green">He can recommend the </span>
+            <span class="u-blue-zig">dissolution</span>
+            <span class="u-green"> of the </span>
+            <span class="u-red-zig">Lok Sabha</span>
+            <span class="u-green"> to </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> at </span>
+            <span class="u-blue-zig">any time</span>.
+        </li>
+
+        <li>
+            <strong>6. Policy Announcements:</strong>
+            <span class="u-green">He announces </span>
+            <span class="u-blue-zig">government policies</span>
+            <span class="u-green"> on the floor of the </span>
+            <span class="u-blue-zig">House</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">10. Chief Presidential Advisor:</strong>
+            <span class="u-blue-zig">The constitution</span>
+            <span class="u-green"> assigns to the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-blue-zig"> the role</span>
+            <span class="u-green"> of being the </span>
+            <span class="u-blue-zig">chief advisor</span>
+            <span class="u-green"> to the </span>
+            <span class="u-blue-zig">President</span>.
+            <span class="u-blue-zig">All the powers</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">President</span>,
+            <span class="u-green"> both the </span>
+            <span class="u-blue-zig">normal powers</span>
+            <span class="u-green"> and the </span>
+            <span class="u-blue-zig">emergency powers</span>,
+            <span class="u-green"> are really the </span>
+            <span class="u-blue-zig">powers of the Prime Minister</span>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>7. Binding Advice:</strong>
+            <span class="u-blue-zig">The President</span>
+            <span class="u-green"> is now bound to act according to the </span>
+            <span class="u-blue-zig">advice</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Council of Ministers</span>
+            <span class="u-green"> headed by the </span>
+            <span class="u-blue-zig">Prime Minister</span>.
+            {<span class="u-blue-zig">Article 74(1)</span>}
+        </li>
+    </ul>
+
+    <div class="page-number">Page 113</div>
+</div>
+
+<!-- ==================== PAGE 114 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. PM's Pivotal Role:</strong>
+            <span class="u-green">Thus, the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> plays </span>
+            <span class="u-blue-zig">a very significant and highly crucial role</span>
+            <span class="u-green"> in the </span>
+            <span class="u-blue-zig">politico-administrative system</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">country</span>.
+            <span class="u-green">If </span>
+            <span class="u-blue-zig">any functionary</span>
+            <span class="u-green"> under our constitution is to be compared with the </span>
+            <span class="u-blue-zig">US President</span>,
+            <span class="u-green">he is the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> and not the </span>
+            <span class="u-blue-zig">president of the Union</span>
+            (<span class="u-red-zig">Dr. B R Ambedkar</span>).
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Prime Minister</div>
+
+    <div style="display: flex; gap: 20px; justify-content: center; margin: 20px 0;">
+        <div class="image-placeholder" style="width: 183px; height: 163px;">
+            [Prime Minister Image 1]
+        </div>
+        <div class="image-placeholder" style="width: 198px; height: 163px;">
+            [Prime Minister Image 2]
+        </div>
+    </div>
+
+    <div class="main-topic-header">Appointment and Composition of Ministers</div>
+    <ul>
+        <li>
+            <strong>1. Appointment Authority:</strong>
+            <span class="u-blue-zig">Appointments</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Prime Minister</span>
+            <span class="u-green"> and the </span>
+            <span class="u-blue-zig">Council of Ministers</span>
+            <span class="u-green"> are done by the </span>
+            <span class="u-blue-zig">President of India</span>.
+        </li>
+
+        <li>
+            <strong>2. PM's Recommendation:</strong>
+            <span class="u-green">In the case of the </span>
+            <span class="u-blue-zig">appointment</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Council of Ministers</span>,
+            <span class="u-blue-zig">the Prime Minister's recommendation</span>
+            <span class="u-green"> holds </span>
+            <span class="u-blue-zig">greater value</span>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <ul>
+                <li>
+                    <strong>a. Parliamentary Membership:</strong>
+                    <span class="u-green">They are </span>
+                    <span class="u-blue-zig">members</span>
+                    <span class="u-green"> of </span>
+                    <span class="u-blue-zig">either of the Houses</span>
+                    <span class="u-green"> of the </span>
+                    <span class="u-blue-zig">Parliament</span>;
+                </li>
+
+                <li>
+                    <strong>b. Six-Month Membership:</strong>
+                    <span class="u-green">If they are not </span>
+                    <span class="u-blue-zig">members</span>
+                    <span class="u-green"> of the </span>
+                    <span class="u-blue-zig">Parliament Houses</span>,
+                    <span class="u-green"> then within a span of </span>
+                    <span class="u-blue-zig">six months</span>
+                    <span class="u-green"> he/she must become </span>
+                    <span class="u-blue-zig">a member</span>
+                    <span class="u-green"> by means of </span>
+                    <span class="u-blue-zig">nomination, or election</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong>3. Cabinet Ministers:</strong>
+            <span class="u-blue-zig">The Cabinet Ministers</span>
+        </li>
+
+        <li>
+            <strong>4. Ministers of State:</strong>
+            <span class="u-blue-zig">The Ministers of State</span> –
+            <span class="u-blue-zig">Independent and attached</span>
+            <span class="u-green"> to the </span>
+            <span class="u-blue-zig">Cabinet Ministers</span>
+        </li>
+
+        <li>
+            <strong>5. Deputy Ministers:</strong>
+            <span class="u-blue-zig">Deputy Ministers</span>
+            <ul>
+                <li>
+                    <strong>a. Meeting Restriction:</strong>
+                    <span class="u-blue-zig">These ministers</span>
+                    <span class="u-green"> are restricted from attending </span>
+                    <span class="u-blue-zig">Cabinet meetings</span>
+                    <span class="u-green"> unless </span>
+                    <span class="u-blue-zig">specially invited</span>.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>6. Parliamentary Secretaries:</strong>
+            <span class="u-blue-zig">The parliamentary secretaries</span>
+            <span class="u-green"> are considered to be </span>
+            <span class="u-blue-zig">another group of ministers</span>
+            <span class="u-green"> who are attached to the </span>
+            <span class="u-blue-zig">senior group of ministers</span>
+            <span class="u-green"> and function as </span>
+            <span class="u-blue-zig">an assistant to them</span>
+            <span class="u-green"> to discharge </span>
+            <span class="u-blue-zig">parliamentary duties</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Oaths of Office</div>
+    <ul>
+        <li>
+            <strong>1. Constitutional Allegiance:</strong>
+            <span class="u-green">To bear </span>
+            <span class="u-blue-zig">true faith and allegiance</span>
+            <span class="u-green"> to the </span>
+            <span class="u-blue-zig">Constitution of India</span>,
+        </li>
+
+        <li>
+            <strong>2. Sovereignty &amp; Integrity:</strong>
+            <span class="u-green">To uphold the </span>
+            <span class="u-blue-zig">sovereignty and integrity</span>
+            <span class="u-green"> of </span>
+            <span class="u-red-zig">India</span>,
+        </li>
+
+        <li>
+            <strong>3. Faithful Discharge:</strong>
+            <span class="u-green">To faithfully and conscientiously discharge the </span>
+            <span class="u-blue-zig">duties</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">his office</span>,
+            <span class="u-green"> and </span>
+        </li>
+
+        <li>
+            <strong>4. Impartial Justice:</strong>
+            <span class="u-green">To do right to </span>
+            <span class="u-blue-zig">all manner of people</span>
+            <span class="u-green"> in accordance with the </span>
+            <span class="u-blue-zig">Constitution</span>,
+            <span class="u-green"> and the </span>
+            <span class="u-blue-zig">law</span>,
+            <span class="u-green"> without </span>
+            <span class="u-blue-zig">fear or favor</span>,
+            <span class="u-blue-zig">affection or ill will</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 114</div>
+</div>
+
+<!-- ==================== PAGE 115 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Sumptuary Allowance:</strong>
+            <span class="u-blue-zig">The salary</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">a minister</span>
+            <span class="u-green"> is the same as </span>
+            <span class="u-blue-zig">a member of the Parliament</span>
+            <span class="u-green"> but the </span>
+            <span class="u-blue-zig">sumptuary allowance</span>
+            <span class="u-green"> is differ for the </span>
+            <span class="u-blue-zig">Prime Minister</span>,
+            <span class="u-blue-zig">the Cabinet Minister</span>,
+            <span class="u-green"> for </span>
+            <span class="u-blue-zig">a Minister of State</span>
+            <span class="u-green"> and for </span>
+            <span class="u-blue-zig">a Deputy Minister</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Responsibility</div>
+    <ul>
+        <li>
+            <strong>1. Collective Responsibility:</strong>
+            <span class="u-blue-zig">Collective Responsibility</span>
+            <span class="u-green"> refers to </span>
+            <span class="u-blue-zig">ministers</span>
+            <span class="u-green"> owning </span>
+            <span class="u-blue-zig">joint responsibility</span>
+            <span class="u-green"> for their actions to the </span>
+            <span class="u-red-zig">House of People</span>,
+            <span class="u-blue-zig">the Lok Sabha</span>.
+            <ul>
+                <li>
+                    <strong>a. Cabinet Binding:</strong>
+                    <span class="u-blue-zig">The Cabinet Ministers</span>
+                    <span class="u-green"> are bound by the </span>
+                    <span class="u-blue-zig">Cabinet's decision</span>
+                    <span class="u-green"> irrespective of whether the </span>
+                    <span class="u-blue-zig">former</span>
+                    <span class="u-green"> accept it or not </span>.
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <strong>2. Individual Responsibility:</strong>
+            <span class="u-blue-zig">Individual Responsibility</span>
+            <span class="u-green"> means the </span>
+            <span class="u-blue-zig">ministers</span>
+            <span class="u-green"> holding office on the wish of the </span>
+            <span class="u-blue-zig">President</span>,
+            <span class="u-green">they can be removed by the </span>
+            <span class="u-blue-zig">President</span>
+            <span class="u-green"> whenever he feels the need </span>.
+        </li>
+
+        <li>
+            <strong>3. No Legal Responsibility:</strong>
+            <span class="u-blue-zig">The ministers</span>
+            <span class="u-green"> are not vested with </span>
+            <span class="u-blue-zig">any kind of Legal Responsibility</span>.
+            <ul>
+                <li>
+                    <strong>a. Judicial Review Bar:</strong>
+                    <span class="u-blue-zig">The courts</span>
+                    <span class="u-green"> are also barred from reviewing the </span>
+                    <span class="u-blue-zig">advice</span>
+                    <span class="u-green"> given by the </span>
+                    <span class="u-blue-zig">Council of Ministers</span>
+                    <span class="u-green"> to the </span>
+                    <span class="u-blue-zig">President</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">Differences B/W the Council of Ministers and Cabinet</div>
+    <ul>
+        <li>
+            <strong>1. Wider Body:</strong>
+            <span class="u-blue-zig">The Council of Ministers</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a much wider body</span>
+            <span class="u-green"> in comparison to the </span>
+            <span class="u-blue-zig">Cabinet</span>.
+        </li>
+
+        <li>
+            <strong>2. Cabinet Subset:</strong>
+            <span class="u-blue-zig">The Cabinet</span>
+            <span class="u-green"> is a part of the </span>
+            <span class="u-blue-zig">Council of Ministers</span>.
+        </li>
+
+        <li>
+            <strong>3. Collective Functions:</strong>
+            <span class="u-blue-zig">The Cabinet</span>
+            <span class="u-green"> is vested with </span>
+            <span class="u-blue-zig">collective functions</span>.
+        </li>
+
+        <li>
+            <strong>4. Decision-Implementation Split:</strong>
+            <span class="u-blue-zig">The Cabinet</span>
+            <span class="u-green"> makes </span>
+            <span class="u-blue-zig">decisions</span>,
+            <span class="u-blue-zig">the Council of Ministers</span>
+            <span class="u-green"> is responsible for implementing the </span>
+            <span class="u-blue-zig">same</span>.
+        </li>
+
+        <li>
+            <strong>5. Accountability Enforcement:</strong>
+            <span class="u-blue-zig">The Council of Ministers</span>
+            <span class="u-green"> is collectively responsible towards the </span>
+            <span class="u-red-zig">Lok Sabha</span>,
+            <span class="u-blue-zig">the Cabinet</span>
+            <span class="u-green"> is responsible for enforcing </span>
+            <span class="u-blue-zig">such responsibility</span>
+            <span class="u-green"> on the </span>
+            <span class="u-blue-zig">Council</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Collective Responsibility is a Myth in Indian Cabinet System.</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Constitutional Convention:</strong>
+            <span class="u-blue-zig">Collective responsibility</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a constitutional convention</span>
+            <span class="u-green"> in </span>
+            <span class="u-blue-zig">Parliamentary systems</span>
+            <span class="u-green"> which means </span>
+            <span class="u-blue-zig">members of the cabinet</span>
+            <span class="u-green"> must publicly support </span>
+            <span class="u-blue-zig">all governmental decisions</span>
+            <span class="u-green"> made in </span>
+            <span class="u-blue-zig">Cabinet</span>,
+            <span class="u-green"> even if they do not privately agree with them </span>.
+            <span class="u-blue-zig">Article 75(3)</span>
+            <span class="u-green"> states that the </span>
+            <span class="u-blue-zig">Council of Ministers</span>
+            <span class="u-green"> shall be collectively responsible to the </span>
+            <span class="u-red-zig">House of the People</span>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>1. Cabinet Solidarity:</strong>
+            <span class="u-blue-zig">Solidarity</span>
+            <span class="u-green"> within the </span>
+            <span class="u-blue-zig">cabinet</span>
+            <span class="u-green"> can strengthen the </span>
+            <span class="u-blue-zig">Prime minister</span>
+            <span class="u-green"> and accelerate </span>
+            <span class="u-blue-zig">policy decisions and interests</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">that party</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Coalition Challenge:</strong>
+            <span class="u-green">Since Independence</span>,
+            <span class="u-blue-zig">several Prime ministers</span>
+            <span class="u-green"> had difficulty in enforcing </span>
+            <span class="u-blue-zig">collective responsibility</span>
+            <span class="u-green"> and becomes </span>
+            <span class="u-blue-zig">a bigger challenge</span>
+            <span class="u-green"> when there is </span>
+            <span class="u-blue-zig">a coalition government</span>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>2. Public Criticism:</strong>
+            <span class="u-green">Till now </span>
+            <span class="u-blue-zig">several ministers</span>
+            <span class="u-green"> publicly criticized the </span>
+            <span class="u-blue-zig">government decisions</span>
+            <span class="u-green"> and violated the </span>
+            <span class="u-blue-zig">principle of collective responsibility</span>.
+        </li>
+
+        <li>
+            <strong>3. Cabinet Resignations:</strong>
+            <span class="u-green">There have been </span>
+            <span class="u-blue-zig">a number of resignations</span>
+            <span class="u-green"> in the past because of the </span>
+            <span class="u-blue-zig">differences</span>
+            <span class="u-green"> with the </span>
+            <span class="u-blue-zig">Cabinet</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">4. Governance Dysfunction:</strong>
+            <span class="u-blue-zig">The inability</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Government</span>
+            <span class="u-green"> to function on the basis of </span>
+            <span class="u-blue-zig">collective responsibility</span>
+            <span class="u-green"> will be </span>
+            <span class="u-blue-zig">an important cause</span>
+            <span class="u-green"> of </span> -
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>4. Executive Contradictions:</strong>
+            <span class="u-blue-zig">Contradictions and disagreements</span>
+            <span class="u-green"> between </span>
+            <span class="u-blue-zig">cabinet members</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">executive branch</span>.
+        </li>
+
+        <li>
+            <strong>5. Team Benefit Loss:</strong>
+            <span class="u-blue-zig">Loss of practical benefit</span>
+            <span class="u-green"> of being part of </span>
+            <span class="u-blue-zig">a team</span>.
+        </li>
+
+        <li>
+            <strong>6. Loyalty Erosion:</strong>
+            <span class="u-blue-zig">Loss of party loyalty</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">personal loyalty</span>
+            <span class="u-green"> to the </span>
+            <span class="u-blue-zig">Prime minister</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 115</div>
+</div>
+
+<!-- ==================== PAGE 116 ==================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>7. Development Delays:</strong>
+            <span class="u-blue-zig">Heavy cost and time-escalation</span>
+            <span class="u-green"> in implementing </span>
+            <span class="u-blue-zig">development projects</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Fundamental Principle:</strong>
+            <span class="u-blue-zig">The principle</span>
+            <span class="u-green"> of </span>
+            <span class="u-blue-zig">Collective Responsibility</span>
+            <span class="u-green"> may be regarded as </span>
+            <span class="u-blue-zig">fundamental</span>
+            <span class="u-green"> to the working of the </span>
+            <span class="u-blue-zig">Parliamentary Government</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Kitchen Cabinet</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">2. Inner Cabinet:</strong>
+            <span class="u-blue-zig">A smaller body of ministers</span>
+            <span class="u-green"> called the </span>
+            <span class="u-blue-zig">'inner Cabinet' or Kitchen Cabinet</span>,
+            <span class="u-green"> has become the </span>
+            <span class="u-blue-zig">real centre of power</span>.
+            <span class="u-green">This informal body consists consists of the </span>
+            <span class="u-blue-zig">prime minister</span>
+            <span class="u-green"> and </span>
+            <span class="u-blue-zig">two to four influential colleagues</span>
+            <span class="u-green"> in whom he has </span>
+            <span class="u-blue-zig">faith</span>
+            <span class="u-green"> and with whom he can discuss </span>
+            <span class="u-blue-zig">every problem</span>.
+        </li>
+
+        <li>
+            <strong style="color: var(--primary-red);">3. Advisory Composition:</strong>
+            <span class="u-green">It advises the </span>
+            <span class="u-blue-zig">prime minister</span>
+            <span class="u-green"> on </span>
+            <span class="u-blue-zig">important political and administrative issues</span>
+            <span class="u-green"> and assists him in making </span>
+            <span class="u-blue-zig">crucial decisions</span>.
+            <span class="u-green">It is composed of </span>
+            <span class="u-blue-zig">not only cabinet ministers</span>
+            <span class="u-green"> but also </span>
+            <span class="u-blue-zig">outsiders</span>
+            <span class="u-green"> like </span>
+            <span class="u-blue-zig">friends and family members</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">prime minister</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Deputy Prime Minister</div>
+    <ul>
+        <li>
+            <strong style="color: var(--primary-red);">1. Non-Constitutional Office:</strong>
+            <span class="u-blue-zig">The deputy prime minister</span>
+            <span class="u-green"> is not technically </span>
+            <span class="u-blue-zig">a constitutional office</span>,
+            <span class="u-green">it seldom carries </span>
+            <span class="u-blue-zig">any specific powers</span>.
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <strong>1. Presidential Appointment:</strong>
+            <span class="u-blue-zig">The Deputy Prime Minister</span>
+            <span class="u-green"> is appointed by the </span>
+            <span class="u-blue-zig">President</span>.
+        </li>
+
+        <li>
+            <strong>2. PM's Nomination:</strong>
+            <span class="u-blue-zig">The Deputy Prime minister candidate</span>
+            <span class="u-green"> is nominated by the </span>
+            <span class="u-blue-zig">Prime Minister of India</span>.
+            <span class="u-blue-zig">The deputy prime minister of India</span>
+            <span class="u-green"> is </span>
+            <span class="u-blue-zig">a member</span>
+            <span class="u-green"> of the </span>
+            <span class="u-blue-zig">Union council of ministers</span>.
+            <span class="u-green">This post was inaugurated by </span>
+            <span class="u-red-zig">Vallabhbhai Patel</span>
+            <span class="u-green"> on </span>
+            <span class="u-blue-zig">15 August 1947</span>.
+        </li>
+
+        <li>
+            <strong>3. Last Deputy PM:</strong>
+            <span class="u-blue-zig">The last Deputy prime minister</span>
+            <span class="u-green"> was </span>
+            <span class="u-red-zig">L. K. Advani</span>.
+        </li>
+
+        <li>
+            <strong>4. First Among Equals:</strong>
+            <span class="u-blue-zig">The deputy prime minister</span>
+            <span class="u-green"> is treated as the </span>
+            <span class="u-blue-zig">"first among equals"</span>
+            <span class="u-green"> in the </span>
+            <span class="u-blue-zig">cabinet</span>.
+        </li>
+    </ul>
+
+    <ul>
+        <li>
+            <ul>
+                <li>
+                    <strong>a. Tenure List:</strong>
+                    <span class="u-red-zig">Sardar Patel</span>:
+                    <span class="u-blue-zig">1947–1950</span>
+                </li>
+                <li>
+                    <strong>b. Tenure List:</strong>
+                    <span class="u-red-zig">Morarji Desai</span>:
+                    <span class="u-blue-zig">1967–1969</span>
+                </li>
+                <li>
+                    <strong>c. Tenure List:</strong>
+                    <span class="u-red-zig">Charan Singh</span>
+                    <span class="u-green"> and </span>
+                    <span class="u-red-zig">Jagjivan Ram</span>
+                    (<span class="u-blue-zig">jointly</span>):
+                    <span class="u-blue-zig">1979–1979</span>
+                </li>
+                <li>
+                    <strong>d. Tenure List:</strong>
+                    <span class="u-red-zig">Y. B. Chavan</span>:
+                    <span class="u-blue-zig">1979–1980</span>
+                </li>
+                <li>
+                    <strong>e. Tenure List:</strong>
+                    <span class="u-red-zig">Devi Lal</span>:
+                    <span class="u-blue-zig">1989–1990</span>
+                </li>
+                <li>
+                    <strong>f. Tenure List:</strong>
+                    <span class="u-red-zig">Devi Lal</span>:
+                    <span class="u-blue-zig">1990–1991</span>
+                </li>
+                <li>
+                    <strong>g. Tenure List:</strong>
+                    <span class="u-red-zig">LK. Advani</span>:
+                    <span class="u-blue-zig">2002–2004</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 116</div>
+</div>
+
+</body>
+</html>

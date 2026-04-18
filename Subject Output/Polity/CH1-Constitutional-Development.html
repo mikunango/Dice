@@ -1,0 +1,3821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CH1 - Constitutional Development | Indian Polity</title>
+    <style>
+:root {
+    --primary-blue: #1a4a7c;
+    --primary-red: #b22222;
+    --secondary-blue: #eef4fb;
+    --secondary-red: #fdeaea;
+    --text-gray: #333;
+    --border-gray: #ddd;
+    --page-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+body {
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+.pdf-page {
+    background: white;
+    width: 100%;
+    max-width: 850px;
+    padding: 60px 80px;
+    box-shadow: var(--page-shadow);
+    border-top: 8px solid var(--primary-red);
+    min-height: 1100px;
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 20px;
+}
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--secondary-red);
+    padding-bottom: 20px;
+}
+.subject-tag {
+    background: var(--primary-red);
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    display: inline-block;
+}
+h1 { color: var(--primary-red); margin: 15px 0 5px 0; font-size: 1.8rem; }
+.subtitle { color: #666; font-style: italic; font-size: 1.1rem; }
+.main-topic-header {
+    background: var(--secondary-red);
+    color: var(--primary-red);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-red);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+.section-header {
+    background: var(--secondary-blue);
+    color: var(--primary-blue);
+    padding: 10px 15px;
+    border-left: 5px solid var(--primary-blue);
+    font-weight: bold;
+    margin: 25px 0 15px 0;
+    font-size: 1.1rem;
+}
+ul { padding-left: 20px; margin-bottom: 15px; list-style-type: none; }
+li { margin-bottom: 8px; font-weight: normal; }
+ul ul { margin-top: 5px; list-style-type: circle; }
+ul ul ul { list-style-type: square; }
+.page-number {
+    position: absolute; bottom: 20px; right: 40px;
+    font-weight: bold; color: var(--primary-red);
+}
+/* --- BOX CONTENT STYLES --- */
+.info-box {
+    background: var(--secondary-blue);
+    border: 1.5px solid var(--primary-blue);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-red {
+    background: var(--secondary-red);
+    border: 1.5px solid var(--primary-red);
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 20px 0;
+    font-size: 0.95rem;
+}
+.info-box-header {
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.info-box-red .info-box-header {
+    color: var(--primary-red);
+}
+.quote-box {
+    background: #f9f9f9;
+    border-left: 4px solid var(--primary-blue);
+    padding: 12px 18px;
+    margin: 18px 0;
+    font-style: italic;
+    font-size: 0.93rem;
+    color: #444;
+}
+.quote-box .quote-author {
+    font-style: normal;
+    font-weight: bold;
+    display: block;
+    margin-top: 6px;
+    color: var(--primary-red);
+}
+.pyq-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 0.92rem;
+}
+.pyq-table thead th {
+    background: var(--primary-blue);
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.pyq-table tbody td {
+    border: 1px solid var(--border-gray);
+    padding: 10px 14px;
+    vertical-align: top;
+}
+.pyq-table tbody td:last-child {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-red);
+    white-space: nowrap;
+    width: 60px;
+}
+.pyq-table tbody tr:nth-child(even) {
+    background: #f7fafd;
+}
+.image-placeholder {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed #ccc;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    color: #999;
+    font-size: 0.9rem;
+    text-align: center;
+}
+.u-green {
+    text-decoration: underline;
+    text-decoration-color: #00FF00;
+    text-decoration-style: solid;
+}
+.u-red-zig {
+    text-decoration: underline;
+    text-decoration-color: #FF0000;
+    text-decoration-style: wavy;
+}
+.u-blue-zig {
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,255,255);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 1px;
+}
+h1, h2, h3, h4, h5, h6, .subject-tag, .subtitle,
+.main-topic-header, .section-header, li strong, li b {
+    text-decoration: none !important;
+    font-weight: bold;
+}
+@media print {
+    body { background: none; padding: 0; }
+    .pdf-page { box-shadow: none; margin: 0; border: none; page-break-after: always; }
+}
+    </style>
+</head>
+<body>
+<!-- PAGE 2 -->
+<div class="pdf-page">
+    <header>
+        <span class="subject-tag">POLITY</span>
+        <h1>Constitutional Development</h1>
+    </header>
+    <div class="main-topic-header">The Regulating Act, 1773</div>
+
+    <p>
+        <span class="u-blue-zig">The Regulating Act</span>
+        <span class="u-green">of </span><span class="u-red-zig">1773</span>
+        <span class="u-green">was the</span>
+        <span class="u-blue-zig">first direct interference</span>
+        <span class="u-blue-zig">of the Home Government</span>
+        <span class="u-blue-zig">in the Company's affairs</span>
+        <span class="u-green">which brought the</span>
+        <span class="u-blue-zig">major changes</span>
+        <span class="u-blue-zig">in the Company's administration</span>.
+    </p>
+
+    <div class="section-header">Need</div>
+
+    <p>
+        <span class="u-green">After the</span>
+        <span class="u-blue-zig">Treaty of Allahabad</span>
+        <span class="u-green">in </span><span class="u-red-zig">1765</span>
+        <span class="u-blue-zig">Diarchy</span>
+        <span class="u-green">was imposed in </span>
+        <span class="u-red-zig">Bengal</span>
+        <span class="u-green">by </span><span class="u-red-zig">Robert Clive</span>.
+        <span class="u-blue-zig">This system</span>
+        <span class="u-green">created </span>
+        <span class="u-blue-zig">so many complication</span>
+        <span class="u-blue-zig">in the administration</span>
+        <span class="u-green">of </span><span class="u-red-zig">Bengal</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Nizamat Rights:</strong>
+            <span class="u-blue-zig">Nizamat rights</span>
+            <span class="u-green">were given to </span>
+            <span class="u-blue-zig">Company</span>.
+        </li>
+        <li><strong>2. Nawab as Agent:</strong>
+            <span class="u-blue-zig">Nawab</span>
+            <span class="u-green">acted as </span>
+            <span class="u-blue-zig">an agent</span>
+            <span class="u-blue-zig">of the company</span>.
+        </li>
+        <li><strong>3. Financial Crisis:</strong>
+            <span class="u-green">Due to </span>
+            <span class="u-blue-zig">financial crisis</span>
+            <span class="u-blue-zig">the company</span>
+            <span class="u-green">had demanded </span>
+            <span class="u-blue-zig">a loan</span>
+            <span class="u-blue-zig">of one million pounds</span>
+            <span class="u-green">from the</span>
+            <span class="u-blue-zig">Home Government</span>
+            <span class="u-green">in the year </span><span class="u-red-zig">1772</span>.
+        </li>
+        <li><strong>4. Ruling Body:</strong>
+            <span class="u-blue-zig">The Company</span>
+            <span class="u-green">acted like </span>
+            <span class="u-blue-zig">a ruling body</span>.
+        </li>
+        <li><strong>5. Severe Famine:</strong>
+            <span class="u-blue-zig">People of </span><span class="u-red-zig">Bengal</span>
+            <span class="u-green">were perished due to </span>
+            <span class="u-blue-zig">severe famine</span>.
+        </li>
+        <li><strong>6. Corruption:</strong>
+            <span class="u-blue-zig">Employees of Company</span>
+            <span class="u-green">involved in </span>
+            <span class="u-blue-zig">corruption</span>.
+        </li>
+        <li><strong>7. No Centralized Authority:</strong>
+            <span class="u-green">There was </span>
+            <span class="u-blue-zig">no centralized authority</span>
+            <span class="u-green">to control the</span>
+            <span class="u-blue-zig">presidencies</span>
+            <span class="u-green">of </span><span class="u-red-zig">Bengal</span>,
+            <span class="u-red-zig">Madras</span>,
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Bombay</span>.
+        </li>
+    </ul>
+
+    <p>
+        <span class="u-blue-zig">The British Parliament</span>
+        <span class="u-green">passed </span>
+        <span class="u-blue-zig">two bills</span>
+        <span class="u-green">presented by </span>
+        <span class="u-blue-zig">Prime Minister</span>
+        <span class="u-red-zig">Lord North</span>
+        <span class="u-green">in </span><span class="u-red-zig">1772</span>
+        <span class="u-green">after the</span>
+        <span class="u-blue-zig">recommendation</span>
+        <span class="u-blue-zig">of secret committee</span>.
+        <span class="u-blue-zig">The second bill</span>
+        <span class="u-green">was known as </span>
+        <span class="u-blue-zig">Regulating Act</span>
+        <span class="u-red-zig">1773</span>.
+    </p>
+
+    <div class="section-header">Objectives</div>
+
+    <ul>
+        <li><strong>1. Control Company Affairs:</strong>
+            <span class="u-green">To control and regulate the</span>
+            <span class="u-blue-zig">affairs of the Company</span>
+        </li>
+        <li><strong>2. Central Administration:</strong>
+            <span class="u-green">To provide </span>
+            <span class="u-blue-zig">a Central Administration System</span>
+        </li>
+        <li><strong>3. Control Corruption:</strong>
+            <span class="u-green">To control the</span>
+            <span class="u-blue-zig">corruption practices</span>
+            <span class="u-green">by</span>
+            <ul>
+                <li><strong>a. Private Trade Ban:</strong>
+                    <span class="u-green">Prohibiting the</span>
+                    <span class="u-blue-zig">servants of the company</span>
+                    <span class="u-green">from engaging in </span>
+                    <span class="u-blue-zig">private trade</span>
+                </li>
+                <li><strong>b. Bribes Ban:</strong>
+                    <span class="u-green">Prohibiting the</span>
+                    <span class="u-blue-zig">servants of the company</span>
+                    <span class="u-green">from accepting </span>
+                    <span class="u-blue-zig">bribes, gifts,</span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">presents from the people</span>
+                </li>
+            </ul>
+        </li>
+        <li><strong>4. Diarchy Issues:</strong>
+            <span class="u-green">To sort out the</span>
+            <span class="u-blue-zig">issues of the Diarchy</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 2</div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="pdf-page">
+    <div class="section-header">Features</div>
+
+    <ul>
+        <li><strong>1. Governor-General Office:</strong>
+            <span class="u-blue-zig">The office</span>
+            <span class="u-blue-zig">of the Governor of Bengal</span>
+            <span class="u-green">was re-designated as the</span>
+            <span class="u-blue-zig">Office of the Governor-General</span>
+            <span class="u-green">of </span><span class="u-red-zig">Bengal</span>.
+            <ul>
+                <li><strong>a. First Governor-General:</strong>
+                    <span class="u-blue-zig">Lord </span><span class="u-red-zig">Warren Hastings</span>
+                    <span class="u-green">was the</span>
+                    <span class="u-blue-zig">first Governor - General</span>
+                    <span class="u-green">of </span><span class="u-red-zig">Bengal</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>2. Executive Council:</strong>
+            <span class="u-blue-zig">The Executive Council</span>
+            <span class="u-blue-zig">of four members</span>
+            <span class="u-green">was created to assist the</span>
+            <span class="u-blue-zig">Governor-General</span>.
+            <ul>
+                <li><strong>a. Council Members:</strong>
+                    <span class="u-red-zig">John Clavering</span>,
+                    <span class="u-red-zig">George Monson</span>,
+                    <span class="u-red-zig">Richard Barwell</span>
+                    <span class="u-green">&amp; </span>
+                    <span class="u-red-zig">Philip Francis</span>
+                    <span class="u-green">were the</span>
+                    <span class="u-blue-zig">members</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sub-points">
+        <li><strong>a. Tenure:</strong>
+            <span class="u-blue-zig">The tenure</span>
+            <span class="u-blue-zig">of the members</span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">five years</span>.
+        </li>
+        <li><strong>b. Crown Appointment:</strong>
+            <span class="u-blue-zig">Crown</span>
+            <span class="u-green">had right to </span>
+            <span class="u-blue-zig">appoint them</span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">remove them</span>.
+        </li>
+    </ul>
+    <ul>
+        <li><strong>3. Directors' Term:</strong>
+            <span class="u-blue-zig">The term of directors</span>
+            <span class="u-green">was increased from </span>
+            <span class="u-blue-zig">one year to four years</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">provision was made</span>
+            <span class="u-green">for electing </span>
+            <span class="u-blue-zig">one fourth of the directors</span>
+            <span class="u-blue-zig">every year in rotation</span>.
+        </li>
+        <li><strong>4. Voting Power:</strong>
+            <span class="u-blue-zig">Voting power</span>
+            <span class="u-blue-zig">of the shareholders</span>
+            <span class="u-green">were restricted to </span>
+            <span class="u-blue-zig">those who held stock</span>
+            <span class="u-blue-zig">worth 1000 Pounds</span>
+            <span class="u-green">or more in the</span>
+            <span class="u-blue-zig">company</span>.
+        </li>
+        <li><strong>5. Subordination of Governors:</strong>
+            <span class="u-blue-zig">The Governors</span>
+            <span class="u-green">of </span><span class="u-red-zig">Bombay</span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Madras</span>
+            <span class="u-green">were made subordinate to the</span>
+            <span class="u-blue-zig">Governor General</span>
+            <span class="u-green">of </span><span class="u-red-zig">Bengal</span>.
+        </li>
+        <li><strong>6. Supreme Court:</strong>
+            <span class="u-green">In the year </span><span class="u-red-zig">1774</span>,
+            <span class="u-blue-zig">Supreme Court</span>
+            <span class="u-green">was established at </span>
+            <span class="u-red-zig">Fort William</span>
+            <span class="u-red-zig">Calcutta</span>
+            <span class="u-green">with </span>
+            <span class="u-blue-zig">one Chief Justice</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">three other judges</span>.
+            <ul>
+                <li><strong>a. First Chief Justice:</strong>
+                    <span class="u-blue-zig">The first Chief Justice</span>
+                    <span class="u-blue-zig">of the court</span>
+                    <span class="u-green">was </span>
+                    <span class="u-blue-zig">Sir </span><span class="u-red-zig">Elijah Impey</span>.
+                </li>
+                <li><strong>b. Three Judges:</strong>
+                    <span class="u-blue-zig">Three judges</span>
+                    <span class="u-green">were </span>
+                    <span class="u-red-zig">John Hyde</span>,
+                    <span class="u-red-zig">Robert Chambers</span>
+                    <span class="u-green">&amp; </span>
+                    <span class="u-red-zig">Stephen Caesar</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sub-points">
+        <li><strong>a. Authority of Judges:</strong>
+            <span class="u-blue-zig">The authority</span>
+            <span class="u-blue-zig">of these judges</span>
+            <span class="u-green">was like those of </span>
+            <span class="u-blue-zig">King's Bench</span>
+            <span class="u-green">in </span><span class="u-red-zig">England</span>.
+        </li>
+        <li><strong>b. Salary Fixed:</strong>
+            <span class="u-blue-zig">The salary</span>
+            <span class="u-blue-zig">of the Chief Justice</span>
+            <span class="u-green">was fixed at </span>
+            <span class="u-blue-zig">8000 sterling a year</span>,
+            <span class="u-green">and of </span>
+            <span class="u-blue-zig">three judges</span>
+            <span class="u-blue-zig">6000 sterling each</span>.
+        </li>
+    </ul>
+    <ul>
+        <li><strong>7. Revenue Issues:</strong>
+            <span class="u-blue-zig">All the revenue</span>
+            <span class="u-blue-zig">related issues</span>
+            <span class="u-green">were presented before the</span>
+            <span class="u-blue-zig">revenue department</span>
+            <span class="u-blue-zig">of home government</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Impacts</div>
+
+    <ul>
+        <li><strong>1. Judiciary Structure:</strong>
+            <span class="u-green">It brought </span>
+            <span class="u-blue-zig">a significant changes</span>
+            <span class="u-blue-zig">in the structure</span>
+            <span class="u-blue-zig">of judiciary in India</span>.
+        </li>
+        <li><strong>2. Court of Directors:</strong>
+            <span class="u-green">It changed the</span>
+            <span class="u-blue-zig">Constitution</span>
+            <span class="u-blue-zig">of Court of Directors</span>.
+        </li>
+        <li><strong>3. Company Functions:</strong>
+            <span class="u-blue-zig">The political</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">administrative functions</span>
+            <span class="u-blue-zig">of the company</span>
+            <span class="u-green">were recognized</span>.
+        </li>
+        <li><strong>4. Central Administration:</strong>
+            <span class="u-blue-zig">The act</span>
+            <span class="u-green">laid down the</span>
+            <span class="u-blue-zig">foundation</span>
+            <span class="u-blue-zig">of the Central Administration</span>
+            <span class="u-blue-zig">in the country</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Demerits</div>
+
+    <ul>
+        <li><strong>1. No Veto Power:</strong>
+            <span class="u-blue-zig">The Governor-General</span>
+            <span class="u-green">had </span>
+            <span class="u-blue-zig">no veto power</span>.
+        </li>
+        <li><strong>2. Answerable to Directors:</strong>
+            <span class="u-blue-zig">The Governor-General</span>
+            <span class="u-green">was made answerable to the</span>
+            <span class="u-blue-zig">Directors</span>
+            <span class="u-green">and was held responsible for </span>
+            <span class="u-blue-zig">all the acts</span>
+            <span class="u-green">related to the</span>
+            <span class="u-blue-zig">administration in India</span>.
+        </li>
+        <li><strong>3. Puppet of Council:</strong>
+            <span class="u-blue-zig">The council Governor-General</span>
+            <span class="u-green">became the</span>
+            <span class="u-blue-zig">puppet of the council</span>.
+        </li>
+        <li><strong>4. Jurisdictional Confusion:</strong>
+            <span class="u-green">There was </span>
+            <span class="u-blue-zig">a lot of confusion</span>
+            <span class="u-green">between the</span>
+            <span class="u-blue-zig">jurisdiction</span>
+            <span class="u-blue-zig">of the Supreme Court</span>
+            <span class="u-green">and that of the</span>
+            <span class="u-blue-zig">Council</span>
+            <span class="u-blue-zig">of the Governor-General</span>.
+        </li>
+        <li><strong>5. Failed Corruption Control:</strong>
+            <span class="u-green">It was failed to control the</span>
+            <span class="u-blue-zig">corruption</span>.
+        </li>
+        <li><strong>6. Indian Natives Ignored:</strong>
+            <span class="u-blue-zig">The act</span>
+            <span class="u-green">failed to address the</span>
+            <span class="u-blue-zig">concerns</span>
+            <span class="u-blue-zig">of the Indian natives</span>.
+        </li>
+    </ul>
+
+    <div class="page-number">Page 3</div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong>7. Presidency Confusion:</strong>
+            <span class="u-green">There was </span>
+            <span class="u-blue-zig">a lot of confusion</span>
+            <span class="u-blue-zig">in relationship</span>
+            <span class="u-green">between the</span>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Governors of Presidency</span>.
+            <ul>
+                <li><strong>a. Anglo-Maratha War:</strong>
+                    <span class="u-green">Reflected at the time of </span>
+                    <span class="u-blue-zig">first Anglo-Maratha war</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>8. Administration Issues:</strong>
+            <span class="u-blue-zig">Serious issues</span>
+            <span class="u-green">with the</span>
+            <span class="u-blue-zig">administration</span>
+            <ul>
+                <li><strong>a. Nand Kumar Case:</strong>
+                    <span class="u-red-zig">Nand Kumar</span>
+                    <span class="u-blue-zig">case</span>
+                    <span class="u-green">in which </span>
+                    <span class="u-blue-zig">he was hanged</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">Reforms</div>
+    <div class="main-topic-header">The Act of Settlement of 1781</div>
+
+    <ul>
+        <li><strong>1. Declaratory Act:</strong>
+            <span class="u-green">Also known as </span>
+            <span class="u-blue-zig">Declaratory Act</span>,
+            <span class="u-red-zig">1781</span>.
+        </li>
+        <li><strong>2. Touchet Committee:</strong>
+            <span class="u-blue-zig">Touchet Committee</span>
+            <span class="u-green">was setup to </span>
+            <span class="u-blue-zig">enquiry the administration</span>
+            <span class="u-blue-zig">of Bengal Presidency</span>
+            <span class="u-green">in </span><span class="u-red-zig">1777</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Features</div>
+
+    <ul class="sub-points">
+        <li><strong>1. Limited Jurisdiction:</strong>
+            <span class="u-blue-zig">The Supreme court's</span>
+            <span class="u-blue-zig">jurisdiction</span>
+            <span class="u-green">became limited to only </span>
+            <span class="u-red-zig">Calcutta</span>.
+        </li>
+        <li><strong>2. Company Servants Exempted:</strong>
+            <span class="u-blue-zig">The servants</span>
+            <span class="u-blue-zig">of the company</span>
+            <span class="u-green">were exempted from the</span>
+            <span class="u-blue-zig">jurisdiction</span>
+            <span class="u-blue-zig">of the Supreme Court</span>.
+        </li>
+        <li><strong>3. No Revenue Jurisdiction:</strong>
+            <span class="u-blue-zig">The Supreme court</span>
+            <span class="u-green">had </span>
+            <span class="u-blue-zig">no jurisdiction</span>
+            <span class="u-blue-zig">in the revenue matters</span>.
+        </li>
+        <li><strong>4. Appellate Jurisdiction:</strong>
+            <span class="u-blue-zig">The Appellate jurisdiction</span>
+            <span class="u-green">shifted in the hands of the</span>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Council</span>.
+        </li>
+        <li><strong>5. Personal Law Applied:</strong>
+            <span class="u-blue-zig">The Mohammedan law</span>
+            <span class="u-green">should be applied on the</span>
+            <span class="u-blue-zig">Muslims</span>
+            <span class="u-green">and the</span>
+            <span class="u-blue-zig">Hindu law</span>
+            <span class="u-green">applied to </span>
+            <span class="u-blue-zig">Hindus</span>.
+        </li>
+        <li><strong>6. Separation Attempt:</strong>
+            <span class="u-green">It was the</span>
+            <span class="u-blue-zig">first attempt</span>
+            <span class="u-green">to separate the</span>
+            <span class="u-blue-zig">executive</span>
+            <span class="u-green">from the</span>
+            <span class="u-blue-zig">judiciary</span>.
+        </li>
+        <li><strong>7. Council Position Strengthened:</strong>
+            <span class="u-blue-zig">This act</span>
+            <span class="u-green">made the</span>
+            <span class="u-blue-zig">position of the council</span>
+            <span class="u-blue-zig">very strong</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Pitt's India Act, 1784</div>
+
+    <ul>
+        <li><strong>1. Fox's Bill Rejected:</strong>
+            <span class="u-blue-zig">A Bill</span>
+            <span class="u-green">was presented by the</span>
+            <span class="u-blue-zig">coalition government</span>
+            <span class="u-green">led by </span><span class="u-red-zig">Fox</span>
+            <span class="u-green">to remove the</span>
+            <span class="u-blue-zig">defects</span>
+            <span class="u-blue-zig">of the Regulating Act</span>
+            <span class="u-green">in </span><span class="u-red-zig">1783</span>,
+            <span class="u-green">but the</span>
+            <span class="u-blue-zig">House of Lords</span>
+            <span class="u-green">rejected the</span>
+            <span class="u-blue-zig">Bill</span>.
+        </li>
+        <li><strong>2. Younger Pitt's Bill:</strong>
+            <span class="u-blue-zig">The new government</span>
+            <span class="u-green">of </span><span class="u-red-zig">Younger Pitt</span>
+            <span class="u-green">modified the</span>
+            <span class="u-blue-zig">bill</span>,
+            <span class="u-green">which was passed as </span>
+            <span class="u-blue-zig">an Act</span>
+            <span class="u-green">in </span><span class="u-red-zig">1784</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Features</div>
+
+    <ul class="sub-points">
+        <li><strong>1. Board of Control:</strong>
+            <span class="u-blue-zig">The Board of Control</span>
+            <span class="u-green">was setup consisting of </span>
+            <span class="u-blue-zig">maximum six parliamentarians</span>
+            <span class="u-green">headed by </span>
+            <span class="u-blue-zig">a senior cabinet member</span>
+            <span class="u-green">to direct and control the</span>
+            <span class="u-blue-zig">company's affairs</span>.
+        </li>
+        <li><strong>2. Court of Directors:</strong>
+            <span class="u-blue-zig">The Court of Directors</span>
+            <span class="u-green">was setup</span>.
+        </li>
+        <li><strong>3. Council Composition:</strong>
+            <span class="u-blue-zig">The Governor General's council</span>
+            <span class="u-green">shall consist of </span>
+            <span class="u-blue-zig">three members</span>
+            <span class="u-blue-zig">one of whom</span>
+            <span class="u-green">shall be the</span>
+            <span class="u-blue-zig">commander-in-chief</span>
+            <span class="u-blue-zig">of the King's army</span>
+            <span class="u-blue-zig">in India</span>.
+        </li>
+        <li><strong>4. Governor General Votes:</strong>
+            <span class="u-blue-zig">The Governor General</span>
+            <span class="u-green">shall have given </span>
+            <span class="u-blue-zig">two votes</span>
+            (<span class="u-blue-zig">one his own</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">another casting vote</span>).
+        </li>
+        <li><strong>5. Property Inventory:</strong>
+            <span class="u-blue-zig">All civilians</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">military officers</span>
+            <span class="u-green">must provide </span>
+            <span class="u-blue-zig">a full inventory</span>
+            <span class="u-blue-zig">of their property</span>
+            <span class="u-blue-zig">in India</span>
+            <span class="u-green">and in </span>
+            <span class="u-red-zig">Britain</span>
+            <span class="u-green">within </span>
+            <span class="u-blue-zig">two months</span>
+            <span class="u-blue-zig">of their joining</span>
+            <span class="u-blue-zig">their posts</span>
+            <span class="u-green">to the</span>
+            <span class="u-blue-zig">Court of Directors</span>.
+        </li>
+        <li><strong>6. Gifts Prohibited:</strong>
+            <span class="u-green">Prohibited the receiving </span>
+            <span class="u-blue-zig">gifts, rewards</span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">cash from the Indians</span>.
+        </li>
+        <li><strong>7. Governance Systems:</strong>
+            <span class="u-blue-zig">The government</span>
+            <span class="u-green">must establish </span>
+            <span class="u-blue-zig">permanent judicial</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">administrative systems</span>
+            <span class="u-green">for the</span>
+            <span class="u-blue-zig">governance</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Charter Act of 1793</div>
+
+    <div class="page-number">Page 4</div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong>1. Commercial Privileges Extended:</strong>
+            <span class="u-blue-zig">The Company's</span>
+            <span class="u-blue-zig">commercial privileges</span>
+            <span class="u-green">were extended for </span>
+            <span class="u-blue-zig">a further period</span>
+            <span class="u-blue-zig">of twenty years</span>.
+        </li>
+        <li><strong>2. Vice-President Appointment:</strong>
+            <span class="u-blue-zig">The Governor-General</span>
+            <span class="u-green">was given the power to </span>
+            <span class="u-blue-zig">appoint a Vice-President</span>
+            <span class="u-green">to act in his place </span>
+            <span class="u-green">during his absence from </span>
+            <span class="u-red-zig">Bengal</span>,
+            <span class="u-green">from amongst the</span>
+            <span class="u-blue-zig">civilian members</span>
+            <span class="u-blue-zig">of his Council</span>.
+        </li>
+        <li><strong>3. Board Salaries:</strong>
+            <span class="u-blue-zig">All members</span>
+            <span class="u-blue-zig">of the Board of Control</span>
+            <span class="u-green">were to be paid </span>
+            <span class="u-blue-zig">their salaries</span>
+            <span class="u-green">from the</span>
+            <span class="u-blue-zig">Indian revenues</span>.
+        </li>
+        <li><strong>4. Cornwallis Special Power:</strong>
+            <span class="u-blue-zig">Lord </span><span class="u-red-zig">Cornwallis</span>
+            <span class="u-green">was given </span>
+            <span class="u-blue-zig">special power</span>
+            <span class="u-green">at the time of his </span>
+            <span class="u-blue-zig">appointment</span>,
+            <span class="u-green">to override his </span>
+            <span class="u-blue-zig">Council</span>.
+        </li>
+        <li><strong>5. Governor-General Supersession:</strong>
+            <span class="u-green">When the</span>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">would be present in </span>
+            <span class="u-red-zig">Bombay</span>
+            <span class="u-green">or </span>
+            <span class="u-red-zig">Madras</span>,
+            <span class="u-green">he was to supersede the</span>
+            <span class="u-blue-zig">local Governor</span>
+            <span class="u-green">as the</span>
+            <span class="u-blue-zig">head of the administration</span>
+            <span class="u-green">during the period of </span>
+            <span class="u-blue-zig">his stay there</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Charter Act of 1813</div>
+
+    <div class="section-header">Cause</div>
+
+    <p>
+        <span class="u-blue-zig">The English traders</span>
+        <span class="u-green">wanted to compensate </span>
+        <span class="u-blue-zig">their loss</span>
+        <span class="u-green">due to the</span>
+        <span class="u-blue-zig">Continental System</span>
+        <span class="u-green">of </span><span class="u-red-zig">Napoleon Bonaparte</span>
+        <span class="u-green">by sharing the</span>
+        <span class="u-blue-zig">Indian Trade</span>.
+    </p>
+    <p>
+        <span class="u-green">Due to the</span>
+        <span class="u-blue-zig">Industrial revolution</span>
+        <span class="u-blue-zig">the production</span>
+        <span class="u-green">was also increased in </span>
+        <span class="u-red-zig">Britain</span>.
+        <span class="u-green">Therefore the</span>
+        <span class="u-blue-zig">British trader</span>
+        <span class="u-green">demanded the</span>
+        <span class="u-blue-zig">British government</span>
+        <span class="u-green">to permit them for </span>
+        <span class="u-blue-zig">trade with India</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Commercial Monopoly Ended:</strong>
+            <span class="u-blue-zig">The Company</span>
+            <span class="u-green">was deprived of its</span>
+            <span class="u-blue-zig">commercial monopoly</span>.
+        </li>
+        <li><strong>2. Crown Sovereignty:</strong>
+            <span class="u-green">Laid down </span>
+            <span class="u-blue-zig">'The Undoubted Sovereignty</span>
+            <span class="u-blue-zig">of the Crown'</span>.
+        </li>
+        <li><strong>3. China and Tea Monopoly:</strong>
+            <span class="u-blue-zig">The East India Company</span>
+            <span class="u-green">was allowed to enjoy the</span>
+            <span class="u-blue-zig">monopoly</span>
+            <span class="u-blue-zig">of China trade</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">trade in tea</span>.
+        </li>
+        <li><strong>4. Education Fund:</strong>
+            <span class="u-blue-zig">A sum</span>
+            <span class="u-blue-zig">of rupees one lakh</span>
+            <span class="u-blue-zig">annually</span>
+            <span class="u-green">was provided for the</span>
+            <span class="u-blue-zig">improvement of Education</span>.
+            (<span class="u-blue-zig">First step</span>
+            <span class="u-green">towards the</span>
+            <span class="u-blue-zig">principle of State responsibility</span>
+            <span class="u-blue-zig">for education</span>.)
+        </li>
+        <li><strong>5. Bishop Appointment:</strong>
+            <span class="u-blue-zig">Appointment of a BISHOP</span>
+            <span class="u-green">whose</span>
+            <span class="u-blue-zig">headquarter</span>
+            <span class="u-green">was in </span>
+            <span class="u-red-zig">CALCUTTA</span>.
+        </li>
+        <li><strong>6. Christian Missionaries:</strong>
+            <span class="u-red-zig">India</span>
+            <span class="u-green">was to be open to the</span>
+            <span class="u-blue-zig">Christian missionaries</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Charter Act of 1833</div>
+
+    <div class="section-header">Cause</div>
+
+    <p>
+        <span class="u-blue-zig">Starting of Machine Age</span>
+        <span class="u-green">in </span><span class="u-red-zig">Britain</span>.
+    </p>
+    <p>
+        <span class="u-blue-zig">The Whigs government</span>
+        <span class="u-green">accepted the</span>
+        <span class="u-blue-zig">Laissez Faire policy</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Twenty Year Lease:</strong>
+            <span class="u-green">It gave </span>
+            <span class="u-blue-zig">another lease of life</span>
+            <span class="u-blue-zig">for twenty years</span>
+            <span class="u-green">to the</span>
+            <span class="u-blue-zig">East India Company</span>.
+        </li>
+        <li><strong>2. Political Organisation:</strong>
+            <span class="u-blue-zig">The Company's</span>
+            <span class="u-blue-zig">commercial privileges</span>
+            <span class="u-green">were all abolished </span>
+            <span class="u-blue-zig">now it worked</span>
+            <span class="u-green">as </span>
+            <span class="u-blue-zig">a political organisation</span>.
+        </li>
+        <li><strong>3. Minister for Indian Affairs:</strong>
+            <span class="u-blue-zig">The President</span>
+            <span class="u-blue-zig">of the Board of Control</span>
+            <span class="u-green">became </span>
+            <span class="u-blue-zig">Minister for Indian affairs</span>.
+        </li>
+        <li><strong>4. Revenue Powers:</strong>
+            <span class="u-blue-zig">The Council</span>
+            <span class="u-green">got </span>
+            <span class="u-blue-zig">full powers</span>
+            <span class="u-green">regarding </span>
+            <span class="u-blue-zig">revenue</span>.
+            <ul>
+                <li><strong>a. Single Budget:</strong>
+                    <span class="u-blue-zig">A single budget</span>
+                    <span class="u-green">was prepared by the</span>
+                    <span class="u-blue-zig">Governor General</span>
+                    <span class="u-blue-zig">for the country</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>5. Governor-General of India:</strong>
+            <span class="u-blue-zig">The Governor-General</span>
+            <span class="u-blue-zig">of Bengal</span>
+            <span class="u-green">was now made the</span>
+            <span class="u-blue-zig">Governor-General of India</span>.
+            <ul>
+                <li><strong>a. First Governor-General:</strong>
+                    <span class="u-blue-zig">Lord </span><span class="u-red-zig">WILLIAM BENTINCK</span>
+                    <span class="u-green">was the</span>
+                    <span class="u-blue-zig">first governor general</span>
+                    <span class="u-blue-zig">of British India</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 5</div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong>6. Fourth Law Member:</strong>
+            <span class="u-green">It enlarged the</span>
+            <span class="u-blue-zig">Executive Council</span>
+            <span class="u-blue-zig">of the Governor-General</span>
+            <span class="u-green">by adding to it </span>
+            <span class="u-blue-zig">a fourth member</span>
+            <span class="u-green">as </span>
+            <span class="u-blue-zig">a Law Member</span>.
+            <ul>
+                <li><strong>a. First Law Member:</strong>
+                    <span class="u-blue-zig">Lord </span><span class="u-red-zig">MACAULAY</span>
+                    <span class="u-green">was the</span>
+                    <span class="u-blue-zig">first Law Member</span>.
+                </li>
+                <li><strong>b. Law Commission:</strong>
+                    <span class="u-blue-zig">A Law Commission</span>
+                    <span class="u-green">was formed to </span>
+                    <span class="u-blue-zig">codify the Indian Laws</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>7. Government of India:</strong>
+            <span class="u-blue-zig">The Governor-General's</span>
+            <span class="u-blue-zig">Government</span>
+            <span class="u-green">was known as the</span>
+            <span class="u-blue-zig">'Government of India'</span>.
+        </li>
+        <li><strong>8. No Distinction:</strong>
+            <span class="u-green">It removed the</span>
+            <span class="u-blue-zig">distinction</span>
+            <span class="u-green">between </span>
+            <span class="u-blue-zig">Indian</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">European</span>.
+            <ul>
+                <li><strong>a. No Disqualification:</strong>
+                    <span class="u-blue-zig">No one</span>
+                    <span class="u-green">would be disqualified for </span>
+                    <span class="u-blue-zig">any place</span>
+                    <span class="u-blue-zig">in the Company's service</span>
+                    <span class="u-green">by reason of his</span>
+                    <span class="u-blue-zig">religion, place of birth</span>,
+                    <span class="u-blue-zig">descent</span>,
+                    <span class="u-green">or </span>
+                    <span class="u-blue-zig">colour</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>9. Abolish Slavery:</strong>
+            <span class="u-green">It permitted the</span>
+            <span class="u-blue-zig">Government</span>
+            <span class="u-green">to abolish the</span>
+            <span class="u-blue-zig">slavery</span>.
+        </li>
+        <li><strong>10. Land Purchase:</strong>
+            <span class="u-blue-zig">British citizens</span>
+            <span class="u-green">were permitted to </span>
+            <span class="u-blue-zig">purchase land</span>
+            <span class="u-blue-zig">in India</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Charter Act of 1853</div>
+
+    <ul>
+        <li><strong>1. No Time Limit:</strong>
+            <span class="u-blue-zig">No specific time</span>
+            <span class="u-green">was allotted to the</span>
+            <span class="u-blue-zig">Company</span>
+            <span class="u-green">to retain its</span>
+            <span class="u-blue-zig">powers and authority</span>
+            <span class="u-blue-zig">in India</span>.
+        </li>
+        <li><strong>2. Directors Reduced:</strong>
+            <span class="u-blue-zig">The number</span>
+            <span class="u-blue-zig">of the Directors</span>
+            <span class="u-blue-zig">of the Court of Directors</span>
+            <span class="u-green">was reduced from </span>
+            <span class="u-blue-zig">24 to 18</span>
+            <span class="u-green">of whom </span>
+            <span class="u-blue-zig">6 were to be nominated</span>
+            <span class="u-green">by the</span>
+            <span class="u-blue-zig">Crown</span>.
+        </li>
+        <li><strong>3. Salary of Board Members:</strong>
+            <span class="u-blue-zig">The Salary</span>
+            <span class="u-blue-zig">of the members</span>
+            <span class="u-blue-zig">of Board of Control</span>,
+            <span class="u-blue-zig">its Secretary</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">other officers</span>
+            <span class="u-green">would be fixed by the</span>
+            <span class="u-blue-zig">British Government</span>
+            <span class="u-green">and paid by the</span>
+            <span class="u-blue-zig">Company's funds</span>.
+        </li>
+        <li><strong>4. Macaulay Committee:</strong>
+            <span class="u-red-zig">MACAULAY</span>
+            <span class="u-blue-zig">COMMITTEE</span>
+            <span class="u-green">was setup to give effect to the</span>
+            <span class="u-blue-zig">scheme of appointment</span>
+            <span class="u-blue-zig">of civil servant</span>
+            <span class="u-green">through </span>
+            <span class="u-blue-zig">competition</span>.
+        </li>
+        <li><strong>5. Full Member Status:</strong>
+            <span class="u-blue-zig">Law member</span>
+            <span class="u-green">was now made </span>
+            <span class="u-blue-zig">a full member</span>
+            <span class="u-blue-zig">of the Governor-General's</span>
+            <span class="u-blue-zig">Executive Council</span>.
+        </li>
+        <li><strong>6. Membership Enlarged:</strong>
+            <span class="u-blue-zig">The Governor-General's</span>
+            <span class="u-blue-zig">Executive Council's</span>
+            <span class="u-blue-zig">membership</span>
+            <span class="u-green">was enlarged by </span>
+            <span class="u-blue-zig">inclusion of six members</span>.
+        </li>
+        <li><strong>7. Civil Servants Appointed:</strong>
+            <span class="u-blue-zig">The Governor-General</span>
+            <span class="u-green">was empowered to appoint </span>
+            <span class="u-blue-zig">two civil servants</span>
+            <span class="u-green">to his</span>
+            <span class="u-blue-zig">Council</span>.
+        </li>
+        <li><strong>8. Legislative Council Created:</strong>
+            <span class="u-green">It created </span>
+            <span class="u-blue-zig">a functioning</span>
+            <span class="u-blue-zig">Legislative Council</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Government of India Act 1858</div>
+
+    <p>
+        <span class="u-blue-zig">Indian alliance</span>
+        <span class="u-green">were defeated by the</span>
+        <span class="u-blue-zig">East India Company force</span>
+        <span class="u-green">in the</span>
+        <span class="u-blue-zig">1857 Revolution</span>.
+        <span class="u-blue-zig">The British government</span>
+        <span class="u-green">decided to make </span>
+        <span class="u-blue-zig">Indian territory</span>
+        <span class="u-green">which was controlled by the</span>
+        <span class="u-blue-zig">East India Company</span>
+        <span class="u-green">as the</span>
+        <span class="u-blue-zig">colony of the Britain</span>.
+        <span class="u-green">Therefore the</span>
+        <span class="u-blue-zig">Act</span>
+        <span class="u-green">was passed in </span><span class="u-red-zig">1858</span>
+        <span class="u-green">in </span>
+        <span class="u-blue-zig">British Parliament</span>
+        <span class="u-green">also known as </span>
+        <span class="u-blue-zig">Queens declaration</span>.
+    </p>
+    <p>
+        <span class="u-green">At that time </span>
+        <span class="u-red-zig">QUEEN VICTORIA</span>
+        <span class="u-green">ruled over the</span>
+        <span class="u-blue-zig">British Empire</span>.
+    </p>
+
+    <ul>
+        <li><strong>1. Palmerston's Bill:</strong>
+            <span class="u-blue-zig">Lord </span><span class="u-red-zig">PALMERSTON</span>
+            <span class="u-green">introduced the</span>
+            <span class="u-blue-zig">bill</span>
+            <span class="u-green">for the</span>
+            <span class="u-blue-zig">Better Government of India</span>
+            <span class="u-green">in </span><span class="u-red-zig">February, 1858</span>.
+            <ul>
+                <li><strong>a. Ministry Ousted:</strong>
+                    <span class="u-blue-zig">His Ministry</span>
+                    <span class="u-green">was thrown out</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>2. Act Passed:</strong>
+            <span class="u-blue-zig">The Act</span>
+            <span class="u-green">was passed under </span>
+            <span class="u-red-zig">DISRAELI</span>
+            <span class="u-blue-zig">ministry</span>
+            <span class="u-green">and received </span>
+            <span class="u-blue-zig">royal assent</span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">August 2, 1858</span>.
+        </li>
+        <li><strong>3. British Queen Rule:</strong>
+            <span class="u-blue-zig">The Britain</span>
+            <span class="u-blue-zig">Indian territories</span>
+            <span class="u-green">were now governed by the</span>
+            <span class="u-blue-zig">British Queen</span>.
+        </li>
+        <li><strong>4. Parliamentary Control:</strong>
+            <span class="u-green">It established the</span>
+            <span class="u-blue-zig">control</span>
+            <span class="u-blue-zig">of British Parliament</span>
+            <span class="u-green">over </span>
+            <span class="u-blue-zig">Indian affairs</span>.
+        </li>
+        <li><strong>5. Secretary of State:</strong>
+            <span class="u-blue-zig">Secretary of State</span>
+            <span class="u-blue-zig">for India</span>
+            <span class="u-green">assisted by </span>
+            <span class="u-blue-zig">a Council</span>
+            <span class="u-blue-zig">of 15 members</span>.
+            <ul>
+                <li><strong>a. Council Composition:</strong>
+                    <span class="u-blue-zig">8 were to be appointed</span>
+                    <span class="u-green">by the</span>
+                    <span class="u-blue-zig">Crown</span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">7 were elected</span>
+                    <span class="u-green">by the</span>
+                    <span class="u-blue-zig">Court of Directors</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 6</div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong style="color: var(--primary-red);">1. Service Requirement:</strong>
+            <span class="u-green">At least </span>
+            <span class="u-blue-zig">50 per cent</span>
+            <span class="u-blue-zig">of the members</span>
+            <span class="u-blue-zig">of the Council</span>
+            <span class="u-green">must have served in </span>
+            <span class="u-red-zig">India</span>
+            <span class="u-green">for not less than </span>
+            <span class="u-blue-zig">10 years</span>.
+        </li>
+    </ul>
+    <ul>
+        <li><strong>6. Secretary of State Powers:</strong>
+            <span class="u-blue-zig">The Secretary of State</span>
+            <span class="u-blue-zig">for India</span>
+            <span class="u-green">was empowered with </span>
+            <span class="u-blue-zig">all powers</span>,
+            <span class="u-green">exercised by the</span>
+            <span class="u-blue-zig">Court of Directors</span>
+            <span class="u-green">and the</span>
+            <span class="u-blue-zig">Board of control</span>.
+            <ul>
+                <li><strong>a. First Secretary of State:</strong>
+                    <span class="u-blue-zig">The first Secretary of State</span>
+                    <span class="u-blue-zig">for India</span>
+                    <span class="u-green">was </span>
+                    <span class="u-blue-zig">Lord </span><span class="u-red-zig">STANLEY</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>7. Governor-General and Viceroy:</strong>
+            <span class="u-blue-zig">The representative</span>
+            <span class="u-blue-zig">of the British government</span>
+            <span class="u-blue-zig">in India</span>
+            <span class="u-green">was the</span>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Viceroy</span>
+            (<span class="u-blue-zig">both the same person</span>
+            <span class="u-green">to avoid </span>
+            <span class="u-blue-zig">conflict</span>).
+            <ul>
+                <li><strong>a. First Viceroy:</strong>
+                    <span class="u-blue-zig">First Governor-General</span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">Viceroy of India</span>
+                    <span class="u-green">was </span>
+                    <span class="u-blue-zig">Lord </span><span class="u-red-zig">CANNING</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>8. Executive Council Members:</strong>
+            <span class="u-blue-zig">The Governor General</span>
+            <span class="u-blue-zig">Executive Council</span>
+            <span class="u-green">had </span>
+            <span class="u-blue-zig">6-12 members</span>,
+            <span class="u-green">of which at least half </span>
+            <span class="u-green">could be </span>
+            <span class="u-blue-zig">Indian</span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">English</span>.
+        </li>
+        <li><strong>9. Doctrine of Lapse Ended:</strong>
+            <span class="u-green">It ended the</span>
+            <span class="u-blue-zig">doctrine of lapse</span>.
+        </li>
+        <li><strong>10. Magna Carta:</strong>
+            <span class="u-blue-zig">The act</span>
+            <span class="u-green">was called the</span>
+            <span class="u-blue-zig">Magna Carta</span>.
+        </li>
+    </ul>
+
+    <p>
+        <span class="u-green">After the</span>
+        <span class="u-blue-zig">Queen's declaration</span>
+        <span class="u-green">of </span><span class="u-red-zig">1858</span>,
+        <span class="u-red-zig">India</span>
+        <span class="u-green">became the</span>
+        <span class="u-blue-zig">colony of Britain</span>
+        <span class="u-green">and governed by the</span>
+        <span class="u-blue-zig">British Parliament</span>.
+        <span class="u-green">Therefore all the</span>
+        <span class="u-blue-zig">Acts related to India</span>
+        <span class="u-green">were passed by the</span>
+        <span class="u-blue-zig">British government</span>
+        <span class="u-green">and known as </span>
+        <span class="u-blue-zig">Government of India Act</span>.
+    </p>
+
+    <div class="main-topic-header">Indian Council Act, 1861</div>
+    <div class="section-header">The Executive Council of the Governor-General</div>
+
+    <ul>
+        <li><strong>1. Additional Members:</strong>
+            <span class="u-green">Strengthened by the </span>
+            <span class="u-blue-zig">addition</span>
+            <span class="u-blue-zig">of not less than 6</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">not more than 12 members</span>
+            <span class="u-green">nominated by the</span>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">for the purposes of </span>
+            <span class="u-blue-zig">legislation</span>.
+            <ul>
+                <li><strong>a. Non-Officials:</strong>
+                    <span class="u-blue-zig">Not less than half</span>
+                    <span class="u-blue-zig">of the additional members</span>
+                    <span class="u-green">were to be </span>
+                    <span class="u-blue-zig">Non-Officials</span>
+                    <span class="u-green">and they were to </span>
+                    <span class="u-blue-zig">hold office</span>
+                    <span class="u-green">for </span>
+                    <span class="u-blue-zig">two years</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>2. Fifth Member:</strong>
+            <span class="u-blue-zig">Addition of a FIFTH member</span>
+            <span class="u-green">to the</span>
+            <span class="u-blue-zig">Executive Council</span>
+            <span class="u-blue-zig">of the Viceroy</span>.
+            <ul>
+                <li><strong>a. Jurist Required:</strong>
+                    <span class="u-green">He was required to be </span>
+                    <span class="u-blue-zig">a jurist</span>
+                    <span class="u-green">rather than </span>
+                    <span class="u-blue-zig">a technical lawyer</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>3. Limited to Legislation:</strong>
+            <span class="u-blue-zig">The function</span>
+            <span class="u-blue-zig">of the Council</span>
+            <span class="u-green">was strictly limited to </span>
+            <span class="u-blue-zig">Legislation</span>.
+        </li>
+        <li><strong>4. Home Government Authority:</strong>
+            <span class="u-blue-zig">No law</span>
+            <span class="u-green">could be made which </span>
+            <span class="u-blue-zig">infringed the authority</span>
+            <span class="u-blue-zig">of the Home Government</span>.
+        </li>
+        <li><strong>5. Veto Power:</strong>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">was given the</span>
+            <span class="u-blue-zig">power of veto</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Powers of the Governor-General</div>
+
+    <ul>
+        <li><strong>1. Ordinance Power:</strong>
+            <span class="u-green">Empowered to issue </span>
+            <span class="u-blue-zig">ORDINANCES</span>
+            <span class="u-green">in case of </span>
+            <span class="u-blue-zig">emergency</span>.
+            <ul>
+                <li><strong>a. Ordinance Duration:</strong>
+                    <span class="u-blue-zig">These ordinances</span>
+                    <span class="u-green">were to remain in force for </span>
+                    <span class="u-blue-zig">SIX months</span>
+                    <span class="u-green">unless they were </span>
+                    <span class="u-blue-zig">dissolved</span>
+                    <span class="u-green">or </span>
+                    <span class="u-blue-zig">repealed</span>
+                    <span class="u-green">by the</span>
+                    <span class="u-blue-zig">ordinance or law</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>2. Portfolio System:</strong>
+            <span class="u-green">Empowered to delegate </span>
+            <span class="u-blue-zig">special business</span>
+            <span class="u-green">to </span>
+            <span class="u-blue-zig">individual members</span>
+            <span class="u-blue-zig">of the Executive Council</span>.
+            <ul>
+                <li><strong>a. Portfolio Started:</strong>
+                    <span class="u-blue-zig">PORTFOLIOS system</span>
+                    <span class="u-green">was started by </span>
+                    <span class="u-blue-zig">Lord </span><span class="u-red-zig">CANNING</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>3. Rules and Regulations:</strong>
+            <span class="u-green">Empowered to make </span>
+            <span class="u-blue-zig">rules and regulations</span>
+            <span class="u-green">for the</span>
+            <span class="u-blue-zig">conduct of the business</span>
+            <span class="u-blue-zig">of the Executive Council</span>.
+        </li>
+        <li><strong>4. Province Creation:</strong>
+            <span class="u-green">Empowered to create </span>
+            <span class="u-blue-zig">new provinces</span>,
+            <span class="u-blue-zig">divide</span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">alter the limits</span>
+            <span class="u-blue-zig">of any province</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">The Governments of Bombay and Madras</div>
+
+    <div class="page-number">Page 7</div>
+</div>
+
+<!-- PAGE 8 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong>1. Additional Members:</strong>
+            <span class="u-blue-zig">Not less than four</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">not more than 8</span>
+            <span class="u-blue-zig">additional members</span>
+            <span class="u-green">at the</span>
+            <span class="u-blue-zig">Executive Council</span>
+            <span class="u-green">for purposes of </span>
+            <span class="u-blue-zig">legislation</span>.
+        </li>
+        <li><strong>2. Two Year Tenure:</strong>
+            <span class="u-blue-zig">These additional members</span>
+            <span class="u-green">were to </span>
+            <span class="u-blue-zig">hold office</span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">two years</span>.
+        </li>
+        <li><strong>3. Governor-General Consent:</strong>
+            <span class="u-blue-zig">The consent</span>
+            <span class="u-blue-zig">of the Governor-General</span>
+            <span class="u-green">was made necessary for </span>
+            <span class="u-blue-zig">all legislations</span>
+        </li>
+        <li><strong>4. Advocate General:</strong>
+            <span class="u-green">Nominating the</span>
+            <span class="u-blue-zig">Advocate General</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Other Facts</div>
+
+    <ul>
+        <li><strong>1. No Subject Distinction:</strong>
+            <span class="u-blue-zig">No distinction</span>
+            <span class="u-green">was made between the</span>
+            <span class="u-blue-zig">central</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">provincial subjects</span>.
+        </li>
+        <li><strong>2. Nominated Non-Officials:</strong>
+            <span class="u-blue-zig">The non-official members</span>
+            <span class="u-blue-zig">of the Council</span>
+            <span class="u-green">were nominated by the</span>
+            <span class="u-blue-zig">Viceroy</span>
+            <span class="u-green">and not elected by the</span>
+            <span class="u-blue-zig">people</span>.
+            <ul>
+                <li><strong>a. Type of Members:</strong>
+                    <span class="u-blue-zig">These non-official members</span>
+                    <span class="u-green">were either the</span>
+                    <span class="u-blue-zig">Indian Princes</span>
+                    <span class="u-green">or </span>
+                    <span class="u-blue-zig">their Diwans</span>,
+                    <span class="u-blue-zig">big Zamindars</span>
+                    <span class="u-green">or </span>
+                    <span class="u-blue-zig">retired officials</span>.
+                    <span class="u-blue-zig">First three Indians</span>
+                    <span class="u-green">nominated in </span>
+                    <span class="u-blue-zig">Council</span> -
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="sub-points">
+        <li><strong>a. Three Indians:</strong>
+            <span class="u-red-zig">SIR DINKAR RAO</span>,
+            <span class="u-red-zig">MAHARAJA PATIYALA</span>,
+            <span class="u-red-zig">RAJA OF BANARAS</span>
+        </li>
+    </ul>
+
+    <div class="section-header">Impact</div>
+
+    <ul>
+        <li><strong>1. Representative Institutions:</strong>
+            <span class="u-blue-zig">Beginning</span>
+            <span class="u-green">in </span>
+            <span class="u-blue-zig">Representative Institutions</span>
+        </li>
+        <li><strong>2. Associate People:</strong>
+            <span class="u-green">Enabled the</span>
+            <span class="u-blue-zig">Governor-General</span>
+            <span class="u-green">to associate the</span>
+            <span class="u-blue-zig">people</span>.
+        </li>
+        <li><strong>3. Legislative Devolution:</strong>
+            <span class="u-green">Laid the foundation of </span>
+            <span class="u-blue-zig">legislative devolution</span>
+            <span class="u-green">which ultimately led to the</span>
+            <span class="u-blue-zig">grant</span>
+            <span class="u-blue-zig">of provincial autonomy</span>
+            <span class="u-green">to the</span>
+            <span class="u-blue-zig">provinces</span>
+            <span class="u-green">in </span><span class="u-red-zig">1937</span>.
+            (<span class="u-red-zig">G.N.Singh</span>)
+        </li>
+    </ul>
+
+    <div class="section-header">Some Other Acts of 1861</div>
+    <div class="main-topic-header">Indian Civil Services Act</div>
+
+    <ul>
+        <li><strong>1. Reserved Posts:</strong>
+            <span class="u-blue-zig">Certain posts</span>
+            <span class="u-green">under the</span>
+            <span class="u-blue-zig">Government of India</span>
+            <span class="u-green">were to be reserved for </span>
+            <span class="u-blue-zig">persons</span>
+            <span class="u-green">who had been </span>
+            <span class="u-blue-zig">a resident of India</span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">7 years or more</span>.
+        </li>
+        <li><strong>2. Irregular Appointments:</strong>
+            <span class="u-green">Validated </span>
+            <span class="u-blue-zig">a number</span>
+            <span class="u-blue-zig">of irregular appointments</span>.
+        </li>
+        <li><strong>3. Appointments Reported:</strong>
+            <span class="u-blue-zig">All appointments</span>
+            <span class="u-green">were now to be reported to the</span>
+            <span class="u-blue-zig">Secretary of State</span>
+            <span class="u-green">and unless </span>
+            <span class="u-blue-zig">Secretary of State</span>
+            <span class="u-green">approves within </span>
+            <span class="u-blue-zig">twelve months</span>,
+            <span class="u-green">were declared </span>
+            <span class="u-blue-zig">void</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Indian High Court Act</div>
+
+    <ul>
+        <li><strong>1. High Courts Authorized:</strong>
+            <span class="u-green">Authorize the</span>
+            <span class="u-blue-zig">Crown</span>
+            <span class="u-green">to create </span>
+            <span class="u-blue-zig">High Courts in India</span>.
+        </li>
+        <li><strong>2. Jurisdiction Transferred:</strong>
+            <span class="u-blue-zig">The jurisdiction and powers</span>
+            <span class="u-green">exercised by the</span>
+            <span class="u-blue-zig">Supreme Courts</span>
+            <span class="u-green">of </span><span class="u-red-zig">Calcutta</span>
+            <span class="u-green">and the</span>
+            <span class="u-blue-zig">Sadar Adalats</span>
+            <span class="u-green">was transferred to the</span>
+            <span class="u-blue-zig">High Courts</span>.
+        </li>
+        <li><strong>3. High Courts Established:</strong>
+            <span class="u-blue-zig">The High Courts</span>
+            <span class="u-green">of </span><span class="u-red-zig">Calcutta</span>,
+            <span class="u-red-zig">Madras</span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Bombay</span>
+            <span class="u-green">were established</span>.
+            <ul>
+                <li><strong>a. Composition:</strong>
+                    <span class="u-blue-zig">Each High Court</span>
+                    <span class="u-green">was to consist of </span>
+                    <span class="u-blue-zig">a Chief Justice</span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">NOT more than</span>
+                    <span class="u-blue-zig">15 regular judges</span>.
+                </li>
+                <li><strong>b. Barristers and Civil Service:</strong>
+                    <span class="u-blue-zig">The chief Justice</span>
+                    <span class="u-green">and minimum of </span>
+                    <span class="u-blue-zig">ONE THIRD regular judges</span>
+                    <span class="u-green">had to be </span>
+                    <span class="u-blue-zig">Barristers</span>
+                    <span class="u-green">and minimum </span>
+                    <span class="u-blue-zig">ONE THIRD regular judges</span>
+                    <span class="u-green">were to be from the</span>
+                    <span class="u-blue-zig">Civil Service</span>.
+                </li>
+                <li><strong>c. Crown's Pleasure:</strong>
+                    <span class="u-blue-zig">All Judges</span>
+                    <span class="u-green">were the be in the </span>
+                    <span class="u-blue-zig">office</span>
+                    <span class="u-green">on the</span>
+                    <span class="u-blue-zig">pleasure of the Crown</span>.
+                </li>
+                <li><strong>d. Dual Jurisdiction:</strong>
+                    <span class="u-blue-zig">The High Courts</span>
+                    <span class="u-green">had </span>
+                    <span class="u-blue-zig">an Original</span>
+                    <span class="u-green">as well as </span>
+                    <span class="u-blue-zig">an Appellate Jurisdiction</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 8</div>
+</div>
+
+<!-- PAGE 9 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong style="color: var(--primary-red);">1. First High Court:</strong>
+            <span class="u-red-zig">Calcutta</span>
+            <span class="u-blue-zig">High Court</span>
+            <span class="u-green">was the</span>
+            <span class="u-blue-zig">first High Court</span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">SIR BARNES PEACOCK</span>
+            <span class="u-green">was its</span>
+            <span class="u-blue-zig">first Chief Justice</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">2. First Indian Judge:</strong>
+            <span class="u-blue-zig">Justice </span><span class="u-red-zig">SUMBOO NATH PANDIT</span>
+            <span class="u-green">was the</span>
+            <span class="u-blue-zig">first Indian Judge</span>
+            <span class="u-blue-zig">of the Calcutta High Court</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Indian Army Act</div>
+
+    <ul>
+        <li><strong>1. Bengal Cavalry Mutiny:</strong>
+            <span class="u-blue-zig">All the regular</span>
+            <span class="u-blue-zig">cavalry regiments</span>
+            <span class="u-blue-zig">of the Bengal Army</span>
+            <span class="u-green">had mutinied</span>.
+        </li>
+        <li><strong>2. Silladar System:</strong>
+            <span class="u-blue-zig">Cavalry</span>
+            <span class="u-green">was now organized on the</span>
+            <span class="u-blue-zig">Silladar System</span>,
+            <span class="u-green">except for the</span>
+            <span class="u-blue-zig">three regiments</span>
+            <span class="u-blue-zig">of the Madras Army</span>.
+        </li>
+        <li><strong>3. Merit-Based Promotion:</strong>
+            <span class="u-blue-zig">The promotion of Indians</span>
+            <span class="u-green">was now determined by </span>
+            <span class="u-blue-zig">merit</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Jonathan Peel Commission</div>
+
+    <ul>
+        <li><strong>1. Diverse Composition:</strong>
+            <span class="u-blue-zig">The Native Army</span>
+            <span class="u-green">should be composed of </span>
+            <span class="u-blue-zig">different nationalities</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">castes</span>.
+        </li>
+        <li><strong>2. Class Companies:</strong>
+            <span class="u-green">To divide </span>
+            <span class="u-blue-zig">regiments</span>
+            <span class="u-green">into </span>
+            <span class="u-blue-zig">class companies</span>.
+            <ul>
+                <li><strong>a. Martial Races:</strong>
+                    <span class="u-green">Led to the</span>
+                    <span class="u-blue-zig">theory of Martial Races</span>
+                    <span class="u-blue-zig">of India</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>3. Soldier Proportion:</strong>
+            <span class="u-blue-zig">The proportion</span>
+            <span class="u-blue-zig">of lndian to British soldiers</span>
+            <span class="u-blue-zig">in India</span>
+            <span class="u-green">should not be greater than </span>
+            <span class="u-blue-zig">three to one</span>.
+        </li>
+        <li><strong>4. General Service:</strong>
+            <span class="u-blue-zig">Soldiers</span>
+            <span class="u-green">should be enlisted for </span>
+            <span class="u-blue-zig">general service</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Indian Council Act, 1892</div>
+
+    <ul>
+        <li><strong>1. Representative Government:</strong>
+            <span class="u-green">Laid down the</span>
+            <span class="u-blue-zig">foundation</span>
+            <span class="u-blue-zig">of the Representative Government</span>.
+        </li>
+        <li><strong>2. Financial Statement:</strong>
+            <span class="u-blue-zig">Indians</span>
+            <span class="u-green">were authorised to discuss the</span>
+            <span class="u-blue-zig">annual financial statement</span>
+            <span class="u-green">with </span>
+            <span class="u-blue-zig">some restrictions</span>.
+        </li>
+        <li><strong>3. Questions on Public Interest:</strong>
+            <span class="u-blue-zig">Indians</span>
+            <span class="u-green">were authorised to address </span>
+            <span class="u-blue-zig">questions</span>
+            <span class="u-green">on the of </span>
+            <span class="u-blue-zig">matters public interest</span>.
+            <ul>
+                <li><strong>a. Prior Notice:</strong>
+                    <span class="u-blue-zig">A previous notice</span>
+                    <span class="u-blue-zig">of 6 days</span>
+                    <span class="u-green">needed</span>.
+                </li>
+                <li><strong>b. No Supplementary:</strong>
+                    <span class="u-blue-zig">No supplementary questions</span>
+                    <span class="u-green">asked</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>4. Central Council Numbers:</strong>
+            <span class="u-blue-zig">The number</span>
+            <span class="u-blue-zig">of additional members</span>
+            <span class="u-blue-zig">in the Council</span>
+            <span class="u-green">was to be </span>
+            <span class="u-blue-zig">not less than 10</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">not more than 16</span>.
+        </li>
+        <li><strong>5. Madras and Bombay:</strong>
+            <span class="u-green">In the case of </span>
+            <span class="u-red-zig">Madras</span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Bombay</span>
+            <span class="u-green">it is </span>
+            <span class="u-blue-zig">not less than 8</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">not more than 20</span>.
+        </li>
+        <li><strong>6. Maximum Numbers:</strong>
+            <span class="u-blue-zig">The maximum number</span> -
+            <span class="u-red-zig">Bengal</span> -
+            <span class="u-blue-zig">20</span>
+            <span class="u-blue-zig">North-Western Province</span>
+            <span class="u-green">&amp; </span>
+            <span class="u-red-zig">Oudh</span>
+            <span class="u-blue-zig">15</span>.
+        </li>
+        <li><strong>7. Elections Allowed:</strong>
+            <span class="u-blue-zig">Government</span>
+            <span class="u-green">agreed to Allow </span>
+            <span class="u-blue-zig">Elections in India</span>.
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Indian Council Act, 1909</div>
+    <p class="subtitle">(Minto-Morely Reforms)</p>
+
+    <p>
+        <span class="u-blue-zig">The Indian Council act</span>
+        <span class="u-red-zig">1909</span>
+        <span class="u-green">was the</span>
+        <span class="u-blue-zig">response and reaction</span>
+        <span class="u-blue-zig">of the political condition</span>
+        <span class="u-green">prevailing in </span>
+        <span class="u-red-zig">India</span>
+        <span class="u-green">after the</span>
+        <span class="u-blue-zig">partition of Bengal</span>.
+        <span class="u-blue-zig">The Indians</span>
+        <span class="u-green">had lost faith in the</span>
+        <span class="u-blue-zig">British government</span>.
+    </p>
+    <p>
+        <span class="u-green">So to counter the</span>
+        <span class="u-blue-zig">growing reaction</span>
+        <span class="u-blue-zig">of the Nationalist</span>
+        <span class="u-blue-zig">British government</span>
+        <span class="u-green">felt the need of the</span>
+        <span class="u-blue-zig">reform</span>.
+    </p>
+    <p>
+        <span class="u-green">It was also enacted to </span>
+        <span class="u-blue-zig">attack</span>
+        <span class="u-blue-zig">Hindu Muslim Unity</span>.
+    </p>
+    <ul class="sub-points">
+        <li><strong>a. Viceroy and Secretary:</strong>
+            <span class="u-blue-zig">Lord </span><span class="u-red-zig">Minto</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Lord </span><span class="u-red-zig">John Morley</span>,
+            <span class="u-green">were the</span>
+            <span class="u-blue-zig">Viceroy</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Secretary of State</span>
+            <span class="u-blue-zig">of British India</span>
+            <span class="u-blue-zig">respectively</span>.
+        </li>
+    </ul>
+
+    <div class="section-header">Features</div>
+
+    <div class="page-number">Page 9</div>
+</div>
+
+<!-- PAGE 10 -->
+<div class="pdf-page">
+    <ul>
+        <li><strong>1. First Indian Member:</strong>
+            <span class="u-blue-zig">Lord </span><span class="u-red-zig">Minto</span>
+            <span class="u-green">appointed </span>
+            <span class="u-red-zig">Satyendra P Sinha</span>
+            <span class="u-green">as the</span>
+            <span class="u-blue-zig">first Indian member</span>
+            <span class="u-blue-zig">of the Viceroy's</span>
+            <span class="u-blue-zig">Executive Council</span>.
+        </li>
+        <li><strong>2. Indians in Secretary's Council:</strong>
+            <span class="u-blue-zig">Two Indians</span>
+            <span class="u-green">were nominated to the</span>
+            <span class="u-blue-zig">Council</span>
+            <span class="u-blue-zig">of the Secretary of State</span>
+            <span class="u-blue-zig">for Indian affairs</span>.
+        </li>
+        <li><strong>3. Imperial Legislative Council:</strong>
+            <span class="u-blue-zig">The Imperial</span>
+            <span class="u-blue-zig">Legislative Council</span>
+            <span class="u-green">shall consist of </span>
+            <span class="u-blue-zig">37 officials</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">23 non officials</span>.
+            <ul>
+                <li><strong>a. Official Members:</strong>
+                    <span class="u-green">Out of the</span>
+                    <span class="u-blue-zig">37 officials</span>,
+                    <span class="u-blue-zig">28 were nominated</span>
+                    <span class="u-green">by the</span>
+                    <span class="u-blue-zig">Governor-General</span>
+                    <span class="u-green">and the rest were to be </span>
+                    <span class="u-blue-zig">ex-officio members</span>.
+                </li>
+                <li><strong>b. Non-Official Members:</strong>
+                    <span class="u-green">Out of the</span>
+                    <span class="u-blue-zig">23 non-official members</span>,
+                    <span class="u-blue-zig">5 were to be nominated</span>
+                    <span class="u-green">by the</span>
+                    <span class="u-blue-zig">Governor-General</span>
+                    <span class="u-green">and the rest were to be </span>
+                    <span class="u-blue-zig">elected</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>4. Provincial Councils:</strong>
+            <span class="u-blue-zig">The Act</span>
+            <span class="u-green">did not provide for any </span>
+            <span class="u-blue-zig">official majority</span>
+            <span class="u-green">in the</span>
+            <span class="u-blue-zig">Provincial Legislative Councils</span>.
+            <ul>
+                <li><strong>a. Non-Official Majority:</strong>
+                    <span class="u-blue-zig">The majority</span>
+                    <span class="u-blue-zig">of the members</span>
+                    <span class="u-green">were to be </span>
+                    <span class="u-blue-zig">non officials</span>.
+                </li>
+                <li><strong>b. Governor's Nominees:</strong>
+                    <span class="u-blue-zig">Some of the non-officials</span>
+                    <span class="u-green">were to be nominated by the</span>
+                    <span class="u-blue-zig">Governor</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>5. Indirect Election:</strong>
+            <span class="u-blue-zig">The members</span>
+            <span class="u-green">were elected </span>
+            <span class="u-blue-zig">INDIRECTLY</span>.
+            <ul>
+                <li><strong>a. Electoral College:</strong>
+                    <span class="u-blue-zig">The local bodies</span>
+                    <span class="u-green">elected </span>
+                    <span class="u-blue-zig">an electoral college</span>
+                    <span class="u-green">who would elect </span>
+                    <span class="u-blue-zig">members</span>
+                    <span class="u-blue-zig">of the provincial</span>
+                    <span class="u-blue-zig">legislative councils</span>.
+                </li>
+                <li><strong>b. Central Council Election:</strong>
+                    <span class="u-blue-zig">These elected members</span>
+                    <span class="u-green">would elect the</span>
+                    <span class="u-blue-zig">members</span>
+                    <span class="u-blue-zig">of the Central</span>
+                    <span class="u-blue-zig">legislative council</span>.
+                </li>
+                <li><strong>c. Elected Categories:</strong>
+                    <span class="u-blue-zig">The elected members</span>
+                    <span class="u-green">were from the</span>
+                    <span class="u-blue-zig">local bodies</span>,
+                    <span class="u-blue-zig">the Chambers of Commerce</span>,
+                    <span class="u-blue-zig">Landlords</span>,
+                    <span class="u-blue-zig">Universities</span>,
+                    <span class="u-blue-zig">Traders' communities</span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">Muslims</span>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>6. Resolution on Grants:</strong>
+            <span class="u-blue-zig">Every number</span>
+            <span class="u-green">was given the right to </span>
+            <span class="u-blue-zig">move any resolution grant</span>
+            <span class="u-green">to </span>
+            <span class="u-blue-zig">local Governments</span>
+            <span class="u-green">proposed or mentioned in the</span>
+            <span class="u-blue-zig">financial statement</span>.
+        </li>
+        <li><strong>7. Expenditure Restrictions:</strong>
+            <span class="u-blue-zig">The Council</span>
+            <span class="u-green">was not permitted to discuss </span>
+            <span class="u-blue-zig">expenditure</span>
+            <span class="u-green">on </span>
+            <span class="u-blue-zig">interest of debt</span>,
+            <span class="u-blue-zig">expenditure</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">State Railways</span>.
+        </li>
+        <li><strong>8. Supplementary Questions:</strong>
+            <span class="u-blue-zig">The members</span>
+            <span class="u-green">were given the right to </span>
+            <span class="u-blue-zig">ask question</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">supplementary questions</span>.
+        </li>
+        <li><strong>9. Separate Electorates:</strong>
+            <span class="u-blue-zig">The act</span>
+            <span class="u-green">provides for </span>
+            <span class="u-blue-zig">Separate electorates</span>
+            <span class="u-green">for the</span>
+            <span class="u-blue-zig">Muslims</span>.
+            <ul>
+                <li><strong>a. Reserved Seats:</strong>
+                    <span class="u-blue-zig">Some seats</span>
+                    <span class="u-green">were reserved for </span>
+                    <span class="u-blue-zig">Muslims</span>
+                    <span class="u-green">and only </span>
+                    <span class="u-blue-zig">Muslims could vote there</span>.
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p>
+        <span class="u-blue-zig">The act</span>
+        <span class="u-green">did not full fill the</span>
+        <span class="u-blue-zig">aspirations of Indians</span>.
+        <span class="u-blue-zig">They</span>
+        <span class="u-green">had lost faith in </span>
+        <span class="u-blue-zig">British government</span>.
+    </p>
+    <ul class="sub-points">
+        <li><strong>a. No Budget Vote:</strong>
+            <span class="u-blue-zig">Indian</span>
+            <span class="u-green">were not allowed to </span>
+            <span class="u-blue-zig">vote on budget</span>.
+        </li>
+        <li><strong>b. Divisive Attempt:</strong>
+            <span class="u-green">It was </span>
+            <span class="u-blue-zig">an attempt</span>
+            <span class="u-green">to divide </span>
+            <span class="u-blue-zig">Indian</span>
+            <span class="u-green">among </span>
+            <span class="u-blue-zig">religion lines</span>.
+        </li>
+        <li><strong>c. Adult Suffrage Denied:</strong>
+            <span class="u-blue-zig">Indian</span>
+            <span class="u-green">were demanding </span>
+            <span class="u-blue-zig">adult suffrage</span>
+            <span class="u-green">but it was </span>
+            <span class="u-blue-zig">not fulfilled</span>.
+        </li>
+    </ul>
+
+    <p>
+        <span class="u-green">According to </span>
+        <span class="u-red-zig">Sri Ram Sharma</span>,
+        <span class="u-blue-zig">"The constitutional autocracy</span>
+        <span class="u-green">that it set up was </span>
+        <span class="u-blue-zig">bound to find</span>
+        <span class="u-blue-zig">its autocratic side</span>
+        <span class="u-green">challenged by its </span>
+        <span class="u-blue-zig">constitutionalism</span>,
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">an answer</span>
+        <span class="u-green">had to be found for </span>
+        <span class="u-blue-zig">that challenge</span>.
+        <span class="u-blue-zig">Autocracy</span>
+        <span class="u-green">was likely to </span>
+        <span class="u-blue-zig">go overboard</span>."
+    </p>
+
+    <p>
+        <span class="u-green">According to </span>
+        <span class="u-red-zig">Lord Morley</span>,
+        <span class="u-blue-zig">these reforms</span>
+        <span class="u-green">are as </span>
+        <span class="u-blue-zig">"the opening</span>
+        <span class="u-blue-zig">of a very important chapter</span>
+        <span class="u-green">in the</span>
+        <span class="u-blue-zig">history of relations</span>
+        <span class="u-green">of </span><span class="u-red-zig">Great Britain</span>
+        <span class="u-green">and </span>
+        <span class="u-red-zig">India</span>"
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">"the turning over</span>
+        <span class="u-blue-zig">a fresh leaf</span>
+        <span class="u-green">in the</span>
+        <span class="u-blue-zig">history of British responsibility</span>
+        <span class="u-blue-zig">to India"</span>.
+    </p>
+
+    <p>
+        <span class="u-blue-zig">The reforms of </span><span class="u-red-zig">1909</span>
+        <span class="u-green">gave to the</span>
+        <span class="u-blue-zig">people of the country</span>
+        <span class="u-blue-zig">a shadow</span>
+        <span class="u-green">rather than </span>
+        <span class="u-blue-zig">substance</span>.
+    </p>
+
+    <div class="page-number">Page 10</div>
+</div>
+
+<!-- PAGE 11 -->
+<div class="pdf-page">
+    <p>
+        <span class="u-blue-zig">The British government</span>
+        <span class="u-green">wanted to suppress the</span>
+        <span class="u-blue-zig">emergence of nationalists</span>
+        <span class="u-green">because they became </span>
+        <span class="u-blue-zig">increasingly vocal</span>
+        <span class="u-green">and adopted </span>
+        <span class="u-blue-zig">a stronger tone</span>
+        <span class="u-green">while demanding </span>
+        <span class="u-blue-zig">representation of Indians</span>
+        <span class="u-blue-zig">in government</span>.
+        <span class="u-blue-zig">The extremist</span>
+        <span class="u-green">also aimed to undermine the</span>
+        <span class="u-blue-zig">foundations</span>
+        <span class="u-blue-zig">of the British rule</span>.
+    </p>
+
+    <p>
+        <span class="u-green">Therefore the</span>
+        <span class="u-blue-zig">British</span>
+        <span class="u-green">termed the</span>
+        <span class="u-blue-zig">prevailing political situation</span>
+        <span class="u-blue-zig">in the country</span>
+        <span class="u-green">as the</span>
+        <span class="u-blue-zig">Indian Unrest</span>.
+        <span class="u-blue-zig">Lord </span><span class="u-red-zig">Minto</span>
+        <span class="u-green">denounced the</span>
+        <span class="u-blue-zig">extremists</span>
+        <span class="u-green">but felt it was </span>
+        <span class="u-blue-zig">imperative</span>
+        <span class="u-green">to engage with the</span>
+        <span class="u-blue-zig">moderates</span>
+        <span class="u-green">and provide some </span>
+        <span class="u-blue-zig">political concessions</span>
+        <span class="u-green">which came to be packaged as the</span>
+        <span class="u-blue-zig">Morley-Minto reforms</span>.
+    </p>
+
+    <p>
+        <span class="u-blue-zig">The reforms of </span><span class="u-red-zig">1909</span>
+        <span class="u-green">afforded </span>
+        <span class="u-blue-zig">no answer</span>
+        <span class="u-green">and could afford </span>
+        <span class="u-blue-zig">no answer</span>
+        <span class="u-green">to the</span>
+        <span class="u-blue-zig">Indian political problem</span>.
+        <span class="u-blue-zig">Lord </span><span class="u-red-zig">Morley</span>
+        <span class="u-green">made it clear that </span>
+        <span class="u-blue-zig">colonial self-government</span>
+        <span class="u-green">was not suitable for </span>
+        <span class="u-red-zig">India</span>,
+        <span class="u-green">and he was against </span>
+        <span class="u-blue-zig">introduction of parliamentary</span>
+        <span class="u-green">or </span>
+        <span class="u-blue-zig">responsible government</span>
+        <span class="u-blue-zig">in India</span>.
+    </p>
+
+    <ul>
+        <li><strong style="color: var(--primary-red);">1. Separate Electorates Impact:</strong>
+            <span class="u-blue-zig">The introduction</span>
+            <span class="u-blue-zig">of separate electorates</span>
+            <span class="u-green">on the basis of </span>
+            <span class="u-blue-zig">religion</span>
+            <span class="u-green">was viewed as </span>
+            <span class="u-blue-zig">divisive</span>.
+            <span class="u-green">In </span>
+            <span class="u-blue-zig">Indian politics</span>,
+            <span class="u-blue-zig">this system</span>
+            <span class="u-green">ushered in </span>
+            <span class="u-blue-zig">an era</span>
+            <span class="u-blue-zig">of unabashed communalism</span>.
+            <span class="u-green">This had </span>
+            <span class="u-blue-zig">serious consequences</span>
+            <span class="u-green">which impacted the</span>
+            <span class="u-blue-zig">nation's unity</span>
+            <span class="u-green">and the</span>
+            <span class="u-blue-zig">freedom struggle</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">2. Limited Franchise:</strong>
+            <span class="u-green">It also disappointed in </span>
+            <span class="u-blue-zig">term of limited franchise</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">unreasonable qualifications</span>
+            <span class="u-green">required to stand for </span>
+            <span class="u-blue-zig">elections</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">3. Dividing Nationalist Ranks:</strong>
+            <span class="u-blue-zig">The 'constitutional' reforms</span>
+            <span class="u-green">were, in fact, aimed at </span>
+            <span class="u-blue-zig">dividing</span>
+            <span class="u-blue-zig">the nationalist ranks</span>
+            <span class="u-green">by confusing the</span>
+            <span class="u-blue-zig">Moderates</span>
+            <span class="u-green">and at checking the</span>
+            <span class="u-blue-zig">growth of unity</span>
+            <span class="u-green">among </span>
+            <span class="u-blue-zig">Indians</span>
+            <span class="u-green">through the</span>
+            <span class="u-blue-zig">obnoxious instrument</span>
+            <span class="u-blue-zig">of separate electorates</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">4. Non-Official Majority Invalidated:</strong>
+            <span class="u-green">Although the</span>
+            <span class="u-blue-zig">Provincial Councils</span>
+            <span class="u-green">had </span>
+            <span class="u-blue-zig">a non-official majority</span>,
+            <span class="u-blue-zig">the outcome</span>
+            <span class="u-green">was irrelevant because the</span>
+            <span class="u-blue-zig">non-official majority</span>
+            <span class="u-green">was invalidated by the</span>
+            <span class="u-blue-zig">election</span>
+            <span class="u-blue-zig">of nominated members</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">5. Budget Limitations:</strong>
+            <span class="u-blue-zig">Members</span>
+            <span class="u-green">were able to discuss the</span>
+            <span class="u-blue-zig">budget</span>,
+            <span class="u-green">but they were unable to </span>
+            <span class="u-blue-zig">make any significant changes</span>
+            <span class="u-green">to it</span>.
+            <span class="u-green">They could ask </span>
+            <span class="u-blue-zig">questions</span>
+            <span class="u-green">but not compel the</span>
+            <span class="u-blue-zig">executives</span>
+            <span class="u-green">to respond to the</span>
+            <span class="u-blue-zig">resolutions</span>,
+            <span class="u-green">which were more like </span>
+            <span class="u-blue-zig">recommendations</span>
+            <span class="u-green">to the</span>
+            <span class="u-blue-zig">government</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">6. Diverted Attention:</strong>
+            <span class="u-blue-zig">Morley-Minto Reform</span>
+            <span class="u-green">diverted attention away from </span>
+            <span class="u-blue-zig">political</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">economic difficulties</span>
+            <span class="u-green">that afflicted all </span>
+            <span class="u-blue-zig">Indians</span>,
+            <span class="u-blue-zig">Hindu</span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Muslim alike</span>.
+        </li>
+        <li><strong style="color: var(--primary-red);">7. No Significant Change:</strong>
+            <span class="u-green">It did not bring any </span>
+            <span class="u-blue-zig">significant change</span>
+            <span class="u-green">in the</span>
+            <span class="u-blue-zig">power of the councils</span>.
+            <span class="u-blue-zig">The autocratic form</span>
+            <span class="u-blue-zig">of government</span>
+            <span class="u-green">which came up after the</span>
+            <span class="u-blue-zig">revolt of 1857</span>
+            <span class="u-green">remained </span>
+            <span class="u-blue-zig">unchanged</span>.
+        </li>
+    </ul>
+
+    <p>
+        <span class="u-green">It was instituted to </span>
+        <span class="u-blue-zig">placate the moderates</span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">appeasement</span>
+        <span class="u-green">to the</span>
+        <span class="u-blue-zig">disseminate Muslims</span>
+        <span class="u-green">from </span>
+        <span class="u-blue-zig">National Movement</span>
+        <span class="u-green">by granting them </span>
+        <span class="u-blue-zig">separate electorate</span>.
+        <span class="u-blue-zig">The people</span>
+        <span class="u-green">had demanded </span>
+        <span class="u-blue-zig">self-government</span>
+        <span class="u-green">but what they were given was </span>
+        <span class="u-blue-zig">'benevolent despotism'</span>.
+    </p>
+
+    <div class="main-topic-header">Indian Council Act, 1919</div>
+    <p class="subtitle">(MONTAGU-CHELMSFORD REFORMS)</p>
+
+    <p>
+        <span class="u-blue-zig">The act</span>
+        <span class="u-green">was based on the</span>
+        <span class="u-blue-zig">recommendations of a report</span>
+        <span class="u-green">by </span>
+        <span class="u-red-zig">Edwin Montagu</span>(<span class="u-blue-zig">Secretary of State</span>
+        <span class="u-blue-zig">for India</span>)
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">Lord </span><span class="u-red-zig">Chelmsford</span>(<span class="u-blue-zig">Viceroy</span>).
+    </p>
+
+    <p>
+        <span class="u-green">It was </span>
+        <span class="u-blue-zig">a step</span>
+        <span class="u-green">in to introduce </span>
+        <span class="u-blue-zig">Responsible Government system</span>
+        <span class="u-blue-zig">in India</span>
+        <span class="u-green">as </span>
+        <span class="u-blue-zig">an integral part</span>
+        <span class="u-blue-zig">of Empire</span>.
+    </p>
+
+    <div class="section-header">Diarchy in Provincial Government</div>
+
+    <div class="page-number">Page 11</div>
+</div>
+<!-- =============================== PAGE 12 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Subject Classification:</strong>
+            <span class="u-blue-zig">Classification </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">central and provincial subjects.</span>
+        </li>
+        <li>
+            <strong>2. Provincial Division:</strong>
+            <span class="u-blue-zig">The provincial subjects </span>
+            <span class="u-green">were divided into </span>
+            <span class="u-blue-zig">two groups</span> —
+            <ul>
+                <li>
+                    <strong>a. Reserved:</strong>
+                    <span class="u-blue-zig">Reserved subjects</span> —
+                    <span class="u-blue-zig">justice, police, revenue.</span>
+                </li>
+                <li>
+                    <strong>b. Transferred:</strong>
+                    <span class="u-blue-zig">Transferred subjects</span> —
+                    <span class="u-blue-zig">public health, public works, education</span> etc.
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. Reserved Charge:</strong>
+            <span class="u-blue-zig">The governor </span>
+            <span class="u-green">was in charge of the </span>
+            <span class="u-blue-zig">reserved list </span>
+            <span class="u-green">along with </span>
+            <span class="u-blue-zig">his executive councillors.</span>
+        </li>
+        <li>
+            <strong>4. Transferred Charge:</strong>
+            <span class="u-blue-zig">The ministers </span>
+            <span class="u-green">were in charge of </span>
+            <span class="u-blue-zig">subjects </span>
+            <span class="u-green">under the </span>
+            <span class="u-blue-zig">transferred list.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">EXECUTIVE IN PROVINCE</div>
+    <ul>
+        <li>
+            <strong>1. Minister Responsibility:</strong>
+            <span class="u-blue-zig">The ministers </span>
+            <span class="u-green">were responsible to the </span>
+            <span class="u-blue-zig">people </span>
+            <span class="u-green">who elected them through the </span>
+            <span class="u-blue-zig">legislature.</span>
+        </li>
+        <li>
+            <strong>2. Minister Nomination:</strong>
+            <span class="u-blue-zig">These ministers </span>
+            <span class="u-green">were nominated from among the </span>
+            <span class="u-blue-zig">elected members </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">legislative council.</span>
+        </li>
+        <li>
+            <strong>3. Councillor Immunity:</strong>
+            <span class="u-blue-zig">The executive councillors </span>
+            <span class="u-green">were not responsible to the </span>
+            <span class="u-blue-zig">legislature </span>
+            <span class="u-green">unlike the </span>
+            <span class="u-blue-zig">ministers.</span>
+        </li>
+        <li>
+            <strong>4. Elected Members:</strong>
+            <span class="u-blue-zig">70% of the members </span>
+            <span class="u-green">were elected in </span>
+            <span class="u-blue-zig">provincial legislative assemblies.</span>
+        </li>
+        <li>
+            <strong>5. Electorate Type:</strong>
+            <span class="u-green">There were </span>
+            <span class="u-blue-zig">communal and class electorates.</span>
+        </li>
+        <li>
+            <strong>6. Women Suffrage:</strong>
+            <span class="u-blue-zig">Some women </span>
+            <span class="u-green">could also </span>
+            <span class="u-blue-zig">vote.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">CENTRAL GOVERNMENT</div>
+    <ul>
+        <li>
+            <strong>1. Bicameral Legislature:</strong>
+            <span class="u-blue-zig">A bicameral legislature </span>
+            <span class="u-green">was set up with </span>
+            <span class="u-blue-zig">two houses</span> —
+            <ul>
+                <li>
+                    <strong>a. Legislative Assembly:</strong>
+                    <span class="u-blue-zig">Legislative Assembly </span>(<span class="u-blue-zig">Lok Sabha</span>)
+                </li>
+                <li>
+                    <strong>b. Council of State:</strong>
+                    <span class="u-blue-zig">Council of State </span>(<span class="u-blue-zig">Rajya Sabha</span>)
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">LEGISLATIVE ASSEMBLY</div>
+    <ul>
+        <li>
+            <strong>1. Composition:</strong>
+            <span class="u-blue-zig">Legislative Assembly </span>
+            <span class="u-green">included </span>
+            <span class="u-blue-zig">145 members</span> —
+            <ul>
+                <li>
+                    <strong>a. Nominated:</strong>
+                    <span class="u-blue-zig">41 were nominated </span>(<span class="u-blue-zig">26 official </span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">15 non-official</span>)
+                </li>
+                <li>
+                    <strong>b. Elected:</strong>
+                    <span class="u-blue-zig">104 were elected </span>(<span class="u-blue-zig">General, Muslims, Europeans, Landlords, </span>
+                    <span class="u-blue-zig">representatives of India community, </span>
+                    <span class="u-green">and </span>
+                    <span class="u-blue-zig">Sikhs</span>)
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Nominated Source:</strong>
+            <span class="u-blue-zig">The nominated members </span>
+            <span class="u-green">were nominated by the </span>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">from </span>
+            <span class="u-blue-zig">Anglo-Indians </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Indian Christians.</span>
+        </li>
+        <li>
+            <strong>3. Tenure:</strong>
+            <span class="u-blue-zig">The members </span>
+            <span class="u-green">had a tenure of </span>
+            <span class="u-blue-zig">3 years.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">COUNCIL OF STATE</div>
+    <ul>
+        <li>
+            <strong>1. Composition:</strong>
+            <span class="u-blue-zig">Council of State </span>
+            <span class="u-green">included </span>
+            <span class="u-blue-zig">60 male members</span> —
+            <ul>
+                <li>
+                    <strong>a. Nominated:</strong>
+                    <span class="u-blue-zig">27 nominated </span>
+                    <span class="u-green">which consisted of </span>
+                    <span class="u-blue-zig">official, non-official members.</span>
+                </li>
+                <li>
+                    <strong>b. Elected:</strong>
+                    <span class="u-blue-zig">33 elected, </span>
+                    <span class="u-green">it included </span>
+                    <span class="u-blue-zig">General, Muslims, Europeans, Sikh.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>2. Budget Voting:</strong>
+            <span class="u-green">Only </span><span class="u-blue-zig">25% of the budget </span>
+            <span class="u-green">was subject to </span>
+            <span class="u-blue-zig">vote.</span>
+        </li>
+        <li>
+            <strong>3. Tenure:</strong>
+            <span class="u-blue-zig">The members </span>
+            <span class="u-green">had a tenure of </span>
+            <span class="u-blue-zig">5 years.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">EXECUTIVE</div>
+    <ul>
+        <li>
+            <strong>1. Chief Executive:</strong>
+            <span class="u-blue-zig">The chief executive authority </span>
+            <span class="u-green">was the </span>
+            <span class="u-blue-zig">Governor-General.</span>
+        </li>
+        <li>
+            <strong>2. Indian Members:</strong>
+            <span class="u-green">Out of the </span>
+            <span class="u-blue-zig">6 members </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">Viceroy's executive council, </span>
+            <span class="u-blue-zig">3 were to be Indian members.</span>
+        </li>
+        <li>
+            <strong>3. Ordinance Power:</strong>
+            <span class="u-blue-zig">The Governor-General </span>
+            <span class="u-green">could issue </span>
+            <span class="u-blue-zig">ordinances.</span>
+        </li>
+        <li>
+            <strong>4. Legislative Override:</strong>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">could also enact </span>
+            <span class="u-blue-zig">a bill </span>
+            <span class="u-green">without the </span>
+            <span class="u-blue-zig">legislature's consent.</span>
+        </li>
+        <li>
+            <strong>5. Disallowance Power:</strong>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">could disallow </span>
+            <span class="u-blue-zig">any question, adjournment motion </span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">debate in the house.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">VOTING RIGHT</div>
+
+    <div class="page-number">Page 12</div>
+</div>
+
+<!-- =============================== PAGE 13 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Restricted Franchise:</strong>
+            <span class="u-blue-zig">Franchise </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">restricted </span>
+            <span class="u-green">and there was </span>
+            <span class="u-blue-zig">no universal adult suffrage.</span>
+        </li>
+        <li>
+            <strong>2. Revenue Requirement:</strong>
+            <span class="u-blue-zig">Voters </span>
+            <span class="u-green">should have paid </span>
+            <span class="u-blue-zig">land revenue of Rs.3000 </span>
+            <span class="u-green">or have </span>
+            <span class="u-blue-zig">property with rental value </span>
+            <span class="u-green">or have </span>
+            <span class="u-blue-zig">taxable income.</span>
+        </li>
+        <li>
+            <strong>3. Legislative Experience:</strong>
+            <span class="u-blue-zig">Voters </span>
+            <span class="u-green">should possess </span>
+            <span class="u-blue-zig">previous experience </span>
+            <span class="u-green">in the </span>
+            <span class="u-blue-zig">legislative council.</span>
+        </li>
+        <li>
+            <strong>4. University Senate:</strong>
+            <span class="u-blue-zig">Voters </span>
+            <span class="u-green">should be members of </span>
+            <span class="u-blue-zig">a university senate.</span>
+        </li>
+        <li>
+            <strong>5. Local Body Office:</strong>
+            <span class="u-blue-zig">Voters </span>
+            <span class="u-green">should hold </span>
+            <span class="u-blue-zig">certain offices </span>
+            <span class="u-green">in the </span>
+            <span class="u-blue-zig">local bodies.</span>
+        </li>
+        <li>
+            <strong>6. Specific Titles:</strong>
+            <span class="u-blue-zig">Voters </span>
+            <span class="u-green">should hold </span>
+            <span class="u-blue-zig">some specific titles.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">INDIAN COUNCIL</div>
+    <ul>
+        <li>
+            <strong>1. Council Size:</strong>
+            <span class="u-green">It had </span>
+            <span class="u-blue-zig">at least 8 </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">a maximum of 12 members.</span>
+        </li>
+        <li>
+            <strong>2. Tenure:</strong>
+            <span class="u-blue-zig">The members </span>
+            <span class="u-green">had a tenure of </span>
+            <span class="u-blue-zig">5 years.</span>
+        </li>
+        <li>
+            <strong>3. Experience Requirement:</strong>
+            <span class="u-blue-zig">Half of the members </span>
+            <span class="u-green">should have </span>
+            <span class="u-blue-zig">ten years of experience </span>
+            <span class="u-green">in </span>
+            <span class="u-blue-zig">public service </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>4. Indian Representation:</strong>
+            <span class="u-green">There were to be </span>
+            <span class="u-blue-zig">3 Indian members </span>
+            <span class="u-green">in the </span>
+            <span class="u-blue-zig">Council.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">OTHER</div>
+    <ul>
+        <li>
+            <strong>1. Public Service Commission:</strong>
+            <span class="u-blue-zig">The act </span>
+            <span class="u-green">provided the </span>
+            <span class="u-blue-zig">establishment of a public service commission </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>2. Statutory Commission:</strong>
+            <span class="u-blue-zig">The act </span>
+            <span class="u-green">also provided that after </span>
+            <span class="u-blue-zig">10 years, </span>
+            <span class="u-blue-zig">a statutory commission </span>
+            <span class="u-green">would be set up to study the </span>
+            <span class="u-blue-zig">working of the government.</span>
+        </li>
+        <li>
+            <strong>3. High Commissioner:</strong>
+            <span class="u-blue-zig">The act </span>
+            <span class="u-green">also created </span>
+            <span class="u-blue-zig">an office of the High Commissioner </span>
+            <span class="u-green">for </span>
+            <span class="u-red-zig">India </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">London.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">DRAWBACKS</div>
+    <ul>
+        <li>
+            <strong>1. No Legislative Control:</strong>
+            <span class="u-green">At the centre, the </span>
+            <span class="u-blue-zig">legislature </span>
+            <span class="u-green">had no control over the </span>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">his executive council.</span>
+        </li>
+        <li>
+            <strong>2. Seat Allocation:</strong>
+            <span class="u-blue-zig">Allocation of seats </span>
+            <span class="u-green">were based on </span>
+            <span class="u-blue-zig">importance of provinces </span>(<span class="u-red-zig">Punjab</span> — <span class="u-blue-zig">military </span>
+            <span class="u-green">same as </span>
+            <span class="u-red-zig">Bombay </span>
+            <span class="u-blue-zig">commercial</span>).
+        </li>
+        <li>
+            <strong>3. Limited Voting:</strong>
+            <span class="u-blue-zig">The voting right </span>
+            <span class="u-green">was very limited </span>
+            <span class="u-green">which did not extend to the </span>
+            <span class="u-blue-zig">common man.</span>
+        </li>
+        <li>
+            <strong>4. Minister Limitations:</strong>
+            <span class="u-blue-zig">The provincial ministers </span>
+            <span class="u-green">had no control over </span>
+            <span class="u-blue-zig">finances </span>
+            <span class="u-green">and over </span>
+            <span class="u-blue-zig">bureaucrats.</span>
+        </li>
+        <li>
+            <strong>5. Subject Division:</strong>
+            <span class="u-blue-zig">Division of subjects </span>
+            <span class="u-green">was not satisfactory at the </span>
+            <span class="u-blue-zig">Centre.</span>
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Mahatma Gandhi </span>
+        <span class="u-green">said that </span>
+        <span class="u-blue-zig">these reforms </span>
+        <span class="u-green">were only </span>
+        <span class="u-blue-zig">a method of further draining </span>
+        <span class="u-red-zig">India </span>
+        <span class="u-green">of </span>
+        <span class="u-blue-zig">her wealth </span>
+        <span class="u-green">and of </span>
+        <span class="u-blue-zig">prolonging her servitude.</span>
+        <span class="quote-author">— Mahatma Gandhi</span>
+    </div>
+
+    <div class="quote-box">
+        <span class="u-red-zig">B.G. Tilak </span>
+        <span class="u-green">said that the </span>
+        <span class="u-blue-zig">Montford reforms </span>
+        <span class="u-green">as </span>
+        <span class="u-blue-zig">"Unworthy and disappointing </span>— <span class="u-blue-zig">a sunless dawn".</span>
+        <span class="quote-author">— B.G. Tilak</span>
+    </div>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Subhas Chandra Bose </span>
+        <span class="u-green">viewed that the </span>
+        <span class="u-red-zig">Government of India Act 1919 </span>
+        <span class="u-blue-zig">forged fresh fetters </span>
+        <span class="u-green">for the </span>
+        <span class="u-blue-zig">people.</span>
+        <span class="quote-author">— Subhas Chandra Bose</span>
+    </div>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Annie Besant </span>
+        <span class="u-green">termed the </span>
+        <span class="u-blue-zig">Act </span>
+        <span class="u-green">as </span>
+        <span class="u-blue-zig">'unworthy of </span>
+        <span class="u-red-zig">England </span>
+        <span class="u-blue-zig">to offer </span>
+        <span class="u-green">and </span>
+        <span class="u-red-zig">India </span>
+        <span class="u-blue-zig">to accept'.</span>
+        <span class="quote-author">— Annie Besant</span>
+    </div>
+
+    <div class="page-number">Page 13</div>
+</div>
+
+<!-- =============================== PAGE 14 =============================== -->
+<div class="pdf-page">
+
+    <div class="main-topic-header">Simon Commission</div>
+    <ul>
+        <li>
+            <strong>1. Appointment:</strong>
+            <span class="u-blue-zig">The Indian Statutory Commission </span>
+            {<span class="u-blue-zig">Simon Commission</span>}
+            <span class="u-green">was appointed in </span>
+            <span class="u-red-zig">1927 </span>
+            <span class="u-green">by </span>
+            <span class="u-blue-zig">Conservative government </span>
+            <span class="u-green">to evaluate the </span>
+            <span class="u-red-zig">Montagu-Chelmsford </span>
+            <span class="u-blue-zig">reform.</span>
+        </li>
+        <li>
+            <strong>2. Leadership:</strong>
+            <span class="u-green">It was headed by </span>
+            <span class="u-red-zig">Sir John Simon </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">seven other members.</span>
+        </li>
+        <li>
+            <strong>3. Responsible Authority:</strong>
+            <span class="u-red-zig">Lord Birkenhead, </span>
+            <span class="u-blue-zig">the Secretary of State </span>
+            <span class="u-green">for </span>
+            <span class="u-red-zig">India </span>
+            <span class="u-green">was responsible for </span>
+            <span class="u-blue-zig">setting up the Commission.</span>
+        </li>
+        <li>
+            <strong>4. Congress Boycott:</strong>
+            <span class="u-blue-zig">The Congress Party </span>
+            <span class="u-green">decided to boycott the </span>
+            <span class="u-blue-zig">Commission </span>
+            <span class="u-green">at their session at </span>
+            <span class="u-red-zig">Madras </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">1927 </span>
+            <span class="u-green">because </span>
+            <span class="u-blue-zig">no Indian </span>
+            <span class="u-green">was on the </span>
+            <span class="u-blue-zig">committee.</span>
+        </li>
+        <li>
+            <strong>5. Report Publication:</strong>
+            <span class="u-blue-zig">The Commission's report </span>
+            <span class="u-green">was published in </span>
+            <span class="u-red-zig">1930.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">RECOMMENDATIONS</div>
+    <ul>
+        <li>
+            <strong>1. Abolish Diarchy:</strong>
+            <span class="u-green">To abolish the </span>
+            <span class="u-blue-zig">Diarchy in provinces.</span>
+        </li>
+        <li>
+            <strong>2. Communal Electorates:</strong>
+            <span class="u-green">Withhold the </span>
+            <span class="u-blue-zig">separate communal electorates.</span>
+        </li>
+        <li>
+            <strong>3. Responsible Government:</strong>
+            <span class="u-blue-zig">Extension of responsible government </span>
+            <span class="u-green">in </span>
+            <span class="u-blue-zig">provinces.</span>
+        </li>
+        <li>
+            <strong>4. Indian Federation:</strong>
+            <span class="u-blue-zig">Creation of Indian federation </span>
+            <span class="u-green">of </span>
+            <span class="u-blue-zig">British India </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Princely states.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">IMPACT</div>
+    <ul>
+        <li>
+            <strong>1. Non-Cooperation:</strong>
+            <span class="u-blue-zig">The Indian National Congress </span>
+            <span class="u-green">decided not to cooperate with the </span>
+            <span class="u-blue-zig">Commission </span>
+            <span class="u-green">at </span>
+            <span class="u-red-zig">Madras </span>
+            <span class="u-blue-zig">session </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">1927.</span>
+        </li>
+        <li>
+            <strong>2. All Parties Conference:</strong>
+            <span class="u-blue-zig">An All Parties Conference </span>
+            <span class="u-green">met in </span>
+            <span class="u-red-zig">February 1928 </span>
+            <span class="u-green">to appoint </span>
+            <span class="u-blue-zig">a Subcommittee </span>
+            <span class="u-green">under the Chairmanship of </span>
+            <span class="u-red-zig">Motilal Nehru </span>
+            <span class="u-green">to draft </span>
+            <span class="u-blue-zig">a memorandum.</span>
+        </li>
+        <li>
+            <strong>3. Simon Go Back:</strong>
+            <span class="u-blue-zig">Simon Go Back </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">started.</span>
+        </li>
+        <li>
+            <strong>4. Young Turk Leaders:</strong>
+            <span class="u-red-zig">Jawaharlal Nehru, </span>
+            <span class="u-red-zig">Vallabhbhai Patel </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Subhas Chandra Bose </span>
+            <span class="u-green">emerged as the </span>
+            <span class="u-blue-zig">Young Turk leader.</span>
+        </li>
+        <li>
+            <strong>5. Round Table Conferences:</strong>
+            <span class="u-blue-zig">The British government </span>
+            <span class="u-green">convened </span>
+            <span class="u-blue-zig">three round table conferences.</span>
+        </li>
+        <li>
+            <strong>6. White Paper:</strong>
+            <span class="u-blue-zig">A White Paper on Constitutional Reforms </span>
+            <span class="u-green">was submitted for the </span>
+            <span class="u-blue-zig">consideration </span>
+            <span class="u-green">of </span>
+            <span class="u-blue-zig">Joint Select Committee </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">British Parliament.</span>
+        </li>
+        <li>
+            <strong>7. Next Act:</strong>
+            <span class="u-blue-zig">The recommendations </span>
+            <span class="u-green">of this committee were incorporated in the </span>
+            <span class="u-blue-zig">next </span>
+            <span class="u-red-zig">Government of India Act of 1935.</span>
+        </li>
+    </ul>
+
+    <div class="main-topic-header">NEHRU REPORT, 1928</div>
+    <ul>
+        <li>
+            <strong>1. Origin:</strong>
+            <span class="u-blue-zig">An All Parties Conference </span>
+            <span class="u-green">met in </span>
+            <span class="u-red-zig">February 1928 </span>
+            <span class="u-green">to appoint </span>
+            <span class="u-blue-zig">a Subcommittee </span>
+            <span class="u-green">under the Chairmanship of </span>
+            <span class="u-red-zig">Motilal Nehru </span>
+            <span class="u-green">to draft </span>
+            <span class="u-blue-zig">a memorandum.</span>
+        </li>
+        <li>
+            <strong>2. Subcommittee Setup:</strong>
+            <span class="u-blue-zig">The subcommittee </span>
+            <span class="u-green">was set up to draft the </span>
+            <span class="u-blue-zig">Constitution </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">19 May 1928.</span>
+        </li>
+        <li>
+            <strong>3. Committee Members:</strong>
+            <span class="u-red-zig">Motilal Nehru </span>(<span class="u-blue-zig">Chairman</span>),
+            <span class="u-red-zig">Sir Ali Imam, </span>
+            <span class="u-red-zig">Tej Bahadur Sapru </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Subhas Chandra Bose.</span>
+            <span class="u-red-zig">M.R. Jayakar </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Annie Besant </span>
+            <span class="u-green">joined the </span>
+            <span class="u-blue-zig">Committee later.</span>
+        </li>
+        <li>
+            <strong>4. Secretary:</strong>
+            <span class="u-red-zig">Jawaharlal Nehru </span>
+            <span class="u-green">was appointed the </span>
+            <span class="u-blue-zig">secretary </span>
+            <span class="u-green">to the </span>
+            <span class="u-blue-zig">Committee.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">FEATURES — CLAIMED</div>
+    <ul>
+        <li>
+            <strong>1. Dominion Status:</strong>
+            <span class="u-blue-zig">Dominion status </span>
+            <span class="u-green">for </span>
+            <span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>2. Separate Electorates:</strong>
+            <span class="u-blue-zig">Rejection of separate electorates.</span>
+        </li>
+        <li>
+            <strong>3. Fundamental Rights:</strong>
+            <span class="u-blue-zig">Nineteen fundamental rights.</span>
+        </li>
+        <li>
+            <strong>4. Responsible Government:</strong>
+            <span class="u-blue-zig">Responsible government </span>
+            <span class="u-green">at the </span>
+            <span class="u-blue-zig">Centre </span>
+            <span class="u-green">as well as in </span>
+            <span class="u-blue-zig">provinces.</span>
+        </li>
+        <li>
+            <strong>5. House of Representatives:</strong>
+            <span class="u-blue-zig">The House of Representatives </span>(<span class="u-blue-zig">500 members</span>)
+            <span class="u-green">to have a tenure of </span>
+            <span class="u-blue-zig">5 years.</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 14</div>
+</div>
+
+<!-- =============================== PAGE 15 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>6. Senate:</strong>
+            <span class="u-blue-zig">A 200-member Senate </span>
+            <span class="u-green">to be elected by </span>
+            <span class="u-blue-zig">provincial councils </span>
+            <span class="u-green">have a tenure of </span>
+            <span class="u-blue-zig">7 years.</span>
+        </li>
+        <li>
+            <strong>7. Governor-General:</strong>
+            <span class="u-blue-zig">The central government </span>
+            <span class="u-green">to be headed by </span>
+            <span class="u-blue-zig">a governor-general, </span>
+            <span class="u-green">appointed by the </span>
+            <span class="u-blue-zig">British Government.</span>
+        </li>
+        <li>
+            <strong>8. Executive Council:</strong>
+            <span class="u-blue-zig">The Governor-General </span>
+            <span class="u-green">will act on the advice of the </span>
+            <span class="u-blue-zig">Executive Council. </span>
+            <span class="u-green">It shall be </span>
+            <span class="u-blue-zig">collectively responsible </span>
+            <span class="u-green">to the </span>
+            <span class="u-blue-zig">parliament.</span>
+        </li>
+        <li>
+            <strong>9. Muslim Representation:</strong>
+            <span class="u-blue-zig">Muslims </span>
+            <span class="u-green">should be given </span>
+            <span class="u-blue-zig">one-fourth representation </span>
+            <span class="u-green">in the </span>
+            <span class="u-blue-zig">Central Legislature.</span>
+        </li>
+        <li>
+            <strong>10. Sindh Separation:</strong>
+            <span class="u-red-zig">Sindh </span>
+            <span class="u-green">should be separated from </span>
+            <span class="u-red-zig">Mumbai.</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Congress-League Gulf:</strong>
+        <span class="u-blue-zig">Nehru report </span>
+        <span class="u-green">cemented the gulf between </span>
+        <span class="u-blue-zig">Congress </span>
+        <span class="u-green">and </span>
+        <span class="u-red-zig">Muslim League.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Background:</strong>
+        <span class="u-green">It was drafted in the </span>
+        <span class="u-blue-zig">background of increasing divergences </span>
+        <span class="u-green">between </span>
+        <span class="u-blue-zig">Congress </span>
+        <span class="u-green">and </span>
+        <span class="u-red-zig">Muslim League </span>
+        <span class="u-green">on one hand and </span>
+        <span class="u-blue-zig">imposition of constitutional scheme </span>
+        <span class="u-green">by </span>
+        <span class="u-blue-zig">Britishers </span>
+        <span class="u-green">through </span>
+        <span class="u-red-zig">Simon Commission.</span>
+        <span class="u-green">Amid these challenges </span>
+        <span class="u-blue-zig">Nehru Report </span>
+        <span class="u-green">tried to cement the </span>
+        <span class="u-blue-zig">relations </span>
+        <span class="u-green">between </span>
+        <span class="u-blue-zig">Congress </span>
+        <span class="u-green">and </span>
+        <span class="u-red-zig">Muslim League </span>
+        <span class="u-green">and present </span>
+        <span class="u-blue-zig">a unified front </span>
+        <span class="u-green">against </span>
+        <span class="u-blue-zig">Britishers </span>
+        <span class="u-green">through these following measures</span> —
+    </p>
+    <ul>
+        <li>
+            <strong>a. Reservation for Minorities:</strong>
+            <span class="u-blue-zig">The Nehru report </span>
+            <span class="u-green">recommended </span>
+            <span class="u-blue-zig">reservation of seats </span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">Muslims </span>
+            <span class="u-green">only in </span>
+            <span class="u-blue-zig">provinces </span>
+            <span class="u-green">where they were in </span>
+            <span class="u-blue-zig">a minority.</span>
+        </li>
+        <li>
+            <strong>b. Abolish Separate Electorate:</strong>
+            <span class="u-blue-zig">The report </span>
+            <span class="u-green">proposed to abolish </span>
+            <span class="u-blue-zig">separate electorate </span>
+            <span class="u-green">to discard </span>
+            <span class="u-blue-zig">reservation for seats </span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">Muslim majority </span>
+            <span class="u-green">in the </span>
+            <span class="u-red-zig">Punjab </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Bengal </span>
+            <span class="u-green">and to reject the </span>
+            <span class="u-blue-zig">principal of weightage </span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">Muslim minorities, </span>
+            <span class="u-green">this was a reversal of the </span>
+            <span class="u-red-zig">Lucknow Pact.</span>
+        </li>
+        <li>
+            <strong>c. Hindu Reservation:</strong>
+            <span class="u-green">It asked for </span>
+            <span class="u-blue-zig">a similar reservation </span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">Hindus </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">North Western Frontier Province.</span>
+        </li>
+        <li>
+            <strong>d. Cultural Protection:</strong>
+            <span class="u-blue-zig">Nehru Report </span>
+            <span class="u-green">also recommended to ensure </span>
+            <span class="u-blue-zig">full protection </span>
+            <span class="u-green">to </span>
+            <span class="u-blue-zig">cultural and religious rights </span>
+            <span class="u-green">of </span>
+            <span class="u-blue-zig">Muslims, </span>
+            <span class="u-green">which was done to ensure </span>
+            <span class="u-blue-zig">Muslim minority in the country </span>
+            <span class="u-green">that their </span>
+            <span class="u-blue-zig">rights will be protected.</span>
+        </li>
+        <li>
+            <strong>e. Sindh Separation:</strong>
+            <span class="u-red-zig">Sindh </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Karnataka </span>
+            <span class="u-green">shall be </span>
+            <span class="u-blue-zig">separate </span>
+            <span class="u-green">any further </span>
+            <span class="u-blue-zig">recognition </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">proposed report </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">good but not practical. </span>
+            <span class="u-blue-zig">The joint and mixed concept </span>
+            <span class="u-green">was practically unacceptable for the </span>
+            <span class="u-red-zig">Muslim League.</span>
+        </li>
+        <li>
+            <strong>f. Jinnah's Demand:</strong>
+            <span class="u-red-zig">Jinnah </span>
+            <span class="u-green">demanded that the </span>
+            <span class="u-blue-zig">residual powers </span>
+            <span class="u-green">to be vested with the </span>
+            <span class="u-blue-zig">provinces.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">DELHI PROPOSALS</div>
+    <ul>
+        <li>
+            <strong>1. Origin:</strong>
+            <span class="u-green">Drafted in the </span>
+            <span class="u-red-zig">Muslim League </span>
+            <span class="u-blue-zig">session </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">Delhi </span>
+            <span class="u-red-zig">December 1927.</span>
+        </li>
+        <li>
+            <strong>2. Accepted Proposals:</strong>
+            <span class="u-blue-zig">Four proposals </span>
+            <span class="u-green">were accepted in the </span>
+            <span class="u-red-zig">Madras </span>
+            <span class="u-blue-zig">session </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">Congress </span>(<span class="u-red-zig">Dec. 1927</span>).
+            <ul>
+                <li>
+                    <strong>a. Proportional Representation:</strong>
+                    <span class="u-blue-zig">Representation to Muslims </span>
+                    <span class="u-green">in </span>
+                    <span class="u-red-zig">Punjab </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">Bengal </span>
+                    <span class="u-green">in proportion to their </span>
+                    <span class="u-blue-zig">population.</span>
+                </li>
+                <li>
+                    <strong>b. New Provinces:</strong>
+                    <span class="u-blue-zig">Formation of three new Muslim majority provinces</span> —
+                    <span class="u-red-zig">Sindh, </span>
+                    <span class="u-red-zig">Baluchistan </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">North-West Frontier Province.</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="section-header">DELHI MANIFESTO</div>
+    <ul>
+        <li>
+            <strong>1. Origin:</strong>
+            <span class="u-green">Drafted by the </span>
+            <span class="u-blue-zig">prominent national leaders </span>
+            <span class="u-green">on the purpose of the </span>
+            <span class="u-blue-zig">Round Table Conference </span>
+            <span class="u-green">on </span>
+            <span class="u-red-zig">November 2, 1929.</span>
+        </li>
+        <li>
+            <strong>2. Dominion Status:</strong>
+            <span class="u-blue-zig">The basic principle </span>
+            <span class="u-green">of </span>
+            <span class="u-blue-zig">dominion status </span>
+            <span class="u-green">should be </span>
+            <span class="u-blue-zig">immediately accepted.</span>
+        </li>
+        <li>
+            <strong>3. Congress Representation:</strong>
+            <span class="u-blue-zig">The Congress </span>
+            <span class="u-green">should have </span>
+            <span class="u-blue-zig">majority representation </span>
+            <span class="u-green">at the </span>
+            <span class="u-blue-zig">conference.</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 15</div>
+</div>
+
+<!-- =============================== PAGE 16 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>4. Irwin's Rejection:</strong>
+            <span class="u-red-zig">Viceroy Irwin </span>
+            <span class="u-green">promised </span>
+            <span class="u-blue-zig">a Round Table Conference </span>
+            <span class="u-green">when the </span>
+            <span class="u-red-zig">Simon Commission </span>
+            <span class="u-green">submitted its report but </span>
+            <span class="u-green">he rejected these demands on </span>
+            <span class="u-red-zig">December 23, 1929.</span>
+        </li>
+    </ul>
+
+    <div class="main-topic-header">Government of India Act, 1935</div>
+    <p>
+        <strong style="color: var(--primary-red);">1. Lengthiest Act:</strong>
+        {<span class="u-blue-zig">Lengthiest Act</span> —
+        <span class="u-green">contained </span>
+        <span class="u-blue-zig">321 sections </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">10 schedules</span>}
+    </p>
+    <ul>
+        <li>
+            <strong>2. Discussion at RTC:</strong>
+            <span class="u-blue-zig">The Simon Commission report </span>
+            <span class="u-green">was discussed at </span>
+            <span class="u-blue-zig">Round Table Conference </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">a White Paper </span>
+            <span class="u-green">was introduced in </span>
+            <span class="u-blue-zig">British Parliament.</span>
+        </li>
+        <li>
+            <strong>3. Joint Committee:</strong>
+            <span class="u-blue-zig">A joint committee </span>
+            <span class="u-green">of both the </span>
+            <span class="u-blue-zig">houses of the Parliament </span>
+            <span class="u-green">was formed under the Chairmanship of </span>
+            <span class="u-red-zig">Lord Linlithgow.</span>
+        </li>
+        <li>
+            <strong>4. Committee Report:</strong>
+            <span class="u-blue-zig">The report of the joint committee </span>
+            <span class="u-green">suggested to introduce the </span>
+            <span class="u-red-zig">Government of India Act 1935.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">FEATURES</div>
+
+    <div class="section-header">DYARCHY AT CENTRE</div>
+    <ul>
+        <li>
+            <strong>1. Central Adoption:</strong>
+            <span class="u-green">Adopted at the </span>
+            <span class="u-blue-zig">central level.</span>
+        </li>
+        <li>
+            <strong>2. Reserved Subjects:</strong>
+            <span class="u-blue-zig">Reserved subjects </span>
+            <span class="u-green">administered by the </span>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">on the advice of the </span>
+            <span class="u-blue-zig">Executive Council.</span>
+            <ul>
+                <li>
+                    <strong>a. Council Limit:</strong>
+                    <span class="u-blue-zig">Executive Council </span>
+                    <span class="u-green">could not exceed its limit of </span>
+                    <span class="u-blue-zig">three members.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>3. Transferred Subjects:</strong>
+            <span class="u-blue-zig">Transferred subjects </span>
+            <span class="u-green">administered on the advice of </span>
+            <span class="u-blue-zig">ministers </span>
+            <span class="u-green">and the </span>
+            <span class="u-blue-zig">number of ministers </span>
+            <span class="u-green">could not exceed </span>
+            <span class="u-blue-zig">10.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">DIVISION OF SUBJECTS</div>
+    <ul>
+        <li>
+            <strong>1. Federal List:</strong>
+            <span class="u-blue-zig">Federal List</span> —
+            <span class="u-blue-zig">59 Subjects</span> —
+            <span class="u-blue-zig">Army, Currency, Post, External Affairs.</span>
+        </li>
+        <li>
+            <strong>2. Provincial List:</strong>
+            <span class="u-blue-zig">Provincial List</span> —
+            <span class="u-blue-zig">54 Subjects</span> —
+            <span class="u-blue-zig">Land Revenue, Irrigation, Agriculture, Public Order.</span>
+        </li>
+        <li>
+            <strong>3. Concurrent List:</strong>
+            <span class="u-blue-zig">Concurrent List</span> —
+            <span class="u-blue-zig">26 Subjects.</span>
+        </li>
+        <li>
+            <strong>4. Provincial Autonomy:</strong>
+            <span class="u-blue-zig">Provincial autonomy.</span>
+        </li>
+        <li>
+            <strong>5. Residual Power:</strong>
+            <span class="u-blue-zig">Residual power </span>
+            <span class="u-green">was vested in </span>
+            <span class="u-blue-zig">Governor-General.</span>
+        </li>
+        <li>
+            <strong>6. Finance Bill:</strong>
+            <span class="u-blue-zig">A Finance Bill </span>
+            <span class="u-green">could not be placed in the </span>
+            <span class="u-blue-zig">Central Legislature </span>
+            <span class="u-green">unless the </span>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">gives </span>
+            <span class="u-blue-zig">his assent </span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">his consent.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">ALL INDIA FEDERATION</div>
+    <div class="info-box">
+        <div class="info-box-header">SOURCES</div>
+        <span class="u-red-zig">Nehru Report, </span>
+        <span class="u-red-zig">Lothian Report 1932, </span>
+        <span class="u-red-zig">White Paper 1933, </span>
+        <span class="u-red-zig">Third Round Table Conference, </span>
+        <span class="u-red-zig">Joint Select Committee Report, </span>
+        <span class="u-red-zig">Simon Commission Report</span>
+    </div>
+
+    <div class="page-number">Page 16</div>
+</div>
+
+<!-- =============================== PAGE 17 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>1. Composition:</strong>
+            <span class="u-green">Comprise </span>
+            <span class="u-blue-zig">British India Provinces </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Princely States.</span>
+        </li>
+        <li>
+            <strong>2. Discretion Power:</strong>
+            <span class="u-blue-zig">Discretion power </span>
+            <span class="u-green">to the </span>
+            <span class="u-blue-zig">State </span>
+            <span class="u-green">whether to join the </span>
+            <span class="u-blue-zig">federation.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">FEDERAL LEGISLATURE</div>
+    <ul>
+        <li>
+            <strong>1. Composition:</strong>
+            <span class="u-blue-zig">Governor-General </span>+
+            <span class="u-blue-zig">Council of States </span>+
+            <span class="u-blue-zig">Federal Assembly.</span>
+        </li>
+        <li>
+            <strong>2. Session Frequency:</strong>
+            <span class="u-green">Meet </span>
+            <span class="u-blue-zig">at least once in a year.</span>
+        </li>
+        <li>
+            <strong>3. Powers of GG:</strong>
+            <span class="u-blue-zig">Summoned, Adjourned </span>
+            <span class="u-green">or </span>
+            <span class="u-blue-zig">Dissolved </span>
+            <span class="u-green">by the </span>
+            <span class="u-blue-zig">Governor-General.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">COUNCIL OF STATES</div>
+    <ul>
+        <li>
+            <strong>1. Representatives:</strong>
+            <span class="u-blue-zig">Representatives </span>
+            <span class="u-green">from </span>
+            <span class="u-blue-zig">British India </span>(<span class="u-blue-zig">156</span>)
+            <span class="u-green">as well as </span>
+            <span class="u-blue-zig">Princely States </span>(<span class="u-blue-zig">104</span>).
+        </li>
+        <li>
+            <strong>2. Permanence:</strong>
+            <span class="u-green">Could not be </span>
+            <span class="u-blue-zig">dissolved.</span>
+        </li>
+        <li>
+            <strong>3. Retirement Provision:</strong>
+            <span class="u-blue-zig">One-third members </span>
+            <span class="u-green">of the council will </span>
+            <span class="u-blue-zig">retire </span>
+            <span class="u-green">as per the </span>
+            <span class="u-blue-zig">provision.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">FEDERAL ASSEMBLY</div>
+    <ul>
+        <li>
+            <strong>1. Dissolution:</strong>
+            <span class="u-green">Could dissolve only after the </span>
+            <span class="u-blue-zig">completion period </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">five years.</span>
+        </li>
+        <li>
+            <strong>2. Representatives:</strong>
+            <span class="u-blue-zig">Representatives </span>
+            <span class="u-green">from </span>
+            <span class="u-blue-zig">British India </span>(<span class="u-blue-zig">250</span>)
+            <span class="u-green">as well as </span>
+            <span class="u-blue-zig">Princely States </span>(<span class="u-blue-zig">125</span>).
+        </li>
+    </ul>
+
+    <div class="section-header">FEDERAL COURT</div>
+    <ul>
+        <li>
+            <strong>1. Purpose:</strong>
+            <span class="u-green">To resolve </span>
+            <span class="u-blue-zig">disputes </span>
+            <span class="u-green">arising between </span>
+            <span class="u-blue-zig">two states </span>
+            <span class="u-green">or between </span>
+            <span class="u-blue-zig">state and federal government.</span>
+        </li>
+        <li>
+            <strong>2. Constitutional Role:</strong>
+            <span class="u-blue-zig">Interpreter of the Constitution.</span>
+        </li>
+        <li>
+            <strong>3. Appeal:</strong>
+            <span class="u-blue-zig">The appeal </span>
+            <span class="u-green">could be made to the </span>
+            <span class="u-blue-zig">Privy Council.</span>
+        </li>
+        <li>
+            <strong>4. Establishment:</strong>
+            <span class="u-blue-zig">The court </span>
+            <span class="u-green">was introduced after </span>
+            <span class="u-blue-zig">two years </span>
+            <span class="u-green">in </span>
+            <span class="u-red-zig">1937.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">OTHER FEATURES</div>
+    <ul>
+        <li>
+            <strong>1. Indian Council Abolished:</strong>
+            <span class="u-blue-zig">The Indian Council </span>(<span class="u-red-zig">1858</span>)
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">abolished.</span>
+        </li>
+        <li>
+            <strong>2. Reserve Bank:</strong>
+            <span class="u-blue-zig">Establishment of the </span>
+            <span class="u-red-zig">Reserve Bank of India.</span>
+        </li>
+        <li>
+            <strong>3. New States:</strong>
+            <span class="u-blue-zig">Creation of two new states</span> —
+            <span class="u-red-zig">Sindh </span>
+            <span class="u-green">and </span>
+            <span class="u-red-zig">Orissa.</span>
+        </li>
+        <li>
+            <strong>4. Burma Separation:</strong>
+            <span class="u-red-zig">Burma </span>
+            <span class="u-green">was separated from </span>
+            <span class="u-red-zig">India.</span>
+            <ul>
+                <li>
+                    <strong>a. Lord Dundas:</strong>
+                    <span class="u-red-zig">Lord Dundas </span>
+                    <span class="u-green">was the </span>
+                    <span class="u-blue-zig">first person to become </span>
+                    <span class="u-blue-zig">Secretary of State </span>
+                    <span class="u-green">of both the colonies </span>
+                    <span class="u-red-zig">India </span>
+                    <span class="u-green">and </span>
+                    <span class="u-red-zig">Burma.</span>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <strong>5. Aden Separation:</strong>
+            <span class="u-blue-zig">Expenses of </span>
+            <span class="u-red-zig">Aden </span>
+            <span class="u-green">was separated from </span>
+            <span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>6. Railway Authority:</strong>
+            <span class="u-blue-zig">Federal railway authority </span>
+            <span class="u-green">was </span>
+            <span class="u-blue-zig">set up.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">IMPORTANCE</div>
+    <ul>
+        <li>
+            <strong>1. National Aspirations:</strong>
+            <span class="u-blue-zig">The act </span>
+            <span class="u-green">mainly focused to fulfill the </span>
+            <span class="u-blue-zig">National Aspirations.</span>
+        </li>
+        <li>
+            <strong>2. Better Governance:</strong>
+            <span class="u-green">Giving </span>
+            <span class="u-blue-zig">more freedom </span>
+            <span class="u-green">to </span>
+            <span class="u-blue-zig">British India </span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">better governance </span>
+            <span class="u-green">in the form of </span>
+            <span class="u-blue-zig">Provincial Autonomy.</span>
+        </li>
+        <li>
+            <strong>3. Women Electorates:</strong>
+            <span class="u-blue-zig">Separate electorates </span>
+            <span class="u-green">for </span>
+            <span class="u-blue-zig">women.</span>
+        </li>
+        <li>
+            <strong>4. Minority Protection:</strong>
+            <span class="u-blue-zig">Protection of minorities.</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 17</div>
+</div>
+
+<!-- =============================== PAGE 18 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>5. Federal Government:</strong>
+            <span class="u-green">Proposed to form the </span>
+            <span class="u-blue-zig">federal government </span>
+            <span class="u-green">that allowed </span>
+            <span class="u-blue-zig">princes to participate </span>
+            <span class="u-green">in </span>
+            <span class="u-blue-zig">political affairs </span>
+            <span class="u-green">of </span>
+            <span class="u-red-zig">India.</span>
+        </li>
+        <li>
+            <strong>6. GG as Pivot:</strong>
+            <span class="u-green">To make the </span>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-blue-zig">Pivot of the Constitution </span>
+            <span class="u-green">to settle if there were </span>
+            <span class="u-blue-zig">any disputes </span>
+            <span class="u-green">among the </span>
+            <span class="u-blue-zig">people.</span>
+        </li>
+        <li>
+            <strong>7. Dominion Status:</strong>
+            <span class="u-green">It leads to the </span>
+            <span class="u-blue-zig">Relationship of a Dominion Status.</span>
+        </li>
+        <li>
+            <strong>8. Constitutional Legacy:</strong>
+            <span class="u-blue-zig">Constitution of India </span>
+            <span class="u-green">was the </span>
+            <span class="u-blue-zig">residue of the legacy </span>
+            <span class="u-green">started by the </span>
+            <span class="u-red-zig">Government of India Act, 1935.</span>
+        </li>
+    </ul>
+
+    <div class="section-header">CRITICISM</div>
+    <ul>
+        <li>
+            <strong>1. Not Close to Aspirations:</strong>
+            <span class="u-blue-zig">The provision of the act </span>
+            <span class="u-green">was nowhere close to the </span>
+            <span class="u-blue-zig">Indian aspiration </span>
+            <span class="u-green">because </span>
+            <span class="u-blue-zig">Congress </span>
+            <span class="u-green">was demanding </span>
+            <span class="u-blue-zig">complete Independence </span>
+            <span class="u-green">but there was </span>
+            <span class="u-blue-zig">no trace of independence </span>
+            <span class="u-green">in this </span>
+            <span class="u-blue-zig">act.</span>
+        </li>
+        <li>
+            <strong>2. Fake Autonomy:</strong>
+            <span class="u-blue-zig">The concept of Provincial autonomy </span>
+            <span class="u-green">was fake because </span>
+            <span class="u-blue-zig">real power </span>
+            <span class="u-green">is still in </span>
+            <span class="u-blue-zig">British government.</span>
+        </li>
+        <li>
+            <strong>3. Veto Power:</strong>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">still enjoys the </span>
+            <span class="u-blue-zig">Veto power.</span>
+        </li>
+        <li>
+            <strong>4. Dyarchy Opposition:</strong>
+            <span class="u-blue-zig">The Congress </span>
+            <span class="u-green">strongly opposed the introduction of the </span>
+            <span class="u-blue-zig">Dyarchy at centre </span>
+            <span class="u-green">because it failed at the </span>
+            <span class="u-blue-zig">Provincial level.</span>
+        </li>
+        <li>
+            <strong>5. Native State Freedom:</strong>
+            <span class="u-blue-zig">Congress </span>
+            <span class="u-green">wanted all </span>
+            <span class="u-blue-zig">Native states </span>
+            <span class="u-green">must compulsory join the </span>
+            <span class="u-blue-zig">Indian Federation </span>
+            <span class="u-green">but the act gave </span>
+            <span class="u-blue-zig">freedom to Native states </span>
+            <span class="u-green">to decide where they wanted to be part of the </span>
+            <span class="u-blue-zig">Federation.</span>
+        </li>
+        <li>
+            <strong>6. Separate Electorate:</strong>
+            <span class="u-blue-zig">Congress </span>
+            <span class="u-green">was against the </span>
+            <span class="u-blue-zig">system of separate electorate.</span>
+        </li>
+        <li>
+            <strong>7. British Dominion:</strong>
+            <span class="u-green">It only showed the </span>
+            <span class="u-blue-zig">dominion of the British Government </span>
+            <span class="u-green">over the </span>
+            <span class="u-blue-zig">Indians.</span>
+        </li>
+    </ul>
+
+    <div class="quote-box">
+        <span class="u-red-zig">Jawaharlal Nehru </span>
+        <span class="u-green">said that the act </span>
+        <span class="u-green">for </span>
+        <span class="u-blue-zig">Indians </span>
+        <span class="u-green">seems like </span>— <span class="u-blue-zig">Driving a car </span>
+        <span class="u-green">with </span>
+        <span class="u-blue-zig">all breaks </span>
+        <span class="u-green">but with </span>
+        <span class="u-blue-zig">no engine.</span>
+        <span class="quote-author">— Jawaharlal Nehru</span>
+    </div>
+
+    <div class="quote-box">
+        <span class="u-red-zig">M.A. Jinnah </span>
+        <span class="u-green">said that the </span>
+        <span class="u-blue-zig">act </span>
+        <span class="u-green">was like </span>
+        <span class="u-blue-zig">a rotten fruit.</span>
+        <span class="quote-author">— M.A. Jinnah</span>
+    </div>
+
+    <p>
+        <strong style="color: var(--primary-red);">1. Nehru's Statement Context:</strong>
+        <span class="u-blue-zig">The act </span>
+        <span class="u-green">for </span>
+        <span class="u-blue-zig">Indians </span>
+        <span class="u-green">seems like </span>—
+        <span class="u-blue-zig">Driving a car </span>
+        <span class="u-green">with </span>
+        <span class="u-blue-zig">all breaks </span>
+        <span class="u-green">but with </span>
+        <span class="u-blue-zig">no engine.</span>
+    </p>
+    <p>
+        <strong style="color: var(--primary-red);">2. Criticism Context:</strong>
+        <span class="u-green">While criticizing the </span>
+        <span class="u-red-zig">Government of India Act 1935 </span>
+        <span class="u-red-zig">Jawaharlal Nehru </span>
+        <span class="u-green">said the above statement. </span>
+        <span class="u-green">It was the </span>
+        <span class="u-blue-zig">lengthiest Act </span>
+        <span class="u-green">that was made before the year </span>
+        <span class="u-red-zig">1935. </span>
+        <span class="u-green">It proposed </span>
+        <span class="u-blue-zig">many salient features </span>
+        <span class="u-green">such as the </span>
+        <span class="u-blue-zig">creation of All India Federation, </span>
+        <span class="u-blue-zig">Provincial Autonomy, </span>
+        <span class="u-blue-zig">provision for safeguards </span>
+        <span class="u-green">and </span>
+        <span class="u-blue-zig">reservation, </span>
+        etc.
+        <span class="u-blue-zig">These features </span>
+        <span class="u-green">were important for the </span>
+        <span class="u-blue-zig">Britishers </span>
+        <span class="u-green">but </span>
+        <span class="u-blue-zig">Indian politicians </span>
+        <span class="u-green">were not happy with </span>
+        <span class="u-blue-zig">these features.</span>
+    </p>
+    <ul>
+        <li>
+            <strong>a. No Independence:</strong>
+            <span class="u-blue-zig">The provision of the Act of 1935 </span>
+            <span class="u-green">were nowhere close to the </span>
+            <span class="u-blue-zig">Indian aspiration </span>
+            <span class="u-green">because </span>
+            <span class="u-blue-zig">Congress </span>
+            <span class="u-green">was demanding </span>
+            <span class="u-blue-zig">complete Independence </span>
+            <span class="u-green">but there was </span>
+            <span class="u-blue-zig">no trace of independence </span>
+            <span class="u-green">in this </span>
+            <span class="u-blue-zig">act.</span>
+        </li>
+        <li>
+            <strong>b. Farce Autonomy:</strong>
+            <span class="u-blue-zig">Concept of provincial autonomy </span>
+            <span class="u-green">was farce because </span>
+            <span class="u-blue-zig">real power </span>
+            <span class="u-green">were still in the hand of </span>
+            <span class="u-blue-zig">British government.</span>
+        </li>
+        <li>
+            <strong>c. Veto Power:</strong>
+            <span class="u-blue-zig">Governor </span>
+            <span class="u-green">and </span>
+            <span class="u-blue-zig">Governor-General </span>
+            <span class="u-green">enjoy </span>
+            <span class="u-blue-zig">veto power.</span>
+        </li>
+    </ul>
+
+    <div class="page-number">Page 18</div>
+</div>
+
+<!-- =============================== PAGE 19 =============================== -->
+<div class="pdf-page">
+
+    <ul>
+        <li>
+            <strong>d. Dyarchy Failure:</strong>
+            <span class="u-blue-zig">The Congress </span>
+            <span class="u-green">strongly opposed the introduction of </span>
+            <span class="u-blue-zig">dyarchy at the centre </span>
+            <span class="u-green">because it failed at </span>
+            <span class="u-blue-zig">provincial level.</span>
+        </li>
+        <li>
+            <strong>e. Native State Freedom:</strong>
+            <span class="u-blue-zig">Congress </span>
+            <span class="u-green">wanted all </span>
+            <span class="u-blue-zig">Native States </span>
+            <span class="u-green">must compulsorily join the </span>
+            <span class="u-blue-zig">Indian Federation </span>
+            <span class="u-green">but the act gave </span>
+            <span class="u-blue-zig">freedom to native States </span>
+            <span class="u-green">to decide whether they wanted to be part of the </span>
+            <span class="u-blue-zig">Federation or not.</span>
+        </li>
+        <li>
+            <strong>f. Nomination Issue:</strong>
+            <span class="u-blue-zig">Congress </span>
+            <span class="u-green">wanted </span>
+            <span class="u-blue-zig">representatives of native States </span>
+            <span class="u-green">in proposed </span>
+            <span class="u-blue-zig">federation </span>
+            <span class="u-green">should be elected by the </span>
+            <span class="u-blue-zig">public </span>
+            <span class="u-green">but the act proposed their </span>
+            <span class="u-blue-zig">nomination </span>
+            <span class="u-green">by the </span>
+            <span class="u-blue-zig">native States.</span>
+        </li>
+        <li>
+            <strong>g. Separate Electorate Harm:</strong>
+            <span class="u-green">Providing </span>
+            <span class="u-blue-zig">separate electorate </span>
+            <span class="u-green">to </span>
+            <span class="u-blue-zig">Hindus, Muslims, Sikhs, </span>
+            etc,
+            <span class="u-green">later on, turned out to be the </span>
+            <span class="u-blue-zig">tools for disintegrating </span>
+            <span class="u-red-zig">India.</span>
+            <span class="u-green">Hence, this </span>
+            <span class="u-blue-zig">Act, </span>
+            <span class="u-green">in reality, did not help in </span>
+            <span class="u-blue-zig">curbing out the difficulties </span>
+            <span class="u-green">that had arisen in the </span>
+            <span class="u-red-zig">Government of India Act, 1919.</span>
+        </li>
+        <li>
+            <strong>h. Rigid Act:</strong>
+            <span class="u-green">It was </span>
+            <span class="u-blue-zig">a rigid one. </span>
+            <span class="u-green">It could not be </span>
+            <span class="u-blue-zig">amended or modified </span>
+            <span class="u-green">by any </span>
+            <span class="u-blue-zig">Indian legislature, </span>
+            <span class="u-green">either it was </span>
+            <span class="u-blue-zig">Federal or Provincial Legislature. </span>
+            <span class="u-green">In the eyes of the </span>
+            <span class="u-blue-zig">people, </span>
+            <span class="u-green">this represented </span>
+            <span class="u-blue-zig">a disregard for the wishes </span>
+            <span class="u-green">of the </span>
+            <span class="u-blue-zig">people </span>
+            <span class="u-green">and the </span>
+            <span class="u-blue-zig">new Act </span>
+            <span class="u-green">did not make any </span>
+            <span class="u-blue-zig">amendments to this situation </span>
+            <span class="u-green">which was </span>
+            <span class="u-blue-zig">a pressing issue </span>
+            <span class="u-green">for the </span>
+            <span class="u-blue-zig">citizens.</span>
+        </li>
+        <li>
+            <strong>i. British Dominion:</strong>
+            <span class="u-green">It only showed the </span>
+            <span class="u-blue-zig">dominion of the British Government </span>
+            <span class="u-green">over the </span>
+            <span class="u-blue-zig">Indians </span>
+            <span class="u-green">only for their </span>
+            <span class="u-blue-zig">benefit.</span>
+        </li>
+    </ul>
+
+    <p>
+        <strong style="color: var(--primary-red);">3. Overall Assessment:</strong>
+        <span class="u-green">Therefore, the </span>
+        <span class="u-blue-zig">Act </span>
+        <span class="u-green">was unable to provide the </span>
+        <span class="u-blue-zig">people </span>
+        <span class="u-green">with what it had proposed </span>
+        <span class="u-green">and had instead provided the </span>
+        <span class="u-blue-zig">people </span>
+        <span class="u-green">with </span>
+        <span class="u-blue-zig">changes </span>
+        <span class="u-green">that they considered </span>
+        <span class="u-blue-zig">unnecessary </span>
+        <span class="u-green">while the </span>
+        <span class="u-blue-zig">real concerns </span>
+        <span class="u-green">of the </span>
+        <span class="u-blue-zig">people </span>
+        <span class="u-green">were ignored by the </span>
+        <span class="u-blue-zig">British </span>
+        <span class="u-green">who aimed at expressing their </span>
+        <span class="u-blue-zig">dominance </span>
+        <span class="u-green">over the </span>
+        <span class="u-blue-zig">Indians </span>
+        <span class="u-green">and </span>
+        <span class="u-red-zig">India </span>
+        <span class="u-green">through this </span>
+        <span class="u-blue-zig">Act.</span>
+    </p>
+
+    <div class="page-number">Page 19</div>
+</div>
+</body></html>
