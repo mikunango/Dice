@@ -12,8 +12,8 @@ Therefore these are MECHANICAL INSTRUCTIONS, not requests:
 3. AFTER every 5 pages generated → one verification agent re-reads this prompt and audits the last 5 pages against ALL rules below.
 4. BEFORE combining final output → one final agent re-reads this prompt and checks: text preservation, span class correctness, keyword quality, box/image fidelity.
 5. If ANY rule feels unclear mid-conversion → re-read the relevant section. Do NOT guess from fading memory.
-6. BEFORE generating HTML for ANY page → Re-read THIS THREE UNDERLINE CLASSES — EXACT RULES, Specially-> (###`u-green` — solid green — FLOW / STRUCTURAL PHRASES with its given example as it is necessary so you can't skip this process)and think with making deeep understanding through right reasoning and logics from the repo file using the Read tool. Every single time.
-7. BEFORE generating HTML for ANY page → Re-read THIS ### 8C. Keyword generation logic (UPSC MAINS ANSWER-ORIENTED) as it is necessary for each and every keywords, bulletpoints, paragraph-keyword so you can't skip this process and think with making deeep understanding through right reasoning and logics from the repo file using the Read tool. Every single time.
+6. BEFORE generating HTML for ANY page → Re-read THIS THREE UNDERLINE CLASSES — EXACT RULES, Specially-> (###`u-green` — solid green — FLOW / STRUCTURAL PHRASES with its given example as it is necessary so you can't skip this process) and think with making deep understanding through right reasoning and logics from the repo file using the Read tool. Every single time.
+7. BEFORE generating HTML for ANY page → Re-read THIS ### 8C. Keyword generation logic (UPSC MAINS ANSWER-ORIENTED) as it is necessary for each and every keywords, bulletpoints, paragraph-keyword so you can't skip this process and think with making deep understanding through right reasoning and logics from the repo file using the Read tool. Every single time.
 
 These 7 steps are non-negotiable. They exist because "learn deeply" is meaningless for AI — only fresh re-reads keep rules alive.
 
@@ -230,7 +230,8 @@ Only 3 span classes exist. Using anything else = instant failure.
 - Articles ("The", "A", "An") MAY start a content span: `<span class="u-blue-zig">The British </span>`
 - Preposition + object MAY stay together when they form a tight locative unit: `<span class="u-blue-zig">in India </span>`
 - Adjectives stay with their content noun inside the same blue-zig span.
---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---
 
 ### `u-green` — solid green — FLOW / STRUCTURAL PHRASES
 - Words that connect, transition, or frame — but carry NO factual content.
@@ -301,9 +302,9 @@ Relative/clause words:
   - "This led to" / "These factors contributed to" / "It was characterised by" / "He was known as"
 
 **Trailing prepositions stay INSIDE green:**
-  - "was facilitated by" / "resulted in the" / "contributed to" / "leading to the" 
+  - "was facilitated by" / "resulted in the" / "contributed to" / "leading to the"
 
-**u-green = any word or phrase that ASKS/PROMPTS for the next fact (WHAT? WHY? HOW? WHO? WHERE? WHEN? WHICH?); u-blue-zig = any word or phrase that IS the fact/answer itself — always read the full sentence context to determine each word's questioning or answering role.
+**u-green = any word or phrase that ASKS/PROMPTS for the next fact (WHAT? WHY? HOW? WHO? WHERE? WHEN? WHICH?); u-blue-zig = any word or phrase that IS the fact/answer itself — always read the full sentence context to determine each word's questioning or answering role.**
 
 **Connective bridge words (also u-green):**
 - Short bridge words sitting BETWEEN two blue-zig content spans also use u-green:
@@ -312,9 +313,9 @@ Relative/clause words:
   - Short connective prepositions bridging two content noun phrases: "against", "between", "versus", "over", "with"
   - Example: `<span class="u-blue-zig">Indian resistance</span><span class="u-green"> against </span><span class="u-blue-zig">British rule</span>`
 
-- BEFORE generating HTML for ANY page → Re-read THIS THREE UNDERLINE CLASSES — EXACT RULES, Specially-> (###`u-green` — solid green — FLOW / STRUCTURAL PHRASES with its given example as it is necessary so you can't skip this process)and think with making deeep understanding through right reasoning and logics from the repo file using the Read tool. Every single time as it given above.
+- BEFORE generating HTML for ANY page → Re-read THIS THREE UNDERLINE CLASSES — EXACT RULES, Specially-> (###`u-green` — solid green — FLOW / STRUCTURAL PHRASES with its given example as it is necessary so you can't skip this process) and think with making deep understanding through right reasoning and logics from the repo file using the Read tool. Every single time as it given above.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
 ### `u-red-zig` — wavy red — NAMED PROPER ENTITIES (use sparingly)
 - ONLY standalone proper nouns: named people, named movements, named places, years when they appear as key proper nouns.
@@ -333,13 +334,13 @@ Relative/clause words:
 - ALWAYS preserve a space between spans — trailing inside span or leading in next.
 - Punctuation (comma, period) bare text outside any span.
 - Dashes (—) between list items = bare text outside any span.
-- Do NOT underline '.' (dot/period)  bare text outside any span.
+- Do NOT underline '.' (dot/period) bare text outside any span.
 - Do NOT underline the middle space when underline colour changes between 2 spans.
 
 ---
 After <strong>N. Keyword:</strong> inside every <li>, and inside every <p>, quote-box, or info-box body — every single word MUST be wrapped in a <span class="u-..."> tag. No word is ever left as bare/unwrapped text — not "and", not "on", not "was", not "for", not any preposition or verb. The ONLY text allowed outside spans is: text inside <strong>, <b>, headings (h1-h6), .main-topic-header, .section-header, .info-box-header, .page-number, .subject-tag, .subtitle, table <th> headers, box labels, and dashes (—). For every word, follow the Decision Guide in Section 5 strictly — never skip classification, never leave bare. Bare unwrapped text after a bullet colon = instant failure.
 
-----
+---
 
 ## 4. WHAT NEVER GETS UNDERLINED
 
@@ -454,7 +455,7 @@ Rules:
 - **Sub-bulletpoint:** Where a main bullet has multiple sub-explanations (marked with bullet dots, dashes, indentation, or separate lines in PDF), each becomes a proper nested `<li><strong>a. Sub-Keyword:</strong> spans...</li>` inside `<ul>`, never continuous text.
 
 ### 8C. Keyword generation logic (UPSC MAINS ANSWER-ORIENTED)
-The purpose of every generated keyword is NOT easy learning — it is a precise UPSC CSE Mains core keyword for answer-writing. A UPSC aspirant must be able to directly write that bullet title as a Keyword-answers in Mains answer.
+The purpose of every generated keyword is NOT easy learning — it is a precise UPSC CSE Mains core keyword for answer-writing. A UPSC aspirant must be able to directly write that bullet title as a Keyword-answer in Mains answer.
 
 Steps:
 1. Identify the core examinable point — issue, impact, cause, challenge, measure, outcome.
@@ -469,7 +470,7 @@ Examples:
 - "high levels of malnutrition" → `<strong>Malnutrition Burden:</strong>`
 - "decline in their population" → `<strong>Population Decline:</strong>`
 
-**Golden test:** If a UPSC aspirant can write it as-is as a Keyword-answers in Mains answer, it's correct. If it feels vague, too long, too generic, or too explanatory — it's wrong.
+**Golden test:** If a UPSC aspirant can write it as-is as a Keyword-answer in Mains answer, it's correct. If it feels vague, too long, too generic, or too explanatory — it's wrong.
 
 ### 8D. PYQ alignment is mandatory
 Before finalising any keyword, check: has UPSC asked this theme in past papers? If yes, use that exact PYQ phrasing. PYQ vocabulary always beats invented vocabulary.
@@ -539,7 +540,7 @@ Before finalising any keyword, check: has UPSC asked this theme in past papers? 
 - Keywords boxes: underline only the listed keywords in u-red-zig. No other underline class.
 - PYQ boxes/tables: do NOT underline anything — no question text, no year, no headers.
 - Context/About/Way Forward/Conclusion/Functions/Features boxes: underline only descriptive sentence content, not the label.
-- - Add `<strong>N. Keyword:</strong>` to every row/point that lacks one in PDF.
+- Add `<strong>N. Keyword:</strong>` to every row/point that lacks one in PDF.
 
 ---
 
@@ -600,13 +601,11 @@ These are the rules that AI forgets fastest in long outputs. Tattooed here at th
 10. Box content must fully fit inside the box — never half-in half-out.
 11. No page skipped. Every single PDF page converted. Period.
 12. Text preservation is absolute — no single word changed, added, deleted, or reordered.
-13. BEFORE generating HTML for ANY page → Re-read THIS THREE UNDERLINE CLASSES — EXACT RULES, Specially-> (###`u-green` — solid green — FLOW / STRUCTURAL PHRASES with its given example as it is necessary so you can't skip this process)and think with making deeep understanding through right reasoning and logics from the repo file using the Read tool. Every single time.
-14. Make usre for Each Explanation has their own bulletpoint as per given rules ###8A, ###8B, ###8C, 8###, no matter he has <li> concept or not, No exception, keep remember that i said this for explanation, i hope u understood so dont miss any explanation.
-15. While making sure for Preserving original text rule, you also make sure that rule also applies to that the footnot on every end of each chapter also as you can see , as they are mentioned and with using color: #666 this only to those footnotes with including those small numbers as ¹, ², ³.
-16.if in any paragraph explanation is more than 5 lines then divide tha paragraph in to after wait for the sentence ends with "." from line 5 then apply the pararaph rule in both.
-17. if in any explanation paragraph there given something in points like (i),(ii),(a), then writw then in from next line in each line each point
-
-
+13. BEFORE generating HTML for ANY page → Re-read THIS THREE UNDERLINE CLASSES — EXACT RULES, Specially-> (###`u-green` — solid green — FLOW / STRUCTURAL PHRASES with its given example as it is necessary so you can't skip this process) and think with making deep understanding through right reasoning and logics from the repo file using the Read tool. Every single time.
+14. Make sure for Each Explanation has their own bulletpoint as per given rules ###8A, ###8B, ###8C, ###8D, no matter he has `<li>` concept or not, No exception, keep remember that i said this for explanation, no miss any explanation.
+15. While making sure for Preserving original text rule, you also make sure that rule also applies to footnotes on every end of each chapter as they are mentioned and with using color: #666 this only to those footnotes with including those small numbers as ¹, ², ³.
+16. If in any paragraph explanation is more than 5 lines then divide that paragraph after wait for the sentence ends with "." from line 5 then apply the paragraph rule in both.
+17. If in any explanation paragraph there given something in points like (i),(ii),(a), then write them from next line in each line each point.
 
 ---
 
