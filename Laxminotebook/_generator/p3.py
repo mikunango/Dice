@@ -17,7 +17,6 @@ def notes():
              ['{R:Concurrent List}', '{r:no} tax entries', '{b:except GST (101st Amdt)}'], ['{R:Residuary}', 'Parliament', '{b:gift, wealth, expenditure tax}']])
     n.para('The Constitution also draws a distinction between the {r:power to levy and collect a tax} and the {r:power to appropriate the proceeds} of the tax so levied and collected. For example, the {b:income-tax is levied and collected by the Centre} but its proceeds are {b:distributed between the Centre and the states}.')
     n.flow(['{r:Income tax}: levied & collected by Centre', 'proceeds shared {b:Centre + states}'])
-    n.sub('2. Restrictions on states’ taxing powers', src=False)
     n.para('Further, the Constitution has placed the following {r:restrictions on the taxing powers of the states}:')
     n.items([('(i)', 'A state legislature can impose {r:taxes on professions, trades, callings and employments}. But, the total amount of such taxes payable by any person should {r:not exceed ₹2,500 per annum}.¹¹'),
              ('(ii)', 'A state legislature is {r:prohibited} from imposing a tax on the {r:supply of goods or services or both} in the following two cases: (a) where such supply takes place {b:outside the state}; and (b) where such supply takes place in the course of {b:import or export}. Further, the Parliament is empowered to formulate the principles for determining when a supply of goods or services or both takes place outside the state, or in the course of import or export¹².'),
@@ -35,21 +34,19 @@ def notes():
     n = Note('Distribution of Tax Revenues – 80th and 101st Amendments')
     n.sub('2. Distribution of Tax Revenues')
     n.para('The {r:80th Amendment Act of 2000} and the {r:101st Amendment Act of 2016} have introduced {b:major changes} in the scheme of the distribution of tax revenues between the centre and the states.')
-    n.subsub('80th Amendment', src=False)
     n.para('The 80th Amendment was enacted to give effect to the recommendations of the {r:10th Finance Commission}. The Commission recommended that out of the total income obtained from certain central taxes and duties, {r:29%} should go to the states. This is known as the ‘{r:Alternative Scheme of Devolution}’ and came into effect {b:retrospectively from April 1, 1996}. This amendment has brought several central taxes and duties like {b:Corporation Tax and Customs Duties} at par with {b:Income Tax (taxes on income other than agricultural income)} as far as their constitutionally mandated sharing with the states is concerned.¹³')
     n.flow(['{r:10th Finance Commission}', '{r:29%} to states', '{R:Alternative Scheme of Devolution}', 'from {b:1 April 1996}'])
-    n.subsub('101st Amendment – GST', src=False)
     n.para('The 101st Amendment has paved the way for the introduction of a {r:new tax regime (i.e., goods and services tax – GST)} in the country. Accordingly, the Amendment conferred {r:concurrent taxing powers} upon the Parliament and the State Legislatures to make laws for levying GST on {b:every transaction of supply of goods or services or both}. The GST replaced a number of indirect taxes levied by the Union and the State Governments and is intended to {r:remove the cascading effect of taxes} and provide for a {r:common national market} for goods and services.')
     n.listpara('The Amendment provided for subsuming of various {r:central indirect taxes} and levies such as',
                [('(i)', '{b:Central Excise Duty},'), ('(ii)', '{b:Additional Excise Duties},'), ('(iii)', '{b:Excise Duty levied under the Medicinal and Toilet Preparations (Excise Duties) Act, 1955},'),
                 ('(iv)', '{b:Service Tax},'), ('(v)', '{b:Additional Customs Duty commonly known as Countervailing Duty},'), ('(vi)', '{b:Special Additional Duty of Customs}, and'),
-                ('(vii)', '{b:Central Surcharges and Cesses}')], 'so far as they related to the supply of goods and services.')
+                ('(vii)', '{b:Central Surcharges and Cesses}')], 'so far as they related to the supply of goods and services.', cont=True)
     n.listpara('Similarly, the Amendment provided for subsuming of',
                [('(i)', '{b:State Value Added Tax / Sales Tax},'), ('(ii)', '{b:Entertainment Tax (other than the tax levied by the local bodies)},'),
                 ('(iii)', '{b:Central Sales Tax (levied by the Centre and collected by the States)},'), ('(iv)', '{b:Octroi and Entry Tax},'), ('(v)', '{b:Purchase Tax},'),
                 ('(vi)', '{b:Luxury Tax},'), ('(vii)', '{b:Taxes on lottery, betting and gambling}, and'), ('(viii)', '{b:State Surcharges and Cesses}')],
-               'in so far as they related to the supply of goods and services.')
-    n.para('Further, the Amendment {r:deleted Article 268-A} as well as {r:Entry 92-C} in the Union List, both were dealing with {r:service tax}. They were added earlier by the {r:88th Amendment Act of 2003}. The service tax was {b:levied by the Centre but collected and appropriated by both the Centre and the States}.')
+               'in so far as they related to the supply of goods and services.', cont=True)
+    n.cont('Further, the Amendment {r:deleted Article 268-A} as well as {r:Entry 92-C} in the Union List, both were dealing with {r:service tax}. They were added earlier by the {r:88th Amendment Act of 2003}. The service tax was {b:levied by the Centre but collected and appropriated by both the Centre and the States}.')
     n.compare([('{R:Central taxes subsumed (7)}', ['Central Excise Duty', 'Additional Excise Duties', 'Medicinal & Toilet Prep. excise', 'Service Tax', 'Countervailing Duty', 'Special Addl. Duty of Customs', 'Central surcharges & cesses']),
                ('{R:State taxes subsumed (8)}', ['State VAT / Sales Tax', 'Entertainment Tax', 'Central Sales Tax', 'Octroi & Entry Tax', 'Purchase Tax', 'Luxury Tax', 'Lottery, betting, gambling', 'State surcharges & cesses'])])
     n.flow(['{r:88th Amdt 2003}: Art. 268-A + Entry 92-C', '{r:101st Amdt 2016}: deleted'])

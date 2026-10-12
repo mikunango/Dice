@@ -38,7 +38,7 @@ def notes():
     n.para('In {r:1969}, the {r:Tamil Nadu Government (DMK)} appointed a {r:three-member committee} under the chairmanship of {r:Dr. P.V. Rajamannar} to examine the entire question of Centre–state relations and to suggest amendments to the Constitution so as to secure {r:utmost autonomy to the states}.¹⁹ The committee submitted its report to the Tamil Nadu Government in {r:1971}.')
     n.bullets(['The Committee identified the reasons for the prevailing {r:unitary trends (tendencies of centralisation)} in the country.'])
     n.listpara('They include:', [('(i)', 'certain provisions in the Constitution which confer {b:special powers on the Centre};'), ('(ii)', '{b:one-party rule} both at the Centre and in the states;'),
-               ('(iii)', '{b:inadequacy of states’ fiscal resources} and consequent dependence on the Centre for financial assistance; and'), ('(iv)', 'the institution of {b:Central planning} and the role of the Planning Commission.')])
+               ('(iii)', '{b:inadequacy of states’ fiscal resources} and consequent dependence on the Centre for financial assistance; and'), ('(iv)', 'the institution of {b:Central planning} and the role of the Planning Commission.')], cont=True)
     n.tree(['{b:special powers to Centre}', '{b:one-party rule}', '{b:weak state finances}', '{b:Central planning}'])
     n.listpara('The important recommendations of the committee are as follows:',
                [('(i)', 'An {r:Inter-State Council} should be set up immediately;'), ('(ii)', '{r:Finance Commission} should be made a {r:permanent body};'),
@@ -67,7 +67,7 @@ def notes():
                 ('(v)', '{r:State’s consent} should be made obligatory for formation of new states or reorganisation of existing states;'),
                 ('(vi)', 'Of the total revenue raised by the Centre from all sources, {r:75 per cent} should be allocated to the states;'),
                 ('(vii)', '{r:Rajya Sabha should have equal powers} with that of the Lok Sabha; and'),
-                ('(viii)', 'There should be only Central and state services and the {r:All-India Services should be abolished}.')])
+                ('(viii)', 'There should be only Central and state services and the {r:All-India Services should be abolished}.')], cont=True)
     n.flow(['‘union’ → {r:‘federal’}', '{r:75%} revenue to states', 'repeal {r:356, 357, 360}', 'abolish {r:AIS}'])
     n.para('The Central government {r:did not accept} the demands made in the memorandum.')
     n.table(['{R:Body}', '{R:Year}', '{R:By}', '{R:Fate}'],

@@ -209,8 +209,8 @@ class Note:
             if src: self.reg(it)
 
     def para(self, markup, level=0, src=True):
-        """A book paragraph -> one bullet per sentence."""
-        self.bullets(split_sentences(markup), level, src)
+        """A book paragraph -> kept whole, one keyword bulletpoint at its start."""
+        self.bullets([markup], level, src)
 
     def items(self, items, src=True, bracket=True, indent=0, size=15):
         """Enumerated list: items are (label, markup). Red bracket on the left."""
@@ -222,7 +222,7 @@ class Note:
         cls = ' class="sm"' if size == 14 else ''
         for lab, it in items:
             self.y += 4
-            sents = split_sentences(it)
+            sents = [it]
             for s_i, s in enumerate(sents):
                 sx = tx
                 if s_i:
@@ -239,9 +239,17 @@ class Note:
         if bracket:
             self.el.append(f'<path d="M{x0+6} {top} L{x0} {top} L{x0} {bot} L{x0+6} {bot}" fill="none" stroke="{RED}" stroke-width="1.6"/>')
 
-    def listpara(self, intro, items, outro=None):
-        """Sentence containing an inline (i)/(ii) list -> intro bullet + item list (+ closing words)."""
-        self.bullets([intro])
+    def cont(self, markup):
+        """Continuation of the same paragraph (no new keyword bulletpoint)."""
+        self.y += 2
+        self.text(markup, x=self.L + 16)
+
+    def listpara(self, intro, items, outro=None, cont=False):
+        """Paragraph containing an inline (i)/(ii) list -> intro + item list (+ closing words)."""
+        if cont:
+            self.cont(intro)
+        else:
+            self.bullets([intro])
         self.items(items, indent=14)
         if outro:
             self.text(outro, x=self.L + 18)
@@ -249,7 +257,7 @@ class Note:
     def quote(self, markup, src=True, by=None):
         """Quotation: blue bar on the left, one bullet per sentence."""
         top = self.y + 8
-        sents = split_sentences(markup)
+        sents = [markup]
         self.y += 2
         x = self.L + 16
         for s in sents:

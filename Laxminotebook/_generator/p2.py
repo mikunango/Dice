@@ -11,8 +11,8 @@ def notes():
     n.bullets(['The {r:executive power} has been divided between the Centre and the states on the lines of the {b:distribution of legislative powers}, except in few cases.'])
     n.listpara('Thus, the executive power of the {r:Centre} extends to the {r:whole of India}:',
                [('(i)', 'to the matters on which the Parliament has exclusive power of legislation ({b:i.e., the subjects enumerated in the Union List}); and'),
-                ('(ii)', 'to the exercise of rights, authority and jurisdiction conferred on it by any {r:treaty or agreement}.')])
-    n.para('Similarly, the executive power of a {r:state} extends to its territory in respect of matters on which the state legislature has exclusive power of legislation ({b:i.e., the subjects enumerated in the State List}).')
+                ('(ii)', 'to the exercise of rights, authority and jurisdiction conferred on it by any {r:treaty or agreement}.')], cont=True)
+    n.cont('Similarly, the executive power of a {r:state} extends to its territory in respect of matters on which the state legislature has exclusive power of legislation ({b:i.e., the subjects enumerated in the State List}).')
     n.para('In respect of matters on which both the Parliament and the state legislatures have power of legislation ({b:i.e., the subjects enumerated in the Concurrent List}), the executive power {r:rests with the states} except when a {b:Constitutional provision or a parliamentary law} specifically confers it on the Centre. Therefore, a law on a concurrent subject, though enacted by the Parliament, is to be {r:executed by the states} except when the Constitution or the Parliament has directed otherwise.⁵')
     n.compare([('{R:Union List}', ['executive power → {r:Centre}', '{b:+ treaties / agreements}']),
                ('{R:State List}', ['executive power → {r:State}']),

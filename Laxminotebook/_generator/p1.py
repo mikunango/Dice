@@ -6,13 +6,10 @@ def notes():
     # ---------------- 01 Intro ----------------
     n = Note('CHAPTER 15 Centre–State Relations', 'Intro of Centre-State relations, three heads and four aspects of legislative relations.')
     n.reg('CHAPTER 15 Centre–State Relations')
-    n.sub('1. Division of powers', src=False)
     n.para('The {r:Constitution of India}, being {b:federal in structure}, divides all powers ({r:legislative, executive and financial}) between the {r:Centre} and the {r:states}. However, there is {r:no division of judicial power} as the Constitution has established an {b:integrated judicial system} to enforce both the {r:Central laws} as well as {r:state laws}.')
     n.tree(['{r:Legislative}', '{r:Executive}', '{r:Financial}', '{b:Judicial} – not divided'], size=14)
     n.arrow('{b:integrated judicial system} enforces both {r:Central laws} + {r:state laws}', x=565)
-    n.sub('2. Need for harmony', src=False)
     n.para('Though the Centre and the states are {r:supreme in their respective fields}, the {b:maximum harmony and coordination} between them is essential for the {b:effective operation of the federal system}. Hence, the Constitution contains {r:elaborate provisions} to regulate the various dimensions of the relations between the Centre and the states.')
-    n.sub('3. Three heads', src=False)
     n.bullets(['The {r:Centre-state relations} can be studied under {r:three heads}:'])
     n.tree(['• {r:Legislative relations.}', '• {r:Administrative relations.}', '• {r:Financial relations.}'], size=14, src=True)
     n.rule()
@@ -33,7 +30,6 @@ def notes():
              ('(iii)', 'The {r:Parliament alone} can make ‘{r:extra-territorial legislation}’. Thus, the laws of the Parliament are also applicable to the {b:Indian citizens and their property in any part of the world}.')])
     n.compare([('{R:Parliament}', ['whole or any part of {r:India}', '{b:states + UTs + other areas}', '{r:extra-territorial} also ✔']),
                ('{R:State legislature}', ['whole or any part of the {r:state}', 'not outside the state', 'except {r:sufficient nexus}'])])
-    n.sub('2. Restrictions on Parliament', src=False)
     n.para('However, the Constitution places {r:certain restrictions} on the {b:plenary territorial jurisdiction} of the Parliament. In other words, the laws of Parliament are {r:not applicable} in the following areas:')
     n.items([('(i)', 'The {r:President} can make {r:regulations} for the {b:peace, progress and good government} of the Union Territories of the {r:Andaman and Nicobar Islands, Lakshadweep, Dadra and Nagar Haveli and Daman and Diu and Ladakh}. In the case of {r:Puducherry} also, the President can legislate by making regulations but only when the {b:Assembly is suspended or dissolved}. A regulation so made has the {r:same force and effect as an act of Parliament}. It may also {b:repeal or amend any act of Parliament} in relation to these union territories.'),
              ('(ii)', 'The {r:governor} is empowered to direct that an act of Parliament {b:does not apply} to a {r:scheduled area} in the state or apply with {b:specified modifications and exceptions}.'),
@@ -68,22 +64,18 @@ def notes():
 
     # ---------------- 04 Scheme, comparison, predominance ----------------
     n = Note('Scheme of Lists and Predominance')
-    n.sub('1. Logic of the three lists', src=False)
     n.para('From the above scheme, it is clear that the matters of {r:national importance} and the matters which require {b:uniformity of legislation nationwide} are included in the {r:Union List}. The matters of {r:regional and local importance} and the matters which permit {b:diversity of interest} are specified in the {r:State List}. The matters on which uniformity of legislation throughout the country is {b:desirable but not essential} are enumerated in the {r:concurrent list}. Thus, it permits {r:diversity along with uniformity}.')
     n.compare([('{R:Union List}', ['national importance', '{b:uniformity nationwide}']),
                ('{R:State List}', ['regional & local importance', '{b:diversity of interest}']),
                ('{R:Concurrent List}', ['uniformity desirable', '{b:but not essential}'])])
-    n.sub('2. Other federations', src=False)
     n.para('In {r:US}, only the powers of the {b:Federal Government} are enumerated in the Constitution and the {r:residuary powers are left to the states}. The {r:Australian Constitution} followed the American pattern of {b:single enumeration} of powers. In {r:Canada}, on the other hand, there is a {b:double enumeration}—Federal and Provincial, and the {r:residuary powers are vested in the Centre}.')
     n.para('The {r:Government of India Act of 1935} provided for a {r:three-fold enumeration}, viz., {b:federal, provincial and concurrent}. The present Constitution follows the scheme of this act but with {r:one difference}, that is, under this act, the residuary powers were given neither to the federal legislature nor to the provincial legislature but to the {r:Governor-General of India}. In this respect, India follows the {r:Canadian precedent}.')
     n.table(['{R:Country / Act}', '{R:Enumeration}', '{R:Residuary powers}'],
             [['USA', 'single (federal only)', '{r:states}'], ['Australia', 'single (American pattern)', '{r:states}'],
              ['Canada', 'double (federal + provincial)', '{r:Centre}'], ['GoI Act 1935', 'three-fold', '{r:Governor-General}'],
              ['India', 'three-fold (7th Schedule)', '{r:Parliament (Centre)}']], [170, 240, 190], src=False)
-    n.sub('3. Predominance of lists', src=False)
     n.para('The Constitution expressly secures the {r:predominance of the Union List} over the State List and the Concurrent List and that of the {r:Concurrent List over the State List}. Thus, in case of overlapping between the Union List and the State List, the {b:former should prevail}. In case of overlapping between the Union List and the Concurrent List, it is again the {b:former which should prevail}. Where there is a conflict between the Concurrent List and the State List, it is the {b:former that should prevail}.')
     n.flow(['{R:Union List}', '{R:Concurrent List}', '{R:State List}'], sep='>')
-    n.sub('4. Conflict on a Concurrent subject', src=False)
     n.para('In case of a conflict between the {r:Central law} and the {r:state law} on a subject enumerated in the {r:Concurrent List}, the {r:central law prevails} over the state law. But, there is an {r:exception}. If the state law has been {b:reserved for the consideration of the President} and has {b:received his/her assent}, then the {r:state law prevails in that state}. But, it would still be competent for the {r:Parliament to override} such a law by subsequently making a law on the same matter.')
     n.flow(['Conflict on Concurrent subject', '{r:Central law prevails}'])
     n.flow(['{b:Exception}: State law reserved + President’s assent', '{r:State law prevails in that state}', 'Parliament can still {r:override} later'])
@@ -133,7 +125,6 @@ def notes():
              ('(iv)', 'The Governor {r:cannot make an ordinance} without the {b:instructions from the President} in certain cases ({r:Article 213}).')])
     n.boxes([['{r:Art. 200 & 201}', 'reserved bill', '{b:absolute veto}'], ['{r:Art. 304}', 'trade restriction bill', '{b:previous sanction}'],
              ['{r:Art. 360}', 'money/financial bills', '{b:financial emergency}'], ['{r:Art. 213}', 'ordinance', '{b:President’s instructions}']])
-    n.sub('5. Superiority of the Centre', src=False)
     n.para('From the above, it is clear that the Constitution has assigned a {r:position of superiority to the Centre} in the legislative sphere. In this context, the {r:Sarkaria Commission on Centre– State Relations (1983–88)} observed:')
     n.quote('“The rule of {r:federal supremacy} is a technique to {b:avoid absurdity, resolve conflict and ensure harmony} between the Union and state laws. If this principle of union supremacy is excluded, it is not difficult to imagine its {b:deleterious results}. There will be every possibility of our {b:two-tier political system} being stultified by {r:interference, strife, legal chaos and confusion} caused by a host of conflicting laws, much to the bewilderment of the common citizen. Integrated legislative policy and uniformity on basic issues of common Union–state concern will be stymied. The federal principle of {r:unity in diversity} will be very much a casualty. This rule of federal supremacy, therefore, is {r:indispensable} for the successful functioning of the federal system”.⁴')
     n.flow(['federal supremacy', 'avoids absurdity / conflict', '{r:harmony}', '{b:unity in diversity}'])
