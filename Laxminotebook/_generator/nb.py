@@ -212,7 +212,7 @@ class Note:
         """A book paragraph -> kept whole, one keyword bulletpoint at its start."""
         self.bullets([markup], level, src)
 
-    def items(self, items, src=True, bracket=True, indent=0, size=15):
+    def items(self, items, src=True, bracket=True, indent=0, size=15, kw=True):
         """Enumerated list: items are (label, markup). Red bracket on the left."""
         x0 = self.L + 4 + indent
         lw = max(tw(l + ' ', size, True) for l, _ in items) + 4
@@ -220,9 +220,14 @@ class Note:
         top = self.y + 6
         lh = self.LH if size == 15 else 20
         cls = ' class="sm"' if size == 14 else ''
+        avg_words = sum(len(plain(it).split()) for _, it in items) / max(len(items), 1)
         for lab, it in items:
             self.y += 4
             sents = [it]
+            if kw and avg_words >= 10:
+                kl = self.label(it)
+                if kl:
+                    sents = ['{H:' + kl + ':} ' + it]
             for s_i, s in enumerate(sents):
                 sx = tx
                 if s_i:
@@ -244,13 +249,13 @@ class Note:
         self.y += 2
         self.text(markup, x=self.L + 16)
 
-    def listpara(self, intro, items, outro=None, cont=False):
+    def listpara(self, intro, items, outro=None, cont=False, kw=True):
         """Paragraph containing an inline (i)/(ii) list -> intro + item list (+ closing words)."""
         if cont:
             self.cont(intro)
         else:
             self.bullets([intro])
-        self.items(items, indent=14)
+        self.items(items, indent=14, kw=kw)
         if outro:
             self.text(outro, x=self.L + 18)
 

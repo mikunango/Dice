@@ -40,12 +40,12 @@ def notes():
     n.listpara('The Amendment provided for subsuming of various {r:central indirect taxes} and levies such as',
                [('(i)', '{b:Central Excise Duty},'), ('(ii)', '{b:Additional Excise Duties},'), ('(iii)', '{b:Excise Duty levied under the Medicinal and Toilet Preparations (Excise Duties) Act, 1955},'),
                 ('(iv)', '{b:Service Tax},'), ('(v)', '{b:Additional Customs Duty commonly known as Countervailing Duty},'), ('(vi)', '{b:Special Additional Duty of Customs}, and'),
-                ('(vii)', '{b:Central Surcharges and Cesses}')], 'so far as they related to the supply of goods and services.', cont=True)
+                ('(vii)', '{b:Central Surcharges and Cesses}')], 'so far as they related to the supply of goods and services.', cont=True, kw=False)
     n.listpara('Similarly, the Amendment provided for subsuming of',
                [('(i)', '{b:State Value Added Tax / Sales Tax},'), ('(ii)', '{b:Entertainment Tax (other than the tax levied by the local bodies)},'),
                 ('(iii)', '{b:Central Sales Tax (levied by the Centre and collected by the States)},'), ('(iv)', '{b:Octroi and Entry Tax},'), ('(v)', '{b:Purchase Tax},'),
                 ('(vi)', '{b:Luxury Tax},'), ('(vii)', '{b:Taxes on lottery, betting and gambling}, and'), ('(viii)', '{b:State Surcharges and Cesses}')],
-               'in so far as they related to the supply of goods and services.', cont=True)
+               'in so far as they related to the supply of goods and services.', cont=True, kw=False)
     n.cont('Further, the Amendment {r:deleted Article 268-A} as well as {r:Entry 92-C} in the Union List, both were dealing with {r:service tax}. They were added earlier by the {r:88th Amendment Act of 2003}. The service tax was {b:levied by the Centre but collected and appropriated by both the Centre and the States}.')
     n.compare([('{R:Central taxes subsumed (7)}', ['Central Excise Duty', 'Additional Excise Duties', 'Medicinal & Toilet Prep. excise', 'Service Tax', 'Countervailing Duty', 'Special Addl. Duty of Customs', 'Central surcharges & cesses']),
                ('{R:State taxes subsumed (8)}', ['State VAT / Sales Tax', 'Entertainment Tax', 'Central Sales Tax', 'Octroi & Entry Tax', 'Purchase Tax', 'Luxury Tax', 'Lottery, betting, gambling', 'State surcharges & cesses'])])
@@ -96,7 +96,7 @@ def notes():
              ('(xiii)', 'tolls;'), ('(xiv)', 'taxes on professions, trades, callings and employments;'), ('(xv)', 'capitation taxes;'),
              ('(xvi)', 'taxes on {r:entertainments and amusements} to the extent levied and collected by a {b:Panchayat or a Municipality or a Regional Council or a District Council};'),
              ('(xvii)', 'stamp duty on documents ({b:except those specified in the Union List}); and'),
-             ('(xviii)', 'fees on the matters enumerated in the State List ({b:except court fees}).')])
+             ('(xviii)', 'fees on the matters enumerated in the State List ({b:except court fees}).')], kw=False)
     n.flow(['levied: {R:State}', 'collected: {R:State}', 'retained: {R:State}'])
     n.sub('3. Distribution of Non-tax Revenues')
     n.subsub('A. The Centre')
