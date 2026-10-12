@@ -208,7 +208,7 @@ class Note:
                 kw = kw[1:]; pre = kw + ' '
             lab = None if orig else (kw or self.label(it))
             if lab:
-                lines = wrap('{H:' + lab + ':} ' + it, self.R - bx, size)
+                lines = wrap('{H:' + lab.rstrip(':') + ':} ' + it, self.R - bx, size)
                 for i, ln in enumerate(lines):
                     self.y += lh
                     self.el.append(f'<text{cls} x="{bx + (0 if i == 0 else 12)}" y="{self.y}">{tspans(ln)}</text>')
@@ -243,7 +243,7 @@ class Note:
                 ikw = ikw[1:]; pre = ikw + ' '
             sents = [it]
             if ikw:
-                sents = ['{H:' + ikw + ':} ' + it]
+                sents = ['{H:' + ikw.rstrip(':') + ':} ' + it]
             elif kw and avg_words >= 10 and INLINE_ONLY:
                 MISSING.append((self.title, 'ITEM ' + lab + ' ' + plain(it)[:62]))
             elif kw and avg_words >= 10 and not INLINE_ONLY:
@@ -255,7 +255,7 @@ class Note:
                 if s_i:
                     self.y += 3
                     hl = self.label(s)
-                    s = ('{H:' + hl + ':} ' + s) if hl else s
+                    s = ('{H:' + hl.rstrip(':') + ':} ' + s) if hl else s
                 for i, ln in enumerate(wrap(s, self.R - sx - (12 if s_i else 0), size)):
                     self.y += lh
                     if i == 0 and s_i == 0:
@@ -291,7 +291,7 @@ class Note:
             self.y += 4
             qkw, s = split_kw(s)
             hl = qkw or self.label(s)
-            s2 = ('{H:' + hl + ':} ' + s) if hl else s
+            s2 = ('{H:' + hl.rstrip(':') + ':} ' + s) if hl else s
             for i, ln in enumerate(wrap(s2, self.R - x - 14, 15)):
                 self.y += self.LH
                 self.el.append(f'<text x="{x + (12 if i else 0)}" y="{self.y}">{tspans(ln)}</text>')
