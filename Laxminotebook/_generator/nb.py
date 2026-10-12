@@ -23,6 +23,7 @@ RED, BLUE = '#D93A3A', '#2F6FDB'
 LABELS = {}
 DUMP = []          # (note_title, sentence) for every line that needs a heading
 USE_LABELS = True
+INLINE_ONLY = False   # new chapters: keywords only where written as [[kw]]
 CLS = {'k': 'k', 'r': 'r', 'b': 'b', 'R': 'r', 'B': 'b', 'K': 'k', 'H': 'h'}
 BOLD = set('RBKH')
 
@@ -38,6 +39,14 @@ def parse(markup):
     if pos < len(markup):
         runs.append((markup[pos:], 'k'))
     return runs
+
+KW_RE = re.compile(r'^\s*\[\[(.+?)\]\]\s*')
+MISSING = []
+
+def split_kw(markup):
+    """'[[Keyword]] text' -> ('Keyword', 'text')"""
+    m = KW_RE.match(markup)
+    return (m.group(1), markup[m.end():]) if m else (None, markup)
 
 def plain(markup):
     return ''.join(t for t, _ in parse(markup))
@@ -125,6 +134,7 @@ class Note:
         DUMP.append((self.title, plain(sentence)))
         labs = LABELS.get(self.title)
         if not USE_LABELS or labs is None:
+            MISSING.append((self.title, plain(sentence)[:70]))
             return None
         i = self._li
         self._li += 1
@@ -192,7 +202,11 @@ class Note:
         cls = ' class="sm"' if size == 14 else ''
         for it in items:
             self.y += 6
-            lab = None if orig else self.label(it)
+            kw, it = split_kw(it)
+            pre = ''
+            if kw and kw.startswith('!'):
+                kw = kw[1:]; pre = kw + ' '
+            lab = None if orig else (kw or self.label(it))
             if lab:
                 lines = wrap('{H:' + lab + ':} ' + it, self.R - bx, size)
                 for i, ln in enumerate(lines):
@@ -206,7 +220,7 @@ class Note:
                         col = RED if level == 0 else BLUE
                         self.el.append(f'<text x="{bx}" y="{self.y}" style="fill:{col};font-weight:700">{sym}</text>')
                     self.el.append(f'<text{cls} x="{tx}" y="{self.y}">{tspans(ln)}</text>')
-            if src: self.reg(it)
+            if src: self.reg(pre + it)
 
     def para(self, markup, level=0, src=True):
         """A book paragraph -> kept whole, one keyword bulletpoint at its start."""
@@ -220,11 +234,19 @@ class Note:
         top = self.y + 6
         lh = self.LH if size == 15 else 20
         cls = ' class="sm"' if size == 14 else ''
-        avg_words = sum(len(plain(it).split()) for _, it in items) / max(len(items), 1)
+        avg_words = sum(len(plain(split_kw(it)[1]).split()) for _, it in items) / max(len(items), 1)
         for lab, it in items:
             self.y += 4
+            ikw, it = split_kw(it)
+            pre = ''
+            if ikw and ikw.startswith('!'):
+                ikw = ikw[1:]; pre = ikw + ' '
             sents = [it]
-            if kw and avg_words >= 10:
+            if ikw:
+                sents = ['{H:' + ikw + ':} ' + it]
+            elif kw and avg_words >= 10 and INLINE_ONLY:
+                MISSING.append((self.title, 'ITEM ' + lab + ' ' + plain(it)[:62]))
+            elif kw and avg_words >= 10 and not INLINE_ONLY:
                 kl = self.label(it)
                 if kl:
                     sents = ['{H:' + kl + ':} ' + it]
@@ -239,7 +261,7 @@ class Note:
                     if i == 0 and s_i == 0:
                         self.el.append(f'<text x="{x0+12}" y="{self.y}" class="r" style="font-weight:700">{esc(lab)}</text>')
                     self.el.append(f'<text{cls} x="{sx + (12 if (s_i and i) else 0):.0f}" y="{self.y}">{tspans(ln)}</text>')
-            if src: self.reg(lab + ' ' + it)
+            if src: self.reg(lab + ' ' + pre + it)
         bot = self.y + 6
         if bracket:
             self.el.append(f'<path d="M{x0+6} {top} L{x0} {top} L{x0} {bot} L{x0+6} {bot}" fill="none" stroke="{RED}" stroke-width="1.6"/>')
@@ -267,7 +289,8 @@ class Note:
         x = self.L + 16
         for s in sents:
             self.y += 4
-            hl = self.label(s)
+            qkw, s = split_kw(s)
+            hl = qkw or self.label(s)
             s2 = ('{H:' + hl + ':} ' + s) if hl else s
             for i, ln in enumerate(wrap(s2, self.R - x - 14, 15)):
                 self.y += self.LH
@@ -275,7 +298,7 @@ class Note:
         bot = self.y + 8
         self.el.append(f'<line x1="{self.L+4}" y1="{top}" x2="{self.L+4}" y2="{bot}" stroke="{BLUE}" stroke-width="3" stroke-linecap="round"/>')
         self.y = bot
-        if src: self.reg(markup)
+        if src: self.reg(split_kw(markup)[1])
 
     def arrow(self, markup, x=None, src=False, size=14):
         """Down arrow from previous line, then a short note beside its tip."""
@@ -545,3 +568,19 @@ def split_sentences(markup):
     if tail:
         out.append(tail)
     return out
+
+
+FINAL_NOTE = ('Please check the tables of this chapter once. If a table looks important, '
+              'study it directly from Laxmikanth, or take a screenshot of it and add it '
+              'to this page as needed.')
+
+def final_note_html():
+    """Last page: the reminder about tables, in large text."""
+    import textwrap
+    lines = textwrap.wrap(FINAL_NOTE, 34)
+    y0 = 140
+    t = ''.join(f'<text class="r" x="340" y="{y0 + i*46}" text-anchor="middle" style="font-size:32px;font-weight:700">{esc(l)}</text>' for i, l in enumerate(lines))
+    H = y0 + len(lines) * 46 + 60
+    svg = (f'<svg class="n" width="100%" viewBox="0 0 680 {H}" role="img"><title>Check the tables</title><desc>Reminder</desc>'
+           f'<rect x="30" y="40" width="620" height="{H-70}" rx="6" fill="none" stroke="#D93A3A" stroke-width="2" stroke-dasharray="8 5"/>{t}</svg>')
+    return HTML_TMPL.replace('%TITLE%', 'Check the tables').replace('%DESC%', 'Reminder').replace('%SVG%', svg)
