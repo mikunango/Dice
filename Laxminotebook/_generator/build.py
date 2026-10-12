@@ -10,6 +10,8 @@ def toks(s):
     s = s.replace('–', ' ').replace('—', ' ').replace('-', ' ')
     return [t.lower() for t in re.findall(r"[A-Za-z0-9₹]+", s)]
 
+import nb, labels
+nb.LABELS.update(labels.LABELS)
 notes = []
 for p in parts:
     notes += importlib.import_module(p).notes()

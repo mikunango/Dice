@@ -12,7 +12,7 @@ def notes():
     n.bullets(['The {r:Parliament} has {r:exclusive power} to levy taxes on subjects enumerated in the {r:Union List} ({b:which are 13 in number⁸}).',
                'The {r:state legislature} has {r:exclusive power} to levy taxes on subjects enumerated in the {r:State List} ({b:which are 18 in number⁹}).',
                'There are {r:no tax entries in the Concurrent List}. In other words, the concurrent jurisdiction is {b:not available with respect to tax legislation}. But, the {r:101st Amendment Act of 2016} has made an {r:exception} by making a special provision with respect to {r:goods and services tax}. This Amendment has conferred {b:concurrent power upon the Parliament and State Legislatures} to make laws governing goods and services tax¹⁰.',
-               'The {r:residuary power of taxation} (that is, the power to impose taxes not enumerated in any of the three lists) is vested in the {r:Parliament}. Under this provision, the Parliament has imposed {b:gift tax, wealth tax and expenditure tax}.'])
+               'The {r:residuary power of taxation} (that is, the power to impose taxes not enumerated in any of the three lists) is vested in the {r:Parliament}. Under this provision, the Parliament has imposed {b:gift tax, wealth tax and expenditure tax}.'], orig=True)
     n.boxes([['{R:Union List}', '{r:13} tax entries', 'Parliament'], ['{R:State List}', '{r:18} tax entries', 'State legislature'],
              ['{R:Concurrent List}', '{r:no} tax entries', '{b:except GST (101st Amdt)}'], ['{R:Residuary}', 'Parliament', '{b:gift, wealth, expenditure tax}']])
     n.para('The Constitution also draws a distinction between the {r:power to levy and collect a tax} and the {r:power to appropriate the proceeds} of the tax so levied and collected. For example, the {b:income-tax is levied and collected by the Centre} but its proceeds are {b:distributed between the Centre and the states}.')
@@ -151,7 +151,7 @@ def notes():
     n.bullets(['The {r:distribution of the net proceeds of taxes} to be shared between the Centre and the states, and the allocation between the states, the respective shares of such proceeds.',
                'The {r:principles which should govern the grants-in-aid} to the states by the Centre ({b:i.e., out of the Consolidated Fund of India}).',
                'The measures needed to {r:augment the Consolidated fund of a state} to supplement the resources of the {b:panchayats and the municipalities} in the state on the basis of the recommendations made by the {r:State Finance Commission}.¹⁷',
-               'Any other matter referred to it by the President in the interests of {b:sound finance}.'])
+               'Any other matter referred to it by the President in the interests of {b:sound finance}.'], orig=True)
     n.para('Till {r:1960}, the Commission also suggested the amounts paid to the States of {b:Assam, Bihar, Orissa and West Bengal} in lieu of assignment of any share of the net proceeds in each year of {r:export duty on jute and jute products}.')
     n.para('The Constitution envisages the Finance Commission as the {R:balancing wheel of fiscal federalism} in India.')
     n.flow(['{R:Finance Commission}', '{r:balancing wheel of fiscal federalism}'])
@@ -166,7 +166,7 @@ def notes():
     n.bullets(['A bill which {r:imposes or varies any tax or duty} in which {b:states are interested};',
                'A bill which varies the meaning of the expression ‘{r:agricultural income}’ as defined for the purposes of the enactments relating to Indian income tax;',
                'A bill which affects the {r:principles on which moneys are or may be distributable to states}; and',
-               'A bill which imposes any {r:surcharge} on any specified tax or duty for the purpose of the Centre.'])
+               'A bill which imposes any {r:surcharge} on any specified tax or duty for the purpose of the Centre.'], orig=True)
     n.arrow('all 4 bills → only with {r:President’s recommendation}')
     n.para('The expression “{r:tax or duty in which states are interested}” means: (a) a tax or duty the whole or part of the net proceeds whereof are {b:assigned to any state}; or (b) a tax or duty by reference to the net proceeds whereof sums are for the time being {b:payable, out of the Consolidated Fund of India to any state}.')
     n.para('The phrase ‘{r:net proceeds}’ means the {r:proceeds of a tax or a duty minus the cost of collection}. The net proceeds of a tax or a duty in any area is to be ascertained and certified by the {r:Comptroller and Auditor-General of India}. His/her certificate is {r:final}.')
@@ -176,7 +176,7 @@ def notes():
     n.bullets(['The {r:Central government} can borrow {r:either within India or outside} upon the security of the {b:Consolidated Fund of India} or can give guarantees, but both within the limits fixed by the {r:Parliament}. So far, {b:no such law has been enacted} by the Parliament.',
                'Similarly, a {r:state government} can borrow {r:within India (and not abroad)} upon the security of the {b:Consolidated Fund of the State} or can give guarantees, but both within the limits fixed by the {r:legislature of that state}.',
                'The Central government can {r:make loans to any state} or give guarantees in respect of loans raised by any state. Any sums required for the purpose of making such loans are to be {b:charged on the Consolidated Fund of India}.',
-               'A state {r:cannot raise any loan without the consent of the Centre}, if there is still {b:outstanding any part of a loan} made to the state by the Centre or in respect of which a guarantee has been given by the Centre.'])
+               'A state {r:cannot raise any loan without the consent of the Centre}, if there is still {b:outstanding any part of a loan} made to the state by the Centre or in respect of which a guarantee has been given by the Centre.'], orig=True)
     n.compare([('{R:Centre}', ['India {r:+ abroad}', 'security: CFI', 'limits: Parliament (no law yet)']), ('{R:State}', ['{r:only within India}', 'security: CF of State', 'limits: state legislature', '{b:Centre’s consent if loan outstanding}'])])
     out.append(('19_notes_fin_protection_of_states_borrowing', n))
 

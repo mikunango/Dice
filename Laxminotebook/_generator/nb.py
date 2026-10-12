@@ -18,14 +18,19 @@ def tw(text, size=15, bold=False):
     return font(size, bold).getlength(text)
 
 RED, BLUE = '#D93A3A', '#2F6FDB'
-CLS = {'k': 'k', 'r': 'r', 'b': 'b', 'R': 'r', 'B': 'b', 'K': 'k'}
-BOLD = set('RBK')
+
+# per-note line headings: LABELS[note_title] = [label, label, ...] consumed in order
+LABELS = {}
+DUMP = []          # (note_title, sentence) for every line that needs a heading
+USE_LABELS = True
+CLS = {'k': 'k', 'r': 'r', 'b': 'b', 'R': 'r', 'B': 'b', 'K': 'k', 'H': 'h'}
+BOLD = set('RBKH')
 
 def parse(markup):
     """-> list of (text, style) runs"""
     runs = []
     pos = 0
-    for m in re.finditer(r'\{([rbRBK]):(.*?)\}', markup):
+    for m in re.finditer(r'\{([rbRBKH]):(.*?)\}', markup):
         if m.start() > pos:
             runs.append((markup[pos:m.start()], 'k'))
         runs.append((m.group(2), m.group(1)))
@@ -112,7 +117,18 @@ class Note:
         self.y = 26
         self.src = []      # book text registered for the completeness check
         self.fsrc = []     # footnote text
+        self._li = 0
         self._title(title)
+
+    def label(self, sentence):
+        """Next heading for a non-original line (None if labels off / not provided)."""
+        DUMP.append((self.title, plain(sentence)))
+        labs = LABELS.get(self.title)
+        if not USE_LABELS or labs is None:
+            return None
+        i = self._li
+        self._li += 1
+        return labs[i] if i < len(labs) else '??'
 
     # ---------- registration ----------
     def reg(self, markup):
@@ -168,21 +184,28 @@ class Note:
             self.el.append(f'<text{cls} x="{x:.0f}" y="{self.y}">{tspans(ln)}</text>')
         if src: self.reg(markup)
 
-    def bullets(self, items, level=0, src=True, sym='•', size=15):
-        """Each item -> its own bullet; wrapped lines get a hanging indent."""
+    def bullets(self, items, level=0, src=True, sym='•', size=15, orig=False):
+        """orig=True: Laxmikanth's own bullet list (kept as •).
+        Otherwise every line starts with its own short heading 'Label:' instead of a bullet."""
         bx = self.L + 4 + level * 26
-        tx = bx + 14
         lh = self.LH if size == 15 else 20
+        cls = ' class="sm"' if size == 14 else ''
         for it in items:
-            self.y += 4
-            lines = wrap(it, self.R - tx, size)
-            for i, ln in enumerate(lines):
-                self.y += lh
-                if i == 0:
-                    col = RED if level == 0 else BLUE
-                    self.el.append(f'<text x="{bx}" y="{self.y}" style="fill:{col};font-weight:700">{sym}</text>')
-                cls = ' class="sm"' if size == 14 else ''
-                self.el.append(f'<text{cls} x="{tx}" y="{self.y}">{tspans(ln)}</text>')
+            self.y += 6
+            lab = None if orig else self.label(it)
+            if lab:
+                lines = wrap('{H:' + lab + ':} ' + it, self.R - bx, size)
+                for i, ln in enumerate(lines):
+                    self.y += lh
+                    self.el.append(f'<text{cls} x="{bx + (0 if i == 0 else 12)}" y="{self.y}">{tspans(ln)}</text>')
+            else:
+                tx = bx + 14
+                for i, ln in enumerate(wrap(it, self.R - tx, size)):
+                    self.y += lh
+                    if i == 0:
+                        col = RED if level == 0 else BLUE
+                        self.el.append(f'<text x="{bx}" y="{self.y}" style="fill:{col};font-weight:700">{sym}</text>')
+                    self.el.append(f'<text{cls} x="{tx}" y="{self.y}">{tspans(ln)}</text>')
             if src: self.reg(it)
 
     def para(self, markup, level=0, src=True):
@@ -201,16 +224,16 @@ class Note:
             self.y += 4
             sents = split_sentences(it)
             for s_i, s in enumerate(sents):
-                sx = tx if s_i == 0 else tx + 14
+                sx = tx
                 if s_i:
-                    self.y += 2
-                for i, ln in enumerate(wrap(s, self.R - sx, size)):
+                    self.y += 3
+                    hl = self.label(s)
+                    s = ('{H:' + hl + ':} ' + s) if hl else s
+                for i, ln in enumerate(wrap(s, self.R - sx - (12 if s_i else 0), size)):
                     self.y += lh
                     if i == 0 and s_i == 0:
                         self.el.append(f'<text x="{x0+12}" y="{self.y}" class="r" style="font-weight:700">{esc(lab)}</text>')
-                    if i == 0 and s_i:
-                        self.el.append(f'<text x="{tx:.0f}" y="{self.y}" style="fill:{BLUE};font-weight:700">•</text>')
-                    self.el.append(f'<text{cls} x="{sx:.0f}" y="{self.y}">{tspans(ln)}</text>')
+                    self.el.append(f'<text{cls} x="{sx + (12 if (s_i and i) else 0):.0f}" y="{self.y}">{tspans(ln)}</text>')
             if src: self.reg(lab + ' ' + it)
         bot = self.y + 6
         if bracket:
@@ -221,7 +244,7 @@ class Note:
         self.bullets([intro])
         self.items(items, indent=14)
         if outro:
-            self.bullets([outro], level=1, sym='↳' if False else '•')
+            self.text(outro, x=self.L + 18)
 
     def quote(self, markup, src=True, by=None):
         """Quotation: blue bar on the left, one bullet per sentence."""
@@ -230,12 +253,12 @@ class Note:
         self.y += 2
         x = self.L + 16
         for s in sents:
-            self.y += 3
-            for i, ln in enumerate(wrap(s, self.R - x - 14, 15)):
+            self.y += 4
+            hl = self.label(s)
+            s2 = ('{H:' + hl + ':} ' + s) if hl else s
+            for i, ln in enumerate(wrap(s2, self.R - x - 14, 15)):
                 self.y += self.LH
-                if i == 0:
-                    self.el.append(f'<text x="{x}" y="{self.y}" style="fill:{BLUE};font-weight:700">›</text>')
-                self.el.append(f'<text x="{x+14}" y="{self.y}">{tspans(ln)}</text>')
+                self.el.append(f'<text x="{x + (12 if i else 0)}" y="{self.y}">{tspans(ln)}</text>')
         bot = self.y + 8
         self.el.append(f'<line x1="{self.L+4}" y1="{top}" x2="{self.L+4}" y2="{bot}" stroke="{BLUE}" stroke-width="3" stroke-linecap="round"/>')
         self.y = bot
@@ -463,7 +486,7 @@ html,body{margin:0;padding:0;background:#ffffff}
 #vis-container{max-width:680px;margin:0 auto;padding:12px 0}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 .n{display:block}
-.n text{font-family:'Kalam',cursive;font-size:15px}.r{fill:#D93A3A}.b{fill:#2F6FDB}.k{fill:var(--text-primary)}.hd{font-weight:700;font-size:17px!important}.sh{font-weight:700;font-size:16px!important}.ln{stroke:var(--text-secondary);stroke-width:1.2;fill:none}.lb{fill:var(--text-primary);font-weight:700;text-decoration:underline}.sm{font-size:14px!important}.xs{font-size:13px!important}.bx{fill:none;stroke:#D93A3A;stroke-width:1.2}.gx{fill:none;stroke:var(--text-secondary);stroke-width:1}
+.n text{font-family:'Kalam',cursive;font-size:15px}.r{fill:#D93A3A}.b{fill:#2F6FDB}.k{fill:var(--text-primary)}.h{fill:#7A1F1F;text-decoration:underline}.hd{font-weight:700;font-size:17px!important}.sh{font-weight:700;font-size:16px!important}.ln{stroke:var(--text-secondary);stroke-width:1.2;fill:none}.lb{fill:var(--text-primary);font-weight:700;text-decoration:underline}.sm{font-size:14px!important}.xs{font-size:13px!important}.bx{fill:none;stroke:#D93A3A;stroke-width:1.2}.gx{fill:none;stroke:var(--text-secondary);stroke-width:1}
 @media print{#vis-container{padding:0}}
 </style></head><body>
 <div id="vis-container"><h2 class="sr-only">%DESC%</h2>
@@ -496,7 +519,7 @@ def split_sentences(markup):
                 depth = 0
                 k = j + 1
                 nxt = markup[k:k+4]
-                nxt_plain = re.sub(r'^\{[rbRBK]:', '', markup[k:k+6])
+                nxt_plain = re.sub(r'^\{[rbRBKH]:', '', markup[k:k+6])
                 if nxt_plain[:1] and (nxt_plain[:1].isupper() or nxt_plain[:1] in '“‘("(' or nxt_plain[:1].isdigit()):
                     prev = plain(markup[start:i+1]).split()[-1] if plain(markup[start:i+1]).split() else ''
                     if not ABBR.search(prev):

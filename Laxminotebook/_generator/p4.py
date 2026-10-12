@@ -32,7 +32,7 @@ def notes():
                'Appointment of persons having {r:long experience in public life and administration} and {b:nonpartisan attitude} as {r:governors}.',
                '{r:Delegation of powers} to the maximum extent to the states.',
                'Transferring of {r:more financial resources} to the states to reduce their dependency upon the Centre.',
-               'Deployment of {r:Central armed forces} in the states either on their request or otherwise.'])
+               'Deployment of {r:Central armed forces} in the states either on their request or otherwise.'], orig=True)
     n.para('{r:No action was taken} by the Central government on the recommendations of the ARC.')
     n.sub('Rajamannar Committee')
     n.para('In {r:1969}, the {r:Tamil Nadu Government (DMK)} appointed a {r:three-member committee} under the chairmanship of {r:Dr. P.V. Rajamannar} to examine the entire question of Centre–state relations and to suggest amendments to the Constitution so as to secure {r:utmost autonomy to the states}.¹⁹ The committee submitted its report to the Tamil Nadu Government in {r:1971}.')
