@@ -69,6 +69,7 @@ def notes():
     n.sub('Recommendations')
     n.para('[[249 recommendations]] In all, the commission made {r:249 recommendations}. Of them, {r:58} recommendations involve {r:amendments to the Constitution}, {r:86} involve {r:legislative measures} and the remaining {r:105} recommendations could be accomplished through {r:executive action}.')
     n.boxes([['{R:58}', 'constitutional amendments'], ['{R:86}', 'legislative measures'], ['{R:105}', 'executive action']])
+    n.propbar([(58/249, '{R:58} amendments'), (86/249, '{R:86} legislative'), (105/249, '{R:105} executive action')], caption='{b:249 recommendations of the NCRWC drawn to scale}')
     n.para('[[Area-wise recommendations]] The various recommendations of the commission are mentioned below in an area-wise manner⁴:')
     n.subsub('1. On Fundamental Rights')
     L(n, [('1.', 'Wider non-discrimination', 'The scope of prohibition against discrimination ({r:under Articles 15 and 16}) should be extended to include ‘{r:ethnic or social origin, political or other opinion, property or birth}’.'),

@@ -495,6 +495,138 @@ class Note:
         self.y = bot
         self.fsrc.append((num, plain(markup)))
 
+    # ---------- extra diagram types ----------
+    def _ctext(self, x, y, markup, size=14, maxw=200, lh=17):
+        lines = wrap(markup, maxw, size)
+        y0 = y - (len(lines) - 1) * lh / 2
+        cls = 'sm' if size == 14 else ('xs' if size == 13 else '')
+        for i, ln in enumerate(lines):
+            self.el.append(f'<text class="{cls}" x="{x:.0f}" y="{y0 + i*lh + 5:.0f}" text-anchor="middle">{tspans(ln)}</text>')
+
+    def nested(self, outer, inner, outer_note=None, caption=None):
+        """Circle inside circle: inner is a part (subset) of outer."""
+        top = self.y + 16
+        cx, cy = 340, top + 62
+        self.el.append(f'<ellipse cx="{cx}" cy="{cy}" rx="250" ry="58" fill="none" stroke="{BLUE}" stroke-width="1.5"/>')
+        self.el.append(f'<ellipse cx="{cx+95}" cy="{cy}" rx="125" ry="38" fill="none" stroke="{RED}" stroke-width="1.5"/>')
+        self._ctext(cx - 150, cy, outer, 14, 180)
+        self._ctext(cx + 95, cy, inner, 14, 220)
+        self.y = cy + 58
+        if caption:
+            self.y += 4
+            self._ctext(340, self.y + 12, caption, 13, 600)
+            self.y += 22
+
+    def hub(self, center, items, r=30, caption=None):
+        """One central circle linked to satellite circles (hub and spoke)."""
+        import math
+        n = len(items)
+        top = self.y + 14
+        R = 132
+        cx, cy = 340, top + R + r + 10
+        for i, it in enumerate(items):
+            a = -math.pi / 2 + 2 * math.pi * i / n
+            x, y = cx + 250 * math.cos(a), cy + R * math.sin(a)
+            self.el.append(f'<line class="ln" x1="{cx + 62*math.cos(a):.0f}" y1="{cy + 40*math.sin(a):.0f}" x2="{x - 52*math.cos(a):.0f}" y2="{y - 26*math.sin(a):.0f}"/>')
+            self.el.append(f'<ellipse cx="{x:.0f}" cy="{y:.0f}" rx="74" ry="{r}" fill="none" stroke="{RED}" stroke-width="1.2"/>')
+            self._ctext(x, y, it, 13, 124, 16)
+        self.el.append(f'<ellipse cx="{cx}" cy="{cy}" rx="70" ry="44" fill="none" stroke="{BLUE}" stroke-width="2"/>')
+        self._ctext(cx, cy, center, 14, 120, 17)
+        self.y = cy + R + r + 10
+        if caption:
+            self._ctext(340, self.y + 12, caption, 13, 600); self.y += 22
+
+    def timeline(self, points, segs=(), caption=None, dashed=()):
+        """Dot timeline. points: [(label_below, label_above)], segs: labels for gaps between points."""
+        n = len(points)
+        x0, x1 = self.L + 58, self.R - 58
+        xs = [x0 + (x1 - x0) * i / max(n - 1, 1) for i in range(n)]
+        top = self.y + 18
+        ly = top + (58 if any(a for _, a in points) else 40)
+        for i in range(n - 1):
+            dash = ' stroke-dasharray="6 4"' if i in dashed else ''
+            self.el.append(f'<line x1="{xs[i]:.0f}" y1="{ly}" x2="{xs[i+1]:.0f}" y2="{ly}" stroke="{RED}" stroke-width="1.6"{dash}/>')
+            if i < len(segs) and segs[i]:
+                self._ctext((xs[i] + xs[i+1]) / 2, ly - 12, segs[i], 13, (x1 - x0) / max(n - 1, 1) - 6, 16)
+        maxl = 1
+        for (below, above), x in zip(points, xs):
+            self.el.append(f'<circle cx="{x:.0f}" cy="{ly}" r="5" fill="{BLUE}"/>')
+            w = min(116, (x1 - x0) / max(n - 1, 1) - 4)
+            lines = wrap(below, w, 13)
+            maxl = max(maxl, len(lines))
+            for j, ln in enumerate(lines):
+                self.el.append(f'<text class="xs" x="{x:.0f}" y="{ly + 22 + j*17}" text-anchor="middle">{tspans(ln)}</text>')
+            if above:
+                self._ctext(x, ly - 30, above, 13, w, 16)
+        self.y = ly + 22 + (maxl - 1) * 17 + 12
+        if caption:
+            self._ctext(340, self.y + 12, caption, 13, 600); self.y += 22
+
+    def propbar(self, parts, caption=None):
+        """Proportion bar: parts = [(fraction, label_markup)] drawn to scale."""
+        x0, W = self.L, self.R - self.L
+        top = self.y + 16
+        h = 44
+        cols = ['#D93A3A', '#2F6FDB', '#3B9B4A', '#E3B23C', '#8E44AD', '#73726c']
+        x = x0
+        for i, (f, lab) in enumerate(parts):
+            w = W * f
+            col = cols[i % len(cols)]
+            self.el.append(f'<rect x="{x:.1f}" y="{top}" width="{w:.1f}" height="{h}" fill="{col}" fill-opacity="0.16" stroke="{col}" stroke-width="1.2"/>')
+            self._ctext(x + w / 2, top + h / 2, lab, 13, max(w - 6, 30), 17)
+            x += w
+        self.y = top + h + 4
+        if caption:
+            self._ctext(340, self.y + 12, caption, 13, 600); self.y += 22
+
+    def pyramid(self, levels, caption=None):
+        """Hierarchy pyramid, top level first."""
+        n = len(levels)
+        top = self.y + 14
+        hgt = 34
+        for i, lab in enumerate(levels):
+            wt = 140 + i * (400 / max(n, 1))
+            wb = 140 + (i + 1) * (400 / max(n, 1))
+            y = top + i * hgt
+            pts = f'{340 - wt/2:.0f},{y} {340 + wt/2:.0f},{y} {340 + wb/2:.0f},{y + hgt} {340 - wb/2:.0f},{y + hgt}'
+            self.el.append(f'<polygon points="{pts}" fill="#D93A3A" fill-opacity="{0.05 + 0.04*(n-i)}" stroke="{RED}" stroke-width="1.2"/>')
+            self._ctext(340, y + hgt / 2, lab, 14, wt + 20)
+        self.y = top + n * hgt + 4
+        if caption:
+            self._ctext(340, self.y + 12, caption, 13, 600); self.y += 22
+
+    def venn3(self, labels, center, caption=None):
+        """Three overlapping circles with a common centre label."""
+        top = self.y + 14
+        cx, cy, r = 340, top + 95, 70
+        pos = [(cx - 52, cy - 28), (cx + 52, cy - 28), (cx, cy + 50)]
+        lpos = [(cx - 78, cy - 44), (cx + 78, cy - 44), (cx, cy + 82)]
+        cols = [RED, BLUE, '#3B9B4A']
+        for (x, y), c in zip(pos, cols):
+            self.el.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{c}" fill-opacity="0.07" stroke="{c}" stroke-width="1.4"/>')
+        for (x, y), lab in zip(lpos, labels):
+            self._ctext(x, y, lab, 14, 110)
+        self._ctext(cx, cy + 6, center, 13, 70, 14)
+        self.y = cy + 50 + r + 4
+        if caption:
+            self._ctext(340, self.y + 12, caption, 13, 600); self.y += 22
+
+    def triangle(self, corners, center, sides=(), caption=None):
+        """Triangle linking three items (e.g. the golden triangle)."""
+        top = self.y + 18
+        A, B, C = (340, top + 18), (150, top + 170), (530, top + 170)
+        self.el.append(f'<polygon points="{A[0]},{A[1]} {B[0]},{B[1]} {C[0]},{C[1]}" fill="#E3B23C" fill-opacity="0.10" stroke="#E3B23C" stroke-width="2"/>')
+        for (x, y), lab in zip((A, B, C), corners):
+            self.el.append(f'<circle cx="{x}" cy="{y}" r="30" fill="#ffffff" stroke="{RED}" stroke-width="1.6"/>')
+            self._ctext(x, y, lab, 13, 56, 14)
+        self._ctext(340, top + 120, center, 14, 170)
+        mids = [((A[0]+B[0])/2 - 50, (A[1]+B[1])/2), ((A[0]+C[0])/2 + 50, (A[1]+C[1])/2), (340, top + 202)]
+        for (x, y), s in zip(mids, sides):
+            if s: self._ctext(x, y, s, 13, 140, 14)
+        self.y = top + 212
+        if caption:
+            self._ctext(340, self.y + 12, caption, 13, 600); self.y += 22
+
     def raw(self, svg, dy=0):
         self.el.append(svg)
         self.y += dy

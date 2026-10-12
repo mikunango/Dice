@@ -94,6 +94,12 @@ FLOWS = {
  'PUTTASWAMY': ['M.P. Sharma 1954 / Kharak Singh 1962', '{R:Puttaswamy 2017}', '{b:privacy = Art. 21 + Part III}'],
 }
 
+EXTRA = {
+ 'Maneka Gandhi': lambda n: n.triangle(['{R:Art. 14}', '{R:Art. 19}', '{R:Art. 21}'], '{R:Golden triangle}', caption='{b:Articles 14, 19 and 21 are not mutually exclusive – a law depriving personal liberty must stand the test of all three (1978)}'),
+ 'PUTTASWAMY': lambda n: n.nested('{R:Article 21} & Part III freedoms', '{R:Right to privacy}', caption='{b:privacy protected as an intrinsic part of Article 21 and of the freedoms in Part III (2017)}'),
+ 'I.R. Coelho': lambda n: n.timeline([('Shankari Prasad 1951', 'FRs amendable'), ('Golak Nath 1967', 'FRs not amendable'), ('Kesavananda 1973', 'basic structure'), ('Minerva Mills 1980', 'limited power = basic feature'), ('Waman Rao 1980', 'pre-24 Apr 1973 valid'), ('I.R. Coelho 2007', 'later 9th Sch. laws reviewable')], caption='{b:evolution of Parliament’s power to amend and the basic structure doctrine}'),
+}
+
 def card(n, c):
     rows = []
     for lab, key in [('Year of Judgement', 'year'), ('Popular Name', 'pop'), ('Related Topic/Issue', 'topic'), ('Related Article/Schedule', 'art')]:
@@ -121,6 +127,9 @@ def notes():
             for k, fl in FLOWS.items():
                 if fl and k.lower() in c['title'].lower():
                     n.flow(fl)
+            for k, fn_ in EXTRA.items():
+                if k.lower() in c['title'].lower():
+                    fn_(n)
             # footnotes referenced in this case
             txt = c.get('jud', '') + c.get('imp', '') + c.get('art', '') + c.get('name', '')
             for mk in re.findall(r'[⁰¹²³⁴⁵⁶⁷⁸⁹]+[ᵃᵇ]?', txt):

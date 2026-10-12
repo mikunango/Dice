@@ -107,6 +107,7 @@ def notes():
     n.items([(f'{i+1}.', r) for i, r in enumerate(recs)])
     n.para('The Central government has implemented {r:180 (out of 247)} recommendations of the Sarkaria Commission. The most important is the establishment of the {r:Inter-State Council in 1990}.')
     n.flow(['{r:1983} appointed', 'report {r:1988}', '{r:247} recommendations', '{r:180} implemented', '{R:Inter-State Council 1990}'])
+    n.propbar([(180/247, '{R:180 implemented}'), (67/247, '67 not')], caption='{b:Sarkaria Commission – 180 out of 247 recommendations implemented by the Central government}')
     n.footnote('20', 'B. Sivaraman and S.R. Sen were two other members of the Commission.')
     out.append(('24_notes_sarkaria_commission', n))
 

@@ -64,11 +64,12 @@ for idx,(x,w,h,safe) in enumerate(notes):
         if cut is None:
             advance(); continue
         pieces.append((page,col,y,idx,top,cut)); top=cut; advance()
-npages=page+2   # + final reminder page
+NONOTE = '--nonote' in sys.argv
+npages=page+(1 if NONOTE else 2)   # + final reminder page
 print('pages',npages,'scale',round(s*0.75*680/680/0.75,3))
 c=canvas.Canvas(OUTPDF,pagesize=(W,H))
 c.setTitle('Laxmikanth '+LABEL+' Notes')
-for p in range(npages-1):
+for p in range(page+1):
     for (pg,col,y,idx,t,b) in pieces:
         if pg!=p: continue
         x,w,h,_=notes[idx]
@@ -83,6 +84,8 @@ for p in range(npages-1):
     c.showPage()
 
 
+if NONOTE:
+    c.save(); sys.exit()
 # ---- final page: reminder about tables, large text ----
 pdfmetrics.registerFont(TTFont('KalamB', '/root/.fonts/Kalam-700.ttf'))
 NOTE = ('Please check the tables of this chapter once. If a table looks important, study it directly '

@@ -36,6 +36,7 @@ def notes():
     n.para('The {r:80th Amendment Act of 2000} and the {r:101st Amendment Act of 2016} have introduced {b:major changes} in the scheme of the distribution of tax revenues between the centre and the states.')
     n.para('The 80th Amendment was enacted to give effect to the recommendations of the {r:10th Finance Commission}. The Commission recommended that out of the total income obtained from certain central taxes and duties, {r:29%} should go to the states. This is known as the ‘{r:Alternative Scheme of Devolution}’ and came into effect {b:retrospectively from April 1, 1996}. This amendment has brought several central taxes and duties like {b:Corporation Tax and Customs Duties} at par with {b:Income Tax (taxes on income other than agricultural income)} as far as their constitutionally mandated sharing with the states is concerned.¹³')
     n.flow(['{r:10th Finance Commission}', '{r:29%} to states', '{R:Alternative Scheme of Devolution}', 'from {b:1 April 1996}'])
+    n.propbar([(0.29, '{R:29%} → states'), (0.71, 'rest of these central taxes → Centre')], caption='{b:Alternative Scheme of Devolution – out of the total income from certain central taxes and duties (80th Amendment)}')
     n.para('The 101st Amendment has paved the way for the introduction of a {r:new tax regime (i.e., goods and services tax – GST)} in the country. Accordingly, the Amendment conferred {r:concurrent taxing powers} upon the Parliament and the State Legislatures to make laws for levying GST on {b:every transaction of supply of goods or services or both}. The GST replaced a number of indirect taxes levied by the Union and the State Governments and is intended to {r:remove the cascading effect of taxes} and provide for a {r:common national market} for goods and services.')
     n.listpara('The Amendment provided for subsuming of various {r:central indirect taxes} and levies such as',
                [('(i)', '{b:Central Excise Duty},'), ('(ii)', '{b:Additional Excise Duties},'), ('(iii)', '{b:Excise Duty levied under the Medicinal and Toilet Preparations (Excise Duties) Act, 1955},'),
@@ -77,6 +78,7 @@ def notes():
              ('(iii)', 'Any {r:cess} levied for specific purposes.')])
     n.para('The manner of distribution of the net proceeds of these taxes and duties is prescribed by the {r:President} on the recommendation of the {r:Finance Commission}.')
     n.flow(['all Union List taxes', '{b:minus 268, 269, 269-A, surcharge, cess}', 'shared as per {R:Finance Commission}'])
+    n.nested('{R:All taxes & duties in the Union List}', '{R:Divisible pool (Art. 270)} – shared by Centre and states', caption='{b:kept outside the pool: duties under Arts. 268, 269, 269-A · surcharges (Art. 271) · cesses for specific purposes}')
     n.subsub('E. Surcharge on Certain Taxes and Duties for Purposes of the Centre (Article 271):')
     n.para('The Parliament can at any time levy the {r:surcharges} on taxes and duties referred to in {r:Articles 269 and 270} (mentioned above). The proceeds of such surcharges go to the {r:Centre exclusively}. In other words, the {b:states have no share} in these surcharges.')
     n.para('However, the {r:Goods and Services Tax (GST) is exempted} from this surcharge. In other words, this surcharge {r:can not be imposed on the GST}.')
@@ -143,12 +145,14 @@ def notes():
              ('(e)', 'The {r:rates} including {b:floor rates with bands} of GST.'),
              ('(f)', 'Any {r:special rate or rates} for a specified period to raise additional resources during any {b:natural calamity or disaster}.')])
     n.flow(['{r:101st Amdt 2016}', '{R:Art. 279-A}', 'President’s order', '{R:GST Council}', '{b:joint forum}'])
+    n.hub('{R:GST Council} {b:(Art. 279-A)}', ['(a) taxes to merge in GST', '(b) goods & services – GST or exempt', '(c) model laws & place of supply', '(d) threshold turnover', '(e) rates, floor rates & bands', '(f) special rate in disaster'], caption='{b:joint forum of the Centre and the States – recommends on these six matters}')
     n.sub('6. Finance Commission')
     n.para('{r:Article 280} provides for a {r:Finance Commission} as a {r:quasi-judicial body}. It is constituted by the {r:President} {r:every fifth year} or even earlier. It is required to make recommendations to the President on the following matters:')
     n.bullets(['The {r:distribution of the net proceeds of taxes} to be shared between the Centre and the states, and the allocation between the states, the respective shares of such proceeds.',
                'The {r:principles which should govern the grants-in-aid} to the states by the Centre ({b:i.e., out of the Consolidated Fund of India}).',
                'The measures needed to {r:augment the Consolidated fund of a state} to supplement the resources of the {b:panchayats and the municipalities} in the state on the basis of the recommendations made by the {r:State Finance Commission}.¹⁷',
                'Any other matter referred to it by the President in the interests of {b:sound finance}.'], orig=True)
+    n.hub('{R:Finance Commission} {b:(Art. 280)}', ['sharing of net tax proceeds', 'principles of grants-in-aid', 'state fund for local bodies', 'any other matter (sound finance)'], caption='{b:constituted by the President every fifth year or earlier – recommends to the President}')
     n.para('Till {r:1960}, the Commission also suggested the amounts paid to the States of {b:Assam, Bihar, Orissa and West Bengal} in lieu of assignment of any share of the net proceeds in each year of {r:export duty on jute and jute products}.')
     n.para('The Constitution envisages the Finance Commission as the {R:balancing wheel of fiscal federalism} in India.')
     n.flow(['{R:Finance Commission}', '{r:balancing wheel of fiscal federalism}'])

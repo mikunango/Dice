@@ -164,6 +164,7 @@ def notes():
     n.compare([('{R:Federal disputes}', ['{r:exclusive}', 'Centre vs states']), ('{R:Fundamental Rights}', ['{r:concurrent} with HCs', 'citizen vs Government'])])
     n.para('[[SC vs HC writ jurisdiction]] There is also a difference between the writ jurisdiction of the Supreme Court and that of the high court. The Supreme Court can issue writs {r:only for the enforcement of the Fundamental Rights} and not for other purposes. The high court, on the other hand, can issue writs not only for the enforcement of the fundamental rights but also {r:for other purposes}. It means that the writ jurisdiction of the {r:high court is wider} than that of the Supreme Court. But, the {b:Parliament can confer on the Supreme Court, the power to issue writs for other purposes also}.')
     n.compare([('{R:Supreme Court writs}', ['only Fundamental Rights', '{b:Parliament may widen}']), ('{R:High Court writs}', ['FRs {r:+ other purposes}', '{r:wider}'])])
+    n.nested('{R:High Court writs} – FRs + other purposes', '{R:Supreme Court writs} – only FRs', caption='{b:writ jurisdiction of the high court is wider than that of the Supreme Court (Parliament may widen SC’s power)}')
     out.append(('08_notes_writ_jurisdiction', n))
 
     # ---------------- 09 Appellate ----------------

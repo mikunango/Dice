@@ -65,6 +65,7 @@ def notes():
              ('4.', '[[MLAs – 1/3]] {r:1/3} are elected by the {r:members of the legislative assembly} of the state from amongst persons who are not members of the assembly, and'),
              ('5.', '[[Governor’s nominees – 1/6]] the {r:remainder are nominated by the governor} from amongst persons who have a special knowledge or practical experience of {b:literature, science, art, cooperative movement and social service}.')])
     n.boxes([['{r:1/3}', 'local bodies'], ['{r:1/12}', 'graduates'], ['{r:1/12}', 'teachers'], ['{r:1/3}', 'MLAs'], ['{r:1/6}', 'Governor nominates']], size=13)
+    n.propbar([(1/3, '{R:1/3} local bodies'), (1/12, '{R:1/12}'), (1/12, '{R:1/12}'), (1/3, '{R:1/3} MLAs elect'), (1/6, '{R:1/6} Governor')], caption='{b:Legislative Council to scale – the two 1/12 parts are graduates and teachers; 5/6 indirectly elected, 1/6 nominated}')
     n.para('[[5/6 elected, 1/6 nominated – STV]] Thus, {r:5/6} of the total number of members of a legislative council are {r:indirectly elected} and {r:1/6 are nominated by the governor}. The members are elected in accordance with the system of {r:proportional representation by means of a single transferable vote}.')
     n.para('[[Tentative scheme]] This scheme of composition of a legislative council as laid down in the Constitution is {r:tentative and not final}. The {r:Parliament is authorised to modify or replace} the same. However, it has {b:not enacted any such law so far}.')
     n.section('DURATION OF TWO HOUSES')
@@ -73,6 +74,7 @@ def notes():
     n.subsub('Duration of Council')
     n.para('[[Council – permanent body]] Like the {r:Rajya Sabha}, the legislative council is a {r:continuing chamber}, that is, it is a {r:permanent body} and is {r:not subject to dissolution}. But, {r:one-third of its members retire on the expiration of every second year}. So, a member continues as such for {r:six years}. The vacant seats are filled up by fresh elections and nominations (by governor) at the beginning of every third year. The retiring members are also eligible for {b:re-election and re-nomination any number of times}.')
     n.compare([('{R:Assembly}', ['not continuing', '{r:5 years}', 'Governor can dissolve', '{b:+1 year in emergency}']), ('{R:Council}', ['{r:permanent}', 'not dissolved', '{r:1/3 retire every 2 years}', '{b:6-year term}'])])
+    n.timeline([('Council constituted', ''), ('end of 2nd year', '{r:1/3 retire}'), ('end of 4th year', '{r:1/3 retire}'), ('end of 6th year', '{r:1/3 retire}')], segs=['2 years', '2 years', '2 years'], caption='{b:Council is never dissolved – each member serves six years; vacancies filled at the beginning of every third year}')
     out.append(('04_notes_composition_of_council_duration', n))
 
     # ---------------- 05 Membership: qualifications, disqualifications ----------------
@@ -194,6 +196,7 @@ def notes():
     n.para('[[Prorogation by Governor]] The presiding officer (Speaker or Chairman) declares the House adjourned sine die, when the business of the session is completed. Within the next few days, the {r:governor} issues a notification for {r:prorogation} of the session.')
     n.para('[[Prorogation ends session]] However, the governor can also prorogue the House which is in session. Unlike an adjournment, a {r:prorogation terminates a session} of the House.')
     n.flow(['{r:Summoning} (Governor)', 'sittings', '{r:Adjournment} (presiding officer)', '{r:Prorogation} (Governor)', '{r:Dissolution} (assembly only)'])
+    n.timeline([('{r:Summoning} by Governor', ''), ('{r:Prorogation} by Governor', ''), ('next {r:Summoning}', '')], segs=['session (many sittings)', 'gap {r:not more than six months}'], dashed=(1,), caption='{b:state legislature must meet at least twice a year}')
     n.subsub('Dissolution')
     n.para('[[Dissolution ends the House]] The {r:legislative council}, being a permanent house, is {r:not subject to dissolution}. Only the {r:legislative assembly} is subject to dissolution. Unlike a prorogation, a dissolution {r:ends the very life of the existing House}, and a new House is constituted after the general elections are held.')
     n.para('[[Lapsing of bills]] The position with respect to {r:lapsing of bills} on the dissolution of the assembly is mentioned below:')
@@ -362,6 +365,7 @@ def notes():
     n.items([('1.', '[[Freedom from arrest – civil cases]] They {r:cannot be arrested during the session} of the state legislature and {r:40 days before} the beginning and {r:40 days after} the end of such session. This privilege is available {r:only in civil cases} and not in criminal cases or preventive detention cases.'),
              ('2.', '[[Freedom of speech]] They have {r:freedom of speech} in the state legislature. No member is liable to any proceedings in any court for anything said or any vote given by him/her in the state legislature or its committees. This freedom is subject to the provisions of the Constitution and to the rules and standing orders regulating the procedure of the state legislature¹¹.'),
              ('3.', '[[Jury & witness exemption]] They are {r:exempted from jury service}. They can refuse to give evidence and appear as a witness in a case pending in a court when the state legislature is in session.')])
+    n.timeline([('40 days before', ''), ('session begins', ''), ('session ends', ''), ('40 days after', '')], segs=['{r:no arrest}', 'session – {r:no arrest}', '{r:no arrest}'], caption='{b:freedom from arrest of members – only in civil cases, not criminal or preventive detention}')
     n.footnote('10', 'The 44th Amendment Act of 1978 restored the freedom of the press to publish true reports of state legislature without its prior permission. But, this is not applicable in the case of a secret sitting of the House.')
     n.footnote('11', 'Article 211 of the Constitution says that no discussion shall take place in the legislature of a state with respect to the conduct of any judge of the Supreme Court or of a high court in the discharge of his/her duties. Under the rules of a House(s) of the state legislature, use of unparliamentary language or unparliamentary conduct of a member is prohibited.')
     n.footnote('12', 'The Andhra Pradesh Reorganisation (Amendment) Act, 2015, increased the number of seats in the Legislative Council of Andhra Pradesh from 50 to 58.')
